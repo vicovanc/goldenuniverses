@@ -1,0 +1,112 @@
+@import '@styles/variables.scss';
+@import '@styles/responsive.scss';
+
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  z-index: $z-index-dropdown;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  @include until-lg {
+    display: flex;
+    align-items: center;
+    padding: 0 $spacing-md;
+    padding-top: env(safe-area-inset-top);
+  }
+
+  &__menu-button {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: $spacing-sm;
+    margin-right: $spacing-md;
+    transition: all $transition-fast;
+
+    &:hover,
+    &:focus {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__title {
+    flex: 1;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: var(--color-primary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    min-width: 48px; // Reserve space for future actions
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  position: relative;
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: all $transition-fast;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      transform-origin: top left;
+    }
+
+    &:nth-child(3) {
+      transform-origin: bottom left;
+    }
+  }
+
+  // Animated hamburger on menu open
+  [aria-expanded='true'] & {
+    .hamburger__line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(2px, -2px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(2px, 2px);
+      }
+    }
+  }
+}
+
+// Adjust main content padding when mobile header is visible
+@include until-lg {
+  body {
+    padding-top: calc(64px + env(safe-area-inset-top));
+  }
+}

@@ -1,0 +1,197 @@
+// ===================================
+// Golden Universe Design System v2.0
+// Sophisticated Glassmorphism Theme
+// ===================================
+
+// Golden Ratio constant
+$phi: 1.618;
+$golden: 1.618; // Alias for golden ratio
+
+// ===== Color Palette =====
+// Pure black backgrounds - sophisticated and professional
+$color-cosmos-deepest: #000000;
+$color-cosmos-deep: #0a0a0a;
+$color-cosmos-mid: #111111;
+$color-cosmos-light: #1a1a1a;
+
+// Sophisticated accent tones (no purple)
+$color-accent-50: rgba(100, 100, 100, 0.05);
+$color-accent-100: rgba(100, 100, 100, 0.1);
+$color-accent-200: rgba(100, 100, 100, 0.2);
+$color-accent-300: rgba(100, 100, 100, 0.3);
+$color-accent-500: #646464;
+$color-accent-600: #525252;
+$color-accent-700: #404040;
+
+// Golden accent colors (replacing ugly yellow)
+$color-gold-50: rgba(251, 191, 36, 0.05);
+$color-gold-100: rgba(251, 191, 36, 0.1);
+$color-gold-200: rgba(251, 191, 36, 0.2);
+$color-gold-400: #fbbf24;
+$color-gold-500: #f59e0b;
+$color-gold-600: #d97706;
+
+// Elegant gradients - Pure black based
+$gradient-primary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+$gradient-accent: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+$gradient-cosmic: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #111111 100%);
+$gradient-glass-subtle: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.05) 100%);
+$gradient-glass-gold: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+
+// Text colors with proper hierarchy
+$text-primary: rgba(255, 255, 255, 0.95);
+$text-secondary: rgba(255, 255, 255, 0.7);
+$text-tertiary: rgba(255, 255, 255, 0.5);
+$text-disabled: rgba(255, 255, 255, 0.3);
+
+// Semantic colors (golden theme only)
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-error: #ef4444;
+$color-info: #f59e0b;  // Changed from blue to golden
+
+// ===== Glassmorphism System =====
+$glass-blur: blur(20px);
+$glass-blur-strong: blur(30px);
+$glass-border: 1px solid rgba(255, 255, 255, 0.1);
+$glass-border-strong: 1px solid rgba(255, 255, 255, 0.2);
+
+// Glassmorphic backgrounds
+$glass-bg-weak: rgba(255, 255, 255, 0.03);
+$glass-bg-normal: rgba(255, 255, 255, 0.05);
+$glass-bg-strong: rgba(255, 255, 255, 0.08);
+
+// ===== Spacing (Golden Ratio based) =====
+$spacing-xs: 0.382rem; // 1/φ²
+$spacing-sm: 0.618rem; // 1/φ
+$spacing-md: 1rem;
+$spacing-lg: 1.618rem; // φ
+$spacing-xl: 2.618rem; // φ²
+$spacing-xxl: 4.236rem; // φ³
+
+// ===== Border Radius (Smooth & Elegant) =====
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+$border-radius-2xl: 32px;
+
+// ===== Transitions & Animations =====
+$transition-instant: 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// ===== Sophisticated Shadows =====
+$shadow-glow-subtle-sm: 0 0 20px rgba(255, 255, 255, 0.1);
+$shadow-glow-subtle-md: 0 0 40px rgba(255, 255, 255, 0.15);
+$shadow-glow-subtle-lg: 0 0 60px rgba(255, 255, 255, 0.2);
+
+$shadow-glow-gold-sm: 0 0 20px rgba(251, 191, 36, 0.3);
+$shadow-glow-gold-md: 0 0 40px rgba(251, 191, 36, 0.4);
+$shadow-glow-gold-lg: 0 0 60px rgba(251, 191, 36, 0.5);
+
+$shadow-glass-sm: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+$shadow-glass-md: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-glass-lg: 0 20px 25px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.1);
+$shadow-glass-xl: 0 25px 50px rgba(0, 0, 0, 0.25), 0 10px 15px rgba(0, 0, 0, 0.15);
+
+// Shadow aliases for backward compatibility
+$shadow-sm: $shadow-glass-sm;
+$shadow-md: $shadow-glass-md;
+$shadow-lg: $shadow-glass-lg;
+$shadow-xl: $shadow-glass-xl;
+
+// ===== Z-index Layers =====
+$z-index-dropdown: 100;
+$z-index-modal: 200;
+$z-index-popover: 300;
+$z-index-tooltip: 400;
+$z-index-notification: 500;
+
+// ===== Breakpoints =====
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+// ===== Typography =====
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 2rem;
+$font-size-4xl: 2.5rem;
+$font-size-5xl: 3rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.8;
+
+// ===== Mixins for Glassmorphism =====
+@mixin glass-card {
+  background: $glass-bg-normal;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: $glass-border;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-glass-md;
+}
+
+@mixin glass-card-strong {
+  background: $glass-bg-strong;
+  backdrop-filter: $glass-blur-strong;
+  -webkit-backdrop-filter: $glass-blur-strong;
+  border: $glass-border-strong;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-glass-lg;
+}
+
+@mixin glass-button {
+  background: $glass-bg-weak;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: $glass-border;
+  border-radius: $border-radius-md;
+  transition: all $transition-normal;
+
+  &:hover {
+    background: $glass-bg-normal;
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: $shadow-glass-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin smooth-hover {
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

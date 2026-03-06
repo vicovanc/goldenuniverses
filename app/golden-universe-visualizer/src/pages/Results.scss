@@ -1,0 +1,321 @@
+@import '@/styles/variables.scss';
+
+.results-page {
+  min-height: 100vh;
+  padding: 20px;
+  margin-left: 200px;  // Account for sidebar width
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    margin-left: 60px;  // Smaller margin on mobile
+  }
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 0.95));
+  border-radius: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.1);
+  max-width: 1200px;
+  margin: 0 auto 40px;
+
+  .page-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .results-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-btn {
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--color-text);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 12px;
+      }
+
+      &:hover {
+        background: rgba(251, 191, 36, 0.1);
+        border-color: rgba(251, 191, 36, 0.3);
+        color: var(--color-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(251, 191, 36, 0.2);
+      }
+
+      &.active {
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(245, 158, 11, 0.15));
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+      }
+    }
+  }
+}
+
+.results-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+
+  // Prevent overflow for all child elements
+  > * {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+// Specific page sections
+.comparison-page,
+.achievements-page,
+.predictions-page {
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 20px;
+  background: rgba(10, 10, 10, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fix for all cards and tables to prevent overflow
+.result-card,
+.achievement-card,
+.comparison-card,
+.precision-table,
+.codata-table,
+[class*="card"] {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+
+  // Ensure tables are scrollable
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  // Ensure long formulas/values wrap or scroll
+  .formula,
+  .value,
+  .prediction,
+  .measurement,
+  td,
+  th {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    // For very long numbers/formulas, allow horizontal scroll
+    &.long-content {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  // Code blocks should be scrollable
+  pre,
+  code {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+// Grid layouts should be responsive
+.results-grid,
+.achievements-grid,
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Responsive grid columns
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  > * {
+    max-width: 100%;
+    min-width: 0; // Prevent grid blowout
+  }
+}
+
+// Dashboard specific styles
+.results-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 100%;
+
+  .dashboard-section {
+    background: rgba(10, 10, 10, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+
+    h2 {
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// Ensure all content respects container boundaries
+.content-wrapper,
+.section-content,
+.card-content,
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  // Tables need special handling
+  table {
+    width: 100%;
+    table-layout: fixed;
+
+    @media (max-width: 768px) {
+      table-layout: auto;
+      display: block;
+      overflow-x: auto;
+    }
+  }
+}
+
+// Loading and error states
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-secondary);
+
+  .spinner {
+    animation: spin 1s linear infinite;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(251, 191, 36, 0.2);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Mobile-specific fixes
+@media (max-width: 768px) {
+  .results-page {
+    // Account for mobile header
+    padding-top: 60px;
+  }
+
+  // Stack elements vertically on mobile
+  .comparison-row,
+  .achievement-row,
+  .table-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  // Make buttons full width on mobile
+  button,
+  .btn,
+  .nav-btn {
+    width: 100%;
+  }
+}

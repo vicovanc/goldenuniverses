@@ -1,0 +1,151 @@
+{
+  "candidates": {
+    "W_candidates": [
+      {
+        "n": 85,
+        "coupling": "1/\u03c6",
+        "C_value": 0.6180339887498948,
+        "m_predicted": 81644.41052148686,
+        "error_percent": 1.576832329505781,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "\u03c6/e",
+        "C_value": 0.5952414395777111,
+        "m_predicted": 78633.43656969989,
+        "error_percent": 2.169231783097296,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "\u221a\u03c0/e",
+        "C_value": 0.6520493321732922,
+        "m_predicted": 86137.95410168156,
+        "error_percent": 7.167416178361427,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "\u03c0/(\u03c6\u00b7e)",
+        "C_value": 0.7142787838986283,
+        "m_predicted": 94358.67819724006,
+        "error_percent": 17.395123228336544,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      }
+    ],
+    "Z_candidates": [
+      {
+        "n": 85,
+        "coupling": "\u03c0/(\u03c6\u00b7e)",
+        "C_value": 0.7142787838986283,
+        "m_predicted": 94358.67819724006,
+        "error_percent": 3.4770783406150634,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "\u221a\u03c0/e",
+        "C_value": 0.6520493321732922,
+        "m_predicted": 86137.95410168156,
+        "error_percent": 5.538059720926477,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "1/\u03c6",
+        "C_value": 0.6180339887498948,
+        "m_predicted": 81644.41052148686,
+        "error_percent": 10.465839231601898,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 84,
+        "coupling": "1/\u221a(\u03c6\u00b7e)",
+        "C_value": 0.4768249137852056,
+        "m_predicted": 101920.29620787676,
+        "error_percent": 11.769417256521427,
+        "resonance_k": 32.085144945008835,
+        "resonance_error": 0.0851449450088353
+      },
+      {
+        "n": 85,
+        "coupling": "\u221a(\u03c6/e)",
+        "C_value": 0.771518917187201,
+        "m_predicted": 101920.29620787677,
+        "error_percent": 11.769417256521445,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 85,
+        "coupling": "\u03c6/e",
+        "C_value": 0.5952414395777111,
+        "m_predicted": 78633.43656969989,
+        "error_percent": 13.767780223604106,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      }
+    ],
+    "H_candidates": [
+      {
+        "n": 84,
+        "coupling": "\u03c6/e",
+        "C_value": 0.5952414395777111,
+        "m_predicted": 127231.57302198335,
+        "error_percent": 1.703895301345603,
+        "resonance_k": 32.085144945008835,
+        "resonance_error": 0.0851449450088353
+      },
+      {
+        "n": 84,
+        "coupling": "1/\u03c6",
+        "C_value": 0.6180339887498948,
+        "m_predicted": 132103.43121521527,
+        "error_percent": 5.598266359084948,
+        "resonance_k": 32.085144945008835,
+        "resonance_error": 0.0851449450088353
+      },
+      {
+        "n": 84,
+        "coupling": "\u221a\u03c0/e",
+        "C_value": 0.6520493321732922,
+        "m_predicted": 139374.13745789917,
+        "error_percent": 11.410181820862645,
+        "resonance_k": 32.085144945008835,
+        "resonance_error": 0.0851449450088353
+      },
+      {
+        "n": 85,
+        "coupling": "\u221a(\u03c6/e)",
+        "C_value": 0.771518917187201,
+        "m_predicted": 101920.29620787677,
+        "error_percent": 18.528939881793146,
+        "resonance_k": 32.467110956258935,
+        "resonance_error": 0.46711095625893506
+      },
+      {
+        "n": 84,
+        "coupling": "1/\u221a(\u03c6\u00b7e)",
+        "C_value": 0.4768249137852056,
+        "m_predicted": 101920.29620787676,
+        "error_percent": 18.528939881793157,
+        "resonance_k": 32.085144945008835,
+        "resonance_error": 0.0851449450088353
+      }
+    ]
+  },
+  "electroweak": {
+    "ratio_WZ_exp": 0.8814427336930298,
+    "cos_theta_W": 0.8814427336930298,
+    "sin2_theta_W": 0.2230587072197585,
+    "theta_W_deg": 28.18310775323958
+  }
+}

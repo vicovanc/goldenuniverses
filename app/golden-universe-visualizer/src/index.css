@@ -1,0 +1,215 @@
+/* ===================================
+   Golden Universe - Global Styles
+   World-Class Design System
+   =================================== */
+
+:root {
+  /* Cosmic color palette */
+  --color-cosmos-deepest: #0a0118;
+  --color-cosmos-deep: #130428;
+  --color-cosmos-mid: #1c0a3a;
+  --color-cosmos-light: #2a1550;
+
+  /* Purple tones */
+  --color-purple-500: #9333ea;
+  --color-purple-600: #7c3aed;
+  --color-purple-700: #6d28d9;
+
+  /* Gold accents */
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+
+  /* Modern font stack */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-cosmos-deepest);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0118 0%, #1c0a3a 50%, #2a1550 100%);
+  position: relative;
+
+  /* Subtle grain texture */
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.02;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-purple-500);
+  text-decoration: inherit;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: var(--color-gold-500);
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-purple-500);
+    outline-offset: 2px;
+  }
+}
+
+input, textarea, select {
+  font-family: inherit;
+
+  &:focus {
+    outline: 2px solid var(--color-purple-500);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cosmos-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 50%, #6d28d9 100%);
+  border-radius: 6px;
+  border: 2px solid var(--color-cosmos-deep);
+
+  &:hover {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-cosmos-deep);
+}
+
+/* Selection */
+::selection {
+  background: rgba(147, 51, 234, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(147, 51, 234, 0.3);
+  color: white;
+}
+
+/* Loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}

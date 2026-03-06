@@ -1,0 +1,76 @@
+{
+  "best_result": {
+    "c_mem": 0.3,
+    "m_bar_star": 2500.399767010658,
+    "m_e_predicted_MeV": 553.7669543508547,
+    "m_e_target_MeV": 0.511,
+    "error_MeV": 553.2559543508547,
+    "error_percent": 108269.26699625337,
+    "E_tilde": -0.5667448512034602,
+    "m_bar_theory": 4514.0,
+    "theory_deviation": 2013.6002329893422,
+    "theory_deviation_percent": 44.60789173658269
+  },
+  "all_results": [
+    {
+      "c_mem": 0.3,
+      "m_bar_star": 2500.399767010658,
+      "m_e_predicted_MeV": 553.7669543508547,
+      "m_e_target_MeV": 0.511,
+      "error_MeV": 553.2559543508547,
+      "error_percent": 108269.26699625337,
+      "E_tilde": -0.5667448512034602,
+      "m_bar_theory": 4514.0,
+      "theory_deviation": 2013.6002329893422,
+      "theory_deviation_percent": 44.60789173658269
+    },
+    {
+      "c_mem": 0.35,
+      "m_bar_star": 2500.399767010658,
+      "m_e_predicted_MeV": 392.6998017758629,
+      "m_e_target_MeV": 0.511,
+      "error_MeV": 392.1888017758629,
+      "error_percent": 76749.27627707689,
+      "E_tilde": -0.6927602672676335,
+      "m_bar_theory": 4514.0,
+      "theory_deviation": 2013.6002329893422,
+      "theory_deviation_percent": 44.60789173658269
+    },
+    {
+      "c_mem": 0.4,
+      "m_bar_star": 2500.399767010658,
+      "m_e_predicted_MeV": 553.2324446818435,
+      "m_e_target_MeV": 0.511,
+      "error_MeV": 552.7214446818435,
+      "error_percent": 108164.66627824727,
+      "E_tilde": -0.5671630398735517,
+      "m_bar_theory": 4514.0,
+      "theory_deviation": 2013.6002329893422,
+      "theory_deviation_percent": 44.60789173658269
+    },
+    {
+      "c_mem": 0.45,
+      "m_bar_star": 2500.399767010658,
+      "m_e_predicted_MeV": 151.12936738339158,
+      "m_e_target_MeV": 0.511,
+      "error_MeV": 150.6183673833916,
+      "error_percent": 29475.21866602575,
+      "E_tilde": -0.8817596896333885,
+      "m_bar_theory": 4514.0,
+      "theory_deviation": 2013.6002329893422,
+      "theory_deviation_percent": 44.60789173658269
+    },
+    {
+      "c_mem": 0.5,
+      "m_bar_star": 2500.399767010658,
+      "m_e_predicted_MeV": 70.51335953219201,
+      "m_e_target_MeV": 0.511,
+      "error_MeV": 70.00235953219202,
+      "error_percent": 13699.091884969084,
+      "E_tilde": -0.9448318903173342,
+      "m_bar_theory": 4514.0,
+      "theory_deviation": 2013.6002329893422,
+      "theory_deviation_percent": 44.60789173658269
+    }
+  ]
+}

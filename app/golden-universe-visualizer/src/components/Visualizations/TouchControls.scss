@@ -1,0 +1,80 @@
+// =============================================
+// TOUCH CONTROLS - REFINED
+// Clean professional touch interaction design
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+@import '../../styles/refined-components.scss';
+
+.touch-controls {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.touch-hints {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include clean-card;
+  padding: $space-6;
+  z-index: $z-tooltip;
+  animation: fadeInOut 5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  max-width: 90%;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 400px;
+  }
+
+  .touch-hint {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+    padding: $space-3 0;
+    color: var(--text-primary);
+
+    &:not(:last-child) {
+      border-bottom: $border-width solid var(--border-color);
+    }
+
+    .hint-icon {
+      font-size: $text-3xl;
+      flex-shrink: 0;
+      width: 48px;
+      text-align: center;
+    }
+
+    .hint-text {
+      font-size: $text-base;
+      font-weight: $font-medium;
+      flex: 1;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+}

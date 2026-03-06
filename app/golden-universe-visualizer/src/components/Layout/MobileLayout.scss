@@ -1,0 +1,141 @@
+@import '@styles/variables.scss';
+@import '@styles/responsive.scss';
+
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-background);
+
+  &[data-mobile='true'] {
+    padding-top: 64px; // Mobile header height
+    padding-bottom: 64px; // Bottom nav height
+  }
+
+  &__content {
+    flex: 1;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // Desktop sidebar spacing
+    @include from-lg {
+      margin-left: 280px;
+      transition: margin-left $transition-normal;
+
+      &.expanded {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  &__loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: $z-index-modal;
+
+    @include from-lg {
+      left: 280px;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid var(--color-border);
+      border-top-color: var(--color-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    p {
+      color: var(--color-text);
+      margin-top: $spacing-md;
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__error {
+    background: #d32f2f;
+    color: white;
+    padding: $spacing-md $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    box-shadow: $shadow-md;
+    position: sticky;
+    top: 0;
+    z-index: $z-index-dropdown - 1;
+
+    .error-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .error-message {
+      flex: 1;
+      font-weight: $font-weight-medium;
+    }
+
+    .error-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1.25rem;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $border-radius-sm;
+      transition: background $transition-fast;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: $spacing-md;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include from-lg {
+      padding: $spacing-xl;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive utilities
+@include mobile {
+  .mobile-layout__wrapper {
+    padding: $spacing-sm;
+  }
+}
+
+// Safe area support
+@supports (padding: env(safe-area-inset-top)) {
+  .mobile-layout[data-mobile='true'] {
+    padding-top: calc(64px + env(safe-area-inset-top));
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "C_e_derivation": {
+    "C_e": "0.618033988749895",
+    "C_e_float": 0.6180339887498948,
+    "justification": "golden_ratio_conjugate",
+    "symmetry": "scale_invariance"
+  },
+  "electron_mass": {
+    "m_e_base": "0.486670981447332",
+    "m_e_base_float": 0.48667098144733173,
+    "eta_required": "1.04998853328037",
+    "eta_required_float": 1.0499885332803658,
+    "error_base_percent": 4.760864685273468,
+    "best_geometric_correction": "sqrt(pi)/phi",
+    "best_eta_value": 1.0954367233502473,
+    "best_error_percent": 4.328446323874862,
+    "all_candidates": [
+      {
+        "correction": "sqrt(pi)/phi",
+        "value": 1.0954367233502473,
+        "value_exact": "1.09543672335025",
+        "m_e": 0.5331172652663141,
+        "error_percent": 4.328446323874862
+      },
+      {
+        "correction": "no_correction",
+        "value": 1.0,
+        "value_exact": "1.0",
+        "m_e": 0.48667098144733173,
+        "error_percent": 4.760864685273468
+      },
+      {
+        "correction": "sqrt(2/phi)",
+        "value": 1.1117859405028423,
+        "value_exact": "1.11178594050284",
+        "m_e": 0.541073954823863,
+        "error_percent": 5.885531628560695
+      },
+      {
+        "correction": "pi/(2*phi)",
+        "value": 0.9708055193627332,
+        "value_exact": "0.970805519362733",
+        "m_e": 0.47246287490274796,
+        "error_percent": 7.541321777129285
+      },
+      {
+        "correction": "phi^(1/e)",
+        "value": 1.1936644404085874,
+        "value_exact": "1.19366444040859",
+        "m_e": 0.5809218447324273,
+        "error_percent": 13.683569160450782
+      },
+      {
+        "correction": "(1/phi)^(1/3)",
+        "value": 0.8517996420792429,
+        "value_exact": "0.851799642079243",
+        "m_e": 0.414546167807191,
+        "error_percent": 18.875338626979364
+      },
+      {
+        "correction": "1/sqrt(phi)",
+        "value": 0.7861513777574233,
+        "value_exact": "0.786151377757423",
+        "m_e": 0.3825970625793772,
+        "error_percent": 25.127622555902075
+      },
+      {
+        "correction": "sqrt(1/phi)",
+        "value": 0.7861513777574233,
+        "value_exact": "0.786151377757423",
+        "m_e": 0.3825970625793772,
+        "error_percent": 25.127622555902075
+      },
+      {
+        "correction": "sqrt(phi/e)",
+        "value": 0.771518917187201,
+        "value_exact": "0.771518917187201",
+        "m_e": 0.3754758686326778,
+        "error_percent": 26.521205448136865
+      },
+      {
+        "correction": "phi^(-2/3)",
+        "value": 0.7255626302463264,
+        "value_exact": "0.725562630246326",
+        "m_e": 0.3531102773634871,
+        "error_percent": 30.89804247866123
+      },
+      {
+        "correction": "sqrt(2*phi/e^2)",
+        "value": 0.6617810637271714,
+        "value_exact": "0.661781063727171",
+        "m_e": 0.3220696397873617,
+        "error_percent": 36.97254372296426
+      },
+      {
+        "correction": "1/sqrt(e)",
+        "value": 0.6065306597126334,
+        "value_exact": "0.606530659712633",
+        "m_e": 0.2951808714402449,
+        "error_percent": 42.23454442709815
+      },
+      {
+        "correction": "2/sqrt(phi)",
+        "value": 1.5723027555148466,
+        "value_exact": "1.57230275551485",
+        "m_e": 0.7651941251587544,
+        "error_percent": 49.74475488819585
+      },
+      {
+        "correction": "sqrt(phi)/e",
+        "value": 0.46794987782232966,
+        "value_exact": "0.46794987782233",
+        "m_e": 0.22773762630795216,
+        "error_percent": 55.43285826556939
+      },
+      {
+        "correction": "e/phi",
+        "value": 1.679990560988901,
+        "value_exact": "1.6799905609889",
+        "m_e": 0.8176026551387219,
+        "error_percent": 60.00084836548528
+      }
+    ]
+  },
+  "radiative_corrections": {
+    "alpha": "0.0072973525692838",
+    "delta_1loop": "0.00174211459932879",
+    "delta_2loop": "2.65471267874374e-5",
+    "total_correction": "1.00176866172612"
+  },
+  "complete_formula": {
+    "formula": "m_e = M_P \u00b7 (2\u03c0/\u03c6^110) \u00b7 (1/\u03c6) \u00b7 \u221a(2/\u03c6)",
+    "n_e": 110,
+    "C_e": "0.618033988749895",
+    "eta": "1.11178594050284",
+    "m_e_theory": "0.541073954823863",
+    "m_e_theory_float": 0.541073954823863,
+    "m_e_experiment": "0.51099895",
+    "error_percent": 5.885531628560695,
+    "C_e_exact": "0.648928601364916",
+    "C_e_exact_float": 0.6489286013649163
+  },
+  "generation_structure": {
+    "n_e": 110,
+    "delta_mu": 11,
+    "delta_tau": 17,
+    "ratio_mu_exp": 206.76828298766566,
+    "ratio_mu_theory": 208.39757485449897,
+    "error_mu_percent": 0.7879795891764043,
+    "ratio_tau_exp": 3477.228280018971,
+    "ratio_tau_theory": 3489.5994136608792,
+    "error_tau_percent": 0.3557757111604067
+  }
+}

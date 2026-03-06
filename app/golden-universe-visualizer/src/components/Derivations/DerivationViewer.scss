@@ -1,0 +1,114 @@
+@import '../../styles/variables.scss';
+
+.derivation-viewer {
+  padding: $spacing-xl;
+  @include glass-card-strong;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-text-secondary);
+  }
+
+  .file-tabs {
+    display: flex;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xl;
+    border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+    padding-bottom: $spacing-md;
+
+    .file-tab {
+      padding: $spacing-sm $spacing-lg;
+      @include glass-button;
+      border-radius: $border-radius-md $border-radius-md 0 0;
+      color: $text-secondary;
+      cursor: pointer;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      position: relative;
+
+      &:hover {
+        background: $glass-bg-normal;
+        border-color: $color-gold-400;
+        color: $text-primary;
+        box-shadow: $shadow-glass-md, $shadow-glow-gold-sm;
+      }
+
+      &.active {
+        background: $gradient-glass-gold;
+        border-color: $color-gold-500;
+        color: $text-primary;
+        box-shadow: $shadow-glow-gold-md;
+        border-bottom: 1px solid transparent;
+        margin-bottom: -1px;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  .derivation-content {
+    h3 {
+      @include gradient-text($gradient-primary);
+      text-shadow: $shadow-glow-gold-sm;
+      margin-bottom: $spacing-xl;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+    }
+
+    .error-message {
+      @include glass-card;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+      padding: $spacing-lg;
+      margin-bottom: $spacing-lg;
+      font-weight: $font-weight-medium;
+    }
+
+    .theory-explanation {
+      margin-top: $spacing-xxl;
+      padding: $spacing-xl;
+      @include glass-card-strong;
+      background: $gradient-glass-gold;
+      border-left: 4px solid $color-gold-500;
+      box-shadow: $shadow-glass-lg, $shadow-glow-gold-sm;
+
+      h4 {
+        @include gradient-text($gradient-primary);
+        text-shadow: $shadow-glow-gold-sm;
+        margin-bottom: $spacing-lg;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+      }
+
+      p {
+        color: $text-primary;
+        line-height: $line-height-relaxed;
+        margin: 0;
+        font-size: $font-size-base;
+      }
+
+      code {
+        @include glass-card;
+        padding: $spacing-xs $spacing-sm;
+        background: rgba(0, 0, 0, 0.3);
+        color: $color-gold-400;
+        font-family: 'Courier New', monospace;
+        font-size: $font-size-sm;
+        border-radius: $border-radius-sm;
+      }
+    }
+  }
+}

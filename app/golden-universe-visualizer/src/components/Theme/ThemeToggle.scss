@@ -1,0 +1,92 @@
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface-elevated, #2a2a2a);
+  border: 1px solid var(--color-border, #444);
+  border-radius: 8px;
+  color: var(--color-text-primary, #fff);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    background: var(--color-hover, rgba(255, 255, 255, 0.1));
+    border-color: var(--color-primary, #ffd700);
+    transform: translateY(-1px);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary, #ffd700);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  .theme-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .theme-toggle-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.4rem;
+    background: var(--color-primary, #ffd700);
+    color: #000;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &:hover .theme-toggle-icon {
+    transform: rotate(20deg);
+  }
+}
+
+// Light theme overrides
+[data-theme='light'] {
+  .theme-toggle {
+    background: #ffffff;
+    border-color: #ddd;
+    color: #1a1a1a;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+// Animations for theme transitions
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+}
+
+// Disable transitions for reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

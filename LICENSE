@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 Golden Universe Theory Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+ATTRIBUTION NOTICE:
+
+This software implements the Golden Universe (GU) theoretical framework for 
+deriving particle masses and fundamental constants from first principles. 
+Key theoretical breakthroughs include:
+
+1. The corrected resonance condition using round(N/φ²) instead of floor(N/φ²)
+2. The discovery of resonance duality between even k_res (resonant) and odd 
+   k_res (anti-resonant) particles
+3. Sub-percent precision particle mass derivations from geometric first 
+   principles
+4. Newton's gravitational constant G_N derived from the electron mass with 
+   47 ppm precision and ZERO fitted parameters
+5. The Seeley-DeWitt coefficient c_R = 1.247 derived from SU(5)+SUSY field 
+   content, simultaneously satisfying the cosmological constant constraint
+6. The first derivation of the fine structure constant 1/137 from pure 
+   mathematics: α_EM = (e^φ/π²)/70
+
+When using this software in academic or commercial work, please cite:
+- The Golden Universe Theory framework
+- The February 2026 corrected resonance and gravity breakthroughs
+- Any specific derivations or algorithms used
+
+For academic publications, please reference the theoretical foundations and
+acknowledge the open source nature of this implementation.

@@ -1,0 +1,438 @@
+// =============================================
+// 🎨 REFINED HOME PAGE
+// Clean Professional Design - Flup/Deliro Inspired
+// =============================================
+
+@import '../styles/refined-design-system.scss';
+@import '../styles/refined-components.scss';
+
+// ---------------------------------------------
+// CLEAN PAGE LAYOUT
+// ---------------------------------------------
+
+.home-page {
+  min-height: 100vh;
+  background: var(--bg-base);
+  padding: 0;
+}
+
+// ---------------------------------------------
+// HERO SECTION - Clean & Minimal
+// ---------------------------------------------
+
+.hero {
+  padding: $space-20 $space-6 $space-16;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg,
+    var(--bg-subtle) 0%,
+    var(--bg-base) 100%
+  );
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-title {
+  font-size: $text-5xl;
+  font-weight: $font-bold;
+  line-height: $leading-tight;
+  letter-spacing: $tracking-tight;
+  margin: 0 0 $space-4 0;
+  background: linear-gradient(135deg, $primary-500 0%, $accent-500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $text-3xl;
+  }
+}
+
+.hero-subtitle {
+  font-size: $text-lg;
+  font-weight: $font-normal;
+  color: var(--text-secondary);
+  margin: 0 auto $space-8;
+  max-width: 600px;
+  line-height: $leading-relaxed;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: $text-base;
+  }
+}
+
+.hero-version {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-1 $space-3;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-full;
+  font-size: $text-xs;
+  font-weight: $font-medium;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: $tracking-wide;
+  margin-bottom: $space-10;
+}
+
+.hero-cta {
+  display: flex;
+  gap: $space-3;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .cta-button {
+    @include button-base;
+    min-width: 160px;
+    text-decoration: none;
+
+    &.primary {
+      @include button-primary;
+    }
+
+    &.secondary {
+      @include button-secondary;
+    }
+  }
+}
+
+// ---------------------------------------------
+// METRICS SECTION - Clean Cards
+// ---------------------------------------------
+
+.achievements {
+  padding: $space-16 $space-6;
+
+  .section-title {
+    font-size: $text-2xl;
+    font-weight: $font-semibold;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: $space-10;
+    letter-spacing: $tracking-tight;
+  }
+
+  .achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-6;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .achievement-card {
+    @include metric-card;
+    text-align: center;
+
+    .achievement-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto $space-4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($primary-500, 0.1);
+      border-radius: $radius-lg;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        color: $primary-500;
+      }
+    }
+
+    .achievement-title {
+      font-size: $text-xs;
+      font-weight: $font-semibold;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: $tracking-wide;
+      margin-bottom: $space-2;
+    }
+
+    .achievement-value {
+      font-size: $text-3xl;
+      font-weight: $font-bold;
+      color: var(--text-primary);
+      line-height: $leading-tight;
+      margin-bottom: $space-2;
+    }
+
+    .achievement-description {
+      font-size: $text-sm;
+      color: var(--text-secondary);
+      line-height: $leading-normal;
+    }
+  }
+}
+
+// ---------------------------------------------
+// STATISTICS BAR - Minimal & Clean
+// ---------------------------------------------
+
+.statistics {
+  padding: $space-12 $space-6;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  .stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: $space-12;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-md) {
+      gap: $space-8;
+    }
+  }
+
+  .stat-card {
+    text-align: center;
+
+    .stat-value {
+      font-size: $text-2xl;
+      font-weight: $font-bold;
+      color: $primary-500;
+      line-height: $leading-tight;
+      margin-bottom: $space-1;
+    }
+
+    .stat-label {
+      font-size: $text-xs;
+      font-weight: $font-medium;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: $tracking-wide;
+    }
+  }
+}
+
+// ---------------------------------------------
+// FEATURES GRID - Card-based Layout
+// ---------------------------------------------
+
+.features {
+  padding: $space-16 $space-6;
+
+  .section-title {
+    font-size: $text-2xl;
+    font-weight: $font-semibold;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: $space-10;
+    letter-spacing: $tracking-tight;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $space-5;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    @include clean-card;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    .feature-header {
+      display: flex;
+      align-items: flex-start;
+      gap: $space-4;
+      margin-bottom: $space-4;
+
+      .feature-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($primary-500, 0.1);
+        border-radius: $radius-lg;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: $primary-500;
+        }
+      }
+
+      .feature-content {
+        flex: 1;
+
+        .feature-title {
+          font-size: $text-base;
+          font-weight: $font-semibold;
+          color: var(--text-primary);
+          margin-bottom: $space-1;
+          line-height: $leading-tight;
+        }
+
+        .feature-badge {
+          display: inline-flex;
+          padding: 2px $space-2;
+          background: rgba($accent-500, 0.1);
+          color: $accent-500;
+          border-radius: $radius-full;
+          font-size: 10px;
+          font-weight: $font-semibold;
+          text-transform: uppercase;
+          letter-spacing: $tracking-wide;
+        }
+      }
+    }
+
+    .feature-description {
+      font-size: $text-sm;
+      color: var(--text-secondary);
+      line-height: $leading-relaxed;
+    }
+  }
+}
+
+// ---------------------------------------------
+// ABOUT SECTION - Clean Typography
+// ---------------------------------------------
+
+.about {
+  padding: $space-16 $space-6;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-color);
+
+  .section-title {
+    font-size: $text-2xl;
+    font-weight: $font-semibold;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: $space-10;
+    letter-spacing: $tracking-tight;
+  }
+
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      font-size: $text-base;
+      color: var(--text-secondary);
+      line-height: $leading-relaxed;
+      margin-bottom: $space-4;
+    }
+
+    .golden-ratio-formula {
+      @include clean-card;
+      padding: $space-6;
+      text-align: center;
+      margin: $space-8 0;
+      background: var(--bg-card);
+
+      code {
+        font-family: $font-mono;
+        font-size: $text-lg;
+        color: $accent-500;
+        font-weight: $font-medium;
+      }
+    }
+
+    .about-highlights {
+      display: grid;
+      gap: $space-3;
+      margin-top: $space-8;
+
+      .highlight-item {
+        padding: $space-4;
+        background: var(--bg-card);
+        border-left: 2px solid $primary-500;
+        border-radius: $radius-md;
+
+        strong {
+          color: var(--text-primary);
+          font-weight: $font-semibold;
+          display: block;
+          margin-bottom: $space-1;
+          font-size: $text-sm;
+        }
+
+        color: var(--text-secondary);
+        font-size: $text-sm;
+        line-height: $leading-relaxed;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------
+// QUICK LINKS - Minimal Grid
+// ---------------------------------------------
+
+.quick-links {
+  padding: $space-16 $space-6 $space-20;
+
+  .section-title {
+    font-size: $text-xl;
+    font-weight: $font-semibold;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: $space-8;
+    letter-spacing: $tracking-tight;
+  }
+
+  .links-grid {
+    display: flex;
+    gap: $space-2;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .quick-link-card {
+    padding: $space-2 $space-4;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: $radius-lg;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: $text-sm;
+    font-weight: $font-medium;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: var(--bg-subtle);
+      border-color: $primary-500;
+      color: $primary-500;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ---------------------------------------------
+// ANIMATIONS - Subtle & Smooth
+// ---------------------------------------------
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page {
+  animation: fadeIn 0.4s ease-out;
+}

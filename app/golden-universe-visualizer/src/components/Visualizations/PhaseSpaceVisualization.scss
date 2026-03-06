@@ -1,0 +1,118 @@
+// =============================================
+// PHASE SPACE VISUALIZATION - REFINED
+// Clean professional 3D phase space visualization
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+@import '../../styles/refined-components.scss';
+
+.phase-space-visualization {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: var(--bg-base);
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .legend {
+    position: absolute;
+    top: $space-6;
+    left: $space-6;
+    @include clean-card;
+    padding: $space-6;
+    color: var(--text-primary);
+    font-family: $font-sans;
+    min-width: 280px;
+    max-width: 360px;
+    z-index: $z-popover;
+    animation: slideInLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    h3 {
+      margin: 0 0 $space-5 0;
+      font-size: $text-lg;
+      color: $accent-500;
+      font-weight: $font-semibold;
+      border-bottom: $border-width solid var(--border-color);
+      padding-bottom: $space-3;
+      letter-spacing: $tracking-tight;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: $space-3;
+      margin: $space-3 0;
+      padding: $space-2;
+      border-radius: $radius-md;
+      transition: all $transition-fast;
+
+      &:hover {
+        background: var(--bg-subtle);
+      }
+
+      .color-box {
+        width: 16px;
+        height: 16px;
+        border-radius: $radius-sm;
+        border: $border-width solid var(--border-color);
+        flex-shrink: 0;
+      }
+
+      .name {
+        flex: 1;
+        font-weight: $font-medium;
+        color: var(--text-primary);
+        font-size: $text-sm;
+      }
+
+      .type {
+        font-size: $text-xs;
+        color: var(--text-tertiary);
+        text-transform: uppercase;
+        letter-spacing: $tracking-wide;
+        font-weight: $font-medium;
+      }
+    }
+
+    // Stats section if present
+    .legend-stats {
+      margin-top: $space-5;
+      padding-top: $space-4;
+      border-top: $border-width solid var(--border-color);
+      font-size: $text-xs;
+      color: var(--text-secondary);
+
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-2 0;
+
+        .stat-label {
+          color: var(--text-tertiary);
+        }
+
+        .stat-value {
+          font-weight: $font-semibold;
+          color: $accent-500;
+          font-family: $font-mono;
+        }
+      }
+    }
+  }
+}

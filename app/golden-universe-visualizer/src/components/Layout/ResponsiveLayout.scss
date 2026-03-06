@@ -1,0 +1,70 @@
+@import '@styles/variables.scss';
+@import '@styles/responsive.scss';
+
+.responsive-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
+  &__header {
+    flex-shrink: 0;
+    width: 100%;
+    z-index: $z-index-dropdown;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__sidebar {
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: $z-index-dropdown - 1;
+
+    @include until-lg {
+      display: none;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+
+    // Account for bottom navigation on mobile
+    @include mobile-and-tablet {
+      padding-bottom: 64px; // Height of bottom navigation
+    }
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    width: 100%;
+
+    @include mobile-and-tablet {
+      display: none; // Hide footer on mobile if bottom nav is present
+    }
+  }
+
+  &__bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-dropdown;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    @include from-lg {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,208 @@
+.performance-dashboard {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--color-surface, #fff);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+
+  &.collapsed {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.expanded {
+    width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .dashboard-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-text-primary, #333);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--color-hover, #f5f5f5);
+    }
+
+    .toggle-icon {
+      font-size: 1.5rem;
+    }
+
+    .toggle-text {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  .dashboard-content {
+    padding: 16px;
+    padding-top: 0;
+  }
+
+  .metric-section {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text-secondary, #666);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .metric-card {
+    background: var(--color-background, #f9f9f9);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--color-text-secondary, #666);
+      margin-bottom: 4px;
+    }
+
+    .metric-value {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-text-primary, #333);
+
+      &.good {
+        color: #10b981;
+      }
+
+      &.warning {
+        color: #f59e0b;
+      }
+
+      &.bad {
+        color: #ef4444;
+      }
+    }
+  }
+
+  .chunk-list {
+    max-height: 200px;
+    overflow-y: auto;
+
+    .chunk-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: var(--color-background, #f9f9f9);
+      border-radius: 4px;
+      margin-bottom: 6px;
+      font-size: 0.875rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .chunk-name {
+        color: var(--color-text-primary, #333);
+        font-family: 'Monaco', 'Courier New', monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 70%;
+      }
+
+      .chunk-size {
+        color: var(--color-text-secondary, #666);
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* Scrollbar styling */
+  &::-webkit-scrollbar,
+  .chunk-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track,
+  .chunk-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  .chunk-list::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar, #ccc);
+    border-radius: 3px;
+
+    &:hover {
+      background: var(--color-scrollbar-hover, #999);
+    }
+  }
+}
+
+/* Dark theme support */
+[data-theme='dark'] {
+  .performance-dashboard {
+    background: var(--color-surface-dark, #1e1e1e);
+    color: var(--color-text-dark, #e0e0e0);
+
+    .dashboard-toggle {
+      color: var(--color-text-dark, #e0e0e0);
+
+      &:hover {
+        background: var(--color-hover-dark, #2a2a2a);
+      }
+    }
+
+    .metric-card {
+      background: var(--color-background-dark, #2a2a2a);
+
+      .metric-value {
+        color: var(--color-text-dark, #e0e0e0);
+      }
+    }
+
+    .chunk-list .chunk-item {
+      background: var(--color-background-dark, #2a2a2a);
+
+      .chunk-name {
+        color: var(--color-text-dark, #e0e0e0);
+      }
+    }
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .performance-dashboard {
+    &.expanded {
+      width: calc(100vw - 40px);
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .metric-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

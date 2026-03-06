@@ -1,0 +1,496 @@
+{
+  "symbol_dimensions": {
+    "M_P": {
+      "name": "Planck mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_e": {
+      "name": "electron mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_p": {
+      "name": "proton mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_n": {
+      "name": "neutron mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_{\\mu}": {
+      "name": "muon mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_{\\tau}": {
+      "name": "tau mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_W": {
+      "name": "W boson mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_Z": {
+      "name": "Z boson mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "m_H": {
+      "name": "Higgs mass",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "c": {
+      "name": "speed of light",
+      "dimensions": [
+        0,
+        1,
+        -1,
+        0,
+        0
+      ]
+    },
+    "G": {
+      "name": "gravitational constant",
+      "dimensions": [
+        -1,
+        3,
+        -2,
+        0,
+        0
+      ]
+    },
+    "\\hbar": {
+      "name": "reduced Planck constant",
+      "dimensions": [
+        1,
+        2,
+        -1,
+        0,
+        0
+      ]
+    },
+    "k_B": {
+      "name": "Boltzmann constant",
+      "dimensions": [
+        1,
+        2,
+        -2,
+        -1,
+        0
+      ]
+    },
+    "\\pi": {
+      "name": "pi",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "\\phi": {
+      "name": "phase angle",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "\\varphi": {
+      "name": "golden ratio",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "\\alpha": {
+      "name": "fine structure constant",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "e": {
+      "name": "Euler number",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "\\theta": {
+      "name": "angle",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "E": {
+      "name": "energy",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "T": {
+      "name": "temperature/energy",
+      "dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S": {
+      "name": "entropy",
+      "dimensions": [
+        1,
+        2,
+        -2,
+        -1,
+        0
+      ]
+    },
+    "S/k_B": {
+      "name": "dimensionless entropy",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "n": {
+      "name": "epoch number",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "N": {
+      "name": "integer",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "N_e": {
+      "name": "electron epoch",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "k": {
+      "name": "resonance number",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "y_e": {
+      "name": "electron Yukawa coupling",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "y_{\\mu}": {
+      "name": "muon Yukawa coupling",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "y_{\\tau}": {
+      "name": "tau Yukawa coupling",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S_e": {
+      "name": "electron structural factor",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S_{\\mu}": {
+      "name": "muon structural factor",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "S_{\\tau}": {
+      "name": "tau structural factor",
+      "dimensions": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "issues_by_document": {
+    "GU Couplings and Particles.md": [
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " M_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}}",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 1015,
+        "full_equation": "m_{e}c^{2} = M_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}}"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " M_{P}c^{2}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}^{\\left( \\text{\u2009\u2063}2\\pi\\text{\u2009\u2063} \\right)}(n)}{\\phi^{\\text{\u2009}n}},",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 1435,
+        "full_equation": "m_{e}(n)c^{2} = M_{P}c^{2}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}^{\\left( \\text{\u2009\u2063}2\\pi\\text{\u2009\u2063} \\right)}(n)}{\\phi^{\\text{\u2009}n}},"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " M_{P}c^{2}\\left( \\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}} \\right).",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 1633,
+        "full_equation": "m_{e}c^{2} = M_{P}c^{2}\\left( \\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}} \\right)."
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}},",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 3361,
+        "full_equation": "m_{e}c^{2} = m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}},"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{n}}{\\phi_{n}^{111}}\\text{\\:\\,}C_{e}(n).",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 5463,
+        "full_equation": "m_{e}(n)\\text{\u2009}c^{2} = m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{n}}{\\phi_{n}^{111}}\\text{\\:\\,}C_{e}(n)."
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{n}}{\\phi_{n}^{111}}\\text{\\:\\,}\\frac{2}{\\mu(n)}\\text{\\:\\,}G_{e}\\text{\\:\\,}\\left\\lbrack \\frac{y_{-}( + L_{\\Omega}/2)}{y_{0}( + L_{\\Omega}/2)} \\right\\rbrack^{1/2},",
+        "severity": "HIGH",
+        "document": "GU Couplings and Particles.md",
+        "line": 5475,
+        "full_equation": "m_{e}(n)c^{2} = m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{n}}{\\phi_{n}^{111}}\\text{\\:\\,}\\frac{2}{\\mu(n)}\\text{\\:\\,}G_{e}\\text{\\:\\,}\\left\\lbrack \\frac{y_{-}( + L_{\\Omega}/2)}{y_{0}( + L_{\\Omega}/2)} \\right\\rbrack^{1/2},"
+      }
+    ],
+    "GU next in line.md": [
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}.",
+        "severity": "HIGH",
+        "document": "GU next in line.md",
+        "line": 2483,
+        "full_equation": "m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}."
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{",
+        "rhs": " M_{P}\\text{\\:\\,}\\frac{C_{\\mathcal{l}}}{\\phi^{N}}.",
+        "severity": "HIGH",
+        "document": "GU next in line.md",
+        "line": 2493,
+        "full_equation": "m_{\\mathcal{l}} = M_{P}\\text{\\:\\,}\\frac{C_{\\mathcal{l}}}{\\phi^{N}}."
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " M_{P}\\text{\\:\\,}\\frac{C_{e}}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}",
+        "severity": "HIGH",
+        "document": "GU next in line.md",
+        "line": 2520,
+        "full_equation": "m_{e} = M_{P}\\text{\\:\\,}\\frac{C_{e}}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}",
+        "severity": "HIGH",
+        "document": "GU next in line.md",
+        "line": 2524,
+        "full_equation": "m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " M_{P}c^{2}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}},",
+        "severity": "HIGH",
+        "document": "GU next in line.md",
+        "line": 2586,
+        "full_equation": "m_{e}c^{2} = M_{P}c^{2}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}},"
+      }
+    ],
+    "Some GU Particles Stuff.md": [
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " M_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}}",
+        "severity": "HIGH",
+        "document": "Some GU Particles Stuff.md",
+        "line": 1015,
+        "full_equation": "m_{e}c^{2} = M_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}}"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}",
+        "rhs": " M_{P}c^{2}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}^{\\left( \\text{\u2009\u2063}2\\pi\\text{\u2009\u2063} \\right)}(n)}{\\phi^{\\text{\u2009}n}},",
+        "severity": "HIGH",
+        "document": "Some GU Particles Stuff.md",
+        "line": 1435,
+        "full_equation": "m_{e}(n)c^{2} = M_{P}c^{2}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}^{\\left( \\text{\u2009\u2063}2\\pi\\text{\u2009\u2063} \\right)}(n)}{\\phi^{\\text{\u2009}n}},"
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " M_{P}c^{2}\\left( \\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}} \\right).",
+        "severity": "HIGH",
+        "document": "Some GU Particles Stuff.md",
+        "line": 1633,
+        "full_equation": "m_{e}c^{2} = M_{P}c^{2}\\left( \\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}} \\right)."
+      },
+      {
+        "type": "dimensional_mismatch",
+        "issue": "Mass = angle?",
+        "lhs": "m_{e}c",
+        "rhs": " m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}},",
+        "severity": "HIGH",
+        "document": "Some GU Particles Stuff.md",
+        "line": 3361,
+        "full_equation": "m_{e}c^{2} = m_{P}c^{2}\\text{\\:\\,}\\frac{2\\pi_{111}\\text{\u2009}C_{e}(111)}{\\varphi_{111}^{111}},"
+      }
+    ]
+  },
+  "summary": {
+    "total_documents": 3,
+    "total_issues": 15
+  }
+}

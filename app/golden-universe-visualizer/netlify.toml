@@ -1,0 +1,103 @@
+# Netlify Configuration
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20.x"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Production context
+[context.production]
+  command = "npm run build:production"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  VITE_APP_ENV = "production"
+
+# Deploy preview context
+[context.deploy-preview]
+  command = "npm run build:staging"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "staging"
+  VITE_APP_ENV = "staging"
+
+# Branch deploy context
+[context.branch-deploy]
+  command = "npm run build"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.golden-universe.app/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.golden-universe.app https://www.google-analytics.com https://sentry.io; frame-ancestors 'none';"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+
+# Plugin configuration
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.9
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+
+  [plugins.inputs]
+    paths = ["node_modules", ".cache"]

@@ -1,0 +1,450 @@
+// =============================================
+// 🎨 MODERN SIDEBAR NAVIGATION
+// Professional Dashboard-Style Sidebar
+// =============================================
+
+@import '../../styles/variables.scss';
+@import '../../styles/design-system.scss';
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: $sidebar-width;
+  background: $bg-secondary;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all $transition-base;
+  z-index: $z-sidebar; // Use highest z-index for sidebar
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // Subtle gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+      transparent,
+      rgba(255, 255, 255, 0.05) 20%,
+      rgba(255, 255, 255, 0.05) 80%,
+      transparent
+    );
+  }
+
+  &.collapsed {
+    width: $sidebar-collapsed-width;
+
+    .sidebar-title {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .nav-label {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .expand-button {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .nav-item-content {
+      justify-content: center;
+    }
+
+    .nav-link {
+      justify-content: center;
+    }
+
+    .sidebar-footer {
+      .user-info {
+        display: none;
+      }
+    }
+  }
+
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+// ---------------------------------------------
+// SIDEBAR HEADER
+// ---------------------------------------------
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-6 $space-5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: $header-height;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+}
+
+.sidebar-title {
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  background: linear-gradient(135deg, $brand-primary 0%, $brand-accent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.02em;
+  transition: all $transition-base;
+}
+
+.collapse-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: $text-secondary;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-md;
+  transition: all $transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: $text-primary;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  .hamburger-icon {
+    font-size: $text-lg;
+  }
+}
+
+// ---------------------------------------------
+// NAVIGATION CONTAINER
+// ---------------------------------------------
+
+.sidebar-nav {
+  flex: 1;
+  padding: $space-4 $space-3;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  // Subtle fade at bottom for scrollable content
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 80px; // Account for footer
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to top, $bg-secondary, transparent);
+    pointer-events: none;
+  }
+}
+
+// ---------------------------------------------
+// NAVIGATION ITEMS
+// ---------------------------------------------
+
+.nav-item {
+  margin-bottom: $space-1;
+
+  &.depth-0 {
+    margin-bottom: $space-2;
+
+    > .nav-item-content {
+      font-weight: $font-medium;
+    }
+  }
+
+  &.depth-1 {
+    .nav-item-content {
+      padding-left: calc(#{$space-4} + #{$space-3});
+      font-size: $text-sm;
+    }
+  }
+
+  &.depth-2 {
+    .nav-item-content {
+      padding-left: calc(#{$space-4} + #{$space-6});
+      font-size: $text-sm;
+      opacity: 0.9;
+    }
+  }
+}
+
+.nav-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-3 $space-4;
+  transition: all $transition-fast;
+  border-radius: $radius-lg;
+  margin: 0 $space-1;
+  position: relative;
+  overflow: hidden;
+
+  // Hover state
+  &:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+
+    .nav-link {
+      color: $text-primary;
+    }
+
+    .nav-icon {
+      transform: translateX(2px);
+    }
+  }
+
+  // Active state
+  &.active {
+    background: linear-gradient(135deg,
+      rgba($brand-primary, 0.15) 0%,
+      rgba($brand-primary, 0.1) 100%);
+    border: 1px solid rgba($brand-primary, 0.2);
+
+    // Glow effect
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg,
+        rgba($brand-primary, 0.1) 0%,
+        transparent 100%);
+      opacity: 0;
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .nav-link {
+      color: $brand-primary;
+      font-weight: $font-medium;
+    }
+
+    .nav-icon {
+      color: $brand-primary;
+      filter: drop-shadow(0 0 8px rgba($brand-primary, 0.3));
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// ---------------------------------------------
+// NAVIGATION LINK & ICON
+// ---------------------------------------------
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  text-decoration: none;
+  color: $text-secondary;
+  font-size: $text-sm;
+  font-weight: $font-normal;
+  flex: 1;
+  transition: all $transition-fast;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.nav-icon {
+  font-size: $text-lg;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  color: $text-tertiary;
+  filter: grayscale(100%) brightness(2);  // Force all icons to white
+}
+
+.nav-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all $transition-base;
+}
+
+// ---------------------------------------------
+// EXPAND/COLLAPSE ARROW
+// ---------------------------------------------
+
+.expand-button {
+  background: transparent;
+  border: none;
+  color: $text-tertiary;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-fast;
+  border-radius: $radius-sm;
+
+  &:hover {
+    color: $text-secondary;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.arrow {
+  display: inline-block;
+  font-size: $text-xs;
+  transition: transform $transition-base;
+
+  &.expanded {
+    transform: rotate(90deg);
+  }
+}
+
+// ---------------------------------------------
+// NAVIGATION CHILDREN ANIMATION
+// ---------------------------------------------
+
+.nav-children {
+  animation: slideDown $transition-base ease-out;
+  margin-top: $space-1;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ---------------------------------------------
+// SIDEBAR FOOTER (User Profile)
+// ---------------------------------------------
+
+.sidebar-footer {
+  padding: $space-4;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    padding: $space-3 $space-4;
+    border-radius: $radius-lg;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .user-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: $radius-md;
+      background: linear-gradient(135deg, $brand-primary 0%, $brand-accent 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: $font-semibold;
+      font-size: $text-sm;
+    }
+
+    .user-info {
+      flex: 1;
+
+      .user-name {
+        font-size: $text-sm;
+        font-weight: $font-medium;
+        color: $text-primary;
+        margin-bottom: 2px;
+      }
+
+      .user-role {
+        font-size: $text-xs;
+        color: $text-tertiary;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------
+// RESPONSIVE DESIGN
+// ---------------------------------------------
+
+@media (max-width: $breakpoint-lg) {
+  .sidebar {
+    transform: translateX(-100%);
+
+    &.mobile-open {
+      transform: translateX(0);
+    }
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-base;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

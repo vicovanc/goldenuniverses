@@ -1,0 +1,47 @@
+{
+  "DERIVED_FROM_FIRST_PRINCIPLES": {
+    "mathematical_constants": {
+      "pi": "3.14159265358979",
+      "phi": "1.61803398874989",
+      "e": "2.71828182845905"
+    },
+    "topological_quantum_numbers": {
+      "N_e": 111,
+      "k_res": 42,
+      "winding_p": -41,
+      "winding_q": 70
+    },
+    "geometric_quantities": {
+      "delta_e": "0.398227248761671",
+      "y_e": "0.51097951228961",
+      "alpha_GUT": "0.0245907910770867"
+    },
+    "qed_correction": {
+      "eta_QED": "0.998838590267114"
+    },
+    "required_coupling": {
+      "C_e_target": "1.05120941954933"
+    }
+  },
+  "FUNCTIONAL_FORM_KNOWN": {
+    "C_e_functional": "Complete form in theory line 4055-4057",
+    "status": "Form derived, numerical values need calculation"
+  },
+  "NOT_YET_CALCULATED": {
+    "elliptic_modulus_nu": "Requires energy minimization",
+    "memory_coupling_ratio": "\u03bb_rec(X_111)/\u03b2(X_111) - theory says missing",
+    "predicted_C_e_value": "Awaiting \u03bd and \u03bb_rec/\u03b2"
+  },
+  "BEST_CURRENT_PREDICTION": {
+    "coupling": "\u03c0/e",
+    "value": "1.15572734979092",
+    "error_percent": 9.942636386040295,
+    "status": "Best simple constant, but ~10% error"
+  },
+  "PREVIOUS_FALSE_CLAIM": {
+    "claimed_n": 110,
+    "claimed_C_e": "\u221a\u03c0/e",
+    "claimed_error": 0.36,
+    "reality": "Curve fitting - n=110 NOT in theory, \u221a\u03c0/e was fitted"
+  }
+}

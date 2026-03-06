@@ -1,0 +1,314 @@
+{
+  "electron_coupling": {
+    "C_required": "0.648928601364916",
+    "C_required_float": 0.6489286013649163,
+    "best_simple_match": {
+      "expression": "(1/e)*(sqrt(pi))",
+      "value": 0.6520493321732922,
+      "error": 0.0031207308083759377,
+      "rel_error_percent": 0.4809051106411377
+    },
+    "all_matches": [
+      {
+        "expression": "(1/e)*(sqrt(pi))",
+        "value": 0.6520493321732922,
+        "error": 0.0031207308083759377,
+        "rel_error_percent": 0.4809051106411377
+      },
+      {
+        "expression": "(1/e)*(sqrt(3))",
+        "value": 0.637185883168984,
+        "error": 0.011742718195932311,
+        "rel_error_percent": 1.8095547293235967
+      },
+      {
+        "expression": "(sqrt(2))/(sqrt(5))",
+        "value": 0.6324555320336759,
+        "error": 0.016473069331240375,
+        "rel_error_percent": 2.538502586662376
+      },
+      {
+        "expression": "(phi-1)",
+        "value": 0.6180339887498949,
+        "error": 0.030894612615021355,
+        "rel_error_percent": 4.760864685273471
+      },
+      {
+        "expression": "1/phi",
+        "value": 0.6180339887498948,
+        "error": 0.030894612615021466,
+        "rel_error_percent": 4.760864685273488
+      },
+      {
+        "expression": "(1/e)*(sqrt(e))",
+        "value": 0.6065306597126334,
+        "error": 0.04239794165228283,
+        "rel_error_percent": 6.533529507422793
+      },
+      {
+        "expression": "(1/e)^0.5",
+        "value": 0.6065306597126334,
+        "error": 0.04239794165228283,
+        "rel_error_percent": 6.533529507422793
+      },
+      {
+        "expression": "(phi)/(e)",
+        "value": 0.5952414395777111,
+        "error": 0.05368716178720512,
+        "rel_error_percent": 8.273200113892788
+      },
+      {
+        "expression": "(phi)*(1/e)",
+        "value": 0.5952414395777111,
+        "error": 0.05368716178720512,
+        "rel_error_percent": 8.273200113892788
+      },
+      {
+        "expression": "(1/e)^0.333333333333333",
+        "value": 0.7165313105737893,
+        "error": 0.06760270920887301,
+        "rel_error_percent": 10.41758817020573
+      },
+      {
+        "expression": "(phi)/(sqrt(5))",
+        "value": 0.7236067977499789,
+        "error": 0.07467819638506268,
+        "rel_error_percent": 11.507921861972054
+      },
+      {
+        "expression": "(1/phi)^0.666666666666667",
+        "value": 0.7255626302463263,
+        "error": 0.07663402888141002,
+        "rel_error_percent": 11.80931595867754
+      },
+      {
+        "expression": "(sqrt(phi))/(sqrt(5))",
+        "value": 0.5688644810057831,
+        "error": 0.08006412035913313,
+        "rel_error_percent": 12.337893597343562
+      },
+      {
+        "expression": "(sqrt(phi))/(sqrt(3))",
+        "value": 0.7344008870614412,
+        "error": 0.08547228569652499,
+        "rel_error_percent": 13.171292730316997
+      },
+      {
+        "expression": "(sqrt(e))/(sqrt(5))",
+        "value": 0.7373305674470637,
+        "error": 0.08840196608214745,
+        "rel_error_percent": 13.622756940626168
+      }
+    ]
+  },
+  "optimized_formula": {
+    "optimal_n": 111,
+    "optimal_C": "sqrt(pi)/phi",
+    "optimal_error": 4.328446323874839,
+    "all_results": [
+      {
+        "n": 105,
+        "C_formula": "(pi*phi)^(-1/2)",
+        "C_value": 0.4435384184224555,
+        "m_calculated": 3.873401679476102,
+        "error_percent": 658.0058001050887
+      },
+      {
+        "n": 106,
+        "C_formula": "(pi*phi)^(-1/2)",
+        "C_value": 0.4435384184224555,
+        "m_calculated": 2.3938938899971567,
+        "error_percent": 368.4733481345034
+      },
+      {
+        "n": 107,
+        "C_formula": "(pi*phi)^(-1/2)",
+        "C_value": 0.4435384184224555,
+        "m_calculated": 1.479507789478945,
+        "error_percent": 189.5324519705853
+      },
+      {
+        "n": 108,
+        "C_formula": "(pi*phi)^(-1/2)",
+        "C_value": 0.4435384184224555,
+        "m_calculated": 0.9143861005182119,
+        "error_percent": 78.94089616391814
+      },
+      {
+        "n": 109,
+        "C_formula": "(pi*phi)^(-1/2)",
+        "C_value": 0.4435384184224555,
+        "m_calculated": 0.5651216889607328,
+        "error_percent": 10.591555806667085
+      },
+      {
+        "n": 110,
+        "C_formula": "1/phi",
+        "C_value": 0.6180339887498948,
+        "m_calculated": 0.48667098144733173,
+        "error_percent": 4.760864685273468
+      },
+      {
+        "n": 111,
+        "C_formula": "sqrt(pi)/phi",
+        "C_value": 1.0954367233502473,
+        "m_calculated": 0.533117265266314,
+        "error_percent": 4.328446323874839
+      },
+      {
+        "n": 112,
+        "C_formula": "sqrt(pi)/phi",
+        "C_value": 1.0954367233502473,
+        "m_calculated": 0.3294845899239758,
+        "error_percent": 35.52147417837633
+      },
+      {
+        "n": 113,
+        "C_formula": "sqrt(pi)/phi",
+        "C_value": 1.0954367233502473,
+        "m_calculated": 0.2036326753423382,
+        "error_percent": 60.150079497748834
+      },
+      {
+        "n": 114,
+        "C_formula": "sqrt(pi)/phi",
+        "C_value": 1.0954367233502473,
+        "m_calculated": 0.1258519145816376,
+        "error_percent": 75.3713946806275
+      },
+      {
+        "n": 115,
+        "C_formula": "sqrt(pi)/phi",
+        "C_value": 1.0954367233502473,
+        "m_calculated": 0.07778076076070055,
+        "error_percent": 84.77868481712133
+      }
+    ]
+  },
+  "lepton_ratios": {
+    "muon": {
+      "S_exact": 1.039010361617623,
+      "S_current": 1.0471975511965976,
+      "best_matches": [
+        {
+          "expression": "pi/3",
+          "value": 1.0471975511965976,
+          "error_percent": 0.7879795891763914
+        },
+        {
+          "expression": "(sqrt(pi))/(sqrt(3))",
+          "value": 1.0233267079464885,
+          "error_percent": 1.509480006216372
+        },
+        {
+          "expression": "(1/phi)*(sqrt(e))",
+          "value": 1.0189657832675953,
+          "error_percent": 1.9291990812122826
+        },
+        {
+          "expression": "(1/phi)*(sqrt(3))",
+          "value": 1.0704662693192697,
+          "error_percent": 3.0274873922020773
+        },
+        {
+          "expression": "(sqrt(pi))/(sqrt(e))",
+          "value": 1.0750476034999201,
+          "error_percent": 3.468419874676824
+        },
+        {
+          "expression": "(e)*(1/e)",
+          "value": 1.0,
+          "error_percent": 3.7545690648251258
+        },
+        {
+          "expression": "(phi)*(1/phi)",
+          "value": 0.9999999999999999,
+          "error_percent": 3.754569064825137
+        },
+        {
+          "expression": "(sqrt(phi))^0.333333333333333",
+          "value": 1.083505882173848,
+          "error_percent": 4.282490550618804
+        },
+        {
+          "expression": "(1/phi)*(sqrt(pi))",
+          "value": 1.0954367233502473,
+          "error_percent": 5.430779501060495
+        },
+        {
+          "expression": "(phi)/(sqrt(e))",
+          "value": 0.9813872226339374,
+          "error_percent": 5.54596384332229
+        }
+      ]
+    },
+    "tau": {
+      "S_exact": 0.9737406909377976,
+      "S_current": 0.9772050238058398,
+      "best_matches": [
+        {
+          "expression": "(phi)/(sqrt(e))",
+          "value": 0.9813872226339374,
+          "error_percent": 0.785273920182543
+        },
+        {
+          "expression": "(sqrt(e))/(sqrt(3))",
+          "value": 0.951889669457381,
+          "error_percent": 2.2440287936793704
+        },
+        {
+          "expression": "(phi)*(1/phi)",
+          "value": 0.9999999999999999,
+          "error_percent": 2.696745581917943
+        },
+        {
+          "expression": "(e)*(1/e)",
+          "value": 1.0,
+          "error_percent": 2.696745581917954
+        },
+        {
+          "expression": "(phi)/(sqrt(3))",
+          "value": 0.9341723589627158,
+          "error_percent": 4.063538921945845
+        },
+        {
+          "expression": "(1/phi)*(sqrt(e))",
+          "value": 1.0189657832675953,
+          "error_percent": 4.644469800911991
+        },
+        {
+          "expression": "(sqrt(pi))/(sqrt(3))",
+          "value": 1.0233267079464885,
+          "error_percent": 5.092322573162187
+        },
+        {
+          "expression": "(phi)/(sqrt(pi))",
+          "value": 0.9128779222789183,
+          "error_percent": 6.250408268372057
+        },
+        {
+          "expression": "pi/3",
+          "value": 1.0471975511965976,
+          "error_percent": 7.5437804892444875
+        },
+        {
+          "expression": "(sqrt(phi))/(sqrt(2))",
+          "value": 0.8994537199739336,
+          "error_percent": 7.629030157127262
+        }
+      ]
+    }
+  },
+  "higher_order": {
+    "qed_1loop": 0.0017421145993287896,
+    "qed_2loop": 2.6547126787437427e-05,
+    "running_factor": 1.0314957675894376,
+    "correction_factors": {
+      "1 + \u03b1/\u03c0": 1.0023228194657716,
+      "1 + 3\u03b1/(4\u03c0)": 1.0017421145993288,
+      "1 + 1/\u03c6^2": 1.381966011250105,
+      "1 + \u03b1\u00b7\u03c6": 1.0118073644849925,
+      "\u03c6^(\u03b1/\u03c0)": 1.0011183931300989
+    }
+  }
+}

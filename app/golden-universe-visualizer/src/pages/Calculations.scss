@@ -1,0 +1,214 @@
+// ===================================
+// Calculations Page - Glassmorphism Design
+// Sophisticated & Elegant Styling
+// ===================================
+
+@import '../styles/variables.scss';
+
+.calculations-page {
+  min-height: 100vh;
+  background: $gradient-cosmic;
+  padding: $spacing-xl;
+  margin-left: 200px;  // Account for sidebar width
+  position: relative;
+  overflow-x: hidden;
+
+  // Animated background particles - subtle and sophisticated
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -30px); }
+    66% { transform: translate(-20px, 20px); }
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    animation: fadeInDown 0.6s ease-out;
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: $font-size-5xl;
+      font-weight: $font-weight-extrabold;
+      color: white;
+      margin-bottom: $spacing-md;
+      @include gradient-text($gradient-accent);
+      text-shadow: $shadow-glow-gold-md;
+      letter-spacing: -0.02em;
+      line-height: $line-height-tight;
+    }
+
+    .subtitle {
+      color: $text-secondary;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-light;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .mode-selector {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .mode-btn {
+      @include glass-button;
+      padding: $spacing-lg $spacing-xl;
+      color: white;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      // Shimmer effect on hover
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      &:hover {
+        border-color: $color-gold-500;
+        box-shadow: $shadow-glass-md, $shadow-glow-gold-sm;
+
+        &::before {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      &.active {
+        background: $gradient-accent;
+        border-color: $color-gold-500;
+        color: $color-cosmos-deepest;
+        box-shadow: $shadow-glow-gold-md, $shadow-glass-lg;
+        transform: translateY(-2px);
+
+        &:hover {
+          box-shadow: $shadow-glow-gold-lg, $shadow-glass-xl;
+        }
+      }
+
+      // Subtle glow animation on active
+      &.active::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $border-radius-md;
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    }
+  }
+
+  .calculations-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// ===== Responsive Design =====
+@media (max-width: $breakpoint-tablet) {
+  .calculations-page {
+    padding: $spacing-lg;
+
+    .page-header {
+      h1 {
+        font-size: $font-size-4xl;
+      }
+
+      .subtitle {
+        font-size: $font-size-base;
+      }
+    }
+
+    .mode-selector {
+      flex-direction: column;
+      align-items: stretch;
+
+      .mode-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .calculations-page {
+    padding: $spacing-md;
+    margin-left: 60px;  // Smaller margin on mobile
+
+    .page-header {
+      h1 {
+        font-size: $font-size-3xl;
+      }
+    }
+  }
+}

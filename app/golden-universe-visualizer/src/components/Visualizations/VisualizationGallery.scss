@@ -1,0 +1,317 @@
+// =============================================
+// VISUALIZATION GALLERY - REFINED
+// Clean professional 3D viewer design
+// Inspired by Flup/Deliro design principles
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+@import '../../styles/refined-components.scss';
+
+.visualization-gallery {
+  min-height: 100vh;
+  margin-left: 200px;  // Account for sidebar width
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: $font-sans;
+  position: relative;
+
+  .gallery-header {
+    padding: $space-8 $space-10;
+    text-align: center;
+    border-bottom: $border-width solid var(--border-color);
+    position: relative;
+    z-index: 10;
+    background: var(--bg-card);
+
+    h1 {
+      margin: 0 0 $space-3 0;
+      font-size: $text-4xl;
+      font-weight: $font-bold;
+      color: var(--text-primary);
+      letter-spacing: $tracking-tight;
+    }
+
+    p {
+      margin: 0;
+      font-size: $text-lg;
+      color: var(--text-secondary);
+      font-weight: $font-normal;
+      letter-spacing: $tracking-normal;
+    }
+  }
+
+  .gallery-container {
+    display: flex;
+    height: calc(100vh - 140px);
+    position: relative;
+    margin-left: 0;
+    padding-left: 20px;
+
+    .sidebar {
+      width: 340px; // Further increased width to better accommodate content
+      background: var(--bg-card);
+      border-right: $border-width solid var(--border-color);
+      overflow-y: auto;
+      overflow-x: hidden; // Prevent horizontal overflow
+      padding: $space-5;
+      position: relative;
+      z-index: 10;
+      flex-shrink: 0; // Prevent sidebar from shrinking
+
+      // Custom scrollbar
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--bg-subtle);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: $radius-full;
+
+        &:hover {
+          background: $gray-400;
+        }
+      }
+
+      h2 {
+        margin: 0 0 $space-6 0;
+        font-size: $text-xl;
+        font-weight: $font-semibold;
+        color: var(--text-primary);
+        padding-bottom: $space-4;
+        border-bottom: $border-width solid var(--border-color);
+      }
+
+      .viz-nav {
+        display: flex;
+        flex-direction: column;
+        gap: $space-3;
+        margin-bottom: $space-8;
+
+        .viz-button {
+          @include clean-card;
+          padding: $space-5;
+          text-align: left;
+          cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
+          width: 100%; // Use full width of sidebar
+          // Removed animation to prevent content disappearing
+          transform-origin: left center;
+
+          &:hover {
+            transform: translateX(8px);
+            box-shadow: $shadow-card-hover;
+
+            p {
+              white-space: normal; // Allow text wrapping on hover
+            }
+          }
+
+          &.active {
+            background: rgba($primary-500, 0.05);
+            border-color: $primary-500;
+            box-shadow: $shadow-card-hover;
+            transform: translateX(4px);
+
+            h3 {
+              color: $primary-500;
+            }
+
+            p {
+              white-space: normal;
+            }
+          }
+
+          h3 {
+            margin: 0 0 $space-2 0;
+            font-size: $text-base;
+            font-weight: $font-semibold;
+            color: var(--text-primary);
+            transition: color $transition-fast;
+          }
+
+          p {
+            margin: 0;
+            font-size: $text-sm;
+            color: var(--text-tertiary);
+            line-height: $leading-normal;
+            transition: all $transition-base;
+          }
+        }
+
+        // Removed slideInButton keyframes to prevent content issues
+      }
+
+      .controls-info {
+        @include clean-card;
+        padding: $space-5;
+        background: var(--bg-subtle);
+
+        h3 {
+          margin: 0 0 $space-4 0;
+          font-size: $text-base;
+          font-weight: $font-semibold;
+          color: $primary-500;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0 0 0 $space-5;
+          list-style: none;
+
+          li {
+            margin: $space-3 0;
+            font-size: $text-sm;
+            color: var(--text-secondary);
+            line-height: $leading-normal;
+            position: relative;
+
+            &::before {
+              content: '•';
+              position: absolute;
+              left: -$space-5;
+              color: $primary-500;
+              font-weight: $font-bold;
+            }
+
+            strong {
+              color: var(--text-primary);
+              font-weight: $font-semibold;
+            }
+          }
+        }
+      }
+    }
+
+    .visualization-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-base);
+      position: relative;
+      min-width: 0; // Allow flex item to shrink
+      overflow: hidden;
+
+      .visualization-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-5 $space-6;
+        background: var(--bg-card);
+        border-bottom: $border-width solid var(--border-color);
+
+        .viz-info {
+          h2 {
+            margin: 0 0 $space-2 0;
+            font-size: $text-2xl;
+            font-weight: $font-semibold;
+            color: var(--text-primary);
+          }
+
+          p {
+            margin: 0;
+            font-size: $text-sm;
+            color: var(--text-tertiary);
+          }
+        }
+
+        .viz-controls {
+          display: flex;
+          gap: $space-3;
+
+          .control-button {
+            @include button-base;
+            background: var(--bg-card);
+            border: $border-width solid var(--border-color);
+            color: var(--text-primary);
+            font-size: $text-sm;
+            font-weight: $font-medium;
+            transition: all $transition-fast;
+
+            &:hover {
+              background: var(--bg-subtle);
+              border-color: $primary-500;
+            }
+          }
+        }
+      }
+
+      .visualization-viewport {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        background: var(--bg-subtle);
+        border-radius: $radius-lg;
+        margin: $space-4;
+        box-shadow: $shadow-card;
+
+        > * {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .visualization-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: $space-4 $space-6;
+        background: var(--bg-card);
+        border-top: $border-width solid var(--border-color);
+        gap: $space-8;
+
+        .physics-info,
+        .performance-info {
+          h4 {
+            margin: 0 0 $space-2 0;
+            font-size: $text-sm;
+            font-weight: $font-semibold;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: $tracking-wide;
+          }
+
+          p {
+            margin: 0;
+            font-size: $text-sm;
+            color: var(--text-secondary);
+            line-height: $leading-normal;
+          }
+        }
+
+        .physics-info {
+          flex: 2;
+        }
+
+        .performance-info {
+          flex: 1;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: $breakpoint-lg) {
+    margin-left: 60px;  // Smaller margin on mobile
+
+    .gallery-container {
+      flex-direction: column;
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-right: none;
+        border-bottom: $border-width solid var(--border-color);
+      }
+
+      .visualization-main .visualization-viewport {
+        margin: $space-2;
+      }
+    }
+  }
+}

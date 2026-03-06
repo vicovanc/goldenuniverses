@@ -1,0 +1,278 @@
+// =============================================
+// 🎨 RESPONSIVE GRID SYSTEM
+// Modern 12-Column Grid Layout
+// =============================================
+
+@import './variables.scss';
+@import './design-system.scss';
+
+// ---------------------------------------------
+// CONTAINER
+// ---------------------------------------------
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-4;
+  padding-right: $space-4;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 640px;
+    padding-left: $space-5;
+    padding-right: $space-5;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 768px;
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: 1280px;
+  }
+
+  @media (min-width: $breakpoint-2xl) {
+    max-width: 1536px;
+  }
+
+  &.container-fluid {
+    max-width: 100%;
+  }
+}
+
+// ---------------------------------------------
+// GRID SYSTEM
+// ---------------------------------------------
+
+.grid {
+  display: grid;
+  gap: $space-4;
+
+  // Column variations
+  &.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  &.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  &.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  &.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  &.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  &.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  &.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+  // Gap variations
+  &.gap-sm { gap: $space-2; }
+  &.gap-md { gap: $space-4; }
+  &.gap-lg { gap: $space-6; }
+  &.gap-xl { gap: $space-8; }
+
+  // Responsive columns
+  @media (min-width: $breakpoint-sm) {
+    &.sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    &.sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &.sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    &.sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    &.sm\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    &.md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    &.md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &.md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    &.md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    &.md\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &.lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    &.lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &.lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    &.lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    &.lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    &.lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    &.xl\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    &.xl\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &.xl\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    &.xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    &.xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    &.xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  }
+}
+
+// Grid item spans
+.col-span-1 { grid-column: span 1 / span 1; }
+.col-span-2 { grid-column: span 2 / span 2; }
+.col-span-3 { grid-column: span 3 / span 3; }
+.col-span-4 { grid-column: span 4 / span 4; }
+.col-span-5 { grid-column: span 5 / span 5; }
+.col-span-6 { grid-column: span 6 / span 6; }
+.col-span-7 { grid-column: span 7 / span 7; }
+.col-span-8 { grid-column: span 8 / span 8; }
+.col-span-9 { grid-column: span 9 / span 9; }
+.col-span-10 { grid-column: span 10 / span 10; }
+.col-span-11 { grid-column: span 11 / span 11; }
+.col-span-12 { grid-column: span 12 / span 12; }
+.col-span-full { grid-column: 1 / -1; }
+
+// ---------------------------------------------
+// FLEXBOX UTILITIES
+// ---------------------------------------------
+
+.flex {
+  display: flex;
+}
+
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+// Justify content
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+// Align items
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+// Flex grow/shrink
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-initial { flex: 0 1 auto; }
+.flex-none { flex: none; }
+
+// ---------------------------------------------
+// LAYOUT UTILITIES
+// ---------------------------------------------
+
+// Display
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.hidden { display: none; }
+
+// Position
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+// Overflow
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-scroll { overflow: scroll; }
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-auto { overflow-y: auto; }
+
+// Z-index
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+// ---------------------------------------------
+// SPACING UTILITIES
+// ---------------------------------------------
+
+// Margin
+.m-0 { margin: 0; }
+.m-1 { margin: $space-1; }
+.m-2 { margin: $space-2; }
+.m-3 { margin: $space-3; }
+.m-4 { margin: $space-4; }
+.m-5 { margin: $space-5; }
+.m-6 { margin: $space-6; }
+.m-8 { margin: $space-8; }
+.m-auto { margin: auto; }
+
+// Margin X/Y
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-0 { margin-top: 0; margin-bottom: 0; }
+.my-1 { margin-top: $space-1; margin-bottom: $space-1; }
+.my-2 { margin-top: $space-2; margin-bottom: $space-2; }
+.my-3 { margin-top: $space-3; margin-bottom: $space-3; }
+.my-4 { margin-top: $space-4; margin-bottom: $space-4; }
+.my-5 { margin-top: $space-5; margin-bottom: $space-5; }
+.my-6 { margin-top: $space-6; margin-bottom: $space-6; }
+
+// Padding
+.p-0 { padding: 0; }
+.p-1 { padding: $space-1; }
+.p-2 { padding: $space-2; }
+.p-3 { padding: $space-3; }
+.p-4 { padding: $space-4; }
+.p-5 { padding: $space-5; }
+.p-6 { padding: $space-6; }
+.p-8 { padding: $space-8; }
+
+// Padding X/Y
+.px-0 { padding-left: 0; padding-right: 0; }
+.px-1 { padding-left: $space-1; padding-right: $space-1; }
+.px-2 { padding-left: $space-2; padding-right: $space-2; }
+.px-3 { padding-left: $space-3; padding-right: $space-3; }
+.px-4 { padding-left: $space-4; padding-right: $space-4; }
+.px-5 { padding-left: $space-5; padding-right: $space-5; }
+.px-6 { padding-left: $space-6; padding-right: $space-6; }
+
+.py-0 { padding-top: 0; padding-bottom: 0; }
+.py-1 { padding-top: $space-1; padding-bottom: $space-1; }
+.py-2 { padding-top: $space-2; padding-bottom: $space-2; }
+.py-3 { padding-top: $space-3; padding-bottom: $space-3; }
+.py-4 { padding-top: $space-4; padding-bottom: $space-4; }
+.py-5 { padding-top: $space-5; padding-bottom: $space-5; }
+.py-6 { padding-top: $space-6; padding-bottom: $space-6; }
+
+// ---------------------------------------------
+// RESPONSIVE UTILITIES
+// ---------------------------------------------
+
+@media (max-width: $breakpoint-md - 1px) {
+  .mobile-only { display: block; }
+  .desktop-only { display: none; }
+}
+
+@media (min-width: $breakpoint-md) {
+  .mobile-only { display: none; }
+  .desktop-only { display: block; }
+}
+
+// ---------------------------------------------
+// TEXT UTILITIES
+// ---------------------------------------------
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.font-light { font-weight: $font-light; }
+.font-normal { font-weight: $font-normal; }
+.font-medium { font-weight: $font-medium; }
+.font-semibold { font-weight: $font-semibold; }
+.font-bold { font-weight: $font-bold; }
+
+.text-xs { font-size: $text-xs; }
+.text-sm { font-size: $text-sm; }
+.text-base { font-size: $text-base; }
+.text-lg { font-size: $text-lg; }
+.text-xl { font-size: $text-xl; }
+.text-2xl { font-size: $text-2xl; }
+.text-3xl { font-size: $text-3xl; }
+.text-4xl { font-size: $text-4xl; }
+.text-5xl { font-size: $text-5xl; }

@@ -1,0 +1,35 @@
+{
+  "lomega_derivation": {
+    "candidates": [],
+    "best": null
+  },
+  "exact_masses": [
+    {
+      "particle": "Electron",
+      "p": 111,
+      "q": 0,
+      "geodesic": 111.0,
+      "m_theory": 7.163684318434862e+19,
+      "m_exp": 0.511,
+      "error_percent": 1.4018951699481137e+22
+    },
+    {
+      "particle": "Muon (opt)",
+      "p": 100,
+      "q": 11,
+      "geodesic": 100.23082304042636,
+      "m_theory": 7.933377530238897e+19,
+      "m_exp": 105.7,
+      "error_percent": 7.505560577331028e+19
+    },
+    {
+      "particle": "Tau (opt)",
+      "p": 93,
+      "q": 17,
+      "geodesic": 93.59160313431585,
+      "m_theory": 8.4961570559391e+19,
+      "m_exp": 1776.9,
+      "error_percent": 4.781449184500592e+18
+    }
+  ]
+}

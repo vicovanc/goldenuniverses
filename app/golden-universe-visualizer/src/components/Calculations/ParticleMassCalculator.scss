@@ -1,0 +1,545 @@
+// =============================================
+// PARTICLE MASS CALCULATOR - MODERN DESIGN
+// Beautiful glassmorphism calculator interface
+// =============================================
+
+@import '../../styles/design-system.scss';
+
+.particle-mass-calculator {
+  padding: $space-8;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn $transition-slower ease-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Calculator Header with gradient text
+  .calculator-header {
+    margin-bottom: $space-8;
+    text-align: center;
+
+    h2 {
+      margin: 0;
+      font-size: $text-4xl;
+      font-weight: $font-bold;
+      background: $gradient-primary;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: $space-3;
+      text-shadow: 0 2px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .subtitle {
+      margin: 0;
+      color: $text-secondary;
+      font-size: $text-lg;
+      line-height: $leading-relaxed;
+    }
+  }
+
+  // Particle Selection Cards with glassmorphism
+  .particle-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: $space-4;
+    margin-bottom: $space-8;
+
+    .particle-btn {
+      @include glass-card;
+      padding: $space-6;
+      cursor: pointer;
+      transition: all $transition-base;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $space-3;
+      position: relative;
+      overflow: hidden;
+
+      // Animated gradient background on hover
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $gradient-primary;
+        opacity: 0;
+        transition: opacity $transition-base;
+        z-index: -1;
+      }
+
+      &:hover:not(:disabled) {
+        transform: translateY(-4px);
+        box-shadow: $shadow-xl, $shadow-glow-primary;
+        border-color: $brand-primary;
+
+        .particle-symbol {
+          transform: scale(1.1);
+        }
+      }
+
+      &.selected {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 191, 36, 0.15) 100%);
+        border-color: $brand-primary;
+        box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3), $shadow-lg;
+
+        &::before {
+          opacity: 0.05;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .particle-symbol {
+        font-size: $text-4xl;
+        font-weight: $font-bold;
+        background: $gradient-accent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform $transition-base;
+      }
+
+      .particle-name {
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+        color: $text-primary;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  // Calculate Button - Modern gradient button
+  .calculate-btn {
+    @include button-primary;
+    width: 100%;
+    height: $btn-height-lg;
+    font-size: $text-lg;
+    margin-bottom: $space-8;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width $transition-slower, height $transition-slower;
+    }
+
+    &:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    &:disabled {
+      background: $bg-hover;
+      color: $text-disabled;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  // Results Container with beautiful cards
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+    animation: slideUp $transition-slower ease-out;
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .result-card {
+      @include glass-card;
+      padding: $space-8;
+      transition: all $transition-base;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-xl;
+      }
+
+      h3 {
+        margin: 0 0 $space-6 0;
+        font-size: $text-2xl;
+        font-weight: $font-semibold;
+        color: $text-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: $space-4;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .toggle-btn {
+          background: transparent;
+          border: none;
+          font-size: $text-lg;
+          cursor: pointer;
+          color: $brand-accent;
+          transition: all $transition-fast;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $radius-full;
+
+          &:hover {
+            background: rgba(245, 158, 11, 0.1);
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    // Mass Comparison with modern stat cards
+    .mass-comparison {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+      border-color: rgba(245, 158, 11, 0.2);
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $space-6;
+
+        .comparison-item {
+          @include glass-card;
+          padding: $space-5;
+          display: flex;
+          flex-direction: column;
+          gap: $space-2;
+          transition: all $transition-base;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-lg;
+          }
+
+          .label {
+            font-size: $text-sm;
+            color: $text-tertiary;
+            font-weight: $font-medium;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .value {
+            font-size: $text-2xl;
+            font-weight: $font-light;
+            color: $text-primary;
+            font-family: $font-family-mono;
+            line-height: 1.2;
+          }
+
+          &.precision {
+            .value {
+              font-size: $text-xl;
+            }
+
+            &.excellent {
+              border-color: $color-success;
+              background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+
+              .value {
+                color: $color-success;
+              }
+            }
+
+            &.very-good {
+              border-color: $color-info;
+              background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+
+              .value {
+                color: $color-info;
+              }
+            }
+
+            &.good {
+              border-color: $color-warning;
+              background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+
+              .value {
+                color: $color-warning;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Epoch & Winding Info with modern grid
+    .epoch-info,
+    .winding-info {
+      .param-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: $space-4;
+
+        .param-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: $space-4;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: $radius-md;
+          transition: all $transition-fast;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+          }
+
+          .param-label {
+            font-weight: $font-medium;
+            color: $text-secondary;
+            font-size: $text-sm;
+          }
+
+          .param-value {
+            font-family: $font-family-mono;
+            color: $brand-accent;
+            font-weight: $font-semibold;
+            font-size: $text-sm;
+          }
+        }
+      }
+    }
+
+    .winding-info {
+      .winding-display {
+        display: flex;
+        flex-direction: column;
+        gap: $space-4;
+
+        .winding-pair,
+        .winding-length {
+          display: flex;
+          align-items: center;
+          gap: $space-4;
+          padding: $space-5;
+          background: rgba(245, 158, 11, 0.05);
+          border: 1px solid rgba(245, 158, 11, 0.2);
+          border-radius: $radius-lg;
+          transition: all $transition-base;
+
+          &:hover {
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateX(4px);
+          }
+
+          .winding-label {
+            font-weight: $font-semibold;
+            color: $text-secondary;
+          }
+
+          .winding-value {
+            font-family: $font-family-mono;
+            font-size: $text-xl;
+            color: $brand-accent;
+            font-weight: $font-bold;
+          }
+        }
+
+        .winding-constraint {
+          font-size: $text-sm;
+          color: $text-tertiary;
+          font-style: italic;
+          padding: $space-3;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.02);
+          border-radius: $radius-md;
+        }
+      }
+    }
+
+    // Coupling Breakdown with modern formula display
+    .coupling-breakdown {
+      .formula-display {
+        padding: $space-6;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: $radius-lg;
+        margin-bottom: $space-6;
+        backdrop-filter: blur(10px);
+
+        code {
+          font-size: $text-lg;
+          color: $brand-accent;
+          font-family: $font-family-mono;
+          line-height: $leading-relaxed;
+        }
+      }
+
+      .component-list {
+        display: flex;
+        flex-direction: column;
+        gap: $space-3;
+        margin-bottom: $space-6;
+
+        .component-item {
+          display: grid;
+          grid-template-columns: 1.5fr 1.5fr 1fr;
+          gap: $space-4;
+          padding: $space-5;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          border-radius: $radius-lg;
+          align-items: center;
+          transition: all $transition-base;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(4px);
+          }
+
+          .component-name {
+            font-weight: $font-semibold;
+            color: $text-primary;
+            font-size: $text-sm;
+          }
+
+          .component-formula {
+            font-family: $font-family-mono;
+            color: $text-secondary;
+            font-size: $text-sm;
+          }
+
+          .component-value {
+            font-family: $font-family-mono;
+            font-weight: $font-bold;
+            color: $brand-primary;
+            text-align: right;
+            font-size: $text-sm;
+          }
+
+          &.memory {
+            border-left: 4px solid $brand-accent;
+            background: rgba(245, 158, 11, 0.05);
+          }
+
+          &.total {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 191, 36, 0.15) 100%);
+            border: 2px solid $brand-primary;
+            font-weight: $font-bold;
+
+            .component-value {
+              font-size: $text-lg;
+              color: $brand-accent;
+            }
+          }
+        }
+      }
+    }
+
+    // Final Formula - Beautiful gradient card
+    .final-formula {
+      background: $gradient-primary;
+      border: none;
+      box-shadow: $shadow-xl, $shadow-glow-primary;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      h3 {
+        color: white;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .formula-box {
+        padding: $space-8;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: $radius-xl;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        code {
+          font-size: $text-2xl;
+          color: white;
+          line-height: $leading-relaxed;
+          font-family: $font-family-mono;
+          font-weight: $font-medium;
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+          sub,
+          sup {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @include responsive(md) {
+    .particle-selection {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: $space-4;
+
+    .calculator-header h2 {
+      font-size: $text-3xl;
+    }
+
+    .results-container .result-card {
+      padding: $space-5;
+    }
+  }
+}

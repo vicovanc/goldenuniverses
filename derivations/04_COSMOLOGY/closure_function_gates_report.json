@@ -1,0 +1,76 @@
+{
+  "timestamp_utc": "2026-03-04T20:03:21.106627+00:00",
+  "closure_mode_runtime": "provisional",
+  "promotion_rule_enforced": "DERIVED requires full-ODE identifiability + falsification pass",
+  "identifiability_summary": {
+    "jacobian_rank": 2,
+    "jacobian_rank_full": false,
+    "global_degeneracy_found": false,
+    "condition_number": 32715749487710.453,
+    "diagnostic_type": "full_ode_backed"
+  },
+  "local_sensitivities": {
+    "beta_dX": 0.5000000070007438,
+    "lambda_rec_dX": 0.25548975972204163,
+    "g_OmegaX_dX": 0.0
+  },
+  "falsification_matrix": {
+    "beta": {
+      "hypothesis": "beta(X) has uniquely identified canonical form in production domain",
+      "observable_discriminant": "ODE map sensitivity of [A_s, n_s, r, N, T_reh, z_rec, eta_B] to beta_scale",
+      "pass_criteria": "full-rank identifiability and no practically equivalent alternative beta_scale in bounded box",
+      "pass": false,
+      "rejection_implications": "keep beta(X) provisional and publish non-uniqueness path"
+    },
+    "lambda_rec": {
+      "hypothesis": "absolute lambda_rec(X) is uniquely fixed (not only ratio-level)",
+      "observable_discriminant": "independent leverage beyond lambda_rec/beta ratio in ODE observables",
+      "pass_criteria": "full-rank identifiability plus absolute-level separability",
+      "pass": false,
+      "rejection_implications": "keep only ratio-level closure and absolute form provisional"
+    },
+    "g_OmegaX": {
+      "hypothesis": "interaction coupling has no residual effective dial",
+      "observable_discriminant": "degeneracy collapse under bounded g0 scans",
+      "pass_criteria": "identifiability pass and zero residual dial under consistency constraints",
+      "pass": false,
+      "rejection_implications": "retain constrained status with explicit free-dial declaration"
+    },
+    "V_X": {
+      "hypothesis": "a single canonical potential family is uniquely selected",
+      "observable_discriminant": "cross-family ODE falsification on [n_s, r, A_s, N]",
+      "pass_criteria": "all alternatives rejected at agreed thresholds and identifiability remains full-rank",
+      "pass": false,
+      "rejection_implications": "retain chosen_non_unique with formal non-uniqueness proof"
+    }
+  },
+  "vx_ltotal_report": {
+    "path": "/Users/Cristiana_1/Documents/Golden Universe/derivations/43_VX_FROM_LTOTAL/vx_from_ltotal_report.json",
+    "present": true,
+    "candidate_count_admissible": 5,
+    "candidate_count_total": 9,
+    "uniqueness_pass": false
+  },
+  "gates": {
+    "beta": {
+      "gate": "A",
+      "status": "provisional",
+      "reason": "rank-deficient or non-unique map; keep canonical beta(X) as provisional"
+    },
+    "lambda_rec": {
+      "gate": "B",
+      "status": "provisional_ratio_closed",
+      "reason": "only ratio-level closure lambda_rec/beta is currently justified"
+    },
+    "g_OmegaX": {
+      "gate": "C",
+      "status": "constrained",
+      "reason": "effective dial remains; keep constrained status"
+    },
+    "V_X": {
+      "gate": "D",
+      "status": "chosen_non_unique",
+      "reason": "theory-band remains; keep CHOSEN with formal non-uniqueness note"
+    }
+  }
+}

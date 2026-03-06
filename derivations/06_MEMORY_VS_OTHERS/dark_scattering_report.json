@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-04T19:56:27.585814+00:00",
+  "C_GU_nonperturbative": 0.0031246093701913697,
+  "v0_kms": 104.7213595499958,
+  "relative_uncertainty": 0.35,
+  "profiles": {
+    "30": {
+      "velocity_kms": 30.0,
+      "sigma_over_m_cm2_per_g": 0.606401985483964,
+      "suppression_factor": 0.9241566417397432
+    },
+    "100": {
+      "velocity_kms": 100.0,
+      "sigma_over_m_cm2_per_g": 0.3432087272719247,
+      "suppression_factor": 0.5230501093400213
+    },
+    "300": {
+      "velocity_kms": 300.0,
+      "sigma_over_m_cm2_per_g": 0.07127020300967868,
+      "suppression_factor": 0.10861579125102677
+    },
+    "1000": {
+      "velocity_kms": 1000.0,
+      "sigma_over_m_cm2_per_g": 0.0071178491108669075,
+      "suppression_factor": 0.010847602231148914
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "epoch_correct": 111,
+  "epoch_used_before": 110,
+  "winding_numbers": {
+    "p": -41,
+    "q": 70
+  },
+  "resonance_integer": 42,
+  "detuning": 0.39822724876167115,
+  "omega_length": 374.5,
+  "C_e_required_for_exact_match": 1.0512094181298832,
+  "C_e_candidates": {
+    "\u03c0/e": {
+      "value": 1.1557273497909217,
+      "error_percent": 9.942636534495444
+    },
+    "e/\u03c0": {
+      "value": 0.8652559794322651,
+      "error_percent": 17.6894760920647
+    },
+    "\u03c0/(\u03c6\u00b7e)": {
+      "value": 0.7142787838986283,
+      "error_percent": 32.05171380890588
+    },
+    "\u03c6\u00b7\u03c0/e\u00b2": {
+      "value": 0.6879368114488812,
+      "error_percent": 34.55758675823788
+    },
+    "\u221a\u03c0/e": {
+      "value": 0.6520493321732922,
+      "error_percent": 37.97150967946069
+    },
+    "1/\u03c6": {
+      "value": 0.6180339887498948,
+      "error_percent": 41.207339080981
+    },
+    "\u03c6/e": {
+      "value": 0.5952414395777111,
+      "error_percent": 43.37556063408809
+    },
+    "\u03c6": {
+      "value": 1.618033988749895,
+      "error_percent": 53.92118457503938
+    }
+  },
+  "status": {
+    "N=111": "DERIVED from topology",
+    "C_e functional form": "DERIVED from field theory",
+    "C_e value": "REQUIRES nu and lambda_rec - NOT YET CALCULATED",
+    "sqrt_pi_over_e": "EMPIRICAL FIT - NOT FROM FIRST PRINCIPLES"
+  }
+}

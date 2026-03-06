@@ -1,0 +1,44 @@
+{
+  "electron": {
+    "N": 111,
+    "winding_rigorous": [
+      -42,
+      69
+    ],
+    "winding_current": [
+      -41,
+      70
+    ],
+    "m_theory": 1.7980617921485922,
+    "m_exp": 0.51099895069,
+    "error_%": 251.87191475064202
+  },
+  "muon": {
+    "N": 100,
+    "winding_rigorous": [
+      -38,
+      62
+    ],
+    "winding_current": [
+      -37,
+      63
+    ],
+    "m_theory": 679.6417528605854,
+    "m_exp": 105.6583755,
+    "error_%": 543.2445602578713
+  },
+  "tau": {
+    "N": 94,
+    "winding_rigorous": [
+      -35,
+      59
+    ],
+    "winding_current": [
+      -37,
+      57
+    ],
+    "m_theory": 2393.159824678063,
+    "m_exp": 1776.86,
+    "error_%": 34.684771151247894
+  }
+}

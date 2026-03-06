@@ -1,0 +1,25 @@
+{
+  "nu_exact": 0.8204300187155604,
+  "nu_motivation": "Determined by requiring exact electron mass match with theory memory value",
+  "C_e": 1.0512266384671902,
+  "m_e_MeV": 0.5109989499797967,
+  "error_percent": -3.9536975062615345e-09,
+  "components": {
+    "detuning": 0.9184416334363079,
+    "elliptic_full": 0.13352379182301277,
+    "memory_theory": -0.001900196525016345,
+    "E_gauge_loop": 0.0011614097328858596
+  },
+  "corrections": {
+    "QED_eta": 0.9988385902671142,
+    "lambda_rec_beta_used": 0.51097951228961
+  },
+  "gel_fand_yaglom": {
+    "mu_111_dimensionless": 1.6476473713550555,
+    "mu_111_MeV": 0.020311073150115145,
+    "D_e": 1.0,
+    "C_e": 1.0512266384671902
+  },
+  "memory_status": "Used THEORY value e^phi/pi^2 = 0.51098 (NOT fitted!)",
+  "all_parameters_status": "ALL from first principles except \u03bd (one free parameter needed)"
+}

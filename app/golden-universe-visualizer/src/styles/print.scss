@@ -1,0 +1,279 @@
+/* Print Styles for Golden Universe Visualizer */
+
+@media print {
+  /* Reset and Base Styles */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Page Setup */
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  /* Body */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Hide Interactive Elements */
+  button,
+  .button,
+  .cta-button,
+  .hero-cta,
+  nav,
+  .navigation,
+  .sidebar,
+  .app-header,
+  .toast-container,
+  .error-boundary,
+  input[type="range"],
+  video,
+  audio,
+  canvas,
+  .visualization-controls,
+  .interactive-controls,
+  .theme-toggle,
+  .settings-panel,
+  .search-input,
+  .filter-controls {
+    display: none !important;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-top: 12pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+  }
+
+  h4, h5, h6 {
+    font-size: 12pt;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-bottom: 12pt;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links */
+  a {
+    color: #000;
+    text-decoration: underline;
+
+    &::after {
+      content: " (" attr(href) ")";
+      font-size: 90%;
+      font-style: italic;
+    }
+
+    &[href^="#"]::after,
+    &[href^="javascript:"]::after {
+      content: "";
+    }
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    page-break-inside: avoid;
+    margin-bottom: 12pt;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1pt solid #000;
+    padding: 6pt;
+    text-align: left;
+  }
+
+  th {
+    background: #f0f0f0 !important;
+    font-weight: bold;
+  }
+
+  /* Code Blocks */
+  pre,
+  code {
+    border: 1pt solid #ccc;
+    page-break-inside: avoid;
+    font-family: "Courier New", monospace;
+    font-size: 10pt;
+    background: #f5f5f5 !important;
+  }
+
+  pre {
+    padding: 12pt;
+    margin-bottom: 12pt;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  code {
+    padding: 2pt 4pt;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 3pt solid #ccc;
+    padding-left: 12pt;
+    margin: 12pt 0;
+    font-style: italic;
+    page-break-inside: avoid;
+  }
+
+  /* Lists */
+  ul, ol {
+    margin-bottom: 12pt;
+    padding-left: 24pt;
+  }
+
+  li {
+    margin-bottom: 6pt;
+  }
+
+  /* Page Breaks */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* Specific Components */
+  .achievement-card,
+  .feature-card,
+  .stat-card,
+  .theory-section,
+  .calculation-result {
+    border: 1pt solid #ccc;
+    padding: 12pt;
+    margin-bottom: 12pt;
+    page-break-inside: avoid;
+  }
+
+  .golden-ratio-formula {
+    border: 2pt solid #000;
+    padding: 12pt;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+  }
+
+  /* Mathematical Formulas */
+  .formula,
+  .equation,
+  .math {
+    page-break-inside: avoid;
+    margin: 12pt 0;
+  }
+
+  /* Headers and Footers */
+  .print-header {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 24pt;
+    border-bottom: 2pt solid #000;
+    padding-bottom: 12pt;
+  }
+
+  .print-footer {
+    display: block !important;
+    text-align: center;
+    margin-top: 24pt;
+    border-top: 1pt solid #ccc;
+    padding-top: 12pt;
+    font-size: 10pt;
+  }
+
+  /* Add page numbers */
+  .page-number::after {
+    content: "Page " counter(page);
+  }
+
+  /* Ensure proper spacing */
+  .section {
+    margin-bottom: 24pt;
+  }
+
+  /* Remove animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Ensure contrast */
+  .hero-title,
+  .achievement-value,
+  .stat-value {
+    -webkit-text-fill-color: #000 !important;
+    background: none !important;
+  }
+
+  /* Print-specific content */
+  .print-only {
+    display: block !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Add document info at top of first page */
+  .home-page::before {
+    content: "Golden Universe Visualizer - Printed Document";
+    display: block;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 24pt;
+    padding-bottom: 12pt;
+    border-bottom: 2pt solid #000;
+  }
+}

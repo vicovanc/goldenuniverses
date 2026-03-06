@@ -1,0 +1,30 @@
+{
+  "method": "Complete First-Principles (NO FITTING)",
+  "nu_determination": "Energy minimization attempted - inconclusive",
+  "nu_used": 0.1,
+  "parameters": {
+    "N_e": 111,
+    "k_res": 42,
+    "delta_e": 0.39822724876167187,
+    "l_Omega": 374.50279990496244,
+    "lambda_rec_beta_theory": 0.51097951228961
+  },
+  "Ce_components": {
+    "detuning": 0.6421180820904124,
+    "elliptic_full": 0.0024707871527335926,
+    "memory_theory": -0.00046381104433062875,
+    "E_gauge_estimate": 0.001172849865204527,
+    "total": 0.64529790806402
+  },
+  "electron_mass": {
+    "calculated_MeV": 0.31367788959922294,
+    "CODATA_MeV": 0.51099895,
+    "error_percent": -38.614768269245374
+  },
+  "corrections": {
+    "QED_eta": 0.9988385902671142,
+    "E_gauge_core": 0.0011844026852541156,
+    "E_gauge_loop": 0.0011614097328858596,
+    "E_gauge_screened": 0.001172849865204527
+  }
+}

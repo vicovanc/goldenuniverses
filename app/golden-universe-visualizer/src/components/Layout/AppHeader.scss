@@ -1,0 +1,313 @@
+// =============================================
+// 🎨 REFINED APP HEADER
+// Clean Minimal Header - Flup/Deliro Inspired
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky; // Lower than sidebar z-index
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  min-height: $header-height;
+  transition: all $transition-base;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    gap: $space-6;
+  }
+}
+
+// ---------------------------------------------
+// LEFT SECTION - Clean Branding
+// ---------------------------------------------
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  flex: 0 0 auto;
+
+  .app-title {
+    margin: 0;
+    font-size: $text-xl;
+    font-weight: $font-semibold;
+    letter-spacing: $tracking-tight;
+    background: linear-gradient(135deg, $primary-500 0%, $accent-500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+  }
+
+  .header-subtitle {
+    margin-left: $space-3;
+    font-size: $text-sm;
+    font-family: $font-mono;
+    color: $accent-500;
+    opacity: 0.9;
+    letter-spacing: $tracking-wide;
+  }
+
+  .header-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border-color);
+  }
+}
+
+// ---------------------------------------------
+// CENTER SECTION - Clean Search
+// ---------------------------------------------
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .header-search {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+
+    .search-icon {
+      position: absolute;
+      left: $space-3;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-tertiary);
+      pointer-events: none;
+      transition: color $transition-fast;
+      width: 16px;
+      height: 16px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 36px;
+      padding: 0 $space-3 0 calc(#{$space-3} + 24px);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: $radius-lg;
+      color: var(--text-primary);
+      font-size: $text-sm;
+      transition: all $transition-fast;
+
+      &::placeholder {
+        color: var(--text-tertiary);
+      }
+
+      &:hover {
+        background: var(--bg-card);
+        border-color: $gray-300;
+      }
+
+      &:focus {
+        outline: none;
+        background: var(--bg-card);
+        border-color: $primary-500;
+        box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+
+        + .search-icon {
+          color: $primary-500;
+        }
+      }
+    }
+
+    .search-shortcut {
+      position: absolute;
+      right: $space-2;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 2px 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: $radius-sm;
+      color: var(--text-tertiary);
+      font-size: 10px;
+      font-weight: $font-semibold;
+      pointer-events: none;
+      transition: opacity $transition-fast;
+    }
+
+    .search-input:focus ~ .search-shortcut {
+      opacity: 0;
+    }
+  }
+}
+
+// ---------------------------------------------
+// RIGHT SECTION - Minimal Actions
+// ---------------------------------------------
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  flex: 0 0 auto;
+
+  .header-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: $radius-lg;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: var(--bg-subtle);
+      border-color: var(--border-color);
+      color: var(--text-primary);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-500;
+      outline-offset: 2px;
+    }
+
+    svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+// ---------------------------------------------
+// LIGHT THEME ADJUSTMENTS
+// ---------------------------------------------
+
+[data-theme='light'] {
+  .app-header {
+    background: white;
+    border-bottom-color: $gray-200;
+
+    .header-left {
+      .header-divider {
+        background: $gray-200;
+      }
+    }
+
+    .header-center {
+      .header-search {
+        .search-input {
+          background: $gray-50;
+          border-color: $gray-200;
+          color: $gray-900;
+
+          &::placeholder {
+            color: $gray-400;
+          }
+
+          &:hover {
+            background: white;
+            border-color: $gray-300;
+          }
+
+          &:focus {
+            background: white;
+          }
+        }
+
+        .search-shortcut {
+          background: white;
+          border-color: $gray-200;
+          color: $gray-500;
+        }
+      }
+    }
+
+    .header-right {
+      .header-button {
+        color: $gray-600;
+
+        &:hover {
+          background: $gray-50;
+          border-color: $gray-200;
+          color: $gray-900;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------
+// RESPONSIVE DESIGN
+// ---------------------------------------------
+
+@media (max-width: $breakpoint-lg) {
+  .app-header {
+    .header-content {
+      padding: 0 $space-4;
+    }
+
+    .header-center {
+      .header-search {
+        max-width: 360px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .app-header {
+    .header-content {
+      padding: 0 $space-3;
+      gap: $space-3;
+    }
+
+    .header-left {
+      gap: $space-3;
+
+      .app-title {
+        font-size: $text-lg;
+      }
+
+      .header-subtitle {
+        display: none;
+      }
+
+      .header-divider {
+        display: none;
+      }
+    }
+
+    .header-center {
+      display: none;
+    }
+
+    .header-right {
+      gap: $space-1;
+
+      .header-button {
+        width: 32px;
+        height: 32px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

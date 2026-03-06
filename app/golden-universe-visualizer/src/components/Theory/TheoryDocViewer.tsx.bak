@@ -1,0 +1,354 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { marked } from 'marked';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github-dark.css';
+import { TheoryDocument, DocumentSection } from '@/types/theory';
+
+interface TheoryDocViewerProps {
+  documentPath?: string;
+  initialContent?: string;
+}
+
+const TheoryDocViewer: React.FC<TheoryDocViewerProps> = ({ documentPath, initialContent }) => {
+  const [content, setContent] = useState<string>(initialContent || '');
+  const [sections, setSections] = useState<DocumentSection[]>([]);
+  const [activeSection, setActiveSection] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<{ section: string; matches: number }[]>([]);
+  const [isPrintView, setIsPrintView] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [loading, setLoading] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  // Configure marked with syntax highlighting and custom renderer for headers
+  useEffect(() => {
+    // Create a custom renderer to add IDs to headers
+    const renderer = new marked.Renderer();
+
+    // Override the heading renderer to add section IDs
+    renderer.heading = (text: string, level: number) => {
+      // Generate ID from the text (same logic as extractSections)
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+      // Return header with the section ID
+      return `<h${level} id="section-${id}">${text}</h${level}>`;
+    };
+
+    marked.setOptions({
+      renderer: renderer,
+      highlight: (code, lang) => {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(code, { language: lang }).value;
+          } catch (err) {
+            console.error('Highlight error:', err);
+          }
+        }
+        return hljs.highlightAuto(code).value;
+      },
+      breaks: true,
+      gfm: true,
+    });
+  }, []);
+
+  // Load document
+  useEffect(() => {
+    if (documentPath) {
+      setLoading(true);
+      fetch(documentPath)
+        .then((response) => response.text())
+        .then((text) => {
+          setContent(text);
+          extractSections(text);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error loading document:', error);
+          setContent('# Error Loading Document\n\nCould not load the requested document.');
+          setLoading(false);
+        });
+    } else if (initialContent) {
+      extractSections(initialContent);
+    }
+  }, [documentPath, initialContent]);
+
+  // Set up intersection observer for active section tracking
+  useEffect(() => {
+    if (!sections.length) return;
+
+    // Clean up previous observer
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+
+    // Create new observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id.replace('section-', '');
+            setActiveSection(sectionId);
+          }
+        });
+      },
+      {
+        rootMargin: '-80px 0px -70% 0px', // Account for sticky header and focus on top part of viewport
+        threshold: 0
+      }
+    );
+
+    observerRef.current = observer;
+
+    // Observe all section headers
+    sections.forEach((section) => {
+      const element = document.getElementById(`section-${section.id}`);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [sections]);
+
+  // Extract sections from markdown
+  const extractSections = (markdown: string) => {
+    const lines = markdown.split('\n');
+    const extractedSections: DocumentSection[] = [];
+    let currentSection: DocumentSection | null = null;
+    let sectionContent: string[] = [];
+
+    lines.forEach((line, index) => {
+      const headerMatch = line.match(/^(#{1,6})\s+(.+)$/);
+
+      if (headerMatch) {
+        // Save previous section
+        if (currentSection) {
+          currentSection.content = sectionContent.join('\n');
+          extractedSections.push(currentSection);
+        }
+
+        // Start new section
+        const level = headerMatch[1].length;
+        const title = headerMatch[2];
+        const id = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+        currentSection = {
+          id,
+          title,
+          level,
+          content: '',
+        };
+        sectionContent = [];
+      } else if (currentSection) {
+        sectionContent.push(line);
+      }
+    });
+
+    // Save last section
+    if (currentSection) {
+      currentSection.content = sectionContent.join('\n');
+      extractedSections.push(currentSection);
+    }
+
+    setSections(extractedSections);
+  };
+
+  // Handle search
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    const results: { section: string; matches: number }[] = [];
+    const lowerQuery = query.toLowerCase();
+
+    sections.forEach((section) => {
+      const sectionText = (section.title + ' ' + section.content).toLowerCase();
+      const matches = (sectionText.match(new RegExp(lowerQuery, 'g')) || []).length;
+
+      if (matches > 0) {
+        results.push({
+          section: section.id,
+          matches,
+        });
+      }
+    });
+
+    setSearchResults(results.sort((a, b) => b.matches - a.matches));
+  };
+
+  // Scroll to section with offset for sticky header
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(`section-${sectionId}`);
+    if (element) {
+      // Calculate offset for sticky header (64px header + some padding)
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      setActiveSection(sectionId);
+    }
+  };
+
+  // Highlight search terms in content
+  const highlightSearchTerms = (text: string): string => {
+    if (!searchQuery.trim()) return text;
+
+    const regex = new RegExp(`(${searchQuery})`, 'gi');
+    return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+  };
+
+  // Parse markdown to HTML
+  const getHtmlContent = () => {
+    try {
+      let html = marked.parse(content) as string;
+      if (searchQuery.trim()) {
+        html = highlightSearchTerms(html);
+      }
+      return html;
+    } catch (error) {
+      console.error('Markdown parsing error:', error);
+      return '<p>Error parsing document</p>';
+    }
+  };
+
+  // Print handler
+  const handlePrint = () => {
+    setIsPrintView(true);
+    setTimeout(() => {
+      window.print();
+      setIsPrintView(false);
+    }, 100);
+  };
+
+  // Generate table of contents
+  const renderTOC = () => {
+    return (
+      <div className="doc-toc">
+        <h3>Table of Contents</h3>
+        <ul className="toc-list">
+          {sections.map((section) => (
+            <li
+              key={section.id}
+              className={`toc-item level-${section.level} ${activeSection === section.id ? 'active' : ''}`}
+              style={{ paddingLeft: `${(section.level - 1) * 12}px` }}
+            >
+              <button
+                onClick={() => scrollToSection(section.id)}
+                className="toc-link"
+                aria-label={`Navigate to ${section.title}`}
+              >
+                {section.title}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  return (
+    <div className={`theory-doc-viewer ${isPrintView ? 'print-view' : ''}`}>
+      {!isPrintView && (
+        <div className="doc-controls">
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search in document..."
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="doc-search-input"
+            />
+            {searchQuery && (
+              <div className="search-results-count">
+                {searchResults.length} {searchResults.length === 1 ? 'section' : 'sections'} found
+              </div>
+            )}
+          </div>
+
+          <div className="doc-actions">
+            <button onClick={handlePrint} className="doc-action-button" aria-label="Print document">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M5 2h10a1 1 0 0 1 1 1v4h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm0 2v3h10V4H5zm10 9v3H5v-3h10z" />
+              </svg>
+              Print
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="doc-layout">
+        {!isPrintView && sections.length > 0 && <div className="doc-sidebar">{renderTOC()}</div>}
+
+        <div className="doc-main">
+          {loading ? (
+            <div className="doc-loading">
+              <div className="loading-spinner"></div>
+              <p>Loading document...</p>
+            </div>
+          ) : (
+            <>
+              {searchResults.length > 0 && !isPrintView && (
+                <div className="search-results-panel">
+                  <h4>Search Results</h4>
+                  <ul className="search-results-list">
+                    {searchResults.map((result) => {
+                      const section = sections.find((s) => s.id === result.section);
+                      return (
+                        <li key={result.section} className="search-result-item">
+                          <button onClick={() => scrollToSection(result.section)} className="search-result-link">
+                            {section?.title}
+                            <span className="match-count">({result.matches} matches)</span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+
+              <div
+                ref={contentRef}
+                className="doc-content"
+                dangerouslySetInnerHTML={{ __html: getHtmlContent() }}
+              />
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* Print styles */}
+      {isPrintView && (
+        <style>{`
+          @media print {
+            .doc-controls, .doc-sidebar, .search-results-panel {
+              display: none !important;
+            }
+            .doc-content {
+              max-width: 100% !important;
+              padding: 0 !important;
+            }
+            .theory-doc-viewer {
+              background: white !important;
+              color: black !important;
+            }
+          }
+        `}</style>
+      )}
+    </div>
+  );
+};
+
+export default TheoryDocViewer;

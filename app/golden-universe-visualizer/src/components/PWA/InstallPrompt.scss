@@ -1,0 +1,121 @@
+@import '@styles/variables.scss';
+@import '@styles/responsive.scss';
+
+.install-prompt {
+  position: fixed;
+  bottom: 80px; // Above bottom nav on mobile
+  left: $spacing-md;
+  right: $spacing-md;
+  z-index: $z-index-notification;
+  animation: slideUp $transition-normal ease-out;
+
+  @include from-lg {
+    bottom: $spacing-lg;
+    left: auto;
+    right: $spacing-lg;
+    max-width: 400px;
+  }
+
+  &__content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: $border-radius-lg;
+    padding: $spacing-md;
+    box-shadow: $shadow-xl;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__icon {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: var(--color-text);
+    margin: 0 0 $spacing-xs 0;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: $line-height-normal;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__button {
+    flex: 1;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: all $transition-fast;
+    border: none;
+    outline: none;
+    min-height: 44px; // Touch target
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &--primary {
+      background: var(--color-primary);
+      color: #000;
+
+      &:hover:not(:disabled) {
+        background: var(--color-primary-hover);
+        transform: translateY(-1px);
+        box-shadow: $shadow-md;
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+
+      &:hover:not(:disabled) {
+        background: var(--color-surface-hover);
+        border-color: var(--color-text);
+      }
+
+      &:active:not(:disabled) {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

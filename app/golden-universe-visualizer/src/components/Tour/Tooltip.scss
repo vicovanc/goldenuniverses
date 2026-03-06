@@ -1,0 +1,50 @@
+.custom-tooltip {
+  position: fixed;
+  background: var(--color-surface-elevated, #2a2a2a);
+  color: var(--color-text-primary, #fff);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  max-width: 250px;
+  z-index: 10001;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 12px));  // Position above element with gap
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border, #444);
+  animation: tooltip-fade-in 0.2s ease-out;
+  white-space: normal;  // Allow text wrapping
+  word-wrap: break-word;  // Break long words if needed
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--color-surface-elevated, #2a2a2a);
+  }
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%) translateY(0);
+  }
+}
+
+[data-theme='light'] {
+  .custom-tooltip {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+
+    &::after {
+      border-top-color: #333;
+    }
+  }
+}

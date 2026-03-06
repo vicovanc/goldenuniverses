@@ -1,0 +1,20 @@
+// =============================================
+// EPOCH LADDER VISUALIZATION - REFINED
+// Clean professional visualization design
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+@import '../../styles/refined-components.scss';
+
+.epoch-ladder-visualization {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: var(--bg-base);
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

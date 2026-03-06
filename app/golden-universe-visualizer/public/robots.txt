@@ -1,0 +1,14 @@
+# Golden Universe Visualizer - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://goldenuniversevisualizer.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Disallow paths (none currently)
+# Disallow: /api/
+# Disallow: /admin/

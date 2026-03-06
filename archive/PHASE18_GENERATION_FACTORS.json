@@ -1,0 +1,42 @@
+{
+  "generation_factors": {
+    "source": "GU next in line.md lines 1268-1278 (kink-mode \u03bd-ladder)",
+    "g_mu_over_g_e": "0.78539816339744830961566084581987572104929234984378",
+    "g_tau_over_g_e": "0.66666666666666666666666666666666666666666666666667"
+  },
+  "predictions_with_factors": {
+    "electron": {
+      "N": 111,
+      "winding": [
+        -41,
+        70
+      ],
+      "generation_factor": 1.0,
+      "m_theory_MeV": 0.5121035949091731,
+      "error_%": 0.21617348092037467
+    },
+    "muon": {
+      "N": 100,
+      "winding": [
+        -37,
+        63
+      ],
+      "generation_factor": 0.7853981633974483,
+      "m_theory_MeV": 87.70139966528338,
+      "error_%": -16.99531698243517
+    },
+    "tau": {
+      "N": 94,
+      "winding": [
+        -37,
+        57
+      ],
+      "generation_factor": 0.6666666666666666,
+      "m_theory_MeV": 1318.0868712894141,
+      "error_%": -25.81931771273966
+    }
+  },
+  "grade": "B+",
+  "max_error_%": 25.81931771273966,
+  "avg_error_%": 14.343602725365068
+}

@@ -1,0 +1,12 @@
+// =============================================
+// MEMORY EVOLUTION VISUALIZATION - REFINED
+// Clean professional visualization design
+// =============================================
+
+@import '../../styles/refined-design-system.scss';
+@import '../../styles/refined-components.scss';
+@import './visualizations-common';
+
+.memory-evolution-visualization {
+  @extend .visualization-container;
+}

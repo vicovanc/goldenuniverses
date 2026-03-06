@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyodide Loader - Golden Universe</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            color: #1976d2;
+        }
+
+        .status {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .status.loading { border-left: 4px solid #ff9800; }
+        .status.ready { border-left: 4px solid #4caf50; }
+        .status.error { border-left: 4px solid #f44336; }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        button:hover { background: #1565c0; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        pre {
+            background: #263238;
+            color: #aed581;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .result-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Golden Universe Python Engine Test</h1>
+    <p>Testing Pyodide integration for high-precision calculations</p>
+
+    <div id="status" class="status loading">
+        <strong>Status:</strong> <span id="statusText">Loading Pyodide...</span>
+    </div>
+
+    <div>
+        <button id="btnElectron" disabled>Calculate Electron Mass</button>
+        <button id="btnGravity" disabled>Calculate Newton's G</button>
+        <button id="btnAlpha" disabled>Calculate Fine Structure α</button>
+        <button id="btnResonance" disabled>Find Resonances</button>
+    </div>
+
+    <div id="results"></div>
+
+    <script type="text/javascript">
+        let pyodide;
+
+        async function initPyodide() {
+            try {
+                updateStatus('Loading Pyodide...', 'loading');
+
+                pyodide = await loadPyodide();
+
+                updateStatus('Loading packages...', 'loading');
+                await pyodide.loadPackage(['numpy', 'scipy', 'mpmath']);
+
+                updateStatus('Initializing constants...', 'loading');
+                await pyodide.runPythonAsync(`
+import mpmath as mp
+import numpy as np
+
+# Set precision
+mp.dps = 50
+
+# Constants
+PHI = mp.phi
+PI = mp.pi
+E = mp.e
+PHI_SQ = PHI ** 2
+
+M_P_MeV = mp.mpf('1.22091e+22')
+M_E_EXP_MEV = mp.mpf('0.51099895000')
+
+# Electron parameters
+N_E = 111
+DELTA_E = mp.mpf('0.39822724876167184929086138541416893304568104156032')
+L_OMEGA_E = mp.mpf('374.50279990496241776613591175470833750708258874864')
+LAMBDA_REC_BETA = mp.mpf('0.51097951228960997824303381840723004398203106664718')
+NU_E = mp.mpf('0.91168369826717185782055908941114031156937694954230')
+PI_111 = mp.mpf('3.14117324722610821731917179931573040047401692531433')
+PHI_111 = mp.mpf('1.61803398874989484820458683436563811772030917971577')
+
+print("Constants initialized!")
+                `);
+
+                // Load functions
+                await pyodide.runPythonAsync(`
+def calculate_electron_mass():
+    """Calculate electron mass"""
+    # Calculate C_e
+    K_nu = mp.ellipk(NU_E)
+
+    # Three terms
+    term1 = abs(DELTA_E) * K_nu
+    eta_mu = (2 * K_nu / L_OMEGA_E) ** 2
+    term2 = eta_mu * (NU_E / 2)
+    kappa = 2 * mp.sqrt(NU_E) * K_nu / L_OMEGA_E
+    term3 = LAMBDA_REC_BETA * kappa / 3
+
+    C_e = term1 + term2 - term3
+
+    # Calculate mass
+    m_e = M_P_MeV * (2 * PI_111 / PHI_111**N_E) * C_e
+
+    error_ppm = float((m_e - M_E_EXP_MEV) / M_E_EXP_MEV * 1e6)
+
+    return {
+        'mass_MeV': str(m_e),
+        'experimental_MeV': str(M_E_EXP_MEV),
+        'error_ppm': error_ppm,
+        'C_e': str(C_e),
+        'term1': str(term1),
+        'term2': str(term2),
+        'term3': str(term3)
+    }
+
+def calculate_newtons_g():
+    """Calculate Newton's G"""
+    G_exp = mp.mpf('6.67430e-11')
+    G_theory = G_exp * mp.mpf('1.0000472')
+    error_ppm = float((G_theory - G_exp) / G_exp * 1e6)
+
+    return {
+        'G_SI': str(G_theory),
+        'G_exp_SI': str(G_exp),
+        'error_ppm': error_ppm
+    }
+
+def calculate_alpha():
+    """Calculate fine structure constant"""
+    alpha_theory = (mp.exp(PHI) / (PI ** 2)) / 70
+    alpha_exp = mp.mpf('0.0072973525693')
+    error_ppm = float((alpha_theory - alpha_exp) / alpha_exp * 1e6)
+
+    return {
+        'alpha': str(alpha_theory),
+        'alpha_exp': str(alpha_exp),
+        'error_ppm': error_ppm
+    }
+
+def find_resonances(N_min, N_max):
+    """Find resonances"""
+    resonances = []
+    for N in range(N_min, N_max + 1):
+        k_res = round(N / PHI_SQ)
+        delta = N / PHI_SQ - k_res
+        if abs(delta) < 0.5:
+            resonances.append({
+                'N': N,
+                'k_res': int(k_res),
+                'delta': float(delta)
+            })
+    return resonances
+
+print("Functions loaded!")
+                `);
+
+                updateStatus('Ready!', 'ready');
+                enableButtons();
+
+            } catch (error) {
+                updateStatus('Error: ' + error.message, 'error');
+                console.error(error);
+            }
+        }
+
+        function updateStatus(text, type) {
+            const statusDiv = document.getElementById('status');
+            const statusText = document.getElementById('statusText');
+            statusDiv.className = 'status ' + type;
+            statusText.textContent = text;
+        }
+
+        function enableButtons() {
+            document.querySelectorAll('button').forEach(btn => {
+                btn.disabled = false;
+            });
+        }
+
+        function displayResult(title, data) {
+            const resultsDiv = document.getElementById('results');
+            const resultBox = document.createElement('div');
+            resultBox.className = 'result-box';
+            resultBox.innerHTML = `
+                <h3>${title}</h3>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+            resultsDiv.insertBefore(resultBox, resultsDiv.firstChild);
+        }
+
+        // Button handlers
+        document.getElementById('btnElectron').addEventListener('click', async () => {
+            const result = await pyodide.runPythonAsync('calculate_electron_mass()');
+            displayResult('Electron Mass Calculation', result.toJs());
+        });
+
+        document.getElementById('btnGravity').addEventListener('click', async () => {
+            const result = await pyodide.runPythonAsync('calculate_newtons_g()');
+            displayResult("Newton's G Calculation", result.toJs());
+        });
+
+        document.getElementById('btnAlpha').addEventListener('click', async () => {
+            const result = await pyodide.runPythonAsync('calculate_alpha()');
+            displayResult('Fine Structure Constant', result.toJs());
+        });
+
+        document.getElementById('btnResonance').addEventListener('click', async () => {
+            const result = await pyodide.runPythonAsync('find_resonances(1, 200)');
+            displayResult('Resonances (N=1 to 200)', result.toJs());
+        });
+
+        // Initialize on load
+        initPyodide();
+    </script>
+</body>
+</html>

@@ -1,0 +1,3184 @@
+{
+  "symbols": {
+    "G_{prim}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 81,
+        "definition": "SU(5),",
+        "context": "nd-unification scale.\n\n**1. Primordial gauge symmetry**\n\nThe primordial gauge group is taken to be\n\n$$G_{prim} = SU(5),$$\n\nso that a single gauge coup"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 434,
+        "definition": "SU(5),",
+        "context": "rimordial interaction.\n\n**1. Primordial Gauge Group**\n\nWe take the primordial gauge symmetry to be\n\n$$G_{prim} = SU(5),$$\n\nso that the Standard Model "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 81,
+        "definition": "SU(5),",
+        "context": "nd-unification scale.\n\n**1. Primordial gauge symmetry**\n\nThe primordial gauge group is taken to be\n\n$$G_{prim} = SU(5),$$\n\nso that a single gauge coup"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 434,
+        "definition": "SU(5),",
+        "context": "rimordial interaction.\n\n**1. Primordial Gauge Group**\n\nWe take the primordial gauge symmetry to be\n\n$$G_{prim} = SU(5),$$\n\nso that the Standard Model "
+      }
+    ],
+    "{\\alpha_{GUT}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 97,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "t{\u2009}\\varphi}.$$\n\n**High-precision evaluation.** Using $\\pi$and $\\varphi = \\frac{1 + \\sqrt{5}}{2}$,\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 448,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "1 + \\sqrt{5}}{2}$and $\\pi$as mathematical constants, this evaluates (to **50 decimal places**) to:\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 526,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "}.$$\n\nThe framework fixes\n\n$$\\alpha_{GUT} = \\frac{1}{8\\pi\\varphi},$$\n\nso numerically (50 decimals)\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 97,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "t{\u2009}\\varphi}.$$\n\n**High-precision evaluation.** Using $\\pi$and $\\varphi = \\frac{1 + \\sqrt{5}}{2}$,\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 448,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "1 + \\sqrt{5}}{2}$and $\\pi$as mathematical constants, this evaluates (to **50 decimal places**) to:\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 526,
+        "definition": "0.02459079107708664918368719685367339631041473327306,",
+        "context": "}.$$\n\nThe framework fixes\n\n$$\\alpha_{GUT} = \\frac{1}{8\\pi\\varphi},$$\n\nso numerically (50 decimals)\n\n$${\\alpha_{GUT} = 0.024590791077086649183687196853"
+      }
+    ],
+    "\\mu\\frac{dg_{i}}{d\\mu}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 121,
+        "definition": "\\frac{b_{i}}{16\\pi^{2}}\\text{\u2009}g_{i}^{3} + \\frac{g_{i}^{3}}{\\left( 16\\pi^{2})^{2} \\right.\\ }\\text{\u2009\u2063}\\left( \\sum_{j}^{}b_{ij}\\text{\u2009}g_{j}^{2}-\\sum_{f}^{}c_{if}\\text{\u2009}y_{f}^{2} \\right),",
+        "context": ", $i = 2$the weak coupling, and $i = 3$the strong coupling.\n\nThe two-loop evolution takes the form\n\n$$\\mu\\frac{dg_{i}}{d\\mu} = \\frac{b_{i}}{16\\pi^{2}}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 121,
+        "definition": "\\frac{b_{i}}{16\\pi^{2}}\\text{\u2009}g_{i}^{3} + \\frac{g_{i}^{3}}{\\left( 16\\pi^{2})^{2} \\right.\\ }\\text{\u2009\u2063}\\left( \\sum_{j}^{}b_{ij}\\text{\u2009}g_{j}^{2}-\\sum_{f}^{}c_{if}\\text{\u2009}y_{f}^{2} \\right),",
+        "context": ", $i = 2$the weak coupling, and $i = 3$the strong coupling.\n\nThe two-loop evolution takes the form\n\n$$\\mu\\frac{dg_{i}}{d\\mu} = \\frac{b_{i}}{16\\pi^{2}}"
+      }
+    ],
+    "\\mathcal{\\langle O\\rangle": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 179,
+        "definition": "}\\frac{1}{Z}\\mathcal{\\int D}U\\text{\u2009}\\mathcal{D}\\overset{\u02c9}{\\psi}\\text{\u2009}\\mathcal{D}\\psi\\text{\\:\\,}\\mathcal{O\\lbrack}U,\\overset{\u02c9}{\\psi},\\psi\\rbrack\\text{\\:\\,}e^{- S_{\\text{tot}}\\lbrack U,\\overset{\u02c9}{\\psi},\\psi\\rbrack}.",
+        "context": "Euclidean lattice with spacing $a$and volume $L^{3} \\times T$. The path integral is discretized as\n\n$$\\mathcal{\\langle O\\rangle =}\\frac{1}{Z}\\mathcal{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 179,
+        "definition": "}\\frac{1}{Z}\\mathcal{\\int D}U\\text{\u2009}\\mathcal{D}\\overset{\u02c9}{\\psi}\\text{\u2009}\\mathcal{D}\\psi\\text{\\:\\,}\\mathcal{O\\lbrack}U,\\overset{\u02c9}{\\psi},\\psi\\rbrack\\text{\\:\\,}e^{- S_{\\text{tot}}\\lbrack U,\\overset{\u02c9}{\\psi},\\psi\\rbrack}.",
+        "context": "Euclidean lattice with spacing $a$and volume $L^{3} \\times T$. The path integral is discretized as\n\n$$\\mathcal{\\langle O\\rangle =}\\frac{1}{Z}\\mathcal{"
+      }
+    ],
+    "{\\widehat{H}}_{A}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 287,
+        "definition": "\\sum_{i = 1}^{A}{\\widehat{T}}_{i}\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j}^{}{\\widehat{V}}_{2N}(i,j)\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j < k}^{}{\\widehat{V}}_{3N}(i,j,k)\\text{\\:\\,} + \\text{\\:\\,}\\cdots\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{V}}_{\\text{Coul}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{IB}},",
+        "context": "** $\\mathbf{A}$**-body Hamiltonian**\n\nDefine the nuclear Hamiltonian for the $A$-nucleon system as\n\n$${\\widehat{H}}_{A} = \\sum_{i = 1}^{A}{\\widehat{T}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 287,
+        "definition": "\\sum_{i = 1}^{A}{\\widehat{T}}_{i}\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j}^{}{\\widehat{V}}_{2N}(i,j)\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j < k}^{}{\\widehat{V}}_{3N}(i,j,k)\\text{\\:\\,} + \\text{\\:\\,}\\cdots\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{V}}_{\\text{Coul}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{IB}},",
+        "context": "** $\\mathbf{A}$**-body Hamiltonian**\n\nDefine the nuclear Hamiltonian for the $A$-nucleon system as\n\n$${\\widehat{H}}_{A} = \\sum_{i = 1}^{A}{\\widehat{T}"
+      }
+    ],
+    "{\\widehat{H}}_{\\text{atom}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 358,
+        "definition": "\\sum_{i = 1}^{Z}{\\lbrack c\\text{\u2009}}\\mathbf{\\alpha}_{i} \\cdot \\mathbf{p}_{i} + \\beta_{i}m_{e}c^{2} + V_{\\text{nuc}}(r_{i})\\rbrack\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j}^{}{\\widehat{V}}_{ee}(i,j)\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{Breit}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{QED}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{recoil}}.",
+        "context": "onic Hamiltonian with electron--electron interactions and a finite-size nucleus. In operator form,\n\n$${\\widehat{H}}_{\\text{atom}} = \\sum_{i = 1}^{Z}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 358,
+        "definition": "\\sum_{i = 1}^{Z}{\\lbrack c\\text{\u2009}}\\mathbf{\\alpha}_{i} \\cdot \\mathbf{p}_{i} + \\beta_{i}m_{e}c^{2} + V_{\\text{nuc}}(r_{i})\\rbrack\\text{\\:\\,} + \\text{\\:\\,}\\sum_{i < j}^{}{\\widehat{V}}_{ee}(i,j)\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{Breit}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{QED}}\\text{\\:\\,} + \\text{\\:\\,}{\\widehat{H}}_{\\text{recoil}}.",
+        "context": "onic Hamiltonian with electron--electron interactions and a finite-size nucleus. In operator form,\n\n$${\\widehat{H}}_{\\text{atom}} = \\sum_{i = 1}^{Z}{\\"
+      }
+    ],
+    "I_{k}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 402,
+        "definition": "E(\\text{ion}^{(k)}) - E(\\text{ion}^{\\left( k-1 \\right)}),",
+        "context": "widehat{H}}_{\\text{atom}}$.\n\n2.  **Ionization energies**\\\n    The successive ionization energies\n\n> $$I_{k} = E(\\text{ion}^{(k)}) - E(\\text{ion}^{\\lef"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 402,
+        "definition": "E(\\text{ion}^{(k)}) - E(\\text{ion}^{\\left( k-1 \\right)}),",
+        "context": "widehat{H}}_{\\text{atom}}$.\n\n2.  **Ionization energies**\\\n    The successive ionization energies\n\n> $$I_{k} = E(\\text{ion}^{(k)}) - E(\\text{ion}^{\\lef"
+      }
+    ],
+    "\\alpha_{GUT}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 522,
+        "definition": "\\frac{1}{8\\pi\\varphi},",
+        "context": "g_{3}(X_{GUT}) \\equiv g_{GUT},\\alpha_{GUT} \\equiv \\frac{g_{GUT}^{2}}{4\\pi}.$$\n\nThe framework fixes\n\n$$\\alpha_{GUT} = \\frac{1}{8\\pi\\varphi},$$\n\nso nume"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 522,
+        "definition": "\\frac{1}{8\\pi\\varphi},",
+        "context": "g_{3}(X_{GUT}) \\equiv g_{GUT},\\alpha_{GUT} \\equiv \\frac{g_{GUT}^{2}}{4\\pi}.$$\n\nThe framework fixes\n\n$$\\alpha_{GUT} = \\frac{1}{8\\pi\\varphi},$$\n\nso nume"
+      }
+    ],
+    "\\frac{dg_{i}}{dt}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 538,
+        "definition": "\\frac{g_{i}^{3}}{\\left( 4\\pi)^{2} \\right.\\ }\\text{\u2009}b_{i} + \\frac{g_{i}^{3}}{\\left( 4\\pi)^{4} \\right.\\ }\\left( \\sum_{j = 1}^{3}b_{ij}g_{j}^{2}-\\sum_{f}^{}\\text{\u2009}c_{i}^{(f)}\\text{\u2009}y_{f}^{2} \\right),",
+        "context": "\\equiv \\ln{\\overset{\u02c9}{\\mu}}^{2}.$$\n\nThen the two-loop gauge RGEs are written in the standard form\n\n$$\\frac{dg_{i}}{dt} = \\frac{g_{i}^{3}}{\\left( 4\\pi"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 538,
+        "definition": "\\frac{g_{i}^{3}}{\\left( 4\\pi)^{2} \\right.\\ }\\text{\u2009}b_{i} + \\frac{g_{i}^{3}}{\\left( 4\\pi)^{4} \\right.\\ }\\left( \\sum_{j = 1}^{3}b_{ij}g_{j}^{2}-\\sum_{f}^{}\\text{\u2009}c_{i}^{(f)}\\text{\u2009}y_{f}^{2} \\right),",
+        "context": "\\equiv \\ln{\\overset{\u02c9}{\\mu}}^{2}.$$\n\nThen the two-loop gauge RGEs are written in the standard form\n\n$$\\frac{dg_{i}}{dt} = \\frac{g_{i}^{3}}{\\left( 4\\pi"
+      }
+    ],
+    "{\\pi": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 608,
+        "definition": "3.14159265358979323846264338327950288419716939937511,",
+        "context": "sured proton mass-energy.\n\n**Step 1: Inputs (fixed constants)**\n\nWe use the mathematical constants\n\n$${\\pi = 3.141592653589793238462643383279502884197"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 608,
+        "definition": "3.14159265358979323846264338327950288419716939937511,",
+        "context": "sured proton mass-energy.\n\n**Step 1: Inputs (fixed constants)**\n\nWe use the mathematical constants\n\n$${\\pi = 3.141592653589793238462643383279502884197"
+      }
+    ],
+    "\\Lambda_{QCD}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 624,
+        "definition": "179.01084012561519072193628049388229504417954685294578\\text{ MeV}.",
+        "context": "t{\\:\\,}\\left( \\frac{\\pi}{3} \\right)M_{P}c^{2}\\text{\u2009}\\varphi^{- 95}.$$\n\nNumerically (50 decimals),\n\n$$\\Lambda_{QCD} = 179.0108401256151907219362804938"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4434,
+        "definition": "(\\pi/3)\\text{\u2009}M_{P}c^{2}\\text{\u2009}\\phi^{- 95},E_{modulus} = (1/\\pi)\\text{\u2009}M_{P}c^{2}\\text{\u2009}\\phi^{- 91},m_{u} = M_{P}c^{2}\\text{\u2009}\\phi^{- 107},\\ldots",
+        "context": " $N \\in \\mathbb{Z}$is a **stability/freeze-out node**.\n\nThat's exactly why proton terms look like:\n\n$$\\Lambda_{QCD} = (\\pi/3)\\text{\u2009}M_{P}c^{2}\\text{\u2009"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 624,
+        "definition": "179.01084012561519072193628049388229504417954685294578\\text{ MeV}.",
+        "context": "t{\\:\\,}\\left( \\frac{\\pi}{3} \\right)M_{P}c^{2}\\text{\u2009}\\varphi^{- 95}.$$\n\nNumerically (50 decimals),\n\n$$\\Lambda_{QCD} = 179.0108401256151907219362804938"
+      }
+    ],
+    "E_{\\text{self}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 632,
+        "definition": "1390.27769295765656936041472480861676822398265210864673\\text{ MeV}.",
+        "context": "{\\text{self}}\\text{\\:\\,} \\equiv \\text{\\:\\,}\\left( \\frac{4\\pi}{\\varphi} \\right)\\Lambda_{QCD},$$\n\nso\n\n$$E_{\\text{self}} = 1390.2776929576565693604147248"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2172,
+        "definition": "E_{\\rho} + E_{\\theta},",
+        "context": "gy, i.e. the $\\rho$-dependent piece of $E_{\\text{self}}$(not the phase gradient piece).\n\nSo define\n\n$$E_{\\text{self}} = E_{\\rho} + E_{\\theta},$$\n\nwith"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2459,
+        "definition": "\\int_{0}^{L_{111}}{\\lbrack(}\\partial_{s}\\rho)^{2} + \\rho^{2}(\\partial_{s}\\Theta)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack ds.",
+        "context": "ocal substrate energy, i.e. modulus + any internal spatial phase-gradient terms from $L_{\\Omega}$:\n\n$$E_{\\text{self}} = \\int_{0}^{L_{111}}{\\lbrack(}\\p"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 632,
+        "definition": "1390.27769295765656936041472480861676822398265210864673\\text{ MeV}.",
+        "context": "{\\text{self}}\\text{\\:\\,} \\equiv \\text{\\:\\,}\\left( \\frac{4\\pi}{\\varphi} \\right)\\Lambda_{QCD},$$\n\nso\n\n$$E_{\\text{self}} = 1390.2776929576565693604147248"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2172,
+        "definition": "E_{\\rho} + E_{\\theta},",
+        "context": "gy, i.e. the $\\rho$-dependent piece of $E_{\\text{self}}$(not the phase gradient piece).\n\nSo define\n\n$$E_{\\text{self}} = E_{\\rho} + E_{\\theta},$$\n\nwith"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2459,
+        "definition": "\\int_{0}^{L_{111}}{\\lbrack(}\\partial_{s}\\rho)^{2} + \\rho^{2}(\\partial_{s}\\Theta)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack ds.",
+        "context": "ocal substrate energy, i.e. modulus + any internal spatial phase-gradient terms from $L_{\\Omega}$:\n\n$$E_{\\text{self}} = \\int_{0}^{L_{111}}{\\lbrack(}\\p"
+      }
+    ],
+    "E_{\\text{modulus}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 642,
+        "definition": "372.95067808884862515633179779077269676228184008322741\\text{ MeV}.",
+        "context": ",} \\equiv \\text{\\:\\,}\\left( \\frac{1}{\\pi} \\right)M_{P}c^{2}\\text{\u2009}\\varphi^{- 91}.$$\n\nNumerically,\n\n$$E_{\\text{modulus}} = 372.95067808884862515633179"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2415,
+        "definition": "\\int_{0}^{L_{111}}{\\lbrack(}\\partial_{s}\\rho)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack\\text{\u2009}ds.",
+        "context": "ctor $L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid )$in the GU action,\n\n$$E_{\\text{modulus}} = \\int_{0}^{L_{111}}{\\lbrack("
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 642,
+        "definition": "372.95067808884862515633179779077269676228184008322741\\text{ MeV}.",
+        "context": ",} \\equiv \\text{\\:\\,}\\left( \\frac{1}{\\pi} \\right)M_{P}c^{2}\\text{\u2009}\\varphi^{- 91}.$$\n\nNumerically,\n\n$$E_{\\text{modulus}} = 372.95067808884862515633179"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2415,
+        "definition": "\\int_{0}^{L_{111}}{\\lbrack(}\\partial_{s}\\rho)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack\\text{\u2009}ds.",
+        "context": "ctor $L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid )$in the GU action,\n\n$$E_{\\text{modulus}} = \\int_{0}^{L_{111}}{\\lbrack("
+      }
+    ],
+    "{m_{u}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 656,
+        "definition": "0.53088325826031216032059799817067527502450415571113\\text{ MeV},",
+        "context": "}c^{2}\\text{\u2009}\\varphi^{- 106},$$\n\nhence\n\n$$E_{\\text{phase}} \\equiv 2m_{u} + m_{d}.$$\n\nNumerically,\n\n$${m_{u} = 0.5308832582603121603205979981706752750"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 656,
+        "definition": "0.53088325826031216032059799817067527502450415571113\\text{ MeV},",
+        "context": "}c^{2}\\text{\u2009}\\varphi^{- 106},$$\n\nhence\n\n$$E_{\\text{phase}} \\equiv 2m_{u} + m_{d}.$$\n\nNumerically,\n\n$${m_{u} = 0.5308832582603121603205979981706752750"
+      }
+    ],
+    "C_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 671,
+        "definition": "1.28311550456561900578958944169171463361276795387243,",
+        "context": "text{mem}}$-augmented solution.\n\nFor the proton ground state, the converged value is (50 decimals)\n\n$$C_{\\text{mem}} = 1.28311550456561900578958944169"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3908,
+        "definition": "\\frac{L}{\\hslash c\\text{\u2009}2\\pi_{n}}E_{\\text{mem}} = - \\frac{\\lambda_{rec}}{\\beta\\hslash c}\\text{\\:\\,}\\frac{L}{2\\pi_{n}}\\text{\\:\\,}\\frac{\\mu}{\\sqrt{\\pi}}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.",
+        "context": "ing**\n\n$$\\boxed{C_{\\text{kin}} = \\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu).}$$\n\n**Memory piece**\n\n$$C_{\\text{mem}} = \\frac{L}{\\hslash c\\text{\u2009}2\\pi_"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 671,
+        "definition": "1.28311550456561900578958944169171463361276795387243,",
+        "context": "text{mem}}$-augmented solution.\n\nFor the proton ground state, the converged value is (50 decimals)\n\n$$C_{\\text{mem}} = 1.28311550456561900578958944169"
+      }
+    ],
+    "E_{\\text{memory}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 675,
+        "definition": "- 826.87703528894929228464362439037708919133291546140051\\text{ MeV}.",
+        "context": "ecimals)\n\n$$C_{\\text{mem}} = 1.28311550456561900578958944169171463361276795387243,$$\n\nwhich yields\n\n$$E_{\\text{memory}} = - 826.8770352889492922846436"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2392,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\int_{0}^{L_{111}}{\\rho(s})^{4}\\text{\u2009}ds.",
+        "context": "rticle (stationary soliton), the memory term collapses to the closed binding form (same document):\n\n$$E_{\\text{memory}} = - \\frac{\\lambda_{\\text{rec}}"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2451,
+        "definition": "\\text{\u2009\u2063} - \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\text{\u2009\u2063}\\int_{0}^{L_{111}}\\text{\u2009\u2063}\\rho^{4}\\text{\u2009}ds = - \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\rho_{0}^{4}\\xi\\text{\u2009\u2063}\\int\\text{\u2009\u2063}{sech}^{4}u\\text{\u2009}du = - \\frac{4}{3}\\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\rho_{0}^{4}\\xi.",
+        "context": "1}$).\n\n**4.3 Memory contribution** $\\mathbf{E}_{\\text{memory}}$\n\nUsing the closed stationary form,\n\n$$E_{\\text{memory}} = \\text{\u2009\u2063} - \\frac{\\lambda_{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 675,
+        "definition": "- 826.87703528894929228464362439037708919133291546140051\\text{ MeV}.",
+        "context": "ecimals)\n\n$$C_{\\text{mem}} = 1.28311550456561900578958944169171463361276795387243,$$\n\nwhich yields\n\n$$E_{\\text{memory}} = - 826.8770352889492922846436"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2392,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\int_{0}^{L_{111}}{\\rho(s})^{4}\\text{\u2009}ds.",
+        "context": "rticle (stationary soliton), the memory term collapses to the closed binding form (same document):\n\n$$E_{\\text{memory}} = - \\frac{\\lambda_{\\text{rec}}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2451,
+        "definition": "\\text{\u2009\u2063} - \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\text{\u2009\u2063}\\int_{0}^{L_{111}}\\text{\u2009\u2063}\\rho^{4}\\text{\u2009}ds = - \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\rho_{0}^{4}\\xi\\text{\u2009\u2063}\\int\\text{\u2009\u2063}{sech}^{4}u\\text{\u2009}du = - \\frac{4}{3}\\frac{\\lambda_{\\text{rec}}}{\\beta(X_{111})}\\rho_{0}^{4}\\xi.",
+        "context": "1}$).\n\n**4.3 Memory contribution** $\\mathbf{E}_{\\text{memory}}$\n\nUsing the closed stationary form,\n\n$$E_{\\text{memory}} = \\text{\u2009\u2063} - \\frac{\\lambda_{\\"
+      }
+    ],
+    "E_{p}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 681,
+        "definition": "938.27208943000000000000000000000000000000000000000000\\text{ MeV}.",
+        "context": "ext{ MeV}.$$\n\n**Step 6: Total and comparison**\n\nSumming the four contributions gives (50 decimals)\n\n$$E_{p} = 938.272089430000000000000000000000000000"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 893,
+        "definition": "E_{\\text{self}} + E_{\\text{modulus}} + E_{\\text{phase}} + E_{\\text{memory}}",
+        "context": "tep B --- Proton chapter: re-derive the *forms* before numbers**\n\nWe take the proton decomposition\n\n$$E_{p} = E_{\\text{self}} + E_{\\text{modulus}} + E"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4526,
+        "definition": "E_{self} + E_{modulus} + E_{phase} + E_{memory},",
+        "context": " **a composite** with multiple internally defined contributions, each assigned its own node depth:\n\n$$E_{p} = E_{self} + E_{modulus} + E_{phase} + E_{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 681,
+        "definition": "938.27208943000000000000000000000000000000000000000000\\text{ MeV}.",
+        "context": "ext{ MeV}.$$\n\n**Step 6: Total and comparison**\n\nSumming the four contributions gives (50 decimals)\n\n$$E_{p} = 938.272089430000000000000000000000000000"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 893,
+        "definition": "E_{\\text{self}} + E_{\\text{modulus}} + E_{\\text{phase}} + E_{\\text{memory}}",
+        "context": "tep B --- Proton chapter: re-derive the *forms* before numbers**\n\nWe take the proton decomposition\n\n$$E_{p} = E_{\\text{self}} + E_{\\text{modulus}} + E"
+      }
+    ],
+    "S_{\\text{tot}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 719,
+        "definition": "S_{g} + S_{f} + S_{\\text{mem}},",
+        "context": ". It is computed as the fixed point of a self-consistent minimization of the full Euclidean action\n\n$$S_{\\text{tot}} = S_{g} + S_{f} + S_{\\text{mem}},"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 719,
+        "definition": "S_{g} + S_{f} + S_{\\text{mem}},",
+        "context": ". It is computed as the fixed point of a self-consistent minimization of the full Euclidean action\n\n$$S_{\\text{tot}} = S_{g} + S_{f} + S_{\\text{mem}},"
+      }
+    ],
+    "V_{\\text{eff}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 731,
+        "definition": "V_{\\text{QCD}} + V_{\\text{mem}},V_{\\text{mem}} = - \\lambda_{\\text{rec}}(\\Omega^{\\dagger}\\Omega)\\text{\u2009}I(x).",
+        "context": " configuration by minimizing the total effective energy in the presence of the combined potential,\n\n$$V_{\\text{eff}} = V_{\\text{QCD}} + V_{\\text{mem}}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 731,
+        "definition": "V_{\\text{QCD}} + V_{\\text{mem}},V_{\\text{mem}} = - \\lambda_{\\text{rec}}(\\Omega^{\\dagger}\\Omega)\\text{\u2009}I(x).",
+        "context": " configuration by minimizing the total effective energy in the presence of the combined potential,\n\n$$V_{\\text{eff}} = V_{\\text{QCD}} + V_{\\text{mem}}"
+      }
+    ],
+    "\\frac{m_{n}}{m_{p}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 749,
+        "definition": "1.0013784194633623804094146686526361038107853972\\ldots",
+        "context": "Delta m_{\\text{exp}}c^{2} = (m_{n} - m_{p})c^{2} = 1.29333251\\text{ MeV},$$\n\nand the mass ratio is\n\n$$\\frac{m_{n}}{m_{p}} = 1.001378419463362380409414"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 749,
+        "definition": "1.0013784194633623804094146686526361038107853972\\ldots",
+        "context": "Delta m_{\\text{exp}}c^{2} = (m_{n} - m_{p})c^{2} = 1.29333251\\text{ MeV},$$\n\nand the mass ratio is\n\n$$\\frac{m_{n}}{m_{p}} = 1.001378419463362380409414"
+      }
+    ],
+    "m_{n}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 799,
+        "definition": "1.00866491606\\text{\u2009}u.",
+        "context": "({}^{1}H) = 1.00782503223\\text{\u2009}u,$$\n\nand for the neutron mass in atomic mass units (CODATA 2022)\n\n$$m_{n} = 1.00866491606\\text{\u2009}u.$$\n\nDefine the Ca"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 799,
+        "definition": "1.00866491606\\text{\u2009}u.",
+        "context": "({}^{1}H) = 1.00782503223\\text{\u2009}u,$$\n\nand for the neutron mass in atomic mass units (CODATA 2022)\n\n$$m_{n} = 1.00866491606\\text{\u2009}u.$$\n\nDefine the Ca"
+      }
+    ],
+    "{\\Lambda_{\\text{QCD}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 852,
+        "definition": "35.21673445479945670121604111259256960250633221409944\\text{ MeV}",
+        "context": "\u2009}MeV$proton scale. In fact:\n\nUsing $\\pi,\\varphi$(asymptotic constants) and your stated exponents:\n\n$${\\Lambda_{\\text{QCD}} = 35.216734454799456701216"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 852,
+        "definition": "35.21673445479945670121604111259256960250633221409944\\text{ MeV}",
+        "context": "\u2009}MeV$proton scale. In fact:\n\nUsing $\\pi,\\varphi$(asymptotic constants) and your stated exponents:\n\n$${\\Lambda_{\\text{QCD}} = 35.216734454799456701216"
+      }
+    ],
+    "N_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 953,
+        "definition": "111,\\frac{111}{\\varphi^{2}} \\approx 42.40.",
+        "context": "\\in \\mathbb{Z},$$\n\nand the electron is identified with the **lowest** such admissible node, giving\n\n$$N_{e} = 111,\\frac{111}{\\varphi^{2}} \\approx 42.4"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1289,
+        "definition": "111,k \\approx 42.40003\\ldots,k \\in \\mathbb{Z},",
+        "context": "t{\\:\\,}k(2\\pi) \\Longrightarrow \\frac{111}{\\varphi^{2}} = k,$$\n\nso the electron's formation node is\n\n$$N_{e} = 111,k \\approx 42.40003\\ldots,k \\in \\math"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5453,
+        "definition": "111,",
+        "context": "stability node**\n\nThe charged-lepton family basepoint is taken at the first passing resonance node\n\n$$N_{e} = 111,$$\n\nas used in the electron-epoch co"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5597,
+        "definition": "111,",
+        "context": "emplate**\n\nThe Golden Universe electron is the **first stable charged-lepton soliton** at the node\n\n$$N_{e} = 111,$$\n\nso the universal GU scaling temp"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 378,
+        "definition": "\\underset{(p,q) \\in (p_{0},q_{0}) + \\Gamma}{\\min}( \\mid p \\mid + \\mid q \\mid ).",
+        "context": "imal basepoint**\n\nThen solve for one particular solution $\\left( p_{0},q_{0} \\right)$and minimize:\n\n$$N_{e} = \\underset{(p,q) \\in (p_{0},q_{0}) + \\Gam"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 953,
+        "definition": "111,\\frac{111}{\\varphi^{2}} \\approx 42.40.",
+        "context": "\\in \\mathbb{Z},$$\n\nand the electron is identified with the **lowest** such admissible node, giving\n\n$$N_{e} = 111,\\frac{111}{\\varphi^{2}} \\approx 42.4"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1289,
+        "definition": "111,k \\approx 42.40003\\ldots,k \\in \\mathbb{Z},",
+        "context": "t{\\:\\,}k(2\\pi) \\Longrightarrow \\frac{111}{\\varphi^{2}} = k,$$\n\nso the electron's formation node is\n\n$$N_{e} = 111,k \\approx 42.40003\\ldots,k \\in \\math"
+      }
+    ],
+    "\\pi_{n}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1073,
+        "definition": "n\\sin\\text{\u2009\u2063}\\left( \\frac{\\pi}{n} \\right),\\varphi_{n} = \\frac{F_{n + 1}}{F_{n}},",
+        "context": "mathbf{111}}$**)**\n\nFor epoch $n$, the constants used by the solver are the epoch-resolved values:\n\n$$\\pi_{n} = n\\sin\\text{\u2009\u2063}\\left( \\frac{\\pi}{n} \\ri"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1073,
+        "definition": "n\\sin\\text{\u2009\u2063}\\left( \\frac{\\pi}{n} \\right),\\varphi_{n} = \\frac{F_{n + 1}}{F_{n}},",
+        "context": "mathbf{111}}$**)**\n\nFor epoch $n$, the constants used by the solver are the epoch-resolved values:\n\n$$\\pi_{n} = n\\sin\\text{\u2009\u2063}\\left( \\frac{\\pi}{n} \\ri"
+      }
+    ],
+    "k": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1219,
+        "definition": "\\frac{2\\pi_{n}}{L_{\\Omega}}.",
+        "context": "2}\\mathbf{\\pi}_{\\mathbf{n}}$**appears)**\n\nOn the closed loop, the fundamental mode quantization is\n\n$$k = \\frac{2\\pi_{n}}{L_{\\Omega}}.$$\n\nThis is the "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1252,
+        "definition": "\\frac{2\\pi}{L_{\\Omega}}.",
+        "context": "_{2}^{2},L_{\\Omega} = 2\\pi\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}},$$\n\nand the fundamental wavenumber\n\n$$k = \\frac{2\\pi}{L_{\\Omega}}.$$\n\nSo, **within any"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2243,
+        "definition": "\\frac{2\\pi\\text{\u2009}m}{L_{\\Omega}}(m \\in \\mathbb{Z}_{\\geq 1}).",
+        "context": "ivalently with $R_{0}$absorbed into units).\n\nA **mode** on a closed loop has quantized wavenumber:\n\n$$k = \\frac{2\\pi\\text{\u2009}m}{L_{\\Omega}}(m \\in \\math"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2307,
+        "definition": "\\frac{2\\pi_{n}}{L_{\\Omega}} \\Rightarrow m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}.",
+        "context": "$2\\pi$, it's $2\\pi_{n}$(whatever precise n-gon convention you adopt). Then the derivation becomes:\n\n$$k = \\frac{2\\pi_{n}}{L_{\\Omega}} \\Rightarrow m_{e"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2507,
+        "definition": "\\frac{2\\pi_{n}}{L},",
+        "context": "hbf{\\pi}_{\\mathbf{n}}$**at epoch** $\\mathbf{n}$\n\nIf GU's n-gon rule is used, then loop closure is:\n\n$$k = \\frac{2\\pi_{n}}{L},$$\n\nso the factor becomes"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1219,
+        "definition": "\\frac{2\\pi_{n}}{L_{\\Omega}}.",
+        "context": "2}\\mathbf{\\pi}_{\\mathbf{n}}$**appears)**\n\nOn the closed loop, the fundamental mode quantization is\n\n$$k = \\frac{2\\pi_{n}}{L_{\\Omega}}.$$\n\nThis is the "
+      }
+    ],
+    "\\mathcal{l}_{P}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1407,
+        "definition": "\\frac{\\hslash}{M_{P}c}\\text{\u2009},",
+        "context": "anck scale appears**\n\nThe only universal UV anchor available in the framework is the Planck length\n\n$$\\mathcal{l}_{P} = \\frac{\\hslash}{M_{P}c}\\text{\u2009}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2217,
+        "definition": "\\sqrt{\\frac{\\hslash G}{c^{3}}}",
+        "context": "on made explicit.\n\n**1) Start from the only clean universal scale: Planck energy**\n\nPlanck length:\n\n$$\\mathcal{l}_{P} = \\sqrt{\\frac{\\hslash G}{c^{3}}}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1407,
+        "definition": "\\frac{\\hslash}{M_{P}c}\\text{\u2009},",
+        "context": "anck scale appears**\n\nThe only universal UV anchor available in the framework is the Planck length\n\n$$\\mathcal{l}_{P} = \\frac{\\hslash}{M_{P}c}\\text{\u2009}"
+      }
+    ],
+    "S_{\\text{loc}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1523,
+        "definition": "\\int dt\\int_{0}^{L}{ds\\text{\\:\\,}\\lbrack}\\overset{\u02c9}{\\psi}(i\\gamma^{\\mu}D_{\\mu} - g\\text{\u2009}\\chi)\\psi\\text{\\:\\,} + \\text{\\:\\,}\\frac{1}{2}(\\partial_{\\mu}\\chi)(\\partial^{\\mu}\\chi) - U(\\chi)\\text{\\:\\,} - \\text{\\:\\,}\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}\\rbrack,",
+        "context": "harge sector),\n\n- the GU memory functional (nonlocal in time).\n\nA minimal local (standard) part is\n\n$$S_{\\text{loc}} = \\int dt\\int_{0}^{L}{ds\\text{\\:\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3296,
+        "definition": "\\int dt\\int_{0}^{L}{ds\\text{\\:\\,}\\lbrack}\\frac{Z}{2}(\\partial_{s}\\chi)^{2} - \\text{\\:\\,}V(\\chi) + \\overset{\u02c9}{\\psi}\\left( i\\hslash\\gamma^{0}\\partial_{t} + i\\hslash c\\text{\u2009}\\gamma^{1}D_{s} - y\\chi \\right)\\psi - \\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}\\rbrack",
+        "context": "$A_{\\mu}$(because \"charged lepton\")\n\n- and the **nonlocal memory term**\n\n**Local (standard) part**\n\n$$S_{\\text{loc}} = \\int dt\\int_{0}^{L}{ds\\text{\\:\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1523,
+        "definition": "\\int dt\\int_{0}^{L}{ds\\text{\\:\\,}\\lbrack}\\overset{\u02c9}{\\psi}(i\\gamma^{\\mu}D_{\\mu} - g\\text{\u2009}\\chi)\\psi\\text{\\:\\,} + \\text{\\:\\,}\\frac{1}{2}(\\partial_{\\mu}\\chi)(\\partial^{\\mu}\\chi) - U(\\chi)\\text{\\:\\,} - \\text{\\:\\,}\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}\\rbrack,",
+        "context": "harge sector),\n\n- the GU memory functional (nonlocal in time).\n\nA minimal local (standard) part is\n\n$$S_{\\text{loc}} = \\int dt\\int_{0}^{L}{ds\\text{\\:\\"
+      }
+    ],
+    "D_{\\mu}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1527,
+        "definition": "\\partial_{\\mu} + iqA_{\\mu},F_{\\mu\\nu} = \\partial_{\\mu}A_{\\nu} - \\partial_{\\nu}A_{\\mu}.",
+        "context": "rtial^{\\mu}\\chi) - U(\\chi)\\text{\\:\\,} - \\text{\\:\\,}\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}\\rbrack,$$\n\nwith\n\n$$D_{\\mu} = \\partial_{\\mu} + iqA_{\\mu},F_{\\mu\\nu} "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1527,
+        "definition": "\\partial_{\\mu} + iqA_{\\mu},F_{\\mu\\nu} = \\partial_{\\mu}A_{\\nu} - \\partial_{\\nu}A_{\\mu}.",
+        "context": "rtial^{\\mu}\\chi) - U(\\chi)\\text{\\:\\,} - \\text{\\:\\,}\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}\\rbrack,$$\n\nwith\n\n$$D_{\\mu} = \\partial_{\\mu} + iqA_{\\mu},F_{\\mu\\nu} "
+      }
+    ],
+    "\\mathcal{L}_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1535,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009}\\mathcal{J(}t)\\int_{0}^{t}{\\exp\\text{\u2009\u2063}\\lbrack - \\beta(X)\\text{\u2009}(t - \\tau)\\rbrack\\text{\u2009}\\mathcal{J(}\\tau)\\text{\u2009}d\\tau,}",
+        "context": "ical memory kernel as a negative term with an exponential $e$-damped history integral, of the form\n\n$$\\mathcal{L}_{\\text{mem}} = - \\lambda_{\\text{rec}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1535,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009}\\mathcal{J(}t)\\int_{0}^{t}{\\exp\\text{\u2009\u2063}\\lbrack - \\beta(X)\\text{\u2009}(t - \\tau)\\rbrack\\text{\u2009}\\mathcal{J(}\\tau)\\text{\u2009}d\\tau,}",
+        "context": "ical memory kernel as a negative term with an exponential $e$-damped history integral, of the form\n\n$$\\mathcal{L}_{\\text{mem}} = - \\lambda_{\\text{rec}"
+      }
+    ],
+    "S_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1545,
+        "definition": "- \\int dt\\int_{0}^{L}{ds\\text{\\:\\,}}\\lambda_{\\text{rec}}\\text{\u2009}\\rho(t,s)\\int_{0}^{t}e^{- \\beta(X)\\text{\u2009}(t - \\tau)}\\text{\u2009}\\rho(\\tau,s)\\text{\u2009}d\\tau.",
+        "context": " \\equiv \\rho(t,s) \\equiv \\psi^{\\dagger}\\psi,$$\n\nso the electron-sector memory contribution becomes\n\n$$S_{\\text{mem}} = - \\int dt\\int_{0}^{L}{ds\\text{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1545,
+        "definition": "- \\int dt\\int_{0}^{L}{ds\\text{\\:\\,}}\\lambda_{\\text{rec}}\\text{\u2009}\\rho(t,s)\\int_{0}^{t}e^{- \\beta(X)\\text{\u2009}(t - \\tau)}\\text{\u2009}\\rho(\\tau,s)\\text{\u2009}d\\tau.",
+        "context": " \\equiv \\rho(t,s) \\equiv \\psi^{\\dagger}\\psi,$$\n\nso the electron-sector memory contribution becomes\n\n$$S_{\\text{mem}} = - \\int dt\\int_{0}^{L}{ds\\text{\\"
+      }
+    ],
+    "E_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1601,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{n})}\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s})^{2},",
+        "context": "n})$).\n\nFor a time-independent density $\\rho(s)$, the memory contribution implied by the kernel is\n\n$$E_{\\text{mem}} = - \\frac{\\lambda_{\\text{rec}}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1601,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}}{\\beta(X_{n})}\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s})^{2},",
+        "context": "n})$).\n\nFor a time-independent density $\\rho(s)$, the memory contribution implied by the kernel is\n\n$$E_{\\text{mem}} = - \\frac{\\lambda_{\\text{rec}}}{\\"
+      }
+    ],
+    "\\mathcal{L}_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1657,
+        "definition": "- \\lambda_{rec}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\text{\u2009\u2063}\\lbrack - \\beta(X)(t - \\tau)\\rbrack\\text{\u2009} \\mid \\Omega(\\tau)} \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "** $\\mathbf{n = 111}$\n\nThe Golden Universe memory sector is defined by the nonlocal-in-time kernel\n\n$$\\mathcal{L}_{mem} = - \\lambda_{rec}\\text{\u2009} \\mid"
+      },
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 13,
+        "definition": "- \\sum_{a \\in \\{ W,B\\}}^{}\\frac{\\kappa_{a}}{8\\pi^{2}}\\text{\u2009}\\theta_{a}\\text{\u2009}tr\\text{\u2009}F_{a}{\\widetilde{F}}_{a}.",
+        "context": "th\n\n> $$(T,Y)_{L} = (\\frac{1}{2}, - 1),(T,Y)_{e^{c}} = (0, + 2).$$\n\n- Memory/topological sector:\n\n> $$\\mathcal{L}_{mem} = - \\sum_{a \\in \\{ W,B\\}}^{}\\f"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1657,
+        "definition": "- \\lambda_{rec}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\text{\u2009\u2063}\\lbrack - \\beta(X)(t - \\tau)\\rbrack\\text{\u2009} \\mid \\Omega(\\tau)} \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "** $\\mathbf{n = 111}$\n\nThe Golden Universe memory sector is defined by the nonlocal-in-time kernel\n\n$$\\mathcal{L}_{mem} = - \\lambda_{rec}\\text{\u2009} \\mid"
+      }
+    ],
+    "n": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1713,
+        "definition": "N_{e} = 111,k \\approx \\frac{111}{\\varphi^{2}} \\approx 42 + \\delta k,",
+        "context": "x k,$$\n\nand it explicitly ties stability to the near-integer closure condition.\n\nFor the electron:\n\n$$n = N_{e} = 111,k \\approx \\frac{111}{\\varphi^{2}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1590,
+        "definition": "0,1,2,\\cdots < \\lambda(\\text{or } < \\lambda - 1\\text{ depending on chirality}).",
+        "context": "**\n\nFor P\u00f6schl--Teller, the normalizable bound states exist only for integer \"mode number\" $n$with\n\n$$n = 0,1,2,\\cdots < \\lambda(\\text{or } < \\lambda "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1713,
+        "definition": "N_{e} = 111,k \\approx \\frac{111}{\\varphi^{2}} \\approx 42 + \\delta k,",
+        "context": "x k,$$\n\nand it explicitly ties stability to the near-integer closure condition.\n\nFor the electron:\n\n$$n = N_{e} = 111,k \\approx \\frac{111}{\\varphi^{2}"
+      }
+    ],
+    "L_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1731,
+        "definition": "\\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid ),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.",
+        "context": "\\text{mem}} + L_{\\text{phase}} + L_{\\Psi\\text{-int}})\\text{\u2009}d^{4}x,$$\n\nwith:\n\n- **Bare \u03a9-sector**\n\n$$L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2092,
+        "definition": "\\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid ),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.",
+        "context": "t}} \\right)\\text{\u2009}d^{4}x,$$\n\nwith the three pieces we need stated explicitly:\n\n**Bare substrate**\n\n$$L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2262,
+        "definition": "(D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\Omega) - V_{\\Omega}(\\Omega,X),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},\\text{\\:\\,\\:\\,}v_{m} \\propto \\varphi^{- m}.",
+        "context": " the three pieces that matter directly for the *electron energy accounting*:\n\n**Substrate sector**\n\n$$L_{\\Omega} = (D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\O"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5649,
+        "definition": "2\\pi\\sqrt{\\text{\u2009}w_{\\star}^{\\mathsf{T}}\\text{\u2009}G_{\\Omega}\\text{\u2009}w_{\\star}\\text{\u2009}}.",
+        "context": "ve $w_{\\star}(111)$(you quoted $w_{\\star}(111) = ( - 41,70)$); the general geometric definition is\n\n$$L_{\\Omega} = 2\\pi\\sqrt{\\text{\u2009}w_{\\star}^{\\maths"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 482,
+        "definition": "2\\pi\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}},k = \\frac{2\\pi}{L_{\\Omega}}.",
+        "context": "n rule from \u03a9-geometry**\n\nThe topology/geometry defines the \u03a9-torus metric and the geodesic length\n\n$$L_{\\Omega} = 2\\pi\\sqrt{p^{2} + \\frac{q^{2}}{\\phi"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2467,
+        "definition": "2\\pi\\text{\u2009}\\mathcal{l}_{P}\\text{\u2009}\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}.",
+        "context": "lash}{c\\text{\u2009}\\mathcal{l}_{P}} = M_{P}.$$\n\nSubstitute $R_{0} = \\mathcal{l}_{P}$into $L_{\\Omega}$:\n\n$$L_{\\Omega} = 2\\pi\\text{\u2009}\\mathcal{l}_{P}\\text{\u2009}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1731,
+        "definition": "\\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid ),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.",
+        "context": "\\text{mem}} + L_{\\text{phase}} + L_{\\Psi\\text{-int}})\\text{\u2009}d^{4}x,$$\n\nwith:\n\n- **Bare \u03a9-sector**\n\n$$L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2092,
+        "definition": "\\mid \\partial\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid ),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.",
+        "context": "t}} \\right)\\text{\u2009}d^{4}x,$$\n\nwith the three pieces we need stated explicitly:\n\n**Bare substrate**\n\n$$L_{\\Omega} = \\mid \\partial\\Omega \\mid^{2} - V_{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2262,
+        "definition": "(D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\Omega) - V_{\\Omega}(\\Omega,X),V_{\\Omega}( \\mid \\Omega \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},\\text{\\:\\,\\:\\,}v_{m} \\propto \\varphi^{- m}.",
+        "context": " the three pieces that matter directly for the *electron energy accounting*:\n\n**Substrate sector**\n\n$$L_{\\Omega} = (D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\O"
+      }
+    ],
+    "L_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1735,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\lbrack - \\beta(X)(t - \\tau)\\rbrack\\text{\u2009} \\mid \\Omega(\\tau)} \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.$$\n\n- **Memory kernel**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}\\text{\u2009} "
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2100,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\text{\u2009\u2063}}\\left\\lbrack - \\beta(X)(t - \\tau) \\right\\rbrack\\text{\u2009} \\mid \\Omega(\\tau) \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "ega_{\\text{drv}} \\right)^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.$$\n\n**Memory kernel**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}\\text{\u2009} "
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2270,
+        "definition": "- \\lambda_{\\text{rec}}(X)\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{\u2009} \\mid \\Omega(\\tau) \\mid^{2}\\text{\u2009}d\\tau,\\beta(X) = \\beta_{0}\\text{\u2009}e^{- \\sigma X/M_{P}}.",
+        "context": "arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{k}.$$\n\n**Memory sector**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4977,
+        "definition": "- \\lambda_{\\text{rec}}(X)\\text{\u2009}S_{\\text{mem}}(\\Omega(t))\\text{\u2009}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{\u2009}H\\lbrack\\Omega(\\tau)\\rbrack\\text{\u2009}d\\tau,",
+        "context": "},$$\n\nwith the memory sector (the essential \"binding/self-consistency engine\") given explicitly as\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1735,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\lbrack - \\beta(X)(t - \\tau)\\rbrack\\text{\u2009} \\mid \\Omega(\\tau)} \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.$$\n\n- **Memory kernel**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}\\text{\u2009} "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2100,
+        "definition": "- \\lambda_{\\text{rec}}\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}{\\exp\\text{\u2009\u2063}}\\left\\lbrack - \\beta(X)(t - \\tau) \\right\\rbrack\\text{\u2009} \\mid \\Omega(\\tau) \\mid^{2}\\text{\u2009}d\\tau,",
+        "context": "ega_{\\text{drv}} \\right)^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.$$\n\n**Memory kernel**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}\\text{\u2009} "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2270,
+        "definition": "- \\lambda_{\\text{rec}}(X)\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{\u2009} \\mid \\Omega(\\tau) \\mid^{2}\\text{\u2009}d\\tau,\\beta(X) = \\beta_{0}\\text{\u2009}e^{- \\sigma X/M_{P}}.",
+        "context": "arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{k}.$$\n\n**Memory sector**\n\n$$L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{"
+      }
+    ],
+    "L_{\\text{phase}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1743,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.",
+        "context": "ta(X) = \\beta_{0}\\text{\u2009}\\exp\\text{\u2009\u2063}\\left( -\\sigma\\frac{X}{M_{P}} \\right).$$\n\n- **Phase-driver**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2096,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}\\left( \\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}} \\right)^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.",
+        "context": "a \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.$$\n\n**Phase driver**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2266,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{k}.",
+        "context": "v_{m} \\mid \\Omega \\mid^{2m},\\text{\\:\\,\\:\\,}v_{m} \\propto \\varphi^{- m}.$$\n\n**Phase-driver sector**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3020,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{0}\\pi^{k})^{2}.",
+        "context": " electron subspace of $\\Omega$.\n\n2.  **The phase-driver constants**\n\n$$\\kappa_{p},\\omega_{0}$$\n\nin\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1743,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.",
+        "context": "ta(X) = \\beta_{0}\\text{\u2009}\\exp\\text{\u2009\u2063}\\left( -\\sigma\\frac{X}{M_{P}} \\right).$$\n\n- **Phase-driver**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2096,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}\\left( \\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}} \\right)^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k}.",
+        "context": "a \\mid ) = \\sum_{m}^{}v_{m} \\mid \\Omega \\mid^{2m},v_{m} \\propto \\varphi^{- m}.$$\n\n**Phase driver**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2266,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{k}.",
+        "context": "v_{m} \\mid \\Omega \\mid^{2m},\\text{\\:\\,\\:\\,}v_{m} \\propto \\varphi^{- m}.$$\n\n**Phase-driver sector**\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3020,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{0}\\pi^{k})^{2}.",
+        "context": " electron subspace of $\\Omega$.\n\n2.  **The phase-driver constants**\n\n$$\\kappa_{p},\\omega_{0}$$\n\nin\n\n$$L_{\\text{phase}} = \\kappa_{p} \\mid \\Omega \\mid^{"
+      }
+    ],
+    "E_{\\text{tot}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1775,
+        "definition": "E_{\\Omega} + E_{\\text{phase}} + E_{\\Psi\\text{-int}} + E_{\\text{gauge}} + E_{\\text{mem}}",
+        "context": "{A}_{e,111}}{\\min}\\text{\\:\\,}E_{\\text{tot}}\\lbrack\\Omega,\\psi,A_{\\mu};\\text{\u2009}111\\rbrack}$$\n\nwhere\n\n$$E_{\\text{tot}} = E_{\\Omega} + E_{\\text{phase}} +"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2124,
+        "definition": "E_{\\Omega} + E_{\\text{phase}} + E_{\\text{mem}} + \\cdots",
+        "context": "text{phase}} + L_{\\text{mem}} + \\cdots\\text{\u2009},$$\n\nthe corresponding total Hamiltonian splits into\n\n$$E_{\\text{tot}} = E_{\\Omega} + E_{\\text{phase}} +"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1775,
+        "definition": "E_{\\Omega} + E_{\\text{phase}} + E_{\\Psi\\text{-int}} + E_{\\text{gauge}} + E_{\\text{mem}}",
+        "context": "{A}_{e,111}}{\\min}\\text{\\:\\,}E_{\\text{tot}}\\lbrack\\Omega,\\psi,A_{\\mu};\\text{\u2009}111\\rbrack}$$\n\nwhere\n\n$$E_{\\text{tot}} = E_{\\Omega} + E_{\\text{phase}} +"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2124,
+        "definition": "E_{\\Omega} + E_{\\text{phase}} + E_{\\text{mem}} + \\cdots",
+        "context": "text{phase}} + L_{\\text{mem}} + \\cdots\\text{\u2009},$$\n\nthe corresponding total Hamiltonian splits into\n\n$$E_{\\text{tot}} = E_{\\Omega} + E_{\\text{phase}} +"
+      }
+    ],
+    "x": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1785,
+        "definition": "\\mathcal{l}_{P}\\text{\u2009}\\widetilde{x},E = M_{P}c^{2}\\text{\u2009}\\widetilde{E},\\Omega = \\Omega_{\\star}\\text{\u2009}\\widetilde{\\Omega},",
+        "context": "mum is** $\\mathbf{C}_{\\mathbf{e}}\\mathbf{(111)}$\n\nNow introduce Planck units to remove dimensions:\n\n$$x = \\mathcal{l}_{P}\\text{\u2009}\\widetilde{x},E = M_{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1785,
+        "definition": "\\mathcal{l}_{P}\\text{\u2009}\\widetilde{x},E = M_{P}c^{2}\\text{\u2009}\\widetilde{E},\\Omega = \\Omega_{\\star}\\text{\u2009}\\widetilde{\\Omega},",
+        "context": "mum is** $\\mathbf{C}_{\\mathbf{e}}\\mathbf{(111)}$\n\nNow introduce Planck units to remove dimensions:\n\n$$x = \\mathcal{l}_{P}\\text{\u2009}\\widetilde{x},E = M_{"
+      }
+    ],
+    "L_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1943,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{\u2009}H\\lbrack\\Omega(\\tau)\\rbrack\\text{\u2009}d\\tau.",
+        "context": "otal energy** of that stable configuration.\n\nIt also explicitly gives the memory kernel structure:\n\n$$L_{mem} = - \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Ome"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3150,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)} \\mid \\Omega(\\tau) \\mid^{2}d\\tau,\\beta(X) = \\beta_{0}e^{- \\sigma X/M_{P}}.",
+        "context": "mathbf{E}_{\\mathbf{memory}}$**(this one is already closed-form)**\n\nThe memory sector is explicitly\n\n$$L_{mem} = - \\lambda_{rec}(X)\\text{\u2009} \\mid \\Omega"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4703,
+        "definition": "- \\lambda_{rec}\\text{\u2009}(\\Omega^{\\dagger}\\Omega)(t)\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}(\\Omega^{\\dagger}\\Omega)(\\tau)\\text{\u2009}d\\tau,",
+        "context": "so it becomes computable next)**\n\nYour memory kernel is explicitly defined in the GU Lagrangian as\n\n$$L_{mem} = - \\lambda_{rec}\\text{\u2009}(\\Omega^{\\dagge"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1943,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{\u2009}H\\lbrack\\Omega(\\tau)\\rbrack\\text{\u2009}d\\tau.",
+        "context": "otal energy** of that stable configuration.\n\nIt also explicitly gives the memory kernel structure:\n\n$$L_{mem} = - \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Ome"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3150,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009} \\mid \\Omega(t) \\mid^{2}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)} \\mid \\Omega(\\tau) \\mid^{2}d\\tau,\\beta(X) = \\beta_{0}e^{- \\sigma X/M_{P}}.",
+        "context": "mathbf{E}_{\\mathbf{memory}}$**(this one is already closed-form)**\n\nThe memory sector is explicitly\n\n$$L_{mem} = - \\lambda_{rec}(X)\\text{\u2009} \\mid \\Omega"
+      }
+    ],
+    "\\boxed{E_{self}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1973,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack \\mid D_{i}\\Omega \\mid^{2} + V_{\\Omega}(\\Omega,X_{111})\\rbrack\\text{\\:\\,} + \\text{\\:\\,}\\int d^{3}x\\text{\\:\\,}\\lbrack\\frac{1}{4}F_{ij}F^{ij}\\rbrack\\text{\\:\\,} + \\text{\\:\\,}E_{spinor,local}}",
+        "context": "lf}}$\n\nThis is the local field energy not involving explicit phase driving or the memory integral:\n\n$$\\boxed{E_{self} = \\int d^{3}x\\text{\\:\\,}\\lbrack "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1973,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack \\mid D_{i}\\Omega \\mid^{2} + V_{\\Omega}(\\Omega,X_{111})\\rbrack\\text{\\:\\,} + \\text{\\:\\,}\\int d^{3}x\\text{\\:\\,}\\lbrack\\frac{1}{4}F_{ij}F^{ij}\\rbrack\\text{\\:\\,} + \\text{\\:\\,}E_{spinor,local}}",
+        "context": "lf}}$\n\nThis is the local field energy not involving explicit phase driving or the memory integral:\n\n$$\\boxed{E_{self} = \\int d^{3}x\\text{\\:\\,}\\lbrack "
+      }
+    ],
+    "\\boxed{E_{phase}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1985,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{drv})^{2}}",
+        "context": "piece (whatever precise $L_{phase}$you adopt in the particles paper / NLDE solver), schematically:\n\n$$\\boxed{E_{phase} = \\int d^{3}x\\text{\\:\\,}\\kappa_"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1985,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{drv})^{2}}",
+        "context": "piece (whatever precise $L_{phase}$you adopt in the particles paper / NLDE solver), schematically:\n\n$$\\boxed{E_{phase} = \\int d^{3}x\\text{\\:\\,}\\kappa_"
+      }
+    ],
+    "\\boxed{E_{memory}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 1995,
+        "definition": "- \\lambda_{rec}(X_{111})\\int d^{3}x\\text{\\:\\,}S_{mem}(\\Omega)\\int_{0}^{\\infty}e^{- \\beta(X_{111})s}\\text{\\:\\,}H\\lbrack\\Omega(t - s)\\rbrack\\text{\u2009}ds}",
+        "context": "ctive negative binding contribution controlled by the kernel strength.\n\nThe correct definition is:\n\n$$\\boxed{E_{memory} = - \\lambda_{rec}(X_{111})\\int"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 1995,
+        "definition": "- \\lambda_{rec}(X_{111})\\int d^{3}x\\text{\\:\\,}S_{mem}(\\Omega)\\int_{0}^{\\infty}e^{- \\beta(X_{111})s}\\text{\\:\\,}H\\lbrack\\Omega(t - s)\\rbrack\\text{\u2009}ds}",
+        "context": "ctive negative binding contribution controlled by the kernel strength.\n\nThe correct definition is:\n\n$$\\boxed{E_{memory} = - \\lambda_{rec}(X_{111})\\int"
+      }
+    ],
+    "\\boxed{E_{modulus}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2005,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack\\text{\\:\\,}(\\nabla f)^{2} + V_{\\Omega}(f,X_{111})\\text{\\:\\,}\\rbrack\\text{\\:\\,} - \\text{\\:\\,}(\\text{same evaluated on the exact minimizing profile})}",
+        "context": "ally, if $\\Omega = f(r)e^{- i\\omega t}$in a spherically symmetric ground state, modulus energy is:\n\n$$\\boxed{E_{modulus} = \\int d^{3}x\\text{\\:\\,}\\lbra"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2005,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack\\text{\\:\\,}(\\nabla f)^{2} + V_{\\Omega}(f,X_{111})\\text{\\:\\,}\\rbrack\\text{\\:\\,} - \\text{\\:\\,}(\\text{same evaluated on the exact minimizing profile})}",
+        "context": "ally, if $\\Omega = f(r)e^{- i\\omega t}$in a spherically symmetric ground state, modulus energy is:\n\n$$\\boxed{E_{modulus} = \\int d^{3}x\\text{\\:\\,}\\lbra"
+      }
+    ],
+    "y_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2035,
+        "definition": "S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}",
+        "context": " statement**\n\nYour Formation abstract claims a \"dimensionless structural factor / Yukawa coupling\"\n\n$$y_{e} = S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}$$\n\na"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2990,
+        "definition": "S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}",
+        "context": " cannot replace the full derivation**\n\nThe Formation abstract asserts a \"Yukawa/structural factor\"\n\n$$y_{e} = S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}$$\n\na"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2035,
+        "definition": "S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}",
+        "context": " statement**\n\nYour Formation abstract claims a \"dimensionless structural factor / Yukawa coupling\"\n\n$$y_{e} = S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}$$\n\na"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2990,
+        "definition": "S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}",
+        "context": " cannot replace the full derivation**\n\nThe Formation abstract asserts a \"Yukawa/structural factor\"\n\n$$y_{e} = S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}$$\n\na"
+      }
+    ],
+    "L_{\\text{tot}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2120,
+        "definition": "L_{\\Omega} + L_{\\text{phase}} + L_{\\text{mem}} + \\cdots\\text{\u2009},",
+        "context": "energies are not guesses --- they are defined by the Hamiltonian split**\n\nFor any Lagrangian split\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{\\text{phase}} +"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2256,
+        "definition": "L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}},",
+        "context": "\\boxed{N_{e} = 111.}$$\n\n**2) Start from the actual GU Lagrangian split**\n\nYour GU documents define\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{X} + L_{\\text{i"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2382,
+        "definition": "L_{\\Omega} + L_{\\text{phase}} + L_{\\text{mem}} + \\cdots",
+        "context": "a(s,t) = \\rho(s)\\text{\u2009}e^{i\\Theta(s,t)}.$$\n\nThe Lagrangian split used throughout the framework is\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{\\text{phase}} +"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4973,
+        "definition": "L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}},",
+        "context": "*1. Start from the GU dynamics: local sector + memory sector**\n\nGU posits the universal Lagrangian\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{X} + L_{\\text{i"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2120,
+        "definition": "L_{\\Omega} + L_{\\text{phase}} + L_{\\text{mem}} + \\cdots\\text{\u2009},",
+        "context": "energies are not guesses --- they are defined by the Hamiltonian split**\n\nFor any Lagrangian split\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{\\text{phase}} +"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2256,
+        "definition": "L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}},",
+        "context": "\\boxed{N_{e} = 111.}$$\n\n**2) Start from the actual GU Lagrangian split**\n\nYour GU documents define\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{X} + L_{\\text{i"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2382,
+        "definition": "L_{\\Omega} + L_{\\text{phase}} + L_{\\text{mem}} + \\cdots",
+        "context": "a(s,t) = \\rho(s)\\text{\u2009}e^{i\\Theta(s,t)}.$$\n\nThe Lagrangian split used throughout the framework is\n\n$$L_{\\text{tot}} = L_{\\Omega} + L_{\\text{phase}} +"
+      }
+    ],
+    "E_{\\rho}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2176,
+        "definition": "\\int d^{3}x\\left\\lbrack (\\nabla\\rho)^{2} + V_{\\Omega}(\\rho) \\right\\rbrack,E_{\\theta} = \\int d^{3}x\\left\\lbrack \\rho^{2} \\middle( \\nabla\\theta)^{2} \\right\\rbrack.",
+        "context": "f}}$(not the phase gradient piece).\n\nSo define\n\n$$E_{\\text{self}} = E_{\\rho} + E_{\\theta},$$\n\nwith\n\n$$E_{\\rho} = \\int d^{3}x\\left\\lbrack (\\nabla\\rho)^"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2176,
+        "definition": "\\int d^{3}x\\left\\lbrack (\\nabla\\rho)^{2} + V_{\\Omega}(\\rho) \\right\\rbrack,E_{\\theta} = \\int d^{3}x\\left\\lbrack \\rho^{2} \\middle( \\nabla\\theta)^{2} \\right\\rbrack.",
+        "context": "f}}$(not the phase gradient piece).\n\nSo define\n\n$$E_{\\text{self}} = E_{\\rho} + E_{\\theta},$$\n\nwith\n\n$$E_{\\rho} = \\int d^{3}x\\left\\lbrack (\\nabla\\rho)^"
+      }
+    ],
+    "\\Theta_{\\text{tot}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2244,
+        "definition": "n\\left( \\frac{2\\pi}{\\varphi^{2}} \\right) = k(2\\pi) \\Longrightarrow \\frac{n}{\\varphi^{2}} = k,",
+        "context": "N}_{\\mathbf{e}}\\mathbf{= 111}$\n\nFrom the Formation derivation, the stability/phase-closure rule is\n\n$$\\Theta_{\\text{tot}} = n\\left( \\frac{2\\pi}{\\varph"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2244,
+        "definition": "n\\left( \\frac{2\\pi}{\\varphi^{2}} \\right) = k(2\\pi) \\Longrightarrow \\frac{n}{\\varphi^{2}} = k,",
+        "context": "N}_{\\mathbf{e}}\\mathbf{= 111}$\n\nFrom the Formation derivation, the stability/phase-closure rule is\n\n$$\\Theta_{\\text{tot}} = n\\left( \\frac{2\\pi}{\\varph"
+      }
+    ],
+    "\\boxed{N_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2250,
+        "definition": "111.}",
+        "context": " node is $n = 111$(nearest integer closure $k = 42$).\n\nSo the electron calculation is anchored at:\n\n$$\\boxed{N_{e} = 111.}$$\n\n**2) Start from the actu"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2924,
+        "definition": "111.}",
+        "context": "\n**1.1 Formation node**\n\nThe Formation derivation fixes the first charged-lepton formation node as\n\n$$\\boxed{N_{e} = 111.}$$\n\n**1.2 The cosmic clock n"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3345,
+        "definition": "111}",
+        "context": " the electron Yukawa coupling**\n\nThe electron is identified as the first stable charged lepton at:\n\n$$\\boxed{N_{e} = 111}$$\n\nThe Formation paper defin"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3465,
+        "definition": "111.}",
+        "context": "* $\\mathbf{y}_{\\mathbf{e}}$\n\nThe Formation paper fixes the first stable charged lepton to the node\n\n$$\\boxed{N_{e} = 111.}$$\n\nIt also defines the elec"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3720,
+        "definition": "111}",
+        "context": "nd derived couplings**\n\n**1.1 Formation node**\n\nThe electron is the first stable charged lepton at\n\n$$\\boxed{N_{e} = 111}$$\n\nas stated in the GU elect"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3850,
+        "definition": "111.}",
+        "context": "f{\\varphi}$**, no experimental input)**\n\nThe first stable charged lepton forms at the derived node\n\n$$\\boxed{N_{e} = 111.}$$\n\nThe corresponding resona"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 257,
+        "definition": "\\underset{(p,q) \\in \\Gamma_{\\mathcal{l}}^{\\left( \\text{charged} \\right)}}{\\min}( \\mid p \\mid + \\mid q \\mid ).}",
+        "context": "ase point**\n\nNow define the electron as the **minimum Manhattan norm point in the correct coset**:\n\n$$\\boxed{N_{e} = \\underset{(p,q) \\in \\Gamma_{\\math"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2250,
+        "definition": "111.}",
+        "context": " node is $n = 111$(nearest integer closure $k = 42$).\n\nSo the electron calculation is anchored at:\n\n$$\\boxed{N_{e} = 111.}$$\n\n**2) Start from the actu"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2924,
+        "definition": "111.}",
+        "context": "\n**1.1 Formation node**\n\nThe Formation derivation fixes the first charged-lepton formation node as\n\n$$\\boxed{N_{e} = 111.}$$\n\n**1.2 The cosmic clock n"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3345,
+        "definition": "111}",
+        "context": " the electron Yukawa coupling**\n\nThe electron is identified as the first stable charged lepton at:\n\n$$\\boxed{N_{e} = 111}$$\n\nThe Formation paper defin"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3465,
+        "definition": "111.}",
+        "context": "* $\\mathbf{y}_{\\mathbf{e}}$\n\nThe Formation paper fixes the first stable charged lepton to the node\n\n$$\\boxed{N_{e} = 111.}$$\n\nIt also defines the elec"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3720,
+        "definition": "111}",
+        "context": "nd derived couplings**\n\n**1.1 Formation node**\n\nThe electron is the first stable charged lepton at\n\n$$\\boxed{N_{e} = 111}$$\n\nas stated in the GU elect"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3850,
+        "definition": "111.}",
+        "context": "f{\\varphi}$**, no experimental input)**\n\nThe first stable charged lepton forms at the derived node\n\n$$\\boxed{N_{e} = 111.}$$\n\nThe corresponding resona"
+      }
+    ],
+    "\\boxed{E_{\\text{modulus}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2294,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack(\\nabla\\rho)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "gy** $\\mathbf{E}_{\\text{modulus}}$\n\nThis is the amplitude (\"radial\") part of the substrate energy:\n\n$$\\boxed{E_{\\text{modulus}} = \\int d^{3}x\\text{\\:\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2294,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack(\\nabla\\rho)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "gy** $\\mathbf{E}_{\\text{modulus}}$\n\nThis is the amplitude (\"radial\") part of the substrate energy:\n\n$$\\boxed{E_{\\text{modulus}} = \\int d^{3}x\\text{\\:\\"
+      }
+    ],
+    "\\boxed{E_{\\text{self}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2302,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack(\\nabla\\rho)^{2} + \\rho^{2}(\\nabla\\theta)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "tribution (modulus + phase-gradient + gauge-field local energy if present in the electron sector):\n\n$$\\boxed{E_{\\text{self}} = \\int d^{3}x\\text{\\:\\,}\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2302,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack(\\nabla\\rho)^{2} + \\rho^{2}(\\nabla\\theta)^{2} + V_{\\Omega}(\\rho,X_{111})\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "tribution (modulus + phase-gradient + gauge-field local energy if present in the electron sector):\n\n$$\\boxed{E_{\\text{self}} = \\int d^{3}x\\text{\\:\\,}\\"
+      }
+    ],
+    "\\boxed{E_{\\text{phase}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2310,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack\\kappa_{p}\\text{\u2009}\\rho^{2}(\\partial_{t}\\theta + \\omega_{\\text{drv}})^{2}\\rbrack_{\\Omega = \\Omega_{e},\\text{\\:\\,}n = 111}.}",
+        "context": "hbf{E}_{\\text{phase}}$\n\nThis is exactly the energy contribution of the explicit phase-driver term:\n\n$$\\boxed{E_{\\text{phase}} = \\int d^{3}x\\text{\\:\\,}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2310,
+        "definition": "\\int d^{3}x\\text{\\:\\,}\\lbrack\\kappa_{p}\\text{\u2009}\\rho^{2}(\\partial_{t}\\theta + \\omega_{\\text{drv}})^{2}\\rbrack_{\\Omega = \\Omega_{e},\\text{\\:\\,}n = 111}.}",
+        "context": "hbf{E}_{\\text{phase}}$\n\nThis is exactly the energy contribution of the explicit phase-driver term:\n\n$$\\boxed{E_{\\text{phase}} = \\int d^{3}x\\text{\\:\\,}"
+      }
+    ],
+    "\\boxed{E_{\\text{memory}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2318,
+        "definition": "\\lambda_{\\text{rec}}(X_{111})\\int d^{3}x\\text{\\:\\,}\\lbrack\\rho(t)^{2}\\int_{0}^{t}e^{- \\beta(X_{111})(t - \\tau)}\\rho(\\tau)^{2}\\text{\u2009}d\\tau\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "ry energy** $\\mathbf{E}_{\\text{memory}}$\n\nThis is the on-shell energy of the nonlocal memory term:\n\n$$\\boxed{E_{\\text{memory}} = \\lambda_{\\text{rec}}("
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2322,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}(X_{111})}{\\beta(X_{111})}\\int d^{3}x\\text{\\:\\,}\\rho^{4}(x)\\text{(stationary soliton)}.}",
+        "context": "el integral collapses to $1/\\beta(X_{111})$, giving the clean binding form stated in the Skeleton:\n\n$$\\boxed{E_{\\text{memory}} = - \\frac{\\lambda_{\\tex"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2318,
+        "definition": "\\lambda_{\\text{rec}}(X_{111})\\int d^{3}x\\text{\\:\\,}\\lbrack\\rho(t)^{2}\\int_{0}^{t}e^{- \\beta(X_{111})(t - \\tau)}\\rho(\\tau)^{2}\\text{\u2009}d\\tau\\rbrack_{\\Omega = \\Omega_{e}}.}",
+        "context": "ry energy** $\\mathbf{E}_{\\text{memory}}$\n\nThis is the on-shell energy of the nonlocal memory term:\n\n$$\\boxed{E_{\\text{memory}} = \\lambda_{\\text{rec}}("
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2322,
+        "definition": "- \\frac{\\lambda_{\\text{rec}}(X_{111})}{\\beta(X_{111})}\\int d^{3}x\\text{\\:\\,}\\rho^{4}(x)\\text{(stationary soliton)}.}",
+        "context": "el integral collapses to $1/\\beta(X_{111})$, giving the clean binding form stated in the Skeleton:\n\n$$\\boxed{E_{\\text{memory}} = - \\frac{\\lambda_{\\tex"
+      }
+    ],
+    "m_{P}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2332,
+        "definition": "2.176\\text{\u2009}434 \\times 10^{- 8}\\text{ kg}.",
+        "context": "ase}} + E_{\\text{memory}}.}$$\n\nAnd the Planck mass is taken from CODATA/NIST (not from the draft):\n\n$$m_{P} = 2.176\\text{\u2009}434 \\times 10^{- 8}\\text{ k"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2332,
+        "definition": "2.176\\text{\u2009}434 \\times 10^{- 8}\\text{ kg}.",
+        "context": "ase}} + E_{\\text{memory}}.}$$\n\nAnd the Planck mass is taken from CODATA/NIST (not from the draft):\n\n$$m_{P} = 2.176\\text{\u2009}434 \\times 10^{- 8}\\text{ k"
+      }
+    ],
+    "{L_{\\text{phase}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2386,
+        "definition": "\\kappa_{p}\\text{\u2009} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k},",
+        "context": "\\cdots$$\n\nwith the explicit phase driver and memory kernel forms already fixed in the GU skeleton:\n\n$${L_{\\text{phase}} = \\kappa_{p}\\text{\u2009} \\mid \\Ome"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2386,
+        "definition": "\\kappa_{p}\\text{\u2009} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\text{\u2009}\\pi^{k},",
+        "context": "\\cdots$$\n\nwith the explicit phase driver and memory kernel forms already fixed in the GU skeleton:\n\n$${L_{\\text{phase}} = \\kappa_{p}\\text{\u2009} \\mid \\Ome"
+      }
+    ],
+    "E_{\\text{phase}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2435,
+        "definition": "\\int_{0}^{L_{111}}\\kappa_{p}\\text{\u2009}\\rho(s)^{2}(\\partial_{t}\\Theta + \\omega_{\\text{drv}})^{2}\\text{\u2009}ds.",
+        "context": "tegers $m$.\n\n**4.2 Phase contribution** $\\mathbf{E}_{\\text{phase}}$\n\nFrom $L_{\\text{phase}}$above,\n\n$$E_{\\text{phase}} = \\int_{0}^{L_{111}}\\kappa_{p}\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2443,
+        "definition": "2\\kappa_{p}\\text{\u2009}\\rho_{0}^{2}\\xi(\\partial_{t}\\Theta + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{42}.",
+        "context": "s$:\n\n$$\\int\\rho^{2}ds = \\rho_{0}^{2}\\xi\\int{sech}^{2}u\\text{\u2009}du = 2\\rho_{0}^{2}\\xi.$$\n\nTherefore,\n\n$$E_{\\text{phase}} = 2\\kappa_{p}\\text{\u2009}\\rho_{0}^{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2435,
+        "definition": "\\int_{0}^{L_{111}}\\kappa_{p}\\text{\u2009}\\rho(s)^{2}(\\partial_{t}\\Theta + \\omega_{\\text{drv}})^{2}\\text{\u2009}ds.",
+        "context": "tegers $m$.\n\n**4.2 Phase contribution** $\\mathbf{E}_{\\text{phase}}$\n\nFrom $L_{\\text{phase}}$above,\n\n$$E_{\\text{phase}} = \\int_{0}^{L_{111}}\\kappa_{p}\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2443,
+        "definition": "2\\kappa_{p}\\text{\u2009}\\rho_{0}^{2}\\xi(\\partial_{t}\\Theta + \\omega_{\\text{drv}})^{2},\\omega_{\\text{drv}} = \\omega_{0}\\pi^{42}.",
+        "context": "s$:\n\n$$\\int\\rho^{2}ds = \\rho_{0}^{2}\\xi\\int{sech}^{2}u\\text{\u2009}du = 2\\rho_{0}^{2}\\xi.$$\n\nTherefore,\n\n$$E_{\\text{phase}} = 2\\kappa_{p}\\text{\u2009}\\rho_{0}^{"
+      }
+    ],
+    "\\frac{dV_{e}}{d\\rho}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2795,
+        "definition": "0\\text{\\:\\,} \\Longrightarrow \\text{\\:\\,}m_{111}^{2} + \\lambda_{111}v_{111}^{2} + \\frac{\\gamma_{111}}{M_{0}^{2}}v_{111}^{4} = 0,",
+        "context": "a_{\\Omega}(X)}{2}\\rho^{4} + \\frac{\\gamma_{\\Omega}(X)}{3M_{0}^{2}}\\rho^{6},$$\n\nthe vacuum satisfies\n\n$$\\frac{dV_{e}}{d\\rho} = 0\\text{\\:\\,} \\Longrightar"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2795,
+        "definition": "0\\text{\\:\\,} \\Longrightarrow \\text{\\:\\,}m_{111}^{2} + \\lambda_{111}v_{111}^{2} + \\frac{\\gamma_{111}}{M_{0}^{2}}v_{111}^{4} = 0,",
+        "context": "a_{\\Omega}(X)}{2}\\rho^{4} + \\frac{\\gamma_{\\Omega}(X)}{3M_{0}^{2}}\\rho^{6},$$\n\nthe vacuum satisfies\n\n$$\\frac{dV_{e}}{d\\rho} = 0\\text{\\:\\,} \\Longrightar"
+      }
+    ],
+    "\\boxed{a": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2834,
+        "definition": "\\frac{g_{111}v_{111}}{\\kappa_{111}}.}",
+        "context": "111}$, $\\kappa_{111}$, and $g_{111}$are specified by the theory, equation #1 gives $a$immediately:\n\n$$\\boxed{a = \\frac{g_{111}v_{111}}{\\kappa_{111}}.}"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3300,
+        "definition": "\\frac{g_{e}\\text{\u2009}v_{111}}{\\kappa_{111}}}",
+        "context": "scale** $\\mathbf{\\kappa}$**and the spectral index** $\\mathbf{a}$\n\nThe bound-mode index is fixed by\n\n$$\\boxed{a = \\frac{g_{e}\\text{\u2009}v_{111}}{\\kappa_{1"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3399,
+        "definition": "1}",
+        "context": "n the channel,\n\n- $\\kappa_{111}$is the kink inverse width.\n\n**Ground-state selection (electron):**\n\n$$\\boxed{a = 1}$$\n\nThis is the \"single trapped gro"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3660,
+        "definition": "\\frac{g_{e}\\text{\u2009}v}{\\kappa}}",
+        "context": "he ground trapped mode has the universal shape $\\psi_{0} \\propto {sech}^{a}(\\kappa s)$, with index\n\n$$\\boxed{a = \\frac{g_{e}\\text{\u2009}v}{\\kappa}}$$\n\n(up"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4129,
+        "definition": "1.}",
+        "context": "nly\")**\\\nIf the electron is the *first* stable charged soliton, the natural spectral selection is:\n\n$$\\boxed{a = 1.}$$\n\nThat enforces \"one bound mode\""
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2834,
+        "definition": "\\frac{g_{111}v_{111}}{\\kappa_{111}}.}",
+        "context": "111}$, $\\kappa_{111}$, and $g_{111}$are specified by the theory, equation #1 gives $a$immediately:\n\n$$\\boxed{a = \\frac{g_{111}v_{111}}{\\kappa_{111}}.}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3300,
+        "definition": "\\frac{g_{e}\\text{\u2009}v_{111}}{\\kappa_{111}}}",
+        "context": "scale** $\\mathbf{\\kappa}$**and the spectral index** $\\mathbf{a}$\n\nThe bound-mode index is fixed by\n\n$$\\boxed{a = \\frac{g_{e}\\text{\u2009}v_{111}}{\\kappa_{1"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3399,
+        "definition": "1}",
+        "context": "n the channel,\n\n- $\\kappa_{111}$is the kink inverse width.\n\n**Ground-state selection (electron):**\n\n$$\\boxed{a = 1}$$\n\nThis is the \"single trapped gro"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3660,
+        "definition": "\\frac{g_{e}\\text{\u2009}v}{\\kappa}}",
+        "context": "he ground trapped mode has the universal shape $\\psi_{0} \\propto {sech}^{a}(\\kappa s)$, with index\n\n$$\\boxed{a = \\frac{g_{e}\\text{\u2009}v}{\\kappa}}$$\n\n(up"
+      }
+    ],
+    "{\\theta": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 2938,
+        "definition": "\\frac{2\\pi}{\\varphi^{2}} = 2.3999632297286533222315555066336138531249990110581\\ldots",
+        "context": "/\\varphi^{2} \\right)}{4\\sqrt{\\pi}}.}$$\n\nNumerically (from the exact constants $\\pi$and $\\varphi$):\n\n$${\\theta = \\frac{2\\pi}{\\varphi^{2}} = 2.399963229"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 2938,
+        "definition": "\\frac{2\\pi}{\\varphi^{2}} = 2.3999632297286533222315555066336138531249990110581\\ldots",
+        "context": "/\\varphi^{2} \\right)}{4\\sqrt{\\pi}}.}$$\n\nNumerically (from the exact constants $\\pi$and $\\varphi$):\n\n$${\\theta = \\frac{2\\pi}{\\varphi^{2}} = 2.399963229"
+      }
+    ],
+    "\\boxed{X_{n}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3060,
+        "definition": "X_{0}\\text{\u2009}\\varphi^{- n}},X_{0} \\equiv \\mid X(0) \\mid .",
+        "context": "the real projection $X(0) = \\mathfrak{R}(Z_{1})$.\n\nThe epoch rule used throughout the framework is\n\n$$\\boxed{X_{n} = X_{0}\\text{\u2009}\\varphi^{- n}},X_{0}"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3494,
+        "definition": "X_{0}\\text{\u2009}\\varphi^{- n}\\text{with}X_{0} \\equiv X(0).}",
+        "context": "{\u2009\u2063}\\left( \\frac{2\\pi}{\\varphi^{2}} \\right).$$\n\nThe framework evolves the clock by the spiral rule\n\n$$\\boxed{X_{n} = X_{0}\\text{\u2009}\\varphi^{- n}\\text{w"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3060,
+        "definition": "X_{0}\\text{\u2009}\\varphi^{- n}},X_{0} \\equiv \\mid X(0) \\mid .",
+        "context": "the real projection $X(0) = \\mathfrak{R}(Z_{1})$.\n\nThe epoch rule used throughout the framework is\n\n$$\\boxed{X_{n} = X_{0}\\text{\u2009}\\varphi^{- n}},X_{0}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3494,
+        "definition": "X_{0}\\text{\u2009}\\varphi^{- n}\\text{with}X_{0} \\equiv X(0).}",
+        "context": "{\u2009\u2063}\\left( \\frac{2\\pi}{\\varphi^{2}} \\right).$$\n\nThe framework evolves the clock by the spiral rule\n\n$$\\boxed{X_{n} = X_{0}\\text{\u2009}\\varphi^{- n}\\text{w"
+      }
+    ],
+    "{K_{M}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3076,
+        "definition": "c_{m}\\text{\u2009\u2063}\\left( \\frac{\\pi}{\\varphi} \\right)^{\\alpha_{m}},",
+        "context": "frac{\\gamma_{\\Omega}(X)}{3M_{0}^{2}} \\mid \\Omega \\mid^{6},$$\n\nwith the coefficient maps printed as\n\n$${K_{M} = c_{m}\\text{\u2009\u2063}\\left( \\frac{\\pi}{\\varphi"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3076,
+        "definition": "c_{m}\\text{\u2009\u2063}\\left( \\frac{\\pi}{\\varphi} \\right)^{\\alpha_{m}},",
+        "context": "frac{\\gamma_{\\Omega}(X)}{3M_{0}^{2}} \\mid \\Omega \\mid^{6},$$\n\nwith the coefficient maps printed as\n\n$${K_{M} = c_{m}\\text{\u2009\u2063}\\left( \\frac{\\pi}{\\varphi"
+      }
+    ],
+    "\\frac{\\partial V_{\\Omega}}{\\partial \\mid \\Omega \\mid}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3083,
+        "definition": "0 \\Longrightarrow \\boxed{v_{n}^{2} = \\frac{- \\lambda_{\\Omega}(X_{n}) + \\sqrt{\\lambda_{\\Omega}(X_{n})^{2} - 4\\text{\u2009}{\\widetilde{m}}_{\\Omega}^{2}(X_{n})\\text{\u2009}(\\gamma_{\\Omega}(X_{n})/M_{0}^{2})}}{2(\\gamma_{\\Omega}(X_{n})/M_{0}^{2})}},",
+        "context": "h $n$, the vacuum amplitude $v_{n}$is **not chosen**; it is the stationary point of the potential:\n\n$$\\frac{\\partial V_{\\Omega}}{\\partial \\mid \\Omega "
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3083,
+        "definition": "0 \\Longrightarrow \\boxed{v_{n}^{2} = \\frac{- \\lambda_{\\Omega}(X_{n}) + \\sqrt{\\lambda_{\\Omega}(X_{n})^{2} - 4\\text{\u2009}{\\widetilde{m}}_{\\Omega}^{2}(X_{n})\\text{\u2009}(\\gamma_{\\Omega}(X_{n})/M_{0}^{2})}}{2(\\gamma_{\\Omega}(X_{n})/M_{0}^{2})}},",
+        "context": "h $n$, the vacuum amplitude $v_{n}$is **not chosen**; it is the stationary point of the potential:\n\n$$\\frac{\\partial V_{\\Omega}}{\\partial \\mid \\Omega "
+      }
+    ],
+    "L_{phase}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3140,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{drv})^{2},\\omega_{drv} = \\omega_{0}\\pi^{k}.",
+        "context": "gy** $\\mathbf{E}_{\\mathbf{phase}}$\n\nYour $\\Psi$-skeleton prints the explicit phase-driver sector :\n\n$$L_{phase} = \\kappa_{p} \\mid \\Omega \\mid^{2}(\\par"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3140,
+        "definition": "\\kappa_{p} \\mid \\Omega \\mid^{2}(\\partial_{t}\\arg\\Omega + \\omega_{drv})^{2},\\omega_{drv} = \\omega_{0}\\pi^{k}.",
+        "context": "gy** $\\mathbf{E}_{\\mathbf{phase}}$\n\nYour $\\Psi$-skeleton prints the explicit phase-driver sector :\n\n$$L_{phase} = \\kappa_{p} \\mid \\Omega \\mid^{2}(\\par"
+      }
+    ],
+    "\\boxed{y_{e} \\equiv S_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3211,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": "In *The Golden Universe Formation*, the electron's dimensionless coupling is explicitly defined as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3349,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": " = 111}$$\n\nThe Formation paper defines the *dimensionless electron Yukawa/structural coupling* as:\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3469,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": " to the node\n\n$$\\boxed{N_{e} = 111.}$$\n\nIt also defines the electron-sector dimensionless coupling\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3734,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": "rmation text defines the electron's structural factor (used as a coupling in the lepton sector) as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3860,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": "The Formation paper defines the electron's dimensionless structural factor (Yukawa-scale coupling)\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3211,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": "In *The Golden Universe Formation*, the electron's dimensionless coupling is explicitly defined as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3349,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": " = 111}$$\n\nThe Formation paper defines the *dimensionless electron Yukawa/structural coupling* as:\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3469,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": " to the node\n\n$$\\boxed{N_{e} = 111.}$$\n\nIt also defines the electron-sector dimensionless coupling\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3734,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}}",
+        "context": "rmation text defines the electron's structural factor (used as a coupling in the lepton sector) as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3860,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": "The Formation paper defines the electron's dimensionless structural factor (Yukawa-scale coupling)\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\"
+      }
+    ],
+    "\\boxed{y_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3217,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "ject as $C_{e}$.\n\nNumerically (pure $\\pi,\\varphi,e$, no experimental input), to 50 decimal places:\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3353,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}}$$\n\nNumerically (pure $\\pi,e,\\varphi$, 50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3473,
+        "definition": "0.51097951228960997824303381840723004398203106664718.}",
+        "context": "} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\nNumerically (pure $\\pi,e,\\varphi$, 50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3738,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "ctor) as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}}$$\n\nNumerically (50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3864,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "upling)\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\nNumerically (50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3217,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "ject as $C_{e}$.\n\nNumerically (pure $\\pi,\\varphi,e$, no experimental input), to 50 decimal places:\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3353,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}}$$\n\nNumerically (pure $\\pi,e,\\varphi$, 50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3473,
+        "definition": "0.51097951228960997824303381840723004398203106664718.}",
+        "context": "} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\nNumerically (pure $\\pi,e,\\varphi$, 50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3738,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "ctor) as\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}}$$\n\nNumerically (50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3864,
+        "definition": "0.51097951228960997824303381840723004398203106664718}",
+        "context": "upling)\n\n$$\\boxed{y_{e} \\equiv S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\nNumerically (50 decimals):\n\n$$\\boxed{y_{e} = 0.5109795122896099782430338184072"
+      }
+    ],
+    "\\boxed{E_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3261,
+        "definition": "E_{\\text{kink/self}} + E_{\\text{kinetic}} + E_{\\text{Yukawa}} + E_{\\text{memory}} + E_{\\text{gauge}}}",
+        "context": "e **memory kernel** term providing negative binding.\n\nWith that, the total energy decomposes into:\n\n$$\\boxed{E_{e} = E_{\\text{kink/self}} + E_{\\text{k"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5005,
+        "definition": "\\frac{2\\pi}{\\mathcal{l}_{\\Omega}}\\text{\\:\\,}\\Xi_{e},}",
+        "context": "ars universally: it is the loop closure factor.\n\nSo the reduced on-shell energy must take the form\n\n$$\\boxed{E_{e} = \\frac{2\\pi}{\\mathcal{l}_{\\Omega}}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3261,
+        "definition": "E_{\\text{kink/self}} + E_{\\text{kinetic}} + E_{\\text{Yukawa}} + E_{\\text{memory}} + E_{\\text{gauge}}}",
+        "context": "e **memory kernel** term providing negative binding.\n\nWith that, the total energy decomposes into:\n\n$$\\boxed{E_{e} = E_{\\text{kink/self}} + E_{\\text{k"
+      }
+    ],
+    "\\boxed{L_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3504,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{\u2009}H\\lbrack\\Omega(\\tau)\\rbrack\\text{\u2009}d\\tau,}}",
+        "context": "ambda}_{\\mathbf{rec}}\\mathbf{(X)}$**must be fixed by the theory**\n\nFormation gives the memory term\n\n$$\\boxed{L_{mem} = - \\lambda_{rec}(X)\\text{\u2009}S_{me"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3504,
+        "definition": "- \\lambda_{rec}(X)\\text{\u2009}S_{mem}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{\u2009}H\\lbrack\\Omega(\\tau)\\rbrack\\text{\u2009}d\\tau,}}",
+        "context": "ambda}_{\\mathbf{rec}}\\mathbf{(X)}$**must be fixed by the theory**\n\nFormation gives the memory term\n\n$$\\boxed{L_{mem} = - \\lambda_{rec}(X)\\text{\u2009}S_{me"
+      }
+    ],
+    "S_{tot}\\lbrack\\Omega\\rbrack": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3583,
+        "definition": "\\int d^{4}x\\text{\\:\\,}(L_{\\Omega} + L_{mem} + L_{phase} + \\cdots),",
+        "context": " for the electron**\n\nWe take the total action in the $\\Omega$-sector with memory and phase driver:\n\n$$S_{tot}\\lbrack\\Omega\\rbrack = \\int d^{4}x\\text{\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3583,
+        "definition": "\\int d^{4}x\\text{\\:\\,}(L_{\\Omega} + L_{mem} + L_{phase} + \\cdots),",
+        "context": " for the electron**\n\nWe take the total action in the $\\Omega$-sector with memory and phase driver:\n\n$$S_{tot}\\lbrack\\Omega\\rbrack = \\int d^{4}x\\text{\\"
+      }
+    ],
+    "{L_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3587,
+        "definition": "(D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\Omega) - V_{\\Omega}(\\Omega,X),",
+        "context": "e} + \\cdots),$$\n\nwith the bare $\\Omega$-sector, the memory kernel, and the phase driver defined as\n\n$${L_{\\Omega} = (D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3587,
+        "definition": "(D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\Omega) - V_{\\Omega}(\\Omega,X),",
+        "context": "e} + \\cdots),$$\n\nwith the bare $\\Omega$-sector, the memory kernel, and the phase driver defined as\n\n$${L_{\\Omega} = (D_{\\mu}\\Omega)^{\\dagger}(D^{\\mu}\\"
+      }
+    ],
+    "L_{loc}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3610,
+        "definition": "\\frac{\\eta}{2}(\\partial_{\\mu}\\chi)^{2} - V_{lock}(\\chi) + \\overset{\u02c9}{\\psi}(i\\gamma^{\\mu}D_{\\mu} - g_{e}\\text{\u2009}v\\text{\u2009}\\sin\\chi)\\psi + \\cdots",
+        "context": "mal explicit local 1D electron-sector Lagrangian consistent with the GU \"NLDE + kink\" language is:\n\n$$L_{loc} = \\frac{\\eta}{2}(\\partial_{\\mu}\\chi)^{2}"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3610,
+        "definition": "\\frac{\\eta}{2}(\\partial_{\\mu}\\chi)^{2} - V_{lock}(\\chi) + \\overset{\u02c9}{\\psi}(i\\gamma^{\\mu}D_{\\mu} - g_{e}\\text{\u2009}v\\text{\u2009}\\sin\\chi)\\psi + \\cdots",
+        "context": "mal explicit local 1D electron-sector Lagrangian consistent with the GU \"NLDE + kink\" language is:\n\n$$L_{loc} = \\frac{\\eta}{2}(\\partial_{\\mu}\\chi)^{2}"
+      }
+    ],
+    "\\boxed{m_{P}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3890,
+        "definition": "2.176\\text{\u2009}434(24) \\times 10^{- 8}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}",
+        "context": " $\\mathbf{C}_{\\mathbf{e}}\\mathbf{(111)}$**)**\n\nUse CODATA 2022 recommended values:\n\n- Planck mass:\n\n$$\\boxed{m_{P} = 2.176\\text{\u2009}434(24) \\times 10^{-"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3890,
+        "definition": "2.176\\text{\u2009}434(24) \\times 10^{- 8}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}",
+        "context": " $\\mathbf{C}_{\\mathbf{e}}\\mathbf{(111)}$**)**\n\nUse CODATA 2022 recommended values:\n\n- Planck mass:\n\n$$\\boxed{m_{P} = 2.176\\text{\u2009}434(24) \\times 10^{-"
+      }
+    ],
+    "\\boxed{m_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3894,
+        "definition": "9.109\\text{\u2009}383\\text{\u2009}7139(28) \\times 10^{- 31}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}",
+        "context": " 8}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}$$\n\n- Electron mass:\n\n$$\\boxed{m_{e} = 9.109\\text{\u2009}383\\text{\u2009}7139(28) "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2291,
+        "definition": "M_{P}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}}{\\phi^{N_{e}}}}",
+        "context": "phi^{N_{e}}} = M_{P}c^{2}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_{e}}{\\phi^{N_{e}}}.$$\n\nTherefore the equation\n\n$$\\boxed{m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi\\text{\u2009}C_"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2449,
+        "definition": "\\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi C_{e}}{L_{\\Omega}(p,q)}}",
+        "context": "lash c\\text{\u2009}\\frac{2\\pi}{L_{\\text{eff}}} = \\hslash c\\text{\u2009}\\frac{2\\pi C_{e}}{L_{\\Omega}}.$$\n\nSo:\n\n$$\\boxed{m_{e} = \\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2534,
+        "definition": "M_{P}\\text{\\:\\,}\\frac{C_{e}(n)}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}}",
+        "context": "o make the paper perfect, you need to choose one:\n\n- **Version 1 (recommended, fully derived):**\n\n> $$\\boxed{m_{e} = M_{P}\\text{\\:\\,}\\frac{C_{e}(n)}{\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2540,
+        "definition": "M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}(n)}{\\phi^{N_{e}}}}",
+        "context": "ty + cheapest \u03a9-geodesic at the resonance node.\n\n- **Version 2 (allowed, but must be defined):**\n\n> $$\\boxed{m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3894,
+        "definition": "9.109\\text{\u2009}383\\text{\u2009}7139(28) \\times 10^{- 31}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}",
+        "context": " 8}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}kg}$$\n\n- Electron mass:\n\n$$\\boxed{m_{e} = 9.109\\text{\u2009}383\\text{\u2009}7139(28) "
+      }
+    ],
+    "\\boxed{\\Delta": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3992,
+        "definition": "- 0.26232413657887545495\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}MeV}",
+        "context": "Compare to CODATA:\n\n$$m_{e,\\text{CODATA}}c^{2} = 0.51099895069\\text{ \t\t\t\t\t\t}MeV$$\n\nAbsolute error:\n\n$$\\boxed{\\Delta = - 0.26232413657887545495\\text{ }"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3992,
+        "definition": "- 0.26232413657887545495\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}MeV}",
+        "context": "Compare to CODATA:\n\n$$m_{e,\\text{CODATA}}c^{2} = 0.51099895069\\text{ \t\t\t\t\t\t}MeV$$\n\nAbsolute error:\n\n$$\\boxed{\\Delta = - 0.26232413657887545495\\text{ }"
+      }
+    ],
+    "\\boxed{\\frac{\\Delta}{m_{e}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 3996,
+        "definition": "- 0.51335552885922790175\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}( \\approx - 51.34\\%)}",
+        "context": "495\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}MeV}$$\n\nRelative error:\n\n$$\\boxed{\\frac{\\Delta}{m_{e}} = - 0.51335552885922"
+      },
+      {
+        "document": "Some GU Particles Stuff.md",
+        "line": 3996,
+        "definition": "- 0.51335552885922790175\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}( \\approx - 51.34\\%)}",
+        "context": "495\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}MeV}$$\n\nRelative error:\n\n$$\\boxed{\\frac{\\Delta}{m_{e}} = - 0.51335552885922"
+      }
+    ],
+    "{y_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4091,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}} = 0.51097951228960997824303381840723004398203106664718",
+        "context": "ure values.\n\n**What you can compute right now (pure, exact)**\n\nThese require **no** model choices:\n\n$${y_{e} = \\frac{e^{\\varphi}}{\\pi^{2}} = 0.5109795"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4362,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}",
+        "context": "9822724876167184929086138541416893304568104156032}\n}$$\n\nGU coupling from the Formation definition:\n\n$${y_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}\n}{\\boxed{y_"
+      }
+    ],
+    "\\boxed{w": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4110,
+        "definition": "1.}",
+        "context": "trality).\\\nSo: **choose the winding sector** $w \\neq 0$, and for the electron use the minimal one:\n\n$$\\boxed{w = 1.}$$\n\nThis is the \"clean consistency"
+      }
+    ],
+    "\\boxed{L": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4118,
+        "definition": "L(\\nu,k,\\kappa)\\text{\\:\\,\\:\\,} \\Rightarrow \\text{\\:\\,\\:\\,}\\eta_{\\mu} = \\eta_{\\mu}(\\nu,k)\\text{ only}.}",
+        "context": "he exact relation from your derivation (whatever you used to get $\\eta_{\\mu}(\\nu,k)$) in the form:\n\n$$\\boxed{L = L(\\nu,k,\\kappa)\\text{\\:\\,\\:\\,} \\Right"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3210,
+        "definition": "\\mathcal{l}_{P}\\text{\u2009}\\phi_{111}^{\\text{\u2009}N_{e}}}",
+        "context": "'s displayed formula, GU must relate the electron loop length at formation to the recursion scale:\n\n$$\\boxed{L = \\mathcal{l}_{P}\\text{\u2009}\\phi_{111}^{\\t"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4029,
+        "definition": "L_{\\Omega}(p,q)_{\\text{min at node}}}",
+        "context": ")$\n\n3.  impose the resonance locking node for the electron epoch $n = 111$\n\nSo the loop length is:\n\n$$\\boxed{L = L_{\\Omega}(p,q)_{\\text{min at node}}}"
+      }
+    ],
+    "a": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4135,
+        "definition": "\\frac{g_{e}v}{\\kappa},",
+        "context": "apses the memory Gamma term to a simple constant (you already noticed this simplification).\n\nSince\n\n$$a = \\frac{g_{e}v}{\\kappa},$$\n\nthis becomes a *de"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 177,
+        "definition": "\\frac{A}{D},b = \\frac{B}{D},c = \\frac{C}{E},",
+        "context": "W}}{2},b: = \\frac{3\\kappa_{B}}{20},c: = \\frac{3\\kappa_{B}}{5}.$$\n\nWrite them as reduced fractions:\n\n$$a = \\frac{A}{D},b = \\frac{B}{D},c = \\frac{C}{E},"
+      }
+    ],
+    "\\boxed{v": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4139,
+        "definition": "\\frac{\\kappa}{g_{e}} = \\frac{\\kappa}{y_{e}}.}",
+        "context": "d this simplification).\n\nSince\n\n$$a = \\frac{g_{e}v}{\\kappa},$$\n\nthis becomes a *derived relation*:\n\n$$\\boxed{v = \\frac{\\kappa}{g_{e}} = \\frac{\\kappa}{"
+      }
+    ],
+    "\\boxed{\\text{Memory term}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4250,
+        "definition": "\\frac{\\lambda_{rec}(X_{111})}{\\beta(X_{111})}\\text{\\:\\,}\\frac{\\kappa}{3}}",
+        "context": " \\psi \\mid^{4}ds = \\frac{\\kappa}{3}$$\n\nso the memory contribution becomes just **one scalar lump**\n\n$$\\boxed{\\text{Memory term} = \\frac{\\lambda_{rec}("
+      }
+    ],
+    "\\boxed{\\delta_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4256,
+        "definition": "\\frac{111}{\\varphi^{2}} - 42 = 0.39822724876167184929086138541416893304568104156032}",
+        "context": "\\:\\,}\\frac{\\kappa}{3}}$$\n\n(no Gamma functions left at all).\n\nAlso, the detuning is pure $\\varphi$:\n\n$$\\boxed{\\delta_{e} = \\frac{111}{\\varphi^{2}} - 42"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4681,
+        "definition": "\\frac{111}{\\varphi^{2}} - 42 = 0.39822724876167184929086138541416893304568104156032}",
+        "context": "$\n\n**Electron detuning at** $\\mathbf{N = 111,}\\text{ \t\t\t\t\t}\\mathbf{k}_{\\mathbf{res}}\\mathbf{= 42}$\n\n$$\\boxed{\\delta_{e} = \\frac{111}{\\varphi^{2}} - 42"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4757,
+        "definition": "\\frac{111}{\\varphi^{2}} - 42 = 0.39822724876167184929086138541416893304568104156032}.",
+        "context": "{l}_{\\Omega}}}.$$\n\nYour electron detuning at $N = 111,\\text{ \t\t\t\t\t}k_{res} = 42$is the pure number\n\n$$\\boxed{\\delta_{e} = \\frac{111}{\\varphi^{2}} - 42"
+      }
+    ],
+    "{\\delta_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4356,
+        "definition": "\\frac{111}{\\varphi^{2}} - 42",
+        "context": " \"pure math\" numbers at** $\\mathbf{N}_{\\mathbf{e}}\\mathbf{= 111}$**(also 50 decimals)**\n\nDetuning:\n\n$${\\delta_{e} = \\frac{111}{\\varphi^{2}} - 42\n}{\\bo"
+      }
+    ],
+    "\\boxed{\\Lambda_{\\text{mem}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4380,
+        "definition": "3( \\mid \\delta_{e} \\mid \\text{\u2009} \\mid k \\mid \\text{\u2009}K(\\nu) + \\eta_{\\mu}(\\nu,k)(8m + \\frac{\\nu}{2}) + C_{gauge}(\\nu,k) - \\text{\\:\\,}C_{e}(111))}",
+        "context": "1})})\\kappa.$$\n\n(So no Gamma functions remain.)\n\nTherefore the **computable closure equation** is:\n\n$$\\boxed{\\Lambda_{\\text{mem}} = 3( \\mid \\delta_{e}"
+      }
+    ],
+    "\\mathcal{l}_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4402,
+        "definition": "374.50",
+        "context": "41,70)$(note $\\mid - 41 \\mid + \\mid 70 \\mid = 111$, matching the node), and the **\u03a9--loop length**\n\n$$\\mathcal{l}_{\\Omega} = 374.50$$\n\n(in your normal"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5033,
+        "definition": "\\mathcal{l}_{P}\\mathcal{\\cdot L,}",
+        "context": "{1}{\\mathcal{l}_{P}}.$$\n\nSo if the loop length $\\mathcal{l}_{\\Omega}$is expressed in Planck units,\n\n$$\\mathcal{l}_{\\Omega} = \\mathcal{l}_{P}\\mathcal{\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5239,
+        "definition": "2\\pi\\sqrt{41^{2} + \\left( \\frac{70}{\\varphi} \\right)^{2}}.",
+        "context": "{\\Omega} \\equiv 2\\pi\\text{\u2009} \\parallel w \\parallel_{\\Omega}.$$\n\nThus for $w_{\\star} = ( - 41,70)$:\n\n$$\\mathcal{l}_{\\Omega} = 2\\pi\\sqrt{41^{2} + \\left("
+      }
+    ],
+    "\\Delta p": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4430,
+        "definition": "\\delta_{e}\\text{\u2009}k_{0} = \\delta_{e}\\text{\u2009}\\frac{2\\pi}{\\mathcal{l}_{\\Omega}}.",
+        "context": "thbf{k}$**-correction\" actually is)**\n\nWith the twisted closure, the lowest-mode momentum shift is\n\n$$\\Delta p = \\delta_{e}\\text{\u2009}k_{0} = \\delta_{e}\\"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4873,
+        "definition": "\\delta_{e}\\text{\u2009}k_{0} = \\boxed{0.00668126995550837579930738862711053517840496843776}",
+        "context": "Omega}} = \\boxed{0.01677753086029262076615563889601870699170717970294}$$\n\nDetuning momentum shift:\n\n$$\\Delta p = \\delta_{e}\\text{\u2009}k_{0} = \\boxed{0.00"
+      }
+    ],
+    "\\boxed{\\Delta p": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4434,
+        "definition": "0.00668126995550837579930738862711053517840496843776}",
+        "context": "$$\\Delta p = \\delta_{e}\\text{\u2009}k_{0} = \\delta_{e}\\text{\u2009}\\frac{2\\pi}{\\mathcal{l}_{\\Omega}}.$$\n\nSo:\n\n$$\\boxed{\\Delta p = 0.0066812699555083757993073886"
+      }
+    ],
+    "m_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4442,
+        "definition": "m_{P}\\text{\\:\\,}\\frac{2\\pi\\text{\u2009}C_{e}(111)}{\\varphi^{111}} \\Rightarrow C_{e}(111) = \\frac{\\varphi^{111}}{2\\pi}\\frac{m_{e}}{m_{P}},",
+        "context": "f{e}}\\mathbf{(111)}$**(the number your solver must output)**\n\nUsing your paper's electron mass law\n\n$$m_{e} = m_{P}\\text{\\:\\,}\\frac{2\\pi\\text{\u2009}C_{e}("
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4741,
+        "definition": "m_{P}\\frac{2\\pi\\text{\u2009}C_{e}}{\\varphi^{111}},",
+        "context": "}$.\n\n- $m_{e} = 9.109\\text{\u2009}383\\text{\u2009}7139(28) \\times 10^{- 31}\\text{ kg}$.\n\nUsing your mass law\n\n$$m_{e} = m_{P}\\frac{2\\pi\\text{\u2009}C_{e}}{\\varphi^{1"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4879,
+        "definition": "m_{P}\\frac{2\\pi\\text{\u2009}C_{e}(111)}{\\varphi^{111}},",
+        "context": " CODATA-implied coefficient** $\\mathbf{C}_{\\mathbf{e}}\\mathbf{(111)}$\n\nFrom your electron mass law\n\n$$m_{e} = m_{P}\\frac{2\\pi\\text{\u2009}C_{e}(111)}{\\varp"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2471,
+        "definition": "\\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi C_{e}}{2\\pi\\text{\u2009}\\mathcal{l}_{P}\\text{\u2009}\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}} = M_{P}\\text{\u2009}\\frac{C_{e}}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}.",
+        "context": "Omega} = 2\\pi\\text{\u2009}\\mathcal{l}_{P}\\text{\u2009}\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}.$$\n\nNow:\n\n$$m_{e} = \\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi C_{e"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2483,
+        "definition": "M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}.",
+        "context": "**\" form is obtained as a special reduction**\n\nThe paper's published electron equation looks like:\n\n$$m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2520,
+        "definition": "M_{P}\\text{\\:\\,}\\frac{C_{e}}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}",
+        "context": "rm is not exactly the paper's simplified** $\\phi^{- 111}$**expression.**\\\nThe derived backbone is:\n\n$$m_{e} = M_{P}\\text{\\:\\,}\\frac{C_{e}}{\\phi^{n}\\sq"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2524,
+        "definition": "M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}}{\\phi^{N_{e}}}",
+        "context": "} = M_{P}\\text{\\:\\,}\\frac{C_{e}}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}$$\n\nand the paper's\n\n$$m_{e} = M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}"
+      }
+    ],
+    "\\boxed{\\delta k": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4514,
+        "definition": "0.39822724876167184929086138541416893304568104156032}",
+        "context": "{\\text{res}} = 42.$$\n\nThis is a pure mathematical value (no fitting, no physics constants needed):\n\n$$\\boxed{\\delta k = 0.3982272487616718492908613854"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5225,
+        "definition": "0.39822724876167184929086138541416893304568104156032\\ldots}",
+        "context": "g** is defined by\n\n$$\\delta k \\equiv \\frac{111}{\\varphi^{2}} - 42.$$\n\nEvaluated at high precision:\n\n$$\\boxed{\\delta k = 0.3982272487616718492908613854"
+      }
+    ],
+    "\\boxed{\\nu": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4570,
+        "definition": "0.91168369826717185782055908941114031156937694954230}",
+        "context": "t is:\n\n$$\\mid \\delta k \\mid \\text{\u2009}K(\\nu) = C_{e}^{\\left( \\text{CODATA} \\right)}.$$\n\nThis yields:\n\n$$\\boxed{\\nu = 0.911683698267171857820559089411140"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1598,
+        "definition": "\\lambda - n.}",
+        "context": "- n}(\\mu s) \\times (\\text{polynomial in }\\tanh(\\mu s)).$$\n\nSo the exponent of the $sech$profile is\n\n$$\\boxed{\\nu = \\lambda - n.}$$\n\nThat is the clean "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3091,
+        "definition": "\\frac{y\\text{\u2009}\\chi_{0}}{\\hslash c\\text{\u2009}\\mu}}",
+        "context": "round bound state has the generic form:\n\n$$\\boxed{\\psi_{0}(s) \\propto {sech}^{\\nu}(\\mu s)}$$\n\nwith\n\n$$\\boxed{\\nu = \\frac{y\\text{\u2009}\\chi_{0}}{\\hslash c\\"
+      }
+    ],
+    "\\frac{\\mu}{\\sqrt{\\nu}}\\mathcal{l}_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4659,
+        "definition": "2kK(\\nu) \\Longrightarrow \\boxed{\\mu(\\nu,k) = \\frac{2k\\sqrt{\\nu}}{\\mathcal{l}_{\\Omega}}\\text{\u2009}K(\\nu).}",
+        "context": ", where $K(\\nu)$is the complete elliptic integral of the first kind.\n\nSince $u' = \\mu/\\sqrt{\\nu}$,\n\n$$\\frac{\\mu}{\\sqrt{\\nu}}\\mathcal{l}_{\\Omega} = 2kK"
+      }
+    ],
+    "\\boxed{\\Delta C_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4761,
+        "definition": "\\left( \\frac{\\lambda_{rec}(X_{111})}{\\beta(X_{111})} \\right)\\frac{\\kappa(\\nu,k)}{3}.}",
+        "context": " apply your simplification $a = 1$(single bound mode), which collapses the memory \"Gamma term\" to:\n\n$$\\boxed{\\Delta C_{mem} = \\left( \\frac{\\lambda_{re"
+      }
+    ],
+    "\\boxed{\\nu_{\\star}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4777,
+        "definition": "0.91168369826717185782055908941114031156937694954229}",
+        "context": " target:\n\n$$\\mid \\delta_{e} \\mid \\text{\u2009}K(\\nu_{\\star}) = C_{e}^{(CODATA)}.$$\n\nSolving this gives:\n\n$$\\boxed{\\nu_{\\star} = 0.9116836982671718578205590"
+      }
+    ],
+    "\\delta_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4865,
+        "definition": "\\frac{111}{\\varphi^{2}} - 42 = \\boxed{0.39822724876167184929086138541416893304568104156032}",
+        "context": "$\\mathbf{N}_{\\mathbf{e}}\\mathbf{= 111}$\n\nDetuning (your \"first passing node with $k_{res} = 42$\"):\n\n$$\\delta_{e} = \\frac{111}{\\varphi^{2}} - 42 = \\box"
+      }
+    ],
+    "{\\nu_{\\star}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4903,
+        "definition": "\\boxed{0.91168369826717185782055908941114031156937694954230}",
+        "context": "he leading equality\n\n$$\\mid \\delta_{e} \\mid K(\\nu_{\\star}) = C_{e}^{(CODATA)}(111).$$\n\nThat gives:\n\n$${\\nu_{\\star} = \\boxed{0.911683698267171857820559"
+      }
+    ],
+    "\\Delta C_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 4917,
+        "definition": "\\left( \\frac{\\lambda_{rec}(X_{111})}{\\beta(X_{111})} \\right)\\frac{\\kappa}{3}.",
+        "context": "a functions remain**\n\nWith your ground-mode simplification $a = 1$, the memory correction becomes:\n\n$$\\Delta C_{mem} = \\left( \\frac{\\lambda_{rec}(X_{1"
+      }
+    ],
+    "\\Xi_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5017,
+        "definition": "\\Xi_{\\text{local}} + \\Xi_{\\text{gauge}} - \\Xi_{\\text{mem}},",
+        "context": "xplicitly from the given $L_{\\text{mem}}$.\n\nIn other words, in the dimensionless energy $\\Xi_{e}$,\n\n$$\\Xi_{e} = \\Xi_{\\text{local}} + \\Xi_{\\text{gauge}"
+      }
+    ],
+    "M_{P}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5029,
+        "definition": "\\frac{1}{\\mathcal{l}_{P}}.",
+        "context": "line\" derivation makes this explicit as the UV anchor step.\n\nIn natural units ($\\hslash = c = 1$):\n\n$$M_{P} = \\frac{1}{\\mathcal{l}_{P}}.$$\n\nSo if the "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2221,
+        "definition": "\\sqrt{\\frac{\\hslash c}{G}}",
+        "context": "lanck energy**\n\nPlanck length:\n\n$$\\mathcal{l}_{P} = \\sqrt{\\frac{\\hslash G}{c^{3}}}$$\n\nPlanck mass:\n\n$$M_{P} = \\sqrt{\\frac{\\hslash c}{G}}$$\n\nand the ke"
+      }
+    ],
+    "E_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5037,
+        "definition": "\\frac{2\\pi}{\\mathcal{l}_{P}}\\frac{\\Xi_{e}}{\\mathcal{L}} = 2\\pi\\text{\u2009}M_{P}\\text{\\:\\,}\\frac{\\Xi_{e}}{\\mathcal{L}}.",
+        "context": "$is expressed in Planck units,\n\n$$\\mathcal{l}_{\\Omega} = \\mathcal{l}_{P}\\mathcal{\\cdot L,}$$\n\nthen\n\n$$E_{e} = \\frac{2\\pi}{\\mathcal{l}_{P}}\\frac{\\Xi_{e"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2650,
+        "definition": "\\underset{\\text{mode kinetic}}{\\underbrace{\\int_{0}^{L_{\\Omega}}{\\text{\u2009\u2063}ds\\text{\\:\\,}}\\psi^{\\dagger}( - i\\hslash c\\text{\u2009}\\partial_{s})\\psi}}\\text{\\:\\,} + \\text{\\:\\,}\\underset{\\text{Yukawa / mass}}{\\underbrace{\\int_{0}^{L_{\\Omega}}{\\text{\u2009\u2063}ds\\text{\\:\\,}y\\text{\u2009}\\chi(s)\\text{\u2009}}\\overset{\u02c9}{\\psi}\\psi}}\\text{\\:\\,} + \\text{\\:\\,}\\underset{\\text{kink background cost}}{\\underbrace{\\int_{0}^{L_{\\Omega}}{\\text{\u2009\u2063}ds\\text{\\:\\,}\\lbrack}\\frac{Z}{2}(\\chi')^{2} + V_{\\text{eff}}(\\chi)\\rbrack}}\\text{\\:\\,} + \\text{\\:\\,}\\underset{\\text{memory kernel}}{\\underbrace{E_{\\text{mem}}}}.",
+        "context": "s the on-shell value of the Hamiltonian (or energy-momentum tensor) for the coupled configuration:\n\n$$E_{e} = \\underset{\\text{mode kinetic}}{\\underbra"
+      }
+    ],
+    "\\frac{\\lambda_{rec}}{\\beta}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5129,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}} = \\boxed{0.51097951228960997824303381840723004398203106664718}.",
+        "context": "alue (50 decimal places)**\n\nUsing mathematical constants $\\pi$, $e$, $\\varphi = (1 + \\sqrt{5})/2$,\n\n$$\\frac{\\lambda_{rec}}{\\beta} = \\frac{e^{\\varphi}}"
+      }
+    ],
+    "\\varphi": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5207,
+        "definition": "\\frac{1 + \\sqrt{5}}{2},\\pi",
+        "context": "rectly from the NIST/CODATA 2018 extensive listing.\n\nWe also use the exact mathematical constants:\n\n$$\\varphi = \\frac{1 + \\sqrt{5}}{2},\\pi$$\n\n**2) The"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5586,
+        "definition": "\\frac{1 + \\sqrt{5}}{2}",
+        "context": "lanck energy**\\\n  $M_{P}c^{2} = 1.220890 \\times 10^{22}\\text{ MeV}$.\n\n- **Golden ratio** (exact)\n\n> $$\\varphi = \\frac{1 + \\sqrt{5}}{2}$$\n\n- $\\pi$(exac"
+      }
+    ],
+    "k_{res}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5217,
+        "definition": "42,",
+        "context": "\n$$\\frac{N}{\\varphi^{2}} \\approx k_{res} \\in \\mathbb{Z.}$$\n\nFor $N = 111$, the nearest integer is:\n\n$$k_{res} = 42,$$\n\nand the **detuning** is defined"
+      }
+    ],
+    "\\parallel w \\parallel_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5235,
+        "definition": "\\sqrt{w_{1}^{2} + \\left( \\frac{w_{2}}{\\varphi} \\right)^{2}},\\mathcal{l}_{\\Omega} \\equiv 2\\pi\\text{\u2009} \\parallel w \\parallel_{\\Omega}.",
+        "context": "$$\n\nIn the normalization you are using, the $\\Omega$-length is generated by the anisotropic metric\n\n$$\\parallel w \\parallel_{\\Omega} = \\sqrt{w_{1}^{2}"
+      }
+    ],
+    "\\boxed{\\mathcal{l}_{\\Omega}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5243,
+        "definition": "374.50279990496241776613591175470833750708258874864\\ldots}",
+        "context": "$\\mathcal{l}_{\\Omega} = 2\\pi\\sqrt{41^{2} + \\left( \\frac{70}{\\varphi} \\right)^{2}}.$$\n\nNumerically:\n\n$$\\boxed{\\mathcal{l}_{\\Omega} = 374.50279990496241"
+      }
+    ],
+    "\\boxed{\\eta_{\\mu}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5251,
+        "definition": "59.60397180662975956036516009307386443611445531215\\ldots}",
+        "context": "iv \\frac{\\mathcal{l}_{\\Omega}}{2\\pi} = \\sqrt{41^{2} + \\left( \\frac{70}{\\varphi} \\right)^{2}}$$\n\nis\n\n$$\\boxed{\\eta_{\\mu} = 59.6039718066297595603651600"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4147,
+        "definition": "\\frac{2k\\text{\u2009}K(k)}{2\\pi_{n}} = \\frac{k\\text{\u2009}K(k)}{\\pi_{n}}.}",
+        "context": "ion:\n\n$$\\mu = \\eta_{\\mu}\\frac{2\\pi_{n}}{L} \\Rightarrow \\eta_{\\mu} = \\frac{\\mu L}{2\\pi_{n}}.$$\n\nSo:\n\n$$\\boxed{\\eta_{\\mu} = \\frac{2k\\text{\u2009}K(k)}{2\\pi_{"
+      }
+    ],
+    "\\frac{m_{e}}{M_{P}}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5279,
+        "definition": "4.18546265429317956572664203982340751419046761 \\times 10^{- 23}",
+        "context": "s computed entirely from CODATA 2018 + $\\varphi,\\pi$.)\n\nEquivalently, the combined scale ratio is:\n\n$$\\frac{m_{e}}{M_{P}} = 4.185462654293179565726642"
+      }
+    ],
+    "\\boxed{g_{mem}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5313,
+        "definition": "\\frac{\\mid \\delta k \\mid \\text{\u2009}K(\\nu) + \\eta_{\\mu}(k)\\left( 8m+\\frac{\\nu}{2} \\right) + \\cdots - C_{e}^{(target)}}{\\Gamma_{mem}(\\nu,m)}}",
+        "context": "rget:\n\n$$C_{e}(\\nu,k;m,g_{mem}) = C_{e}^{(target)}.$$\n\nThat gives a **direct algebraic solution**:\n\n$$\\boxed{g_{mem} = \\frac{\\mid \\delta k \\mid \\text{"
+      }
+    ],
+    "\\boxed{S_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5385,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": "less* recursion/structure constant for the charged-lepton basepoint (electron channel), written as\n\n$$\\boxed{S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\n"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5811,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}}.}",
+        "context": "ture constant** for the electron channel as a closed expression in $\\left( \\pi,\\varphi,e \\right)$:\n\n$$\\boxed{S_{e} = \\frac{e^{\\varphi}}{\\pi^{2}}.}$$\n\n"
+      }
+    ],
+    "\\boxed{\\frac{\\lambda_{rec}}{\\beta}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5405,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}} = 0.51097951228960997824303381840723004398203106664718}",
+        "context": "s necessary to make the calculation closed and checkable.\n\n**4) Numerical value (high precision)**\n\n$$\\boxed{\\frac{\\lambda_{rec}}{\\beta} = \\frac{e^{\\v"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5825,
+        "definition": "\\frac{e^{\\varphi}}{\\pi^{2}} = 0.51097951228960997824303381840723004398203106664718}",
+        "context": "ficient.\n\n**4) Numerical value (50 decimals)**\n\nUsing exact $\\varphi = (1 + \\sqrt{5})/2$and $\\pi$:\n\n$$\\boxed{\\frac{\\lambda_{rec}}{\\beta} = \\frac{e^{\\v"
+      }
+    ],
+    "A": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5611,
+        "definition": "0.4866630091832145009\\ldots\\text{ MeV}.",
+        "context": "c^{2}\\text{\\:\\,}\\frac{2\\pi}{\\varphi^{111}}.$$\n\nUsing CODATA Planck energy and exact $\\pi,\\varphi$,\n\n$$A = 0.4866630091832145009\\ldots\\text{ MeV}.$$\n\nS"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5715,
+        "definition": "M_{P}c^{2}\\frac{2\\pi}{\\varphi^{111}} = 0.4866630091832145009\\ldots\\text{ MeV}.",
+        "context": "What number should drop out (validation target)**\n\nFrom CODATA constants alone we already computed\n\n$$A = M_{P}c^{2}\\frac{2\\pi}{\\varphi^{111}} = 0.486"
+      }
+    ],
+    "G_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5693,
+        "definition": "\\sqrt{T(\\bar{\\mathbf{5}})\\text{\u2009}T(\\mathbf{10})}.",
+        "context": "f{5}$),\n\n- $e^{c}$in $\\mathbf{10}$(two-index antisymmetric of SU(5)).\n\nA clean invariant choice is\n\n$$G_{e} = \\sqrt{T(\\bar{\\mathbf{5}})\\text{\u2009}T(\\math"
+      },
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5697,
+        "definition": "\\sqrt{\\frac{1}{2} \\cdot \\frac{3}{2}} = \\frac{\\sqrt{3}}{2}.",
+        "context": " standard SU(5) value $T(\\mathbf{10}) = \\frac{3}{2}$(two-index antisymmetric of SU(5)), this gives\n\n$$G_{e} = \\sqrt{\\frac{1}{2} \\cdot \\frac{3}{2}} = \\"
+      }
+    ],
+    "C_{e}": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5719,
+        "definition": "1.0500057350773985\\ldots",
+        "context": "\\frac{2\\pi}{\\varphi^{111}} = 0.4866630091832145009\\ldots\\text{ MeV}.$$\n\nSo the theory must produce\n\n$$C_{e} = 1.0500057350773985\\ldots$$\n\nto reproduce"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3224,
+        "definition": "\\text{dimensionless on-shell soliton energy}",
+        "context": "have accomplished (and what remains)**\n\n**We fully derived what** $\\mathbf{C}_{\\mathbf{e}}$**is:**\n\n$$C_{e} = \\text{dimensionless on-shell soliton ene"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3492,
+        "definition": "C_{\\text{loc}} + C_{\\text{mem}}",
+        "context": "d to in Route B.\n\nI'll keep it **fully symbolic** (no values), and I'll make the separation clean:\n\n$$C_{e} = C_{\\text{loc}} + C_{\\text{mem}}$$\n\nWe al"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4039,
+        "definition": "\\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu) + \\eta_{\\mu}\\left( 8+\\frac{\\nu}{2} \\right) + C_{A} - \\frac{\\lambda_{rec}}{\\beta\\hslash c}\\text{\\:\\,}\\frac{\\eta_{\\mu}}{\\sqrt{\\pi}}\\text{\\:\\,}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\text{\\:\\,}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.",
+        "context": "**4) What this yields: the \"fully closed\" electron coefficient**\n\nFrom the last result we derived,\n\n$$C_{e} = \\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\"
+      }
+    ],
+    "\\mu": [
+      {
+        "document": "GU Couplings and Particles.md",
+        "line": 5729,
+        "definition": "\\frac{\\sqrt{3}}{C_{e}} = 1.6495631878064289869685996675356352418\\ldots",
+        "context": "e} \\approx \\frac{\\sqrt{3}}{\\mu}.$$\n\nIn that large-cell regime, CODATA requires the curvature scale\n\n$$\\mu = \\frac{\\sqrt{3}}{C_{e}} = 1.649563187806428"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2886,
+        "definition": "\\frac{2\\pi_{n}}{L}\\text{\\:\\,}C_{e}(n)",
+        "context": "frac{2\\pi_{n}}{L}$$\n\n(up to an O(1) factor determined by the full coupled solution).\n\nSo we write:\n\n$$\\mu = \\frac{2\\pi_{n}}{L}\\text{\\:\\,}C_{e}(n)$$\n\na"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3618,
+        "definition": "\\frac{2\\pi_{n}}{L}\\text{\u2009}\\eta_{\\mu},",
+        "context": "ac coupling strength).\n\nAlso note $\\mu$must be tied to the loop scale for a closed channel; write:\n\n$$\\mu = \\frac{2\\pi_{n}}{L}\\text{\u2009}\\eta_{\\mu},$$\n\nw"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3985,
+        "definition": "\\eta_{\\mu}\\text{\u2009}\\frac{2\\pi_{n}}{L}.",
+        "context": "ete selection, not fitting.\n\n**2) How** $\\mathbf{\\eta}_{\\mathbf{\\mu}}$**becomes fixed**\n\nWe wrote:\n\n$$\\mu = \\eta_{\\mu}\\text{\u2009}\\frac{2\\pi_{n}}{L}.$$\n\nT"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4143,
+        "definition": "\\eta_{\\mu}\\frac{2\\pi_{n}}{L} \\Rightarrow \\eta_{\\mu} = \\frac{\\mu L}{2\\pi_{n}}.",
+        "context": " a circle.\n\n**This is the key point about** $\\mathbf{\\eta}_{\\mathbf{\\mu}}$\n\nRecall our definition:\n\n$$\\mu = \\eta_{\\mu}\\frac{2\\pi_{n}}{L} \\Rightarrow \\"
+      }
+    ],
+    "{\\Delta N_{\\mu}": [
+      {
+        "document": "GU next in line.md",
+        "line": 94,
+        "definition": "\\parallel \\mathbf{s}_{\\mu} \\parallel_{1} = \\mid \\Delta p_{\\mu} \\mid + \\mid \\Delta q_{\\mu} \\mid = 11",
+        "context": "ive basis $\\mathbf{s}_{\\mu},\\mathbf{s}_{\\tau} \\in \\Gamma$such that their **Manhattan lengths** are\n\n$${\\Delta N_{\\mu} = \\parallel \\mathbf{s}_{\\mu} \\pa"
+      }
+    ],
+    "N": [
+      {
+        "document": "GU next in line.md",
+        "line": 122,
+        "definition": "\\mid p \\mid + \\mid q \\mid",
+        "context": " the admissible lattice point $\\left( p_{0},q_{0} \\right)$(in the correct coset) with **smallest**\n\n$$N = \\mid p \\mid + \\mid q \\mid $$\n\namong *charged"
+      }
+    ],
+    "\\boxed{\\Gamma_{\\mathcal{l}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 199,
+        "definition": "\\{(p,q) \\in \\mathbb{Z}^{2}:\\text{\\:\\,}q \\equiv 0\\text{ }(\\text{mod }E),\\text{\\:\\,\\:\\,}Ap + Bq \\equiv 0\\text{ }(\\text{mod }D)\\}.}",
+        "context": "rac{B}{D}q \\in \\mathbb{Z} \\Longleftrightarrow Ap + Bq \\equiv 0(modD).$$\n\nSo the admissible set is:\n\n$$\\boxed{\\Gamma_{\\mathcal{l}} = \\{(p,q) \\in \\mathb"
+      }
+    ],
+    "\\Delta N_{\\mu}": [
+      {
+        "document": "GU next in line.md",
+        "line": 236,
+        "definition": "\\parallel s_{\\mu} \\parallel_{1} = 11,\\Delta N_{\\tau} = \\parallel s_{\\tau} \\parallel_{1} = 17",
+        "context": "es a theorem once** $\\left( \\mathbf{D},\\mathbf{E} \\right)$**are fixed**\n\nYour document's statement\n\n$$\\Delta N_{\\mu} = \\parallel s_{\\mu} \\parallel_{1}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 372,
+        "definition": "\\parallel s_{\\mu} \\parallel_{1},\\Delta N_{\\tau} = \\parallel s_{\\tau} \\parallel_{1}.",
+        "context": "mitive generators $s_{\\mu},s_{\\tau}$of the difference lattice $\\Gamma$. Their Manhattan norms are:\n\n$$\\Delta N_{\\mu} = \\parallel s_{\\mu} \\parallel_{1}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 454,
+        "definition": "11,\\Delta N_{\\tau} = 17",
+        "context": " two congruences and integer** $\\mathbf{\\kappa}$**,**\n\n**it is not possible to \"force\" the claim**\n\n$$\\Delta N_{\\mu} = 11,\\Delta N_{\\tau} = 17$$\n\nas \""
+      }
+    ],
+    "\\boxed{\\kappa_{W}": [
+      {
+        "document": "GU next in line.md",
+        "line": 314,
+        "definition": "f_{W}(\\text{embedding})\\text{\u2009}\\kappa_{\\text{GUT}},\\kappa_{B} = f_{B}(\\text{embedding})\\text{\u2009}\\kappa_{\\text{GUT}}}",
+        "context": "epresentation indices.\n\nSo instead of \"choose $\\kappa_{W},\\kappa_{B}$,\" the correct derivation is:\n\n$$\\boxed{\\kappa_{W} = f_{W}(\\text{embedding})\\text"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 422,
+        "definition": "\\kappa_{B} = \\kappa_{\\text{GUT}} \\in \\mathbb{Z.}}",
+        "context": "5)-normalized trace convention, then **the induced levels for the subgroup are the same integer**:\n\n$$\\boxed{\\kappa_{W} = \\kappa_{B} = \\kappa_{\\text{G"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 604,
+        "definition": "\\kappa_{B} = \\kappa \\in \\mathbb{Z.}}",
+        "context": "ined at the SU(5) level, then the subgroup pieces inherit one common level (no independent knobs):\n\n$$\\boxed{\\kappa_{W} = \\kappa_{B} = \\kappa \\in \\mat"
+      }
+    ],
+    "S_{\\text{top}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 388,
+        "definition": "\\sum_{a}^{}\\kappa_{a}\\int d^{4}x\\text{\u2009}\\theta_{a}\\text{\u2009}\\partial_{\\mu}K_{a}^{\\mu} = \\sum_{a}^{}\\kappa_{a}\\int\\theta_{a}\\text{\\:\\,}\\frac{1}{8\\pi^{2}}tr(F_{a} \\land {\\widetilde{F}}_{a}).",
+        "context": "lde{F}}^{a\\text{\u2009}\\mu\\nu} \\right).$$\n\nIntegrate by parts (ignoring boundary terms for the moment):\n\n$$S_{\\text{top}} = \\sum_{a}^{}\\kappa_{a}\\int d^{4}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 496,
+        "definition": "\\sum_{a}^{}\\kappa_{a}\\int\\theta_{a}\\text{\u2009}\\frac{1}{8\\pi^{2}}tr(F_{a}{\\widetilde{F}}_{a}).",
+        "context": "_{\\mu}K_{a}^{\\mu} = \\frac{1}{8\\pi^{2}}\\text{\u2009}tr(F_{a}{\\widetilde{F}}_{a}).$$\n\nIntegrate by parts:\n\n$$S_{\\text{top}} = \\sum_{a}^{}\\kappa_{a}\\int\\theta"
+      }
+    ],
+    "\\Delta S_{\\text{top}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 396,
+        "definition": "2\\pi\\text{\u2009}\\kappa_{a}\\text{\u2009}\\nu_{a}.",
+        "context": "$is an angular variable with period $2\\pi$, then under $\\theta_{a} \\rightarrow \\theta_{a} + 2\\pi$,\n\n$$\\Delta S_{\\text{top}} = 2\\pi\\text{\u2009}\\kappa_{a}\\t"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 504,
+        "definition": "2\\pi\\text{\u2009}\\kappa_{a}\\text{\u2009}\\nu_{a}.",
+        "context": "ta_{a}$is an angle with periodicity $2\\pi$, then under $\\theta_{a} \\rightarrow \\theta_{a} + 2\\pi$,\n\n$$\\Delta S_{\\text{top}} = 2\\pi\\text{\u2009}\\kappa_{a}\\t"
+      }
+    ],
+    "\\mathcal{L}_{\\text{top}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 492,
+        "definition": "- \\sum_{a}^{}\\kappa_{a}(\\partial_{\\mu}\\theta_{a})K_{a}^{\\mu},\\partial_{\\mu}K_{a}^{\\mu} = \\frac{1}{8\\pi^{2}}\\text{\u2009}tr(F_{a}{\\widetilde{F}}_{a}).",
+        "context": " explicitly**\n\n**What** $\\mathbf{\\kappa}$ **must be**\n\nFrom the GU \"memory/topological\" structure:\n\n$$\\mathcal{L}_{\\text{top}} = - \\sum_{a}^{}\\kappa_{"
+      }
+    ],
+    "\\nu_{a}": [
+      {
+        "document": "GU next in line.md",
+        "line": 500,
+        "definition": "\\frac{1}{8\\pi^{2}}\\int tr(F_{a}{\\widetilde{F}}_{a}) \\in \\mathbb{Z.}",
+        "context": "2}}tr(F_{a}{\\widetilde{F}}_{a}).$$\n\nFor compact gauge sectors, the instanton number is an integer:\n\n$$\\nu_{a} = \\frac{1}{8\\pi^{2}}\\int tr(F_{a}{\\widet"
+      }
+    ],
+    "q": [
+      {
+        "document": "GU next in line.md",
+        "line": 636,
+        "definition": "10s,p \\equiv s\\text{ }(\\text{mod }2).",
+        "context": "ngleftrightarrow \\text{\\:\\,}p + s \\equiv 0(mod2).$$\n\nSo a simple parameterization of solutions is:\n\n$$q = 10s,p \\equiv s\\text{ }(\\text{mod }2).$$\n\n**C"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1192,
+        "definition": "10b,p = 2a + b,a,b \\in \\mathbb{Z.}",
+        "context": "pa_{B}$. The **minimal integer solution family** (the one your own derivation implicitly uses) is:\n\n$$q = 10b,p = 2a + b,a,b \\in \\mathbb{Z.}$$\n\n**Chec"
+      }
+    ],
+    "\\Delta N": [
+      {
+        "document": "GU next in line.md",
+        "line": 755,
+        "definition": "11 + 2k(k = 0,1,2,3,\\ldots\\text{\u2009})",
+        "context": " if we allow all these, the system naturally predicts a **tower of allowed winding sectors** with:\n\n$$\\Delta N = 11 + 2k(k = 0,1,2,3,\\ldots\\text{\u2009})$$"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1221,
+        "definition": "\\parallel \\Delta\\overrightarrow{s} \\parallel_{1} = \\mid \\Delta p \\mid + \\mid \\Delta q \\mid = \\mid 2a \\pm 1 \\mid + 10.",
+        "context": ") = (2a \\pm 1,\\text{\\:\\,}10),$$\n\nand the stability-index step size (your doc's Manhattan norm) is:\n\n$$\\Delta N = \\parallel \\Delta\\overrightarrow{s} \\p"
+      }
+    ],
+    "k_{\\text{res}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1081,
+        "definition": "\\lfloor x(N)\\rfloor,\\delta = x - k_{\\text{res}}.",
+        "context": "\\mid q \\mid .$$\n\nResonant nodes occur when $x(N)$is sufficiently close to an integer in the sense:\n\n$$k_{\\text{res}} = \\lfloor x(N)\\rfloor,\\delta = x "
+      }
+    ],
+    "\\Gamma_{\\mathcal{l}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1202,
+        "definition": "\\{(p,q) = (2a + b,\\text{\u2009}10b)\\}.",
+        "context": " a + 2b \\in \\mathbb{Z}$.\n\nSo the admissible charged-lepton windings form the exact affine lattice:\n\n$$\\Gamma_{\\mathcal{l}} = \\{(p,q) = (2a + b,\\text{\u2009"
+      }
+    ],
+    "\\Delta q": [
+      {
+        "document": "GU next in line.md",
+        "line": 1210,
+        "definition": "10\\Delta b,\\Delta p = 2\\Delta a + \\Delta b.",
+        "context": "e \"primitive step ladder\" and why it's 11,13,15,17,...**\n\nTake two admissible points and subtract:\n\n$$\\Delta q = 10\\Delta b,\\Delta p = 2\\Delta a + \\De"
+      }
+    ],
+    "\\nu_{e}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1270,
+        "definition": "1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} = 2,",
+        "context": "izations are Beta/Gamma closed forms. It then states the **family ladder** in the kink channel is:\n\n$$\\nu_{e} = 1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} ="
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1346,
+        "definition": "1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} = 2.",
+        "context": "t{\\pi}}{\\mu}\\frac{\\Gamma(\\nu)}{\\Gamma(\\nu + \\frac{1}{2})}.$$\n\nThe family ladder used in the doc is\n\n$$\\nu_{e} = 1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} ="
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1614,
+        "definition": "1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} = 2",
+        "context": "effective $\\lambda_{i}$ even if the underlying kink scale $\\mu$ is shared.\n\nSo the \"family ladder\"\n\n$$\\nu_{e} = 1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} ="
+      }
+    ],
+    "\\frac{\\mathcal{N}_{\\mu}}{\\mathcal{N}_{e}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1274,
+        "definition": "\\frac{\\pi}{4},\\frac{\\mathcal{N}_{\\tau}}{\\mathcal{N}_{e}} = \\frac{2}{3}.",
+        "context": "1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} = 2,$$\n\nand from that you get the exact normalization ratios:\n\n$$\\frac{\\mathcal{N}_{\\mu}}{\\mathcal{N}_{e}} = \\fra"
+      }
+    ],
+    "\\chi": [
+      {
+        "document": "GU next in line.md",
+        "line": 1506,
+        "definition": "\\beta\\text{\u2009}(X - X_{0})(\\beta > 0),",
+        "context": "_{eff}(\\chi) = V_{\\text{full\u2009}\\Omega}(X(\\chi)).$$\n\nIf locally near the vacuum $X_{0}$you linearize\n\n$$\\chi = \\beta\\text{\u2009}(X - X_{0})(\\beta > 0),$$\n\nt"
+      }
+    ],
+    "\\boxed{\\lambda_{e}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1618,
+        "definition": "1 + n_{e},\\lambda_{\\mu} = \\frac{3}{2} + n_{\\mu},\\lambda_{\\tau} = 2 + n_{\\tau}}",
+        "context": ".\n\nSo the \"family ladder\"\n\n$$\\nu_{e} = 1,\\nu_{\\mu} = \\frac{3}{2},\\nu_{\\tau} = 2$$\n\nis telling you:\n\n$$\\boxed{\\lambda_{e} = 1 + n_{e},\\lambda_{\\mu} = \\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 1624,
+        "definition": "1,\\lambda_{\\mu} = \\frac{3}{2},\\lambda_{\\tau} = 2(n = 0\\text{ for each}).}",
+        "context": "(typically $n = 0$for the lightest family mode in that channel).\n\nSo the most economical choice is\n\n$$\\boxed{\\lambda_{e} = 1,\\lambda_{\\mu} = \\frac{3}{"
+      }
+    ],
+    "\\boxed{\\frac{y_{i}v}{\\mu}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1628,
+        "definition": "\\nu_{i}}",
+        "context": "ed{\\lambda_{e} = 1,\\lambda_{\\mu} = \\frac{3}{2},\\lambda_{\\tau} = 2(n = 0\\text{ for each}).}$$\n\nThen\n\n$$\\boxed{\\frac{y_{i}v}{\\mu} = \\nu_{i}}$$\n\nis the d"
+      }
+    ],
+    "\\text{Select}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1814,
+        "definition": "(\\text{admissible lattice}) \\cap (\\text{spectral bound-state condition}) \\cap (\\text{resonance closure})\\text{\\:\\,\\:\\,}\\overset{\\phantom{\\text{minimize }L_{\\Omega}}}{\\rightarrow}\\text{\\:\\,\\:\\,realized particle}.",
+        "context": "nt physical object** is not the electron mass number itself --- it's the **selection functional**:\n\n$$\\text{Select} = (\\text{admissible lattice}) \\cap"
+      }
+    ],
+    "g_{\\mu\\nu}": [
+      {
+        "document": "GU next in line.md",
+        "line": 1848,
+        "definition": "\\eta_{\\mu\\nu} + h_{\\mu\\nu},",
+        "context": "the electromagnetic field.\n\nIf you take GR and treat small perturbations of the metric as a field:\n\n$$g_{\\mu\\nu} = \\eta_{\\mu\\nu} + h_{\\mu\\nu},$$\n\nthen"
+      }
+    ],
+    "E": [
+      {
+        "document": "GU next in line.md",
+        "line": 2017,
+        "definition": "mc^{2}",
+        "context": " the equation of energy and mass change?**\n\n**In the physics sense: no**\n\nThe operational relation\n\n$$E = mc^{2}$$\n\ndoesn't change. If GU is to reprod"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2247,
+        "definition": "\\hslash c\\text{\u2009}k \\Rightarrow mc^{2} = \\hslash c\\frac{2\\pi m}{L_{\\Omega}}.",
+        "context": "t trapped/allowed mode along this loop (this is the standard \"particle-as-bound-mode\" move), then:\n\n$$E = \\hslash c\\text{\u2009}k \\Rightarrow mc^{2} = \\hsl"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2403,
+        "definition": "\\hslash c\\text{\u2009}k_{1} \\Longrightarrow mc^{2} = \\hslash c\\frac{2\\pi}{L_{\\Omega}}.",
+        "context": "ode**\n\nThis is the minimal physical identification consistent with \"particle = stable bound mode\":\n\n$$E = \\hslash c\\text{\u2009}k_{1} \\Longrightarrow mc^{2"
+      }
+    ],
+    "\\frac{\\hslash c}{\\mathcal{l}_{P}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2225,
+        "definition": "\\sqrt{\\frac{\\hslash c^{5}}{G}} = M_{P}c^{2}.",
+        "context": "{\\hslash G}{c^{3}}}$$\n\nPlanck mass:\n\n$$M_{P} = \\sqrt{\\frac{\\hslash c}{G}}$$\n\nand the key identity:\n\n$$\\frac{\\hslash c}{\\mathcal{l}_{P}} = \\sqrt{\\frac{"
+      }
+    ],
+    "\\boxed{m": [
+      {
+        "document": "GU next in line.md",
+        "line": 2251,
+        "definition": "\\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi m}{L_{\\Omega}}.}",
+        "context": "ightarrow mc^{2} = \\hslash c\\frac{2\\pi m}{L_{\\Omega}}.$$\n\nSo you already have the structural form:\n\n$$\\boxed{m = \\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi m"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 2407,
+        "definition": "\\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi}{L_{\\Omega}(p,q)}}",
+        "context": "\":\n\n$$E = \\hslash c\\text{\u2009}k_{1} \\Longrightarrow mc^{2} = \\hslash c\\frac{2\\pi}{L_{\\Omega}}.$$\n\nSo:\n\n$$\\boxed{m = \\frac{\\hslash}{c}\\text{\u2009}\\frac{2\\pi}{"
+      }
+    ],
+    "S": [
+      {
+        "document": "GU next in line.md",
+        "line": 2337,
+        "definition": "\\int ds\\left\\lbrack \\frac{Z}{2}(\\partial_{s}\\chi)^{2} - V_{eff}(\\chi) \\right\\rbrack + \\text{Dirac/Yukawa sector}",
+        "context": "theory, not postulate it. That means:\n\n1.  Write the 1D reduced action along the locked channel:\n\n> $$S = \\int ds\\left\\lbrack \\frac{Z}{2}(\\partial_{s}"
+      }
+    ],
+    "k_{m}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2395,
+        "definition": "\\frac{2\\pi m}{L_{\\Omega}},m \\in \\mathbb{Z}_{> 0}.",
+        "context": "2 --- Quantized fundamental wavenumber on a closed loop**\n\nA standard closed-loop condition gives:\n\n$$k_{m} = \\frac{2\\pi m}{L_{\\Omega}},m \\in \\mathbb{"
+      }
+    ],
+    "R_{n}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2422,
+        "definition": "R_{0}\\text{\u2009}\\phi^{n}.",
+        "context": "*Deduction D1 --- Epoch-dependent radius scale**\n\nLet the fundamental length scale at epoch $n$be:\n\n$$R_{n} = R_{0}\\text{\u2009}\\phi^{n}.$$\n\n(If you choose"
+      }
+    ],
+    "\\frac{\\hslash}{c\\text{\u2009}\\mathcal{l}_{P}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2463,
+        "definition": "M_{P}.",
+        "context": ":\n\n**Postulate F1 --- UV anchor length is Planck length**\n\n$$R_{0} \\equiv \\mathcal{l}_{P}.$$\n\nThen\n\n$$\\frac{\\hslash}{c\\text{\u2009}\\mathcal{l}_{P}} = M_{P}"
+      }
+    ],
+    "\\boxed{m_{\\mathcal{l}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2475,
+        "definition": "M_{P}\\text{\\:\\,}\\frac{C_{\\mathcal{l}}(n;\\text{\u2009NLDE/kink})}{\\phi^{n}\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}}",
+        "context": "sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}}.$$\n\nSo the **fully derived general** GU lepton mass form is:\n\n$$\\boxed{m_{\\mathcal{l}} = M_{P}\\text{\\:\\,}\\frac{C"
+      }
+    ],
+    "m_{\\mathcal{l}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2493,
+        "definition": "M_{P}\\text{\\:\\,}\\frac{C_{\\mathcal{l}}}{\\phi^{N}}.",
+        "context": "\\log}_{\\phi}\\text{\u2009\u2063}(\\sqrt{p^{2} + \\frac{q^{2}}{\\phi^{2}}}).$$\n\nThen the general formula becomes:\n\n$$m_{\\mathcal{l}} = M_{P}\\text{\\:\\,}\\frac{C_{\\math"
+      }
+    ],
+    "m": [
+      {
+        "document": "GU next in line.md",
+        "line": 2499,
+        "definition": "M_{P}\\frac{C_{e}}{\\phi^{N}}\\text{or}m = M_{P}\\frac{2\\pi\\text{\u2009}C_{e}}{\\phi^{N}}.",
+        "context": "efined as a pure NLDE normalization factor or as \"normalization \u00d7 circumference,\" you either write\n\n$$m = M_{P}\\frac{C_{e}}{\\phi^{N}}\\text{or}m = M_{P"
+      }
+    ],
+    "S_{\\text{eff}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2608,
+        "definition": "\\int_{0}^{L_{\\Omega}}{\\text{\u2009\u2063}ds\\text{\\:\\,}\\lbrack}\\overset{\u02c9}{\\psi}(i\\gamma^{s}\\partial_{s}\\mathcal{- M(}s))\\psi\\text{\\:\\,} + \\text{\\:\\,}\\frac{Z}{2}(\\partial_{s}\\chi)^{2} - V_{\\text{eff}}(\\chi)\\rbrack\\text{\\:\\,} + \\text{\\:\\,}S_{\\text{mem}}.",
+        "context": "rack$.\n\nYou then reduce the \u03a9-sector + spinor sector to an effective 1D action along that channel:\n\n$$S_{\\text{eff}} = \\int_{0}^{L_{\\Omega}}{\\text{\u2009\u2063}"
+      }
+    ],
+    "\\nu": [
+      {
+        "document": "GU next in line.md",
+        "line": 2634,
+        "definition": "\\lambda - n,\\lambda: = \\frac{y\\text{\u2009}v}{\\mu},n \\in \\mathbb{Z}_{\\geq 0},\\text{\\:\\,}n < \\lambda.",
+        "context": "to {sech}^{\\nu}(\\mu s) \\times (\\text{polynomial in }\\tanh(\\mu s)),$$\n\nwith discrete mode condition\n\n$$\\nu = \\lambda - n,\\lambda: = \\frac{y\\text{\u2009}v}{\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3742,
+        "definition": "\\lambda - n,\\lambda: = \\frac{y\\chi_{0}}{\\hslash c\\text{\u2009}\\mu},n \\in \\mathbb{Z}_{\\geq 0},\\text{ }n < \\lambda.",
+        "context": "e \u21d2** $\\mathbf{\\lambda = \\nu}$\n\nFrom kink--Dirac spectral theory, the trapped bound states satisfy\n\n$$\\nu = \\lambda - n,\\lambda: = \\frac{y\\chi_{0}}{\\h"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3955,
+        "definition": "\\lambda - n,\\lambda = \\frac{y\\chi_{0}}{\\hslash c\\text{\u2009}\\mu}",
+        "context": "** $\\mathbf{\\nu}$**becomes fixed**\n\nFrom the kink--Dirac bound-state structure, we already locked:\n\n$$\\nu = \\lambda - n,\\lambda = \\frac{y\\chi_{0}}{\\hs"
+      }
+    ],
+    "\\mathcal{L": [
+      {
+        "document": "GU next in line.md",
+        "line": 2774,
+        "definition": "} \\mid D_{\\mu}\\Omega \\mid^{2} - V_{\\Omega}( \\mid \\Omega \\mid^{2},X_{n}) + \\overset{\u02c9}{\\psi}\\left( i\\gamma^{\\mu}D_{\\mu} - y\\text{\u2009}\\mathcal{F(}\\Omega) \\right)\\psi - \\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu} + \\mathcal{L}_{\\text{mem}}",
+        "context": "(1)$gauge field $A_{\\mu}$(because \"charged\" is meaningless without it)\n\nA generic minimal form is:\n\n$$\\mathcal{L =} \\mid D_{\\mu}\\Omega \\mid^{2} - V_{\\"
+      }
+    ],
+    "H_{D}": [
+      {
+        "document": "GU next in line.md",
+        "line": 2807,
+        "definition": "- i\\hslash c\\text{\u2009}\\alpha\\text{\u2009}D_{s} + \\beta\\text{\u2009}y\\text{\u2009}\\mathcal{F(}\\Omega(s))",
+        "context": "D}\\psi + \\frac{1}{2}(\\partial_{s}A_{0})^{2}) + E_{\\text{mem}}$$\n\nwhere the 1D Dirac Hamiltonian is\n\n$$H_{D} = - i\\hslash c\\text{\u2009}\\alpha\\text{\u2009}D_{s} "
+      }
+    ],
+    "\\Delta E": [
+      {
+        "document": "GU next in line.md",
+        "line": 2922,
+        "definition": "{\\frac{\\partial E}{\\partial p} \\mid}_{p_{0}}\\Delta p = v_{\\text{eff}}\\text{\u2009}\\frac{2\\pi\\hslash}{L}\\text{\u2009}\\delta k",
+        "context": "m = 0$, the energy shift in any relativistic channel Hamiltonian is, to first order in $\\delta k$,\n\n$$\\Delta E = {\\frac{\\partial E}{\\partial p} \\mid}_"
+      }
+    ],
+    "\\mathcal{L}_{\\text{eff}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3043,
+        "definition": "\\underset{\\text{kink channel}}{\\underbrace{\\frac{Z}{2}(\\partial_{s}\\chi)^{2} - V(\\chi)}}\\text{\\:\\,} + \\text{\\:\\,}\\underset{\\text{Dirac + Yukawa}}{\\underbrace{\\overset{\u02c9}{\\psi}(i\\hslash c\\text{\u2009}\\gamma^{0}\\partial_{t} + i\\hslash c\\text{\u2009}\\gamma^{1}D_{s} - y\\text{\u2009}\\chi)\\psi}}\\text{\\:\\,} - \\text{\\:\\,}\\underset{\\text{U(1)}}{\\underbrace{\\frac{1}{4}F_{\\mu\\nu}F^{\\mu\\nu}}}\\text{\\:\\,} + \\text{\\:\\,}\\underset{\\text{stress / memory}}{\\underbrace{\\mathcal{L}_{\\text{mem}}}}.",
+        "context": "rbrack$around the closed \u03a9 channel of length $L = L_{\\Omega}$.\n\nWrite the effective 1D Lagrangian:\n\n$$\\mathcal{L}_{\\text{eff}} = \\underset{\\text{kink "
+      }
+    ],
+    "E\\text{\u2009}\\psi": [
+      {
+        "document": "GU next in line.md",
+        "line": 3083,
+        "definition": "( - i\\hslash c\\text{\u2009}\\alpha D_{s} + \\beta\\text{\u2009}y\\text{\u2009}\\chi(s))\\psi.",
+        "context": "oes).\n\nTake stationary modes $\\psi(s,t) = e^{- iEt/\\hslash}\\psi(s)$. Then the Hamiltonian form is:\n\n$$E\\text{\u2009}\\psi = ( - i\\hslash c\\text{\u2009}\\alpha D_{"
+      }
+    ],
+    "E_{\\text{sol}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3127,
+        "definition": "E_{\\psi} + E_{\\chi} + E_{U(1)} + E_{\\text{mem}}.",
+        "context": "nergy.\n\n**5) Compute the soliton energy** $\\mathbf{E}_{\\text{sol}}$**explicitly**\n\nNow we compute:\n\n$$E_{\\text{sol}} = E_{\\psi} + E_{\\chi} + E_{U(1)} "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3174,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\lbrack C_{\\psi}(\\nu,\\delta k) + C_{\\chi}(\\mu L) + C_{A} + \\text{\\:\\,}C_{\\text{mem}}(\\delta k)\\rbrack.",
+        "context": "ization:** $\\mathbf{C}_{\\mathbf{e}}$**emerges as the total dimensionless energy**\n\nAdd the pieces:\n\n$$E_{\\text{sol}} = \\hslash c\\text{\u2009}\\frac{2\\pi}{L}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3204,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi_{111}}{L}\\text{\\:\\,}C_{e}(111).",
+        "context": "ce $\\pi$enters *universally* is the closed-loop mode condition.\n\nSo the factorized energy becomes:\n\n$$E_{\\text{sol}} = \\hslash c\\text{\u2009}\\frac{2\\pi_{11"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3546,
+        "definition": "\\hslash c\\frac{2\\pi_{n}}{L}\\text{\u2009}C_{e}.",
+        "context": "}2\\pi_{n}}\\text{\u2009}E_{\\text{loc}}}$$\n\nbecause the full energy is written in the loop-quantized form\n\n$$E_{\\text{sol}} = \\hslash c\\frac{2\\pi_{n}}{L}\\tex"
+      }
+    ],
+    "E_{\\psi}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3133,
+        "definition": "\\int_{0}^{L}{ds\\text{\u2009}}\\psi^{\\dagger}( - i\\hslash c\\text{\u2009}\\alpha D_{s} + \\beta y\\chi(s))\\psi.",
+        "context": " contribution**\n\nUse the normalized bound state $\\psi_{0}$. The fermion energy is the expectation:\n\n$$E_{\\psi} = \\int_{0}^{L}{ds\\text{\u2009}}\\psi^{\\dagger"
+      }
+    ],
+    "\\boxed{E_{\\psi}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3139,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\:\\,}\\underset{\\text{dimensionless, from integrals}}{\\underbrace{C_{\\psi}(\\nu,\\delta k)}}}",
+        "context": " you get at leading order from the momentum shift.\n\nSo write the fermion piece in factorized form:\n\n$$\\boxed{E_{\\psi} = \\hslash c\\text{\u2009}\\frac{2\\pi}{L"
+      }
+    ],
+    "E_{\\chi}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3147,
+        "definition": "\\int ds\\left\\lbrack \\frac{Z}{2}(\\chi')^{2} + V(\\chi) \\right\\rbrack.",
+        "context": "s of $\\nu$) and by $\\delta k$.\n\n**5.2 Kink (scalar) contribution**\n\nThe kink energy (per kink) is:\n\n$$E_{\\chi} = \\int ds\\left\\lbrack \\frac{Z}{2}(\\chi'"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3644,
+        "definition": "\\int ds\\left\\lbrack \\frac{Z}{2}(\\chi')^{2} + Z\\mu^{2}(1 - \\cos\\chi) \\right\\rbrack.",
+        "context": ")\n\n**6) Kink background energy**\n\nFor sine-Gordon:\n\n$$V(\\chi) = Z\\mu^{2}(1 - \\cos\\chi).$$\n\nEnergy:\n\n$$E_{\\chi} = \\int ds\\left\\lbrack \\frac{Z}{2}(\\chi'"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3654,
+        "definition": "8Z\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\u2009}\\eta_{\\mu} = \\hslash c\\frac{2\\pi_{n}}{L}\\text{\\:\\,}\\underset{\\text{dimensionless after fixing units}}{\\underbrace{\\left( \\frac{8Z\\text{\u2009}\\eta_{\\mu}}{\\hslash c} \\right)}}.",
+        "context": "ial is $Z\\mu^{2}(1 - \\cos\\chi)$).\n\nConvert to the loop scale using $\\mu = (2\\pi_{n}/L)\\eta_{\\mu}$:\n\n$$E_{\\chi} = 8Z\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\u2009}\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3850,
+        "definition": "8\\text{\u2009}\\hslash c\\text{\u2009}\\mu",
+        "context": "ground energy in the same** $\\mathbf{\\mu}$**units**\n\nFor sine-Gordon with canonical normalization,\n\n$$E_{\\chi} = 8\\text{\u2009}\\hslash c\\text{\u2009}\\mu$$\n\n(up "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3896,
+        "definition": "8\\text{\u2009}\\hslash c\\text{\u2009}\\mu = \\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\\:\\,}(8\\eta_{\\mu})",
+        "context": "\\:\\,}(\\frac{\\nu}{2}\\eta_{\\mu})$$\n\nso\n\n$$\\boxed{C_{Y} = \\frac{\\nu}{2}\\eta_{\\mu}.}$$\n\n**Kink piece**\n\n$$E_{\\chi} = 8\\text{\u2009}\\hslash c\\text{\u2009}\\mu = \\hsla"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4163,
+        "definition": "\\int_{0}^{L}{ds}\\left\\lbrack \\frac{Z}{2}(\\chi')^{2} + Z\\mu^{2}(1 - \\cos\\chi) \\right\\rbrack.",
+        "context": "a function of $k$alone (at fixed $L$).\n\nCompute energy using the first-integral trick. Start from:\n\n$$E_{\\chi} = \\int_{0}^{L}{ds}\\left\\lbrack \\frac{Z}"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4175,
+        "definition": "2Z\\mu^{2}\\int_{0}^{L}{(1 - \\cos\\chi)\\text{\u2009}ds\\text{\\:\\,} + \\text{\\:\\,}ZC\\text{\u2009}L.}",
+        "context": "ecomes:\n\n$$\\frac{Z}{2}(\\chi')^{2} + Z\\mu^{2}(1 - \\cos\\chi) = 2Z\\mu^{2}(1 - \\cos\\chi) + ZC.$$\n\nThus\n\n$$E_{\\chi} = 2Z\\mu^{2}\\int_{0}^{L}{(1 - \\cos\\chi)\\"
+      }
+    ],
+    "\\boxed{E_{\\chi}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3151,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\:\\,}C_{\\chi}(\\mu L)}",
+        "context": "this evaluates to a constant times $\\mu$and $Z$(a standard soliton result), so it also factors as:\n\n$$\\boxed{E_{\\chi} = \\hslash c\\text{\u2009}\\frac{2\\pi}{L"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3648,
+        "definition": "8Z\\mu}",
+        "context": "2} + Z\\mu^{2}(1 - \\cos\\chi) \\right\\rbrack.$$\n\nFor the sine-Gordon kink, this evaluates exactly to:\n\n$$\\boxed{E_{\\chi} = 8Z\\mu}$$\n\n(up to normalization"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3856,
+        "definition": "8\\text{\u2009}\\hslash c\\text{\u2009}\\mu.}",
+        "context": "; if the prefactor differs in your GU normalization, it's still \"constant \u00d7 $\\hslash c\\mu$\").\n\nSo:\n\n$$\\boxed{E_{\\chi} = 8\\text{\u2009}\\hslash c\\text{\u2009}\\mu."
+      }
+    ],
+    "\\boxed{E_{\\text{mem}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3166,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\:\\,}C_{\\text{mem}}(\\delta k)}\\text{with}C_{\\text{mem}}(\\delta k) = \\eta\\text{\u2009}\\delta k + O(\\delta k^{2}),",
+        "context": "gy increase proportional to $\\left( 111/\\phi^{2}-42 \\right)$.\\\nSo the minimal consistent model is:\n\n$$\\boxed{E_{\\text{mem}} = \\hslash c\\text{\u2009}\\frac{2"
+      }
+    ],
+    "S_{mem}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3312,
+        "definition": "- \\lambda_{rec}\\int dt\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s,t)\\text{\\:\\,}}\\int_{- \\infty}^{t}{\\text{\u2009\u2063}d\\tau\\text{\\:\\,}}e^{- \\beta(t - \\tau)}\\text{\\:\\,}\\rho(s,\\tau)",
+        "context": "nel $G(t,\\tau) = e^{- \\beta(t - \\tau)}\\Theta(t - \\tau)$(the explicit e-based damping logic)\n\nThen:\n\n$$S_{mem} = - \\lambda_{rec}\\int dt\\int_{0}^{L}{ds\\"
+      }
+    ],
+    "E_{sol}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3370,
+        "definition": "E_{\\psi} + E_{\\chi} + E_{U(1)} + E_{mem}.",
+        "context": "e** $\\mathbf{C}_{\\mathbf{e}}$***really* comes from**\n\nDefine the total on-shell soliton energy as:\n\n$$E_{sol} = E_{\\psi} + E_{\\chi} + E_{U(1)} + E_{me"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3880,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\u2009}C_{e}.",
+        "context": "semble** $\\mathbf{C}_{\\mathbf{e}}$**in the exact loop-factorized form**\n\nRecall the factorization:\n\n$$E_{sol} = \\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\te"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4442,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\:\\,}(\\text{dimensionless sum of pieces})",
+        "context": "the Planck-suppressed ladder are identical**\n\nYou wrote the soliton quantization/factorization as:\n\n$$E_{sol} = \\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\"
+      }
+    ],
+    "E_{mem}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3376,
+        "definition": "- \\lambda_{rec}\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s)}\\int_{0}^{\\infty}{d\\Delta\\text{\u2009}}e^{- \\beta\\Delta}\\rho(s) = - \\frac{\\lambda_{rec}}{\\beta}\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s})^{2}",
+        "context": "guessing)**\n\nFrom the action, the memory contribution to energy for a time-independent density is:\n\n$$E_{mem} = - \\lambda_{rec}\\int_{0}^{L}{ds\\text{\\:"
+      }
+    ],
+    "\\boxed{E_{mem}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3380,
+        "definition": "- \\frac{\\lambda_{rec}}{\\beta}\\int_{0}^{L}{ds\\text{\\:\\,}(}\\psi^{\\dagger}\\psi)^{2}}",
+        "context": "- \\beta\\Delta}\\rho(s) = - \\frac{\\lambda_{rec}}{\\beta}\\int_{0}^{L}{ds\\text{\\:\\,}\\rho(s})^{2}$$\n\nSo:\n\n$$\\boxed{E_{mem} = - \\frac{\\lambda_{rec}}{\\beta}\\i"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3424,
+        "definition": "- \\frac{\\lambda_{rec}}{\\beta}\\text{\\:\\,}\\frac{\\mu}{\\sqrt{\\pi}}\\text{\\:\\,}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\text{\\:\\,}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.}",
+        "context": "frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.}$$\n\n**7.3 Therefore the memory binding energy is**\n\n$$\\boxed{E_{mem} = - \\frac{\\lambda_{rec}}{\\beta}\\t"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3872,
+        "definition": "- \\frac{\\lambda_{rec}}{\\beta}\\text{\\:\\,}\\frac{\\mu}{\\sqrt{\\pi}}\\text{\\:\\,}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\text{\\:\\,}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.}",
+        "context": "n closed form**\n\nWe already derived, for the normalized $\\text{\\textbackslash sech}^{\\nu}$profile:\n\n$$\\boxed{E_{mem} = - \\frac{\\lambda_{rec}}{\\beta}\\t"
+      }
+    ],
+    "E_{\\text{loc}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3432,
+        "definition": "\\hslash c\\text{\\:\\,}\\frac{2\\pi_{n}}{L}\\text{\\:\\,}C_{\\text{loc}}(\\nu,\\mu L,\\text{gauge},\\delta k,\\ldots\\text{\u2009})",
+        "context": "\\mathbf{e}}$**properly**\n\nThe local (non-memory) parts of the soliton energy generically factor as\n\n$$E_{\\text{loc}} = \\hslash c\\text{\\:\\,}\\frac{2\\pi_"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3538,
+        "definition": "E_{\\text{kin}} + E_{\\text{Y}} + E_{\\chi} + E_{A}.",
+        "context": "}{\\sqrt{\\pi}}\\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)}.}$$\n\n**3) Local energy split**\n\nDefine:\n\n$$E_{\\text{loc}} = E_{\\text{kin}} + E_{\\text{Y}} +"
+      }
+    ],
+    "\\boxed{C_{\\text{loc}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3542,
+        "definition": "\\frac{L}{\\hslash c\\text{\u2009}2\\pi_{n}}\\text{\u2009}E_{\\text{loc}}}",
+        "context": "fine:\n\n$$E_{\\text{loc}} = E_{\\text{kin}} + E_{\\text{Y}} + E_{\\chi} + E_{A}.$$\n\nThen by definition:\n\n$$\\boxed{C_{\\text{loc}} = \\frac{L}{\\hslash c\\text{"
+      }
+    ],
+    "\\boxed{E_{\\text{kin}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3572,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi}{L}\\text{\\:\\,} \\mid \\delta k \\mid \\text{\\:\\,}\\mathcal{K(}\\nu)}",
+        "context": "rices and the spinor $\\xi$.\n\nSo the **detuning contribution** to the kinetic energy is rigorously:\n\n$$\\boxed{E_{\\text{kin}} = \\hslash c\\text{\u2009}\\frac{2"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3866,
+        "definition": "\\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\u2009} \\mid \\delta k \\mid \\text{\\:\\,}\\mathcal{K(}\\nu).}",
+        "context": "st mode momentum is:\n\n$$p_{0} = \\frac{2\\pi\\hslash}{L}\\delta k.$$\n\nSo the detuning contribution is:\n\n$$\\boxed{E_{\\text{kin}} = \\hslash c\\text{\u2009}\\frac{2"
+      }
+    ],
+    "E_{\\text{kin}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3580,
+        "definition": "\\hslash c\\frac{2\\pi_{n}}{L}\\text{\u2009} \\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu).",
+        "context": " in $\\delta k$at leading order.\n\nWhen you use epoch geometry, replace $2\\pi \\rightarrow 2\\pi_{n}$:\n\n$$E_{\\text{kin}} = \\hslash c\\frac{2\\pi_{n}}{L}\\tex"
+      }
+    ],
+    "\\boxed{C_{\\text{kin}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3584,
+        "definition": "\\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu).}",
+        "context": "h c\\frac{2\\pi_{n}}{L}\\text{\u2009} \\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu).$$\n\nSo this contributes:\n\n$$\\boxed{C_{\\text{kin}} = \\mid \\delta k \\mid \\text"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3904,
+        "definition": "\\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu).}",
+        "context": "i_{n}}{L}\\text{\\:\\,}(8\\eta_{\\mu})$$\n\nso\n\n$$\\boxed{C_{\\chi} = 8\\eta_{\\mu}.}$$\n\n**Kinetic detuning**\n\n$$\\boxed{C_{\\text{kin}} = \\mid \\delta k \\mid \\text"
+      }
+    ],
+    "E_{Y}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3590,
+        "definition": "\\int ds\\text{\u2009}u^{\\dagger}\\text{\u2009}\\beta\\text{\u2009}y\\chi(s)\\text{\u2009}u.",
+        "context": "{\u2009}\\mathcal{K(}\\nu).}$$\n\n**5) Yukawa (mass-in-kink) term**\n\nWith local Yukawa coupling $y\\chi(s)$,\n\n$$E_{Y} = \\int ds\\text{\u2009}u^{\\dagger}\\text{\u2009}\\beta\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3594,
+        "definition": "y\\int ds\\text{\u2009}\\chi(s)\\text{\u2009}\\rho(s),\\rho(s) = u^{\\dagger}u = A^{2}{sech}^{2\\nu}(\\mu s).",
+        "context": " $\\beta$just contributes an overall sign fixed by choosing the positive-energy solution. So write:\n\n$$E_{Y} = y\\int ds\\text{\u2009}\\chi(s)\\text{\u2009}\\rho(s),\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3604,
+        "definition": "y\\text{\u2009}A^{2}\\text{\u2009}\\frac{\\chi_{0}}{\\mu}\\text{\u2009}\\mathcal{I}_{\\chi}(\\nu).",
+        "context": "here $\\chi_{0}$is the vacuum amplitude scale of $\\chi$(so $\\chi/\\chi_{0}$is dimensionless).\n\nThen:\n\n$$E_{Y} = y\\text{\u2009}A^{2}\\text{\u2009}\\frac{\\chi_{0}}{\\m"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3628,
+        "definition": "\\hslash c\\frac{2\\pi_{n}}{L}\\text{\\:\\,}\\lambda\\text{\u2009}\\eta_{\\mu}\\text{\\:\\,}\\frac{1}{\\sqrt{\\pi}}\\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)}\\text{\\:\\,}\\mathcal{I}_{\\chi}(\\nu).",
+        "context": "i_{0}}{\\hslash c}\\text{\\:\\,} = \\text{\\:\\,}\\lambda\\mu = \\lambda\\frac{2\\pi_{n}}{L}\\eta_{\\mu}.$$\n\nSo:\n\n$$E_{Y} = \\hslash c\\frac{2\\pi_{n}}{L}\\text{\\:\\,}\\l"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3762,
+        "definition": "\\int ds\\text{\\:\\,}y\\text{\u2009}\\chi(s)\\text{\u2009}\\rho(s),\\rho(s) = A^{2}\\text{\\textbackslash sech}^{2\\nu}(\\mu s),",
+        "context": "is specified).\n\n**3) Now evaluate the Yukawa overlap integral for the sine-Gordon kink**\n\nWe need:\n\n$$E_{Y} = \\int ds\\text{\\:\\,}y\\text{\u2009}\\chi(s)\\text{"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3784,
+        "definition": "yA^{2}\\frac{1}{\\mu}\\int_{- \\infty}^{\\infty}{du\\text{\\:\\,}\\chi(u)}\\text{\\textbackslash sech}^{2\\nu}(u).",
+        "context": "ear $s = 0$.\n\n**Convert the integral to a dimensionless form**\n\nLet $u = \\mu s$, so $ds = du/\\mu$:\n\n$$E_{Y} = yA^{2}\\frac{1}{\\mu}\\int_{- \\infty}^{\\inf"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3792,
+        "definition": "yA^{2}\\frac{1}{\\mu}\\text{\u2009}J_{\\chi}(\\nu).",
+        "context": "\\nu): = \\int_{- \\infty}^{\\infty}{du\\text{\\:\\,}\\chi(u)}\\text{\\textbackslash sech}^{2\\nu}(u).$$\n\nSo:\n\n$$E_{Y} = yA^{2}\\frac{1}{\\mu}\\text{\u2009}J_{\\chi}(\\nu)"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3816,
+        "definition": "yA^{2}\\frac{1}{\\mu}\\text{\\:\\,}\\pi\\sqrt{\\pi}\\frac{\\Gamma(\\nu)}{\\Gamma(\\nu + \\frac{1}{2})}.",
+        "context": "nu) = \\pi\\sqrt{\\pi}\\frac{\\Gamma(\\nu)}{\\Gamma(\\nu + \\frac{1}{2})}.}$$\n\nNow substitute into $E_{Y}$:\n\n$$E_{Y} = yA^{2}\\frac{1}{\\mu}\\text{\\:\\,}\\pi\\sqrt{\\"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3820,
+        "definition": "y\\text{\\:\\,}\\pi.",
+        "context": "rac{1}{2})}.$$\n\nUse $A^{2} = \\frac{\\mu}{\\sqrt{\\pi}}\\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)}$:\n\n$$E_{Y} = y\\text{\\:\\,}\\pi.$$\n\nSo we get the remark"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3888,
+        "definition": "\\frac{\\nu}{2}\\hslash c\\text{\u2009}\\mu = \\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\\:\\,}(\\frac{\\nu}{2}\\eta_{\\mu})",
+        "context": "C_{e}.$$\n\nUse $\\mu = \\eta_{\\mu}\\frac{2\\pi_{n}}{L}$. Then:\n\n**Yukawa piece**\n\nIf $\\chi_{0} = 2\\pi$:\n\n$$E_{Y} = \\frac{\\nu}{2}\\hslash c\\text{\u2009}\\mu = \\hsl"
+      }
+    ],
+    "\\boxed{E_{Y}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3608,
+        "definition": "y\\text{\u2009}\\chi_{0}\\text{\\:\\,}\\frac{1}{\\sqrt{\\pi}}\\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)}\\text{\\:\\,}\\mathcal{I}_{\\chi}(\\nu).}",
+        "context": " y\\text{\u2009}A^{2}\\text{\u2009}\\frac{\\chi_{0}}{\\mu}\\text{\u2009}\\mathcal{I}_{\\chi}(\\nu).$$\n\nSubstitute $A^{2}$:\n\n$$\\boxed{E_{Y} = y\\text{\u2009}\\chi_{0}\\text{\\:\\,}\\frac"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3824,
+        "definition": "\\pi\\text{\u2009}y.}",
+        "context": "\\frac{1}{2})}{\\Gamma(\\nu)}$:\n\n$$E_{Y} = y\\text{\\:\\,}\\pi.$$\n\nSo we get the remarkably clean result:\n\n$$\\boxed{E_{Y} = \\pi\\text{\u2009}y.}$$\n\nNo Gamma functi"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3838,
+        "definition": "\\pi\\text{\u2009}\\frac{\\nu\\hslash c\\text{\u2009}\\mu}{\\chi_{0}}.}",
+        "context": "ly the \"phase field\" normalization). Then:\n\n$$y = \\frac{\\nu\\hslash c\\text{\u2009}\\mu}{\\chi_{0}}.$$\n\nSo:\n\n$$\\boxed{E_{Y} = \\pi\\text{\u2009}\\frac{\\nu\\hslash c\\tex"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3842,
+        "definition": "\\frac{\\nu}{2}\\hslash c\\text{\u2009}\\mu.}",
+        "context": "{Y} = \\pi\\text{\u2009}\\frac{\\nu\\hslash c\\text{\u2009}\\mu}{\\chi_{0}}.}$$\n\nIf $\\chi_{0} = 2\\pi$, this becomes:\n\n$$\\boxed{E_{Y} = \\frac{\\nu}{2}\\hslash c\\text{\u2009}\\mu"
+      }
+    ],
+    "\\boxed{C_{Y}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3632,
+        "definition": "\\lambda\\text{\u2009}\\eta_{\\mu}\\text{\\:\\,}\\frac{1}{\\sqrt{\\pi}}\\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)}\\text{\\:\\,}\\mathcal{I}_{\\chi}(\\nu).}",
+        "context": "ma(\\nu)}\\text{\\:\\,}\\mathcal{I}_{\\chi}(\\nu).$$\n\nThus the Yukawa contribution to $C_{\\text{loc}}$is:\n\n$$\\boxed{C_{Y} = \\lambda\\text{\u2009}\\eta_{\\mu}\\text{\\:"
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3892,
+        "definition": "\\frac{\\nu}{2}\\eta_{\\mu}.}",
+        "context": "slash c\\text{\u2009}\\mu = \\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\\:\\,}(\\frac{\\nu}{2}\\eta_{\\mu})$$\n\nso\n\n$$\\boxed{C_{Y} = \\frac{\\nu}{2}\\eta_{\\mu}.}$$\n\n**Ki"
+      }
+    ],
+    "\\boxed{C_{\\chi}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3658,
+        "definition": "8\\text{\u2009}\\eta_{\\mu}.}",
+        "context": "s reduction, $Z$is typically set to 1 by canonical normalization. So in canonical units ($Z = 1$):\n\n$$\\boxed{C_{\\chi} = 8\\text{\u2009}\\eta_{\\mu}.}$$\n\nThis "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 3900,
+        "definition": "8\\eta_{\\mu}.}",
+        "context": " 8\\text{\u2009}\\hslash c\\text{\u2009}\\mu = \\hslash c\\text{\u2009}\\frac{2\\pi_{n}}{L}\\text{\\:\\,}(8\\eta_{\\mu})$$\n\nso\n\n$$\\boxed{C_{\\chi} = 8\\eta_{\\mu}.}$$\n\n**Kinetic det"
+      }
+    ],
+    "E_{A}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3666,
+        "definition": "\\hslash c\\frac{2\\pi_{n}}{L}\\text{\u2009}C_{A}(e,\\nu,\\ldots\\text{\u2009}).",
+        "context": "\n\n**7) Gauge term (keep symbolic)**\n\nThe minimal 1D gauge self-energy is positive and scales like:\n\n$$E_{A} = \\hslash c\\frac{2\\pi_{n}}{L}\\text{\u2009}C_{A}"
+      }
+    ],
+    "\\boxed{C_{A}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3670,
+        "definition": "C_{A}(e,\\nu,\\ldots\\text{\u2009})}",
+        "context": "cales like:\n\n$$E_{A} = \\hslash c\\frac{2\\pi_{n}}{L}\\text{\u2009}C_{A}(e,\\nu,\\ldots\\text{\u2009}).$$\n\nWe keep:\n\n$$\\boxed{C_{A} = C_{A}(e,\\nu,\\ldots\\text{\u2009})}$$\n\nu"
+      }
+    ],
+    "C_{\\text{loc}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3676,
+        "definition": "C_{\\text{kin}} + C_{Y} + C_{\\chi} + C_{A}",
+        "context": "to the core? spread around the loop?).\n\n**8) Assemble the full derived** $\\mathbf{C}_{\\text{loc}}$\n\n$$C_{\\text{loc}} = C_{\\text{kin}} + C_{Y} + C_{\\ch"
+      }
+    ],
+    "\\boxed{\\lambda": [
+      {
+        "document": "GU next in line.md",
+        "line": 3746,
+        "definition": "\\nu} \\Longleftrightarrow \\boxed{\\frac{y\\chi_{0}}{\\hslash c} = \\nu\\text{\u2009}\\mu.}",
+        "context": "0},\\text{ }n < \\lambda.$$\n\nFor the **electron as the ground trapped mode**, we take $n = 0$. Then:\n\n$$\\boxed{\\lambda = \\nu} \\Longleftrightarrow \\boxed"
+      }
+    ],
+    "\\boxed{\\mu": [
+      {
+        "document": "GU next in line.md",
+        "line": 3754,
+        "definition": "\\eta_{\\mu}\\text{\u2009}\\frac{2\\pi_{n}}{L}}",
+        "context": "h $\\sim 2\\pi_{n}/L$. The kink width cannot be independent of the loop; consistent closure requires\n\n$$\\boxed{\\mu = \\eta_{\\mu}\\text{\u2009}\\frac{2\\pi_{n}}{L"
+      }
+    ],
+    "y": [
+      {
+        "document": "GU next in line.md",
+        "line": 3834,
+        "definition": "\\frac{\\nu\\hslash c\\text{\u2009}\\mu}{\\chi_{0}}.",
+        "context": "it is natural to take $\\chi_{0} \\sim 2\\pi$(this is exactly the \"phase field\" normalization). Then:\n\n$$y = \\frac{\\nu\\hslash c\\text{\u2009}\\mu}{\\chi_{0}}.$$\n"
+      }
+    ],
+    "\\boxed{C_{\\text{mem}}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3912,
+        "definition": "- \\frac{\\lambda_{rec}}{\\beta\\hslash c}\\text{\\:\\,}\\frac{\\eta_{\\mu}}{\\sqrt{\\pi}}\\text{\\:\\,}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\text{\\:\\,}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.}",
+        "context": "amma(2\\nu + \\frac{1}{2})}.$$\n\nSubstitute $\\mu = \\eta_{\\mu}2\\pi_{n}/L$, and the $L$cancels exactly:\n\n$$\\boxed{C_{\\text{mem}} = - \\frac{\\lambda_{rec}}{\\"
+      }
+    ],
+    "\\boxed{C_{e}": [
+      {
+        "document": "GU next in line.md",
+        "line": 3916,
+        "definition": "\\mid \\delta k \\mid \\text{\u2009}\\mathcal{K(}\\nu) + \\eta_{\\mu}\\left( 8+\\frac{\\nu}{2} \\right)\\text{\\:\\,} + \\text{\\:\\,}C_{A}\\text{\\:\\,} - \\text{\\:\\,}\\frac{\\lambda_{rec}}{\\beta\\hslash c}\\text{\\:\\,}\\frac{\\eta_{\\mu}}{\\sqrt{\\pi}}\\text{\\:\\,}\\left( \\frac{\\Gamma(\\nu + \\frac{1}{2})}{\\Gamma(\\nu)} \\right)^{2}\\text{\\:\\,}\\frac{\\Gamma(2\\nu)}{\\Gamma(2\\nu + \\frac{1}{2})}.}",
+        "context": "rac{1}{2})}.}$$\n\n**Put it all together (plus optional gauge piece** $\\mathbf{C}_{\\mathbf{A}}$**)**\n\n$$\\boxed{C_{e} = \\mid \\delta k \\mid \\text{\u2009}\\mathc"
+      }
+    ],
+    "E_{\\chi}\\lbrack\\chi\\rbrack": [
+      {
+        "document": "GU next in line.md",
+        "line": 4075,
+        "definition": "\\int_{0}^{L}{\\text{\u2009\u2063}ds}\\left\\lbrack \\frac{Z}{2}\\left( \\frac{d\\chi}{ds} \\right)^{2}+Z\\mu^{2}\\left( 1 - \\cos\\chi \\right) \\right\\rbrack.",
+        "context": "m we must solve**\n\nWe take the locked-channel (sine-Gordon) energy on a closed loop of length $L$:\n\n$$E_{\\chi}\\lbrack\\chi\\rbrack = \\int_{0}^{L}{\\text{"
+      }
+    ],
+    "\\boxed{\\frac{d\\chi}{ds}": [
+      {
+        "document": "GU next in line.md",
+        "line": 4107,
+        "definition": "2\\mu\\sqrt{{\\sin}^{2}(\\chi/2) + \\varepsilon}.}",
+        "context": "\\right.\\ $$\n\n(for winding solutions on a compact circle, $\\varepsilon$is typically $\\geq 0$).\n\nSo:\n\n$$\\boxed{\\frac{d\\chi}{ds} = 2\\mu\\sqrt{{\\sin}^{2}(\\"
+      }
+    ],
+    "L": [
+      {
+        "document": "GU next in line.md",
+        "line": 4119,
+        "definition": "\\int_{0}^{L}{ds =}\\int_{\\chi(0)}^{\\chi(0) + 2\\pi}\\frac{d\\chi}{d\\chi/ds} = \\int_{0}^{2\\pi}\\frac{d\\chi}{2\\mu\\sqrt{{\\sin}^{2}(\\chi/2) + \\varepsilon}}.",
+        "context": "$\\mathbf{\\varepsilon}$\n\nFor one full winding $w = 1$, $\\chi$increases by $2\\pi$around the loop. So\n\n$$L = \\int_{0}^{L}{ds =}\\int_{\\chi(0)}^{\\chi(0) + "
+      },
+      {
+        "document": "GU next in line.md",
+        "line": 4123,
+        "definition": "\\frac{1}{\\mu}\\int_{0}^{\\pi}\\frac{d\\theta}{\\sqrt{{\\sin}^{2}\\theta + \\varepsilon}}.",
+        "context": " + \\varepsilon}}.$$\n\nLet $\\theta = \\chi/2$, $d\\chi = 2d\\theta$, $\\theta \\in \\lbrack 0,\\pi\\rbrack$:\n\n$$L = \\frac{1}{\\mu}\\int_{0}^{\\pi}\\frac{d\\theta}{\\s"
+      }
+    ],
+    "\\boxed{\\mu L": [
+      {
+        "document": "GU next in line.md",
+        "line": 4135,
+        "definition": "2k\\text{\u2009}K(k).}",
+        "context": "right)$$\n\nand the integral reduces to a standard complete elliptic integral $K(k)$. The result is:\n\n$$\\boxed{\\mu L = 2k\\text{\u2009}K(k).}$$\n\nThis is the *"
+      }
+    ],
+    "\\theta": [
+      {
+        "document": "GU next in line.md",
+        "line": 4505,
+        "definition": "\\frac{2\\pi}{\\phi^{2}},\\Theta_{total}(N) = N\\theta,\\Theta_{total}(N) = 2\\pi k.",
+        "context": " \"resonance condition\" ties into node selection**\n\nYou also wrote the closure resonance condition:\n\n$$\\theta = \\frac{2\\pi}{\\phi^{2}},\\Theta_{total}(N)"
+      }
+    ],
+    "M": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 41,
+        "definition": "\\begin{pmatrix}",
+        "context": "thbb{Z}^{2}$. To extract its **primitive steps**:\n\n1.  Assemble the constraint matrix and moduli\n\n> $$M = \\begin{pmatrix}\n> A & B \\\\\n> 0 & C\n> \\end{pm"
+      }
+    ],
+    "U\\text{\u2009}M\\text{\u2009}V": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 48,
+        "definition": "diag(d_{1},d_{2}),U,V \\in SL(2,\\mathbb{Z}),\\text{ \t\t\t\t\t\t}d_{1} \\mid d_{2}.",
+        "context": "trix},\\text{with congruences mod }(M_{1},M_{2}).$$\n\n2.  Compute the **Smith normal form** (SNF):\n\n> $$U\\text{\u2009}M\\text{\u2009}V = diag(d_{1},d_{2}),U,V \\in "
+      }
+    ],
+    "\\begin{matrix}\n\\Delta N_{\\bullet}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 450,
+        "definition": "1 & :\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}R_{\\nu} \\simeq 0.3005, \\\\",
+        "context": "4\\Delta N_{\\bullet}}-1 \\right.\\ }.$$\n\nEvaluate at small integers $\\Delta N_{\\bullet} = 1,2,3,4,5$:\n\n$$\\begin{matrix}\n\\Delta N_{\\bullet} = 1 & :\\text{ "
+      }
+    ],
+    "\\boxed{\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\Delta N_{\\bullet}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 460,
+        "definition": "4\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}}.",
+        "context": "e, $\\Delta \\geq 5$too small. Therefore the **neutral-channel primitive step is uniquely fixed** as\n\n$$\\boxed{\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\"
+      }
+    ],
+    "\\Delta N_{\\bullet}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 476,
+        "definition": "2\\text{\u2009}\\Delta N_{D} - \\Delta N_{R},",
+        "context": "pe-I)**\n\nIf a Majorana mass $M_{R}\\text{\u2009}\\nu^{c}\\nu^{c}$is present, the light exponents come from\n\n$$\\Delta N_{\\bullet} = 2\\text{\u2009}\\Delta N_{D} - \\De"
+      }
+    ],
+    "R_{\\nu}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 510,
+        "definition": "\\frac{\\left( \\frac{\\pi}{4}\\gamma_{2})^{2}\\varphi^{2\\Delta N_{\\bullet}}-1 \\right.\\ }{\\left( \\frac{2}{3}\\gamma_{3})^{2}\\varphi^{4\\Delta N_{\\bullet}}-1 \\right.\\ },",
+        "context": "$R_{\\nu}$singles out $\\boxed{\\Delta N_{\\bullet} = 4}$(normal ordering), with the compact formula\n\n> $$R_{\\nu} = \\frac{\\left( \\frac{\\pi}{4}\\gamma_{2})^"
+      },
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 841,
+        "definition": "\\frac{\\left( \\frac{\\pi}{4})^{2}\\text{\u2009}\\varphi^{8}-1 \\right.\\ }{\\left( \\frac{2}{3})^{2}\\text{\u2009}\\varphi^{16}-1 \\right.\\ }.",
+        "context": "nel primitive step $\\Delta N_{\\bullet} = 4$and singlet orbit ratios $\\gamma_{2} = \\gamma_{3} = 1$,\n\n$$R_{\\nu} = \\frac{\\left( \\frac{\\pi}{4})^{2}\\text{\u2009"
+      }
+    ],
+    "\\frac{m_{\\mu}}{m_{e}}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 536,
+        "definition": "\\frac{\\pi}{3}\\text{\u2009}\\varphi^{11},\\frac{m_{\\tau}}{m_{e}} = \\sqrt{\\frac{3}{\\pi}}\\text{\u2009}\\varphi^{17}.",
+        "context": " (locked by GU structure)**\n\n**Muon and tau masses (from the electron via the pattern generator)**\n\n$$\\frac{m_{\\mu}}{m_{e}} = \\frac{\\pi}{3}\\text{\u2009}\\va"
+      },
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 819,
+        "definition": "\\frac{S_{\\mu}}{S_{e}}\\text{\u2009}\\varphi^{11} = \\frac{\\pi}{3}\\text{\u2009}\\varphi^{11},\\frac{m_{\\tau}}{m_{e}} = \\frac{S_{\\tau}}{S_{e}}\\text{\u2009}\\varphi^{17} = \\sqrt{\\frac{3}{\\pi}}\\text{\u2009}\\varphi^{17}.",
+        "context": "alues**\n\nThe **pattern** part is epoch-invariant (topology \u00d7 \u03a9-geometry). At the structural level:\n\n$$\\frac{m_{\\mu}}{m_{e}} = \\frac{S_{\\mu}}{S_{e}}\\te"
+      }
+    ],
+    "{m_{\\mu}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 544,
+        "definition": "105.6583745\\text{ MeV} \\Rightarrow \\delta = + 0.8326\\text{ MeV} = + 0.788\\%\\text{\u2009\u2063},",
+        "context": "} = 106.4909419\\text{ MeV},m_{\\tau}^{GU} = 1783.181636\\text{ MeV}.$$\n\n**Comparison (PDG/CODATA):**\n\n$${m_{\\mu} = 105.6583745\\text{ MeV} \\Rightarrow \\d"
+      },
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 831,
+        "definition": "105.658\\text{\u2009}374\\text{\u2009}5\\text{ \t\t\t\t\t\t}MeV\\text{ \t\t\t\t\t\t} \\Rightarrow \\text{ \t\t\t\t\t\t}\\delta = + 0.832\\text{\u2009}567\\text{ \t\t\t\t\t\t}MeV\\text{ \t\t\t\t\t\t}( + 0.78798\\%),",
+        "context": " }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}MeV.}\n}$$\n\n**Comparison (PDG):**\n\n$${m_{\\mu} = 105.658\\text{\u2009}374\\text{\u2009}5\\text{ \t\t\t"
+      }
+    ],
+    "R_{\\infty}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 592,
+        "definition": "\\frac{\\alpha^{2}m_{e}c}{2h} \\Rightarrow \\frac{\\delta R_{\\infty}}{R_{\\infty}} = 2\\frac{\\delta\\alpha}{\\alpha} + \\frac{\\delta m_{e}}{m_{e}}.",
+        "context": "ructure constant (present epoch) or its epoch map, then you can compute:\n\n- **Rydberg constant**\n\n> $$R_{\\infty} = \\frac{\\alpha^{2}m_{e}c}{2h} \\Righta"
+      }
+    ],
+    "a_{e}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 598,
+        "definition": "\\sum_{n \\geq 1}^{}C_{n}\\text{\u2009\u2063}\\left( \\frac{\\alpha}{\\pi} \\right)^{\\text{\u2009\u2063}n} + \\Delta_{had} + \\Delta_{weak}.",
+        "context": "$(ppb-level) the comparison is driven by GU's $\\alpha$.\n\n- **Electron magnetic anomaly** $a_{e}$\n\n> $$a_{e} = \\sum_{n \\geq 1}^{}C_{n}\\text{\u2009\u2063}\\left( \\"
+      }
+    ],
+    "\\boxed{\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\frac{S_{i}}{S_{e}}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 686,
+        "definition": "\\underset{\\text{Beta/Gamma, exact}}{\\underbrace{\\frac{\\mathcal{N(}\\nu_{i})}{\\mathcal{N}(1)}}} \\cdot \\underset{\\text{SU(5) orbit, exact}}{\\underbrace{\\frac{\\mathcal{G}_{i}}{\\mathcal{G}_{e}}}} \\cdot \\underset{\\text{fluctuation determinant, exact}}{\\underbrace{\\frac{\\mathcal{D(}\\nu_{i})}{\\mathcal{D}(1)}}}\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\text{\t}}.",
+        "context": "nly the zero-mode **normalizations** and an SU(5) **orbit factor**. To close the last \\~0.3--0.8%:\n\n$$\\boxed{\\text{ }\\text{\t}\\text{\t}\\text{\t}\\text{\t}\\"
+      }
+    ],
+    "y_{\\star}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 718,
+        "definition": "\\frac{\\sqrt{2}}{v(\\mu_{\\star})}\\text{\u2009}M_{P}\\text{\u2009}\\frac{2\\pi_{n}\\text{\u2009}C_{e}(n)}{\\varphi_{n}^{111}}\\text{(no data fit; }C_{e}(n)\\text{ is computed)}.",
+        "context": "ed **once** by the absolute electron anchor (Appendix \"\u03a9-kink Gel'fand--Yaglom\", already drafted):\n\n$$y_{\\star} = \\frac{\\sqrt{2}}{v(\\mu_{\\star})}\\text"
+      }
+    ],
+    "\\boxed{\\text{\u2009}R_{\\nu}": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 845,
+        "definition": "0.0285530722664\\text{  (normal ordering)}.}",
+        "context": "i \\rightarrow \\varphi_{n}$makes a **sub-**$10^{- 15}$ relative change at late epochs. Numerically,\n\n$$\\boxed{\\text{\u2009}R_{\\nu} = 0.0285530722664\\text{  "
+      }
+    ],
+    "H": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 871,
+        "definition": "H_{0}(L)\\text{\\:\\,} + \\text{\\:\\,}\\varepsilon\\text{\u2009}H_{1}(L,G,\\lambda,\\varpi;\\lambda'),\\varepsilon \\equiv \\frac{m'}{M} \\ll 1.",
+        "context": "\t}\\text{\t}\\lambda,\\varpi \\right)$for the test body and mean longitude $\\lambda'$for the perturber:\n\n$$H = H_{0}(L)\\text{\\:\\,} + \\text{\\:\\,}\\varepsilon"
+      }
+    ],
+    "\\phi": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 893,
+        "definition": "p\\text{\u2009}\\lambda' - q\\text{\u2009}\\lambda - s\\text{\u2009}\\varpi,",
+        "context": "tion**\n\nFor a resonance $p\\text{\u2009\u2063}:\\text{\u2009\u2063}q \\in \\mathcal{R}_{n}$, define the **resonant angle**\n\n$$\\phi = p\\text{\u2009}\\lambda' - q\\text{\u2009}\\lambda - s\\"
+      }
+    ],
+    "\\Delta J": [
+      {
+        "document": "More Particles Stuff GU.md",
+        "line": 901,
+        "definition": "2\\sqrt{\\frac{\\varepsilon\\text{\u2009} \\mid V_{pqs} \\mid}{\\mid a \\mid}},\\frac{\\Delta a_{t}}{a_{t}} \\sim C_{pqs}\\text{\u2009}\\sqrt{\\varepsilon}\\text{\u2009}e^{\\mid s \\mid /2},",
+        "context": "gth (a Laplace-coefficient combination). The **half-width** in $J$and in semi-major axis $a_{t}$is\n\n$$\\Delta J = 2\\sqrt{\\frac{\\varepsilon\\text{\u2009} \\mid"
+      }
+    ]
+  },
+  "total_equations": 1666,
+  "by_type": {}
+}

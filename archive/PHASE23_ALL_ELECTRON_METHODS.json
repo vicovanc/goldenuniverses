@@ -1,0 +1,36 @@
+{
+  "target": {
+    "m_e_MeV": "0.51099895",
+    "m_e_kg": "9.10938356e-31",
+    "source": "CODATA 2018"
+  },
+  "methods": {
+    "method1_particles_v2": {
+      "formula": "M_P \u00b7 (2\u03c0_111 \u00b7 C_e / \u03c6_111^111)",
+      "C_e": "1.64894",
+      "result_MeV": "0.80238411460965770315667637077669229888846312660183",
+      "error_percent": 57.02265427544571,
+      "document": "Particles v2.md lines 324-335"
+    },
+    "method2_gelfand_yaglom": {
+      "formula": "C_e = N_e \u00b7 G_e \u00b7 D_e",
+      "result_MeV": "156.35845162616547189763406322526472664399869159721",
+      "error_percent": 30498.585696930586,
+      "document": "More Particles Appendix B",
+      "note": "Requires proper \u03bc(n) calculation"
+    },
+    "method3_elliptic": {
+      "formula": "|\u03b4|\u00b7K(\u03bd) + \u03b7_\u03bc\u00b7(\u03bd/2) - (\u03bb_rec/\u03b2)\u00b7\u03ba/3",
+      "C_e": "1.0479287721296909110776758342843703024131939010124",
+      "result_MeV": "0.50992843887543984806439116357710028328778342231622",
+      "error_percent": -0.20949380122212619,
+      "document": "GU Couplings.md line 4765"
+    },
+    "method4_simple": {
+      "formula": "M_P \u00b7 (2\u03c0/\u03c6^N)",
+      "result_MeV": "0.48667098144733355447936873680119395642389896759894",
+      "error_percent": -4.76086468527312,
+      "note": "Too simple - missing C_e"
+    }
+  }
+}

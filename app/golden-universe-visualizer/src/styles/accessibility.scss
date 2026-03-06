@@ -1,0 +1,211 @@
+// Screen reader only utility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Focus visible styles
+.focus-visible-only:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// Enhanced focus indicators
+[data-focus-indicators='true'] {
+  *:focus-visible {
+    outline: 3px solid var(--color-primary, #ffd700);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--color-primary, #ffd700);
+    outline-offset: 3px;
+  }
+
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--color-primary, #ffd700);
+    outline-offset: 2px;
+    border-color: var(--color-primary, #ffd700);
+  }
+}
+
+// High contrast mode
+[data-high-contrast='true'] {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-background: #000000;
+  --color-surface: #1a1a1a;
+  --color-surface-elevated: #2a2a2a;
+  --color-border: #666666;
+  --color-primary: #ffff00;
+  --color-primary-hover: #ffff66;
+
+  * {
+    border-width: 2px;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    border: 2px solid var(--color-border);
+  }
+}
+
+[data-high-contrast='true'][data-theme='light'] {
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-surface-elevated: #e0e0e0;
+  --color-border: #000000;
+  --color-primary: #0000ff;
+  --color-primary-hover: #0000cc;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-reduced-motion='true'] {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Font size utilities
+[data-font-size='small'] {
+  font-size: 14px;
+}
+
+[data-font-size='medium'] {
+  font-size: 16px;
+}
+
+[data-font-size='large'] {
+  font-size: 18px;
+}
+
+// Skip links
+.skip-links {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  z-index: 10002;
+}
+
+// Keyboard navigation indicators
+body:not(.using-mouse) {
+  *:focus {
+    outline: 2px solid var(--color-primary, #ffd700);
+    outline-offset: 2px;
+  }
+}
+
+// Touch target size (WCAG 2.5.5)
+button,
+a,
+input[type='checkbox'],
+input[type='radio'] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+// Color contrast utilities
+.text-high-contrast {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+// ARIA live regions
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// Intro.js theme customization for accessibility
+.introjs-tooltip {
+  background-color: var(--color-surface, #1e1e1e) !important;
+  color: var(--color-text-primary, #fff) !important;
+  border: 2px solid var(--color-primary, #ffd700) !important;
+}
+
+.introjs-button {
+  background-color: var(--color-primary, #ffd700) !important;
+  color: #000 !important;
+  border: none !important;
+  text-shadow: none !important;
+
+  &:hover {
+    background-color: var(--color-primary-hover, #ffed4e) !important;
+  }
+
+  &:focus {
+    outline: 3px solid var(--color-primary, #ffd700) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+.introjs-skipbutton {
+  color: var(--color-text-secondary, #999) !important;
+
+  &:hover {
+    color: var(--color-text-primary, #fff) !important;
+  }
+}
+
+.introjs-arrow {
+  border-color: transparent transparent var(--color-surface, #1e1e1e) transparent !important;
+}
+
+.introjs-progressbar {
+  background-color: var(--color-primary, #ffd700) !important;
+}
+
+// Light theme for intro.js
+[data-theme='light'] {
+  .introjs-tooltip {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    border-color: #d4af37 !important;
+  }
+
+  .introjs-arrow {
+    border-color: transparent transparent #ffffff transparent !important;
+  }
+
+  .introjs-skipbutton {
+    color: #666 !important;
+
+    &:hover {
+      color: #1a1a1a !important;
+    }
+  }
+}

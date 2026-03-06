@@ -1,0 +1,174 @@
+{
+  "timestamp_utc": "2026-03-04T20:03:22.112048+00:00",
+  "admissible_candidates": [
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 1.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.0024143654745737136,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 3.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.007243096423721141,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 5.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.012071827372868568,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 6.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.014486192847442281,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 7.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.016900558322015997,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    }
+  ],
+  "all_candidates": [
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 1.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.0024143654745737136,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 3.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.007243096423721141,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 5.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.012071827372868568,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 6.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.014486192847442281,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "plateau_alpha_attractor",
+      "params": {
+        "alpha": 7.0
+      },
+      "n_s": 0.9716312056737588,
+      "r": 0.016900558322015997,
+      "pass_r_bound": true,
+      "pass_ns_band": true,
+      "admissible": true
+    },
+    {
+      "family": "axion_cosine",
+      "params": {
+        "f_over_mp": 4.0
+      },
+      "n_s": 0.9403812056737588,
+      "r": 0.5,
+      "pass_r_bound": false,
+      "pass_ns_band": false,
+      "admissible": false
+    },
+    {
+      "family": "axion_cosine",
+      "params": {
+        "f_over_mp": 5.5
+      },
+      "n_s": 0.9551022800539242,
+      "r": 0.2644628099173554,
+      "pass_r_bound": false,
+      "pass_ns_band": false,
+      "admissible": false
+    },
+    {
+      "family": "axion_cosine",
+      "params": {
+        "f_over_mp": 7.0
+      },
+      "n_s": 0.9614271240411058,
+      "r": 0.16326530612244897,
+      "pass_r_bound": false,
+      "pass_ns_band": true,
+      "admissible": false
+    },
+    {
+      "family": "linear",
+      "params": {
+        "label": "V0_minus_sigmaX"
+      },
+      "n_s": 0.9788,
+      "r": 0.0565,
+      "pass_r_bound": false,
+      "pass_ns_band": false,
+      "admissible": false
+    }
+  ],
+  "candidate_count_total": 9,
+  "candidate_count_admissible": 5,
+  "uniqueness_pass": false,
+  "non_uniqueness_certificate": "multiple admissible V_X families survive L_total constraints",
+  "falsification_path": {
+    "primary_discriminants": [
+      "r",
+      "n_s",
+      "A_s consistency",
+      "N=70.5 compatibility"
+    ],
+    "next_measurement_target": "tighten r below 1e-2 to separate plateau/axion subfamilies"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "magnitude_expected": "1.72206176112323e+21",
+  "interpretation_1_magnitude": "2.12858539820131e+21",
+  "interpretation_1_error_percent": 23.606797749978973,
+  "interpretation_2_magnitude": "1.72206176112323e+21",
+  "geometric_series_factor": "2.0",
+  "components": {
+    "x": "(-1.26979474878101e+21 + 1.16323600575765e+21j)",
+    "y": "1.06429269910066e+21",
+    "z": "(0.0 + 6.57769062022571e+20j)"
+  }
+}

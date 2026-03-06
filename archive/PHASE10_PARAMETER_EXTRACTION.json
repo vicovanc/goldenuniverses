@@ -1,0 +1,25 @@
+{
+  "explicitly_derived": {
+    "N_e": 111,
+    "k_res": 42,
+    "winding_numbers": {
+      "p": -41,
+      "q": 70
+    },
+    "delta_e": "0.398227248761671",
+    "X_0_over_M_P": "-0.104003960061021",
+    "X_111_over_M_P": "-6.59814428250385e-25",
+    "phi_to_minus_111": "6.34412793381387e-24"
+  },
+  "functional_forms_given": {
+    "beta_X": "\u03b2_0 \u00b7 exp(-\u03c3X/M_P)",
+    "memory_kernel": "e^(-\u03b2(X)(t-\u03c4))",
+    "X_epoch": "X_0 \u00b7 \u03c6^(-n)"
+  },
+  "missing_explicit_forms": {
+    "lambda_rec_X": "Theory says 'parameterized by \u03c0 and \u03c6' but NO explicit formula",
+    "beta_0": "Base value not specified",
+    "sigma": "Dimensionless parameter not specified"
+  },
+  "critical_insight": "\u03b2_111 \u2248 \u03b2_0 and \u03bb_rec/\u03b2_111 \u2248 \u03bb_rec/\u03b2_0 because X_111/M_P ~ 10^(-24) is tiny"
+}

@@ -1,0 +1,416 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Golden Universe API",
+    "version": "1.0.0",
+    "description": "API for the Golden Universe physics and mathematics research project. Provides access to theories, derivations, equations, and calculation services.",
+    "contact": {
+      "name": "Golden Universe Team",
+      "email": "support@goldenuniverse.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/api",
+      "description": "Development server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Theories",
+      "description": "Theory documents and research papers"
+    },
+    {
+      "name": "Derivations",
+      "description": "Mathematical derivations (42 total)"
+    },
+    {
+      "name": "Equations",
+      "description": "Equation catalog and LaTeX rendering"
+    },
+    {
+      "name": "Calculations",
+      "description": "Python calculation execution and results"
+    },
+    {
+      "name": "Search",
+      "description": "Full-text search across all content"
+    },
+    {
+      "name": "Health",
+      "description": "Server health and monitoring"
+    }
+  ],
+  "paths": {
+    "/theories": {
+      "get": {
+        "tags": ["Theories"],
+        "summary": "Get all theories",
+        "description": "Returns a list of all theory documents",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "data": {
+                      "type": "array",
+                      "items": { "$ref": "#/components/schemas/Theory" }
+                    },
+                    "count": { "type": "number" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/theories/{id}": {
+      "get": {
+        "tags": ["Theories"],
+        "summary": "Get theory by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "render",
+            "in": "query",
+            "schema": { "type": "boolean" },
+            "description": "Render LaTeX to HTML"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "data": { "$ref": "#/components/schemas/Theory" }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Theory not found"
+          }
+        }
+      }
+    },
+    "/theories/search": {
+      "get": {
+        "tags": ["Theories"],
+        "summary": "Search theories",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results"
+          }
+        }
+      }
+    },
+    "/derivations": {
+      "get": {
+        "tags": ["Derivations"],
+        "summary": "Get all derivations",
+        "responses": {
+          "200": {
+            "description": "List of all 42 derivations"
+          }
+        }
+      }
+    },
+    "/derivations/{number}": {
+      "get": {
+        "tags": ["Derivations"],
+        "summary": "Get derivation by number",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer", "minimum": 1, "maximum": 42 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Derivation details"
+          },
+          "404": {
+            "description": "Derivation not found"
+          }
+        }
+      }
+    },
+    "/derivations/{number}/files/{filename}": {
+      "get": {
+        "tags": ["Derivations"],
+        "summary": "Get derivation file content",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "filename",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File content"
+          }
+        }
+      }
+    },
+    "/equations": {
+      "get": {
+        "tags": ["Equations"],
+        "summary": "Get all equations",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "render",
+            "in": "query",
+            "schema": { "type": "boolean" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of equations"
+          }
+        }
+      }
+    },
+    "/equations/{id}": {
+      "get": {
+        "tags": ["Equations"],
+        "summary": "Get equation by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Equation details"
+          }
+        }
+      }
+    },
+    "/calculations": {
+      "get": {
+        "tags": ["Calculations"],
+        "summary": "Get calculation history",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { "type": "integer", "default": 50 }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": { "type": "integer", "default": 0 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation history"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Calculations"],
+        "summary": "Execute a calculation",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["scriptName"],
+                "properties": {
+                  "scriptName": { "type": "string" },
+                  "parameters": { "type": "object" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Calculation started"
+          }
+        }
+      }
+    },
+    "/calculations/{jobId}": {
+      "get": {
+        "tags": ["Calculations"],
+        "summary": "Get calculation status",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Job status"
+          }
+        }
+      }
+    },
+    "/calculations/results": {
+      "get": {
+        "tags": ["Calculations"],
+        "summary": "Get precision results table",
+        "responses": {
+          "200": {
+            "description": "Results table with CODATA comparisons"
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "tags": ["Search"],
+        "summary": "Full-text search",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results across all content types"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "Server is healthy"
+          },
+          "503": {
+            "description": "Server is degraded"
+          }
+        }
+      }
+    },
+    "/health/metrics": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Server metrics",
+        "responses": {
+          "200": {
+            "description": "Performance and usage metrics"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Theory": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "filename": { "type": "string" },
+          "content": { "type": "string" },
+          "summary": { "type": "string" },
+          "keywords": { "type": "string" },
+          "created_at": { "type": "string", "format": "date-time" },
+          "updated_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "Derivation": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "number": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "folder_path": { "type": "string" },
+          "files": { "type": "array", "items": { "type": "string" } },
+          "equations": { "type": "array" }
+        }
+      },
+      "Equation": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "latex": { "type": "string" },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "variables": { "type": "array" }
+        }
+      },
+      "Calculation": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "script_name": { "type": "string" },
+          "parameters": { "type": "object" },
+          "result": { "type": "object" },
+          "status": { "type": "string", "enum": ["pending", "running", "completed", "failed"] },
+          "error": { "type": "string" },
+          "execution_time": { "type": "integer" }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "error": {
+            "type": "object",
+            "properties": {
+              "message": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

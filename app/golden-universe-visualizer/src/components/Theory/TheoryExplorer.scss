@@ -1,0 +1,1931 @@
+// ===================================
+// Theory Explorer - Glassmorphism Design
+// World-Class UI/UX Implementation
+// ===================================
+
+@import '../../styles/variables.scss';
+
+// ===== Main Theory Explorer =====
+.theory-explorer {
+  min-height: 100vh;
+  background: $gradient-cosmic;
+  color: $text-primary;
+  padding: $spacing-xl;
+  position: relative;
+  overflow-x: hidden;
+
+  // Animated background particles - subtle and sophisticated
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -30px); }
+    66% { transform: translate(-20px, 20px); }
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .explorer-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    .explorer-title {
+      font-size: $font-size-5xl;
+      font-weight: $font-weight-extrabold;
+      margin-bottom: $spacing-md;
+      @include gradient-text($gradient-primary);
+      text-shadow: $shadow-glow-gold-md;
+      letter-spacing: -0.02em;
+      line-height: $line-height-tight;
+    }
+
+    .explorer-subtitle {
+      color: $text-secondary;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-light;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .explorer-nav {
+    @include glass-card;
+    display: flex;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+    padding: $spacing-lg;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav-button {
+      @include glass-button;
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      padding: $spacing-md $spacing-lg;
+      color: $text-primary;
+      cursor: pointer;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+
+      // Shimmer effect on hover
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      &:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        filter: drop-shadow(0 0 8px currentColor);
+      }
+
+      &.active {
+        background: $gradient-primary;
+        border-color: $color-gold-500;
+        color: white;
+        box-shadow: $shadow-glow-gold-md, $shadow-glass-md;
+
+        &:hover {
+          box-shadow: $shadow-glow-gold-lg, $shadow-glass-lg;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none !important;
+      }
+    }
+
+    .nav-spacer {
+      flex: 1;
+    }
+  }
+
+  .explorer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .explorer-main {
+      @include glass-card-strong;
+      padding: $spacing-xl;
+      min-height: 600px;
+      animation: fadeInUp 0.5s ease-out;
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// ===== Equation Renderer =====
+.equation-renderer {
+  position: relative;
+  padding: $spacing-md 0;
+
+  .equation-content {
+    @include glass-card;
+    padding: $spacing-xl;
+    overflow-x: auto;
+    position: relative;
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $glass-bg-weak;
+      border-radius: $border-radius-sm;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $gradient-primary;
+      border-radius: $border-radius-sm;
+
+      &:hover {
+        background: $gradient-accent;
+      }
+    }
+
+    &.display-mode {
+      text-align: center;
+    }
+
+    &.inline-mode {
+      display: inline-block;
+    }
+  }
+
+  .equation-controls {
+    position: absolute;
+    top: $spacing-lg;
+    right: $spacing-lg;
+    z-index: 10;
+
+    .copy-button {
+      @include glass-button;
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      &.copied {
+        background: linear-gradient(135deg, $color-success 0%, #059669 100%);
+        border-color: $color-success;
+        color: white;
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+      }
+    }
+  }
+
+  .equation-zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 1, 24, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: $z-index-modal;
+    animation: fadeIn 0.3s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .equation-zoom-content {
+      @include glass-card-strong;
+      padding: $spacing-xxl;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: auto;
+      position: relative;
+      animation: zoomIn 0.3s ease-out;
+
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .close-zoom {
+        position: absolute;
+        top: $spacing-lg;
+        right: $spacing-lg;
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        font-size: $font-size-xl;
+        line-height: 1;
+      }
+    }
+  }
+
+  .equation-error {
+    color: $color-error;
+    font-family: 'Fira Code', 'Monaco', 'Courier New', monospace;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+
+  .equation-error-message {
+    color: $color-warning;
+    font-size: $font-size-sm;
+    margin-top: $spacing-md;
+  }
+}
+
+// ===== Laws Browser =====
+.laws-browser {
+  .browser-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-xl;
+
+    h2 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      @include gradient-text($gradient-primary);
+    }
+
+    .laws-count {
+      color: $text-secondary;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .browser-controls {
+    display: flex;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    flex-wrap: wrap;
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+
+      .search-input {
+        width: 100%;
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        padding-right: 3rem;
+        color: $text-primary;
+        font-size: $font-size-base;
+        border: $glass-border;
+
+        &::placeholder {
+          color: $text-tertiary;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $color-gold-500;
+          box-shadow: $shadow-glow-gold-sm;
+        }
+      }
+
+      .search-clear {
+        position: absolute;
+        right: $spacing-md;
+        top: 50%;
+        transform: translateY(-50%);
+        @include glass-button;
+        padding: $spacing-sm;
+        font-size: $font-size-lg;
+        min-width: auto;
+      }
+    }
+
+    .jump-to-box {
+      display: flex;
+      gap: $spacing-sm;
+
+      .jump-input {
+        width: 140px;
+        @include glass-button;
+        padding: $spacing-md;
+        color: $text-primary;
+        font-size: $font-size-base;
+
+        &:focus {
+          outline: none;
+          border-color: $color-gold-500;
+          box-shadow: $shadow-glow-gold-sm;
+        }
+      }
+
+      .jump-button {
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        color: $text-primary;
+        font-weight: $font-weight-semibold;
+      }
+    }
+
+    .bookmark-filter {
+      @include glass-button;
+      padding: $spacing-md $spacing-lg;
+      color: $text-primary;
+      font-weight: $font-weight-semibold;
+
+      &.active {
+        background: $gradient-accent;
+        border-color: $color-gold-500;
+        color: white;
+        box-shadow: $shadow-glow-gold-md;
+      }
+    }
+  }
+
+  .category-filter {
+    display: flex;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+
+    .category-button {
+      @include glass-button;
+      padding: $spacing-md $spacing-lg;
+      color: $text-primary;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+
+      &.active {
+        background: $gradient-primary;
+        border-color: $color-gold-500;
+        color: white;
+        box-shadow: $shadow-glow-gold-sm;
+      }
+    }
+  }
+
+  .laws-list {
+    display: grid;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    .law-item {
+      @include glass-card;
+      @include smooth-hover;
+      cursor: pointer;
+      padding: $spacing-lg;
+      position: relative;
+      overflow: hidden;
+
+      // Animated gradient border on hover
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: $border-radius-lg;
+        padding: 2px;
+        background: $gradient-primary;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity $transition-normal;
+      }
+
+      &:hover {
+        box-shadow: $shadow-glass-lg, $shadow-glow-gold-sm;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &.selected {
+        border-color: $color-gold-500;
+        background: $gradient-glass-gold;
+        box-shadow: $shadow-glass-lg, $shadow-glow-gold-md;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &.bookmarked {
+        border-left: 4px solid $color-gold-500;
+        box-shadow: $shadow-glass-md, 0 0 15px rgba(251, 191, 36, 0.2);
+      }
+
+      .law-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing-md;
+
+        .law-item-number {
+          font-size: $font-size-sm;
+          font-weight: $font-weight-bold;
+          @include gradient-text($gradient-primary);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .bookmark-button {
+          @include glass-button;
+          padding: $spacing-sm;
+          font-size: $font-size-xl;
+          min-width: auto;
+
+          &.active {
+            color: $color-gold-500;
+            text-shadow: $shadow-glow-gold-sm;
+          }
+        }
+      }
+
+      .law-item-title {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+        line-height: $line-height-normal;
+      }
+
+      .law-item-status {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+
+        .status-indicator {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          box-shadow: 0 0 10px currentColor;
+
+          &.status-fully-defined { background: $color-success; }
+          &.status-partially-defined { background: $color-warning; }
+          &.status-form-defined { background: $color-info; }
+          &.status-schematic { background: $text-tertiary; }
+          &.status-derived { background: $color-gold-500; }
+          &.status-validated { background: #22c55e; }
+        }
+      }
+
+      .law-item-progress {
+        margin-top: $spacing-lg;
+
+        .progress-bar {
+          height: 6px;
+          background: $glass-bg-weak;
+          border-radius: $border-radius-sm;
+          overflow: hidden;
+          position: relative;
+
+          .progress-fill {
+            height: 100%;
+            background: $gradient-primary;
+            transition: width $transition-slow;
+            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  .law-preview {
+    @include glass-card-strong;
+    padding: $spacing-lg;
+    max-width: 500px;
+    box-shadow: $shadow-glass-xl;
+    z-index: $z-index-popover;
+    animation: slideInUp 0.3s ease-out;
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .preview-header {
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+      @include gradient-text($gradient-primary);
+    }
+
+    .preview-statement {
+      font-size: $font-size-sm;
+      color: $text-secondary;
+      margin-bottom: $spacing-md;
+      line-height: $line-height-relaxed;
+    }
+
+    .preview-equations {
+      font-size: $font-size-sm;
+      color: $text-tertiary;
+      margin-bottom: $spacing-md;
+
+      code {
+        @include glass-card;
+        padding: $spacing-sm $spacing-md;
+        font-family: 'Fira Code', 'Monaco', monospace;
+        color: $color-gold-500;
+      }
+    }
+
+    .preview-meta {
+      display: flex;
+      gap: $spacing-sm;
+      flex-wrap: wrap;
+    }
+  }
+
+  .overall-progress {
+    @include glass-card;
+    padding: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $spacing-lg;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+    }
+
+    .progress-bar.overall {
+      height: 12px;
+      background: $glass-bg-strong;
+      border-radius: $border-radius-md;
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, $color-success 0%, $color-gold-500 100%);
+        transition: width $transition-slow;
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+      }
+    }
+  }
+}
+
+// ===== Law Detail =====
+.law-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .law-header {
+    margin-bottom: $spacing-xl;
+
+    .law-title-section {
+      .law-number {
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        color: $color-gold-500;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: $spacing-md;
+        text-shadow: $shadow-glow-gold-sm;
+      }
+
+      .law-title {
+        font-size: $font-size-4xl;
+        font-weight: $font-weight-extrabold;
+        @include gradient-text($gradient-primary);
+        margin-bottom: $spacing-lg;
+        line-height: $line-height-tight;
+      }
+    }
+
+    .law-badges {
+      display: flex;
+      gap: $spacing-sm;
+      flex-wrap: wrap;
+    }
+  }
+
+  .law-statement,
+  .law-equations,
+  .law-sublaws,
+  .law-content,
+  .law-validation,
+  .law-gaps,
+  .law-implementations {
+    @include glass-card;
+    padding: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-lg;
+      @include gradient-text($gradient-primary);
+    }
+  }
+
+  .law-statement {
+    p {
+      font-size: $font-size-lg;
+      line-height: $line-height-relaxed;
+      color: $text-primary;
+    }
+  }
+
+  .law-equations {
+    .equations-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+  }
+
+  .law-sublaws {
+    .sublaw-item {
+      @include glass-card;
+      padding: $spacing-lg;
+      margin-bottom: $spacing-lg;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h4 {
+        font-size: $font-size-xl;
+        color: $text-primary;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-md;
+      }
+
+      .sublaw-description {
+        color: $text-secondary;
+        margin-bottom: $spacing-lg;
+        line-height: $line-height-relaxed;
+      }
+
+      .sublaw-equations {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+
+  .validation-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    .validation-item {
+      @include glass-card;
+      display: flex;
+      gap: $spacing-lg;
+      padding: $spacing-lg;
+      border-left: 4px solid transparent;
+
+      &.validated {
+        border-left-color: $color-success;
+        box-shadow: $shadow-glass-md, 0 0 15px rgba(16, 185, 129, 0.2);
+      }
+
+      &.not-validated {
+        border-left-color: $color-error;
+        box-shadow: $shadow-glass-md, 0 0 15px rgba(239, 68, 68, 0.2);
+      }
+
+      .validation-icon {
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bold;
+      }
+
+      .validation-content {
+        flex: 1;
+
+        .validation-description {
+          font-weight: $font-weight-semibold;
+          margin-bottom: $spacing-sm;
+          color: $text-primary;
+        }
+
+        .validation-value {
+          color: $text-secondary;
+        }
+
+        .validation-error {
+          color: $color-error;
+          font-size: $font-size-sm;
+          margin-top: $spacing-sm;
+        }
+      }
+    }
+  }
+
+  .gaps-list,
+  .implementations-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      @include glass-card;
+      padding: $spacing-lg;
+      margin-bottom: $spacing-md;
+      color: $text-secondary;
+      line-height: $line-height-relaxed;
+
+      code {
+        @include glass-card;
+        padding: $spacing-xs $spacing-sm;
+        font-family: 'Fira Code', 'Monaco', monospace;
+        color: $color-gold-500;
+      }
+    }
+  }
+
+  .law-dependencies {
+    @include glass-card;
+    padding: $spacing-xl;
+
+    .dependencies-section,
+    .dependents-section {
+      margin-bottom: $spacing-xl;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-lg;
+        @include gradient-text($gradient-primary);
+      }
+
+      .dependency-links {
+        display: flex;
+        gap: $spacing-sm;
+        flex-wrap: wrap;
+
+        .dependency-link {
+          @include glass-button;
+          padding: $spacing-md $spacing-lg;
+          color: $text-primary;
+          font-weight: $font-weight-medium;
+        }
+      }
+    }
+  }
+}
+
+// ===== Dependency Graph =====
+.dependency-graph {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .graph-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+
+    .filter-controls {
+      display: flex;
+      gap: $spacing-lg;
+      align-items: center;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        color: $text-secondary;
+        font-weight: $font-weight-medium;
+
+        select {
+          @include glass-button;
+          padding: $spacing-md;
+          color: $text-primary;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+            border-color: $color-gold-500;
+            box-shadow: $shadow-glow-gold-sm;
+          }
+        }
+      }
+
+      .checkbox-label {
+        cursor: pointer;
+      }
+    }
+
+    .export-controls {
+      display: flex;
+      gap: $spacing-sm;
+
+      .export-button {
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        color: $text-primary;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+
+  .graph-legend {
+    @include glass-card;
+    display: flex;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    flex-wrap: wrap;
+    padding: $spacing-lg;
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+      font-size: $font-size-sm;
+      color: $text-secondary;
+      font-weight: $font-weight-medium;
+
+      .legend-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px currentColor;
+      }
+
+      .legend-line {
+        width: 30px;
+        height: 3px;
+        border-top: 3px solid;
+        box-shadow: 0 0 8px currentColor;
+      }
+    }
+
+    .legend-divider {
+      width: 2px;
+      background: $glass-border;
+    }
+  }
+
+  .graph-container {
+    @include glass-card;
+    flex: 1;
+    overflow: hidden;
+    min-height: 600px;
+    position: relative;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      .link {
+        stroke-opacity: 0.6;
+        transition: stroke-opacity $transition-fast;
+
+        &:hover {
+          stroke-opacity: 1;
+        }
+      }
+
+      .node {
+        cursor: pointer;
+        transition: all $transition-fast;
+
+        circle {
+          transition: all $transition-normal;
+        }
+
+        &:hover circle,
+        &.highlighted circle {
+          stroke-width: 4;
+          filter: drop-shadow(0 0 12px currentColor);
+        }
+
+        .node-label,
+        .node-title-label {
+          user-select: none;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}
+
+// ===== Lagrangian Explorer =====
+.lagrangian-explorer {
+  .explorer-header {
+    margin-bottom: $spacing-xl;
+
+    h2 {
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-extrabold;
+      @include gradient-text($gradient-primary);
+      margin-bottom: $spacing-md;
+    }
+
+    .explorer-description {
+      color: $text-secondary;
+      font-size: $font-size-lg;
+      line-height: $line-height-relaxed;
+    }
+  }
+
+  .total-lagrangian {
+    @include glass-card-strong;
+    padding: $spacing-xxl;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+
+    h3 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-xl;
+      @include gradient-text($gradient-primary);
+    }
+
+    .equation-note {
+      margin-top: $spacing-lg;
+      color: $text-secondary;
+      font-size: $font-size-base;
+      line-height: $line-height-relaxed;
+    }
+
+    .lagrangian-breakdown {
+      margin-top: $spacing-xxl;
+      text-align: left;
+
+      h4 {
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-xl;
+        @include gradient-text($gradient-accent);
+        text-align: center;
+      }
+
+      .breakdown-section {
+        @include glass-card;
+        padding: $spacing-xl;
+        margin-bottom: $spacing-lg;
+        transition: all $transition-normal;
+        border-left: 3px solid transparent;
+
+        &:hover {
+          border-left-color: $color-gold-500;
+          box-shadow: $shadow-glass-lg, $shadow-glow-gold-sm;
+          transform: translateX(4px);
+        }
+
+        &.specialized-term {
+          border-left: 3px solid rgba(251, 191, 36, 0.3);
+          background: $gradient-glass-gold;
+
+          &:hover {
+            border-left-color: $color-gold-500;
+            box-shadow: $shadow-glass-lg, $shadow-glow-gold-md;
+          }
+        }
+
+        h5 {
+          color: $color-gold-500;
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          margin-bottom: $spacing-lg;
+          text-shadow: $shadow-glow-gold-sm;
+        }
+
+        .breakdown-description {
+          color: $text-secondary;
+          font-size: $font-size-base;
+          line-height: $line-height-relaxed;
+          margin-top: $spacing-md;
+        }
+      }
+    }
+  }
+
+  .lagrangian-terms {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    .lagrangian-term {
+      @include glass-card;
+      @include smooth-hover;
+      cursor: pointer;
+      padding: $spacing-xl;
+      transition: all $transition-normal;
+
+      &:hover {
+        box-shadow: $shadow-glass-lg, $shadow-glow-gold-sm;
+      }
+
+      &.selected {
+        border-color: $color-gold-500;
+        background: $gradient-glass-gold;
+        box-shadow: $shadow-glass-lg, $shadow-glow-gold-md;
+      }
+
+      .term-header {
+        display: flex;
+        align-items: center;
+        gap: $spacing-lg;
+        flex-wrap: wrap;
+
+        .term-symbol {
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-extrabold;
+          @include gradient-text($gradient-accent);
+          min-width: 100px;
+        }
+
+        .term-name-section {
+          flex: 1;
+          min-width: 250px;
+
+          .term-name {
+            font-size: $font-size-2xl;
+            font-weight: $font-weight-bold;
+            margin-bottom: $spacing-sm;
+            color: $text-primary;
+          }
+
+          .term-description {
+            font-size: $font-size-base;
+            color: $text-secondary;
+            line-height: $line-height-relaxed;
+          }
+        }
+
+        .expand-button {
+          @include glass-button;
+          padding: $spacing-md $spacing-lg;
+          font-size: $font-size-xl;
+          margin-left: auto;
+        }
+      }
+
+      .term-details {
+        margin-top: $spacing-xl;
+        padding-top: $spacing-xl;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        .term-equation,
+        .term-components,
+        .term-related-laws {
+          margin-bottom: $spacing-xl;
+
+          h5 {
+            color: $color-gold-500;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-semibold;
+            margin-bottom: $spacing-lg;
+          }
+        }
+
+        .term-components {
+          .component-item {
+            @include glass-card;
+            padding: $spacing-lg;
+            margin-bottom: $spacing-lg;
+
+            h6 {
+              color: $text-primary;
+              font-size: $font-size-lg;
+              font-weight: $font-weight-semibold;
+              margin-bottom: $spacing-md;
+            }
+
+            .component-description {
+              color: $text-secondary;
+              font-size: $font-size-base;
+              margin-bottom: $spacing-lg;
+              line-height: $line-height-relaxed;
+            }
+          }
+        }
+
+        .term-related-laws {
+          .related-laws-list {
+            display: flex;
+            gap: $spacing-sm;
+            flex-wrap: wrap;
+
+            .law-link-button {
+              @include glass-button;
+              padding: $spacing-md $spacing-lg;
+              color: $text-primary;
+              font-weight: $font-weight-medium;
+            }
+          }
+        }
+
+        .select-term-button {
+          @include glass-button;
+          width: 100%;
+          padding: $spacing-lg;
+          margin-top: $spacing-lg;
+          color: $text-primary;
+          font-weight: $font-weight-semibold;
+          font-size: $font-size-lg;
+
+          &:hover {
+            background: $gradient-primary;
+            color: white;
+            box-shadow: $shadow-glow-gold-md;
+          }
+        }
+      }
+    }
+  }
+
+  .parameter-calculator {
+    @include glass-card-strong;
+    padding: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+      @include gradient-text($gradient-primary);
+    }
+
+    .calculator-description {
+      color: $text-secondary;
+      margin-bottom: $spacing-xl;
+      line-height: $line-height-relaxed;
+    }
+
+    .parameter-inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: $spacing-lg;
+      margin-bottom: $spacing-xl;
+
+      .parameter-group {
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-md;
+          color: $text-secondary;
+          font-size: $font-size-sm;
+          font-weight: $font-weight-semibold;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+
+          input {
+            @include glass-button;
+            padding: $spacing-md;
+            color: $text-primary;
+            font-size: $font-size-base;
+
+            &:focus {
+              outline: none;
+              border-color: $color-gold-500;
+              box-shadow: $shadow-glow-gold-sm;
+            }
+
+            &[readonly] {
+              opacity: 0.6;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+
+    .calculation-results {
+      h4 {
+        color: $color-gold-500;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-lg;
+      }
+
+      .result-item {
+        @include glass-card;
+        display: flex;
+        justify-content: space-between;
+        padding: $spacing-lg;
+        margin-bottom: $spacing-md;
+
+        .result-label {
+          color: $text-secondary;
+          font-weight: $font-weight-medium;
+        }
+
+        .result-value {
+          font-weight: $font-weight-bold;
+          @include gradient-text($gradient-accent);
+          font-family: 'Fira Code', 'Monaco', monospace;
+        }
+      }
+    }
+  }
+
+  .implementation-links {
+    @include glass-card;
+    padding: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-lg;
+      @include gradient-text($gradient-primary);
+    }
+
+    p {
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+      line-height: $line-height-relaxed;
+    }
+
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-md;
+
+      .implementation-link {
+        @include glass-button;
+        padding: $spacing-lg;
+        color: $color-gold-500;
+        text-decoration: none;
+        transition: all $transition-normal;
+        font-weight: $font-weight-medium;
+
+        &:hover {
+          background: $gradient-glass-gold;
+          transform: translateX(8px);
+          box-shadow: $shadow-glass-md, $shadow-glow-gold-sm;
+        }
+      }
+    }
+  }
+
+  .term-detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 1, 24, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: $z-index-modal;
+    animation: fadeIn 0.3s ease-out;
+
+    .modal-content {
+      @include glass-card-strong;
+      padding: $spacing-xxl;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: zoomIn 0.3s ease-out;
+
+      .modal-close {
+        position: absolute;
+        top: $spacing-lg;
+        right: $spacing-lg;
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        font-size: $font-size-2xl;
+        line-height: 1;
+      }
+
+      h3 {
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-extrabold;
+        margin-bottom: $spacing-xl;
+        @include gradient-text($gradient-primary);
+      }
+
+      .modal-description {
+        color: $text-secondary;
+        margin-bottom: $spacing-xl;
+        line-height: $line-height-relaxed;
+      }
+
+      .modal-implementation {
+        @include glass-card;
+        padding: $spacing-lg;
+        margin-bottom: $spacing-xl;
+
+        h4 {
+          color: $color-gold-500;
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          margin-bottom: $spacing-lg;
+        }
+      }
+
+      .modal-laws {
+        h4 {
+          color: $color-gold-500;
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          margin-bottom: $spacing-lg;
+        }
+
+        .modal-laws-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: $spacing-sm;
+
+          .modal-law-button {
+            @include glass-button;
+            padding: $spacing-md;
+            color: $text-primary;
+            font-weight: $font-weight-medium;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== Theory Doc Viewer =====
+.theory-doc-viewer {
+  .doc-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+
+    .search-box {
+      flex: 1;
+      min-width: 350px;
+
+      .doc-search-input {
+        width: 100%;
+        @include glass-button;
+        padding: $spacing-md $spacing-lg;
+        color: $text-primary;
+        font-size: $font-size-base;
+
+        &:focus {
+          outline: none;
+          border-color: $color-gold-500;
+          box-shadow: $shadow-glow-gold-sm;
+        }
+      }
+
+      .search-results-count {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+        margin-top: $spacing-sm;
+        font-weight: $font-weight-medium;
+      }
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: $spacing-sm;
+
+      .doc-action-button {
+        @include glass-button;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: $spacing-md $spacing-lg;
+        color: $text-primary;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: $spacing-xl;
+
+    .doc-sidebar {
+      @include glass-card-strong;
+      padding: $spacing-xl;
+      position: sticky;
+      top: $spacing-xl;
+      height: fit-content;
+      max-height: calc(100vh - 4rem);
+      overflow-y: auto;
+
+      // Custom scrollbar
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $glass-bg-weak;
+        border-radius: $border-radius-sm;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $gradient-primary;
+        border-radius: $border-radius-sm;
+
+        &:hover {
+          background: $gradient-accent;
+        }
+      }
+
+      .doc-toc {
+        h3 {
+          font-size: $font-size-base;
+          margin-bottom: $spacing-lg;
+          @include gradient-text($gradient-primary);
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          font-weight: $font-weight-bold;
+        }
+
+        .toc-list {
+          list-style: none;
+          padding: 0;
+
+          .toc-item {
+            margin-bottom: $spacing-xs;
+
+            &.active {
+              .toc-link {
+                color: $color-gold-500;
+                font-weight: $font-weight-bold;
+                background: $gradient-glass-gold;
+                border-left-color: $color-gold-500;
+                box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
+              }
+            }
+
+            .toc-link {
+              display: block;
+              width: 100%;
+              text-align: left;
+              padding: $spacing-md;
+              font-size: $font-size-sm;
+              border: none;
+              background: transparent;
+              color: $text-secondary;
+              transition: all $transition-normal;
+              border-left: 3px solid transparent;
+              cursor: pointer;
+              border-radius: $border-radius-sm;
+
+              &:hover {
+                color: $color-gold-500;
+                background: $gradient-glass-gold;
+                border-left-color: rgba(251, 191, 36, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .doc-main {
+      min-width: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+
+      .doc-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-xxl;
+
+        .loading-spinner {
+          width: 56px;
+          height: 56px;
+          border: 4px solid $glass-bg-strong;
+          border-top-color: $color-gold-500;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          box-shadow: $shadow-glow-gold-sm;
+        }
+
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      .search-results-panel {
+        @include glass-card;
+        padding: $spacing-xl;
+        margin-bottom: $spacing-xl;
+
+        h4 {
+          font-size: $font-size-2xl;
+          font-weight: $font-weight-bold;
+          margin-bottom: $spacing-lg;
+          @include gradient-text($gradient-primary);
+        }
+
+        .search-results-list {
+          list-style: none;
+          padding: 0;
+
+          .search-result-item {
+            margin-bottom: $spacing-sm;
+
+            .search-result-link {
+              @include glass-button;
+              width: 100%;
+              text-align: left;
+              display: flex;
+              justify-content: space-between;
+              border: none;
+              padding: $spacing-md $spacing-lg;
+              color: $text-primary;
+
+              .match-count {
+                color: $text-tertiary;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-medium;
+              }
+            }
+          }
+        }
+      }
+
+      .doc-content {
+        @include glass-card-strong;
+        padding: $spacing-xxl;
+        line-height: $line-height-relaxed;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        max-width: 100%;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: $text-primary;
+          margin-top: $spacing-xl;
+          margin-bottom: $spacing-lg;
+          overflow-wrap: break-word;
+          font-weight: $font-weight-bold;
+        }
+
+        h1 {
+          font-size: $font-size-4xl;
+          @include gradient-text($gradient-primary);
+          text-shadow: $shadow-glow-gold-md;
+        }
+
+        h2 {
+          font-size: $font-size-3xl;
+          border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+          padding-bottom: $spacing-md;
+        }
+
+        h3 {
+          font-size: $font-size-2xl;
+        }
+
+        p {
+          margin-bottom: $spacing-lg;
+          color: $text-secondary;
+        }
+
+        code {
+          @include glass-card;
+          padding: $spacing-xs $spacing-sm;
+          font-family: 'Fira Code', 'Monaco', monospace;
+          font-size: 0.9em;
+          color: $color-gold-500;
+        }
+
+        pre {
+          @include glass-card;
+          padding: $spacing-lg;
+          overflow-x: auto;
+          margin-bottom: $spacing-lg;
+
+          code {
+            background: none;
+            padding: 0;
+          }
+        }
+
+        ul,
+        ol {
+          margin-bottom: $spacing-lg;
+          padding-left: $spacing-xl;
+          color: $text-secondary;
+
+          li {
+            margin-bottom: $spacing-md;
+          }
+        }
+
+        blockquote {
+          border-left: 4px solid $color-gold-500;
+          padding-left: $spacing-lg;
+          margin: $spacing-lg 0;
+          color: $text-secondary;
+          font-style: italic;
+          background: $gradient-glass-gold;
+          padding: $spacing-lg;
+          border-radius: $border-radius-md;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: $spacing-lg;
+
+          th,
+          td {
+            padding: $spacing-md;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          th {
+            background: $gradient-glass-gold;
+            color: $text-primary;
+            font-weight: $font-weight-bold;
+          }
+
+          td {
+            color: $text-secondary;
+          }
+        }
+
+        mark.search-highlight {
+          background: $color-warning;
+          color: $color-cosmos-deepest;
+          padding: $spacing-xs $spacing-sm;
+          border-radius: $border-radius-sm;
+          box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+
+        a {
+          color: $color-gold-500;
+          text-decoration: none;
+          transition: all $transition-fast;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            color: $color-gold-500;
+            border-bottom-color: $color-gold-500;
+          }
+        }
+      }
+    }
+  }
+
+  &.print-view {
+    .doc-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ===== Badges =====
+.status-badge,
+.category-badge {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  box-shadow: 0 0 15px currentColor;
+}
+
+.status-badge {
+  &.status-fully-defined {
+    background: rgba(16, 185, 129, 0.2);
+    color: $color-success;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+  &.status-partially-defined {
+    background: rgba(245, 158, 11, 0.2);
+    color: $color-warning;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+  }
+  &.status-form-defined {
+    background: rgba(251, 191, 36, 0.2);
+    color: #FBBF24;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+  &.status-schematic {
+    background: rgba(255, 255, 255, 0.1);
+    color: $text-tertiary;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &.status-derived {
+    background: rgba(251, 191, 36, 0.2);
+    color: $color-gold-500;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+  &.status-validated {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+  }
+}
+
+.category-badge {
+  &.category-foundation {
+    background: rgba(239, 68, 68, 0.2);
+    color: $color-error;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+  }
+  &.category-symmetry {
+    background: rgba(245, 158, 11, 0.2);
+    color: #F59E0B;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+  }
+  &.category-particles {
+    background: rgba(251, 191, 36, 0.2);
+    color: $color-gold-500;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+  &.category-advanced {
+    background: rgba(16, 185, 129, 0.2);
+    color: $color-success;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+  }
+}
+
+// ===== Responsive Design =====
+@media (max-width: $breakpoint-desktop) {
+  .theory-explorer {
+    padding: $spacing-lg;
+  }
+
+  .theory-doc-viewer .doc-layout {
+    grid-template-columns: 1fr;
+
+    .doc-sidebar {
+      display: none;
+    }
+  }
+
+  .dependency-graph {
+    .graph-controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .graph-legend {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .theory-explorer {
+    padding: $spacing-md;
+
+    .explorer-header {
+      .explorer-title {
+        font-size: $font-size-3xl;
+      }
+
+      .explorer-subtitle {
+        font-size: $font-size-base;
+      }
+    }
+
+    .explorer-nav {
+      .nav-button {
+        span {
+          display: none;
+        }
+
+        svg {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .laws-browser {
+    .browser-controls {
+      flex-direction: column;
+    }
+
+    .category-filter {
+      flex-direction: column;
+    }
+  }
+
+  .law-detail {
+    .law-header .law-title {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  .lagrangian-explorer {
+    .lagrangian-terms {
+      .lagrangian-term {
+        .term-header {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .expand-button {
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .theory-explorer {
+    .explorer-content {
+      .explorer-main {
+        padding: $spacing-lg;
+      }
+    }
+  }
+
+  .theory-doc-viewer {
+    .doc-layout {
+      .doc-main {
+        .doc-content {
+          padding: $spacing-lg;
+        }
+      }
+    }
+  }
+}

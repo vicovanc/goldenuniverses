@@ -1,0 +1,304 @@
+/**
+ * Responsive styles and utilities
+ * Following mobile-first approach
+ */
+
+@import './variables.scss';
+
+// Breakpoints (matching TypeScript constants)
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Mixins for responsive design
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+// Responsive min-width mixins (mobile-first)
+@mixin from-sm {
+  @media (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin from-md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin from-lg {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin from-xl {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+@mixin from-2xl {
+  @media (min-width: #{$breakpoint-2xl}) {
+    @content;
+  }
+}
+
+// Responsive max-width mixins (desktop-first)
+@mixin until-sm {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin until-md {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin until-lg {
+  @media (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin until-xl {
+  @media (max-width: #{$breakpoint-xl - 1px}) {
+    @content;
+  }
+}
+
+// Orientation mixins
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+// Touch device mixin
+@mixin touch-device {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+// High DPI / Retina displays
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+// Utility classes for responsive visibility
+.hide-on-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hide-on-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hide-on-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.show-on-mobile {
+  display: none !important;
+
+  @include mobile {
+    display: block !important;
+  }
+}
+
+.show-on-tablet {
+  display: none !important;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+.show-on-desktop {
+  display: none !important;
+
+  @include desktop {
+    display: block !important;
+  }
+}
+
+.show-on-mobile-and-tablet {
+  display: none !important;
+
+  @include mobile-and-tablet {
+    display: block !important;
+  }
+}
+
+// Touch target sizing for accessibility
+.touch-target {
+  min-width: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.touch-target-large {
+  min-width: 56px;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Responsive container
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
+
+  @include from-sm {
+    max-width: 640px;
+  }
+
+  @include from-md {
+    max-width: 768px;
+  }
+
+  @include from-lg {
+    max-width: 1024px;
+    padding-left: $spacing-lg;
+    padding-right: $spacing-lg;
+  }
+
+  @include from-xl {
+    max-width: 1280px;
+  }
+
+  @include from-2xl {
+    max-width: 1536px;
+  }
+}
+
+// Responsive text sizes
+.text-responsive {
+  font-size: clamp(0.875rem, 1rem + 0.5vw, 1.125rem);
+}
+
+.heading-responsive {
+  font-size: clamp(1.5rem, 2rem + 1vw, 2.5rem);
+}
+
+// Responsive grid
+.grid-responsive {
+  display: grid;
+  gap: $spacing-md;
+  grid-template-columns: 1fr;
+
+  @include from-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include from-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include from-lg {
+    gap: $spacing-lg;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Responsive flex
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  @include from-lg {
+    flex-direction: row;
+    gap: $spacing-lg;
+  }
+}
+
+// Mobile-specific utilities
+@include mobile {
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-center {
+    text-align: center !important;
+  }
+
+  .mobile-no-padding {
+    padding: 0 !important;
+  }
+
+  .mobile-no-margin {
+    margin: 0 !important;
+  }
+}
+
+// Safe area insets for notch devices
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+.safe-area-all {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-03-04T20:03:21.771550+00:00",
+  "z_rec_hydrogen_only": 1063.8979719042195,
+  "delta_z_helium": 14.0,
+  "delta_z_matter_temperature": 8.0,
+  "delta_z_memory": 0.0,
+  "z_rec_extended": 1085.8979719042195,
+  "memory_fractional_shift": 0.0,
+  "memory_measurable_subpercent": false
+}

@@ -1,0 +1,471 @@
+// =============================================
+// CALCULATION RUNNER - MODERN DESIGN
+// Beautiful code editor and calculator interface
+// =============================================
+
+@import '../../styles/design-system.scss';
+
+.calculation-runner {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  padding: $space-8;
+  max-width: 1600px;
+  margin: 0 auto;
+  animation: fadeIn $transition-slower ease-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Header with gradient title and status
+  .runner-header {
+    @include glass-card;
+    padding: $space-8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    box-shadow: $shadow-lg, 0 0 40px rgba(245, 158, 11, 0.1);
+
+    h2 {
+      margin: 0;
+      font-size: $text-4xl;
+      font-weight: $font-bold;
+      background: $gradient-accent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .status-indicator {
+      .status {
+        padding: $space-3 $space-5;
+        border-radius: $radius-full;
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+        border: 1px solid;
+        display: inline-flex;
+        align-items: center;
+        gap: $space-2;
+        transition: all $transition-base;
+
+        &::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+
+        &.loading {
+          background: rgba(245, 158, 11, 0.1);
+          border-color: $color-warning;
+          color: $color-warning;
+
+          &::before {
+            background: $color-warning;
+          }
+        }
+
+        &.ready {
+          background: rgba(16, 185, 129, 0.1);
+          border-color: $color-success;
+          color: $color-success;
+
+          &::before {
+            background: $color-success;
+          }
+        }
+
+        &.error {
+          background: rgba(239, 68, 68, 0.1);
+          border-color: $color-error;
+          color: $color-error;
+
+          &::before {
+            background: $color-error;
+          }
+        }
+      }
+    }
+  }
+
+  // Content Grid Layout
+  .runner-content {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: $space-6;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Preset Selection Sidebar
+  .preset-section {
+    @include glass-card;
+    padding: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    max-height: calc(100vh - 250px);
+    overflow: hidden;
+
+    h3 {
+      margin: 0;
+      font-size: $text-xl;
+      font-weight: $font-semibold;
+      background: $gradient-primary;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom: $space-3;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .preset-tabs {
+      display: flex;
+      gap: $space-2;
+      flex-wrap: wrap;
+
+      .tab {
+        @include button-base;
+        padding: $space-2 $space-4;
+        font-size: $text-xs;
+        font-weight: $font-semibold;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: $text-secondary;
+        transition: all $transition-base;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: $brand-primary;
+          color: $text-primary;
+          transform: translateY(-1px);
+        }
+
+        &.active {
+          background: $gradient-primary;
+          border-color: $brand-primary;
+          color: white;
+          box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+        }
+      }
+    }
+
+    .preset-list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-3;
+      overflow-y: auto;
+      padding-right: $space-2;
+      @include custom-scrollbar;
+
+      .preset-item {
+        @include glass-card;
+        padding: $space-4;
+        cursor: pointer;
+        transition: all $transition-base;
+        display: flex;
+        flex-direction: column;
+        gap: $space-2;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: $brand-primary;
+          transform: translateX(4px);
+          box-shadow: $shadow-md, 0 0 20px rgba(245, 158, 11, 0.15);
+        }
+
+        &.selected {
+          background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
+          border-color: $brand-accent;
+          box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2), $shadow-md;
+        }
+
+        .preset-name {
+          font-weight: $font-semibold;
+          color: $text-primary;
+          font-size: $text-sm;
+        }
+
+        .preset-description {
+          font-size: $text-xs;
+          color: $text-secondary;
+          line-height: $leading-normal;
+        }
+
+        .preset-tags {
+          display: flex;
+          gap: $space-2;
+          flex-wrap: wrap;
+          margin-top: $space-1;
+
+          .tag {
+            padding: $space-1 $space-2;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            color: $brand-primary;
+            border-radius: $radius-sm;
+            font-size: 10px;
+            font-weight: $font-medium;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+    }
+  }
+
+  // Code Editor Section
+  .editor-section {
+    @include glass-card;
+    padding: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+
+    .editor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: $space-4;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      h3 {
+        margin: 0;
+        font-size: $text-xl;
+        font-weight: $font-semibold;
+        color: $text-primary;
+      }
+
+      .editor-actions {
+        display: flex;
+        gap: $space-3;
+
+        button {
+          @include button-base;
+          padding: $space-2 $space-5;
+          font-size: $text-sm;
+          transition: all $transition-base;
+
+          &.btn-primary {
+            background: $gradient-accent;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+
+            &:hover:not(:disabled) {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+            }
+          }
+
+          &.btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: $text-primary;
+
+            &:hover:not(:disabled) {
+              background: rgba(255, 255, 255, 0.1);
+              border-color: rgba(255, 255, 255, 0.25);
+            }
+          }
+
+          &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .code-editor {
+      @include input-style;
+      min-height: 450px;
+      padding: $space-5;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: $radius-lg;
+      font-family: $font-family-mono;
+      font-size: $text-sm;
+      line-height: $leading-relaxed;
+      color: $text-primary;
+      resize: vertical;
+      transition: all $transition-base;
+
+      &:focus {
+        outline: none;
+        background: rgba(0, 0, 0, 0.4);
+        border-color: $brand-accent;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1), $shadow-lg;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Results Section
+  .results-section {
+    grid-column: 2;
+    @include glass-card;
+    padding: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    animation: slideIn $transition-slower ease-out;
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      grid-column: 1;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: $space-4;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      h3 {
+        margin: 0;
+        font-size: $text-xl;
+        font-weight: $font-semibold;
+        color: $text-primary;
+      }
+
+      .execution-time {
+        padding: $space-2 $space-4;
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        color: $color-info;
+        border-radius: $radius-full;
+        font-size: $text-xs;
+        font-weight: $font-semibold;
+        font-family: $font-family-mono;
+      }
+    }
+
+    .results-content {
+      .result-json {
+        padding: $space-6;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: $radius-lg;
+        overflow-x: auto;
+        font-family: $font-family-mono;
+        font-size: $text-sm;
+        line-height: $leading-relaxed;
+        color: $text-primary;
+        @include custom-scrollbar;
+      }
+    }
+
+    .results-error {
+      padding: $space-6;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: $radius-lg;
+
+      .error-message {
+        color: $color-error;
+        font-family: $font-family-mono;
+        font-size: $text-sm;
+        white-space: pre-wrap;
+        line-height: $leading-relaxed;
+      }
+    }
+  }
+
+  // Help Section
+  .help-section {
+    @include glass-card;
+    padding: $space-6;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+
+    h4 {
+      margin: 0 0 $space-5 0;
+      font-size: $text-lg;
+      font-weight: $font-semibold;
+      color: $text-primary;
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $space-5;
+
+      .help-item {
+        strong {
+          display: block;
+          margin-bottom: $space-2;
+          color: $text-primary;
+          font-weight: $font-semibold;
+          font-size: $text-sm;
+        }
+
+        code {
+          display: block;
+          padding: $space-4;
+          background: rgba(0, 0, 0, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: $radius-md;
+          font-size: $text-xs;
+          color: $brand-accent;
+          line-height: $leading-relaxed;
+          font-family: $font-family-mono;
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    padding: $space-4;
+
+    .runner-header {
+      flex-direction: column;
+      gap: $space-4;
+      text-align: center;
+    }
+
+    .preset-section {
+      max-height: 400px;
+    }
+  }
+}

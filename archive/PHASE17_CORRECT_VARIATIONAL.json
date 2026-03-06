@@ -1,0 +1,43 @@
+{
+  "variational_principle": "Minimize total soliton energy E[p,q], NOT just L_Omega",
+  "electron": {
+    "N": 111,
+    "winding": [
+      -41,
+      70
+    ],
+    "m_theory_MeV": 0.5121035949091731,
+    "error_%": 0.21617348092036492,
+    "y": 3.660606461254311
+  },
+  "muon": {
+    "N": 100,
+    "winding": [
+      -37,
+      63
+    ],
+    "m_theory_MeV": 111.66489018246196,
+    "error_%": 5.684844816170729,
+    "y": 3.132742416253891,
+    "step_from_e": [
+      4,
+      -7
+    ],
+    "Manhattan_length": 11
+  },
+  "tau": {
+    "N": 94,
+    "winding": [
+      -37,
+      57
+    ],
+    "m_theory_MeV": 1977.130306934121,
+    "error_%": 11.271023430890516,
+    "y": 2.867257583746109,
+    "step_from_e": [
+      4,
+      -13
+    ],
+    "Manhattan_length": 17
+  }
+}

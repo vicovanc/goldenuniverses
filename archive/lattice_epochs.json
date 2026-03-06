@@ -1,0 +1,722 @@
+{
+  "all_resonances": [
+    {
+      "N": 144,
+      "k": 55,
+      "deviation": 0.0031056200151418586,
+      "quality": 5.64658184571247e-05,
+      "phase_quality": 0.019511947751204226,
+      "octave_quality": 0.16992500144231237,
+      "golden_quality": 0.3277040188287847,
+      "total_quality": 0.010503910665693166,
+      "predicted_mass": 6.174989293262617e-08
+    },
+    {
+      "N": 34,
+      "k": 13,
+      "deviation": 0.013155617496424838,
+      "quality": 0.0010119705766480646,
+      "phase_quality": 0.08256508601052805,
+      "octave_quality": 0.0874628412503394,
+      "golden_quality": 0.3280836857643354,
+      "total_quality": 0.013641621240217842,
+      "predicted_mass": 6015567944432537.0
+    },
+    {
+      "N": 123,
+      "k": 47,
+      "deviation": 0.01818061623706633,
+      "quality": 0.00038682162206524104,
+      "phase_quality": 0.113983907071891,
+      "octave_quality": 0.057485494660760125,
+      "golden_quality": 0.00013737147123272058,
+      "total_quality": 0.014659487062292347,
+      "predicted_mass": 0.0015113903819418332
+    },
+    {
+      "N": 55,
+      "k": 21,
+      "deviation": 0.008130618755783348,
+      "quality": 0.000387172321703969,
+      "phase_quality": 0.05106396643182106,
+      "octave_quality": 0.2186402864753404,
+      "golden_quality": 0.3275866812627018,
+      "total_quality": 0.016425583288653095,
+      "predicted_mass": 245774143421.7643
+    },
+    {
+      "N": 127,
+      "k": 49,
+      "deviation": 0.49031657123664574,
+      "quality": 0.010006460637482565,
+      "phase_quality": 0.06080524586931283,
+      "octave_quality": 0.011315313227834146,
+      "golden_quality": 0.0666418283852121,
+      "total_quality": 0.016652750885805555,
+      "predicted_mass": 0.00022050888495445174
+    },
+    {
+      "N": 110,
+      "k": 42,
+      "deviation": 0.016261237511566697,
+      "quality": 0.000387172321703969,
+      "phase_quality": 0.10199469519532885,
+      "octave_quality": 0.2186402864753404,
+      "golden_quality": 0.2319932283247417,
+      "total_quality": 0.021518656165003876,
+      "predicted_mass": 0.7874372899222402
+    },
+    {
+      "N": 68,
+      "k": 26,
+      "deviation": 0.026311234992849677,
+      "quality": 0.0010119705766480646,
+      "phase_quality": 0.164566363860049,
+      "octave_quality": 0.0874628412503394,
+      "golden_quality": 0.23149622382310817,
+      "total_quality": 0.021841749025169936,
+      "predicted_mass": 471733662.1616296
+    },
+    {
+      "N": 199,
+      "k": 76,
+      "deviation": 0.011236238770925206,
+      "quality": 0.000147845246985858,
+      "phase_quality": 0.07054073723402654,
+      "octave_quality": 0.3633753794563512,
+      "golden_quality": 5.2473629762526006e-05,
+      "total_quality": 0.02537068794320607,
+      "predicted_mass": 1.9784086180462614e-19
+    },
+    {
+      "N": 131,
+      "k": 50,
+      "deviation": 0.03754747376377489,
+      "quality": 0.0007509494752754977,
+      "phase_quality": 0.23373539824275621,
+      "octave_quality": 0.03342300153745028,
+      "golden_quality": 0.1310837957843285,
+      "total_quality": 0.025795639376423634,
+      "predicted_mass": 3.217181273932903e-05
+    },
+    {
+      "N": 161,
+      "k": 61,
+      "deviation": 0.49652781126692946,
+      "quality": 0.008139800184703762,
+      "phase_quality": 0.021814674666088888,
+      "octave_quality": 0.33091687811461695,
+      "golden_quality": 0.44040004761920715,
+      "total_quality": 0.0268671115570435,
+      "predicted_mass": 1.7292043710521766e-11
+    },
+    {
+      "N": 89,
+      "k": 34,
+      "deviation": 0.00502499874064149,
+      "quality": 0.00014779408060710265,
+      "phase_quality": 0.03156775290449167,
+      "octave_quality": 0.47573343096639775,
+      "golden_quality": 0.3277765341202332,
+      "total_quality": 0.027091240919376158,
+      "predicted_mass": 19273.31514030856
+    },
+    {
+      "N": 72,
+      "k": 28,
+      "deviation": 0.4984471899924291,
+      "quality": 0.017801685356872467,
+      "phase_quality": 0.00975643823499867,
+      "octave_quality": 0.16992500144231237,
+      "golden_quality": 0.11271607158377177,
+      "total_quality": 0.027273579252487953,
+      "predicted_mass": 68825013.76321734
+    },
+    {
+      "N": 178,
+      "k": 68,
+      "deviation": 0.01004999748128298,
+      "quality": 0.00014779408060710265,
+      "phase_quality": 0.06310403997535492,
+      "octave_quality": 0.47573343096639775,
+      "golden_quality": 0.2318033754672103,
+      "total_quality": 0.030244869626462483,
+      "predicted_mass": 4.842352941613085e-15
+    },
+    {
+      "N": 140,
+      "k": 53,
+      "deviation": 0.47524157501472125,
+      "quality": 0.008966822170089081,
+      "phase_quality": 0.15493511221062714,
+      "octave_quality": 0.12928301694496647,
+      "golden_quality": 0.26916248784457203,
+      "total_quality": 0.030924484238400118,
+      "predicted_mass": 4.232400625652205e-07
+    },
+    {
+      "N": 76,
+      "k": 29,
+      "deviation": 0.029416855007991537,
+      "quality": 0.0010143743106203979,
+      "phase_quality": 0.1837809564573495,
+      "octave_quality": 0.2479275134435855,
+      "golden_quality": 0.000359686194491397,
+      "total_quality": 0.03178884562853462,
+      "predicted_mass": 10041434.18089181
+    },
+    {
+      "N": 106,
+      "k": 40,
+      "deviation": 0.4883971925111461,
+      "quality": 0.012209929812778653,
+      "phase_quality": 0.07283802973179823,
+      "octave_quality": 0.2720795454368008,
+      "golden_quality": 0.30896821054958856,
+      "total_quality": 0.03309771005779852,
+      "predicted_mass": 5.397175477154349
+    },
+    {
+      "N": 165,
+      "k": 63,
+      "deviation": 0.024391856267350045,
+      "quality": 0.000387172321703969,
+      "phase_quality": 0.15265929627002317,
+      "octave_quality": 0.3663222142458158,
+      "golden_quality": 0.3894014901480188,
+      "total_quality": 0.033969212660997075,
+      "predicted_mass": 2.5228751768896346e-12
+    },
+    {
+      "N": 157,
+      "k": 60,
+      "deviation": 0.03133623373349117,
+      "quality": 0.0005222705622248529,
+      "phase_quality": 0.1956217049129563,
+      "octave_quality": 0.294620748891627,
+      "golden_quality": 0.4926817213562122,
+      "total_quality": 0.034815478498101834,
+      "predicted_mass": 1.1852143079676273e-10
+    },
+    {
+      "N": 21,
+      "k": 8,
+      "deviation": 0.02128623625220819,
+      "quality": 0.0026607795315260236,
+      "phase_quality": 0.1333469877603102,
+      "octave_quality": 0.3923174227787603,
+      "golden_quality": 0.32678225923962895,
+      "total_quality": 0.035611349446495064,
+      "predicted_mass": 3.1341224452024863e+18
+    },
+    {
+      "N": 195,
+      "k": 74,
+      "deviation": 0.4833721937705046,
+      "quality": 0.0065320566725743864,
+      "phase_quality": 0.10428563040049849,
+      "octave_quality": 0.3926696862503893,
+      "golden_quality": 0.04224858167060412,
+      "total_quality": 0.0365941040251437,
+      "predicted_mass": 1.3560214398996201e-18
+    },
+    {
+      "N": 136,
+      "k": 52,
+      "deviation": 0.052622469985699354,
+      "quality": 0.0010119705766480646,
+      "phase_quality": 0.32464533643653154,
+      "octave_quality": 0.0874628412503394,
+      "golden_quality": 0.2089238665894483,
+      "total_quality": 0.03784964628281819,
+      "predicted_mass": 2.9009305450239174e-06
+    },
+    {
+      "N": 148,
+      "k": 57,
+      "deviation": 0.4690303349844375,
+      "quality": 0.008228602368148027,
+      "phase_quality": 0.19336246836138885,
+      "octave_quality": 0.20945336562894978,
+      "golden_quality": 0.38464146874436145,
+      "total_quality": 0.038037517485734404,
+      "predicted_mass": 9.009187963162658e-09
+    },
+    {
+      "N": 102,
+      "k": 39,
+      "deviation": 0.03946685248927451,
+      "quality": 0.0010119705766480646,
+      "phase_quality": 0.24544387543674454,
+      "octave_quality": 0.3275746580285044,
+      "golden_quality": 0.38890448564638525,
+      "total_quality": 0.04193509102174774,
+      "predicted_mass": 36.9927910501582
+    },
+    {
+      "N": 182,
+      "k": 70,
+      "deviation": 0.4821859524808624,
+      "quality": 0.006888370749726605,
+      "phase_quality": 0.1116953985900558,
+      "octave_quality": 0.49220535980130375,
+      "golden_quality": 0.18562176556608698,
+      "total_quality": 0.042668178598797374,
+      "predicted_mass": 7.064897729064052e-16
+    },
+    {
+      "N": 63,
+      "k": 24,
+      "deviation": 0.06385870875662457,
+      "quality": 0.0026607795315260236,
+      "phase_quality": 0.39055656855670784,
+      "octave_quality": 0.02272007650008353,
+      "golden_quality": 0.39020591217109163,
+      "total_quality": 0.042852440212200985,
+      "predicted_mass": 5231606481.559773
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "deviation": 0.034441853748633025,
+      "quality": 0.006888370749726605,
+      "phase_quality": 0.2147194290412549,
+      "octave_quality": 0.2995602818589078,
+      "golden_quality": 0.330187713371007,
+      "total_quality": 0.04333832774679749,
+      "predicted_mass": 1.4723704125370493e+20
+    },
+    {
+      "N": 119,
+      "k": 45,
+      "deviation": 0.45395533876251304,
+      "quality": 0.010087896416944735,
+      "phase_quality": 0.28528822667457626,
+      "octave_quality": 0.10518223669205648,
+      "golden_quality": 0.06856597399787157,
+      "total_quality": 0.04387583091900518,
+      "predicted_mass": 0.010359223788638381
+    },
+    {
+      "N": 114,
+      "k": 44,
+      "deviation": 0.45587471748801267,
+      "quality": 0.010360789033818471,
+      "phase_quality": 0.27370913331075236,
+      "octave_quality": 0.16710998583525832,
+      "golden_quality": 0.15776794801776847,
+      "total_quality": 0.046087201656656626,
+      "predicted_mass": 0.11488555230133192
+    },
+    {
+      "N": 42,
+      "k": 16,
+      "deviation": 0.04257247250441638,
+      "quality": 0.0026607795315260236,
+      "phase_quality": 0.26431224169869316,
+      "octave_quality": 0.3923174227787603,
+      "golden_quality": 0.23279765034781458,
+      "total_quality": 0.04870787484033336,
+      "predicted_mass": 128048800456401.36
+    },
+    {
+      "N": 191,
+      "k": 73,
+      "deviation": 0.04449185122991601,
+      "quality": 0.0006094774141084385,
+      "phase_quality": 0.27592367039400945,
+      "octave_quality": 0.4225711719642513,
+      "golden_quality": 0.085319282426035,
+      "total_quality": 0.049330403051721955,
+      "predicted_mass": 9.294309217492714e-18
+    },
+    {
+      "N": 152,
+      "k": 58,
+      "deviation": 0.05883371001598307,
+      "quality": 0.0010143743106203979,
+      "phase_quality": 0.3613013125474707,
+      "octave_quality": 0.2479275134435855,
+      "golden_quality": 0.4400604042180651,
+      "total_quality": 0.04954088123754675,
+      "predicted_mass": 1.3144228095124411e-09
+    },
+    {
+      "N": 93,
+      "k": 36,
+      "deviation": 0.4771609537402209,
+      "quality": 0.013254470937228358,
+      "phase_quality": 0.1430099485988639,
+      "octave_quality": 0.4608411888919686,
+      "golden_quality": 0.4191357259182959,
+      "total_quality": 0.05059752524171318,
+      "predicted_mass": 2811.9387828212043
+    },
+    {
+      "N": 118,
+      "k": 45,
+      "deviation": 0.07198932751240791,
+      "quality": 0.0015997628336090646,
+      "phase_quality": 0.43705545405486357,
+      "octave_quality": 0.11735695063815874,
+      "golden_quality": 0.08610267656086319,
+      "total_quality": 0.05117315577100336,
+      "predicted_mass": 0.016761576187083356
+    },
+    {
+      "N": 64,
+      "k": 24,
+      "deviation": 0.44582472000672974,
+      "quality": 0.018576030000280404,
+      "phase_quality": 0.3338578736796303,
+      "octave_quality": 0.0,
+      "golden_quality": 0.35747945752466115,
+      "total_quality": 0.051961817368243436,
+      "predicted_mass": 3233310621.3681903
+    },
+    {
+      "N": 186,
+      "k": 71,
+      "deviation": 0.04567809251955823,
+      "quality": 0.0006433534157684258,
+      "phase_quality": 0.2830799704539746,
+      "octave_quality": 0.4608411888919686,
+      "golden_quality": 0.1404441836691476,
+      "total_quality": 0.05199340990576432,
+      "predicted_mass": 1.030754687317514e-16
+    },
+    {
+      "N": 135,
+      "k": 52,
+      "deviation": 0.4345884812358045,
+      "quality": 0.00835747079299624,
+      "phase_quality": 0.39951955142111545,
+      "octave_quality": 0.0768155970508309,
+      "golden_quality": 0.1935873621369477,
+      "total_quality": 0.05215020578764933,
+      "predicted_mass": 4.693804220851456e-06
+    },
+    {
+      "N": 97,
+      "k": 37,
+      "deviation": 0.05070309126019972,
+      "quality": 0.0013703538178432358,
+      "phase_quality": 0.31321540274362675,
+      "octave_quality": 0.4000871578128723,
+      "golden_quality": 0.4933529471418249,
+      "total_quality": 0.05269625198284953,
+      "predicted_mass": 410.25633943986907
+    },
+    {
+      "N": 174,
+      "k": 66,
+      "deviation": 0.4620859575182964,
+      "quality": 0.007001302386640855,
+      "phase_quality": 0.23597419687328755,
+      "octave_quality": 0.4429434958487283,
+      "golden_quality": 0.2790346567740256,
+      "total_quality": 0.052745896866406024,
+      "predicted_mass": 3.3189980818385185e-14
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "deviation": 0.05572809000084122,
+      "quality": 0.018576030000280404,
+      "phase_quality": 0.343038630874104,
+      "octave_quality": 0.0,
+      "golden_quality": 0.3212602712376694,
+      "total_quality": 0.05287989308769081,
+      "predicted_mass": 1.6328838095184396e+21
+    },
+    {
+      "N": 115,
+      "k": 44,
+      "deviation": 0.07390870623790755,
+      "quality": 0.001679743323588808,
+      "phase_quality": 0.44787042094446894,
+      "octave_quality": 0.1545099490556248,
+      "golden_quality": 0.1396186019004472,
+      "total_quality": 0.05419228287081695,
+      "predicted_mass": 0.07100317613852683
+    },
+    {
+      "N": 47,
+      "k": 18,
+      "deviation": 0.047597471245057865,
+      "quality": 0.00264430395805877,
+      "phase_quality": 0.29462562626832905,
+      "octave_quality": 0.4454111483223626,
+      "golden_quality": 0.0009413759380806937,
+      "total_quality": 0.05437742400100981,
+      "predicted_mass": 11546153134341.363
+    },
+    {
+      "N": 85,
+      "k": 32,
+      "deviation": 0.4671109562589379,
+      "quality": 0.01459721738309181,
+      "phase_quality": 0.20518033257118035,
+      "octave_quality": 0.4093909361377018,
+      "golden_quality": 0.23221547172088838,
+      "total_quality": 0.055584797447094936,
+      "predicted_mass": 132101.26719933873
+    },
+    {
+      "N": 81,
+      "k": 31,
+      "deviation": 0.060753088741482705,
+      "quality": 0.0019597770561768616,
+      "phase_quality": 0.3725199279041998,
+      "octave_quality": 0.33985000288462475,
+      "golden_quality": 0.1320473143571176,
+      "total_quality": 0.05620426999082808,
+      "predicted_mass": 905435.5552550625
+    },
+    {
+      "N": 153,
+      "k": 58,
+      "deviation": 0.44079972126608824,
+      "quality": 0.0075999951942429,
+      "phase_quality": 0.3634479870302781,
+      "octave_quality": 0.25738784269265175,
+      "golden_quality": 0.4536872525303377,
+      "total_quality": 0.0568141860319033,
+      "predicted_mass": 8.123579718668173e-10
+    },
+    {
+      "N": 60,
+      "k": 23,
+      "deviation": 0.08203932499369089,
+      "quality": 0.0035669271736387346,
+      "phase_quality": 0.49294233692208467,
+      "octave_quality": 0.09310940439148147,
+      "golden_quality": 0.4915961142164981,
+      "total_quality": 0.05751663108542128,
+      "predicted_mass": 22161440687.415703
+    },
+    {
+      "N": 132,
+      "k": 50,
+      "deviation": 0.41951348501388,
+      "quality": 0.0083902697002776,
+      "phase_quality": 0.48443016925700655,
+      "octave_quality": 0.044394119358453436,
+      "golden_quality": 0.14688681430798467,
+      "total_quality": 0.059052992593900934,
+      "predicted_mass": 1.98832737526022e-05
+    },
+    {
+      "N": 169,
+      "k": 65,
+      "deviation": 0.44774409873222937,
+      "quality": 0.006888370749726605,
+      "phase_quality": 0.3224660100577991,
+      "octave_quality": 0.4008794362821843,
+      "golden_quality": 0.339624573257986,
+      "total_quality": 0.059178943569615734,
+      "predicted_mass": 3.6808252770567696e-13
+    },
+    {
+      "N": 29,
+      "k": 11,
+      "deviation": 0.07701432625304941,
+      "quality": 0.007001302386640855,
+      "phase_quality": 0.4652307598491165,
+      "octave_quality": 0.14201900487242788,
+      "golden_quality": 0.00246657577586147,
+      "total_quality": 0.0606253286151739,
+      "predicted_mass": 6.671367081192853e+16
+    },
+    {
+      "N": 170,
+      "k": 65,
+      "deviation": 0.0657780874821242,
+      "quality": 0.0010119705766480646,
+      "phase_quality": 0.40162990771985324,
+      "octave_quality": 0.4093909361377018,
+      "golden_quality": 0.32736443786655517,
+      "total_quality": 0.06164450815551848,
+      "predicted_mass": 2.274875127870832e-13
+    },
+    {
+      "N": 139,
+      "k": 53,
+      "deviation": 0.0932755637646161,
+      "quality": 0.0017599162974455869,
+      "phase_quality": 0.5530891816203302,
+      "octave_quality": 0.11894107272350743,
+      "golden_quality": 0.2542657436140564,
+      "total_quality": 0.06301588809565398,
+      "predicted_mass": 6.848168066311587e-07
+    }
+  ],
+  "lepton_epochs": {
+    "electron": {
+      "N": 111,
+      "resonance": 42.39822724876167,
+      "k": 42,
+      "quality": 0.0095
+    },
+    "muon": {
+      "N": 99,
+      "resonance": 37.81463511376041,
+      "k": 38,
+      "quality": 0.004878023322094473,
+      "Delta_N": 11
+    },
+    "tau": {
+      "N": 94,
+      "resonance": 35.90480505750988,
+      "k": 36,
+      "quality": 0.00264430395805877,
+      "Delta_N": 17
+    }
+  },
+  "quark_epochs": {
+    "up": {
+      "N": 110,
+      "estimated_N": 107.90304453788309,
+      "resonance": 42.016261237511564,
+      "k": 42,
+      "quality": 0.000387172321703969,
+      "mass_MeV": 2.16
+    },
+    "down": {
+      "N": 105,
+      "estimated_N": 106.30073385092267,
+      "resonance": 40.106431181261044,
+      "k": 40,
+      "quality": 0.0026607795315260236,
+      "mass_MeV": 4.67
+    },
+    "strange": {
+      "N": 102,
+      "estimated_N": 100.08426063540698,
+      "resonance": 38.96053314751072,
+      "k": 39,
+      "quality": 0.0010119705766480646,
+      "mass_MeV": 93
+    },
+    "charm": {
+      "N": 97,
+      "estimated_N": 94.65178256615839,
+      "resonance": 37.050703091260196,
+      "k": 37,
+      "quality": 0.0013703538178432358,
+      "mass_MeV": 1270
+    },
+    "bottom": {
+      "N": 89,
+      "estimated_N": 92.17616936625706,
+      "resonance": 33.994975001259355,
+      "k": 34,
+      "quality": 0.00014779408060710265,
+      "mass_MeV": 4180
+    },
+    "top": {
+      "N": 81,
+      "estimated_N": 84.4423774938423,
+      "resonance": 30.93924691125852,
+      "k": 31,
+      "quality": 0.0019597770561768616,
+      "mass_MeV": 172760
+    }
+  },
+  "gauge_epochs": {
+    "W": {
+      "N": 89,
+      "resonance": 33.994975001259355,
+      "k": 34,
+      "quality": 0.00014779408060710265
+    },
+    "Z": {
+      "N": 89,
+      "resonance": 33.994975001259355,
+      "k": 34,
+      "quality": 0.00014779408060710265
+    },
+    "photon": {
+      "N": 137,
+      "note": "Massless, but \u03b1^(-1) \u2248 137 suggests this epoch"
+    },
+    "gluons": {
+      "N": 95,
+      "note": "8 gluons emerge at QCD scale"
+    }
+  },
+  "su5_check": {
+    "first_generation": {
+      "electron": 111,
+      "up": 110,
+      "down": 105
+    },
+    "clustering": 2.6246692913372702,
+    "su5_compatible": "True"
+  },
+  "mass_predictions": {
+    "electron": {
+      "N": 111,
+      "predicted_MeV": 0.48666300918104943,
+      "actual_MeV": 0.51099895,
+      "error_percent": 4.762424818867147,
+      "C_needed": 1.0500057336593196
+    },
+    "muon": {
+      "N": 99,
+      "predicted_MeV": 156.70397756591598,
+      "actual_MeV": 105.6583755,
+      "error_percent": 48.311931566576064,
+      "C_needed": 0.6742545858834749
+    },
+    "tau": {
+      "N": 94,
+      "predicted_MeV": 1737.8737420675131,
+      "actual_MeV": 1776.86,
+      "error_percent": 2.194109717844217,
+      "C_needed": 1.0224333085820754
+    },
+    "up": {
+      "N": 110,
+      "predicted_MeV": 0.7874372899222402,
+      "actual_MeV": 2.16,
+      "error_percent": 63.5445699110074,
+      "C_needed": 2.7430755790258563
+    },
+    "down": {
+      "N": 105,
+      "predicted_MeV": 8.732813365283167,
+      "actual_MeV": 4.67,
+      "error_percent": 86.99814486687725,
+      "C_needed": 0.5347646634205347
+    },
+    "strange": {
+      "N": 102,
+      "predicted_MeV": 36.9927910501582,
+      "actual_MeV": 93,
+      "error_percent": 60.22280532241054,
+      "C_needed": 2.514003333079197
+    },
+    "charm": {
+      "N": 97,
+      "predicted_MeV": 410.25633943986907,
+      "actual_MeV": 1270,
+      "error_percent": 67.69635122520717,
+      "C_needed": 3.0956255343523895
+    },
+    "bottom": {
+      "N": 89,
+      "predicted_MeV": 19273.31514030856,
+      "actual_MeV": 4180,
+      "error_percent": 361.0840942657551,
+      "C_needed": 0.21688017705152718
+    },
+    "top": {
+      "N": 81,
+      "predicted_MeV": 905435.5552550625,
+      "actual_MeV": 172760,
+      "error_percent": 424.1002287885289,
+      "C_needed": 0.19080319852397806
+    }
+  }
+}

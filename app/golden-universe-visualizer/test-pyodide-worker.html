@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyodide Worker Test</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+        .status {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background: #1a1a1a;
+            border-left: 4px solid #c9a84e;
+        }
+        .status.loading { border-color: #ff9800; }
+        .status.ready { border-color: #4caf50; }
+        .status.error { border-color: #f44336; }
+        button {
+            padding: 12px 24px;
+            margin: 10px 5px;
+            background: #c9a84e;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover { background: #d4b35e; }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        pre {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #333;
+        }
+        .result {
+            margin: 20px 0;
+        }
+        h1 { color: #c9a84e; }
+        h2 { color: #d4b35e; margin-top: 30px; }
+        .log {
+            background: #0d0d0d;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-size: 13px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #222;
+        }
+        .success { color: #4caf50; }
+        .error { color: #f44336; }
+        .info { color: #2196f3; }
+        .warning { color: #ff9800; }
+    </style>
+</head>
+<body>
+    <h1>Pyodide Worker Test - Golden Universe</h1>
+    <p>This page tests the Pyodide worker fix for the "self.loadPyodide is not a function" error.</p>
+
+    <div id="status" class="status loading">
+        <strong>Status:</strong> <span id="statusText">Initializing worker...</span>
+    </div>
+
+    <div id="logs"></div>
+
+    <h2>Test Actions</h2>
+    <button id="btnInit" disabled>Initialize Pyodide</button>
+    <button id="btnElectron" disabled>Calculate Electron Mass</button>
+    <button id="btnSimple" disabled>Run Simple Python</button>
+
+    <div id="results"></div>
+
+    <script type="module">
+        // Create the worker - this tests the actual fix
+        let worker = null;
+        let workerReady = false;
+
+        function log(message, type = 'info') {
+            const logsDiv = document.getElementById('logs');
+            const logEntry = document.createElement('div');
+            logEntry.className = `log ${type}`;
+            logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logsDiv.insertBefore(logEntry, logsDiv.firstChild);
+        }
+
+        function updateStatus(text, className) {
+            const statusDiv = document.getElementById('status');
+            const statusText = document.getElementById('statusText');
+            statusDiv.className = `status ${className}`;
+            statusText.textContent = text;
+        }
+
+        function displayResult(title, data) {
+            const resultsDiv = document.getElementById('results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = `
+                <h2>${title}</h2>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+            resultsDiv.insertBefore(resultDiv, resultsDiv.firstChild);
+        }
+
+        function enableButtons() {
+            document.querySelectorAll('button').forEach(btn => {
+                btn.disabled = false;
+            });
+        }
+
+        // Initialize worker
+        try {
+            log('Creating worker from pythonWorker.ts...', 'info');
+
+            // This is the key test - can we create the worker without errors?
+            worker = new Worker(
+                new URL('./src/services/pythonEngine/pythonWorker.ts', import.meta.url),
+                { type: 'module' }
+            );
+
+            log('Worker created successfully!', 'success');
+
+            // Handle worker messages
+            worker.onmessage = (event) => {
+                const { type, payload } = event.data;
+
+                switch (type) {
+                    case 'progress':
+                        const stage = payload.stage || 'unknown';
+                        const progress = payload.progress || 0;
+                        log(`Progress: ${stage} (${progress}%)`, 'info');
+                        updateStatus(`${stage} - ${progress}%`, 'loading');
+                        break;
+
+                    case 'ready':
+                        workerReady = true;
+                        const version = payload.version || 'unknown';
+                        log(`Pyodide ready! Version: ${version}`, 'success');
+                        updateStatus(`Ready! Pyodide v${version}`, 'ready');
+                        enableButtons();
+                        break;
+
+                    case 'result':
+                        log('Calculation completed successfully', 'success');
+                        displayResult('Calculation Result', payload);
+                        break;
+
+                    case 'error':
+                        log(`Error: ${payload.error}`, 'error');
+                        updateStatus(`Error: ${payload.error}`, 'error');
+                        displayResult('Error', payload);
+                        break;
+
+                    default:
+                        log(`Unknown message type: ${type}`, 'warning');
+                }
+            };
+
+            worker.onerror = (error) => {
+                log(`Worker error: ${error.message}`, 'error');
+                updateStatus(`Worker Error: ${error.message}`, 'error');
+            };
+
+            updateStatus('Worker created, ready to initialize', 'loading');
+            document.getElementById('btnInit').disabled = false;
+
+        } catch (error) {
+            log(`Failed to create worker: ${error.message}`, 'error');
+            updateStatus(`Failed: ${error.message}`, 'error');
+        }
+
+        // Button handlers
+        document.getElementById('btnInit').addEventListener('click', () => {
+            if (!worker) {
+                log('Worker not available', 'error');
+                return;
+            }
+
+            log('Sending init message to worker...', 'info');
+            updateStatus('Initializing Pyodide...', 'loading');
+            worker.postMessage({ type: 'init', id: 'init-1' });
+        });
+
+        document.getElementById('btnElectron').addEventListener('click', () => {
+            if (!workerReady) {
+                log('Pyodide not ready yet', 'warning');
+                return;
+            }
+
+            const code = `
+import json
+
+# Calculate electron mass
+result = calculate_electron_mass(NU_E)
+
+# Format result
+result_json = to_json(result)
+result_json
+`;
+
+            log('Executing electron mass calculation...', 'info');
+            worker.postMessage({
+                type: 'execute',
+                id: 'calc-electron',
+                payload: { code }
+            });
+        });
+
+        document.getElementById('btnSimple').addEventListener('click', () => {
+            if (!workerReady) {
+                log('Pyodide not ready yet', 'warning');
+                return;
+            }
+
+            const code = `
+# Simple test
+import mpmath as mp
+result = {
+    'phi': str(mp.phi),
+    'pi': str(mp.pi),
+    'e': str(mp.e),
+    'phi_squared': str(mp.phi ** 2)
+}
+to_json(result)
+`;
+
+            log('Executing simple Python test...', 'info');
+            worker.postMessage({
+                type: 'execute',
+                id: 'calc-simple',
+                payload: { code }
+            });
+        });
+
+        // Auto-initialize on page load
+        log('Page loaded, worker ready for initialization', 'success');
+    </script>
+</body>
+</html>

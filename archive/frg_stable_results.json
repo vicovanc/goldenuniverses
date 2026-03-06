@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "integration": "STABLE with positive time formulation",
+  "final_values": {
+    "m_bar": NaN,
+    "lambda_S": NaN,
+    "lambda_V": NaN,
+    "alpha_em": NaN,
+    "R_mem": NaN
+  },
+  "targets": {
+    "m_bar": 4514.0,
+    "alpha_em": 0.0072973525205055605
+  },
+  "errors": {
+    "m_bar_percent": NaN,
+    "alpha_em_percent": NaN
+  },
+  "verification": {
+    "all_passed": false,
+    "criteria": [
+      [
+        "Integration stable",
+        true
+      ],
+      [
+        "m\u0304\u2605 error < 10%",
+        

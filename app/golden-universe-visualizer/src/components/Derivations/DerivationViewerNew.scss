@@ -1,0 +1,447 @@
+// =============================================
+// DERIVATION VIEWER NEW - Enhanced Styles
+// Full file browser with Python and Markdown support
+// =============================================
+
+@import '../../styles/variables.scss';
+@import '../../styles/design-system.scss';
+
+.derivation-viewer-new {
+  @include glass-card;
+  padding: 0;
+  margin: $space-6 0;
+  min-height: 600px;
+  overflow: hidden;
+
+  .viewer-header {
+    padding: $space-6;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+
+    h2 {
+      margin: 0 0 $space-3 0;
+      @include gradient-text($gradient-primary);
+      font-size: $text-3xl;
+      font-weight: $font-bold;
+    }
+
+    .derivation-meta {
+      display: flex;
+      gap: $space-4;
+      align-items: center;
+
+      .folder-name {
+        padding: $space-2 $space-4;
+        background: rgba(251, 191, 36, 0.1);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        border-radius: $radius-full;
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+        color: $brand-primary;
+        font-family: $font-family-mono;
+      }
+
+      .file-count {
+        color: $text-secondary;
+        font-size: $text-sm;
+      }
+    }
+  }
+
+  // Tab Navigation
+  .derivation-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .tab {
+      flex: 0 0 auto;
+      padding: $space-4 $space-6;
+      background: transparent;
+      border: none;
+      color: $text-secondary;
+      font-size: $text-base;
+      font-weight: $font-medium;
+      cursor: pointer;
+      transition: all $transition-base;
+      position: relative;
+
+      &:hover {
+        color: $text-primary;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &.active {
+        color: $brand-primary;
+        background: rgba(251, 191, 36, 0.05);
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: $gradient-primary;
+          box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+      }
+    }
+  }
+
+  // Main Content Area
+  .viewer-content {
+    min-height: 500px;
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      height: 600px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 250px 1fr;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+    }
+
+    // File Sidebar
+    .file-sidebar {
+      background: rgba(0, 0, 0, 0.4);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: $space-5;
+      overflow-y: auto;
+      @include custom-scrollbar;
+
+      h4 {
+        margin: 0 0 $space-4 0;
+        color: $text-primary;
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding-bottom: $space-3;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .file-list {
+        display: flex;
+        flex-direction: column;
+        gap: $space-2;
+
+        .file-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: $space-3 $space-4;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: $radius-md;
+          cursor: pointer;
+          transition: all $transition-base;
+          text-align: left;
+          width: 100%;
+
+          .file-name {
+            color: $text-primary;
+            font-size: $text-sm;
+            font-family: $font-family-mono;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .file-meta {
+            color: $text-tertiary;
+            font-size: $text-xs;
+            margin-left: $space-2;
+          }
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateX(4px);
+          }
+
+          &.active {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);
+            border-color: $brand-primary;
+            box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.2);
+
+            .file-name {
+              color: $brand-primary;
+              font-weight: $font-semibold;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        max-height: 200px;
+      }
+    }
+
+    // File Display Area
+    .file-display {
+      padding: $space-6;
+      overflow-y: auto;
+      @include custom-scrollbar;
+      background: rgba(0, 0, 0, 0.2);
+
+      // Python content uses PythonExecutor styles
+      .python-executor {
+        margin: 0;
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      // Markdown Display
+      .markdown-display {
+        h3 {
+          margin: 0 0 $space-5 0;
+          color: $brand-primary;
+          font-size: $text-xl;
+          font-weight: $font-semibold;
+          padding-bottom: $space-4;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        // Markdown content styling
+        h1, h2, h3, h4, h5, h6 {
+          color: $text-primary;
+          margin: $space-6 0 $space-4 0;
+          font-weight: $font-semibold;
+          line-height: $leading-tight;
+        }
+
+        h1 { font-size: $text-3xl; }
+        h2 { font-size: $text-2xl; }
+        h3 { font-size: $text-xl; }
+        h4 { font-size: $text-lg; }
+        h5 { font-size: $text-base; }
+        h6 { font-size: $text-sm; }
+
+        p {
+          color: $text-secondary;
+          line-height: $leading-relaxed;
+          margin: $space-4 0;
+        }
+
+        ul, ol {
+          padding-left: $space-6;
+          margin: $space-4 0;
+
+          li {
+            color: $text-secondary;
+            margin: $space-2 0;
+            line-height: $leading-normal;
+          }
+        }
+
+        code {
+          background: rgba(251, 191, 36, 0.1);
+          color: $brand-primary;
+          padding: $space-1 $space-2;
+          border-radius: $radius-sm;
+          font-family: $font-family-mono;
+          font-size: $text-sm;
+        }
+
+        pre {
+          background: rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: $radius-lg;
+          padding: $space-5;
+          overflow-x: auto;
+          @include custom-scrollbar;
+
+          code {
+            background: transparent;
+            color: $text-primary;
+            padding: 0;
+          }
+        }
+
+        blockquote {
+          border-left: 4px solid $brand-primary;
+          margin: $space-5 0;
+          padding: $space-4 0 $space-4 $space-5;
+          background: rgba(251, 191, 36, 0.05);
+          border-radius: $radius-md;
+
+          p {
+            color: $text-primary;
+            font-style: italic;
+          }
+        }
+
+        table {
+          width: 100%;
+          margin: $space-5 0;
+          border-collapse: collapse;
+
+          th, td {
+            padding: $space-3 $space-4;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+          }
+
+          th {
+            background: rgba(251, 191, 36, 0.1);
+            color: $text-primary;
+            font-weight: $font-semibold;
+          }
+
+          td {
+            color: $text-secondary;
+          }
+
+          tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+          }
+        }
+
+        a {
+          color: $brand-primary;
+          text-decoration: none;
+          transition: all $transition-base;
+
+          &:hover {
+            color: $brand-accent;
+            text-decoration: underline;
+          }
+        }
+
+        hr {
+          border: none;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          margin: $space-6 0;
+        }
+      }
+    }
+  }
+
+  // README Content
+  .readme-content {
+    padding: $space-6;
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 500px;
+    overflow-y: auto;
+    @include custom-scrollbar;
+
+    // Use same markdown styles as above
+    h1, h2, h3, h4, h5, h6 {
+      color: $text-primary;
+      margin: $space-6 0 $space-4 0;
+      font-weight: $font-semibold;
+    }
+
+    p {
+      color: $text-secondary;
+      line-height: $leading-relaxed;
+      margin: $space-4 0;
+    }
+
+    // Additional README-specific styles
+    & > h1:first-child {
+      @include gradient-text($gradient-primary);
+      font-size: $text-4xl;
+      margin-top: 0;
+      padding-bottom: $space-4;
+      border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+    }
+  }
+
+  // Loading State
+  &.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+
+    .loading-spinner {
+      text-align: center;
+
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border: 4px solid rgba(251, 191, 36, 0.2);
+        border-top-color: $brand-primary;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto $space-4;
+        box-shadow: $shadow-glow-gold-sm;
+      }
+
+      p {
+        color: $text-secondary;
+        font-size: $text-base;
+      }
+    }
+  }
+
+  // Error State
+  &.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+
+    .error-message {
+      text-align: center;
+      padding: $space-6;
+
+      h3 {
+        color: $color-error;
+        margin: 0 0 $space-4 0;
+        font-size: $text-xl;
+      }
+
+      p {
+        color: $text-secondary;
+        font-size: $text-base;
+      }
+    }
+  }
+
+  // Fallback Content
+  .fallback-content {
+    padding: $space-6;
+    min-height: 400px;
+
+    .info-message {
+      background: rgba(251, 191, 36, 0.05);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: $radius-lg;
+      padding: $space-5;
+
+      p {
+        color: $text-primary;
+        margin: 0 0 $space-4 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: $space-6;
+
+        li {
+          color: $text-secondary;
+          margin: $space-2 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
