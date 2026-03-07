@@ -1,0 +1,354 @@
+// Light theme overrides for DerivationsBrowser
+// Fixes visibility issues when light theme is active
+
+.app.light,
+.app[data-theme='light'] {
+  .derivations-browser {
+    background: #ffffff;
+    color: #1a1a1a;
+
+    // Header adjustments
+    .browser-header {
+      h1 {
+        // Use darker golden for better visibility
+        background: linear-gradient(135deg, #d97706, #92400e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 10px rgba(217, 119, 6, 0.2);
+      }
+
+      .subtitle {
+        color: #525252; // Darker gray for better readability
+
+        &.error {
+          color: #dc2626;
+        }
+      }
+    }
+
+    // Search input
+    .search-section {
+      .search-input {
+        background: #f5f5f5;
+        border: 1px solid #d4d4d4;
+        color: #1a1a1a;
+
+        &:focus {
+          background: #ffffff;
+          border-color: #d97706;
+          box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+        }
+
+        &::placeholder {
+          color: #a3a3a3;
+        }
+      }
+    }
+
+    // Category filters
+    .category-filters {
+      .category-btn {
+        background: #f5f5f5;
+        border: 1px solid #e5e5e5;
+        color: #404040;
+
+        .count {
+          background: #fef3c7;
+          color: #92400e;
+        }
+
+        &:hover {
+          background: #ffffff;
+          border-color: #d97706;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #f59e0b, #d97706);
+          border-color: #d97706;
+          color: white;
+
+          .count {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+          }
+        }
+      }
+    }
+
+    // Derivations list
+    .derivations-list {
+      background: #f9f9f9;
+      border: 1px solid #e5e5e5;
+
+      .list-header {
+        h2 {
+          color: #1a1a1a;
+        }
+      }
+
+      .derivation-cards {
+        .derivation-card {
+          background: #ffffff;
+          border: 1px solid #e5e5e5;
+          color: #1a1a1a;
+
+          .card-header {
+            .derivation-number {
+              color: #d97706;
+              font-weight: 600;
+            }
+
+            .difficulty-badge {
+              &.green {
+                background: #10b981;
+                color: white;
+              }
+              &.purple {
+                background: #8b5cf6;
+                color: white;
+              }
+              &.violet {
+                background: #7c3aed;
+                color: white;
+              }
+              &.gray {
+                background: #6b7280;
+                color: white;
+              }
+            }
+          }
+
+          .derivation-title {
+            color: #1a1a1a;
+            font-weight: 600;
+          }
+
+          .description {
+            color: #525252;
+          }
+
+          .card-footer {
+            .category-badge {
+              font-weight: 600;
+
+              &.fundamental {
+                background: #fef3c7;
+                color: #92400e;
+              }
+              &.particles {
+                background: #e0f2fe;
+                color: #075985;
+              }
+              &.constants {
+                background: #f3e8ff;
+                color: #6b21a8;
+              }
+              &.advanced {
+                background: #fce7f3;
+                color: #9f1239;
+              }
+            }
+
+            .steps-count {
+              color: #737373;
+            }
+          }
+
+          &:hover {
+            background: #fafafa;
+            border-color: #d97706;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          }
+
+          &.selected {
+            background: #fef3c7;
+            border-color: #d97706;
+            box-shadow: 0 4px 16px rgba(217, 119, 6, 0.15);
+          }
+        }
+      }
+    }
+
+    // Derivation details panel
+    .derivation-details {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+
+      .details-header {
+        background: #f9f9f9;
+        border-bottom: 1px solid #e5e5e5;
+
+        h2 {
+          color: #1a1a1a;
+        }
+
+        .close-btn {
+          background: #f5f5f5;
+          color: #525252;
+          border: 1px solid #d4d4d4;
+
+          &:hover {
+            background: #e5e5e5;
+            color: #1a1a1a;
+          }
+        }
+      }
+
+      .details-meta {
+        background: #fafafa;
+        border-bottom: 1px solid #e5e5e5;
+
+        .meta-item {
+          .meta-label {
+            color: #737373;
+          }
+
+          .folder-name {
+            color: #404040;
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      .details-content {
+        .description {
+          color: #525252;
+        }
+      }
+    }
+
+    // Loading and error states
+    .loading-spinner {
+      .spinner {
+        border-color: #e5e5e5;
+        border-top-color: #d97706;
+      }
+
+      p {
+        color: #525252;
+      }
+    }
+
+    .retry-button {
+      background: #f59e0b;
+      color: white;
+
+      &:hover {
+        background: #d97706;
+      }
+    }
+  }
+
+  // DerivationViewerNew inside the browser
+  .derivation-viewer-new {
+    .viewer-header {
+      h2 {
+        color: #1a1a1a;
+      }
+
+      .derivation-meta {
+        color: #525252;
+
+        .folder-name {
+          background: #f5f5f5;
+          color: #404040;
+        }
+
+        .file-count {
+          color: #737373;
+        }
+      }
+    }
+
+    .derivation-tabs {
+      .tab {
+        background: #f5f5f5;
+        color: #525252;
+        border: 1px solid #e5e5e5;
+
+        &:hover {
+          background: #ffffff;
+          color: #1a1a1a;
+        }
+
+        &.active {
+          background: #d97706;
+          color: white;
+          border-color: #d97706;
+        }
+      }
+    }
+
+    .viewer-content {
+      .file-sidebar {
+        background: #f9f9f9;
+        border-right: 1px solid #e5e5e5;
+
+        h4 {
+          color: #1a1a1a;
+        }
+
+        .file-item {
+          color: #404040;
+
+          &:hover {
+            background: #f5f5f5;
+          }
+
+          &.active {
+            background: #fef3c7;
+            color: #92400e;
+          }
+
+          .file-meta {
+            color: #737373;
+          }
+        }
+      }
+
+      .readme-content,
+      .markdown-display {
+        color: #1a1a1a;
+
+        h1, h2, h3, h4, h5, h6 {
+          color: #1a1a1a;
+        }
+
+        code {
+          background: #f5f5f5;
+          color: #d97706;
+        }
+
+        pre {
+          background: #1a1a1a;
+          color: #f5f5f5;
+        }
+
+        blockquote {
+          border-left-color: #d97706;
+          background: #fef3c7;
+        }
+
+        a {
+          color: #d97706;
+
+          &:hover {
+            color: #92400e;
+          }
+        }
+      }
+    }
+
+    .fallback-content {
+      .info-message {
+        background: #fef3c7;
+        color: #92400e;
+        border: 1px solid #fbbf24;
+      }
+    }
+  }
+}
