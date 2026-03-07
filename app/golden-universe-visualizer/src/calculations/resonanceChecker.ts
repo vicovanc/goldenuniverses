@@ -60,7 +60,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       is_resonant: boolean;
       k_res: number;
       delta: string;
@@ -151,7 +151,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       spectrum: Array<{ N: number; delta: number; strength: number }>;
       peaks: ResonancePoint[];
     };
@@ -200,7 +200,7 @@ to_json(results)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       electron: ResonancePoint;
       muon: ResonancePoint;
       tau: ResonancePoint;
@@ -239,7 +239,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       delta: string;
       k_res: number;
       exact_ratio: string;
@@ -288,7 +288,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    const data = result.result as { next_resonance: ResonancePoint | null };
+    const data = result.result as unknown as { next_resonance: ResonancePoint | null };
     return data.next_resonance;
   }
 
@@ -343,7 +343,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       N: number;
       resonance_ratio: string;
       nearest_fibonacci_ratio: string;

@@ -26,6 +26,28 @@ export interface CalculationResult {
   error_ppm: number;
   error_percent: number;
   formula: string;
+  output?: string;
+  epoch?: {
+    N?: number;
+    k_res?: number;
+    delta?: string | number;
+    pi_n?: string | number;
+    phi_n?: string | number;
+  };
+  winding?: {
+    p: number;
+    q: number;
+    l_Omega: string | number;
+  };
+  coupling?: {
+    C_value: string | number;
+    nu_optimal: string | number;
+    components?: {
+      detuning?: string | number;
+      elliptic?: string | number;
+      memory?: string | number;
+    };
+  };
   components?: {
     epoch?: number;
     coupling?: number;

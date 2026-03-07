@@ -272,6 +272,7 @@ export interface ContentCatalog {
   derivations: DerivationFolder[];
   pythonScripts: PythonScript[];
   equations: Equation[];
+  precisionResults?: PrecisionResult[];
   metadata: CatalogMetadata;
 }
 

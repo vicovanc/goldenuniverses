@@ -11,7 +11,7 @@ export function useTooltip() {
   const [isVisible, setIsVisible] = useState(false);
   const [content, setContent] = useState<string>('');
   const [position, setPosition] = useState<TooltipPosition>({ top: 0, left: 0 });
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<number>();
 
   const show = useCallback(
     (tooltipContent: string, element: HTMLElement) => {

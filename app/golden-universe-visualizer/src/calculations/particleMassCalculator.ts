@@ -193,11 +193,11 @@ to_json(result)
    * Compare theoretical with experimental values
    */
   static compareResults(result: ParticleMassResult): ComparisonResult {
-    const theoretical = result.mass_MeV || result.value;
-    const experimental = result.mass_experimental_MeV || result.comparison?.experimental || '0';
+    const theoretical = (result as any).mass_MeV || result.value;
+    const experimental = (result as any).mass_experimental_MeV || result.comparison?.experimental || '0';
 
-    const errorPpm = result.error_ppm || result.comparison?.error_ppm || 0;
-    const errorPercent = result.error_percent || result.comparison?.error_percent || 0;
+    const errorPpm = (result as any).error_ppm || result.comparison?.error_ppm || 0;
+    const errorPercent = (result as any).error_percent || result.comparison?.error_percent || 0;
 
     // Calculate sigma (standard deviations)
     // For electron: uncertainty ≈ 0.02 ppm
@@ -274,7 +274,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       leptons: Array<{ particle: string; mass_MeV: number; ratio: number }>;
       baryons: Array<{ particle: string; mass_MeV: number; ratio: number }>;
     };

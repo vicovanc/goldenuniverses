@@ -5,32 +5,13 @@ import { SearchResult } from '@/types/search';
  * Mock theory law data for testing
  */
 export const mockTheoryLaw: TheoryLaw = {
-  id: 'lagrangian',
-  category: 'Fundamental Equations',
-  name: 'Master Lagrangian',
-  equation: '\\mathcal{L} = \\frac{1}{2}\\partial_\\mu\\phi\\partial^\\mu\\phi - V(\\phi)',
-  latex: '\\mathcal{L} = \\frac{1}{2}\\partial_\\mu\\phi\\partial^\\mu\\phi - V(\\phi)',
-  description: 'The fundamental Lagrangian density of the Golden Universe theory',
-  variables: [
-    {
-      symbol: '\\phi',
-      name: 'Field',
-      description: 'The fundamental scalar field',
-    },
-    {
-      symbol: 'V(\\phi)',
-      name: 'Potential',
-      description: 'The field potential',
-    },
-  ],
-  derivation: 'Derived from first principles...',
-  relatedLaws: ['field-equations', 'conservation'],
-  examples: [
-    {
-      description: 'Simple harmonic potential',
-      calculation: 'V(\\phi) = \\frac{1}{2}m^2\\phi^2',
-    },
-  ],
+  id: 1,
+  category: 'foundation',
+  title: 'Master Lagrangian',
+  statement: 'The fundamental Lagrangian density of the Golden Universe theory',
+  equations: ['\\mathcal{L} = \\frac{1}{2}\\partial_\\mu\\phi\\partial^\\mu\\phi - V(\\phi)'],
+  status: 'fully-defined',
+  dependencies: [],
 };
 
 /**
@@ -60,28 +41,37 @@ export const mockSearchResults: SearchResult[] = [
     id: 'result-1',
     type: 'theory',
     title: 'Master Lagrangian',
+    path: '/theory/lagrangian',
+    filename: 'lagrangian.md',
     content: 'The fundamental equation describing the Golden Universe',
-    category: 'Fundamental Equations',
+    snippet: 'The fundamental equation describing the Golden Universe',
+    category: 'Theory',
     relevance: 0.95,
-    url: '/theory/lagrangian',
+    highlights: ['fundamental', 'Lagrangian'],
   },
   {
     id: 'result-2',
-    type: 'calculation',
+    type: 'python',
     title: 'Particle Mass Calculator',
+    path: '/calculations/particle-mass',
+    filename: 'particle_mass.py',
     content: 'Calculate particle masses using golden ratio',
-    category: 'Calculations',
+    snippet: 'Calculate particle masses using golden ratio',
+    category: 'Python',
     relevance: 0.87,
-    url: '/calculations/particle-mass',
+    highlights: ['particle', 'mass', 'calculator'],
   },
   {
     id: 'result-3',
-    type: 'visualization',
+    type: 'equation',
     title: 'Phase Space Visualization',
+    path: '/visualizations/phase-space',
+    filename: 'phase_space.md',
     content: 'Interactive phase space dynamics',
-    category: 'Visualizations',
+    snippet: 'Interactive phase space dynamics',
+    category: 'Equations',
     relevance: 0.75,
-    url: '/visualizations/phase-space',
+    highlights: ['phase', 'space'],
   },
 ];
 

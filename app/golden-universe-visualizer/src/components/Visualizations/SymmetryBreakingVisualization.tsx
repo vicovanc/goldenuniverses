@@ -205,22 +205,27 @@ function SymmetryAxes({ showAxes, breakingStrength }: SymmetryAxesProps) {
     <group ref={linesRef}>
       {/* Perfect symmetry circle */}
       <Line
-        points={goldenPoints}
+        points={[...goldenPoints, goldenPoints[0]]}
         color="#ffd700"
         lineWidth={2}
-        closed
       />
 
       {/* Broken symmetry ellipse */}
       <Line
-        points={goldenPoints.map(p => [
-          p[0] * (1 + breakingStrength * 0.3),
-          p[1],
-          p[2] * (1 - breakingStrength * 0.3)
-        ])}
+        points={[
+          ...goldenPoints.map(p => [
+            p[0] * (1 + breakingStrength * 0.3),
+            p[1],
+            p[2] * (1 - breakingStrength * 0.3)
+          ]),
+          goldenPoints.map(p => [
+            p[0] * (1 + breakingStrength * 0.3),
+            p[1],
+            p[2] * (1 - breakingStrength * 0.3)
+          ])[0]
+        ]}
         color="#ff6b6b"
         lineWidth={1}
-        closed
         dashed
       />
 

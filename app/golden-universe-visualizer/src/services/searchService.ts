@@ -63,7 +63,7 @@ export interface SearchHistoryEntry {
 }
 
 class SearchService {
-  private index: FlexSearch.Document<SearchResult> | null = null;
+  private index: FlexSearch.Document<SearchResult, false> | null = null;
   private indexedContent: Map<string, SearchResult> = new Map();
   private searchHistory: SearchHistoryEntry[] = [];
   private popularSearches: Map<string, number> = new Map();
@@ -102,10 +102,7 @@ class SearchService {
         resolution: 9,
         depth: 3,
         bidirectional: true,
-        context: {
-          depth: 2,
-          resolution: 3,
-        },
+        context: true,
       });
 
       // Load and index content from JSON files

@@ -22,7 +22,7 @@ interface GestureState {
   lastCenter: { x: number; y: number };
   initialTap: { x: number; y: number; time: number } | null;
   lastTapTime: number;
-  longPressTimer: NodeJS.Timeout | null;
+  longPressTimer: number | null;
 }
 
 const DOUBLE_TAP_DELAY = 300; // ms

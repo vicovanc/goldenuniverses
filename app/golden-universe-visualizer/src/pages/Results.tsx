@@ -93,9 +93,6 @@ const Results: React.FC = () => {
             <div className="predictions-page">
               <PrecisionTable
                 results={goldenUniverseResults}
-                onSort={(column) => {
-                  console.log('Sorting by', column);
-                }}
               />
             </div>
           } />

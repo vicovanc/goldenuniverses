@@ -73,7 +73,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    const data = result.result as { optimal: WindingPair };
+    const data = result.result as unknown as { optimal: WindingPair };
     return data.optimal;
   }
 
@@ -106,7 +106,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    const data = result.result as { l_Omega: string };
+    const data = result.result as unknown as { l_Omega: string };
     return data.l_Omega;
   }
 
@@ -182,7 +182,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       epochs: Array<{
         N: number;
         optimal_p: number;
@@ -257,7 +257,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       N: number;
       torus_points: Array<{ x: number; y: number; z: number }>;
       winding_path: Array<{ x: number; y: number; z: number }>;

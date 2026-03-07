@@ -11,6 +11,14 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
+// Extend Window interface to include Web Speech API
+declare global {
+  interface Window {
+    SpeechRecognition?: any;
+    webkitSpeechRecognition?: any;
+  }
+}
+
 interface VoiceSearchProps {
   onResult: (transcript: string) => void;
   onError?: (error: string) => void;
@@ -25,11 +33,11 @@ const isSpeechRecognitionSupported = (): boolean => {
 };
 
 // Get the SpeechRecognition class
-const getSpeechRecognition = (): typeof SpeechRecognition | null => {
+const getSpeechRecognition = (): any | null => {
   if ('webkitSpeechRecognition' in window) {
-    return (window as any).webkitSpeechRecognition;
+    return window.webkitSpeechRecognition;
   } else if ('SpeechRecognition' in window) {
-    return (window as any).SpeechRecognition;
+    return window.SpeechRecognition;
   }
   return null;
 };

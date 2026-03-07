@@ -21,6 +21,7 @@ interface PyodideInterface {
     writeFile: (path: string, data: string | Uint8Array) => void;
     readFile: (path: string, options: { encoding: string }) => string;
   };
+  setStdout?: (options: { batched: (text: string) => void }) => void;
 }
 
 let pyodide: PyodideInterface | null = null;
@@ -298,10 +299,11 @@ async function executePython(code: string, id: string): Promise<void> {
   try {
     const startTime = Date.now();
 
-    // Capture stdout
+    // Capture stdout if supported
     let stdout = '';
-    const oldStdout = pyodide!.setStdout;
-    pyodide!.setStdout({ batched: (text: string) => { stdout += text; } });
+    if (pyodide!.setStdout) {
+      pyodide!.setStdout({ batched: (text: string) => { stdout += text; } });
+    }
 
     // Execute code and capture result
     const result = await pyodide!.runPythonAsync(code);

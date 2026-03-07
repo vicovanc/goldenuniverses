@@ -592,7 +592,8 @@ const Explanations: React.FC = () => {
                           <table>{children}</table>
                         </div>
                       ),
-                      code: ({ inline, className, children }) => {
+                      code: ({ className, children, ...props }: any) => {
+                        const inline = (props as any).inline;
                         if (inline) {
                           return <code className="inline-code">{children}</code>;
                         }

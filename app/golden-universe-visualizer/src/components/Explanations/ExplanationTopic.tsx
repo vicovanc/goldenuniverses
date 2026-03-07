@@ -595,7 +595,8 @@ const ExplanationTopic: React.FC = () => {
             blockquote: ({ children }) => (
               <blockquote className="quote-block">{children}</blockquote>
             ),
-            code: ({ inline, className, children, ...props }) => {
+            code: ({ className, children, ...props }: any) => {
+              const inline = (props as any).inline;
               if (inline) {
                 return <code className="inline-code">{children}</code>;
               }

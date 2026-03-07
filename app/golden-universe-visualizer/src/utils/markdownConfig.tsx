@@ -46,8 +46,11 @@ export const markdownComponents: Components = {
   ),
 
   // Code blocks
-  code: ({ inline, className, children }) => {
-    if (inline) {
+  code: ({ className, children, ...props }) => {
+    // Check if it's inline code by examining the props
+    const isInline = !className && !props.node?.position;
+
+    if (isInline) {
       return <code className="inline-code">{children}</code>;
     }
 

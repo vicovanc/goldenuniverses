@@ -1,10 +1,8 @@
 /**
  * Theory Data Service
  * Loads actual Golden Universe theory content from markdown files
+ * Note: This service is designed for browser use and makes API calls instead of direct file system access
  */
-
-import fs from 'fs';
-import path from 'path';
 
 const THEORY_BASE_PATH = '/Users/Cristiana_1/Documents/Golden Universe';
 
@@ -48,7 +46,7 @@ export class TheoryDataService {
   private async loadTheoryLaws() {
     // Load from theory-laws.md
     try {
-      const theoryPath = path.join(THEORY_BASE_PATH, 'theory', 'theory-laws.md');
+      const theoryPath = `${THEORY_BASE_PATH}/theory/theory-laws.md`;
       const content = await this.loadFile(theoryPath);
       this.parseTheoryLaws(content);
     } catch (error) {
@@ -129,11 +127,11 @@ export class TheoryDataService {
 
   private async loadDerivations() {
     try {
-      const derivationsPath = path.join(THEORY_BASE_PATH, 'derivations');
+      const derivationsPath = `${THEORY_BASE_PATH}/derivations`;
       const folders = await this.listDirectories(derivationsPath);
 
       for (const folder of folders) {
-        const folderPath = path.join(derivationsPath, folder);
+        const folderPath = `${derivationsPath}/${folder}`;
         const pythonFiles = await this.listPythonFiles(folderPath);
 
         const derivation: DerivationData = {
@@ -213,7 +211,7 @@ export class TheoryDataService {
   }
 
   async loadPythonCode(derivationId: string, fileName: string): Promise<string> {
-    const derivationPath = path.join(THEORY_BASE_PATH, 'derivations', derivationId, fileName);
+    const derivationPath = `${THEORY_BASE_PATH}/derivations/${derivationId}/${fileName}`;
     try {
       return await this.loadFile(derivationPath);
     } catch (error) {

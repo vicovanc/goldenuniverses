@@ -103,7 +103,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       k: number;
       R_mem: string;
       lambda_eff: string;
@@ -148,7 +148,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       k: number;
       beta: string;
       d_lambda_dk: string;
@@ -221,7 +221,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       trajectory: RGFlowPoint[];
       fixed_points: Array<{ k: number; lambda: string }>;
     };
@@ -270,7 +270,7 @@ to_json(result)
 `;
 
     const result = await engine.execute(code);
-    return result.result as {
+    return result.result as unknown as {
       kappa: string;
       memory_term: string;
       lambda_rec_beta: string;
@@ -328,7 +328,7 @@ to_json(results)
 `;
 
     const result = await engine.execute(code);
-    return result.result as Array<{
+    return result.result as unknown as Array<{
       particle: string;
       kappa: string;
       memory_contribution: string;

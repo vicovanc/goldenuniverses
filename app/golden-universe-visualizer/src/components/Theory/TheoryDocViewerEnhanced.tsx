@@ -124,6 +124,20 @@ const TheoryDocViewerEnhanced: React.FC<TheoryDocViewerProps> = ({ documentPath,
       return `<h${level} id="section-${id}">${text}</h${level}>`;
     };
 
+    // Override code renderer for syntax highlighting
+    renderer.code = (code: string, language: string | undefined) => {
+      if (language && hljs.getLanguage(language)) {
+        try {
+          const highlighted = hljs.highlight(code, { language }).value;
+          return `<pre><code class="hljs language-${language}">${highlighted}</code></pre>`;
+        } catch (err) {
+          console.error('Highlight error:', err);
+        }
+      }
+      const highlighted = hljs.highlightAuto(code).value;
+      return `<pre><code class="hljs">${highlighted}</code></pre>`;
+    };
+
     // Override paragraph renderer to process LaTeX
     const originalParagraph = renderer.paragraph.bind(renderer);
     renderer.paragraph = (text: string) => {
@@ -140,16 +154,6 @@ const TheoryDocViewerEnhanced: React.FC<TheoryDocViewerProps> = ({ documentPath,
 
     marked.setOptions({
       renderer: renderer,
-      highlight: (code, lang) => {
-        if (lang && hljs.getLanguage(lang)) {
-          try {
-            return hljs.highlight(code, { language: lang }).value;
-          } catch (err) {
-            console.error('Highlight error:', err);
-          }
-        }
-        return hljs.highlightAuto(code).value;
-      },
       breaks: true,
       gfm: true,
     });

@@ -1,10 +1,13 @@
 /**
  * Monitoring Service
  * Handles Sentry error tracking and performance monitoring
+ * Note: Sentry is optional - if not installed, monitoring will be disabled
  */
 
-import * as Sentry from '@sentry/react';
-import { BrowserTracing } from '@sentry/tracing';
+// Sentry types (will be null if @sentry packages are not installed)
+type SentryModule = any;
+type SeverityLevel = 'fatal' | 'error' | 'warning' | 'log' | 'info' | 'debug';
+type Transaction = any;
 
 interface MonitoringConfig {
   dsn: string;
@@ -16,6 +19,8 @@ interface MonitoringConfig {
 class MonitoringService {
   private config: MonitoringConfig;
   private initialized = false;
+  private Sentry: SentryModule | null = null;
+  private BrowserTracing: any | null = null;
 
   constructor() {
     this.config = {
@@ -26,22 +31,50 @@ class MonitoringService {
         import.meta.env.VITE_SENTRY_TRACES_SAMPLE_RATE || '0.1'
       ),
     };
+    this.loadSentry();
+  }
+
+  /**
+   * Dynamically load Sentry if available
+   */
+  private async loadSentry(): Promise<void> {
+    if (!this.config.enabled) return;
+
+    try {
+      const sentryModule = await import('@sentry/react');
+      const tracingModule = await import('@sentry/tracing');
+      this.Sentry = sentryModule;
+      this.BrowserTracing = tracingModule.BrowserTracing;
+    } catch (error) {
+      console.warn('Sentry packages not installed. Monitoring disabled.');
+      this.config.enabled = false;
+    }
   }
 
   /**
    * Initialize Sentry
    */
-  init(): void {
+  async init(): Promise<void> {
     if (!this.config.enabled || !this.config.dsn || this.initialized) {
       return;
     }
 
-    Sentry.init({
+    // Wait for Sentry to load
+    if (!this.Sentry || !this.BrowserTracing) {
+      await this.loadSentry();
+    }
+
+    if (!this.Sentry || !this.BrowserTracing) {
+      console.warn('Cannot initialize Sentry - modules not available');
+      return;
+    }
+
+    this.Sentry.init({
       dsn: this.config.dsn,
       environment: this.config.environment,
       integrations: [
-        new BrowserTracing(),
-        new Sentry.Replay({
+        new this.BrowserTracing(),
+        new this.Sentry.Replay({
           maskAllText: true,
           blockAllMedia: true,
         }),
@@ -49,7 +82,7 @@ class MonitoringService {
       tracesSampleRate: this.config.tracesSampleRate,
       replaysSessionSampleRate: 0.1,
       replaysOnErrorSampleRate: 1.0,
-      beforeSend(event) {
+      beforeSend(event: any) {
         // Filter out non-error events in production
         if (event.level === 'info' || event.level === 'warning') {
           return null;
@@ -65,12 +98,12 @@ class MonitoringService {
    * Capture exception
    */
   captureException(error: Error, context?: Record<string, any>): void {
-    if (!this.config.enabled || !this.initialized) {
+    if (!this.config.enabled || !this.initialized || !this.Sentry) {
       console.error('Error:', error, context);
       return;
     }
 
-    Sentry.captureException(error, {
+    this.Sentry.captureException(error, {
       extra: context,
     });
   }
@@ -78,31 +111,31 @@ class MonitoringService {
   /**
    * Capture message
    */
-  captureMessage(message: string, level: Sentry.SeverityLevel = 'info'): void {
-    if (!this.config.enabled || !this.initialized) {
+  captureMessage(message: string, level: SeverityLevel = 'info'): void {
+    if (!this.config.enabled || !this.initialized || !this.Sentry) {
       console.log(message);
       return;
     }
 
-    Sentry.captureMessage(message, level);
+    this.Sentry.captureMessage(message, level);
   }
 
   /**
    * Set user context
    */
   setUser(user: { id: string; email?: string; username?: string }): void {
-    if (!this.config.enabled || !this.initialized) return;
+    if (!this.config.enabled || !this.initialized || !this.Sentry) return;
 
-    Sentry.setUser(user);
+    this.Sentry.setUser(user);
   }
 
   /**
    * Set custom context
    */
   setContext(name: string, context: Record<string, any>): void {
-    if (!this.config.enabled || !this.initialized) return;
+    if (!this.config.enabled || !this.initialized || !this.Sentry) return;
 
-    Sentry.setContext(name, context);
+    this.Sentry.setContext(name, context);
   }
 
   /**
@@ -111,11 +144,11 @@ class MonitoringService {
   addBreadcrumb(
     message: string,
     category: string,
-    level: Sentry.SeverityLevel = 'info'
+    level: SeverityLevel = 'info'
   ): void {
-    if (!this.config.enabled || !this.initialized) return;
+    if (!this.config.enabled || !this.initialized || !this.Sentry) return;
 
-    Sentry.addBreadcrumb({
+    this.Sentry.addBreadcrumb({
       message,
       category,
       level,
@@ -125,10 +158,10 @@ class MonitoringService {
   /**
    * Start transaction
    */
-  startTransaction(name: string, op: string): Sentry.Transaction | null {
-    if (!this.config.enabled || !this.initialized) return null;
+  startTransaction(name: string, op: string): Transaction | null {
+    if (!this.config.enabled || !this.initialized || !this.Sentry) return null;
 
-    return Sentry.startTransaction({
+    return this.Sentry.startTransaction({
       name,
       op,
     });

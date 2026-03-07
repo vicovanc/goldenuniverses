@@ -2,6 +2,7 @@ import { ReactElement, ReactNode } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { UXProvider } from '@/components/UXEnhancements/UXProvider';
+import { vi } from 'vitest';
 
 /**
  * All providers used in the app for testing

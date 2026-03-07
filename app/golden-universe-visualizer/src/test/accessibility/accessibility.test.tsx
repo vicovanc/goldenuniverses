@@ -8,6 +8,16 @@ import App from '@/App';
 // Extend expect with jest-axe matchers
 expect.extend(toHaveNoViolations);
 
+// Declare type for jest-axe matcher
+declare module 'vitest' {
+  interface Assertion<T = any> {
+    toHaveNoViolations(): T;
+  }
+  interface AsymmetricMatchersContaining {
+    toHaveNoViolations(): any;
+  }
+}
+
 describe('Accessibility Tests', () => {
   describe('Sidebar Component', () => {
     it('should not have accessibility violations', async () => {
