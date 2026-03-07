@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import { GoldenUniverseCalculator, type CalculationResult } from '../../calculations/goldenUniverseCalculator';
+import EquationRenderer from '@/components/Theory/EquationRenderer';
 import './ParticleMassCalculator.scss';
 
 type ParticleType = 'electron' | 'muon' | 'tau' | 'proton' | 'neutron';
@@ -135,7 +136,7 @@ export const SimpleParticleCalculator: React.FC = () => {
           <div className="result-card final-formula">
             <h3>Formula Used</h3>
             <div className="formula-box">
-              <code>{result.formula}</code>
+              <EquationRenderer equation={result.formula} displayMode={true} />
             </div>
           </div>
 

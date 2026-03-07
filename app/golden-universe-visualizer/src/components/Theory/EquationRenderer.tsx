@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import { ensureLatexFormat } from '@/utils/equationFormatter';
 
 interface EquationRendererProps {
   equation: string;
@@ -26,8 +27,8 @@ const EquationRenderer: React.FC<EquationRendererProps> = ({
     if (containerRef.current && equation) {
       try {
         setRenderError(null);
-        // Enhanced equation preprocessing for Golden Universe Theory equations
-        let processedEquation = equation
+        // First convert from plain text to LaTeX format if needed
+        let processedEquation = ensureLatexFormat(equation)
           // Fix common LaTeX issues
           .replace(/\s+/g, ' ') // Normalize whitespace
           .replace(/\\bar\{([^}]+)\}/g, '\\overline{$1}') // Fix bar notation

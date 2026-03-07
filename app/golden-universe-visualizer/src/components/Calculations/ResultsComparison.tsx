@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { ParticleMassCalculator } from '../../calculations/particleMassCalculator';
 import { ConstantsCalculator } from '../../calculations/constantsCalculator';
 import type { ComparisonResult } from '../../services/pythonEngine/pythonTypes';
+import EquationRenderer from '@/components/Theory/EquationRenderer';
 import './ResultsComparison.scss';
 
 interface ComparisonEntry {
@@ -202,7 +203,9 @@ export const ResultsComparison: React.FC = () => {
                   <td className="name-cell">
                     <div className="name">{entry.name}</div>
                     {entry.formula && (
-                      <div className="formula">{entry.formula}</div>
+                      <div className="formula">
+                        <EquationRenderer equation={entry.formula} displayMode={false} />
+                      </div>
                     )}
                   </td>
                   <td className="value-cell">

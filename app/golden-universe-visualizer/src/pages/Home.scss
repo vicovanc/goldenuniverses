@@ -176,6 +176,8 @@
   background: var(--bg-subtle);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  overflow: hidden;
 
   .stats-grid {
     display: flex;
@@ -184,14 +186,29 @@
     max-width: 900px;
     margin: 0 auto;
     flex-wrap: wrap;
+    overflow-x: auto;
+    padding: $space-2 0;
 
     @media (max-width: $breakpoint-md) {
-      gap: $space-8;
+      gap: $space-6;
+      max-width: 100%;
+      padding: $space-2;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      gap: $space-4;
+      justify-content: flex-start;
     }
   }
 
   .stat-card {
     text-align: center;
+    flex: 0 0 auto;
+    min-width: 140px;
+
+    @media (max-width: $breakpoint-sm) {
+      min-width: 120px;
+    }
 
     .stat-value {
       font-size: $text-2xl;
@@ -199,6 +216,14 @@
       color: $primary-500;
       line-height: $leading-tight;
       margin-bottom: $space-1;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: $text-xl;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: $text-lg;
+      }
     }
 
     .stat-label {
@@ -207,6 +232,11 @@
       color: var(--text-tertiary);
       text-transform: uppercase;
       letter-spacing: $tracking-wide;
+      white-space: nowrap;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 0.625rem; // 10px
+      }
     }
   }
 }
@@ -435,4 +465,5 @@
 
 .home-page {
   animation: fadeIn 0.4s ease-out;
+  margin-left: 200px;
 }

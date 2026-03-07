@@ -1,4 +1,11 @@
 import type { SidebarSection } from './types';
+import { THEORY_LAWS } from '@/data/theoryContent';
+
+// Create a mapping of law formulas
+const lawFormulas: { [key: number]: string } = {};
+THEORY_LAWS.forEach(law => {
+  lawFormulas[law.id] = law.formula;
+});
 
 export const SIDEBAR_SECTIONS: SidebarSection[] = [
   {
@@ -12,6 +19,9 @@ export const SIDEBAR_SECTIONS: SidebarSection[] = [
         label: 'Law 0: Foundational Symmetry',
         path: '/theory/law-0',
         tooltip: 'The foundational principle of symmetry in the Golden Universe',
+        metadata: {
+          preview: lawFormulas[0] || 'S₀ = φⁿ where φ = (1+√5)/2'
+        }
       },
       {
         id: 'theory-laws-1-10',
