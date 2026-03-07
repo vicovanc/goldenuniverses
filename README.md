@@ -30,7 +30,7 @@ The Golden Universe models reality as an **indivisible stochastic process** emer
   which then feeds back into the `X` evolution and thermal/epoch mapping.
 - **Current closure status:** this structural system is implemented, but canonical uniqueness is still gated for `beta(X)`, `lambda_rec(X)`, `g_{OmegaX}(X)`, and `V_X(X)` (current machine state keeps `V_X` as `chosen_non_unique`).
 
-## 🌟 Recent Breakthroughs (February 2026)
+## 🌟 Recent Breakthroughs 
 
 ### **Memory Open-Item Integration (Latest Pass)**
 - ✅ Dark-sector scattering now uses deterministic GU non-perturbative coefficient (`C_GU`), replacing QCD-analog placeholder in production outputs.
@@ -294,19 +294,6 @@ This work represents a paradigm shift in theoretical physics:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Community contributors** who helped develop and validate the theory
-- **Experimental physicists** whose precise measurements enable validation
-- **Open source community** for tools and frameworks that made this possible
-- **The breakthrough insight** about proper rounding that unlocked the resonance duality
-
-## 📞 Contact
-
-- **Issues**: [GitHub Issues](./issues)
-- **Discussions**: [GitHub Discussions](./discussions)
-- **Email**: [your-email@domain.com]
 
 ---
 
