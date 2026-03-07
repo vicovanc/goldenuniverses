@@ -46,8 +46,7 @@
     "start": "npm run start:all",
     "deploy:vercel": "vercel --prod",
     "deploy:netlify": "netlify deploy --prod",
-    "clean": "rm -rf dist node_modules/.vite",
-    "postinstall": "npm run db:init"
+    "clean": "rm -rf dist node_modules/.vite"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
