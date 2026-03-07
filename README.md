@@ -18,6 +18,18 @@ The Golden Universe models reality as an **indivisible stochastic process** emer
 - **Memory principle:** the universe is treated as **memory-bearing at all scales** via the nonlocal memory kernel (`L_mem`), so evolution is path-dependent rather than memoryless.
 - **Consciousness framing:** in GU, consciousness is formulated as an emergent property of memory + feedback + stable attractor/fixed-point organization (from particle to biological regimes in the extended framework documents).
 
+### Foundational Cosmology (Full Picture)
+
+- **Pre-vector stage:** in GU, the initial condition is not a false-vacuum bubble picture; it is a symmetric pre-geometric substrate (`Ω₀`) with no fixed particle-vector content yet, followed by asymmetric genesis through `Z₁` and mirrored compensation (`Z₂`).
+- **Inflation type:** the canonical cosmology is **rolling-field / slow-roll clock-field dynamics**, not Coleman-De Luccia tunneling. The universe evolves through a continuous clock variable `X` and epoch ladder `X_N = M_P * phi^(-N)`.
+- **Complete dynamical equation:** GU uses a coupled equation for the clock field with interaction and memory terms:
+  `X'' + 3 H X' + V_X'(X) + F_int(X, Ω) + F_mem = 0`.
+- **Effective energy source:** the expansion is governed by `V_eff`, not bare `V_X` alone. In closure form this includes clock potential + interaction backreaction + memory contribution.
+- **Memory kernel structure:** nonlocal history enters through
+  `M(t) = integral(exp(-beta(X)*(t-tau)) * H[Omega(tau)] dtau)`,
+  which then feeds back into the `X` evolution and thermal/epoch mapping.
+- **Current closure status:** this structural system is implemented, but canonical uniqueness is still gated for `beta(X)`, `lambda_rec(X)`, `g_{OmegaX}(X)`, and `V_X(X)` (current machine state keeps `V_X` as `chosen_non_unique`).
+
 ## 🌟 Recent Breakthroughs (February 2026)
 
 ### **Memory Open-Item Integration (Latest Pass)**
