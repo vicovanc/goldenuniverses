@@ -14,6 +14,11 @@ export function convertToLatex(plainText: string): string {
     return `e^{${innerLatex}}`;
   });
 
+  // Handle mathematical functions first
+  latex = latex.replace(/inv\(/g, '\\text{inv}(');
+  latex = latex.replace(/Tr\(/g, '\\text{Tr}(');
+  latex = latex.replace(/arg\s/g, '\\arg ');
+
   // Convert multiplication dot to LaTeX cdot
   latex = latex.replace(/·/g, ' \\cdot ');
   latex = latex.replace(/\*/g, ' \\cdot ');
@@ -37,6 +42,15 @@ export function convertToLatex(plainText: string): string {
   latex = latex.replace(/\^([a-zA-Z]+)/g, '^{$1}');
   latex = latex.replace(/\^([nmijtk])/g, '^{$1}');
 
+  // Handle special physics notations
+  latex = latex.replace(/([a-zA-Z])†/g, '$1^{\\dagger}'); // Hermitian conjugate
+  latex = latex.replace(/Ω̄/g, '\\bar{\\Omega}'); // Bar notation
+  latex = latex.replace(/D_μ/g, 'D_{\\mu}');
+  latex = latex.replace(/D\^μ/g, 'D^{\\mu}');
+  latex = latex.replace(/F_μν/g, 'F_{\\mu\\nu}');
+  latex = latex.replace(/F\^μν/g, 'F^{\\mu\\nu}');
+  latex = latex.replace(/\^bμν/g, '^{b\\mu\\nu}');
+
   // Convert subscripts
   latex = latex.replace(/_([a-zA-Z0-9]+)/g, '_{$1}');
 
@@ -50,7 +64,7 @@ export function convertToLatex(plainText: string): string {
   latex = latex.replace(/Λ/g, '\\Lambda');
   latex = latex.replace(/Ξ/g, '\\Xi');
   latex = latex.replace(/Π/g, '\\Pi');
-  latex = latex.replace(/Σ/g, '\\Sigma');
+  // Σ is handled as \\sum in special symbols section
 
   // Greek letters (lowercase)
   latex = latex.replace(/α/g, '\\alpha');
@@ -81,6 +95,7 @@ export function convertToLatex(plainText: string): string {
   latex = latex.replace(/∇/g, '\\nabla');
   latex = latex.replace(/∫/g, '\\int');
   latex = latex.replace(/∑/g, '\\sum');
+  latex = latex.replace(/Σ/g, '\\sum'); // Capital Sigma is also sum
   latex = latex.replace(/∏/g, '\\prod');
   latex = latex.replace(/∞/g, '\\infty');
   latex = latex.replace(/±/g, '\\pm');

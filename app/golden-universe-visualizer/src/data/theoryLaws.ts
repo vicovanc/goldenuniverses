@@ -592,10 +592,10 @@ export const lawDependencies: LawDependency[] = [
 // Lagrangian Structure
 export const lagrangianTerms: LagrangianTerm[] = [
   {
-    symbol: 'L_Ω',
+    symbol: 'L_{\\Omega}',
     name: 'Substrate Lagrangian',
     description: 'Substrate dynamics including kinetic, potential, phase driver, and memory terms',
-    equation: 'L_Ω = L_{Ω,kin} − V_{fullΩ}(inv(Ω), X) + L_{phase_driver}(Ω, X) + L_{recursive_mimic}(Ω, X)',
+    equation: 'L_{\\Omega} = L_{\\Omega,\\text{kin}} - V_{\\text{full}\\Omega}(\\text{inv}(\\Omega), X) + L_{\\text{phase-driver}}(\\Omega, X) + L_{\\text{recursive-mimic}}(\\Omega, X)',
     relatedLaws: [2],
     components: [
       {
