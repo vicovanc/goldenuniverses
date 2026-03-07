@@ -51,11 +51,11 @@ export function preconnect(origin: string, crossorigin: boolean = false): void {
  */
 export function preloadCriticalRoutes(): void {
   // Preload the most commonly accessed routes
-  const criticalRoutes = [
-    '/assets/js/Home-*.js',
-    '/assets/js/Theory-*.js',
-    '/assets/js/Visualizations-*.js',
-  ];
+  // const criticalRoutes = [
+  //   '/assets/js/Home-*.js',
+  //   '/assets/js/Theory-*.js',
+  //   '/assets/js/Visualizations-*.js',
+  // ];
 
   // This would need to be called after build with actual filenames
   // For now, we'll use modulepreload which Vite handles automatically
