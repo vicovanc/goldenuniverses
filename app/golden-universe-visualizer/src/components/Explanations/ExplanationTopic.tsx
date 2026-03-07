@@ -454,64 +454,15 @@ const ExplanationTopic: React.FC = () => {
         return;
       }
 
-      // First try to load fallback content immediately
+      // Use fallback content directly - no API exists in static deployment
       const fallbackContent = getFallbackContent(topic);
       if (fallbackContent) {
         setContent(fallbackContent);
         setLoading(false);
-        // Still try to fetch from API in background
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 second timeout
-
-          const response = await fetch(`/api/explanations/topic/${topic}`, {
-            signal: controller.signal
-          });
-
-          clearTimeout(timeoutId);
-
-          if (response.ok) {
-            const result = await response.json();
-            if (result.success && result.data) {
-              setContent(result.data);
-            }
-          }
-        } catch (err) {
-          // Silently fail - we already have fallback content
-          console.log('API fetch failed, using fallback content');
-        }
       } else {
-        // No fallback available, must try API
-        setLoading(true);
-        setError(null);
-
-        try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
-
-          const response = await fetch(`/api/explanations/topic/${topic}`, {
-            signal: controller.signal
-          });
-
-          clearTimeout(timeoutId);
-
-          if (!response.ok) {
-            throw new Error(`Failed to load explanation: ${response.statusText}`);
-          }
-
-          const result = await response.json();
-
-          if (result.success && result.data) {
-            setContent(result.data);
-          } else {
-            throw new Error('Invalid response format');
-          }
-        } catch (err) {
-          console.error('Error loading explanation:', err);
-          setError(err instanceof Error ? err.message : 'Failed to load explanation');
-        } finally {
-          setLoading(false);
-        }
+        // No content available for this topic
+        setError(`Content for topic "${topic}" is not available yet.`);
+        setLoading(false);
       }
     };
 
