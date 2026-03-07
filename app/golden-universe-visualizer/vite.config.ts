@@ -108,9 +108,11 @@ export default defineConfig(({ mode }) => {
       '@utils': path.resolve(__dirname, './src/utils'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@types': path.resolve(__dirname, './src/types'),
+      '@/data': path.resolve(__dirname, './src/data'),
       // Fix for use-sync-external-store CommonJS/ESM issue
       'use-sync-external-store/shim/with-selector': path.resolve(__dirname, 'node_modules/use-sync-external-store/shim/with-selector.js'),
     },
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
   server: {
     port: 3000,
