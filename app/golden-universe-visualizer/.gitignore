@@ -57,7 +57,8 @@ coverage
 # Database
 *.db
 *.sqlite
-data/
+# Only ignore root data folder, not src/data
+/data/
 
 # Secrets
 secrets.yml

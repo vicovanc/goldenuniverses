@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
-import { THEORY_LAWS, EXPERIMENTAL_VALIDATIONS, DERIVATION_FILES } from '@/data/theoryContent';
+import { THEORY_LAWS, EXPERIMENTAL_VALIDATIONS, DERIVATION_FILES } from '@/data/theoryContentExports';
 import { lagrangianTerms } from '../data/theoryLaws';
 import EquationRenderer from '../components/Theory/EquationRenderer';
 import ExplanationTopic from '@/components/Explanations/ExplanationTopic';
