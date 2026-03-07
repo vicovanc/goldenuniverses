@@ -126,12 +126,27 @@ export async function searchDerivations(keyword: string): Promise<DerivationFold
     const derivations = await fetchDerivations();
     const lowerKeyword = keyword.toLowerCase();
 
-    return derivations.filter(folder =>
-      folder.folderName.toLowerCase().includes(lowerKeyword) ||
-      folder.files.some(file =>
+    return derivations.filter(folder => {
+      // Check folder name
+      if (folder.folderName.toLowerCase().includes(lowerKeyword)) {
+        return true;
+      }
+
+      // Check display name
+      if (folder.displayName?.toLowerCase().includes(lowerKeyword)) {
+        return true;
+      }
+
+      // Check file names
+      const allFiles = [
+        ...(folder.pythonScripts || []),
+        ...(folder.markdownFiles || [])
+      ];
+
+      return allFiles.some(file =>
         file.filename.toLowerCase().includes(lowerKeyword)
-      )
-    );
+      );
+    });
   } catch (error) {
     console.error('Error searching derivations:', error);
     return [];

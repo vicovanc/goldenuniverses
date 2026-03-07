@@ -52,13 +52,51 @@ export const DerivationsBrowser: React.FC = () => {
       const folders = await fetchDerivations();
 
       // Transform folder data to match the expected format
-      const derivationsData = folders.map((folder, index) => ({
-        id: index + 1,
-        number: index + 1,
-        title: folder.folderName.replace(/_/g, ' ').replace(/-/g, ' '),
-        folderName: folder.folderName,
-        files: folder.files || []
-      }));
+      const derivationsData = folders.map((folder, index) => {
+        // Count Python and Markdown files
+        const pythonCount = folder.pythonScripts?.length || 0;
+        const markdownCount = folder.markdownFiles?.length || 0;
+
+        // Format title from folder name
+        const title = folder.displayName || folder.folderName
+          .replace(/_/g, ' ')
+          .replace(/-/g, ' ')
+          .toLowerCase()
+          .replace(/\b\w/g, (char) => char.toUpperCase());
+
+        // Determine category based on folder name
+        let category: 'fundamental' | 'particles' | 'constants' | 'advanced' = 'advanced';
+        const folderLower = folder.folderName.toLowerCase();
+        if (folderLower.includes('force') || folderLower.includes('unification')) {
+          category = 'fundamental';
+        } else if (folderLower.includes('particle') || folderLower.includes('masses')) {
+          category = 'particles';
+        } else if (folderLower.includes('constant') || folderLower.includes('alpha')) {
+          category = 'constants';
+        }
+
+        return {
+          id: index + 1,
+          number: index + 1,
+          title,
+          name: folder.displayName || title,
+          description: `${pythonCount} Python scripts, ${markdownCount} documentation files`,
+          category,
+          folderName: folder.folderName,
+          folder_path: folder.path || folder.folderName,
+          pythonCount,
+          markdownCount,
+          totalFiles: pythonCount + markdownCount,
+          files: {
+            python: folder.pythonScripts?.map(f => f.filename) || [],
+            markdown: folder.markdownFiles?.map(f => f.filename) || [],
+            all: [
+              ...(folder.pythonScripts?.map(f => f.filename) || []),
+              ...(folder.markdownFiles?.map(f => f.filename) || [])
+            ]
+          }
+        };
+      });
 
       console.log('Derivations loaded:', derivationsData);
       setDerivations(derivationsData);
@@ -202,7 +240,7 @@ export const DerivationsBrowser: React.FC = () => {
           <h1>Derivations Browser</h1>
           <p className="subtitle error">{error}</p>
         </div>
-        <button onClick={fetchDerivations} className="retry-button">
+        <button onClick={fetchDerivationsData} className="retry-button">
           Retry
         </button>
       </div>

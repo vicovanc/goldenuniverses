@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { SidebarNavigationItem } from './types';
+import { fetchDerivations } from '@/services/derivationsService';
 
 interface Derivation {
   id: number;
@@ -18,62 +19,72 @@ export const useDynamicDerivations = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchDerivations();
+    loadDerivationsData();
   }, []);
 
-  const fetchDerivations = async () => {
+  const loadDerivationsData = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const response = await fetch('/api/derivations');
-      if (!response.ok) {
-        // Fallback to static data if API fails
-        console.warn('Failed to fetch derivations, using static data');
-        setDerivationItems(getStaticDerivations());
-        return;
-      }
+      // Use the service to fetch from static JSON
+      const derivationFolders = await fetchDerivations();
 
-      const result = await response.json();
-      if (result.success && result.data) {
-        // Convert API data to SidebarNavigationItem format
-        const items: SidebarNavigationItem[] = result.data.map((derivation: Derivation) => {
-          // Format the name properly with fallback
-          const nameToFormat = derivation.name || derivation.folderName || `Derivation ${derivation.number}`;
+      if (derivationFolders && derivationFolders.length > 0) {
+        // Convert folder data to SidebarNavigationItem format
+        const items: SidebarNavigationItem[] = derivationFolders.map((folder, index) => {
+          const derivationNumber = index + 1;
+
+          // Format the name from folder name
+          const nameToFormat = folder.displayName || folder.folderName || `Derivation ${derivationNumber}`;
           const formattedName = nameToFormat
             .replace(/_/g, ' ')
+            .replace(/-/g, ' ')
             .toLowerCase()
             .replace(/\b\w/g, (char) => char.toUpperCase());
 
-          // Determine badge based on content
+          // Count files for badge
+          const pythonCount = folder.pythonScripts?.length || 0;
+          const markdownCount = folder.markdownFiles?.length || 0;
+
           let badge: string | number | undefined;
-          if (derivation.pythonCount > 0 && derivation.markdownCount > 0) {
-            badge = `${derivation.pythonCount}+${derivation.markdownCount}`;
-          } else if (derivation.pythonCount > 0) {
-            badge = `PY:${derivation.pythonCount}`;
-          } else if (derivation.markdownCount > 0) {
-            badge = `MD:${derivation.markdownCount}`;
+          if (pythonCount > 0 && markdownCount > 0) {
+            badge = `${pythonCount}+${markdownCount}`;
+          } else if (pythonCount > 0) {
+            badge = `PY:${pythonCount}`;
+          } else if (markdownCount > 0) {
+            badge = `MD:${markdownCount}`;
+          }
+
+          // Determine icon based on folder name patterns
+          let icon = '📐';
+          const folderLower = folder.folderName.toLowerCase();
+          if (folderLower.includes('force') || folderLower.includes('unification')) {
+            icon = '⭐';
+          } else if (folderLower.includes('particle') || folderLower.includes('masses')) {
+            icon = '⚛️';
+          } else if (folderLower.includes('constant') || folderLower.includes('alpha')) {
+            icon = '🔢';
           }
 
           return {
-            id: `deriv-${String(derivation.number).padStart(2, '0')}`,
-            label: `${String(derivation.number).padStart(2, '0')}: ${formattedName}`,
-            path: `/derivations/${derivation.id}`,
+            id: `deriv-${String(derivationNumber).padStart(2, '0')}`,
+            label: `${String(derivationNumber).padStart(2, '0')}: ${formattedName}`,
+            path: `/derivations/${derivationNumber}`,
             badge,
-            tooltip: derivation.title,
-            icon: derivation.category === 'fundamental' ? '⭐' :
-                  derivation.category === 'particles' ? '⚛️' :
-                  derivation.category === 'constants' ? '🔢' : '📐',
+            tooltip: formattedName,
+            icon,
           };
         });
 
         setDerivationItems(items);
       } else {
-        // Fallback to static data
+        // Fallback to static data if no derivations found
+        console.warn('No derivations found, using static fallback');
         setDerivationItems(getStaticDerivations());
       }
     } catch (err) {
-      console.error('Error fetching derivations:', err);
+      console.error('Error loading derivations:', err);
       setError('Failed to load derivations');
       // Use static data as fallback
       setDerivationItems(getStaticDerivations());

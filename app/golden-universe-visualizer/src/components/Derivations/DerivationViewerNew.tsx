@@ -11,6 +11,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { PythonExecutor } from '@/components/Calculations/PythonExecutor';
+import { fetchDerivations, fetchDerivationFileContent } from '@/services/derivationsService';
 import './DerivationViewerNew.scss';
 
 interface DerivationFile {
@@ -120,82 +121,76 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
       setLoading(true);
       setError(null);
 
-      // Use the new API endpoint to get files for this folder
-      const filesResponse = await fetch(`/api/derivations/folder/${actualFolderName}/files`);
-      if (filesResponse.ok) {
-        const filesResult = await filesResponse.json();
-        if (filesResult.success && filesResult.data) {
-          const { pythonFiles, markdownFiles, allFiles } = filesResult.data;
+      // Load from static JSON using the service
+      const derivations = await fetchDerivations();
 
-          // Create derivation data structure from API response
-          const derivation: DerivationData = {
-            id: derivationId,
-            folderName: actualFolderName,
-            path: actualFolderName,
-            displayName: title,
-            pythonScripts: pythonFiles.map((f: any, idx: number) => ({
-              id: `py-${idx}`,
-              filename: f.filename,
-              path: f.filename,
-            })),
-            markdownFiles: markdownFiles.filter((f: any) => f.filename !== 'README.md').map((f: any, idx: number) => ({
-              id: `md-${idx}`,
-              filename: f.filename,
-              path: f.filename,
-            })),
+      // Find the matching derivation by folder name
+      const derivation = derivations.find(d =>
+        d.folderName === actualFolderName ||
+        d.path?.includes(actualFolderName)
+      );
+
+      if (derivation) {
+        // Create derivation data structure
+        const derivationData: DerivationData = {
+          id: derivationId,
+          folderName: derivation.folderName,
+          path: derivation.path || derivation.folderName,
+          displayName: title || derivation.displayName || derivation.folderName,
+          pythonScripts: derivation.pythonScripts?.map((f, idx) => ({
+            id: f.id || `py-${idx}`,
+            filename: f.filename,
+            path: f.path || f.filename,
+            content: f.content,
+          })),
+          markdownFiles: derivation.markdownFiles?.filter(f => f.filename !== 'README.md').map((f, idx) => ({
+            id: f.id || `md-${idx}`,
+            filename: f.filename,
+            path: f.path || f.filename,
+            content: f.content,
+          })),
+        };
+
+        // Check for README
+        if (derivation.readme) {
+          derivationData.readme = {
+            content: derivation.readme.content || '',
+            lastModified: new Date().toISOString(),
           };
-
-          // Check for README
-          const readmeFile = markdownFiles.find((f: any) => f.filename === 'README.md');
-          if (readmeFile) {
-            // Load README content
-            const readmeResponse = await fetch(`/api/derivations/folder/${actualFolderName}/file/README.md`);
-            if (readmeResponse.ok) {
-              const readmeResult = await readmeResponse.json();
-              if (readmeResult.success && readmeResult.data) {
-                derivation.readme = {
-                  content: readmeResult.data.content,
-                  lastModified: new Date().toISOString(),
-                };
-              }
-            }
+        } else {
+          // Try to find README in markdown files
+          const readmeFile = derivation.markdownFiles?.find(f => f.filename === 'README.md');
+          if (readmeFile && readmeFile.content) {
+            derivationData.readme = {
+              content: readmeFile.content,
+              lastModified: new Date().toISOString(),
+            };
           }
+        }
 
-          setDerivationData(derivation);
+        setDerivationData(derivationData);
 
-          // Select the first Python file by default
-          if (derivation.pythonScripts && derivation.pythonScripts.length > 0) {
-            const firstPythonFile = derivation.pythonScripts[0];
-            setSelectedFile(firstPythonFile);
-            await loadFileContent(firstPythonFile);
-            setActiveTab('python');
-          } else if (derivation.readme) {
-            setActiveTab('readme');
+        // Select the first Python file by default
+        if (derivationData.pythonScripts && derivationData.pythonScripts.length > 0) {
+          const firstPythonFile = derivationData.pythonScripts[0];
+          setSelectedFile(firstPythonFile);
+          if (firstPythonFile.content) {
+            setFileContent(firstPythonFile.content);
           }
+          setActiveTab('python');
+        } else if (derivationData.readme) {
+          setActiveTab('readme');
+        } else if (derivationData.markdownFiles && derivationData.markdownFiles.length > 0) {
+          const firstMarkdown = derivationData.markdownFiles[0];
+          setSelectedFile(firstMarkdown);
+          if (firstMarkdown.content) {
+            setFileContent(firstMarkdown.content);
+          }
+          setActiveTab('markdown');
         }
       } else {
-        // Fallback: Try to load from derivations-map.json
-        const response = await fetch('/data/derivations-map.json');
-        if (response.ok) {
-          const data: DerivationsMap = await response.json();
-          const derivation = data.derivations.find(d =>
-            d.folderName === actualFolderName ||
-            d.path.includes(actualFolderName)
-          );
-
-          if (derivation) {
-            setDerivationData(derivation);
-
-            if (derivation.pythonScripts && derivation.pythonScripts.length > 0) {
-              const firstPythonFile = derivation.pythonScripts[0];
-              setSelectedFile(firstPythonFile);
-              await loadFileContent(firstPythonFile);
-              setActiveTab('python');
-            } else if (derivation.readme) {
-              setActiveTab('readme');
-            }
-          }
-        }
+        console.warn(`No derivation found for folder: ${actualFolderName}`);
+        setError(`Unable to load derivation for ${actualFolderName}`);
       }
     } catch (err) {
       console.error('Error loading derivation data:', err);
@@ -227,44 +222,27 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
         return;
       }
 
-      // Use the new API endpoint to load file directly from filesystem
-      const apiPath = `/api/derivations/folder/${actualFolderName}/file/${file.filename}`;
-      console.log('Loading file from API:', apiPath);
+      // Try to load from service
+      const folderName = derivationData?.folderName || actualFolderName;
+      const content = await fetchDerivationFileContent(folderName, file.filename);
 
-      const response = await fetch(apiPath);
-      if (response.ok) {
-        const result = await response.json();
-        if (result.success && result.data) {
-          setFileContent(result.data.content);
-        } else {
-          throw new Error('Invalid API response');
-        }
+      if (content) {
+        setFileContent(content);
       } else {
-        // Fallback to try derivationData folder name if different
-        if (derivationData?.folderName && derivationData.folderName !== actualFolderName) {
-          const altApiPath = `/api/derivations/folder/${derivationData.folderName}/file/${file.filename}`;
-          console.log('Trying alternative API path:', altApiPath);
-
-          const altResponse = await fetch(altApiPath);
-          if (altResponse.ok) {
-            const altResult = await altResponse.json();
-            if (altResult.success && altResult.data) {
-              setFileContent(altResult.data.content);
-            } else {
-              throw new Error('Invalid API response from alternative path');
-            }
-          } else {
-            throw new Error(`File not found: ${file.filename}`);
-          }
-        } else {
-          throw new Error(`File not found: ${file.filename}`);
-        }
+        // If no content found, show a message
+        setFileContent(`# File Not Available\n\n` +
+          `The file "${file.filename}" is not available in the static data.\n\n` +
+          `This may be because:\n` +
+          `- The derivations-map.json file needs to be regenerated\n` +
+          `- The file content is not included in the static export\n\n` +
+          `Please check that the derivation files are properly included in the build.`);
       }
     } catch (err) {
       console.error('Error loading file content:', err);
-      setFileContent(`# Error loading file\n\nFailed to load: ${file.filename}\n\nError: ${err}\n\n` +
-        `This file should be loaded dynamically from the server's filesystem.\n` +
-        `Please ensure the derivation files are properly configured on the server.`);
+      setFileContent(`# Error Loading File\n\n` +
+        `Failed to load: ${file.filename}\n\n` +
+        `Error: ${err}\n\n` +
+        `Please ensure the derivation files are properly configured.`);
     }
   };
 
