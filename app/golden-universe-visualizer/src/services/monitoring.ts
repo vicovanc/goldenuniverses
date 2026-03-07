@@ -41,7 +41,9 @@ class MonitoringService {
     if (!this.config.enabled) return;
 
     try {
+      // @ts-ignore - Optional dependency
       const sentryModule = await import('@sentry/react');
+      // @ts-ignore - Optional dependency
       const tracingModule = await import('@sentry/tracing');
       this.Sentry = sentryModule;
       this.BrowserTracing = tracingModule.BrowserTracing;

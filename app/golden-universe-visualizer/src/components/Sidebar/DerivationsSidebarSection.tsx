@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import type { SidebarItem } from './types';
+import type { SidebarNavigationItem } from './types';
 
 interface Derivation {
   id: number;

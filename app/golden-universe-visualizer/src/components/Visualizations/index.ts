@@ -3,6 +3,7 @@
  * Central export for all 3D visualization components
  */
 
+export { VisualizationGallery } from './VisualizationGallery';
 export { WindingNumbersVisualization } from './WindingNumbersVisualization';
 export { PhaseSpaceVisualization } from './PhaseSpaceVisualization';
 export { MemoryEvolutionVisualization } from './MemoryEvolutionVisualization';

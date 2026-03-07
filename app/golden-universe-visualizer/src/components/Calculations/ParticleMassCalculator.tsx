@@ -148,19 +148,19 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                 <div className="param-item">
                   <span className="param-label">Detuning δ:</span>
                   <span className="param-value">
-                    {result.epoch.delta ? parseFloat(result.epoch.delta).toFixed(6) : 'N/A'}
+                    {result.epoch.delta ? parseFloat(String(result.epoch.delta)).toFixed(6) : 'N/A'}
                   </span>
                 </div>
                 <div className="param-item">
                   <span className="param-label">π₁₁₁:</span>
                   <span className="param-value">
-                    {result.epoch.pi_n ? parseFloat(result.epoch.pi_n).toFixed(8) : 'N/A'}
+                    {result.epoch.pi_n ? parseFloat(String(result.epoch.pi_n)).toFixed(8) : 'N/A'}
                   </span>
                 </div>
                 <div className="param-item">
                   <span className="param-label">φ₁₁₁:</span>
                   <span className="param-value">
-                    {result.epoch.phi_n ? parseFloat(result.epoch.phi_n).toFixed(8) : 'N/A'}
+                    {result.epoch.phi_n ? parseFloat(String(result.epoch.phi_n)).toFixed(8) : 'N/A'}
                   </span>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                 <div className="winding-length">
                   <span className="winding-label">l_Ω =</span>
                   <span className="winding-value">
-                    {parseFloat(result.winding.l_Omega).toFixed(6)}
+                    {parseFloat(String(result.winding.l_Omega)).toFixed(6)}
                   </span>
                 </div>
                 <div className="winding-constraint">
@@ -216,7 +216,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                       <div className="component-formula">|δ|·K(ν)</div>
                       <div className="component-value">
                         {result.coupling.components?.detuning
-                          ? parseFloat(result.coupling.components.detuning).toFixed(10)
+                          ? parseFloat(String(result.coupling.components.detuning)).toFixed(10)
                           : 'N/A'}
                       </div>
                     </div>
@@ -226,7 +226,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                       <div className="component-formula">η_μ·(ν/2)</div>
                       <div className="component-value">
                         {result.coupling.components?.elliptic
-                          ? parseFloat(result.coupling.components.elliptic).toFixed(10)
+                          ? parseFloat(String(result.coupling.components.elliptic)).toFixed(10)
                           : 'N/A'}
                       </div>
                     </div>
@@ -236,7 +236,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                       <div className="component-formula">-(λ_rec/β)·κ/3</div>
                       <div className="component-value">
                         {result.coupling.components?.memory
-                          ? parseFloat(result.coupling.components.memory).toFixed(10)
+                          ? parseFloat(String(result.coupling.components.memory)).toFixed(10)
                           : 'N/A'}
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                       <div className="component-name">Total C_e</div>
                       <div className="component-formula"></div>
                       <div className="component-value">
-                        {parseFloat(result.coupling.C_value).toFixed(10)}
+                        {parseFloat(String(result.coupling.C_value)).toFixed(10)}
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ export const ParticleMassCalculatorUI: React.FC = () => {
                     <div className="param-item">
                       <span className="param-label">Optimal ν:</span>
                       <span className="param-value">
-                        {parseFloat(result.coupling.nu_optimal).toFixed(8)}
+                        {parseFloat(String(result.coupling.nu_optimal)).toFixed(8)}
                       </span>
                     </div>
                     <div className="param-item">

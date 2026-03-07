@@ -506,7 +506,7 @@ to_json(result)
 `;
 
     const calcResult = await this.execute(code, 1, false);
-    const result = calcResult.result as {
+    const result = calcResult.result as unknown as {
       electron: ParticleMassResult;
       muon: ParticleMassResult;
       tau: ParticleMassResult;

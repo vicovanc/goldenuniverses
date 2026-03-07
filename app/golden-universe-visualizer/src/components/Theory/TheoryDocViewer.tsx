@@ -95,40 +95,37 @@ const TheoryDocViewer: React.FC<TheoryDocViewerProps> = ({ documentPath, initial
     const renderer = new marked.Renderer();
 
     // Override the heading renderer to add section IDs
-    renderer.heading = (text: string, level: number) => {
+    renderer.heading = (({ tokens, depth }: any) => {
+      const text = tokens?.map?.((t: any) => t.text || t.raw || '').join('') || '';
       // Generate ID from the text (same logic as extractSections)
       const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
       // Return header with the section ID
-      return `<h${level} id="section-${id}">${text}</h${level}>`;
-    };
+      return `<h${depth} id="section-${id}">${text}</h${depth}>`;
+    }) as any;
 
     // Override paragraph renderer to process LaTeX
-    const originalParagraph = renderer.paragraph.bind(renderer);
-    renderer.paragraph = (text: string) => {
+    renderer.paragraph = (({ tokens }: any) => {
+      const text = tokens?.map?.((t: any) => t.text || t.raw || '').join('') || '';
       const processedText = processLatexInMarkdown(text);
-      return originalParagraph(processedText);
-    };
+      return `<p>${processedText}</p>`;
+    }) as any;
 
     // Override list item renderer to process LaTeX
-    const originalListItem = renderer.listitem.bind(renderer);
-    renderer.listitem = (text: string, task: boolean, checked: boolean) => {
+    renderer.listitem = ((item: any) => {
+      const text = typeof item === 'string' ? item : item.text || '';
+      const task = item.task || false;
+      const checked = item.checked || false;
       const processedText = processLatexInMarkdown(text);
-      return originalListItem(processedText, task, checked);
-    };
+      if (task) {
+        const checkbox = checked ? '<input type="checkbox" checked disabled>' : '<input type="checkbox" disabled>';
+        return `<li>${checkbox} ${processedText}</li>`;
+      }
+      return `<li>${processedText}</li>`;
+    }) as any;
 
     marked.setOptions({
       renderer: renderer,
-      highlight: (code, lang) => {
-        if (lang && hljs.getLanguage(lang)) {
-          try {
-            return hljs.highlight(code, { language: lang }).value;
-          } catch (err) {
-            console.error('Highlight error:', err);
-          }
-        }
-        return hljs.highlightAuto(code).value;
-      },
       breaks: true,
       gfm: true,
     });

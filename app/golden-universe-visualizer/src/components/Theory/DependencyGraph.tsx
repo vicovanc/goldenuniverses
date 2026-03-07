@@ -38,7 +38,7 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({ onSelectLaw, highligh
     d3.select(svgRef.current).selectAll('*').remove();
 
     // Filter nodes by category
-    const filteredNodes = theoryLaws
+    const filteredNodes: GraphNode[] = theoryLaws
       .filter((law) => filterCategory === 'all' || law.category === filterCategory)
       .map((law) => ({
         id: law.id,
@@ -134,16 +134,16 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({ onSelectLaw, highligh
     // Create nodes
     const node = g
       .append('g')
-      .selectAll('g')
+      .selectAll<SVGGElement, GraphNode>('g')
       .data(filteredNodes)
       .join('g')
       .attr('class', (d) => `node node-${d.category} ${d.id === highlightLawId ? 'highlighted' : ''}`)
       .call(
         d3
-          .drag<SVGGElement, GraphNode>()
+          .drag<SVGGElement, GraphNode, GraphNode | undefined>()
           .on('start', dragstarted)
           .on('drag', dragged)
-          .on('end', dragended)
+          .on('end', dragended) as any
       );
 
     // Add circles to nodes
@@ -199,8 +199,8 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({ onSelectLaw, highligh
         connectedIds.add(d.id);
 
         filteredLinks.forEach((link) => {
-          const sourceId = typeof link.source === 'number' ? link.source : link.source.id;
-          const targetId = typeof link.target === 'number' ? link.target : link.target.id;
+          const sourceId = typeof link.source === 'number' ? link.source : (link.source as GraphNode).id;
+          const targetId = typeof link.target === 'number' ? link.target : (link.target as GraphNode).id;
 
           if (sourceId === d.id) connectedIds.add(targetId);
           if (targetId === d.id) connectedIds.add(sourceId);
@@ -208,8 +208,8 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({ onSelectLaw, highligh
 
         node.style('opacity', (n) => (connectedIds.has(n.id) ? 1 : 0.2));
         link.style('opacity', (l) => {
-          const sourceId = typeof l.source === 'number' ? l.source : l.source.id;
-          const targetId = typeof l.target === 'number' ? l.target : l.target.id;
+          const sourceId = typeof l.source === 'number' ? l.source : (l.source as GraphNode).id;
+          const targetId = typeof l.target === 'number' ? l.target : (l.target as GraphNode).id;
           return connectedIds.has(sourceId) && connectedIds.has(targetId) ? 1 : 0.1;
         });
       })
@@ -226,10 +226,10 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({ onSelectLaw, highligh
     // Update positions on tick
     simulation.on('tick', () => {
       link
-        .attr('x1', (d) => (typeof d.source === 'number' ? 0 : d.source.x || 0))
-        .attr('y1', (d) => (typeof d.source === 'number' ? 0 : d.source.y || 0))
-        .attr('x2', (d) => (typeof d.target === 'number' ? 0 : d.target.x || 0))
-        .attr('y2', (d) => (typeof d.target === 'number' ? 0 : d.target.y || 0));
+        .attr('x1', (d) => (typeof d.source === 'number' ? 0 : (d.source as GraphNode).x || 0))
+        .attr('y1', (d) => (typeof d.source === 'number' ? 0 : (d.source as GraphNode).y || 0))
+        .attr('x2', (d) => (typeof d.target === 'number' ? 0 : (d.target as GraphNode).x || 0))
+        .attr('y2', (d) => (typeof d.target === 'number' ? 0 : (d.target as GraphNode).y || 0));
 
       node.attr('transform', (d) => `translate(${d.x || 0},${d.y || 0})`);
     });

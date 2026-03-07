@@ -344,7 +344,7 @@ export async function searchContent(query: SearchQuery): Promise<SearchResult[]>
   // Search theories
   if (!query.type || query.type === 'theory' || query.type === 'all') {
     for (const theory of catalog.theories) {
-      const titleMatch = theory.title.toLowerCase().includes(searchTerm);
+      const titleMatch = (theory.metadata?.title || '').toLowerCase().includes(searchTerm);
       const contentMatch = theory.content.toLowerCase().includes(searchTerm);
 
       if (titleMatch || contentMatch) {
@@ -359,7 +359,7 @@ export async function searchContent(query: SearchQuery): Promise<SearchResult[]>
         results.push({
           id: theory.id,
           type: 'theory',
-          title: theory.title,
+          title: theory.metadata?.title || 'Untitled',
           description: theory.content.substring(0, 200) + '...',
           path: theory.path,
           relevanceScore: score,
@@ -465,8 +465,9 @@ export async function getSearchSuggestions(partial: string, limit: number = 5): 
 
   // Collect titles
   catalog.theories.forEach(t => {
-    if (t.title.toLowerCase().includes(term)) {
-      suggestions.add(t.title);
+    const title = t.metadata?.title || '';
+    if (title.toLowerCase().includes(term)) {
+      suggestions.add(title);
     }
   });
 

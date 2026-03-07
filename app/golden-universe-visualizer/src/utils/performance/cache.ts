@@ -91,7 +91,7 @@ class CacheManager {
    * Set a cache entry
    */
   async set<T>(
-    store: keyof GoldenUniverseCacheDB,
+    store: StoreNames,
     key: string,
     value: T,
     ttl?: number,
@@ -101,7 +101,7 @@ class CacheManager {
     if (!this.db) throw new Error('Database not initialized');
 
     const now = Date.now();
-    const storeUpperCase = String(store).toUpperCase() as keyof typeof CACHE_TTL;
+    const storeUpperCase = store.toUpperCase() as keyof typeof CACHE_TTL;
     const defaultTTL = CACHE_TTL[storeUpperCase] || CACHE_TTL.CONTENT;
     const expiresAt = now + (ttl || defaultTTL);
 
@@ -113,17 +113,17 @@ class CacheManager {
       metadata,
     };
 
-    await this.db.put(store as StoreNames, entry as any);
+    await this.db.put(store, entry as any);
   }
 
   /**
    * Get a cache entry
    */
-  async get<T>(store: keyof GoldenUniverseCacheDB, key: string): Promise<T | null> {
+  async get<T>(store: StoreNames, key: string): Promise<T | null> {
     await this.init();
     if (!this.db) throw new Error('Database not initialized');
 
-    const entry = await this.db.get(store as StoreNames, key);
+    const entry = await this.db.get(store, key);
 
     if (!entry) return null;
 
@@ -139,21 +139,21 @@ class CacheManager {
   /**
    * Delete a cache entry
    */
-  async delete(store: keyof GoldenUniverseCacheDB, key: string): Promise<void> {
+  async delete(store: StoreNames, key: string): Promise<void> {
     await this.init();
     if (!this.db) throw new Error('Database not initialized');
 
-    await this.db.delete(store as StoreNames, key);
+    await this.db.delete(store, key);
   }
 
   /**
    * Clear all entries in a store
    */
-  async clear(store: keyof GoldenUniverseCacheDB): Promise<void> {
+  async clear(store: StoreNames): Promise<void> {
     await this.init();
     if (!this.db) throw new Error('Database not initialized');
 
-    await this.db.clear(store as StoreNames);
+    await this.db.clear(store);
   }
 
   /**
@@ -173,11 +173,11 @@ class CacheManager {
   /**
    * Get all entries in a store
    */
-  async getAll<T>(store: keyof GoldenUniverseCacheDB): Promise<T[]> {
+  async getAll<T>(store: StoreNames): Promise<T[]> {
     await this.init();
     if (!this.db) throw new Error('Database not initialized');
 
-    const entries = await this.db.getAll(store as StoreNames);
+    const entries = await this.db.getAll(store);
     const now = Date.now();
 
     return entries
@@ -193,14 +193,14 @@ class CacheManager {
     if (!this.db) throw new Error('Database not initialized');
 
     const now = Date.now();
-    const stores: Array<keyof GoldenUniverseCacheDB> = [
+    const stores: StoreNames[] = [
       'calculations',
       'content',
       'visualizations',
     ];
 
     for (const store of stores) {
-      const tx = this.db.transaction(store as StoreNames, 'readwrite');
+      const tx = this.db.transaction(store, 'readwrite');
       const index = tx.store.index('by-expires');
 
       // Get all expired entries
@@ -245,7 +245,7 @@ class CacheManager {
   /**
    * Check if cache has entry
    */
-  async has(store: keyof GoldenUniverseCacheDB, key: string): Promise<boolean> {
+  async has(store: StoreNames, key: string): Promise<boolean> {
     const value = await this.get(store, key);
     return value !== null;
   }
@@ -254,7 +254,7 @@ class CacheManager {
    * Get or set pattern (cache-aside)
    */
   async getOrSet<T>(
-    store: keyof GoldenUniverseCacheDB,
+    store: StoreNames,
     key: string,
     factory: () => Promise<T> | T,
     ttl?: number,

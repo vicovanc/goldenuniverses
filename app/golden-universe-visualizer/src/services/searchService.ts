@@ -8,7 +8,7 @@
  * - Optimized for <100ms query performance
  */
 
-import FlexSearch from 'flexsearch';
+import * as FlexSearch from 'flexsearch';
 
 // Search result interface
 export interface SearchResult {
@@ -63,7 +63,7 @@ export interface SearchHistoryEntry {
 }
 
 class SearchService {
-  private index: FlexSearch.Document<SearchResult, false> | null = null;
+  private index: any | null = null;
   private indexedContent: Map<string, SearchResult> = new Map();
   private searchHistory: SearchHistoryEntry[] = [];
   private popularSearches: Map<string, number> = new Map();
@@ -90,7 +90,7 @@ class SearchService {
 
     try {
       // Create FlexSearch document index with optimized settings
-      this.index = new FlexSearch.Document({
+      this.index = new (FlexSearch as any).Document({
         document: {
           id: 'id',
           index: ['title', 'content', 'filename', 'category'],
@@ -98,12 +98,11 @@ class SearchService {
         },
         tokenize: 'forward',
         cache: true,
-        optimize: true,
         resolution: 9,
         depth: 3,
         bidirectional: true,
         context: true,
-      });
+      } as any);
 
       // Load and index content from JSON files
       await Promise.all([

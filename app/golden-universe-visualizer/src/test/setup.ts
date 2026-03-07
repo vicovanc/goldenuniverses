@@ -24,7 +24,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+(globalThis as any).IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -35,7 +35,7 @@ global.IntersectionObserver = class IntersectionObserver {
 } as any;
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+(globalThis as any).ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -63,17 +63,17 @@ class MockAudioContext {
 }
 
 // @ts-ignore
-global.AudioContext = MockAudioContext;
+(globalThis as any).AudioContext = MockAudioContext;
 // @ts-ignore
-global.webkitAudioContext = MockAudioContext;
+(globalThis as any).webkitAudioContext = MockAudioContext;
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = vi.fn((cb) => {
+(globalThis as any).requestAnimationFrame = vi.fn((cb) => {
   setTimeout(cb, 0);
   return 0;
 });
 
-global.cancelAnimationFrame = vi.fn();
+(globalThis as any).cancelAnimationFrame = vi.fn();
 
 // Mock localStorage
 const localStorageMock = (() => {
@@ -110,8 +110,8 @@ Object.defineProperty(window, 'sessionStorage', {
 });
 
 // Mock URL.createObjectURL
-global.URL.createObjectURL = vi.fn(() => 'blob:mock-url');
-global.URL.revokeObjectURL = vi.fn();
+(globalThis as any).URL.createObjectURL = vi.fn(() => 'blob:mock-url');
+(globalThis as any).URL.revokeObjectURL = vi.fn();
 
 // Mock HTMLCanvasElement.getContext
 HTMLCanvasElement.prototype.getContext = vi.fn(() => ({

@@ -217,12 +217,12 @@ function SymmetryAxes({ showAxes, breakingStrength }: SymmetryAxesProps) {
             p[0] * (1 + breakingStrength * 0.3),
             p[1],
             p[2] * (1 - breakingStrength * 0.3)
-          ]),
+          ] as [number, number, number]),
           goldenPoints.map(p => [
             p[0] * (1 + breakingStrength * 0.3),
             p[1],
             p[2] * (1 - breakingStrength * 0.3)
-          ])[0]
+          ] as [number, number, number])[0]
         ]}
         color="#ff6b6b"
         lineWidth={1}

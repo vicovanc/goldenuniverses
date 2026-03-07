@@ -100,7 +100,7 @@ export const createMockResizeObserverEntry = (
  * Mock fetch response
  */
 export const mockFetch = (data: any, ok: boolean = true, status: number = 200) => {
-  global.fetch = vi.fn(() =>
+  (globalThis as any).fetch = vi.fn(() =>
     Promise.resolve({
       ok,
       status,
@@ -125,8 +125,8 @@ export const mockFetch = (data: any, ok: boolean = true, status: number = 200) =
  * Reset fetch mock
  */
 export const resetFetchMock = () => {
-  if (global.fetch && vi.isMockFunction(global.fetch)) {
-    (global.fetch as any).mockRestore();
+  if ((globalThis as any).fetch && vi.isMockFunction((globalThis as any).fetch)) {
+    ((globalThis as any).fetch as any).mockRestore();
   }
 };
 

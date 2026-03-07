@@ -106,8 +106,8 @@ describe('Sidebar', () => {
     });
 
     it('should render navigation icons', () => {
-      renderWithProviders(<Sidebar />);
-      const icons = screen.getAllByClassName('nav-icon');
+      const { container } = renderWithProviders(<Sidebar />);
+      const icons = container.getElementsByClassName('nav-icon');
       expect(icons.length).toBeGreaterThan(0);
     });
   });
@@ -170,8 +170,8 @@ describe('Sidebar', () => {
         toggleSidebar: mockToggleSidebar,
       });
 
-      renderWithProviders(<Sidebar />);
-      const expandButtons = screen.queryAllByClassName('expand-button');
+      const { container } = renderWithProviders(<Sidebar />);
+      const expandButtons = container.getElementsByClassName('expand-button');
       expect(expandButtons.length).toBe(0);
     });
   });

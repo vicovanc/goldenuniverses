@@ -3,8 +3,9 @@
  * GU-052: Uses react-window for efficient rendering of long navigation lists
  */
 
-import { useState, useMemo, useCallback } from 'react';
-import { FixedSizeList as List } from 'react-window';
+import React, { useState, useMemo, useCallback } from 'react';
+// @ts-ignore
+import { List } from 'react-window';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppStore } from '@utils/store';
 import { NAVIGATION_ITEMS } from '@utils/constants';
@@ -112,15 +113,14 @@ const VirtualizedSidebar: React.FC = () => {
         </button>
       </div>
       <nav className="sidebar-nav">
-        <List
-          height={window.innerHeight - 80} // Subtract header height
-          itemCount={flattenedItems.length}
-          itemSize={48} // Height of each nav item
-          width="100%"
-          overscanCount={5} // Render 5 extra items for smooth scrolling
-        >
-          {Row}
-        </List>
+        {React.createElement(List as any, {
+          height: window.innerHeight - 80, // Subtract header height
+          itemCount: flattenedItems.length,
+          itemSize: 48, // Height of each nav item
+          width: "100%",
+          overscanCount: 5, // Render 5 extra items for smooth scrolling
+          children: Row
+        })}
       </nav>
     </aside>
   );

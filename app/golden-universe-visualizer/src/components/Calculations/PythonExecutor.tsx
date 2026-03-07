@@ -77,12 +77,12 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
       const engine = getPythonEngine();
       const result = await engine.execute(code);
 
-      if (result.output) {
-        setOutput(result.output);
-      } else if (result.result) {
+      if (result.result) {
         setOutput(JSON.stringify(result.result, null, 2));
-      } else {
+      } else if (result.success) {
         setOutput('Calculation completed successfully');
+      } else {
+        setOutput('No output available');
       }
     } catch (err) {
       console.error('Python execution error:', err);

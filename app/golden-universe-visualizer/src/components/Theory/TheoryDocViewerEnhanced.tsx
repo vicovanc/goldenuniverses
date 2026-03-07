@@ -119,38 +119,45 @@ const TheoryDocViewerEnhanced: React.FC<TheoryDocViewerProps> = ({ documentPath,
     const renderer = new marked.Renderer();
 
     // Override the heading renderer to add section IDs
-    renderer.heading = (text: string, level: number) => {
+    renderer.heading = (({ tokens, depth }: any) => {
+      const text = tokens?.map?.((t: any) => t.text || t.raw || '').join('') || '';
       const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      return `<h${level} id="section-${id}">${text}</h${level}>`;
-    };
+      return `<h${depth} id="section-${id}">${text}</h${depth}>`;
+    }) as any;
 
     // Override code renderer for syntax highlighting
-    renderer.code = (code: string, language: string | undefined) => {
-      if (language && hljs.getLanguage(language)) {
+    renderer.code = (({ text, lang }: { text: string; lang?: string }) => {
+      if (lang && hljs.getLanguage(lang)) {
         try {
-          const highlighted = hljs.highlight(code, { language }).value;
-          return `<pre><code class="hljs language-${language}">${highlighted}</code></pre>`;
+          const highlighted = hljs.highlight(text, { language: lang }).value;
+          return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
         } catch (err) {
           console.error('Highlight error:', err);
         }
       }
-      const highlighted = hljs.highlightAuto(code).value;
+      const highlighted = hljs.highlightAuto(text).value;
       return `<pre><code class="hljs">${highlighted}</code></pre>`;
-    };
+    }) as any;
 
     // Override paragraph renderer to process LaTeX
-    const originalParagraph = renderer.paragraph.bind(renderer);
-    renderer.paragraph = (text: string) => {
+    renderer.paragraph = (({ tokens }: any) => {
+      const text = tokens?.map?.((t: any) => t.text || t.raw || '').join('') || '';
       const processedText = processLatexInMarkdown(text);
-      return originalParagraph(processedText);
-    };
+      return `<p>${processedText}</p>`;
+    }) as any;
 
     // Override list item renderer to process LaTeX
-    const originalListItem = renderer.listitem.bind(renderer);
-    renderer.listitem = (text: string, task: boolean, checked: boolean) => {
+    renderer.listitem = ((item: any) => {
+      const text = typeof item === 'string' ? item : item.text || '';
+      const task = item.task || false;
+      const checked = item.checked || false;
       const processedText = processLatexInMarkdown(text);
-      return originalListItem(processedText, task, checked);
-    };
+      if (task) {
+        const checkbox = checked ? '<input type="checkbox" checked disabled>' : '<input type="checkbox" disabled>';
+        return `<li>${checkbox} ${processedText}</li>`;
+      }
+      return `<li>${processedText}</li>`;
+    }) as any;
 
     marked.setOptions({
       renderer: renderer,
