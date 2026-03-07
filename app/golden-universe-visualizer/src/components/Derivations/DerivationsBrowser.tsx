@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { DerivationViewerNew } from './DerivationViewerNew';
+import { fetchDerivations } from '@/services/derivationsService';
 import './DerivationsBrowser.scss';
 
 interface Derivation {
@@ -40,27 +41,27 @@ export const DerivationsBrowser: React.FC = () => {
 
   // Fetch derivations from the server
   useEffect(() => {
-    fetchDerivations();
+    fetchDerivationsData();
   }, []);
 
-  const fetchDerivations = async () => {
+  const fetchDerivationsData = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const response = await fetch('/api/derivations');
-      if (!response.ok) {
-        throw new Error('Failed to fetch derivations');
-      }
+      const folders = await fetchDerivations();
 
-      const result = await response.json();
-      if (result.success && result.data) {
-        console.log('Derivations from API:', result.data);
-        console.log('First derivation title:', result.data[0]?.title);
-        setDerivations(result.data);
-      } else {
-        throw new Error('Invalid response format');
-      }
+      // Transform folder data to match the expected format
+      const derivationsData = folders.map((folder, index) => ({
+        id: index + 1,
+        number: index + 1,
+        title: folder.folderName.replace(/_/g, ' ').replace(/-/g, ' '),
+        folderName: folder.folderName,
+        files: folder.files || []
+      }));
+
+      console.log('Derivations loaded:', derivationsData);
+      setDerivations(derivationsData);
     } catch (err) {
       console.error('Error fetching derivations:', err);
       setError('Failed to load derivations. Please try refreshing the page.');
