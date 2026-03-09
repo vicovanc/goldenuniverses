@@ -10,7 +10,7 @@ import path from 'path';
 const CONTENT_SOURCE = process.env.NEXT_PUBLIC_CONTENT_SOURCE || 'local';
 const CONTENT_BASE_PATH = process.env.CONTENT_BASE_PATH || '../../';
 const GITHUB_OWNER = process.env.GITHUB_OWNER || 'vicovanc';
-const GITHUB_REPO = process.env.GITHUB_REPO || 'goldenuniverse';
+const GITHUB_REPO = process.env.GITHUB_REPO || 'goldenuniverses'; // Public repo with 's'
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
 
 interface ContentFile {

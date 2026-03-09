@@ -2,9 +2,17 @@ import { Request, Response } from 'express';
 import { AppError, asyncHandler } from '../middleware/errorHandler';
 import * as fs from 'fs';
 import * as path from 'path';
+import axios from 'axios';
 
-// Path to explanatory folder
-const EXPLANATORY_PATH = '/Users/Cristiana_1/Documents/Golden Universe/explanatory';
+// Environment configuration
+const CONTENT_SOURCE = process.env.NEXT_PUBLIC_CONTENT_SOURCE || 'local';
+const CONTENT_BASE_PATH = process.env.CONTENT_BASE_PATH || '../../';
+const GITHUB_OWNER = process.env.GITHUB_OWNER || 'vicovanc';
+const GITHUB_REPO = process.env.GITHUB_REPO || 'goldenuniverses'; // Public repo with 's'
+const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
+
+// Path to explanatory folder for local development
+const EXPLANATORY_PATH = path.join(__dirname, CONTENT_BASE_PATH, 'explanatory');
 
 // Map of topics to their markdown files
 const TOPIC_FILES: Record<string, string> = {
@@ -21,24 +29,55 @@ export const explanationsController = {
    */
   getTopics: asyncHandler(async (req: Request, res: Response) => {
     try {
-      // Read all markdown files from the explanatory folder
-      if (!fs.existsSync(EXPLANATORY_PATH)) {
-        throw new AppError('Explanatory folder not found', 500);
+      let files: string[] = [];
+
+      if (CONTENT_SOURCE === 'github') {
+        // Fetch from GitHub API
+        try {
+          const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/explanatory?ref=${GITHUB_BRANCH}`;
+          const response = await axios.get(url, {
+            headers: {
+              'Accept': 'application/vnd.github.v3+json',
+              ...(process.env.GITHUB_TOKEN && {
+                'Authorization': `token ${process.env.GITHUB_TOKEN}`
+              })
+            }
+          });
+
+          files = response.data
+            .filter((item: any) => item.type === 'file' && item.name.endsWith('.md'))
+            .map((item: any) => item.name);
+        } catch (err) {
+          console.error('Error fetching from GitHub:', err);
+          throw new AppError('Failed to fetch explanations from GitHub', 500);
+        }
+      } else {
+        // Read from local file system
+        if (!fs.existsSync(EXPLANATORY_PATH)) {
+          throw new AppError('Explanatory folder not found', 500);
+        }
+        files = fs.readdirSync(EXPLANATORY_PATH)
+          .filter(file => file.endsWith('.md'));
       }
 
-      const files = fs.readdirSync(EXPLANATORY_PATH)
-        .filter(file => file.endsWith('.md'));
-
-      const topics = files.map(file => {
+      const topics = await Promise.all(files.map(async (file) => {
         const name = file.replace('.md', '').toLowerCase().replace(/_/g, '-');
-        const filePath = path.join(EXPLANATORY_PATH, file);
 
         // Read first few lines to get a description
         let description = '';
         try {
-          const content = fs.readFileSync(filePath, 'utf-8');
-          const lines = content.split('\n').filter(line => line.trim());
+          let content = '';
 
+          if (CONTENT_SOURCE === 'github') {
+            const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/explanatory/${file}`;
+            const response = await axios.get(url);
+            content = response.data;
+          } else {
+            const filePath = path.join(EXPLANATORY_PATH, file);
+            content = fs.readFileSync(filePath, 'utf-8');
+          }
+
+          const lines = content.split('\n').filter(line => line.trim());
           // Find the first non-header line as description
           for (const line of lines) {
             if (!line.startsWith('#') && line.trim().length > 10) {
@@ -57,7 +96,7 @@ export const explanationsController = {
           description: description || `Explanation of ${formatTitle(file)}`,
           category: getCategory(file)
         };
-      });
+      }));
 
       res.json({
         success: true,
@@ -77,7 +116,7 @@ export const explanationsController = {
     const topic = Array.isArray(topicParam) ? topicParam[0] : topicParam;
 
     try {
-      // Find the markdown file for this topic
+      let content = '';
       let fileName = '';
 
       // Check if it's a known topic
@@ -92,33 +131,60 @@ export const explanationsController = {
           `GU_${topic.toUpperCase().replace(/-/g, '_')}.md`
         ];
 
-        for (const name of possibleNames) {
-          const filePath = path.join(EXPLANATORY_PATH, name);
-          if (fs.existsSync(filePath)) {
-            fileName = name;
-            break;
+        // Check GitHub or local based on environment
+        if (CONTENT_SOURCE === 'github') {
+          // Try each possible filename on GitHub
+          for (const name of possibleNames) {
+            try {
+              const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/explanatory/${name}`;
+              const response = await axios.get(url);
+              if (response.status === 200) {
+                content = response.data;
+                fileName = name;
+                break;
+              }
+            } catch (err) {
+              // Try next filename
+              continue;
+            }
+          }
+        } else {
+          // Local file system
+          for (const name of possibleNames) {
+            const filePath = path.join(EXPLANATORY_PATH, name);
+            if (fs.existsSync(filePath)) {
+              fileName = name;
+              content = fs.readFileSync(filePath, 'utf-8');
+              break;
+            }
           }
         }
       }
 
-      if (!fileName) {
-        // List available files for debugging
-        const availableFiles = fs.readdirSync(EXPLANATORY_PATH)
-          .filter(f => f.endsWith('.md'));
+      // If fileName was found but content not loaded yet
+      if (fileName && !content) {
+        if (CONTENT_SOURCE === 'github') {
+          const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/explanatory/${fileName}`;
+          try {
+            const response = await axios.get(url);
+            content = response.data;
+          } catch (err) {
+            throw new AppError(`Failed to fetch explanation from GitHub: ${fileName}`, 500);
+          }
+        } else {
+          const filePath = path.join(EXPLANATORY_PATH, fileName);
+          if (fs.existsSync(filePath)) {
+            content = fs.readFileSync(filePath, 'utf-8');
+          }
+        }
+      }
 
+      if (!content || !fileName) {
         throw new AppError(
-          `Topic "${topic}" not found. Available topics: ${availableFiles.join(', ')}`,
+          `Topic "${topic}" not found`,
           404
         );
       }
-
-      const filePath = path.join(EXPLANATORY_PATH, fileName);
-
-      if (!fs.existsSync(filePath)) {
-        throw new AppError(`Explanation file not found: ${fileName}`, 404);
-      }
-
-      const content = fs.readFileSync(filePath, 'utf-8');
 
       // Extract metadata from content
       const lines = content.split('\n');
