@@ -3,50 +3,67 @@ Vercel Serverless Python Execution Function
 This function runs Python code in Vercel's Python runtime
 """
 
-from http.server import BaseHTTPRequestHandler
 import json
 import sys
 import io
 import traceback
 import time
 from contextlib import redirect_stdout, redirect_stderr
-import numpy as np
-import scipy
-from mpmath import mp
 
-class handler(BaseHTTPRequestHandler):
-    def do_OPTIONS(self):
-        """Handle CORS preflight requests"""
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
-        self.end_headers()
+def handler(request):
+    """
+    Vercel serverless function handler for Python code execution
+    """
+    # Handle CORS
+    headers = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Content-Type': 'application/json'
+    }
 
-    def do_POST(self):
-        """Handle POST requests for Python code execution"""
-        try:
-            # Read the request body
-            content_length = int(self.headers['Content-Length'])
-            post_data = self.rfile.read(content_length)
-            data = json.loads(post_data.decode('utf-8'))
+    # Handle preflight request
+    if request.method == 'OPTIONS':
+        return {
+            'statusCode': 200,
+            'headers': headers,
+            'body': ''
+        }
 
-            code = data.get('code', '')
+    # Only handle POST requests
+    if request.method != 'POST':
+        return {
+            'statusCode': 405,
+            'headers': headers,
+            'body': json.dumps({
+                'success': False,
+                'error': 'Method not allowed'
+            })
+        }
 
-            if not code:
-                self.send_error_response(400, 'No code provided')
-                return
+    try:
+        # Parse request body
+        body = json.loads(request.body) if request.body else {}
+        code = body.get('code', '')
 
-            # Execute the Python code
-            result = self.execute_python_code(code)
+        if not code:
+            return {
+                'statusCode': 400,
+                'headers': headers,
+                'body': json.dumps({
+                    'success': False,
+                    'error': 'No code provided'
+                })
+            }
 
-            # Send response
-            self.send_response(200)
-            self.send_header('Content-Type', 'application/json')
-            self.send_header('Access-Control-Allow-Origin', '*')
-            self.end_headers()
+        # Execute the Python code
+        result = execute_python_code(code)
 
-            response = {
+        # Return success response
+        return {
+            'statusCode': 200,
+            'headers': headers,
+            'body': json.dumps({
                 'success': result['success'],
                 'data': {
                     'output': result['output'],
@@ -54,21 +71,32 @@ class handler(BaseHTTPRequestHandler):
                     'exitCode': 0 if result['success'] else 1,
                     'executionTime': result['executionTime']
                 }
-            }
+            })
+        }
 
-            self.wfile.write(json.dumps(response).encode())
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'headers': headers,
+            'body': json.dumps({
+                'success': False,
+                'error': str(e)
+            })
+        }
 
-        except Exception as e:
-            self.send_error_response(500, str(e))
 
-    def execute_python_code(self, code):
-        """Execute Python code and capture output"""
-        start_time = time.time()
-        output_buffer = io.StringIO()
-        error_buffer = io.StringIO()
+def execute_python_code(code):
+    """Execute Python code and capture output"""
+    start_time = time.time()
+    output_buffer = io.StringIO()
+    error_buffer = io.StringIO()
 
-        # Set up Golden Universe constants and functions
-        setup_code = """
+    # Import dependencies here to ensure they're available
+    import numpy as np
+    from mpmath import mp, mpf
+
+    # Set up Golden Universe constants and functions
+    setup_code = """
 import numpy as np
 from mpmath import mp, mpf
 import json
@@ -131,59 +159,45 @@ def to_json(obj):
         return obj
 """
 
-        try:
-            # Create a combined code block
-            full_code = setup_code + "\n\n# User code:\n" + code
+    try:
+        # Create a combined code block
+        full_code = setup_code + "\n\n# User code:\n" + code
 
-            # Create a local namespace for execution
-            namespace = {}
+        # Create a local namespace for execution
+        namespace = {}
 
-            # Redirect stdout and stderr
-            with redirect_stdout(output_buffer), redirect_stderr(error_buffer):
-                exec(full_code, namespace)
+        # Redirect stdout and stderr
+        with redirect_stdout(output_buffer), redirect_stderr(error_buffer):
+            exec(full_code, namespace)
 
-            # Get the output
-            output = output_buffer.getvalue()
+        # Get the output
+        output = output_buffer.getvalue()
 
-            # If there's a result variable in namespace, add it to output
-            if 'result' in namespace:
-                if output:
-                    output += "\n"
-                result_json = json.dumps(namespace['result'], default=str)
-                output += result_json
+        # If there's a result variable in namespace, add it to output
+        if 'result' in namespace:
+            if output:
+                output += "\n"
+            result_json = json.dumps(namespace['result'], default=str)
+            output += result_json
 
-            execution_time = int((time.time() - start_time) * 1000)
+        execution_time = int((time.time() - start_time) * 1000)
 
-            return {
-                'success': True,
-                'output': output.strip(),
-                'executionTime': execution_time
-            }
-
-        except Exception as e:
-            error_output = error_buffer.getvalue()
-            if not error_output:
-                error_output = traceback.format_exc()
-
-            execution_time = int((time.time() - start_time) * 1000)
-
-            return {
-                'success': False,
-                'output': output_buffer.getvalue().strip(),
-                'error': error_output,
-                'executionTime': execution_time
-            }
-
-    def send_error_response(self, status_code, message):
-        """Send an error response"""
-        self.send_response(status_code)
-        self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.end_headers()
-
-        response = {
-            'success': False,
-            'error': message
+        return {
+            'success': True,
+            'output': output.strip(),
+            'executionTime': execution_time
         }
 
-        self.wfile.write(json.dumps(response).encode())
+    except Exception as e:
+        error_output = error_buffer.getvalue()
+        if not error_output:
+            error_output = traceback.format_exc()
+
+        execution_time = int((time.time() - start_time) * 1000)
+
+        return {
+            'success': False,
+            'output': output_buffer.getvalue().strip(),
+            'error': error_output,
+            'executionTime': execution_time
+        }

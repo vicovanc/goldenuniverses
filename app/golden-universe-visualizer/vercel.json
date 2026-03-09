@@ -64,17 +64,7 @@
       ]
     }
   ],
-  "functions": {
-    "api/python/exec.py": {
-      "runtime": "python3.9",
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
-    {
-      "source": "/api/python/exec",
-      "destination": "/api/python/exec.py"
-    },
     {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
