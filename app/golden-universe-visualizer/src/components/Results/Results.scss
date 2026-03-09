@@ -1206,7 +1206,7 @@ $color-constants: #FFA07A;
               font-weight: $font-weight-bold;
               color: #FFD700;
               margin-bottom: $spacing-xs;
-              font-family: $font-family-mono;
+              font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
 
               .app.light & {
                 color: #d97706 !important;
