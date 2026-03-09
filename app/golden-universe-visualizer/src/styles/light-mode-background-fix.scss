@@ -1,0 +1,222 @@
+// =============================================
+// LIGHT MODE BACKGROUND FIX
+// Fixes black backgrounds appearing in light mode
+// =============================================
+
+// Light mode specific overrides
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+.light-mode,
+body[data-theme='light'] {
+
+  // Fix all components that use glass-card mixins
+  .explorer-main,
+  .explorer-content,
+  .content-wrapper,
+  .main-content,
+  .page-content,
+  .theory-explorer,
+  .derivations-browser,
+  .calculations-page,
+  .visualizations-page {
+
+    // Override glass backgrounds
+    &[class*="glass"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+
+  // Theory Explorer specific fixes
+  .theory-explorer {
+    background-color: #fafafa !important;
+
+    .explorer-content {
+      background-color: transparent !important;
+
+      .explorer-main {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: 1px solid #e5e5e5 !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+      }
+    }
+
+    // Law cards and details
+    .law-card,
+    .law-detail {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Content wrapper specific
+  .content-wrapper {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    // Direct children that need white background
+    > .theory-explorer,
+    > .derivations-browser,
+    > .calculations-container,
+    > .visualizations-container {
+      background-color: #fafafa !important;
+    }
+  }
+
+  // Main content area
+  .main-content {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+
+    .content-wrapper {
+      background: transparent !important;
+    }
+  }
+
+  // Page containers
+  .page-container,
+  .page-content,
+  .main-container {
+    background-color: transparent !important;
+  }
+
+  // Override any remaining glass-card styles
+  *[class*="glass-card"],
+  *[class*="glass-bg"] {
+    &:not(.sidebar):not(.nav-item) {
+      background: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+  }
+
+  // Specific component fixes
+  .derivations-browser {
+    .browser-content {
+      background-color: transparent !important;
+
+      .derivation-details {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 1px solid #e5e5e5 !important;
+      }
+
+      .derivations-list {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        border: 1px solid #e5e5e5 !important;
+      }
+    }
+  }
+
+  // Calculations page
+  .calculations-page {
+    background-color: #fafafa !important;
+
+    .calculator-card,
+    .result-card {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Visualizations page
+  .visualizations-page {
+    background-color: #fafafa !important;
+
+    .visualization-card,
+    .control-panel {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Remove all dark backgrounds from text containers
+  .text-content,
+  .description,
+  .explanation,
+  .formula-section,
+  .equation-display {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  // Results page specific fixes
+  .results-page {
+    background-color: #fafafa !important;
+
+    .results-content {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    .result-card {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+
+    .comparison-table {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Results dashboard specific
+  .results-dashboard {
+    background-color: transparent !important;
+
+    .dashboard-header {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 1px solid #e5e5e5 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dashboard-content {
+      background-color: transparent !important;
+    }
+
+    // Stats cards
+    .stats-grid,
+    .metric-card,
+    .summary-card {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+
+    // Section cards
+    .particle-card,
+    .force-card,
+    .constant-card {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Results content container
+  .results-content {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    // All cards inside results
+    .card,
+    [class*="card"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+}

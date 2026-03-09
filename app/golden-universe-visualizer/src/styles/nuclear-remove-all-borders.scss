@@ -1,0 +1,294 @@
+// =============================================
+// NUCLEAR OPTION - REMOVE ALL BORDERS AND CONTAINERS
+// Absolutely NO borders or container backgrounds anywhere
+// =============================================
+
+// REMOVE EVERYTHING - NUCLEAR OPTION
+*,
+*::before,
+*::after {
+  // Remove ALL borders from everything
+  border: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  outline: none !important;
+}
+
+// Remove ALL container backgrounds and borders
+[class*="container"],
+[class*="wrapper"],
+[class*="section"],
+[class*="panel"],
+[class*="box"],
+[class*="content"],
+[class*="area"],
+[class*="region"],
+[class*="zone"],
+[class*="block"],
+[class*="module"],
+[class*="component"],
+[class*="widget"],
+[class*="frame"],
+[class*="holder"],
+[class*="intro"],
+[class*="header"]:not(.modal-header),
+[class*="footer"]:not(.modal-footer),
+[class*="body"]:not(.modal-body),
+[class*="main"]:not(.modal-main),
+[class*="sidebar"],
+[class*="nav"]:not(.tabs-navigation),
+[class*="dashboard"],
+[class*="layout"],
+[class*="page"]:not(.modal-page),
+[class*="view"]:not(.modal-view),
+[class*="pane"],
+[class*="column"],
+[class*="row"]:not(tr),
+[class*="grid"]:not(.derivations-grid),
+[class*="list"]:not(ul):not(ol),
+[class*="group"],
+[class*="cluster"],
+[class*="bundle"],
+[class*="collection"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+// Specifically target theory-intro-container and similar
+.theory-intro-container,
+.theory-intro,
+.intro-container,
+.intro-section,
+.intro-wrapper,
+.intro-content,
+.page-intro,
+.section-intro,
+.header-intro,
+.main-intro {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+// Theory page specific
+.theory-page,
+.theory-explorer,
+.theory-dashboard,
+.theory-content,
+.theory-wrapper,
+.theory-container,
+.theory-section,
+.theory-main,
+.theory-body {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  // All nested containers
+  * {
+    &[class*="container"],
+    &[class*="wrapper"],
+    &[class*="content"],
+    &[class*="section"] {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+// Results page
+.results-page,
+.results-dashboard,
+.results-container,
+.results-wrapper,
+.results-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Derivations page
+.derivations-page,
+.derivations-browser,
+.derivations-container,
+.derivations-wrapper,
+.derivations-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Calculations page
+.calculations-page,
+.calculations-container,
+.calculations-wrapper,
+.calculations-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Remove borders from ALL interactive elements except where absolutely needed
+button,
+input:not(:focus),
+select:not(:focus),
+textarea:not(:focus),
+[role="button"],
+.btn,
+.button {
+  border: none !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: none !important;
+  }
+}
+
+// Only keep borders on focused inputs for accessibility
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid var(--color-primary, #d97706) !important;
+  outline: none !important;
+}
+
+// Tables should have NO borders
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  border: none !important;
+  background: transparent !important;
+}
+
+// Cards should only have shadows, no borders
+.card,
+.derivation-card,
+.law-card,
+.achievement-card,
+.result-card,
+[class*="card"] {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+
+  &:hover {
+    border: none !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+// Remove sidebar borders
+.sidebar,
+.sidebar-new,
+[class*="sidebar"] {
+  border: none !important;
+  border-right: none !important;
+}
+
+// Remove ALL navigation borders
+nav,
+.nav,
+.navigation,
+[class*="nav"] {
+  border: none !important;
+
+  * {
+    border: none !important;
+  }
+}
+
+// Light mode - ensure everything stays clean
+.app.light,
+[data-theme="light"] {
+  // Page background gradient
+  &.app {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+  }
+
+  // All containers transparent
+  [class*="container"],
+  [class*="wrapper"],
+  [class*="content"] {
+    background: transparent !important;
+    border: none !important;
+  }
+}
+
+// Dark mode - ensure everything stays clean
+.app.dark,
+[data-theme="dark"] {
+  // Page background gradient
+  &.app {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+  }
+
+  // All containers transparent
+  [class*="container"],
+  [class*="wrapper"],
+  [class*="content"] {
+    background: transparent !important;
+    border: none !important;
+  }
+}
+
+// ABSOLUTELY NO BORDERS ON THESE COMMON PATTERNS
+.glass-card,
+.glass-card-strong,
+.glass-effect,
+.blur-card,
+.blur-effect {
+  border: none !important;
+  background: transparent !important;
+}
+
+// Remove ANY remaining borders with extreme prejudice
+* {
+  &[style*="border"] {
+    border: none !important;
+  }
+}
+
+// Final nuclear option - inline style override
+[style*="border"],
+[style*="Border"] {
+  border: none !important;
+}
+
+// Scrollbars should be minimal
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3) !important;
+  border: none !important;
+  border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent !important;
+  border: none !important;
+}

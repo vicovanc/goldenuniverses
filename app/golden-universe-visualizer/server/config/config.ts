@@ -26,6 +26,7 @@ export interface Config {
     basePath: string;
     derivationsPath: string;
     theoriesPath: string;
+    explanatoryPath: string;
   };
   cache: {
     ttl: number;
@@ -65,6 +66,7 @@ const config: Config = {
     basePath: process.env.CONTENT_PATH || path.join(__dirname, '../../../'),
     derivationsPath: process.env.DERIVATIONS_PATH || path.join(__dirname, '../../../derivations'),
     theoriesPath: process.env.THEORIES_PATH || path.join(__dirname, '../../../Theory Development'),
+    explanatoryPath: process.env.EXPLANATORY_PATH || path.join(__dirname, '../../../explanatory'),
   },
 
   cache: {

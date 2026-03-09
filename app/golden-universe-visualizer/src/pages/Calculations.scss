@@ -9,9 +9,18 @@
   min-height: 100vh;
   background: $gradient-cosmic;
   padding: $spacing-xl;
-  margin-left: 200px;  // Account for sidebar width
+  // Margin handled by MainLayout - DO NOT set margin-left here
   position: relative;
   overflow-x: hidden;
+
+  // Light mode override
+  .app.light &,
+  .light & {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+  }
 
   // Animated background particles - subtle and sophisticated
   &::before {
@@ -27,6 +36,12 @@
     pointer-events: none;
     z-index: 0;
     animation: float 20s ease-in-out infinite;
+
+    // Disable in light mode
+    .app.light &,
+    .light & {
+      display: none !important;
+    }
   }
 
   @keyframes float {
@@ -65,6 +80,12 @@
       text-shadow: $shadow-glow-gold-md;
       letter-spacing: -0.02em;
       line-height: $line-height-tight;
+
+      .app.light &,
+      .light & {
+        color: #d97706 !important;
+        text-shadow: none !important;
+      }
     }
 
     .subtitle {
@@ -72,6 +93,11 @@
       font-size: $font-size-xl;
       font-weight: $font-weight-light;
       letter-spacing: 0.02em;
+
+      .app.light &,
+      .light & {
+        color: #6b7280 !important;
+      }
     }
   }
 
@@ -99,6 +125,28 @@
       overflow: hidden;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+
+      // Light mode override
+      .app.light &,
+      .light & {
+        background: white !important;
+        color: #1a1a1a !important;
+        border: 2px solid #e5e5e5 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+
+        &:hover {
+          background: #fafafa !important;
+          border-color: #d97706 !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        &.active {
+          background: #d97706 !important;
+          color: white !important;
+          border-color: #d97706 !important;
+          box-shadow: 0 4px 16px rgba(217, 119, 6, 0.3) !important;
+        }
+      }
 
       // Shimmer effect on hover
       &::before {
@@ -203,7 +251,7 @@
 @media (max-width: $breakpoint-mobile) {
   .calculations-page {
     padding: $spacing-md;
-    margin-left: 60px;  // Smaller margin on mobile
+    // Margin handled by MainLayout - DO NOT set margin-left here
 
     .page-header {
       h1 {

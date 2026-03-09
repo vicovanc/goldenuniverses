@@ -1,0 +1,154 @@
+// =============================================
+// DERIVATION DETAILS HEIGHT FIX
+// Fixes height calculation to properly expand with content
+// =============================================
+
+.derivations-browser {
+  // Fix the browser-content grid to allow proper expansion
+  .browser-content {
+    align-items: start !important; // Don't stretch items
+    height: auto !important;
+    min-height: calc(100vh - 200px) !important;
+
+    // Make sure grid columns don't restrict height
+    > * {
+      height: auto !important;
+      min-height: 0 !important;
+    }
+  }
+
+  // Fix the derivations list sidebar
+  .derivations-list {
+    position: sticky !important;
+    top: 1rem !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 150px) !important;
+    overflow-y: auto !important;
+  }
+
+  .derivation-details {
+    // Remove fixed height calculations
+    height: auto !important;
+    min-height: calc(100vh - 200px) !important; // Minimum height to fill viewport
+    max-height: none !important; // Remove max-height limit
+
+    // Allow content to expand naturally
+    display: flex;
+    flex-direction: column;
+
+    // Ensure proper overflow handling
+    overflow-x: hidden !important;
+    overflow-y: auto !important; // Scroll when content exceeds viewport
+
+    // Details content should grow
+    .details-content {
+      flex: 1;
+      min-height: 0; // Allow flexbox to shrink if needed
+    }
+
+    // Viewer component should also expand properly
+    .derivation-viewer-new {
+      height: auto !important;
+      min-height: 600px !important;
+
+      .viewer-content {
+        height: auto !important;
+        min-height: 500px !important;
+
+        // Python executor should expand with content
+        .python-executor {
+          height: auto !important;
+          min-height: 400px !important;
+
+          .output-section {
+            height: auto !important;
+            min-height: 200px !important;
+            max-height: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile responsive adjustments
+@media (max-width: 768px) {
+  .derivations-browser {
+    .derivation-details {
+      min-height: auto !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+
+      // On mobile, let it take natural height
+      height: auto !important;
+    }
+  }
+}
+
+// Ensure the parent container doesn't restrict height
+.derivations-page {
+  min-height: 100vh !important;
+  height: auto !important;
+
+  .page-container,
+  .content-area,
+  .derivations-container {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+}
+
+// Fix for grid layout if using CSS Grid
+.derivations-browser {
+  &.browser-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start !important; // Don't stretch items
+    min-height: calc(100vh - 150px) !important;
+
+    .category-list,
+    .derivation-list {
+      height: auto !important;
+      min-height: 600px !important;
+      max-height: calc(100vh - 200px) !important;
+      overflow-y: auto !important;
+    }
+
+    .derivation-details {
+      grid-column: 2;
+      align-self: start !important; // Allow natural height
+      height: auto !important;
+      min-height: calc(100vh - 200px) !important;
+    }
+  }
+}
+
+// Fix for flex layout if using Flexbox
+.derivations-browser {
+  &.flex-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start !important; // Don't stretch items
+    min-height: calc(100vh - 150px) !important;
+
+    .sidebar-section {
+      flex: 0 0 350px;
+      height: auto !important;
+      min-height: 600px !important;
+      max-height: calc(100vh - 200px) !important;
+      overflow-y: auto !important;
+    }
+
+    .main-section {
+      flex: 1;
+      height: auto !important;
+      min-height: calc(100vh - 200px) !important;
+
+      .derivation-details {
+        height: auto !important;
+        min-height: inherit !important;
+      }
+    }
+  }
+}

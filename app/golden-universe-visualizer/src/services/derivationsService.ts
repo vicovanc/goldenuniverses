@@ -105,7 +105,9 @@ export async function fetchDerivationFileContent(
 
     // If content is not embedded, try to fetch from the file path
     if (file?.path) {
-      const response = await fetch(file.path);
+      // Ensure the path starts with a forward slash
+      const filePath = file.path.startsWith('/') ? file.path : `/${file.path}`;
+      const response = await fetch(filePath);
       if (response.ok) {
         return await response.text();
       }

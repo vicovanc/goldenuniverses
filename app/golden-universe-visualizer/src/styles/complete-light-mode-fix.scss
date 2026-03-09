@@ -1,0 +1,767 @@
+// =============================================
+// COMPLETE LIGHT MODE FIX
+// Ensures ALL elements properly switch colors
+// =============================================
+
+// Light mode root variables
+[data-theme="light"],
+.light-mode,
+body.light-mode,
+body[data-theme="light"] {
+
+  // Override ALL text to be dark gray
+  * {
+    color: #374151;
+  }
+
+  // ========== DERIVATIONS BROWSER ==========
+  .derivations-browser,
+  .derivation-viewer,
+  .derivation-viewer-new {
+    background: #ffffff;
+    color: #374151;
+
+    .browser-header {
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+
+      h1 {
+        color: #111827;
+      }
+    }
+
+    // Filter buttons (All Derivations, Fundamental Laws, etc)
+    .filter-buttons {
+      .filter-btn {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+
+        &:hover:not(.active) {
+          background: #f3f4f6 !important;
+          border-color: #d97706 !important;
+          color: #111827 !important;
+        }
+
+        &.active {
+          background: #d97706 !important;
+          color: #ffffff !important;
+          border-color: #b45309 !important;
+        }
+
+        // Badge count
+        .count {
+          background: #e5e7eb !important;
+          color: #374151 !important;
+        }
+
+        &.active .count {
+          background: rgba(255, 255, 255, 0.2) !important;
+          color: #ffffff !important;
+        }
+      }
+    }
+
+    // Derivation cards
+    .derivation-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      color: #374151;
+
+      h3 {
+        color: #111827;
+      }
+
+      .card-description {
+        color: #6b7280;
+      }
+
+      .card-meta {
+        color: #9ca3af;
+      }
+
+      &:hover {
+        background: #f9fafb;
+        border-color: #d97706;
+      }
+
+      // Tags
+      .tag {
+        &.basic {
+          background: #10b981;
+          color: white;
+        }
+
+        &.fundamental {
+          background: #8b5cf6;
+          color: white;
+        }
+
+        &.advanced {
+          background: #ef4444;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // ========== SIDEBAR ==========
+  .sidebar-new {
+    background: #f9fafb !important;
+    border-right: 1px solid #e5e7eb !important;
+    color: #374151 !important;
+
+    .sidebar-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+
+      .sidebar-branding {
+        color: #111827 !important;
+
+        h1 {
+          color: #111827 !important;
+        }
+
+        &:hover {
+          color: #d97706 !important;
+        }
+      }
+
+      .toggle-button {
+        color: #374151 !important;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+
+        &:hover {
+          background: #f3f4f6;
+          border-color: #d97706;
+        }
+      }
+    }
+
+    // Search bar
+    .sidebar-search {
+      .search-input {
+        background: #ffffff !important;
+        border: 1px solid #d1d5db !important;
+        color: #374151 !important;
+
+        &::placeholder {
+          color: #9ca3af !important;
+        }
+
+        &:focus {
+          border-color: #d97706 !important;
+        }
+      }
+
+      .search-clear {
+        color: #6b7280 !important;
+
+        &:hover {
+          color: #374151 !important;
+        }
+      }
+    }
+
+    // Action buttons
+    .sidebar-actions {
+      .action-button {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+
+        &:hover {
+          background: #f3f4f6 !important;
+          border-color: #d97706 !important;
+        }
+      }
+    }
+
+    // Navigation items
+    .nav-section {
+      .section-header {
+        color: #111827 !important;
+        background: #ffffff;
+
+        &:hover {
+          background: #f3f4f6;
+        }
+
+        .section-icon {
+          color: #6b7280 !important;
+        }
+
+        .section-title {
+          color: #111827 !important;
+        }
+
+        .section-count {
+          background: #e5e7eb !important;
+          color: #374151 !important;
+        }
+
+        .section-arrow {
+          color: #6b7280 !important;
+        }
+      }
+
+      .tree-node {
+        color: #374151 !important;
+
+        &:hover {
+          background: #f3f4f6 !important;
+        }
+
+        &.active {
+          background: #fef3c7 !important;
+          color: #92400e !important;
+          border-left: 3px solid #d97706 !important;
+        }
+
+        .node-icon {
+          color: #6b7280 !important;
+        }
+
+        .node-label {
+          color: #374151 !important;
+        }
+
+        .node-count {
+          background: #e5e7eb !important;
+          color: #6b7280 !important;
+        }
+      }
+    }
+
+    // Footer
+    .sidebar-footer {
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+
+      .stat-value {
+        color: #374151;
+      }
+
+      .stat-label {
+        color: #9ca3af;
+      }
+
+      .footer-version {
+        color: #9ca3af;
+      }
+    }
+  }
+
+  // ========== SEARCH FIELDS & INPUTS ==========
+  input,
+  textarea,
+  select {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    color: #374151 !important;
+
+    &::placeholder {
+      color: #9ca3af !important;
+      opacity: 1 !important;
+    }
+
+    &:focus {
+      border-color: #d97706 !important;
+      outline: none !important;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+    }
+
+    &:disabled {
+      background: #f3f4f6 !important;
+      color: #9ca3af !important;
+    }
+  }
+
+  // Search bars specifically - NO BORDER, TRANSPARENT BACKGROUND
+  .search-bar,
+  .search-input,
+  input[type="search"],
+  input[placeholder*="Search"],
+  input[placeholder*="search"] {
+    background: transparent !important;
+    border: none !important;
+    border-style: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #374151 !important;
+
+    &::placeholder {
+      color: #9ca3af !important;
+    }
+
+    &:focus {
+      background: transparent !important;
+      border: none !important;
+      outline: 2px solid #d97706 !important;
+      outline-offset: 2px !important;
+      box-shadow: none !important;
+    }
+
+    &:hover {
+      background: rgba(249, 250, 251, 0.5) !important;
+      border: none !important;
+    }
+  }
+
+  // ========== BUTTONS ==========
+  button:not(.cta-button):not(.github-button):not(.skill-button) {
+    // Default button style in light mode
+    &:not(.active):not(.selected) {
+      background: #ffffff !important;
+      color: #374151 !important;
+      border: 1px solid #d1d5db !important;
+
+      // Force text color on all child elements
+      &, *, span, div, p {
+        color: #374151 !important;
+      }
+
+      &:hover {
+        background: #f3f4f6 !important;
+        border-color: #d97706 !important;
+        color: #111827 !important;
+
+        &, *, span, div, p {
+          color: #111827 !important;
+        }
+      }
+
+      &:active {
+        background: #e5e7eb !important;
+      }
+
+      &:disabled {
+        background: #f9fafb !important;
+        color: #9ca3af !important;
+        cursor: not-allowed !important;
+        opacity: 0.6 !important;
+
+        &, *, span, div, p {
+          color: #9ca3af !important;
+        }
+      }
+    }
+  }
+
+  // Force all button text to be dark
+  button {
+    &, span, div, p {
+      color: #374151 !important;
+    }
+  }
+
+  // Mode selector buttons
+  .mode-selector {
+    .mode-btn {
+      background: #ffffff !important;
+      color: #374151 !important;
+      border: 1px solid #d1d5db !important;
+
+      &:hover:not(.active) {
+        background: #f3f4f6 !important;
+        border-color: #d97706 !important;
+      }
+
+      &.active {
+        background: #d97706 !important;
+        color: #ffffff !important;
+        border-color: #b45309 !important;
+      }
+    }
+  }
+
+  // Tab buttons
+  .tab-button,
+  .tab-btn {
+    background: #ffffff !important;
+    color: #374151 !important;
+    border: 1px solid #d1d5db !important;
+
+    &:hover:not(.active) {
+      background: #f3f4f6 !important;
+      border-color: #d97706 !important;
+    }
+
+    &.active {
+      background: #d97706 !important;
+      color: #ffffff !important;
+      border-color: #b45309 !important;
+    }
+  }
+
+  // ========== CARDS & CONTAINERS ==========
+  .card,
+  .panel,
+  .box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+  }
+
+  // ========== HEADERS & TITLES ==========
+  h1, h2, h3, h4, h5, h6 {
+    color: #111827 !important;
+  }
+
+  .page-title,
+  .section-title,
+  .card-title {
+    color: #111827 !important;
+  }
+
+  .subtitle,
+  .description {
+    color: #6b7280 !important;
+  }
+
+  // ========== LABELS & METADATA ==========
+  label {
+    color: #374151 !important;
+  }
+
+  .label,
+  .meta,
+  .info {
+    color: #6b7280 !important;
+  }
+
+  // ========== LISTS ==========
+  ul, ol {
+    li {
+      color: #374151 !important;
+
+      &::marker {
+        color: #9ca3af !important;
+      }
+    }
+  }
+
+  // ========== TABLES ==========
+  table {
+    background: #ffffff;
+
+    thead {
+      background: #f9fafb;
+
+      th {
+        color: #111827 !important;
+        border-bottom: 1px solid #e5e7eb;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #f3f4f6;
+
+        &:hover {
+          background: #f9fafb;
+        }
+
+        td {
+          color: #374151 !important;
+        }
+      }
+    }
+  }
+
+  // ========== CODE BLOCKS ==========
+  code {
+    background: #f3f4f6 !important;
+    color: #d97706 !important;
+    border: 1px solid #e5e7eb;
+  }
+
+  pre {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb;
+
+    code {
+      background: transparent !important;
+      color: #374151 !important;
+      border: none;
+    }
+  }
+
+  // ========== TOOLTIPS ==========
+  .tooltip,
+  [role="tooltip"] {
+    background: #374151 !important;
+    color: #ffffff !important;
+  }
+
+  // ========== DROPDOWNS ==========
+  .dropdown,
+  .dropdown-menu,
+  .select-dropdown {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+
+    .dropdown-item {
+      color: #374151 !important;
+
+      &:hover {
+        background: #f3f4f6 !important;
+      }
+
+      &.active {
+        background: #fef3c7 !important;
+        color: #92400e !important;
+      }
+    }
+  }
+
+  // ========== MODALS & OVERLAYS ==========
+  .modal {
+    background: #ffffff;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+
+    .modal-header {
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      color: #111827;
+    }
+
+    .modal-body {
+      color: #374151;
+    }
+
+    .modal-footer {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+    }
+  }
+
+  // ========== BADGES & TAGS ==========
+  .badge:not(.tag) {
+    background: #e5e7eb !important;
+    color: #374151 !important;
+  }
+
+  // ========== PROGRESS BARS ==========
+  .progress,
+  .progress-bar {
+    background: #e5e7eb !important;
+
+    .progress-fill {
+      background: #d97706 !important;
+    }
+  }
+
+  // ========== SCROLLBARS ==========
+  ::-webkit-scrollbar {
+    background: #f3f4f6 !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f3f4f6 !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db !important;
+
+    &:hover {
+      background: #9ca3af !important;
+    }
+  }
+
+  // ========== LINKS ==========
+  a:not(.cta-button):not(.github-button):not(.skill-button) {
+    color: #d97706 !important;
+
+    &:hover {
+      color: #b45309 !important;
+    }
+
+    &:visited {
+      color: #92400e !important;
+    }
+  }
+
+  // ========== LOADING STATES ==========
+  .loading,
+  .spinner {
+    color: #374151 !important;
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  }
+
+  // ========== ERROR & SUCCESS STATES ==========
+  .error {
+    background: #fef2f2 !important;
+    color: #991b1b !important;
+    border: 1px solid #fecaca !important;
+  }
+
+  .success {
+    background: #f0fdf4 !important;
+    color: #166534 !important;
+    border: 1px solid #bbf7d0 !important;
+  }
+
+  .warning {
+    background: #fefce8 !important;
+    color: #854d0e !important;
+    border: 1px solid #fef3c7 !important;
+  }
+
+  .info {
+    background: #eff6ff !important;
+    color: #1e40af !important;
+    border: 1px solid #bfdbfe !important;
+  }
+
+  // ========== ICONS ==========
+  .icon,
+  svg {
+    color: #6b7280 !important;
+    fill: #6b7280 !important;
+
+    &.active,
+    &.primary {
+      color: #d97706 !important;
+      fill: #d97706 !important;
+    }
+  }
+
+  // ========== DIVIDERS ==========
+  hr {
+    border-color: #e5e7eb !important;
+  }
+
+  .divider {
+    background: #e5e7eb !important;
+  }
+
+  // ========== EMPTY STATES ==========
+  .empty-state {
+    color: #6b7280 !important;
+
+    .empty-icon {
+      color: #9ca3af !important;
+    }
+
+    .empty-title {
+      color: #374151 !important;
+    }
+
+    .empty-description {
+      color: #6b7280 !important;
+    }
+  }
+
+  // ========== BREADCRUMBS ==========
+  .breadcrumb {
+    color: #6b7280 !important;
+
+    .breadcrumb-item {
+      color: #6b7280 !important;
+
+      &.active {
+        color: #374151 !important;
+      }
+
+      a {
+        color: #d97706 !important;
+      }
+    }
+
+    .breadcrumb-separator {
+      color: #9ca3af !important;
+    }
+  }
+
+  // ========== PAGINATION ==========
+  .pagination {
+    .page-item {
+      .page-link {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+
+        &:hover {
+          background: #f3f4f6 !important;
+          border-color: #d97706 !important;
+        }
+      }
+
+      &.active .page-link {
+        background: #d97706 !important;
+        color: #ffffff !important;
+        border-color: #b45309 !important;
+      }
+
+      &.disabled .page-link {
+        background: #f3f4f6 !important;
+        color: #9ca3af !important;
+      }
+    }
+  }
+
+  // ========== SPECIFIC FIXES ==========
+  // Fix any remaining white text
+  [style*="color: white"],
+  [style*="color: #fff"],
+  [style*="color: #ffffff"],
+  [style*="color: rgb(255"],
+  [style*="color: #f5f5f5"],
+  [style*="color: #fafafa"] {
+    color: #374151 !important;
+  }
+
+  // Except for buttons with dark backgrounds
+  .cta-button,
+  .btn-primary,
+  .btn-dark,
+  .github-button,
+  .skill-button,
+  button.active,
+  button.selected,
+  .tag.basic,
+  .tag.fundamental,
+  .tag.advanced {
+    // These keep their white text on colored backgrounds
+    color: white !important;
+  }
+
+  // ========== NUCLEAR BUTTON FIX ==========
+  // Absolute last resort to fix button text visibility
+  button {
+    // If button has white/light background, force dark text
+    &[style*="background: #fff"],
+    &[style*="background: #ffffff"],
+    &[style*="background: rgb(255"],
+    &[style*="background-color: #fff"],
+    &[style*="background-color: #ffffff"],
+    &[style*="background-color: rgb(255"] {
+      &, *, span, div, p, strong, em, i, b {
+        color: #374151 !important;
+      }
+    }
+  }
+
+  // Generic buttons that aren't special types
+  button:not([class*="cta"]):not([class*="github"]):not([class*="skill"]):not([class*="primary"]):not([class*="dark"]) {
+    &:not(.active):not(.selected) {
+      // Absolutely force dark text
+      &, & *, & span, & div, & p, & strong, & em, & i, & b {
+        color: #374151 !important;
+      }
+
+      &:hover {
+        &, & *, & span, & div, & p, & strong, & em, & i, & b {
+          color: #111827 !important;
+        }
+      }
+    }
+  }
+}

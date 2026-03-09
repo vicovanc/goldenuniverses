@@ -14,6 +14,20 @@
   min-height: $header-height;
   transition: all $transition-base;
 
+  // When sidebar is expanded (open), add left margin to avoid going under it
+  &.sidebar-expanded {
+    margin-left: 280px; // Same as sidebar width
+
+    @media (max-width: 768px) {
+      margin-left: 0; // On mobile, sidebar overlays content
+    }
+  }
+
+  // When sidebar is collapsed, no margin needed
+  &.sidebar-collapsed {
+    margin-left: 0;
+  }
+
   .header-content {
     display: flex;
     justify-content: space-between;

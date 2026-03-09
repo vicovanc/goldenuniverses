@@ -6,14 +6,14 @@
 
 .main-content {
   flex: 1;
-  margin-left: 60px;  // Smaller offset for better spacing
+  margin-left: var(--sidebar-width-open);  // Use CSS variable for consistency
   transition: margin-left 0.3s ease;
   position: relative;
   min-height: 100vh;
   z-index: 1;
 
   &.expanded {
-    margin-left: 70px;  // Match actual collapsed sidebar width
+    margin-left: var(--sidebar-width-collapsed);  // Use CSS variable for consistency
   }
 }
 
@@ -28,7 +28,7 @@
 .loading-overlay {
   position: fixed;
   top: 0;
-  left: 260px;  // Match actual sidebar width
+  left: var(--sidebar-width-open);  // Use CSS variable
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -40,7 +40,7 @@
   transition: left 0.3s ease;
 
   .main-content.expanded & {
-    left: 70px;  // Match actual collapsed sidebar width
+    left: var(--sidebar-width-collapsed);  // Use CSS variable
   }
 
   p {
@@ -62,6 +62,62 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+// Mobile menu toggle button
+.mobile-menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 998;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background: var(--color-bg-hover);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+// Mobile backdrop styles
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 299;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  @media (max-width: 768px) {
+    display: block;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }
 

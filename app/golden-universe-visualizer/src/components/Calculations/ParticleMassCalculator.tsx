@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { GoldenUniverseCalculator, type CalculationResult } from '../../calculations/goldenUniverseCalculator';
+import { ParticleMassTheory } from './ParticleMassTheory';
 import './ParticleMassCalculator.scss';
 
 type ParticleType = 'electron' | 'muon' | 'tau' | 'proton';
@@ -283,6 +284,11 @@ export const ParticleMassCalculatorUI: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Full Theory Explanation */}
+      <div className="theory-explanation-section">
+        <ParticleMassTheory particle={selectedParticle} />
+      </div>
     </div>
   );
 };

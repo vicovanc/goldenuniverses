@@ -178,9 +178,63 @@ curl http://localhost:3001/api/derivations
 - Confirm folder structure matches expected paths
 - Check browser console for API errors
 
+## Python Execution on Vercel
+
+### How It Works
+
+The application has dual Python execution modes:
+
+1. **Development (with backend server)**:
+   - Express server spawns Python subprocess
+   - Fast execution with full Python capabilities
+   - Requires Python installed on server
+
+2. **Production (Vercel)**:
+   - Automatically falls back to Pyodide (browser-based Python)
+   - No server-side Python needed
+   - Runs entirely in the browser
+   - Some limitations on available packages
+
+### Python API Endpoint
+
+The `/api/python-exec` serverless function handles Python requests on Vercel:
+- Returns a fallback indicator when Python isn't available server-side
+- Frontend automatically switches to Pyodide
+
+### Testing Python Execution
+
+```bash
+# Test backend (local development)
+curl -X POST http://localhost:3001/api/python/exec \
+  -H "Content-Type: application/json" \
+  -d '{"code": "print(42 * 3.14159)"}'
+
+# Response: {"success":true,"data":{"output":"131.94678","exitCode":0}}
+```
+
+### Python Features Available
+
+- **With Backend**: Full Python 3.x capabilities
+- **With Pyodide**: NumPy, SciPy, mpmath, and other scientific packages
+
+## Build and Deployment Commands
+
+```bash
+# Build for production
+npm run build
+
+# Test production build locally
+npm run preview
+
+# Deploy to Vercel
+vercel --prod
+```
+
 ## Security Notes
 
 - Never commit `.env.local` file
 - Use Vercel's environment variables UI for production secrets
 - GitHub tokens should have minimal required permissions
 - Consider using GitHub App instead of personal access token for production
+- Python execution is sandboxed in both backend and Pyodide modes
+- Execution timeout of 30 seconds prevents infinite loops

@@ -1,0 +1,79 @@
+// =============================================
+// SIDEBAR LIGHT MODE FIX
+// Remove borders from section titles in light mode
+// =============================================
+
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+body[data-theme='light'] {
+
+  // Sidebar section titles - remove all borders
+  .sidebar,
+  .sidebar-new,
+  .navigation-sidebar {
+    .section-title,
+    .sidebar-section-title,
+    .nav-section-title {
+      border: none !important;
+      border-top: none !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      box-shadow: none !important;
+
+      // Ensure text is visible
+      color: var(--text-secondary, #525252) !important;
+
+      // Clean styling
+      background: transparent !important;
+      padding: 0.75rem 0.5rem !important;
+      margin: 0 !important;
+
+      // Title text
+      .title-text,
+      span {
+        color: var(--text-secondary, #525252) !important;
+        font-weight: 600 !important;
+        font-size: 0.75rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+      }
+    }
+
+    // Collapsible sections
+    .collapsible-section {
+      .section-header {
+        border: none !important;
+        border-bottom: none !important;
+      }
+    }
+
+    // Nav items should still have subtle borders if needed
+    .nav-item,
+    .sidebar-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+// Dark mode - keep default styling
+.app.dark,
+.app[data-theme='dark'],
+[data-theme='dark'],
+body[data-theme='dark'] {
+  .sidebar,
+  .sidebar-new,
+  .navigation-sidebar {
+    .section-title,
+    .sidebar-section-title,
+    .nav-section-title {
+      // Dark mode can keep subtle borders if needed
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

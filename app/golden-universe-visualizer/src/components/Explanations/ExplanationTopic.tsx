@@ -454,14 +454,45 @@ const ExplanationTopic: React.FC = () => {
         return;
       }
 
-      // Use fallback content directly - no API exists in static deployment
-      const fallbackContent = getFallbackContent(topic);
-      if (fallbackContent) {
-        setContent(fallbackContent);
-        setLoading(false);
-      } else {
-        // No content available for this topic
-        setError(`Content for topic "${topic}" is not available yet.`);
+      setLoading(true);
+      setError(null);
+
+      try {
+        // Load explanation from API endpoint (which reads from /explanatory folder)
+        const response = await fetch(`/api/explanations/topic/${topic}`);
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && data.data) {
+            setContent({
+              id: data.data.id,
+              title: data.data.title,
+              fileName: data.data.fileName,
+              content: data.data.content,
+              category: data.data.category || 'Explanations'
+            });
+          } else {
+            throw new Error('Invalid response from API');
+          }
+        } else {
+          // Fall back to hardcoded content if API fails
+          const fallbackContent = getFallbackContent(topic);
+          if (fallbackContent) {
+            setContent(fallbackContent);
+          } else {
+            setError(`Content for topic "${topic}" is not available yet.`);
+          }
+        }
+      } catch (err) {
+        console.error('Error loading explanation:', err);
+        // Try fallback content on error
+        const fallbackContent = getFallbackContent(topic);
+        if (fallbackContent) {
+          setContent(fallbackContent);
+        } else {
+          setError(`Failed to load explanation for "${topic}"`);
+        }
+      } finally {
         setLoading(false);
       }
     };

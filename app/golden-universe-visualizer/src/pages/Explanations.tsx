@@ -257,9 +257,14 @@ const Explanations: React.FC = () => {
         setDocError(null);
 
         try {
-          const response = await fetch(`/data/theory/${doc.filename}`);
+          // Try loading from /explanatory/ folder first
+          let response = await fetch(`/explanatory/${doc.filename}`);
           if (!response.ok) {
-            throw new Error(`Failed to load document: ${doc.filename}`);
+            // Fallback to /data/theory/ if not found
+            response = await fetch(`/data/theory/${doc.filename}`);
+            if (!response.ok) {
+              throw new Error(`Failed to load document: ${doc.filename}`);
+            }
           }
           const content = await response.text();
           setMarkdownContent(content);

@@ -1,0 +1,396 @@
+// =============================================
+// THEME FIXES - Light & Dark Mode
+// Comprehensive fixes for theme switching issues
+// =============================================
+
+// Define consistent theme variables
+:root {
+  // Dark theme (default)
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-card: #1a1a1a;
+  --bg-hover: #2a2a2a;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+
+  --border-color: #27272a;
+  --border-light: #3f3f46;
+
+  --color-primary: #fbbf24;
+  --color-primary-dark: #f59e0b;
+  --color-primary-light: #fde68a;
+}
+
+// Light theme overrides
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'] {
+  // Backgrounds
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f0;
+
+  // Text colors
+  --text-primary: #1a1a1a;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+
+  // Borders
+  --border-color: #e5e5e5;
+  --border-light: #d4d4d4;
+
+  // Primary colors - darker for light theme
+  --color-primary: #d97706;
+  --color-primary-dark: #92400e;
+  --color-primary-light: #fbbf24;
+
+  // Fix all component backgrounds
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  // =============================================
+  // GLOBAL ELEMENT FIXES
+  // =============================================
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  // Headers
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+  }
+
+  // Links
+  a {
+    color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  // Buttons
+  button {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+
+    &:hover {
+      background: var(--bg-hover);
+    }
+  }
+
+  // Forms
+  input, textarea, select {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+
+    &::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    &:focus {
+      border-color: var(--color-primary);
+    }
+  }
+
+  // Cards
+  .card, .panel, .box {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+  }
+
+  // =============================================
+  // COMPONENT-SPECIFIC FIXES
+  // =============================================
+
+  // Sidebar
+  .sidebar-new {
+    background: var(--bg-secondary);
+    border-right-color: var(--border-color);
+
+    .sidebar-header {
+      background: var(--bg-tertiary);
+      border-bottom-color: var(--border-color);
+    }
+
+    .nav-item {
+      color: var(--text-primary);
+
+      &:hover {
+        background: var(--bg-hover);
+      }
+
+      &.active {
+        background: linear-gradient(90deg, rgba(217, 119, 6, 0.1), transparent);
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  // Main content
+  .main-content {
+    background: var(--bg-primary);
+  }
+
+  // Derivations Browser
+  .derivations-browser {
+    .derivation-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+      color: var(--text-primary);
+
+      &:hover {
+        background: var(--bg-hover);
+      }
+
+      &.selected {
+        background: rgba(217, 119, 6, 0.1);
+        border-color: var(--color-primary);
+      }
+    }
+
+    .derivation-details {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+  }
+
+  // Theory pages
+  .theory-explorer {
+    .law-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+      color: var(--text-primary);
+
+      &:hover {
+        background: var(--bg-hover);
+      }
+    }
+
+    .law-detail {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+  }
+
+  // Equations
+  .equation-display,
+  .katex-display {
+    color: var(--text-primary) !important;
+
+    .katex {
+      color: inherit !important;
+    }
+  }
+
+  // Code blocks
+  pre, code {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+  }
+
+  // Tables
+  table {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+
+    th {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+
+    td {
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+
+    tr:hover {
+      background: var(--bg-hover);
+    }
+  }
+
+  // Modals
+  .modal {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+  }
+
+  // Tooltips
+  .tooltip {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+  }
+
+  // Loading states
+  .loading-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+  }
+
+  .spinner {
+    border-color: var(--border-color);
+    border-top-color: var(--color-primary);
+  }
+
+  // Error states
+  .error-banner {
+    background: #dc2626;
+    color: white;
+  }
+
+  // =============================================
+  // SPECIFIC PAGE FIXES
+  // =============================================
+
+  // Home page
+  .home-page {
+    .hero-section {
+      background: var(--bg-secondary);
+    }
+
+    .stats-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+      color: var(--text-primary);
+    }
+
+    .golden-display {
+      color: var(--color-primary);
+    }
+  }
+
+  // Calculations page
+  .calculations-page {
+    .calculator-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+
+    .result-display {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+  }
+
+  // Visualizations page
+  .visualizations-page {
+    .visualization-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+
+    .control-panel {
+      background: var(--bg-tertiary);
+      border-color: var(--border-color);
+    }
+  }
+
+  // Results page
+  .results-page {
+    .result-card {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+
+    .comparison-table {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+    }
+  }
+
+  // =============================================
+  // THIRD-PARTY COMPONENT FIXES
+  // =============================================
+
+  // KaTeX equations
+  .katex-html {
+    color: var(--text-primary) !important;
+  }
+
+  // Leva controls
+  .leva-container {
+    --leva-colors-background: var(--bg-card);
+    --leva-colors-foreground: var(--text-primary);
+    --leva-colors-elevation1: var(--bg-tertiary);
+    --leva-colors-elevation2: var(--bg-secondary);
+    --leva-colors-elevation3: var(--bg-hover);
+    --leva-colors-highlight1: var(--color-primary);
+    --leva-colors-highlight2: var(--color-primary-dark);
+  }
+
+  // React-markdown
+  .markdown-body {
+    color: var(--text-primary);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-primary);
+      border-bottom-color: var(--border-color);
+    }
+
+    blockquote {
+      color: var(--text-secondary);
+      border-left-color: var(--color-primary);
+      background: var(--bg-tertiary);
+    }
+
+    code {
+      background: var(--bg-tertiary);
+      color: var(--color-primary);
+    }
+
+    pre {
+      background: var(--bg-tertiary);
+      border-color: var(--border-color);
+    }
+
+    table {
+      border-color: var(--border-color);
+
+      th, td {
+        border-color: var(--border-color);
+      }
+
+      th {
+        background: var(--bg-tertiary);
+      }
+    }
+  }
+
+  // =============================================
+  // ANIMATION & TRANSITION FIXES
+  // =============================================
+
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+// =============================================
+// DARK MODE SPECIFICS (ensure overrides work)
+// =============================================
+
+.app.dark,
+.app[data-theme='dark'],
+[data-theme='dark'] {
+  // Force dark colors
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  .equation-display,
+  .katex-display {
+    color: var(--text-primary) !important;
+  }
+}

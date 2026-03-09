@@ -1,0 +1,138 @@
+// =============================================
+// SIDEBAR RESPONSIVE FIXES
+// Unified approach for consistent margin behavior
+// =============================================
+
+// Import theme variables
+@import './theme.scss';
+
+// Desktop: Sidebar visible, content adjusts with margin
+@media (min-width: 769px) {
+  .main-content {
+    margin-left: var(--sidebar-width-open) !important;
+    transition: margin-left 0.3s ease;
+
+    &.expanded {
+      margin-left: var(--sidebar-width-collapsed) !important;
+    }
+  }
+
+  .sidebar-new {
+    transform: translateX(0) !important;
+  }
+}
+
+// Mobile: Sidebar overlays with backdrop
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0 !important; // No margin on mobile
+
+    &.expanded {
+      margin-left: 0 !important; // Still no margin when collapsed
+    }
+  }
+
+  .sidebar-new {
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+
+    &.collapsed {
+      transform: translateX(-100%);
+    }
+  }
+
+  // Mobile backdrop when sidebar is open
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+    @media (max-width: 768px) {
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  // Adjust loading overlay on mobile
+  .loading-overlay {
+    left: 0 !important;
+
+    .main-content.expanded & {
+      left: 0 !important;
+    }
+  }
+}
+
+// Tablet: Intermediate behavior
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+}
+
+// Ensure all page-specific styles don't override margin behavior
+.theory-page,
+.explanations-page,
+.derivations-page,
+.calculations-page,
+.results-page,
+.about-page,
+.home-page {
+  // Remove any hardcoded margins - handled by MainLayout
+  margin-left: 0 !important;
+
+  @media (max-width: 768px) {
+    margin-left: 0 !important;
+  }
+}
+
+// Fix for light mode visibility
+[data-theme="light"] {
+  .sidebar-new {
+    background: var(--sidebar-bg);
+    border-right-color: var(--sidebar-border);
+
+    .sidebar-header,
+    .section-header,
+    .tree-node {
+      color: var(--color-text-primary);
+    }
+
+    .sidebar-branding {
+      color: var(--color-primary);
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+
+  .main-content {
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+}
+
+// Print styles - hide sidebar
+@media print {
+  .sidebar-new,
+  .sidebar-backdrop {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+}

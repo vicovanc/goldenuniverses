@@ -1,0 +1,196 @@
+// =============================================
+// FILE DISPLAY LIGHT MODE FIX
+// Fix gray background in light mode for file displays
+// =============================================
+
+// Light mode file display fixes
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+body[data-theme='light'] {
+
+  // Fix file-display background
+  .file-display {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+
+    .file-header {
+      background: #fafafa !important;
+      border-bottom: 1px solid #e5e5e5 !important;
+      color: #1a1a1a !important;
+
+      .file-title {
+        color: #1a1a1a !important;
+      }
+
+      .file-path {
+        color: #525252 !important;
+      }
+    }
+
+    .file-content {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+
+      pre {
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+      }
+
+      code {
+        background: #f5f5f5 !important;
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // Python executor file display
+  .python-executor {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+
+    .file-display {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+
+  // Derivation viewer file display
+  .derivation-viewer,
+  .derivation-viewer-new {
+    .file-display {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+
+    .viewer-content {
+      background: #ffffff !important;
+
+      .file-display {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+      }
+    }
+  }
+
+  // Code viewer file display
+  .code-viewer {
+    .file-display {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+
+  // File list and file items
+  .file-list {
+    background: #ffffff !important;
+
+    .file-item {
+      background: #fafafa !important;
+      border: 1px solid #e5e5e5 !important;
+
+      &:hover {
+        background: #f5f5f5 !important;
+      }
+
+      &.selected {
+        background: #fff3e0 !important;
+        border-color: #ff9800 !important;
+      }
+    }
+  }
+
+  // Code blocks within file displays
+  .file-display {
+    pre {
+      background: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+
+      code {
+        background: transparent !important;
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Syntax highlighting overrides
+    .hljs {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+
+    .language-python {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+
+      .hljs-keyword { color: #0000ff !important; }
+      .hljs-string { color: #008000 !important; }
+      .hljs-number { color: #098658 !important; }
+      .hljs-comment { color: #808080 !important; }
+      .hljs-function { color: #795e26 !important; }
+      .hljs-class { color: #267f99 !important; }
+      .hljs-variable { color: #001080 !important; }
+      .hljs-built_in { color: #0000ff !important; }
+    }
+  }
+
+  // Output displays
+  .output-display,
+  .console-output {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    color: #1a1a1a !important;
+
+    pre {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Error displays
+  .error-display {
+    background: #ffebee !important;
+    border: 1px solid #ffcdd2 !important;
+    color: #c62828 !important;
+
+    pre {
+      background: #ffebee !important;
+      color: #c62828 !important;
+    }
+  }
+
+  // Line numbers
+  .line-numbers {
+    background: #fafafa !important;
+    border-right: 1px solid #e5e5e5 !important;
+    color: #999999 !important;
+  }
+
+  // Scrollbar for file displays
+  .file-display {
+    &::-webkit-scrollbar {
+      background: #f5f5f5 !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d4d4d4 !important;
+
+      &:hover {
+        background: #a3a3a3 !important;
+      }
+    }
+  }
+}
+
+// Dark mode should keep default styles
+.app.dark {
+  .file-display {
+    // Keep default dark mode styles
+    background: var(--bg-secondary);
+
+    pre {
+      background: var(--bg-tertiary);
+    }
+  }
+}

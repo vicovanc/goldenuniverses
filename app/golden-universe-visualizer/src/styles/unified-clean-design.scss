@@ -1,0 +1,1144 @@
+// =============================================
+// UNIFIED CLEAN DESIGN - SINGLE SOURCE OF TRUTH
+// Preserves the beautiful layout while removing only unnecessary square boxes
+// Keeps all rounded elements, cards, and essential UI components
+// =============================================
+
+// ===============================
+// FOUNDATION: App Background
+// ===============================
+// Remove any body background first
+body, html {
+  background: transparent;
+}
+
+.app {
+  &.light {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+    color: #1a1a1a !important;
+  }
+
+  &.dark {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+}
+
+// ===============================
+// FIX: Sidebar Section Title Alignment
+// ===============================
+.sidebar-new {
+  .section-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+
+    .section-icon {
+      display: flex !important;
+      align-items: center !important;
+      line-height: 1 !important;
+    }
+
+    .section-title {
+      display: flex !important;
+      align-items: center !important;
+      line-height: 1 !important;
+      margin: 0 !important;
+    }
+
+    .section-count {
+      display: flex !important;
+      align-items: center !important;
+      line-height: 1 !important;
+    }
+
+    .section-arrow {
+      display: flex !important;
+      align-items: center !important;
+      line-height: 1 !important;
+    }
+  }
+}
+
+// Fix Theory Explorer specifically - needs to be outside .app for higher specificity
+.app.light .theory-explorer {
+  background: transparent !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+
+  // Remove the animated background particles in light mode
+  &::before {
+    display: none !important;
+  }
+
+  // Ensure all text is dark in light mode
+  * {
+    color: inherit !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+  }
+
+  .explorer-title,
+  .explorer-subtitle {
+    color: #1a1a1a !important;
+  }
+
+  // Fix Laws Browser specifically
+  .laws-browser {
+    background: transparent !important;
+
+    .law-card {
+      background: rgba(255, 255, 255, 0.8) !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: inherit !important;
+      }
+    }
+  }
+}
+
+// Fix Results page and Dashboard specifically in light mode
+.app.light .results-page,
+.app.light .results-dashboard {
+  // OVERRIDE the hardcoded black gradient background
+  background: transparent !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+
+  // Force all child elements to have proper colors
+  * {
+    color: inherit !important;
+  }
+
+  // Results comparison specific fix
+  .comparison-view,
+  .comparison-content,
+  [class*="comparison"] {
+    background: transparent !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: inherit !important;
+    }
+  }
+
+  // Tables in results
+  table {
+    background: transparent !important;
+
+    th, td {
+      color: #1a1a1a !important;
+      background: transparent !important;
+    }
+  }
+}
+
+// MORE AGGRESSIVE override for results-dashboard
+.app.light {
+  .results-dashboard {
+    // Kill the black gradient with extreme prejudice
+    background: transparent !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    color: #1a1a1a !important;
+
+    // Remove any pseudo-elements that might have backgrounds
+    &::before,
+    &::after {
+      display: none !important;
+      background: none !important;
+    }
+  }
+
+  // Also target if it's a direct style attribute
+  [class*="results"][style*="background: linear-gradient"],
+  [class*="results"][style*="background-image: linear-gradient"],
+  .results-dashboard[style*="background"] {
+    background: transparent !important;
+    background-image: none !important;
+  }
+}
+
+// Fix Explanations page Featured boxes
+.app.light .explanations-page {
+  .featured-explanations,
+  .explanation-card,
+  [class*="featured"] {
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: inherit !important;
+    }
+  }
+}
+
+// Ensure dark mode doesn't have white backgrounds
+.app.dark {
+  .theory-explorer {
+    // Keep the cosmic gradient in dark mode
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #111111 100%) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  .results-dashboard {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  // Remove any forced white backgrounds in dark mode
+  * {
+    &[style*="background: white"],
+    &[style*="background-color: white"],
+    &[style*="background: #fff"],
+    &[style*="background-color: #fff"],
+    &[style*="background: rgb(255, 255, 255)"],
+    &[style*="background-color: rgb(255, 255, 255)"] {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+// ===============================
+// REMOVE: Square Container Backgrounds ONLY
+// ===============================
+.theory-intro-container,
+.page-intro-container,
+.content-container,
+.main-container,
+.section-container,
+.dashboard-nav,
+.dashboard-main,
+.dashboard-content,
+.explorer-content,
+.explorer-main,
+.browser-content,
+.browser-main,
+.content-wrapper,
+.main-content,
+.results-dashboard-container,
+.dashboard-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Additional Results Dashboard fixes
+.results-dashboard {
+  .dashboard-header,
+  .stats-grid,
+  .dashboard-tabs {
+    background: transparent !important;
+    color: inherit !important;
+  }
+}
+
+// Additional Theory page fixes
+.theory-explorer,
+.theory-page {
+  .app.light & {
+    // The main theory explorer card
+    > div {
+      &[style*="background"] {
+        background: transparent !important;
+      }
+      color: #1a1a1a !important;
+    }
+
+    .explorer-header,
+    .theory-header {
+      background: transparent !important;
+      color: #1a1a1a !important;
+
+      h1, h2, h3 {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  .app.dark & {
+    > div {
+      background: transparent !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .law-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+    }
+  }
+}
+
+// ===============================
+// PRESERVE: Search Bars (Rounded)
+// ===============================
+input[type="search"],
+input.search,
+.search-input,
+.search-bar,
+.search-section input {
+  border-radius: 50px !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+
+  .app.light & {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: #1a1a1a !important;
+
+    &::placeholder {
+      color: #999 !important;
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-color: #d97706 !important;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+      outline: none !important;
+    }
+  }
+
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-color: #fbbf24 !important;
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2) !important;
+      outline: none !important;
+    }
+  }
+}
+
+// ===============================
+// PRESERVE: Filter Pills (Rounded)
+// ===============================
+.filter-btn,
+.category-btn,
+.category-filter button,
+button.pill,
+button.rounded {
+  border-radius: 25px !important;
+  padding: 0.5rem 1.25rem !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+
+  .app.light & {
+    &.active {
+      background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+      color: white !important;
+      border: none !important;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+    }
+
+    &:not(.active) {
+      background: rgba(255, 255, 255, 0.5) !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      color: #666 !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(0, 0, 0, 0.15) !important;
+        color: #333 !important;
+      }
+    }
+  }
+
+  .app.dark & {
+    &.active {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+      color: #000 !important;
+      border: none !important;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3) !important;
+    }
+
+    &:not(.active) {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        color: white !important;
+      }
+    }
+  }
+}
+
+// ===============================
+// PRESERVE: Cards (Rounded with shadows)
+// ===============================
+.card,
+.derivation-card,
+.law-card,
+.achievement-card,
+.result-card {
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  transition: all 0.3s ease !important;
+
+  .app.light & {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+      border-color: #d97706 !important;
+    }
+  }
+
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+      border-color: #fbbf24 !important;
+    }
+  }
+}
+
+// ===============================
+// SPECIAL: Python Executor Padding
+// ===============================
+.derivation-viewer-new .viewer-content .file-display .python-executor {
+  padding: 10px !important;
+}
+
+// ===============================
+// SPECIAL: Derivation Details Height
+// ===============================
+.derivation-detail-modal .derivation-details {
+  height: auto !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+}
+
+// ===============================
+// TABLES: Professional Styling
+// ===============================
+.results-table,
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+
+  thead {
+    th {
+      padding: 1rem 1.25rem !important;
+      text-align: left !important;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      white-space: nowrap !important;
+
+      .app.light & {
+        background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%) !important;
+        color: #374151 !important;
+        border-bottom: 2px solid #e5e7eb !important;
+      }
+
+      .app.dark & {
+        background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.02) 100%) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: all 0.2s ease !important;
+
+      td {
+        padding: 1rem 1.25rem !important;
+        white-space: nowrap !important;
+
+        .app.light & {
+          color: #1a1a1a !important;
+          border-bottom: 1px solid #f3f4f6 !important;
+        }
+
+        .app.dark & {
+          color: rgba(255, 255, 255, 0.8) !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        }
+      }
+
+      .app.light & {
+        &:nth-child(even) {
+          background: rgba(0, 0, 0, 0.01) !important;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.03) !important;
+        }
+      }
+
+      .app.dark & {
+        &:nth-child(even) {
+          background: rgba(255, 255, 255, 0.01) !important;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.03) !important;
+        }
+      }
+    }
+  }
+}
+
+// ===============================
+// NAVIGATION: Clean tabs without containers
+// ===============================
+.tabs-navigation {
+  background: transparent !important;
+  border: none !important;
+  padding: 1rem 0 !important;
+
+  .tab,
+  button {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+
+    .app.light & {
+      color: #666 !important;
+
+      &:hover {
+        color: #333 !important;
+      }
+
+      &.active {
+        color: #d97706 !important;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #d97706;
+        }
+      }
+    }
+
+    .app.dark & {
+      color: rgba(255, 255, 255, 0.6) !important;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+
+      &.active {
+        color: #fbbf24 !important;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #fbbf24;
+        }
+      }
+    }
+  }
+}
+
+// ===============================
+// SIDEBAR: Clean navigation without borders
+// ===============================
+.sidebar,
+.sidebar-new {
+  .app.light & {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .section-title {
+    border: none !important;
+    background: transparent !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+
+    .app.light & {
+      color: #374151 !important;
+    }
+
+    .app.dark & {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+
+  .menu-item,
+  .nav-link {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease !important;
+    border-radius: 8px !important;
+
+    .app.light & {
+      color: #666 !important;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+        color: #333 !important;
+      }
+
+      &.active {
+        background: rgba(217, 119, 6, 0.1) !important;
+        color: #d97706 !important;
+      }
+    }
+
+    .app.dark & {
+      color: rgba(255, 255, 255, 0.7) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: white !important;
+      }
+
+      &.active {
+        background: rgba(251, 191, 36, 0.1) !important;
+        color: #fbbf24 !important;
+      }
+    }
+  }
+}
+
+// ===============================
+// FILE DISPLAY: Clean code viewer
+// ===============================
+.file-display {
+  .app.light & {
+    background: transparent !important;
+
+    pre,
+    code {
+      background: #1e293b !important;
+      color: #e2e8f0 !important;
+      padding: 1rem !important;
+      border-radius: 8px !important;
+    }
+  }
+
+  .app.dark & {
+    background: transparent !important;
+
+    pre,
+    code {
+      background: #0f172a !important;
+      color: #e2e8f0 !important;
+      padding: 1rem !important;
+      border-radius: 8px !important;
+    }
+  }
+}
+
+// ===============================
+// MODALS: Keep proper backgrounds
+// ===============================
+.modal,
+.dialog {
+  .modal-content,
+  .dialog-content {
+    border-radius: 20px !important;
+
+    .app.light & {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .app.dark & {
+      background: rgba(30, 30, 30, 0.95) !important;
+      backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+}
+
+// ===============================
+// RESULTS PAGE: Full width after removing filters
+// ===============================
+.results-page {
+  .app.light & {
+    background: transparent !important;
+
+    // Remove any black backgrounds from results containers
+    > div {
+      background: transparent !important;
+      color: #1a1a1a !important;
+    }
+  }
+
+  .app.dark & {
+    background: transparent !important;
+
+    > div {
+      background: transparent !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+}
+
+.results-dashboard {
+  .dashboard-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem !important;
+  }
+
+  // Fix the dashboard container that has the black background
+  .app.light & {
+    &[style*="background"] {
+      background: transparent !important;
+    }
+
+    // The main dashboard card
+    .dashboard-card,
+    .results-card {
+      background: rgba(255, 255, 255, 0.7) !important;
+      color: #1a1a1a !important;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a !important;
+      }
+
+      p, span, div {
+        color: inherit !important;
+      }
+    }
+  }
+
+  .app.dark & {
+    &[style*="background"] {
+      background: transparent !important;
+    }
+
+    .dashboard-card,
+    .results-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+}
+
+// ===============================
+// SCROLLBARS: Minimal and clean
+// ===============================
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px !important;
+
+  .app.light & {
+    background: rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.2) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+  }
+}
+
+// ===============================
+// TEXT COLORS: Proper contrast
+// ===============================
+h1, h2, h3, h4, h5, h6 {
+  .app.light & {
+    color: #1a1a1a !important;
+  }
+
+  .app.dark & {
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+// ===============================
+// NUCLEAR OVERRIDES FOR LIGHT MODE
+// Fix all black backgrounds and white text
+// ===============================
+.app.light {
+  // Theory page and explorer
+  .theory-page,
+  .theory-explorer {
+    background: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+
+    &::before,
+    &::after {
+      display: none !important;
+    }
+
+    * {
+      &[style*="background: rgb(0"],
+      &[style*="background-color: rgb(0"],
+      &[style*="background: #000"],
+      &[style*="background-color: #000"] {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+
+      &[style*="color: white"],
+      &[style*="color: rgb(255, 255, 255)"],
+      &[style*="color: #fff"] {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // Results page
+  .results-page,
+  .results-dashboard,
+  [class*="results"] {
+    background: transparent !important;
+    color: #1a1a1a !important;
+
+    * {
+      &[style*="background: rgb(0"],
+      &[style*="background-color: rgb(0"] {
+        background: transparent !important;
+      }
+
+      &[style*="color: white"],
+      &[style*="color: rgb(255, 255, 255)"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Comparison view specific
+    .comparison-view,
+    .comparison-content,
+    [class*="comparison"] {
+      background: transparent !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // Explanations page
+  .explanations-page {
+    .featured-explanations,
+    .explanation-card,
+    .featured-box,
+    [class*="featured"] {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: inherit !important;
+      }
+    }
+  }
+
+  // Laws browser
+  .laws-browser {
+    background: transparent !important;
+
+    .law-card {
+      background: rgba(255, 255, 255, 0.95) !important;
+      color: #1a1a1a !important;
+
+      h1, h2, h3, h4, h5, h6, p, span, div {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+}
+
+// ===============================
+// ULTIMATE NUCLEAR FIX FOR COMPARISON PAGE
+// ===============================
+.app.light {
+  // Target ALL comparison-related elements
+  [class*="comparison"],
+  .comparison-view,
+  .comparison-content,
+  .comparison-table,
+  .comparison-card,
+  .comparison-grid,
+  .results-comparison {
+    // Force all text to be dark
+    &, * {
+      color: #1a1a1a !important;
+
+      // Target specific text elements
+      h1, h2, h3, h4, h5, h6,
+      p, span, div, li, td, th,
+      label, strong, em, b, i,
+      .text, .title, .subtitle, .description,
+      [class*="text"], [class*="title"], [class*="label"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Target the specific cards shown in your screenshot
+    .particle-card,
+    .mass-card,
+    [class*="card"] {
+      background: white !important;
+      color: #1a1a1a !important;
+
+      .card-header,
+      .card-title,
+      .card-body,
+      .card-content {
+        color: #1a1a1a !important;
+      }
+
+      // The values/numbers
+      .value,
+      .mass-value,
+      .energy-value,
+      [class*="value"] {
+        color: #1a1a1a !important;
+      }
+
+      // The units
+      .unit,
+      [class*="unit"] {
+        color: #666 !important;
+      }
+
+      // Status/info boxes (green backgrounds)
+      .status,
+      .info-box,
+      [class*="status"],
+      [class*="info"] {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // ABSOLUTE LAST RESORT - Target anything that looks like comparison content
+  #root [href*="comparison"],
+  [data-page="comparison"],
+  [data-view="comparison"],
+  main:has([class*="comparison"]) {
+    * {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // Target the actual results comparison route
+  body:has([href*="/results/comparison"]) {
+    [class*="card"],
+    [class*="comparison"],
+    .main-content,
+    .content-area,
+    main {
+      * {
+        color: #1a1a1a !important;
+
+        // Except for code blocks
+        &:is(code, pre) {
+          color: #e2e8f0 !important;
+        }
+      }
+    }
+  }
+}
+
+p, span, div, li {
+  .app.light & {
+    color: inherit;
+  }
+
+  .app.dark & {
+    color: inherit;
+  }
+}
+
+// ===============================
+// ABSOLUTE FINAL OVERRIDE - RESULTS DASHBOARD
+// This MUST come last to override Results.scss
+// ===============================
+.app.light {
+  // Target results-dashboard with maximum specificity
+  .results-dashboard,
+  div.results-dashboard,
+  main .results-dashboard,
+  #root .results-dashboard,
+  body .results-dashboard {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+
+    // Ensure no inline styles override this
+    &[style] {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      color: #1a1a1a !important;
+    }
+
+    // ALL child elements must have dark text
+    * {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // CODATA cards specifically
+  .codata-card,
+  [class*="codata"] {
+    background: white !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+    }
+
+    // All text elements
+    h1, h2, h3, h4, h5, h6,
+    p, span, div, li, label,
+    .value, .label, .unit, .text {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // ALL cards on results page
+  .results-page [class*="card"],
+  .results-dashboard [class*="card"],
+  [class*="results"] [class*="card"] {
+    background: white !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Also override the comparison view completely
+  .results-comparison,
+  .comparison-view,
+  [class*="comparison"] {
+    &, * {
+      background: transparent !important;
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Nuclear option for results page
+  [class*="results"] {
+    &, * {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // ABSOLUTE NUCLEAR - Target everything on /results route
+  body:has(a[href*="/results"]) {
+    .main-content,
+    .content-area,
+    main,
+    [class*="dashboard"],
+    [class*="card"],
+    [class*="codata"] {
+      &, *, *::before, *::after {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // Last resort - force ALL elements in results components
+  .results-page,
+  .results-dashboard,
+  .results-comparison {
+    *,
+    *::before,
+    *::after {
+      color: #1a1a1a !important;
+
+      // Only exception for code blocks
+      &:is(code, pre) {
+        color: #e2e8f0 !important;
+      }
+    }
+  }
+}
+
+// Golden/Primary colors
+.golden,
+.primary,
+.accent {
+  .app.light & {
+    color: #d97706 !important;
+  }
+
+  .app.dark & {
+    color: #fbbf24 !important;
+  }
+}
+
+// ===============================
+// REMOVE: Unnecessary section backgrounds
+// ===============================
+.search-section,
+.category-filters,
+.filters-section,
+.intro-section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+

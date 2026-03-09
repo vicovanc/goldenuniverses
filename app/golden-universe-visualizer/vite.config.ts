@@ -1,8 +1,55 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import fs from 'fs'
 import { visualizer } from 'rollup-plugin-visualizer'
 import viteCompression from 'vite-plugin-compression'
+
+// Custom plugin to serve derivations files in development
+function serveDerivations(mode: string): Plugin | null {
+  // Only serve local files in development
+  if (mode !== 'development') {
+    return null;
+  }
+
+  return {
+    name: 'serve-derivations',
+    configureServer(server) {
+      server.middlewares.use('/derivations', (req, res, next) => {
+        const url = req.url || '';
+        // Look for derivations in the parent directory structure
+        const derivationsPath = path.join(__dirname, '..', '..', 'derivations', url);
+
+        // Also check in public directory for test files
+        const publicPath = path.join(__dirname, 'public', url);
+
+        // Check if file exists in derivations directory first
+        let filePath = '';
+        if (fs.existsSync(derivationsPath) && fs.statSync(derivationsPath).isFile()) {
+          filePath = derivationsPath;
+        } else if (fs.existsSync(publicPath) && fs.statSync(publicPath).isFile()) {
+          filePath = publicPath;
+        }
+
+        if (filePath) {
+          // Set appropriate headers
+          if (url.endsWith('.py')) {
+            res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          } else if (url.endsWith('.md')) {
+            res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+          }
+          res.setHeader('Access-Control-Allow-Origin', '*');
+
+          // Send the file
+          const content = fs.readFileSync(filePath, 'utf-8');
+          res.end(content);
+        } else {
+          next();
+        }
+      });
+    }
+  };
+}
 
 // Custom plugin to fix CommonJS/ESM issues
 function commonjsFix(): Plugin {
@@ -78,6 +125,7 @@ export default defineConfig(({ mode }) => {
 
   return {
   plugins: [
+    serveDerivations(mode),
     commonjsFix(),
     react(),
     // Gzip compression for production
@@ -122,12 +170,16 @@ export default defineConfig(({ mode }) => {
       'Cross-Origin-Opener-Policy': 'same-origin',
     },
     proxy: {
-      // Proxy API requests to the backend server
+      // Proxy API requests to the backend server (when it's running)
       '/api': {
         target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
       },
+    },
+    fs: {
+      // Allow serving files from parent directories
+      allow: ['..'],
     },
   },
   worker: {

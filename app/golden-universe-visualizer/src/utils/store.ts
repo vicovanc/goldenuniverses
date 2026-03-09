@@ -14,7 +14,7 @@ interface AppStore extends AppState {
 const initialState: AppState = {
   currentSection: 'home',
   sidebarCollapsed: false,
-  theme: 'dark',
+  theme: 'light',  // Changed default from 'dark' to 'light'
   loading: false,
   error: null,
 };

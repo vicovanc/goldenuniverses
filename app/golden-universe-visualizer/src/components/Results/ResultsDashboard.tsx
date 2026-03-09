@@ -4,53 +4,23 @@
  * Integrates all results components
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { PrecisionTable } from './PrecisionTable';
 import { AchievementCards } from './AchievementCards';
 import { ResultsCharts } from './ResultsCharts';
 import { CODATAComparison } from './CODATAComparison';
 import { ExportOptions } from './ExportOptions';
-import { ResultsFilters } from './ResultsFilters';
 import { goldenUniverseResults, achievements, getStatistics } from './resultsData';
-import type { FilterOptions, AchievementData } from './types';
+import type { AchievementData } from './types';
 import './Results.scss';
 
 type DashboardView = 'overview' | 'table' | 'charts' | 'codata' | 'achievements';
 
 export const ResultsDashboard: React.FC = () => {
   const [activeView, setActiveView] = useState<DashboardView>('overview');
-  const [filters, setFilters] = useState<FilterOptions>({
-    categories: ['leptons', 'quarks', 'bosons', 'constants'],
-    precisionLevels: ['excellent', 'very-good', 'good', 'fair', 'poor'],
-    searchTerm: '',
-  });
 
-  // Filter results based on active filters
-  const filteredResults = useMemo(() => {
-    return goldenUniverseResults.filter(result => {
-      // Category filter
-      if (!filters.categories.includes(result.category)) {
-        return false;
-      }
-
-      // Precision level filter
-      if (!filters.precisionLevels.includes(result.precision)) {
-        return false;
-      }
-
-      // Search term filter
-      if (filters.searchTerm) {
-        const searchLower = filters.searchTerm.toLowerCase();
-        return (
-          result.name.toLowerCase().includes(searchLower) ||
-          result.category.toLowerCase().includes(searchLower) ||
-          result.formula?.toLowerCase().includes(searchLower)
-        );
-      }
-
-      return true;
-    });
-  }, [filters]);
+  // Use all results without filtering
+  const results = goldenUniverseResults;
 
   const stats = getStatistics();
 
@@ -82,7 +52,7 @@ export const ResultsDashboard: React.FC = () => {
           </p>
         </div>
         <div className="header-actions">
-          <ExportOptions results={filteredResults} />
+          <ExportOptions results={results} />
         </div>
       </div>
 
@@ -145,41 +115,9 @@ export const ResultsDashboard: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="dashboard-content">
-        {/* Sidebar Filters */}
-        <aside className="dashboard-sidebar">
-          <ResultsFilters filters={filters} onFiltersChange={setFilters} />
-
-          {/* Quick Stats */}
-          <div className="filter-stats">
-            <h4>Filtered Results</h4>
-            <div className="filter-stat-item">
-              <span className="filter-stat-value">{filteredResults.length}</span>
-              <span className="filter-stat-label">of {stats.total} results</span>
-            </div>
-            <div className="category-breakdown">
-              <div className="breakdown-item">
-                <span className="category-badge leptons">Leptons</span>
-                <span>{filteredResults.filter(r => r.category === 'leptons').length}</span>
-              </div>
-              <div className="breakdown-item">
-                <span className="category-badge quarks">Quarks</span>
-                <span>{filteredResults.filter(r => r.category === 'quarks').length}</span>
-              </div>
-              <div className="breakdown-item">
-                <span className="category-badge bosons">Bosons</span>
-                <span>{filteredResults.filter(r => r.category === 'bosons').length}</span>
-              </div>
-              <div className="breakdown-item">
-                <span className="category-badge constants">Constants</span>
-                <span>{filteredResults.filter(r => r.category === 'constants').length}</span>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        {/* Main View Area */}
-        <main className="dashboard-main">
+      <div className="dashboard-content dashboard-content-fullwidth">
+        {/* Main View Area - No sidebar, full width */}
+        <main className="dashboard-main dashboard-main-fullwidth">
           {activeView === 'overview' && (
             <div className="overview-view">
               <section className="overview-section">
@@ -188,30 +126,30 @@ export const ResultsDashboard: React.FC = () => {
 
               <section className="overview-section">
                 <h2>Quick Comparison</h2>
-                <PrecisionTable results={filteredResults.slice(0, 5)} />
+                <PrecisionTable results={results.slice(0, 5)} />
               </section>
 
               <section className="overview-section">
-                <ResultsCharts results={filteredResults} />
+                <ResultsCharts results={results} />
               </section>
             </div>
           )}
 
           {activeView === 'table' && (
             <div className="table-view">
-              <PrecisionTable results={filteredResults} />
+              <PrecisionTable results={results} />
             </div>
           )}
 
           {activeView === 'charts' && (
             <div className="charts-view">
-              <ResultsCharts results={filteredResults} />
+              <ResultsCharts results={results} />
             </div>
           )}
 
           {activeView === 'codata' && (
             <div className="codata-view">
-              <CODATAComparison results={filteredResults} />
+              <CODATAComparison results={results} />
             </div>
           )}
 

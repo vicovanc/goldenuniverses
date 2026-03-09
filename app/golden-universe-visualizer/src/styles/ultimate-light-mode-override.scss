@@ -1,0 +1,196 @@
+// Ultimate Light Mode Override - Nuclear Level
+// This file ensures EVERYTHING works in light mode
+
+.light-theme {
+  // Force ALL text to be visible
+  *,
+  *::before,
+  *::after {
+    color: #374151 !important;
+  }
+
+  // CTA buttons - FORCE black text on golden backgrounds
+  .cta-button,
+  a.cta-button,
+  button.cta-button,
+  .cta-button.primary,
+  .cta-button.secondary,
+  a.cta-button.primary,
+  a.cta-button.secondary,
+  a[href="/theory"],
+  a[href="/derivations"] {
+    color: #000000 !important;
+
+    svg {
+      fill: #000000 !important;
+      color: #000000 !important;
+    }
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      color: #000000 !important;
+    }
+
+    // Any child elements
+    *,
+    span,
+    div {
+      color: #000000 !important;
+    }
+  }
+
+  // Specific fix for homepage CTA buttons
+  .hero .cta-buttons .cta-button {
+    color: #000000 !important;
+
+    &.secondary {
+      color: #000000 !important;
+      border-color: var(--golden) !important;
+
+      &:hover {
+        color: #ffffff !important;
+        background: var(--golden) !important;
+      }
+    }
+  }
+
+  // Headers
+  h1, h2, h3, h4, h5, h6 {
+    color: #111827 !important;
+  }
+
+  // Paragraphs and descriptions
+  p, .description, .subtitle {
+    color: #6b7280 !important;
+  }
+
+  // Search inputs and placeholders
+  input[type="text"],
+  input[type="search"],
+  .search-input,
+  .search-field {
+    color: #374151 !important;
+    background: #ffffff !important;
+    border-color: #e5e7eb !important;
+
+    &::placeholder {
+      color: #9ca3af !important;
+      opacity: 1 !important;
+    }
+  }
+
+  // All placeholder variations
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder,
+  ::placeholder {
+    color: #9ca3af !important;
+    opacity: 1 !important;
+  }
+
+  // Derivations browser filter buttons
+  .derivations-browser {
+    .filter-buttons {
+      button {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border-color: #e5e7eb !important;
+
+        span {
+          color: #374151 !important;
+        }
+
+        .count {
+          color: #6b7280 !important;
+          background: #f3f4f6 !important;
+        }
+
+        &.active {
+          background: var(--golden) !important;
+          border-color: var(--golden) !important;
+
+          span,
+          .count {
+            color: #ffffff !important;
+            background: transparent !important;
+          }
+        }
+
+        &:hover:not(.active) {
+          background: #f9fafb !important;
+          border-color: var(--golden) !important;
+        }
+      }
+    }
+  }
+
+  // Exceptions for elements that should keep white text
+  .active button,
+  button.active,
+  .btn-primary,
+  .github-button,
+  .skill-tag,
+  [class*="bg-golden"],
+  [class*="bg-primary"],
+  [class*="bg-dark"] {
+    color: #ffffff !important;
+
+    * {
+      color: #ffffff !important;
+    }
+  }
+
+  // Sidebar proper theming
+  .sidebar,
+  .sidebar-new {
+    background: #f9fafb !important;
+
+    .nav-item {
+      color: #374151 !important;
+
+      &.active {
+        background: var(--golden) !important;
+        color: #ffffff !important;
+      }
+
+      &:hover:not(.active) {
+        background: #f3f4f6 !important;
+      }
+    }
+  }
+
+  // Cards and containers
+  .card,
+  .container,
+  .section {
+    background: #ffffff !important;
+    color: #374151 !important;
+  }
+
+  // Tables
+  table {
+    th {
+      background: #f9fafb !important;
+      color: #111827 !important;
+    }
+
+    td {
+      color: #374151 !important;
+    }
+  }
+
+  // Lists
+  li {
+    color: #374151 !important;
+  }
+
+  // Code blocks
+  code,
+  pre {
+    background: #f9fafb !important;
+    color: #111827 !important;
+  }
+}

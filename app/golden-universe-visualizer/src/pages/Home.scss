@@ -5,6 +5,7 @@
 
 @import '../styles/refined-design-system.scss';
 @import '../styles/refined-components.scss';
+@import './Home.light.scss';
 
 // ---------------------------------------------
 // CLEAN PAGE LAYOUT
@@ -86,13 +87,37 @@
     @include button-base;
     min-width: 160px;
     text-decoration: none;
+    font-weight: 600;
+    padding: $space-3 $space-6;
+    font-size: $text-base;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
     &.primary {
       @include button-primary;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white !important;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+
+      &:hover {
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        transform: translateY(-2px);
+      }
     }
 
     &.secondary {
       @include button-secondary;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(245, 158, 11, 0.5);
+      color: white !important;
+
+      &:hover {
+        background: rgba(245, 158, 11, 0.2);
+        border-color: #f59e0b;
+        color: white !important;
+        transform: translateY(-2px);
+      }
     }
   }
 }
@@ -465,5 +490,564 @@
 
 .home-page {
   animation: fadeIn 0.4s ease-out;
-  margin-left: 200px;
+  // Remove hardcoded margin - handled by MainLayout
+}
+
+// ---------------------------------------------
+// THEORY INTRODUCTION SECTION
+// ---------------------------------------------
+
+.theory-introduction {
+  padding: 4rem 1.5rem;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.theory-intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.theory-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.intro-card {
+  padding: 1.5rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #fbbf24;
+  }
+
+  &.primary {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg,
+      rgba(251, 191, 36, 0.05) 0%,
+      rgba(245, 158, 11, 0.05) 100%);
+    border-color: rgba(251, 191, 36, 0.3);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+    color: var(--text-secondary);
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+  }
+
+  strong {
+    color: #fbbf24;
+    font-weight: 500;
+  }
+}
+
+.key-equation {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+
+  code {
+    display: block;
+    font-size: 1.125rem;
+    color: #fbbf24;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    margin-bottom: 0.5rem;
+  }
+
+  .equation-label {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+  }
+}
+
+.theory-foundation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg-base) 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pillar {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-base);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: #fbbf24;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+  }
+
+  .pillar-icon {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 0.75rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+}
+
+.foundation-note {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding: 1rem;
+  background: var(--bg-base);
+  border-radius: 8px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+// ---------------------------------------------
+// CONSCIOUSNESS SECTION
+// ---------------------------------------------
+
+.consciousness-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg,
+    rgba(147, 51, 234, 0.05) 0%,
+    rgba(251, 191, 36, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(147, 51, 234, 0.2);
+
+  h3 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #9333ea 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.consciousness-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.consciousness-formula {
+  text-align: center;
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+}
+
+.consciousness-explanation {
+  p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  strong {
+    color: #9333ea;
+    font-weight: 500;
+  }
+}
+
+.consciousness-components {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.component {
+  padding: 1.25rem;
+  background: var(--bg-base);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(147, 51, 234, 0.1);
+    border-color: #9333ea;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #9333ea;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    &:first-of-type {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      color: #fbbf24;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.consciousness-insight {
+  padding: 1.5rem;
+  background: rgba(147, 51, 234, 0.05);
+  border-left: 4px solid #9333ea;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.dna-consciousness {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-subtle);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+
+  h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+
+      strong {
+        color: #fbbf24;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .consciousness-components {
+    grid-template-columns: 1fr;
+  }
+
+  .consciousness-section {
+    padding: 1.5rem 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+// Open Source Section
+.open-source-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 0.95));
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  .open-source-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fbbf24;
+  }
+
+  .open-source-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .open-source-card {
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: #fbbf24;
+      box-shadow: 0 10px 30px rgba(251, 191, 36, 0.2);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #fbbf24;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .repo-link {
+      margin-top: 1rem;
+    }
+
+    .github-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #24292e;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #1a1e22;
+        transform: scale(1.05);
+      }
+    }
+
+    .skills-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .skill-button {
+      flex: 1;
+      min-width: 120px;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+
+      &.claude {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: white;
+      }
+
+      &.cursor {
+        background: linear-gradient(135deg, #10b981, #22c55e);
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .contribution-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+
+      li {
+        padding: 0.5rem 0;
+        color: var(--text-secondary);
+      }
+    }
+  }
+}
+
+// Light mode fixes for entire home page
+[data-theme="light"],
+.light-mode,
+.light-theme,
+.app.light {
+  .home-page {
+    // Hero CTA buttons in light mode
+    .hero-cta {
+      .cta-button {
+        &.primary {
+          background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+          color: white !important;
+          border: 1px solid #d97706 !important;
+          font-weight: 600 !important;
+
+          &:hover {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3) !important;
+          }
+        }
+
+        &.secondary {
+          background: white !important;
+          border: 2px solid #d97706 !important;
+          color: #d97706 !important;
+          font-weight: 600 !important;
+
+          &:hover {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+            color: white !important;
+            border-color: #d97706 !important;
+          }
+        }
+      }
+    }
+
+    // Force ALL CTA buttons to have black text
+    .cta-buttons {
+      .cta-button {
+        &.secondary {
+          color: #000000 !important;
+
+          * {
+            color: #000000 !important;
+          }
+
+          &:hover {
+            background: var(--golden) !important;
+            color: #ffffff !important;
+
+            * {
+              color: #ffffff !important;
+            }
+          }
+        }
+      }
+
+      // Ultra specific targeting for the Theory Laws button
+      a[href="/theory"] {
+        color: #000000 !important;
+
+        &:not(:hover) {
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+
+  .open-source-section {
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+    border-top-color: #e5e7eb;
+    border-bottom-color: #e5e7eb;
+
+    .section-title {
+      color: #d97706; // Darker golden for light mode
+    }
+
+    .open-source-card {
+      background: #ffffff;
+      border-color: #e5e7eb;
+
+      &:hover {
+        border-color: #d97706;
+        box-shadow: 0 10px 30px rgba(217, 119, 6, 0.15);
+      }
+
+      h3 {
+        color: #d97706; // Darker golden
+      }
+
+      p {
+        color: #6b7280; // Medium gray
+      }
+
+      .contribution-list li {
+        color: #6b7280;
+      }
+    }
+
+    .github-button {
+      // Keep dark background with white text
+      background: #24292e;
+      color: white;
+    }
+
+    .skill-button {
+      // Keep gradient backgrounds with white text
+      &.claude {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: white;
+      }
+
+      &.cursor {
+        background: linear-gradient(135deg, #10b981, #22c55e);
+        color: white;
+      }
+    }
+  }
 }

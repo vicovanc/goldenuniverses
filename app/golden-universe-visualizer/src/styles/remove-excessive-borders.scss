@@ -1,0 +1,334 @@
+// =============================================
+// REMOVE EXCESSIVE BORDERS - CLEAN MINIMAL DESIGN
+// Remove unnecessary borders throughout the entire application
+// =============================================
+
+// Global border removal for both light and dark modes
+* {
+  // Remove all default borders except where absolutely necessary
+  &[class*="dashboard"],
+  &[class*="nav"],
+  &[class*="header"],
+  &[class*="banner"],
+  &[class*="content"],
+  &[class*="section"],
+  &[class*="view"],
+  &[class*="main"] {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Results Dashboard - Clean minimal design
+.results-dashboard {
+  // Remove dashboard header border
+  .dashboard-header {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    margin-bottom: 1rem;
+  }
+
+  // Remove navigation borders
+  .dashboard-nav {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 1rem 0;
+
+    .nav-tab {
+      border: none !important;
+      background: transparent !important;
+      color: var(--text-secondary);
+      position: relative;
+
+      // Use subtle underline for active state instead of borders
+      &.active {
+        background: transparent !important;
+        color: var(--color-primary) !important;
+        font-weight: 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: var(--color-primary);
+        }
+      }
+
+      &:hover:not(.active) {
+        background: rgba(0, 0, 0, 0.02) !important;
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  // Clean stats banner
+  .stats-banner {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 1.5rem 0;
+
+    .stat-item {
+      border: none !important;
+      background: transparent !important;
+
+      .stat-value {
+        font-size: 2.5rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  // Main content area
+  .dashboard-content {
+    border: none !important;
+
+    .dashboard-main {
+      border: none !important;
+      padding: 1rem 0 !important;
+    }
+  }
+
+  // Achievement cards - minimal design
+  .achievement-card,
+  .breakthrough-card {
+    border: none !important;
+    background: var(--bg-card) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+      transform: translateY(-2px);
+    }
+
+    // Category badges should be minimal
+    .category-badge {
+      border: none !important;
+      padding: 0.375rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  // Tables - clean design
+  table {
+    border: none !important;
+    border-collapse: collapse;
+
+    thead {
+      border: none !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+      th {
+        border: none !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.08) !important;
+        padding: 1rem 1.5rem !important;
+      }
+    }
+
+    tbody {
+      tr {
+        border: none !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+
+        &:last-child {
+          border-bottom: none !important;
+        }
+
+        td {
+          border: none !important;
+          padding: 1rem 1.5rem !important;
+        }
+      }
+    }
+  }
+
+  // Footer - clean
+  .dashboard-footer {
+    border: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    background: transparent !important;
+  }
+}
+
+// Sidebar - minimal borders
+.sidebar,
+.sidebar-new {
+  border: none !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.06) !important;
+
+  .section-title {
+    border: none !important;
+  }
+
+  .nav-item,
+  .sidebar-item {
+    border: none !important;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    &.active {
+      background: var(--color-primary-light);
+      border-left: 3px solid var(--color-primary) !important;
+    }
+  }
+}
+
+// Buttons - no borders, use shadows
+button,
+.btn,
+[class*="button"] {
+  border: none !important;
+
+  &:not(.nav-tab):not(.link-button) {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    &:active {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
+// Cards - minimal shadows instead of borders
+.card,
+[class*="card"] {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+// Light mode specific
+.app.light {
+  --color-primary: #d97706;
+  --color-primary-light: rgba(217, 119, 6, 0.1);
+  --bg-card: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+
+  .results-dashboard {
+    .dashboard-nav .nav-tab {
+      &:hover:not(.active) {
+        background: rgba(0, 0, 0, 0.03) !important;
+      }
+    }
+
+    // Very subtle borders only where needed
+    table {
+      thead th {
+        border-bottom: 1px solid #e5e5e5 !important;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid #f5f5f5 !important;
+      }
+    }
+  }
+
+  .sidebar {
+    border-right: 1px solid #f0f0f0 !important;
+
+    .nav-item:hover {
+      background: #fafafa !important;
+    }
+  }
+}
+
+// Dark mode specific
+.app.dark {
+  --color-primary: #fbbf24;
+  --color-primary-light: rgba(251, 191, 36, 0.1);
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  .results-dashboard {
+    .dashboard-nav .nav-tab {
+      &:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.05) !important;
+      }
+    }
+
+    table {
+      thead th {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+    }
+  }
+
+  .sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.03) !important;
+    }
+  }
+
+  // Cards need subtle definition in dark mode
+  .card,
+  [class*="card"] {
+    background: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+}
+
+// Input fields - minimal
+input,
+textarea,
+select {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background: var(--bg-card) !important;
+
+  &:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px var(--color-primary-light) !important;
+    outline: none !important;
+  }
+}
+
+// Remove borders from all layout containers
+.app,
+.main-layout,
+.main-content,
+.page-container,
+[class*="-page"],
+[class*="-view"],
+[class*="-dashboard"] {
+  border: none !important;
+}
+
+// Only keep essential dividers
+hr {
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  margin: 2rem 0;
+}

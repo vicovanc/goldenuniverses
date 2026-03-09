@@ -37,6 +37,15 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: $space-3;
       text-shadow: 0 2px 20px rgba(245, 158, 11, 0.3);
+
+      .app.light &,
+      .light & {
+        background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        text-shadow: none !important;
+      }
     }
 
     .subtitle {
@@ -44,6 +53,11 @@
       color: $text-secondary;
       font-size: $text-lg;
       line-height: $leading-relaxed;
+
+      .app.light &,
+      .light & {
+        color: #6b7280 !important;
+      }
     }
   }
 
@@ -65,6 +79,33 @@
       gap: $space-3;
       position: relative;
       overflow: hidden;
+
+      // Light mode overrides for particle buttons
+      .app.light &,
+      .light & {
+        background: #fafafa !important;
+        border: 2px solid #d1d5db !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+
+        &:hover:not(:disabled) {
+          background: #fff7ed !important;
+          border-color: #d97706 !important;
+          box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2) !important;
+          transform: translateY(-4px);
+        }
+
+        &.selected {
+          background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important;
+          border-color: #d97706 !important;
+          box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15), 0 4px 12px rgba(217, 119, 6, 0.2) !important;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          background: #f3f4f6 !important;
+          border-color: #e5e7eb !important;
+        }
+      }
 
       // Animated gradient background on hover
       &::before {
@@ -114,6 +155,15 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: transform $transition-base;
+
+        // Light mode particle symbol
+        .app.light &,
+        .light & {
+          background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+          background-clip: text !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+        }
       }
 
       .particle-name {
@@ -122,6 +172,12 @@
         color: $text-primary;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+
+        // Light mode particle name
+        .app.light &,
+        .light & {
+          color: #374151 !important;
+        }
       }
     }
   }
@@ -135,6 +191,27 @@
     margin-bottom: $space-8;
     position: relative;
     overflow: hidden;
+
+    // Light mode calculate button
+    .app.light &,
+    .light & {
+      background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+      color: white !important;
+      border: none !important;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+
+      &:hover:not(:disabled) {
+        background: linear-gradient(135deg, #b45309, #dc2626) !important;
+        box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4) !important;
+        transform: translateY(-2px);
+      }
+
+      &:disabled {
+        background: #e5e5e5 !important;
+        color: #9ca3af !important;
+        box-shadow: none !important;
+      }
+    }
 
     &::after {
       content: '';
@@ -185,6 +262,22 @@
       @include glass-card;
       padding: $space-8;
       transition: all $transition-base;
+      background: rgba(0, 0, 0, 0.6); // Dark background
+      backdrop-filter: blur(10px);
+      color: white; // White text by default
+
+      // Light mode result cards
+      .app.light &,
+      .light & {
+        background: white !important;
+        border: 1px solid #e5e5e5 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+        color: #1a1a1a !important;
+
+        &:hover {
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+        }
+      }
 
       &:hover {
         transform: translateY(-2px);
@@ -195,12 +288,19 @@
         margin: 0 0 $space-6 0;
         font-size: $text-2xl;
         font-weight: $font-semibold;
-        color: $text-primary;
+        color: white; // White text on dark background
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: $space-4;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        // Light mode headers
+        .app.light &,
+        .light & {
+          color: #111827 !important;
+          border-bottom: 1px solid #e5e5e5 !important;
+        }
 
         .toggle-btn {
           background: transparent;
@@ -215,6 +315,16 @@
           align-items: center;
           justify-content: center;
           border-radius: $radius-full;
+
+          // Light mode toggle button
+          .app.light &,
+          .light & {
+            color: #d97706 !important;
+
+            &:hover {
+              background: rgba(217, 119, 6, 0.1) !important;
+            }
+          }
 
           &:hover {
             background: rgba(245, 158, 11, 0.1);
@@ -242,6 +352,18 @@
           gap: $space-2;
           transition: all $transition-base;
 
+          // Light mode comparison items
+          .app.light &,
+          .light & {
+            background: white !important;
+            border: 1px solid #e5e5e5 !important;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+
+            &:hover {
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+            }
+          }
+
           &:hover {
             transform: translateY(-2px);
             box-shadow: $shadow-lg;
@@ -249,18 +371,30 @@
 
           .label {
             font-size: $text-sm;
-            color: $text-tertiary;
+            color: rgba(255, 255, 255, 0.7); // Semi-transparent white
             font-weight: $font-medium;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+
+            // Light mode label
+            .app.light &,
+            .light & {
+              color: #6b7280 !important;
+            }
           }
 
           .value {
             font-size: $text-2xl;
             font-weight: $font-light;
-            color: $text-primary;
+            color: white; // White text on dark
             font-family: $font-family-mono;
             line-height: 1.2;
+
+            // Light mode value
+            .app.light &,
+            .light & {
+              color: #111827 !important;
+            }
           }
 
           &.precision {
@@ -324,8 +458,14 @@
 
           .param-label {
             font-weight: $font-medium;
-            color: $text-secondary;
+            color: rgba(255, 255, 255, 0.7); // Semi-transparent white
             font-size: $text-sm;
+
+            // Light mode
+            .app.light &,
+            .light & {
+              color: #6b7280 !important;
+            }
           }
 
           .param-value {
@@ -362,7 +502,13 @@
 
           .winding-label {
             font-weight: $font-semibold;
-            color: $text-secondary;
+            color: rgba(255, 255, 255, 0.8); // White on dark
+
+            // Light mode
+            .app.light &,
+            .light & {
+              color: #4b5563 !important;
+            }
           }
 
           .winding-value {
@@ -375,12 +521,19 @@
 
         .winding-constraint {
           font-size: $text-sm;
-          color: $text-tertiary;
+          color: rgba(255, 255, 255, 0.6); // White on dark
           font-style: italic;
           padding: $space-3;
           text-align: center;
           background: rgba(255, 255, 255, 0.02);
           border-radius: $radius-md;
+
+          // Light mode
+          .app.light &,
+          .light & {
+            color: #6b7280 !important;
+            background: rgba(0, 0, 0, 0.02) !important;
+          }
         }
       }
     }
@@ -400,6 +553,13 @@
           color: $brand-accent;
           font-family: $font-family-mono;
           line-height: $leading-relaxed;
+        }
+
+        // Light mode
+        .app.light &,
+        .light & {
+          background: #f9fafb !important;
+          border: 1px solid #e5e7eb !important;
         }
       }
 
@@ -427,14 +587,26 @@
 
           .component-name {
             font-weight: $font-semibold;
-            color: $text-primary;
+            color: white; // White text on dark
             font-size: $text-sm;
+
+            // Light mode
+            .app.light &,
+            .light & {
+              color: #111827 !important;
+            }
           }
 
           .component-formula {
             font-family: $font-family-mono;
-            color: $text-secondary;
+            color: rgba(255, 255, 255, 0.7); // White on dark
             font-size: $text-sm;
+
+            // Light mode
+            .app.light &,
+            .light & {
+              color: #6b7280 !important;
+            }
           }
 
           .component-value {
@@ -443,6 +615,17 @@
             color: $brand-primary;
             text-align: right;
             font-size: $text-sm;
+          }
+
+          // Light mode for component items
+          .app.light &,
+          .light & {
+            background: #f9fafb !important;
+            border: 1px solid #e5e7eb !important;
+
+            &:hover {
+              background: #f3f4f6 !important;
+            }
           }
 
           &.memory {
@@ -521,6 +704,77 @@
           }
         }
       }
+    }
+  }
+
+  // Theory section for derivation display
+  .theory-section {
+    @include glass-card;
+    padding: $space-8;
+    background: rgba(0, 0, 0, 0.6); // Dark background
+    backdrop-filter: blur(10px);
+    margin-top: $space-8;
+
+    h3 {
+      font-size: $text-2xl;
+      font-weight: $font-semibold;
+      color: white; // White text
+      margin-bottom: $space-6;
+      padding-bottom: $space-4;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      // Light mode
+      .app.light &,
+      .light & {
+        color: #111827 !important;
+        border-bottom: 1px solid #e5e5e5 !important;
+      }
+    }
+
+    .derivation-text {
+      color: rgba(255, 255, 255, 0.95); // White text
+
+      pre {
+        color: rgba(255, 255, 255, 0.95); // White text
+        font-family: $font-family-mono;
+        font-size: $text-sm;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background: rgba(0, 0, 0, 0.3);
+        padding: $space-6;
+        border-radius: $radius-lg;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.95); // White text
+        line-height: 1.8;
+        margin-bottom: $space-4;
+      }
+
+      // Light mode
+      .app.light &,
+      .light & {
+        color: #374151 !important;
+
+        pre {
+          background: #f9fafb !important;
+          color: #374151 !important;
+          border: 1px solid #e5e7eb !important;
+        }
+
+        p {
+          color: #374151 !important;
+        }
+      }
+    }
+
+    // Light mode for theory section
+    .app.light &,
+    .light & {
+      background: white !important;
+      border: 1px solid #e5e5e5 !important;
     }
   }
 

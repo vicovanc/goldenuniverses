@@ -5,6 +5,32 @@ import * as path from 'path';
 import config from '../config/config';
 import { contentService } from '../contentService';
 
+// Helper function to parse derivation folder name
+function parseDerivationFolder(folderName: string) {
+  const match = folderName.match(/^(\d+)_(.+)$/);
+  if (match) {
+    const [, number, name] = match;
+    return {
+      number: parseInt(number),
+      name: name.replace(/_/g, ' '),
+      title: `Law ${number}: ${name.replace(/_/g, ' ')}`
+    };
+  }
+  return null;
+}
+
+// Helper function to get category from folder name
+function getCategoryFromFolder(folderName: string): string {
+  const upperName = folderName.toUpperCase();
+  if (upperName.includes('PARTICLE') || upperName.includes('MASS')) return 'Particle Physics';
+  if (upperName.includes('COSMOLOGY') || upperName.includes('UNIVERSE')) return 'Cosmology';
+  if (upperName.includes('QUANTUM')) return 'Quantum Mechanics';
+  if (upperName.includes('FIELD')) return 'Field Theory';
+  if (upperName.includes('GEOMETRY') || upperName.includes('SPACE')) return 'Geometry';
+  if (upperName.includes('INFORMATION') || upperName.includes('ENTROPY')) return 'Information Theory';
+  return 'General Physics';
+}
+
 export const derivationsController = {
   /**
    * Get all derivations dynamically from content service
@@ -31,7 +57,8 @@ export const derivationsController = {
    * Get derivation by number
    */
   getByNumber: asyncHandler(async (req: Request, res: Response) => {
-    const number = parseInt(req.params.number, 10);
+    const numberParam = Array.isArray(req.params.number) ? req.params.number[0] : req.params.number;
+    const number = parseInt(numberParam, 10);
 
     if (isNaN(number) || number < 1 || number > 42) {
       throw new AppError('Invalid derivation number (must be 1-42)', 400);
@@ -82,8 +109,9 @@ export const derivationsController = {
    * Get derivation file content
    */
   getFile: asyncHandler(async (req: Request, res: Response) => {
-    const number = parseInt(req.params.number, 10);
-    const filename = req.params.filename;
+    const numberParam = Array.isArray(req.params.number) ? req.params.number[0] : req.params.number;
+    const number = parseInt(numberParam, 10);
+    const filename = Array.isArray(req.params.filename) ? req.params.filename[0] : req.params.filename;
 
     if (isNaN(number) || number < 1 || number > 42) {
       throw new AppError('Invalid derivation number', 400);
@@ -157,7 +185,7 @@ export const derivationsController = {
    * Get files list for a specific derivation folder
    */
   getFolderFiles: asyncHandler(async (req: Request, res: Response) => {
-    const folderName = req.params.folderName;
+    const folderName = Array.isArray(req.params.folderName) ? req.params.folderName[0] : req.params.folderName;
 
     try {
       const files = await contentService.getDerivationFiles(folderName);
@@ -192,7 +220,8 @@ export const derivationsController = {
    * Get specific file content from a derivation folder
    */
   getFolderFile: asyncHandler(async (req: Request, res: Response) => {
-    const { folderName, filename } = req.params;
+    const folderName = Array.isArray(req.params.folderName) ? req.params.folderName[0] : req.params.folderName;
+    const filename = Array.isArray(req.params.filename) ? req.params.filename[0] : req.params.filename;
 
     try {
       const content = await contentService.getFileContent(`derivations/${folderName}/${filename}`);

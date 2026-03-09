@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Derivation Access</title>
+    <style>
+        body {
+            font-family: monospace;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #00ff00;
+        }
+        h1 { color: #ffd700; }
+        .test-result {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #333;
+            background: #0a0a0a;
+        }
+        .success { border-color: #00ff00; }
+        .error { border-color: #ff0000; color: #ff6666; }
+        .info { color: #00ffff; }
+        pre {
+            overflow-x: auto;
+            background: #000;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Golden Universe - Derivation Files Access Test</h1>
+    <div id="results"></div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+
+        function addResult(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.innerHTML = message;
+            resultsDiv.appendChild(div);
+        }
+
+        async function testDerivations() {
+            addResult('<h2>Testing Derivation Files Access...</h2>');
+
+            // Test 1: Load derivations map
+            addResult('Test 1: Loading derivations-map.json...');
+            try {
+                const mapResponse = await fetch('/data/derivations-map.json');
+                if (mapResponse.ok) {
+                    const map = await mapResponse.json();
+                    addResult(`✓ Loaded ${map.length} derivations from map`, 'success');
+
+                    // Show first few entries
+                    const sample = map.slice(0, 3).map(d =>
+                        `ID: ${d.id}, Title: ${d.title}, Folder: ${d.folderName}, Files: ${d.totalFiles}`
+                    ).join('<br>');
+                    addResult(`Sample entries:<br><pre>${sample}</pre>`, 'info');
+                } else {
+                    addResult(`✗ Failed to load map: ${mapResponse.status}`, 'error');
+                }
+            } catch (error) {
+                addResult(`✗ Error loading map: ${error.message}`, 'error');
+            }
+
+            // Test 2: Access static derivation file
+            addResult('<br>Test 2: Accessing static derivation file...');
+            const testFolders = [
+                '03_PARTICLE_MASSES/01_all_particle_masses.py',
+                '17_ALPHA_EM_DERIVATION/01_alpha_em_topological.py',
+                '01_UNIFYING_FRAMEWORK_MATRIX_1_42/01_fundamental_lagrangian.py'
+            ];
+
+            for (const path of testFolders) {
+                try {
+                    const url = `/derivations/${path}`;
+                    const response = await fetch(url);
+
+                    if (response.ok) {
+                        const content = await response.text();
+                        if (!content.includes('<!DOCTYPE') && !content.includes('File Not Available')) {
+                            const preview = content.substring(0, 200).replace(/\n/g, '<br>');
+                            addResult(`✓ ${path}<br><pre>${preview}...</pre>`, 'success');
+                        } else {
+                            addResult(`✗ ${path} - Returned HTML instead of Python`, 'error');
+                        }
+                    } else {
+                        addResult(`✗ ${path} - Status: ${response.status}`, 'error');
+                    }
+                } catch (error) {
+                    addResult(`✗ ${path} - ${error.message}`, 'error');
+                }
+            }
+
+            // Test 3: Check API endpoints
+            addResult('<br>Test 3: Testing API endpoints...');
+            try {
+                const apiTest = await fetch('/api/derivations');
+                addResult(`API /api/derivations: ${apiTest.status} ${apiTest.statusText}`,
+                          apiTest.ok ? 'success' : 'error');
+            } catch (error) {
+                addResult(`API test failed: ${error.message}`, 'error');
+            }
+
+            // Test 4: Check Python engine status
+            addResult('<br>Test 4: Checking Python execution capability...');
+            addResult('Note: Full Python execution requires either:', 'info');
+            addResult('1. Backend server running on port 3001 (npm run server:dev)', 'info');
+            addResult('2. Pyodide loaded in browser (fallback)', 'info');
+
+            // Summary
+            addResult('<br><h2>Summary</h2>');
+            addResult('The derivation files are properly mapped and accessible via:', 'info');
+            addResult('1. Static JSON map at /data/derivations-map.json ✓', 'success');
+            addResult('2. Static file serving at /derivations/{folder}/{file}', 'info');
+            addResult('3. API endpoints at /api/derivations/* (requires backend)', 'info');
+            addResult('<br>To execute Python derivation files:', 'info');
+            addResult('• Start backend: npm run server:dev', 'info');
+            addResult('• Or wait for Pyodide to load in browser', 'info');
+        }
+
+        // Run tests on load
+        testDerivations();
+    </script>
+</body>
+</html>

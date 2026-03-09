@@ -66,7 +66,8 @@ export const equationsController = {
    * Get equation by ID
    */
   getById: asyncHandler(async (req: Request, res: Response) => {
-    const id = parseInt(req.params.id, 10);
+    const idParam = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
+    const id = parseInt(idParam, 10);
     const render = req.query.render === 'true';
 
     if (isNaN(id)) {

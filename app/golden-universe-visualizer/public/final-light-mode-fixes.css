@@ -1,0 +1,432 @@
+/* ============================================= */
+/* FINAL LIGHT MODE FIXES - ABSOLUTE AUTHORITY  */
+/* This file is loaded via <link> in index.html */
+/* It has the absolute final say on all styles  */
+/* ============================================= */
+
+/* CRITICAL: Force light mode backgrounds to be transparent or light */
+.app.light,
+body.light,
+html body .app.light {
+  --bg-primary: #fafafa !important;
+  --bg-secondary: #ffffff !important;
+  --bg-tertiary: #f5f5f5 !important;
+  --text-primary: #1a1a1a !important;
+  --text-secondary: #4a4a4a !important;
+}
+
+/* THEORY EXPLORER - Remove ALL black backgrounds */
+.app.light .theory-explorer,
+body.light .theory-explorer,
+html body .app.light .theory-explorer {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+}
+
+/* Remove any pseudo-elements that might add backgrounds */
+.app.light .theory-explorer::before,
+.app.light .theory-explorer::after,
+body.light .theory-explorer::before,
+body.light .theory-explorer::after {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* Fix all text within theory explorer */
+.app.light .theory-explorer *:not(code):not(pre),
+body.light .theory-explorer *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* Law cards in theory explorer */
+.app.light .theory-explorer .laws-browser .law-card,
+body.light .theory-explorer .laws-browser .law-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1a1a1a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* RESULTS DASHBOARD - Remove ALL black backgrounds */
+.app.light .results-dashboard,
+body.light .results-dashboard,
+html body .app.light .results-dashboard {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+}
+
+/* Results Dashboard with any attribute */
+.app.light .results-dashboard[style],
+body.light .results-dashboard[style] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Fix all text within results dashboard */
+.app.light .results-dashboard *:not(code):not(pre),
+body.light .results-dashboard *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* Dashboard sections */
+.app.light .results-dashboard .dashboard-section,
+body.light .results-dashboard .dashboard-section {
+  background: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* ACHIEVEMENT CARDS - Fix text visibility */
+.app.light .achievement-card,
+.app.light .achievement-cards .card,
+.app.light [class*="achievement"],
+body.light .achievement-card,
+body.light .achievement-cards .card,
+body.light [class*="achievement"] {
+  background: white !important;
+  background-color: white !important;
+  color: #1a1a1a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Achievement card content */
+.app.light .achievement-card *:not(code):not(pre),
+.app.light .achievement-cards .card *:not(code):not(pre),
+.app.light [class*="achievement"] *:not(code):not(pre),
+body.light .achievement-card *:not(code):not(pre),
+body.light .achievement-cards .card *:not(code):not(pre),
+body.light [class*="achievement"] *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* Achievement card titles and descriptions */
+.app.light .achievement-card h3,
+.app.light .achievement-card h4,
+.app.light .achievement-card .title,
+.app.light .achievement-card .description,
+.app.light .achievement-card p,
+body.light .achievement-card h3,
+body.light .achievement-card h4,
+body.light .achievement-card .title,
+body.light .achievement-card .description,
+body.light .achievement-card p {
+  color: #1a1a1a !important;
+}
+
+/* CODATA CARDS - Fix text visibility */
+.app.light .codata-card,
+.app.light .codata-comparison .card,
+.app.light .codata-table,
+.app.light [class*="codata"],
+body.light .codata-card,
+body.light .codata-comparison .card,
+body.light .codata-table,
+body.light [class*="codata"] {
+  background: white !important;
+  background-color: white !important;
+  color: #1a1a1a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* CODATA card content */
+.app.light .codata-card *:not(code):not(pre),
+.app.light .codata-comparison *:not(code):not(pre),
+.app.light .codata-table *:not(code):not(pre),
+.app.light [class*="codata"] *:not(code):not(pre),
+body.light .codata-card *:not(code):not(pre),
+body.light .codata-comparison *:not(code):not(pre),
+body.light .codata-table *:not(code):not(pre),
+body.light [class*="codata"] *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* CODATA specific elements */
+.app.light .codata-card h3,
+.app.light .codata-card h4,
+.app.light .codata-card .value,
+.app.light .codata-card .label,
+.app.light .codata-card p,
+.app.light .codata-table td,
+.app.light .codata-table th,
+body.light .codata-card h3,
+body.light .codata-card h4,
+body.light .codata-card .value,
+body.light .codata-card .label,
+body.light .codata-card p,
+body.light .codata-table td,
+body.light .codata-table th {
+  color: #1a1a1a !important;
+}
+
+/* COMPARISON VIEWS */
+.app.light .results-comparison,
+.app.light .comparison-view,
+.app.light .comparison-card,
+.app.light [class*="comparison"],
+body.light .results-comparison,
+body.light .comparison-view,
+body.light .comparison-card,
+body.light [class*="comparison"] {
+  background: transparent !important;
+  color: #1a1a1a !important;
+}
+
+.app.light .results-comparison *:not(code):not(pre),
+.app.light .comparison-view *:not(code):not(pre),
+.app.light [class*="comparison"] *:not(code):not(pre),
+body.light .results-comparison *:not(code):not(pre),
+body.light .comparison-view *:not(code):not(pre),
+body.light [class*="comparison"] *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* PARTICLE CARDS */
+.app.light .particle-card,
+.app.light .mass-card,
+.app.light [class*="particle"],
+body.light .particle-card,
+body.light .mass-card,
+body.light [class*="particle"] {
+  background: white !important;
+  color: #1a1a1a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.app.light .particle-card *:not(code):not(pre),
+.app.light .mass-card *:not(code):not(pre),
+body.light .particle-card *:not(code):not(pre),
+body.light .mass-card *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* CALCULATIONS PAGE */
+.app.light .calculations-page,
+body.light .calculations-page {
+  background: transparent !important;
+  color: #1a1a1a !important;
+}
+
+.app.light .calculations-page *:not(code):not(pre),
+body.light .calculations-page *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+.app.light .calculations-page a {
+  color: #1a1a1a !important;
+  text-decoration: underline;
+}
+
+.app.light .calculations-page a:hover {
+  color: #d97706 !important;
+}
+
+/* TABLES - ensure visibility */
+.app.light table,
+.app.light table td,
+.app.light table th,
+body.light table,
+body.light table td,
+body.light table th {
+  color: #1a1a1a !important;
+  border-color: #e5e5e5 !important;
+}
+
+.app.light .precision-table,
+body.light .precision-table {
+  background: white !important;
+}
+
+.app.light .precision-table *:not(code):not(pre),
+body.light .precision-table *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* NUCLEAR OVERRIDES - All results elements */
+.app.light [class*="results"],
+body.light [class*="results"] {
+  background: transparent !important;
+}
+
+.app.light [class*="results"]:not(code):not(pre),
+body.light [class*="results"]:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* NUCLEAR OVERRIDES - All theory elements */
+.app.light [class*="theory"],
+body.light [class*="theory"] {
+  background: transparent !important;
+}
+
+.app.light [class*="theory"]:not(code):not(pre),
+body.light [class*="theory"]:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* INLINE STYLE OVERRIDES - Remove dark backgrounds */
+.app.light [style*="background: linear-gradient"],
+.app.light [style*="background-image: linear-gradient"],
+body.light [style*="background: linear-gradient"],
+body.light [style*="background-image: linear-gradient"] {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.app.light [style*="background: rgb(0"],
+.app.light [style*="background-color: rgb(0"],
+.app.light [style*="background: #000"],
+.app.light [style*="background-color: #000"],
+body.light [style*="background: rgb(0"],
+body.light [style*="background-color: rgb(0"],
+body.light [style*="background: #000"],
+body.light [style*="background-color: #000"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* INLINE STYLE OVERRIDES - Fix white text */
+.app.light [style*="color: rgba(255, 255, 255"]:not(code):not(pre),
+.app.light [style*="color: white"]:not(code):not(pre),
+.app.light [style*="color: #fff"]:not(code):not(pre),
+.app.light [style*="color: #FFF"]:not(code):not(pre),
+body.light [style*="color: rgba(255, 255, 255"]:not(code):not(pre),
+body.light [style*="color: white"]:not(code):not(pre),
+body.light [style*="color: #fff"]:not(code):not(pre),
+body.light [style*="color: #FFF"]:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* ULTIMATE NUCLEAR OPTIONS - Maximum specificity */
+html body .app.light .theory-explorer,
+html body .app.light .theory-explorer[style],
+html body .app.light div.theory-explorer,
+html body .app.light section.theory-explorer,
+html body.light .theory-explorer,
+html body.light .theory-explorer[style] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+html body .app.light .results-dashboard,
+html body .app.light .results-dashboard[style],
+html body .app.light div.results-dashboard,
+html body .app.light section.results-dashboard,
+html body.light .results-dashboard,
+html body.light .results-dashboard[style] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* FORCE ALL TEXT TO BE DARK IN LIGHT MODE */
+html body .app.light .theory-explorer *:not(code):not(pre),
+html body .app.light .results-dashboard *:not(code):not(pre),
+html body .app.light .codata-card *:not(code):not(pre),
+html body .app.light [class*="codata"] *:not(code):not(pre),
+html body .app.light [class*="comparison"] *:not(code):not(pre),
+html body .app.light .achievement-card *:not(code):not(pre),
+html body .app.light .calculations-page *:not(code):not(pre),
+html body.light .theory-explorer *:not(code):not(pre),
+html body.light .results-dashboard *:not(code):not(pre),
+html body.light .codata-card *:not(code):not(pre),
+html body.light [class*="codata"] *:not(code):not(pre),
+html body.light [class*="comparison"] *:not(code):not(pre),
+html body.light .achievement-card *:not(code):not(pre),
+html body.light .calculations-page *:not(code):not(pre) {
+  color: #1a1a1a !important;
+}
+
+/* Special handling for specific text elements */
+html body .app.light h1,
+html body .app.light h2,
+html body .app.light h3,
+html body .app.light h4,
+html body .app.light h5,
+html body .app.light h6,
+html body .app.light p,
+html body .app.light span,
+html body .app.light div,
+html body .app.light li,
+html body .app.light td,
+html body .app.light th,
+html body .app.light label,
+html body.light h1,
+html body.light h2,
+html body.light h3,
+html body.light h4,
+html body.light h5,
+html body.light h6,
+html body.light p,
+html body.light span,
+html body.light div,
+html body.light li,
+html body.light td,
+html body.light th,
+html body.light label {
+  color: #1a1a1a !important;
+}
+
+/* Code blocks exception - keep dark background */
+.app.light code,
+.app.light pre,
+body.light code,
+body.light pre {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+/* Buttons in light mode should be visible */
+.app.light button,
+.app.light .btn,
+body.light button,
+body.light .btn {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.app.light button:hover,
+.app.light .btn:hover,
+body.light button:hover,
+body.light .btn:hover {
+  background: #f5f5f5 !important;
+  border-color: #d4d4d4 !important;
+}
+
+/* Fix any gradients that create dark backgrounds */
+.app.light [class*="gradient"],
+body.light [class*="gradient"] {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Ensure page background is light */
+body.light,
+html body.light {
+  background: #fafafa !important;
+  background-color: #fafafa !important;
+}
+
+.app.light .main-content,
+.app.light .page-content,
+body.light .main-content,
+body.light .page-content {
+  background: transparent !important;
+  color: #1a1a1a !important;
+}
+
+/* DEBUG: Add a red border to elements that still have dark backgrounds */
+/* Uncomment this section to debug remaining issues */
+/*
+.app.light [style*="background: rgb(0"],
+.app.light [style*="background: #000"],
+.app.light [style*="background-color: rgb(0"],
+.app.light [style*="background-color: #000"] {
+  border: 3px solid red !important;
+}
+*/

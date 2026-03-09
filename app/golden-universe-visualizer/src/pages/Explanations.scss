@@ -5,11 +5,12 @@
 
 @import '../styles/refined-design-system.scss';
 @import '../styles/refined-components.scss';
+@import './Explanations.light.scss';
 
 .explanations-page {
   min-height: 100vh;
   padding: $space-8;
-  margin-left: 200px;  // Full sidebar width to prevent overlap
+  // Margin handled by MainLayout - DO NOT set margin-left here
   background: var(--bg-base);
   color: var(--text-primary);
   font-family: $font-sans;
@@ -1113,7 +1114,7 @@
 @media (max-width: $breakpoint-lg) {
   .explanations-page {
     padding: $space-6;
-    margin-left: 60px; // Smaller offset for tablets
+    // Margin handled by MainLayout - DO NOT set margin-left here
 
     .explanations-content {
       .documents-section .documents-container {
@@ -1140,7 +1141,7 @@
 @media (max-width: $breakpoint-md) {
   .explanations-page {
     padding: $space-4;
-    margin-left: 0; // Remove margin on mobile when sidebar is hidden
+    // Margin handled by MainLayout - DO NOT set margin-left here
 
     .explanations-home {
       .explanations-header h1 {

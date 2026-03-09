@@ -32,7 +32,8 @@ export const calculationsController = {
    * Get calculation status
    */
   getStatus: asyncHandler(async (req: Request, res: Response) => {
-    const jobId = parseInt(req.params.jobId, 10);
+    const jobIdParam = Array.isArray(req.params.jobId) ? req.params.jobId[0] : req.params.jobId;
+    const jobId = parseInt(jobIdParam, 10);
 
     if (isNaN(jobId)) {
       throw new AppError('Invalid job ID', 400);
@@ -91,7 +92,8 @@ export const calculationsController = {
    * Get calculation result
    */
   getResult: asyncHandler(async (req: Request, res: Response) => {
-    const jobId = parseInt(req.params.jobId, 10);
+    const jobIdParam = Array.isArray(req.params.jobId) ? req.params.jobId[0] : req.params.jobId;
+    const jobId = parseInt(jobIdParam, 10);
 
     if (isNaN(jobId)) {
       throw new AppError('Invalid job ID', 400);

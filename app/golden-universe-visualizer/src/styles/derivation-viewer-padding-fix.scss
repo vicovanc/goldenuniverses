@@ -1,0 +1,165 @@
+// Padding fixes for DerivationViewer text elements
+// Adds proper padding to file names, output sections, and error messages
+
+.derivation-viewer-new {
+  // File name in the header - add top and left padding
+  .viewer-header {
+    .file-name,
+    .current-file-name {
+      padding-top: 16px !important;
+      padding-left: 20px !important;
+      margin-bottom: 12px !important;
+      display: inline-block;
+    }
+  }
+
+  // File list buttons - add proper padding
+  .file-sidebar {
+    .file-item,
+    .file-button {
+      .file-name {
+        padding-left: 16px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+      }
+    }
+  }
+
+  // Python code sections
+  .python-executor {
+    padding: 10px !important;
+
+    // Code editor/display area
+    .code-section,
+    .code-editor,
+    .python-code {
+      padding: 20px !important;
+
+      // Code content
+      pre {
+        padding-left: 16px !important;
+      }
+    }
+
+    // Output section
+    .output-section,
+    .execution-output {
+      padding: 20px !important;
+
+      h3, h4 {
+        padding-left: 0 !important;
+        margin-bottom: 16px !important;
+      }
+
+      .output-content {
+        padding: 16px 20px !important;
+      }
+    }
+
+    // Error messages
+    .error-message,
+    .error-output,
+    .error-box {
+      padding: 16px 20px !important;
+
+      .error-title {
+        margin-bottom: 12px !important;
+      }
+
+      .error-content,
+      .error-text {
+        padding-left: 8px !important;
+      }
+    }
+  }
+
+  // Tab content areas
+  .tab-content,
+  .file-display {
+    // Selected file name display
+    > .file-name:first-child,
+    > h3:first-child {
+      padding: 20px 20px 16px 20px !important;
+      margin-top: 0 !important;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--golden, #fbbf24);
+    }
+
+    // Python and output labels
+    .section-label,
+    .section-title {
+      padding-left: 20px !important;
+      padding-top: 16px !important;
+      padding-bottom: 8px !important;
+      font-weight: 500;
+    }
+  }
+}
+
+// Light mode specific adjustments
+.app.light,
+.app[data-theme='light'],
+[data-theme="light"],
+.light-mode,
+body[data-theme="light"] {
+  .derivation-viewer-new {
+    .file-name,
+    .current-file-name,
+    .section-label,
+    .section-title {
+      color: #92400e !important;
+    }
+
+    .output-section,
+    .execution-output {
+      background: #fafafa !important;
+
+      .output-content {
+        background: #ffffff !important;
+      }
+    }
+
+    .error-message,
+    .error-output,
+    .error-box {
+      background: #fef2f2 !important;
+
+      .error-content,
+      .error-text {
+        color: #991b1b !important;
+      }
+    }
+  }
+}
+
+// Ensure proper spacing in the viewer layout
+.derivation-viewer-new {
+  .viewer-content {
+    // Ensure content doesn't stick to edges
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // File tabs should have proper spacing
+  .file-tabs,
+  .derivation-tabs {
+    padding: 12px 16px !important;
+
+    button,
+    .tab {
+      margin-right: 8px !important;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}

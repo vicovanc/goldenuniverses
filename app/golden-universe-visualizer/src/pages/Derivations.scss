@@ -3,13 +3,13 @@
 .derivations-page {
   min-height: 100vh;
   padding: 20px;
-  margin-left: 200px;  // Account for sidebar width
+  // Margin handled by MainLayout - DO NOT set margin-left here
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 10px;
-    margin-left: 60px;  // Smaller margin on mobile
+    // Margin handled by MainLayout - DO NOT set margin-left here
   }
 }

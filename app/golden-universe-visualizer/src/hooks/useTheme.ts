@@ -5,10 +5,10 @@ type ResolvedTheme = 'light' | 'dark';
 
 export function useTheme() {
   const { preferences, updatePreferences } = useSettings();
-  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('dark');
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>('light');  // Changed default to 'light'
 
   const getSystemTheme = useCallback((): ResolvedTheme => {
-    if (typeof window === 'undefined') return 'dark';
+    if (typeof window === 'undefined') return 'light';  // Changed default to 'light'
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }, []);
 

@@ -1,0 +1,414 @@
+// =============================================
+// THEORY PAGE LIGHT MODE COMPLETE FIX
+// Comprehensive overrides for all theory page components
+// =============================================
+
+// Light mode overrides for theory page
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+body[data-theme='light'] {
+
+  // Theory page main container
+  .theory-page,
+  .theory-explorer {
+    background: #fafafa !important;
+    background-color: #fafafa !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: inherit;
+    }
+  }
+
+  // Explorer content wrapper
+  .explorer-content {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    .explorer-main {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 1px solid #e5e5e5 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+      color: #1a1a1a !important;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a !important;
+      }
+
+      p {
+        color: #525252 !important;
+      }
+    }
+  }
+
+  // Theory navigation tabs
+  .theory-nav,
+  .theory-tabs,
+  .explorer-tabs {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+
+    button,
+    .tab-button,
+    .nav-tab {
+      background: transparent !important;
+      color: #525252 !important;
+      border: none !important;
+
+      &:hover {
+        background: #f5f5f5 !important;
+        color: #1a1a1a !important;
+      }
+
+      &.active,
+      &[aria-selected="true"] {
+        background: #d97706 !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
+      }
+    }
+  }
+
+  // Law cards and grids
+  .laws-grid,
+  .law-grid {
+    background: transparent !important;
+
+    .law-card {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+      color: #1a1a1a !important;
+
+      &:hover {
+        border-color: #d97706 !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-2px) !important;
+      }
+
+      .law-number {
+        background: #fef3c7 !important;
+        color: #92400e !important;
+        border: 1px solid #fbbf24 !important;
+      }
+
+      .law-title {
+        color: #1a1a1a !important;
+        font-weight: 600 !important;
+      }
+
+      .law-description {
+        color: #525252 !important;
+      }
+
+      .law-category {
+        background: #f3f4f6 !important;
+        color: #374151 !important;
+        border: 1px solid #e5e7eb !important;
+      }
+    }
+  }
+
+  // Law detail view
+  .law-detail {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    padding: 2rem !important;
+    color: #1a1a1a !important;
+
+    .law-header {
+      border-bottom: 2px solid #e5e5e5 !important;
+      padding-bottom: 1.5rem !important;
+      margin-bottom: 2rem !important;
+
+      h1, h2 {
+        color: #1a1a1a !important;
+      }
+
+      .law-subtitle {
+        color: #525252 !important;
+      }
+    }
+
+    .law-content {
+      color: #1a1a1a !important;
+
+      p {
+        color: #525252 !important;
+        line-height: 1.6 !important;
+      }
+
+      .equation-display {
+        background: #fafafa !important;
+        border: 1px solid #e5e5e5 !important;
+        padding: 1.5rem !important;
+        border-radius: 8px !important;
+        margin: 1.5rem 0 !important;
+      }
+    }
+
+    .law-metadata {
+      background: #f9fafb !important;
+      border: 1px solid #e5e5e5 !important;
+      padding: 1rem !important;
+      border-radius: 6px !important;
+
+      .metadata-item {
+        color: #525252 !important;
+
+        .metadata-label {
+          color: #737373 !important;
+          font-weight: 500 !important;
+        }
+
+        .metadata-value {
+          color: #1a1a1a !important;
+        }
+      }
+    }
+  }
+
+  // Lagrangian Explorer
+  .lagrangian-explorer {
+    background: #ffffff !important;
+    padding: 2rem !important;
+    border: 1px solid #e5e5e5 !important;
+
+    .lagrangian-header {
+      color: #1a1a1a !important;
+      border-bottom: 2px solid #e5e5e5 !important;
+      padding-bottom: 1rem !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .lagrangian-content {
+      background: transparent !important;
+
+      .term-card {
+        background: #fafafa !important;
+        border: 1px solid #e5e5e5 !important;
+        padding: 1.5rem !important;
+        margin-bottom: 1rem !important;
+
+        &:hover {
+          background: #f5f5f5 !important;
+          border-color: #d97706 !important;
+        }
+
+        .term-title {
+          color: #1a1a1a !important;
+          font-weight: 600 !important;
+        }
+
+        .term-description {
+          color: #525252 !important;
+        }
+
+        .term-equation {
+          background: #ffffff !important;
+          border: 1px solid #e5e5e5 !important;
+          padding: 1rem !important;
+          margin-top: 1rem !important;
+          border-radius: 6px !important;
+        }
+      }
+    }
+  }
+
+  // Search and filters
+  .theory-search,
+  .law-search {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    padding: 1rem !important;
+    margin-bottom: 1.5rem !important;
+
+    input {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+      border: 1px solid #d4d4d4 !important;
+
+      &::placeholder {
+        color: #a3a3a3 !important;
+      }
+
+      &:focus {
+        border-color: #d97706 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+      }
+    }
+
+    .search-icon {
+      color: #737373 !important;
+    }
+  }
+
+  // Category filters
+  .category-filters,
+  .theory-filters {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    padding: 1rem !important;
+    margin-bottom: 1.5rem !important;
+
+    .filter-button,
+    .category-button {
+      background: #f3f4f6 !important;
+      color: #374151 !important;
+      border: 1px solid #e5e7eb !important;
+
+      &:hover {
+        background: #e5e7eb !important;
+        border-color: #9ca3af !important;
+      }
+
+      &.active {
+        background: #d97706 !important;
+        color: #ffffff !important;
+        border-color: #d97706 !important;
+      }
+    }
+  }
+
+  // Equations and formulas
+  .equation-display,
+  .formula-display,
+  .katex-display {
+    background: #fafafa !important;
+    color: #1a1a1a !important;
+    border: 1px solid #e5e5e5 !important;
+    padding: 1.5rem !important;
+    border-radius: 8px !important;
+
+    .katex {
+      color: #1a1a1a !important;
+    }
+
+    .katex-html {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Back button
+  .back-button,
+  button[class*="back"] {
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+    border: 1px solid #e5e7eb !important;
+
+    &:hover {
+      background: #e5e7eb !important;
+      border-color: #9ca3af !important;
+    }
+
+    svg, .icon {
+      color: #6b7280 !important;
+    }
+  }
+
+  // Override glass effects
+  .theory-page,
+  .theory-explorer {
+    [class*="glass"] {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Force text colors
+  .theory-page,
+  .theory-explorer {
+    h1, h2, h3, h4, h5, h6 {
+      color: #1a1a1a !important;
+    }
+
+    p, span, div {
+      color: inherit !important;
+    }
+
+    // Golden text for special elements
+    .golden-text,
+    .highlight,
+    .important {
+      color: #d97706 !important;
+    }
+  }
+
+  // Remove any dark backgrounds
+  .theory-page *,
+  .theory-explorer * {
+    &[style*="background: rgb(0"],
+    &[style*="background-color: rgb(0"],
+    &[style*="background: #000"],
+    &[style*="background-color: #000"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+
+    &[style*="color: rgb(255"],
+    &[style*="color: white"],
+    &[style*="color: #fff"] {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Loading states
+  .theory-loading,
+  .law-loading {
+    background: #ffffff !important;
+    color: #525252 !important;
+
+    .spinner {
+      border-color: #e5e5e5 !important;
+      border-top-color: #d97706 !important;
+    }
+  }
+
+  // Empty states
+  .empty-state,
+  .no-results {
+    background: #fafafa !important;
+    border: 1px solid #e5e5e5 !important;
+    color: #737373 !important;
+    padding: 3rem !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+
+    .empty-icon {
+      color: #d4d4d4 !important;
+    }
+
+    .empty-title {
+      color: #525252 !important;
+    }
+
+    .empty-description {
+      color: #737373 !important;
+    }
+  }
+
+  // Scrollbars
+  .theory-page,
+  .theory-explorer {
+    &::-webkit-scrollbar {
+      background: #f5f5f5 !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d4d4d4 !important;
+
+      &:hover {
+        background: #a3a3a3 !important;
+      }
+    }
+  }
+}

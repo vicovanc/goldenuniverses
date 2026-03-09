@@ -1,0 +1,77 @@
+// Fix for Derivation Cards Being Cut Off
+// Ensures all cards, especially selected ones with borders, are fully visible
+
+.derivations-browser {
+  // Ensure the main container allows overflow
+  overflow: visible !important;
+
+  .browser-content {
+    overflow: visible !important;
+  }
+
+  .derivations-list {
+    overflow: visible !important;
+
+    .derivation-cards {
+      overflow-x: visible !important;
+      overflow-y: auto !important;
+      padding: 0.5rem !important;  // Add padding to prevent edge clipping
+
+      // Ensure cards aren't cut off
+      .derivation-card {
+        overflow: visible !important;
+        margin: 0.25rem !important;  // Small margin to prevent edge clipping
+
+        // Ensure selected cards with extra borders/shadows aren't cut
+        &.selected {
+          overflow: visible !important;
+          margin: 0.5rem !important;  // Extra margin for selected state
+          position: relative !important;
+          z-index: 10 !important;  // Ensure selected card is above others
+        }
+
+        // Ensure hover effects aren't cut
+        &:hover {
+          overflow: visible !important;
+          position: relative !important;
+          z-index: 5 !important;
+        }
+
+        // All child elements should be visible
+        * {
+          overflow: visible !important;
+        }
+      }
+    }
+  }
+
+  // Derivation details panel should also allow overflow
+  .derivation-details {
+    overflow: visible !important;
+
+    .details-content {
+      overflow-x: visible !important;
+      overflow-y: auto !important;
+    }
+  }
+}
+
+// Also ensure in light mode
+.light-theme,
+.app.light {
+  .derivations-browser {
+    .derivations-list {
+      .derivation-cards {
+        overflow-x: visible !important;
+
+        .derivation-card {
+          overflow: visible !important;
+
+          &.selected {
+            overflow: visible !important;
+          }
+        }
+      }
+    }
+  }
+}

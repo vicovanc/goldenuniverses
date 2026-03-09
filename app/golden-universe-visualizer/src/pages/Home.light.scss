@@ -1,0 +1,165 @@
+// Home Page Light Mode Overrides
+// Ensures all text and elements are visible in light mode
+
+.light-theme,
+.app.light,
+.app[data-theme='light'],
+[data-theme="light"],
+.light-mode {
+  .home-page {
+    background: #ffffff !important;
+
+    // Hero section
+    .hero {
+      background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%) !important;
+
+      .cta-buttons {
+        .cta-button {
+          // Force black text on secondary buttons
+          &.secondary {
+            color: #000000 !important;
+            border-color: var(--golden) !important;
+
+            &:link,
+            &:visited,
+            &:focus {
+              color: #000000 !important;
+            }
+
+            &:hover {
+              background: var(--golden) !important;
+              color: #ffffff !important;
+            }
+          }
+
+          // Primary button should have white text
+          &.primary {
+            background: var(--golden) !important;
+            color: #ffffff !important;
+
+            &:hover {
+              background: #d97706 !important;
+              color: #ffffff !important;
+            }
+          }
+        }
+
+        // Extra specific targeting for the Theory Laws button
+        a[href="/theory"].cta-button {
+          color: #000000 !important;
+        }
+      }
+    }
+
+    // Open source section - remove dark gradient
+    .open-source-section {
+      background: linear-gradient(135deg, #f9fafb, #f3f4f6) !important;
+      border-top-color: #e5e7eb !important;
+      border-bottom-color: #e5e7eb !important;
+
+      .section-title {
+        color: #d97706 !important;
+      }
+
+      .open-source-card {
+        background: #ffffff !important;
+        border-color: #e5e7eb !important;
+
+        &:hover {
+          border-color: #d97706 !important;
+          box-shadow: 0 10px 30px rgba(217, 119, 6, 0.15) !important;
+        }
+
+        h3 {
+          color: #d97706 !important;
+        }
+
+        p {
+          color: #6b7280 !important;
+        }
+
+        .contribution-list li {
+          color: #6b7280 !important;
+        }
+      }
+
+      // GitHub and skill buttons keep their colors
+      .github-button {
+        background: #24292e !important;
+        color: white !important;
+      }
+
+      .skill-button {
+        &.claude {
+          background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+          color: white !important;
+        }
+
+        &.cursor {
+          background: linear-gradient(135deg, #10b981, #22c55e) !important;
+          color: white !important;
+        }
+      }
+    }
+
+    // All sections with dark backgrounds
+    section {
+      background: #ffffff !important;
+      color: #374151 !important;
+    }
+
+    // All text elements
+    h1, h2, h3, h4, h5, h6 {
+      color: #111827 !important;
+    }
+
+    p {
+      color: #6b7280 !important;
+    }
+
+    // Golden text adjustments for light mode
+    .golden-text {
+      background: linear-gradient(135deg, #d97706, #b45309) !important;
+      background-clip: text !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    // Consciousness section
+    .consciousness-section {
+      background: #f9fafb !important;
+      border-color: #e5e7eb !important;
+
+      h3 {
+        color: #d97706 !important;
+      }
+
+      .consciousness-component {
+        background: #ffffff !important;
+        border-color: #e5e7eb !important;
+
+        &:hover {
+          border-color: #9333ea !important;
+        }
+
+        h5 {
+          color: #9333ea !important;
+        }
+
+        p {
+          color: #6b7280 !important;
+
+          &:first-of-type {
+            color: #d97706 !important;
+          }
+        }
+      }
+
+      .consciousness-insight {
+        background: rgba(147, 51, 234, 0.05) !important;
+        border-left-color: #9333ea !important;
+        color: #374151 !important;
+      }
+    }
+  }
+}

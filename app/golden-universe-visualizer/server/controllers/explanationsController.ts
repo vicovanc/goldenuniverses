@@ -73,7 +73,8 @@ export const explanationsController = {
    * Get content for a specific explanation topic
    */
   getTopic: asyncHandler(async (req: Request, res: Response) => {
-    const { topic } = req.params;
+    const topicParam = req.params.topic;
+    const topic = Array.isArray(topicParam) ? topicParam[0] : topicParam;
 
     try {
       // Find the markdown file for this topic

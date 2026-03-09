@@ -2,6 +2,15 @@
 @use './reset.scss';
 @use './responsive.scss';
 @use './mobile.scss';
+@use './mobile-fixes.scss';
+@use './theme-fixes.scss';
+@use './sidebar-responsive.scss';
+@use './light-mode-fixes.scss';
+@use './complete-light-mode-fix.scss';
+@use './ultimate-light-mode-override.scss';
+@use './cta-button-fix.scss';
+@use './dark-theme-overrides.scss';
+@use './derivation-card-fix.scss';
 
 * {
   box-sizing: border-box;
@@ -17,11 +26,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  background: #000000; // Pure black background
-  color: #f5f5f5;
+  background: #ffffff; // Changed default to white background for light mode
+  color: #1a1a1a; // Changed default to dark text for light mode
 
-  // Subtle dot pattern overlay
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  // Subtle dot pattern overlay (dark dots for light mode by default)
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
   background-size: 20px 20px;
   background-attachment: fixed;
 }

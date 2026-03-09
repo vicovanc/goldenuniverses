@@ -9,7 +9,7 @@
 
 .visualization-gallery {
   min-height: 100vh;
-  margin-left: 200px;  // Account for sidebar width
+  // Margin handled by MainLayout - DO NOT set margin-left here
   background: var(--bg-base);
   color: var(--text-primary);
   font-family: $font-sans;
@@ -296,7 +296,7 @@
 
   // Responsive design
   @media (max-width: $breakpoint-lg) {
-    margin-left: 60px;  // Smaller margin on mobile
+    // Margin handled by MainLayout - DO NOT set margin-left here
 
     .gallery-container {
       flex-direction: column;

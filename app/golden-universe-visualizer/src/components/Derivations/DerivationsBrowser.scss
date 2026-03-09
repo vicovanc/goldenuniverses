@@ -160,6 +160,7 @@
     display: inline;
     flex-direction: column;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow: visible;  // Allow content to be visible
 
     .list-header {
       margin-bottom: $space-3;
@@ -181,8 +182,9 @@
       flex-direction: column;
       gap: $space-3;  // More spacing between cards
       overflow-y: auto;
-      overflow-x: hidden;
+      overflow-x: visible;  // Changed from hidden to visible to prevent card cutoff
       padding-right: $space-3;
+      padding-left: $space-2;  // Add left padding to ensure cards aren't too close to edge
       min-height: 0;  // Important for flex child scrolling
       position: relative;
 
@@ -237,16 +239,17 @@
       min-height: 200px;  // Restored original height
       cursor: pointer;
       transition: all $transition-base;
-      overflow: visible;
+      overflow: visible !important;  // Force visible to prevent clipping
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       flex-shrink: 0;  // Prevent cards from shrinking
+      width: calc(100% - 10px);  // Ensure card doesn't exceed container width with some margin
 
       &:hover {
         background: rgba(255, 255, 255, 0.06);
         border-color: rgba(245, 158, 11, 0.3);
-        transform: translateX(4px);
+        transform: scale(1.01);
         box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
       }
 
@@ -256,7 +259,7 @@
         border-width: 2px;
         box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3),
                     0 0 25px rgba(251, 191, 36, 0.4);
-        transform: translateX(8px) scale(1.02);
+        transform: scale(1.02);
 
         .derivation-number {
           background: rgba(251, 191, 36, 0.5) !important;

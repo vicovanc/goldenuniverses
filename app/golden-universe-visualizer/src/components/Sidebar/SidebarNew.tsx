@@ -1,5 +1,5 @@
 import React, { useMemo, useCallback, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useAppStore } from '@utils/store';
 import { useSidebarStore } from './store';
 import { SIDEBAR_SECTIONS } from './navigationData';
@@ -103,9 +103,9 @@ const SidebarNew: React.FC = () => {
       {/* Header */}
       <div className="sidebar-header">
         {!sidebarCollapsed && (
-          <div className="sidebar-branding">
+          <Link to="/" className="sidebar-branding">
             <h1 className="brand-title">Golden Universe</h1>
-          </div>
+          </Link>
         )}
         <button
           className="toggle-button"

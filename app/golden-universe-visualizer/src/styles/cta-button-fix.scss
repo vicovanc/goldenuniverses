@@ -1,0 +1,106 @@
+// NUCLEAR LEVEL FIX FOR CTA BUTTONS IN LIGHT MODE
+// This is the ultimate override for the "Explore Theory Laws" button
+
+// Light mode selectors
+.light-theme,
+.app.light,
+.app[data-theme='light'],
+[data-theme="light"],
+.light-mode,
+body.light,
+body[data-theme="light"],
+html.light,
+html[data-theme="light"] {
+  // Target the home page
+  .home-page {
+    // Target the hero section
+    .hero {
+      // Target CTA buttons container
+      .cta-buttons {
+        // All CTA buttons
+        .cta-button {
+          // Secondary buttons (like "Explore Theory Laws")
+          &.secondary {
+            color: #000000 !important;
+
+            // Any nested elements
+            * {
+              color: #000000 !important;
+            }
+
+            // All link states
+            &:link,
+            &:visited,
+            &:focus,
+            &:active {
+              color: #000000 !important;
+            }
+
+            // Hover state
+            &:hover {
+              background: var(--golden) !important;
+              color: #ffffff !important;
+
+              * {
+                color: #ffffff !important;
+              }
+            }
+          }
+        }
+
+        // Ultra-specific targeting for Theory Laws button
+        a[href="/theory"] {
+          color: #000000 !important;
+
+          &.secondary {
+            color: #000000 !important;
+          }
+
+          &:not(:hover) {
+            color: #000000 !important;
+          }
+        }
+
+        // Target Link components specifically
+        a.cta-button.secondary {
+          color: #000000 !important;
+        }
+      }
+    }
+  }
+
+  // Also target without .home-page wrapper
+  .hero {
+    .cta-buttons {
+      a[href="/theory"],
+      a.cta-button.secondary {
+        color: #000000 !important;
+      }
+    }
+  }
+
+  // Direct targeting of any CTA button with Theory href
+  a[href="/theory"].cta-button {
+    color: #000000 !important;
+  }
+}
+
+// Also apply without any theme wrapper (for when light is default)
+body {
+  .home-page .hero .cta-buttons a[href="/theory"].cta-button.secondary {
+    color: var(--text-primary, #000000) !important;
+  }
+}
+
+// Make sure the text is always visible by default when no dark theme is applied
+:not(.dark-theme):not(.dark):not([data-theme="dark"]) {
+  .home-page .hero .cta-buttons {
+    .cta-button.secondary {
+      color: #000000 !important;
+    }
+
+    a[href="/theory"] {
+      color: #000000 !important;
+    }
+  }
+}

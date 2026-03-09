@@ -1,0 +1,315 @@
+// =============================================
+// ENHANCED PARTICLE MASS CALCULATOR
+// Complete particle calculations with categories
+// =============================================
+
+@import '../../styles/design-system.scss';
+
+.particle-mass-calculator.enhanced {
+  padding: $space-8;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  // Category Tabs
+  .category-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $space-4;
+    margin-bottom: $space-8;
+
+    .category-tab {
+      @include glass-card;
+      padding: $space-5;
+      cursor: pointer;
+      transition: all $transition-base;
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+
+      .tab-name {
+        font-size: $text-lg;
+        font-weight: $font-bold;
+        color: white;
+      }
+
+      .tab-description {
+        font-size: $text-xs;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg, $shadow-glow-primary;
+        border-color: $brand-primary;
+      }
+
+      &.active {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(251, 191, 36, 0.2) 100%);
+        border-color: $brand-primary;
+        box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
+
+        .tab-name {
+          color: $brand-accent;
+        }
+      }
+
+      // Light mode
+      .app.light &,
+      .light & {
+        background: white !important;
+        border: 1px solid #e5e5e5 !important;
+
+        .tab-name {
+          color: #1a1a1a !important;
+        }
+
+        .tab-description {
+          color: #6b7280 !important;
+        }
+
+        &:hover {
+          border-color: #d97706 !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important;
+          border-color: #d97706 !important;
+
+          .tab-name {
+            color: #d97706 !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Enhanced Particle Grid
+  .particle-selection.enhanced-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: $space-4;
+    margin-bottom: $space-6;
+
+    .particle-btn {
+      @include glass-card;
+      padding: $space-4;
+      min-height: 140px;
+      position: relative;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+
+      .particle-symbol {
+        font-size: $text-3xl;
+        margin-bottom: $space-2;
+      }
+
+      .particle-name {
+        font-size: $text-xs;
+        margin-bottom: $space-2;
+      }
+
+      .particle-epoch {
+        font-size: $text-xs;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: $font-family-mono;
+        margin-bottom: $space-1;
+      }
+
+      .particle-precision {
+        font-size: $text-xs;
+        font-weight: $font-semibold;
+        margin-bottom: $space-2;
+      }
+
+      .status-badge {
+        position: absolute;
+        top: $space-2;
+        right: $space-2;
+        padding: $space-1 $space-2;
+        border-radius: $radius-full;
+        font-size: $text-xs;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+      }
+
+      // Light mode for enhanced buttons
+      .app.light &,
+      .light & {
+        background: #fafafa !important;
+
+        .particle-epoch {
+          color: #9ca3af !important;
+        }
+      }
+    }
+  }
+
+  // Action Buttons
+  .action-buttons {
+    display: flex;
+    gap: $space-4;
+    margin-bottom: $space-6;
+
+    .theory-btn {
+      @include button-secondary;
+      padding: $space-4 $space-6;
+      font-size: $text-base;
+    }
+
+    .calculate-btn {
+      flex: 1;
+    }
+  }
+
+  // Info Panel
+  .info-panel {
+    @include glass-card;
+    padding: $space-6;
+    margin-top: $space-8;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+
+    h3 {
+      color: white;
+      margin-bottom: $space-4;
+      font-size: $text-xl;
+    }
+
+    .precision-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: $space-4;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: $space-3;
+        padding: $space-3 0;
+        color: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .badge {
+          padding: $space-1 $space-3;
+          border-radius: $radius-full;
+          font-size: $text-xs;
+          font-weight: $font-bold;
+          text-transform: uppercase;
+          min-width: 80px;
+          text-align: center;
+
+          &.perfect {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid #10b981;
+          }
+
+          &.good {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            border: 1px solid #3b82f6;
+          }
+
+          &.approximate {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid #f59e0b;
+          }
+
+          &.theoretical {
+            background: rgba(139, 92, 246, 0.2);
+            color: #8b5cf6;
+            border: 1px solid #8b5cf6;
+          }
+        }
+      }
+    }
+
+    .note {
+      padding: $space-4;
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 3px solid $brand-accent;
+      border-radius: $radius-md;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: $text-sm;
+      line-height: 1.6;
+
+      strong {
+        color: $brand-accent;
+      }
+    }
+
+    // Light mode for info panel
+    .app.light &,
+    .light & {
+      background: white !important;
+      border: 1px solid #e5e5e5 !important;
+
+      h3 {
+        color: #1a1a1a !important;
+      }
+
+      .precision-list li {
+        color: #374151 !important;
+        border-bottom-color: #e5e5e5 !important;
+      }
+
+      .note {
+        background: #fff7ed !important;
+        border-left-color: #d97706 !important;
+        color: #374151 !important;
+
+        strong {
+          color: #d97706 !important;
+        }
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 1200px) {
+    .category-tabs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .particle-selection.enhanced-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: $space-4;
+
+    .category-tabs {
+      grid-template-columns: 1fr;
+    }
+
+    .particle-selection.enhanced-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
+      .particle-btn {
+        min-height: 120px;
+        padding: $space-3;
+
+        .particle-symbol {
+          font-size: $text-2xl;
+        }
+      }
+    }
+
+    .action-buttons {
+      flex-direction: column;
+
+      .theory-btn,
+      .calculate-btn {
+        width: 100%;
+      }
+    }
+  }
+}

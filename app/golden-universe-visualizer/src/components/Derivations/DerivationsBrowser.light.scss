@@ -2,10 +2,18 @@
 // Fixes visibility issues when light theme is active
 
 .app.light,
-.app[data-theme='light'] {
+.app[data-theme='light'],
+[data-theme="light"],
+.light-mode,
+body[data-theme="light"] {
   .derivations-browser {
     background: #ffffff;
     color: #1a1a1a;
+
+    // Professional layout adjustments
+    * {
+      box-sizing: border-box !important;
+    }
 
     // Header adjustments
     .browser-header {
@@ -46,12 +54,42 @@
       }
     }
 
+    // Filter buttons ("All Derivations", "Fundamental Laws", etc)
+    .filter-buttons {
+      .filter-btn {
+        background: #ffffff !important;
+        border: 1px solid #d1d5db !important;
+        color: #374151 !important;
+
+        .count {
+          background: #e5e7eb !important;
+          color: #374151 !important;
+        }
+
+        &:hover:not(.active) {
+          background: #f3f4f6 !important;
+          border-color: #d97706 !important;
+        }
+
+        &.active {
+          background: #d97706 !important;
+          border-color: #b45309 !important;
+          color: #ffffff !important;
+
+          .count {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+
     // Category filters
     .category-filters {
       .category-btn {
-        background: #f5f5f5;
-        border: 1px solid #e5e5e5;
-        color: #404040;
+        background: #ffffff !important;
+        border: 1px solid #d1d5db !important;
+        color: #374151 !important;
 
         .count {
           background: #fef3c7;
@@ -81,6 +119,14 @@
     .derivations-list {
       background: #f9f9f9;
       border: 1px solid #e5e5e5;
+
+      // Remove dark gradient overlays in light mode
+      .derivation-cards {
+        &::before,
+        &::after {
+          display: none !important;
+        }
+      }
 
       .list-header {
         h2 {
@@ -245,68 +291,259 @@
 
   // DerivationViewerNew inside the browser
   .derivation-viewer-new {
+    background: #ffffff !important;
+
     .viewer-header {
+      background: #fafafa !important;
+
       h2 {
-        color: #1a1a1a;
+        color: #1a1a1a !important;
       }
 
       .derivation-meta {
-        color: #525252;
+        color: #525252 !important;
 
         .folder-name {
-          background: #f5f5f5;
-          color: #404040;
+          background: #f5f5f5 !important;
+          color: #404040 !important;
+          font-weight: 600;
         }
 
         .file-count {
-          color: #737373;
+          color: #737373 !important;
         }
       }
     }
 
-    .derivation-tabs {
-      .tab {
-        background: #f5f5f5;
-        color: #525252;
-        border: 1px solid #e5e5e5;
+    // Python Files and README tabs - Professional design
+    .derivation-tabs,
+    .file-tabs {
+      display: flex !important;
+      gap: 8px !important;
+      padding: 16px !important;
+      background: #f9fafb !important;
+      border-bottom: 2px solid #e5e7eb !important;
+      align-items: center !important;
 
-        &:hover {
-          background: #ffffff;
-          color: #1a1a1a;
+      .tab,
+      button {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 8px !important;
+        padding: 10px 20px !important;
+        font-weight: 500 !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        position: relative !important;
+        min-height: 40px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        // Force text visibility on all inner elements
+        &, *, span, div {
+          color: #374151 !important;
         }
 
-        &.active {
-          background: #d97706;
-          color: white;
-          border-color: #d97706;
+        &:hover {
+          background: linear-gradient(to bottom, #ffffff, #f9fafb) !important;
+          color: #111827 !important;
+          border-color: #d97706 !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+
+          &, *, span, div {
+            color: #111827 !important;
+          }
+        }
+
+        &.active,
+        &[aria-selected="true"] {
+          background: linear-gradient(135deg, #d97706, #b45309) !important;
+          color: white !important;
+          border-color: #b45309 !important;
+          font-weight: 600 !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 10px 15px -3px rgba(217, 119, 6, 0.2),
+                      0 4px 6px -2px rgba(217, 119, 6, 0.1) !important;
+
+          &, *, span, div {
+            color: white !important;
+          }
+
+          // Active indicator underline
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: #d97706;
+            border-radius: 3px 3px 0 0;
+          }
         }
       }
     }
 
     .viewer-content {
-      .file-sidebar {
+      .file-sidebar,
+      .files-list,
+      .python-files-list {
         background: #f9f9f9;
         border-right: 1px solid #e5e5e5;
+        padding: 20px !important;  // Professional padding
 
-        h4 {
-          color: #1a1a1a;
+        h3, h4 {
+          color: #1a1a1a !important;
+          margin: 0 0 16px 0 !important;
+          font-size: 14px !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.05em !important;
+          font-weight: 600 !important;
+          padding: 0 4px !important;
         }
 
-        .file-item {
-          color: #404040;
+        // File list buttons - World-class styling
+        .file-item,
+        .file-button,
+        button {
+          background: #ffffff !important;
+          color: #374151 !important;
+          border: 1px solid #e5e7eb !important;
+          border-radius: 8px !important;
+          padding: 14px 16px !important;
+          margin-bottom: 8px !important;
+          width: calc(100% - 0px) !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 12px !important;
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+          position: relative !important;
+          overflow: hidden !important;
 
-          &:hover {
-            background: #f5f5f5;
+          // Ensure text is visible and properly aligned
+          &, *, span, div {
+            color: #374151 !important;
+            text-align: left !important;
           }
 
-          &.active {
-            background: #fef3c7;
-            color: #92400e;
+          // Professional hover effect
+          &:hover {
+            background: linear-gradient(to right, #ffffff, #fafafa) !important;
+            border-color: #d97706 !important;
+            transform: translateX(6px) !important;
+            box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.1),
+                        0 2px 4px -1px rgba(217, 119, 6, 0.06) !important;
+
+            &, *, span, div {
+              color: #111827 !important;
+            }
+
+            // Add subtle glow effect
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              width: 3px;
+              background: #d97706;
+            }
+          }
+
+          &.active,
+          &.selected {
+            background: linear-gradient(135deg, #fef3c7, #fed7aa) !important;
+            color: #92400e !important;
+            border-color: #d97706 !important;
+            font-weight: 600 !important;
+            box-shadow: 0 10px 15px -3px rgba(217, 119, 6, 0.1),
+                        0 4px 6px -2px rgba(217, 119, 6, 0.05) !important;
+            transform: scale(1.02) translateX(2px) !important;
+
+            &, *, span, div {
+              color: #92400e !important;
+            }
+
+            // Active indicator
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              width: 4px;
+              background: linear-gradient(180deg, #d97706, #b45309);
+            }
           }
 
           .file-meta {
-            color: #737373;
+            color: #737373 !important;
+            font-size: 0.75rem !important;
+            opacity: 0.8;
           }
+
+          // Remove bottom margin from last item
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+
+      // Error message box - FORCE VISIBILITY
+      .error-message,
+      .error-box,
+      .file-not-available,
+      .error-container,
+      .error-panel,
+      [class*="error"] {
+        background: #fef2f2 !important;
+        color: #991b1b !important;
+        border: 1px solid #fecaca !important;
+        padding: 16px !important;
+        border-radius: 8px !important;
+
+        // Force ALL text to be dark red
+        &, *, h1, h2, h3, h4, h5, h6, p, span, div, strong, em {
+          color: #991b1b !important;
+        }
+
+        p, .error-text, .error-description {
+          color: #7f1d1d !important;
+          line-height: 1.6 !important;
+        }
+
+        // Error details or code
+        pre, code {
+          background: #ffffff !important;
+          color: #991b1b !important;
+          border: 1px solid #fecaca !important;
+          padding: 8px !important;
+          border-radius: 4px !important;
+        }
+
+        // Any nested error elements
+        .error-content {
+          color: #991b1b !important;
+        }
+      }
+
+      // Output section
+      .output-section {
+        background: #f9fafb !important;
+
+        .output-content {
+          background: #ffffff !important;
+          border: 1px solid #e5e7eb !important;
+          color: #374151 !important;
+        }
+
+        .error {
+          background: #fef2f2 !important;
+          color: #991b1b !important;
+          border: 1px solid #fecaca !important;
         }
       }
 
@@ -348,6 +585,132 @@
         background: #fef3c7;
         color: #92400e;
         border: 1px solid #fbbf24;
+      }
+    }
+
+    // Code editor and viewer
+    .code-viewer,
+    .code-editor,
+    .monaco-editor {
+      background: #ffffff !important;
+
+      .line-numbers {
+        color: #737373 !important;
+        background: #f9f9f9 !important;
+      }
+    }
+
+    // Navigation breadcrumbs
+    .breadcrumbs,
+    .navigation-path {
+      color: #525252 !important;
+
+      a, .link {
+        color: #d97706 !important;
+
+        &:hover {
+          color: #92400e !important;
+        }
+      }
+    }
+
+    // Status indicators
+    .status-indicator {
+      &.success {
+        background: #10b981 !important;
+        color: white !important;
+      }
+
+      &.error {
+        background: #ef4444 !important;
+        color: white !important;
+      }
+
+      &.warning {
+        background: #f59e0b !important;
+        color: white !important;
+      }
+    }
+
+    // Tooltips and dropdowns
+    .tooltip,
+    .dropdown-menu {
+      background: #1a1a1a !important;
+      color: #ffffff !important;
+      border: 1px solid #404040 !important;
+    }
+
+    // Loading states
+    .skeleton-loader {
+      background: linear-gradient(90deg, #f5f5f5 25%, #e5e5e5 50%, #f5f5f5 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    // Empty states
+    .empty-state {
+      color: #737373 !important;
+
+      .empty-icon {
+        color: #d4d4d4 !important;
+      }
+
+      .empty-title {
+        color: #525252 !important;
+      }
+
+      .empty-description {
+        color: #737373 !important;
+      }
+    }
+  }
+
+  // Additional overrides for nested components
+  .derivation-viewer,
+  .file-viewer,
+  .code-display {
+    background: #ffffff !important;
+
+    // All buttons should have visible text
+    button,
+    .btn,
+    [role="button"] {
+      &:not(.active):not(.selected):not([aria-selected="true"]) {
+        background: #ffffff !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+
+        &, *, span, div, p {
+          color: #374151 !important;
+        }
+
+        &:hover {
+          background: #f3f4f6 !important;
+          border-color: #d97706 !important;
+
+          &, *, span, div, p {
+            color: #111827 !important;
+          }
+        }
+      }
+    }
+
+    // All text elements should be dark
+    p, span, div, label, td, th, li {
+      color: #374151 !important;
+    }
+
+    // Headers should be darker
+    h1, h2, h3, h4, h5, h6 {
+      color: #111827 !important;
+    }
+
+    // Links should be golden
+    a:not(.btn):not(.button):not([role="button"]) {
+      color: #d97706 !important;
+
+      &:hover {
+        color: #92400e !important;
       }
     }
   }

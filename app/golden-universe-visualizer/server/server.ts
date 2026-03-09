@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import compression from 'compression';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
-import swaggerUi from 'swagger-ui-express';
+// import swaggerUi from 'swagger-ui-express';
 import config from './config/config';
 import { corsMiddleware } from './middleware/cors';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
@@ -12,7 +12,7 @@ import { generalLimiter } from './middleware/rateLimiter';
 import { initDatabase } from './database/schema';
 import websocketService from './services/websocket';
 import apiRoutes from './routes';
-import swaggerDocument from './swagger.json';
+// import swaggerDocument from './swagger.json';
 
 class Server {
   public app: Express;
@@ -67,7 +67,7 @@ class Server {
     this.app.use('/api', generalLimiter);
 
     // Request logging
-    this.app.use((req: Request, res: Response, next: NextFunction) => {
+    this.app.use((req: Request, _res: Response, next: NextFunction) => {
       console.log(`${req.method} ${req.path}`, {
         query: req.query,
         body: req.method !== 'GET' ? req.body : undefined,
@@ -78,13 +78,31 @@ class Server {
 
   private initializeRoutes(): void {
     // API Documentation
-    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    // this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
     // API routes
     this.app.use('/api', apiRoutes);
 
+    // Serve derivations files from the parent directory
+    const path = require('path');
+    const derivationsPath = path.join(__dirname, '../../../derivations');
+    this.app.use('/derivations', express.static(derivationsPath, {
+      dotfiles: 'allow',  // Allow serving utils folder contents
+      etag: true,
+      extensions: ['py', 'md', 'txt', 'json'],
+      index: false,
+      maxAge: '1d',
+      redirect: false,
+      setHeaders: (res: Response, path: string) => {
+        if (path.endsWith('.py')) {
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('Access-Control-Allow-Origin', '*');
+        }
+      }
+    }));
+
     // Root endpoint
-    this.app.get('/', (req: Request, res: Response) => {
+    this.app.get('/', (_req: Request, res: Response) => {
       res.json({
         message: 'Golden Universe API Server',
         version: '1.0.0',

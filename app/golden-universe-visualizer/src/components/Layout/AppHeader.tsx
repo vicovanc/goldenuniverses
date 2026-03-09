@@ -3,19 +3,22 @@ import { ThemeToggle } from '@/components/Theme/ThemeToggle';
 import { SettingsPanel } from '@/components/Settings/SettingsPanel';
 import { KeyboardShortcutsModal } from '@/components/Keyboard/KeyboardShortcutsModal';
 import { useKeyboardShortcutsContext } from '@/contexts/KeyboardShortcutsContext';
+import { useAppStore } from '@/utils/store';
 import './AppHeader.scss';
 
 export function AppHeader() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const { toggleShortcutsModal } = useKeyboardShortcutsContext();
+  const { sidebarCollapsed } = useAppStore();
 
   return (
     <>
-      <header className="app-header" role="banner">
+      <header className={`app-header ${sidebarCollapsed ? 'sidebar-collapsed' : 'sidebar-expanded'}`} role="banner">
         <div className="header-content">
           <div className="header-left">
-            <h1 className="app-title">Golden Universe Theory</h1>
-            <span className="header-subtitle">φ = (1 + √5) / 2</span>
+            {sidebarCollapsed && (
+              <h1 className="app-title">Golden Universe</h1>
+            )}
           </div>
 
           <div className="header-right">

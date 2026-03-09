@@ -21,7 +21,8 @@
   --sidebar-hover: #1a1a1a;        // Subtle hover
   --sidebar-active: #1f1f1f;       // Subtle gray for active
   --sidebar-border: #2a2a2a;       // Subtle borders
-  --sidebar-width: 280px;          // Standard width
+  --sidebar-width-open: 260px;     // Sidebar open width
+  --sidebar-width-collapsed: 70px; // Sidebar collapsed width
 
   // Text Colors
   --color-text-primary: #f5f5f5;   // Main text - bright white
@@ -77,6 +78,47 @@
   --z-modal: 500;
   --z-popover: 600;
   --z-tooltip: 700;
+}
+
+// Light theme overrides
+[data-theme="light"],
+.light-mode {
+  // Primary Colors - Golden Theme for light mode
+  --color-primary: #f59e0b;        // Darker golden for light mode
+  --color-primary-dark: #d97706;   // Even darker golden
+  --color-primary-light: #fbbf24;  // Lighter golden
+  --color-accent: #b45309;         // Deep golden accent
+  --color-golden: #f59e0b;         // Golden for special highlights
+
+  // Background Colors - Light theme
+  --color-bg-primary: #ffffff;     // Main background - white
+  --color-bg-secondary: #fafafa;   // Secondary background
+  --color-bg-tertiary: #f3f4f6;    // Cards/surfaces
+  --color-bg-hover: #e5e7eb;       // Hover states
+  --color-bg-selected: #d1d5db;    // Selected items
+
+  // Sidebar Specific - Light
+  --sidebar-bg: #f9fafb;            // Light gray
+  --sidebar-hover: #e5e7eb;         // Hover state
+  --sidebar-active: #d1d5db;        // Active state
+  --sidebar-border: #d1d5db;        // Border color
+
+  // Text Colors - Light (Dark gray instead of light colors)
+  --color-text-primary: #374151;    // Main text - dark gray (not too dark)
+  --color-text-secondary: #6b7280;  // Secondary text - medium gray
+  --color-text-tertiary: #9ca3af;   // Tertiary text - light gray
+  --color-text-inverse: #ffffff;    // For dark backgrounds (buttons, etc)
+
+  // Border Colors - Light
+  --color-border: #e5e7eb;          // Main borders
+  --color-border-light: #d1d5db;    // Light borders
+  --color-border-focus: #f59e0b;    // Focus borders - golden
+
+  // Shadows & Effects - Light
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(245, 158, 11, 0.2);
 }
 
 // Global resets and base styles

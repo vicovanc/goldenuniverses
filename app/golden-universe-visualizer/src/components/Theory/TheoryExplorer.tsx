@@ -51,7 +51,12 @@ const TheoryExplorer: React.FC = () => {
     } else if (path.includes('/theory/field-equations')) {
       setViewMode('document');
     } else if (path.includes('/theory/symmetry-breaking')) {
-      setViewMode('document');
+      // Show Laws 6-15 which are Symmetry Laws
+      const law6 = getLawById(6);
+      if (law6) {
+        setSelectedLaw(law6);
+        setViewMode('detail');
+      }
     } else if (path === '/theory' || path === '/theory/') {
       setViewMode('browser');
       setSelectedLaw(null);

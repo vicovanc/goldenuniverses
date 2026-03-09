@@ -14,6 +14,19 @@
   position: relative;
   overflow-x: hidden;
 
+  // Light mode override - MUST be inside the class definition
+  .app.light &,
+  .light & {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+    }
+  }
+
   // Animated background particles - subtle and sophisticated
   &::before {
     content: '';
@@ -28,6 +41,13 @@
     pointer-events: none;
     z-index: 0;
     animation: float 20s ease-in-out infinite;
+
+    // Disable in light mode
+    .app.light &,
+    .light & {
+      display: none !important;
+      background: none !important;
+    }
   }
 
   @keyframes float {

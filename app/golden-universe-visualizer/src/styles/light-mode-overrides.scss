@@ -1,0 +1,441 @@
+// =============================================
+// LIGHT MODE OVERRIDES - ABSOLUTE FINAL AUTHORITY
+// This file MUST be imported LAST in App.tsx
+// It overwrites EVERYTHING for light mode
+// =============================================
+
+// Only apply in light mode
+.app.light {
+  // ===============================
+  // THEORY EXPLORER - COMPLETE OVERRIDE
+  // ===============================
+  .theory-explorer {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+
+    // Kill ALL backgrounds
+    &::before,
+    &::after {
+      display: none !important;
+      background: none !important;
+      content: none !important;
+    }
+
+    // Every single child element
+    * {
+      color: #1a1a1a !important;
+
+      &[style*="background"] {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+      }
+
+      &[style*="color"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // All text elements explicitly
+    h1, h2, h3, h4, h5, h6,
+    p, span, div, li, td, th,
+    label, strong, em, b, i,
+    .text, .title, .subtitle, .description {
+      color: #1a1a1a !important;
+    }
+
+    // Laws browser
+    .laws-browser {
+      background: transparent !important;
+
+      .law-card {
+        background: rgba(255, 255, 255, 0.95) !important;
+        color: #1a1a1a !important;
+
+        * {
+          color: #1a1a1a !important;
+        }
+      }
+    }
+  }
+
+  // ===============================
+  // RESULTS DASHBOARD - COMPLETE OVERRIDE
+  // ===============================
+  .results-dashboard {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1a1a1a !important;
+
+    // Override inline styles
+    &[style] {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      color: #1a1a1a !important;
+    }
+
+    // Every single child
+    * {
+      color: #1a1a1a !important;
+
+      &[style*="background"] {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+      }
+
+      &[style*="color"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // CODATA cards
+    .codata-card,
+    [class*="codata"] {
+      background: white !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // All cards
+    [class*="card"] {
+      background: white !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // ===============================
+  // RESULTS COMPARISON - COMPLETE OVERRIDE
+  // ===============================
+  .results-comparison,
+  .comparison-view,
+  [class*="comparison"] {
+    background: transparent !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+
+      &[style*="color"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Comparison cards
+    .particle-card,
+    .mass-card,
+    [class*="card"] {
+      background: white !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  // ===============================
+  // CALCULATIONS PAGE - COMPLETE OVERRIDE
+  // ===============================
+  .calculations-page {
+    background: transparent !important;
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+    }
+
+    // Achievement cards specifically
+    .achievement-card,
+    [class*="achievement"] {
+      background: white !important;
+      color: #1a1a1a !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+
+      h1, h2, h3, h4, h5, h6,
+      p, span, div, li, label {
+        color: #1a1a1a !important;
+      }
+
+      // Status indicators
+      .status, .check, .complete {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Navigation items
+    .calculation-nav,
+    .nav-item,
+    [class*="nav"] {
+      color: #1a1a1a !important;
+
+      * {
+        color: #1a1a1a !important;
+      }
+
+      a, button {
+        color: #1a1a1a !important;
+
+        &:hover {
+          color: #d97706 !important;
+        }
+      }
+    }
+
+    // Links in calculations
+    a {
+      color: #1a1a1a !important;
+
+      &:hover {
+        color: #d97706 !important;
+      }
+    }
+  }
+
+  // All achievement cards anywhere
+  .achievement-card,
+  [class*="achievement-card"],
+  [class*="achievement"] {
+    background: white !important;
+    color: #1a1a1a !important;
+
+    &, * {
+      color: #1a1a1a !important;
+
+      &[style*="color"] {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // Title, description, status
+    .card-title,
+    .card-description,
+    .card-status,
+    .achievement-title,
+    .achievement-description,
+    .achievement-status {
+      color: #1a1a1a !important;
+    }
+
+    // Checkmarks and icons
+    .check,
+    .checkmark,
+    .icon,
+    svg {
+      color: #1a1a1a !important;
+      fill: #1a1a1a !important;
+    }
+
+    // Success/complete states
+    &.complete,
+    &.success,
+    .complete,
+    .success {
+      .check,
+      .checkmark {
+        color: #10b981 !important;
+        fill: #10b981 !important;
+      }
+    }
+  }
+
+  // ===============================
+  // NUCLEAR OPTIONS - CATCH ALL
+  // ===============================
+
+  // Theory page - everything
+  .theory-page {
+    &, * {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+
+    .theory-explorer {
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
+
+  // Results page - everything
+  .results-page {
+    &, * {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+
+    .results-dashboard {
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
+
+  // Any element with "results" in the class
+  [class*="results"] {
+    &:not(code):not(pre) {
+      color: #1a1a1a !important;
+
+      * {
+        &:not(code):not(pre) {
+          color: #1a1a1a !important;
+        }
+      }
+    }
+  }
+
+  // Any element with "theory" in the class
+  [class*="theory"] {
+    &:not(code):not(pre) {
+      color: #1a1a1a !important;
+
+      * {
+        &:not(code):not(pre) {
+          color: #1a1a1a !important;
+        }
+      }
+    }
+  }
+
+  // ===============================
+  // ABSOLUTELY FINAL NUCLEAR OPTION
+  // ===============================
+
+  // Target the specific problematic classes with MAXIMUM force
+  div.theory-explorer,
+  section.theory-explorer,
+  main .theory-explorer,
+  #root .theory-explorer,
+  body .theory-explorer {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    &, *, *::before, *::after {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+
+  div.results-dashboard,
+  section.results-dashboard,
+  main .results-dashboard,
+  #root .results-dashboard,
+  body .results-dashboard {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    &, *, *::before, *::after {
+      &:not(code):not(pre) {
+        color: #1a1a1a !important;
+      }
+    }
+  }
+}
+
+// ===============================
+// GLOBAL LIGHT MODE OVERRIDES
+// Using body selector for even higher specificity
+// ===============================
+body {
+  .app.light {
+    .theory-explorer {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      color: #1a1a1a !important;
+    }
+
+    .results-dashboard {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      color: #1a1a1a !important;
+    }
+  }
+}
+
+// ===============================
+// INLINE STYLE OVERRIDES
+// Target elements with inline styles directly
+// ===============================
+.app.light {
+  [style*="background: linear-gradient"],
+  [style*="background-image: linear-gradient"] {
+    &.theory-explorer,
+    &.results-dashboard {
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
+
+  [style*="color: rgba(255, 255, 255"],
+  [style*="color: white"],
+  [style*="color: #fff"] {
+    &:not(code):not(pre) {
+      color: #1a1a1a !important;
+    }
+  }
+}
+
+// ===============================
+// ULTIMATE FINAL OVERRIDE FOR CALCULATIONS
+// ===============================
+body .app.light {
+  // Target calculations with maximum force
+  [class*="calculation"],
+  [class*="achievement"] {
+    &, *, *::before, *::after {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Navigation in calculations
+  .calculations-page {
+    nav, .nav, [class*="nav"] {
+      &, *, a, button, span, div {
+        color: #1a1a1a !important;
+      }
+    }
+
+    // All links
+    a {
+      color: #1a1a1a !important;
+
+      &:visited {
+        color: #1a1a1a !important;
+      }
+
+      &:hover,
+      &:focus {
+        color: #d97706 !important;
+      }
+    }
+  }
+
+  // Achievement cards with inline styles
+  .achievement-card[style],
+  [class*="achievement"][style] {
+    color: #1a1a1a !important;
+
+    * {
+      color: #1a1a1a !important;
+    }
+  }
+}

@@ -14,7 +14,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  width: 260px;
+  width: var(--sidebar-width-open);
   background: var(--bg-card);
   border-right: $border-width solid var(--border-color);
   transition: width $transition-base, transform $transition-base;
@@ -25,7 +25,7 @@
   font-family: $font-sans;
 
   &.collapsed {
-    width: 70px;
+    width: var(--sidebar-width-collapsed);
 
     .sidebar-nav {
       overflow: visible;
@@ -69,6 +69,17 @@
   align-items: center;
   flex: 1;
   min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  transition: all $transition-fast;
+
+  &:hover {
+    transform: translateX(2px);
+
+    .brand-title {
+      color: var(--primary-500);
+    }
+  }
 
   .brand-title {
     font-size: $text-base;
@@ -79,6 +90,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: $tracking-tight;
+    transition: color $transition-fast;
   }
 }
 

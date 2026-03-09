@@ -1,0 +1,396 @@
+// =============================================
+// MOBILE & RESPONSIVE FIXES
+// Comprehensive fixes for all mobile issues
+// =============================================
+
+// Variables for consistent spacing
+$sidebar-width: 260px;
+$sidebar-collapsed-width: 70px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+// =============================================
+// 1. FIX SIDEBAR & LAYOUT MARGINS
+// =============================================
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: block; // Stack vertically on mobile
+  }
+}
+
+// Main content should respond to sidebar state
+.main-content {
+  flex: 1;
+  margin-left: $sidebar-width;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  width: calc(100% - #{$sidebar-width});
+
+  // When sidebar is collapsed
+  &.expanded {
+    margin-left: $sidebar-collapsed-width;
+    width: calc(100% - #{$sidebar-collapsed-width});
+  }
+
+  // Mobile: Full width, no margin
+  @media (max-width: $mobile-breakpoint) {
+    margin-left: 0 !important;
+    width: 100% !important;
+
+    &.expanded {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+  }
+}
+
+// =============================================
+// 2. FIX SIDEBAR MOBILE BEHAVIOR
+// =============================================
+
+.sidebar-new {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: $sidebar-width;
+  z-index: 1040;
+  transition: transform 0.3s ease, width 0.3s ease;
+
+  // Collapsed state - desktop
+  &.collapsed {
+    width: $sidebar-collapsed-width;
+
+    @media (min-width: $mobile-breakpoint + 1px) {
+      // Desktop: Keep visible but narrow
+      transform: translateX(0);
+    }
+  }
+
+  // Mobile behavior - overlay
+  @media (max-width: $mobile-breakpoint) {
+    width: 280px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(0);
+
+    // Hidden state on mobile
+    &.collapsed {
+      transform: translateX(-100%);
+      width: 280px; // Keep full width when hidden
+    }
+  }
+}
+
+// Mobile overlay backdrop
+.sidebar-backdrop {
+  display: none;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1039;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+// =============================================
+// 3. FIX DERIVATIONS BROWSER MOBILE
+// =============================================
+
+.derivations-browser {
+  @media (max-width: $mobile-breakpoint) {
+    padding: 1rem;
+
+    .browser-header {
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    .search-section {
+      margin-bottom: 1rem;
+
+      .search-input {
+        font-size: 14px;
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    .category-filters {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      .category-btn {
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .browser-content {
+      display: block !important; // Override grid
+    }
+
+    // Fix scrollable list
+    .derivations-list {
+      max-height: 400px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 2rem;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+
+      .derivation-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      .derivation-card {
+        padding: 0.75rem;
+        margin: 0;
+
+        .card-header {
+          flex-direction: row;
+          gap: 0.5rem;
+        }
+
+        .derivation-title {
+          font-size: 0.9rem;
+        }
+
+        .description {
+          display: none; // Hide description on mobile to save space
+        }
+
+        .card-footer {
+          flex-direction: column;
+          gap: 0.25rem;
+          align-items: flex-start;
+
+          .steps-count {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    // Details panel below list on mobile
+    .derivation-details {
+      position: static;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// =============================================
+// 4. FIX MOBILE MENU TOGGLE BUTTON
+// =============================================
+
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1041;
+  cursor: pointer;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// =============================================
+// 5. FIX CONTENT PADDING & SPACING
+// =============================================
+
+.content-wrapper {
+  padding: 2rem;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 1rem;
+  }
+}
+
+// Page-specific mobile fixes
+.page-container,
+.theory-page,
+.calculations-page,
+.visualizations-page,
+.explanations-page,
+.results-page {
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0;
+
+    .page-header {
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .page-content {
+      padding: 1rem;
+    }
+  }
+}
+
+// =============================================
+// 6. FIX THEORY LAWS MOBILE
+// =============================================
+
+.theory-explorer {
+  @media (max-width: $mobile-breakpoint) {
+    .laws-grid {
+      display: block;
+
+      .law-card {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .law-detail {
+      padding: 1rem;
+
+      .equation-display {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        .katex-display {
+          margin: 1rem 0;
+          overflow-x: auto;
+        }
+      }
+    }
+  }
+}
+
+// =============================================
+// 7. FIX VISUALIZATION CONTROLS
+// =============================================
+
+.visualization-controls,
+.leva-container {
+  @media (max-width: $mobile-breakpoint) {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto !important;
+    max-height: 50vh;
+    overflow-y: auto;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+  }
+}
+
+// =============================================
+// 8. FIX TABLES & RESULTS
+// =============================================
+
+.results-table,
+.data-table {
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+      min-width: 600px; // Force horizontal scroll
+    }
+  }
+}
+
+// =============================================
+// 9. UTILITY CLASSES
+// =============================================
+
+// Hide on mobile
+.hide-mobile {
+  @media (max-width: $mobile-breakpoint) {
+    display: none !important;
+  }
+}
+
+// Show only on mobile
+.show-mobile {
+  display: none !important;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: block !important;
+  }
+}
+
+// Responsive text
+.responsive-text {
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 0.9rem;
+  }
+}
+
+// =============================================
+// 10. Z-INDEX HIERARCHY FIX
+// =============================================
+
+// Ensure proper stacking order
+.sidebar-new { z-index: 1040; }
+.sidebar-backdrop { z-index: 1039; }
+.mobile-menu-toggle { z-index: 1041; }
+.modal-backdrop { z-index: 1050; }
+.modal { z-index: 1051; }
+.tooltip { z-index: 1060; }
+.dropdown-menu { z-index: 1045; }

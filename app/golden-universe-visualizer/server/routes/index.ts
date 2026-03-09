@@ -6,6 +6,7 @@ import equationsRoutes from './equations';
 import searchRoutes from './search';
 import healthRoutes from './health';
 import explanationsRoutes from './explanations';
+import pythonRoutes from './python';
 
 const router = Router();
 
@@ -17,9 +18,10 @@ router.use('/equations', equationsRoutes);
 router.use('/explanations', explanationsRoutes);
 router.use('/search', searchRoutes);
 router.use('/health', healthRoutes);
+router.use('/python', pythonRoutes);
 
 // API root
-router.get('/', (req, res) => {
+router.get('/', (_req, res) => {
   res.json({
     success: true,
     message: 'Golden Universe API',
@@ -32,6 +34,7 @@ router.get('/', (req, res) => {
       explanations: '/api/explanations',
       search: '/api/search',
       health: '/api/health',
+      python: '/api/python',
     },
   });
 });

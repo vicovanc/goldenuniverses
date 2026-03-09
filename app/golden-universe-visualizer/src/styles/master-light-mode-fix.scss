@@ -1,0 +1,288 @@
+// =============================================
+// MASTER LIGHT MODE FIX - NUCLEAR OPTION
+// Fixes ALL pages with dark backgrounds in light mode
+// =============================================
+
+// Apply to all light mode contexts
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+.light-mode,
+body[data-theme='light'],
+html[data-theme='light'] {
+
+  // Force the body and root to be light
+  &,
+  body,
+  #root {
+    background: #fafafa !important;
+    background-color: #fafafa !important;
+    color: #1a1a1a !important;
+  }
+
+  // All direct children of body/root should inherit light backgrounds
+  body > div,
+  #root > div {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  // Force ALL divs with inline dark styles to be light
+  div[style*="background"],
+  section[style*="background"],
+  main[style*="background"],
+  article[style*="background"],
+  aside[style*="background"] {
+    &[style*="rgb(0"],
+    &[style*="#000"],
+    &[style*="rgba(0, 0, 0"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+
+  // Main containers for ALL pages
+  .main-layout,
+  .main-content,
+  .content-wrapper,
+  .page-container,
+  .page-content,
+  [class*="-page"],
+  [class*="-dashboard"],
+  [class*="-explorer"] {
+
+    // Remove dark backgrounds
+    &[style*="background"] {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    // Ensure proper text color
+    color: #1a1a1a !important;
+  }
+
+  // All cards and panels - NO BORDERS
+  [class*="card"],
+  [class*="panel"],
+  [class*="box"],
+  [class*="container"]:not(.main-container),
+  [class*="section"]:not(.main-section) {
+    &:not([class*="dark"]):not([class*="gradient"]) {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Headers and navigation - NO BORDERS
+  [class*="header"]:not(.app-header),
+  [class*="nav"],
+  [class*="tabs"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-bottom: none !important;
+    color: #1a1a1a !important;
+  }
+
+  // All buttons - NO BORDERS
+  button,
+  [role="button"],
+  .button,
+  [class*="btn"] {
+    &:not([class*="primary"]):not([class*="cta"]):not(.active) {
+      background: transparent !important;
+      color: #374151 !important;
+      border: none !important;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+      }
+    }
+  }
+
+  // All inputs and forms - MINIMAL BORDERS
+  input,
+  textarea,
+  select {
+    background: rgba(255, 255, 255, 0.5) !important;
+    color: #1a1a1a !important;
+    border: none !important;
+
+    &::placeholder {
+      color: #9ca3af !important;
+    }
+
+    &:focus {
+      border: 1px solid #d97706 !important;
+      outline: none !important;
+    }
+  }
+
+  // All text elements
+  h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a !important;
+  }
+
+  p, span, div, li, td, th {
+    color: inherit !important;
+  }
+
+  // Labels and secondary text
+  label,
+  .label,
+  [class*="label"] {
+    color: #525252 !important;
+  }
+
+  // Remove ALL glass effects
+  [class*="glass"],
+  [class*="blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  // Override specific dark values in any context
+  * {
+    // Dark backgrounds
+    &[style*="background-color: rgb(0, 0, 0)"],
+    &[style*="background: rgb(0, 0, 0)"],
+    &[style*="background-color: #000000"],
+    &[style*="background: #000000"],
+    &[style*="background-color: black"],
+    &[style*="background: black"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+
+    // White text on presumed dark backgrounds
+    &[style*="color: rgb(255, 255, 255)"],
+    &[style*="color: #ffffff"],
+    &[style*="color: white"] {
+      color: #1a1a1a !important;
+    }
+  }
+
+  // Specific page containers - CLEAN DESIGN
+  .home-page,
+  .theory-page,
+  .theory-explorer,
+  .derivations-page,
+  .derivations-browser,
+  .calculations-page,
+  .visualizations-page,
+  .results-page,
+  .results-dashboard,
+  .explanations-page,
+  .about-page {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a1a1a !important;
+
+    // Inner content areas
+    > div {
+      &:first-child {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+    }
+
+    // Main content cards - NO BORDERS
+    .content,
+    .main,
+    [class*="content"],
+    [class*="main"] {
+      &:not(.main-layout):not(.main-content) {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+      }
+    }
+  }
+
+  // Tables
+  table {
+    background: #ffffff !important;
+
+    thead {
+      background: #f9fafb !important;
+
+      th {
+        color: #374151 !important;
+        border-color: #e5e7eb !important;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background: #f9fafb !important;
+        }
+
+        &:hover {
+          background: #f3f4f6 !important;
+        }
+      }
+
+      td {
+        color: #1a1a1a !important;
+        border-color: #f3f4f6 !important;
+      }
+    }
+  }
+
+  // Code blocks
+  pre,
+  code {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+  }
+
+  // Golden/accent colors
+  .golden,
+  .accent,
+  .primary,
+  [class*="golden"],
+  [class*="primary"] {
+    color: #d97706 !important;
+  }
+
+  // Stats and metrics
+  [class*="stat"],
+  [class*="metric"],
+  [class*="value"] {
+    .number,
+    .value {
+      color: #d97706 !important;
+    }
+
+    .label,
+    .description {
+      color: #737373 !important;
+    }
+  }
+
+  // Scrollbars everywhere
+  ::-webkit-scrollbar {
+    background: #f5f5f5 !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d4 !important;
+
+    &:hover {
+      background: #a3a3a3 !important;
+    }
+  }
+
+  // Final nuclear option - remove any remaining dark backgrounds
+  *:not(code):not(pre) {
+    &[style*="background: rgb(0, 0, 0)"],
+    &[style*="background-color: rgb(0, 0, 0)"],
+    &[style*="background: #000"],
+    &[style*="background-color: #000"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+}

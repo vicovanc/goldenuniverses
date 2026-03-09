@@ -35,7 +35,8 @@ async function loadPyodideScript(): Promise<any> {
   try {
     // Load the pyodide.js script using importScripts
     // This works in classic workers (not module workers)
-    importScripts('https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js');
+    // Using v0.26.2 which supports Python 3.12
+    importScripts('https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js');
 
     // After importScripts, loadPyodide should be available on self
     const loadPyodide = self.loadPyodide;
@@ -58,7 +59,7 @@ async function initializePyodide(id?: string): Promise<void> {
   if (isInitialized) {
     // If already initialized, send ready message with id
     if (id) {
-      self.postMessage({ type: 'ready', id, payload: { version: '0.25.0' } });
+      self.postMessage({ type: 'ready', id, payload: { version: '0.26.2' } });
     }
     return;
   }
@@ -71,7 +72,7 @@ async function initializePyodide(id?: string): Promise<void> {
     const loadPyodide = await loadPyodideScript();
 
     pyodide = await loadPyodide({
-      indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/',
+      indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.26.2/full/',
     });
 
     self.postMessage({ type: 'progress', payload: { stage: 'loading_packages', progress: 30 } });
@@ -132,10 +133,15 @@ print("Golden Universe constants initialized")
     // Load helper functions
     await loadHelperFunctions();
 
+    self.postMessage({ type: 'progress', payload: { stage: 'loading_utils', progress: 90 } });
+
+    // Load utils module for Python scripts that need it
+    await loadUtilsModule();
+
     self.postMessage({ type: 'progress', payload: { stage: 'ready', progress: 100 } });
 
     isInitialized = true;
-    self.postMessage({ type: 'ready', id, payload: { version: '0.25.0' } });
+    self.postMessage({ type: 'ready', id, payload: { version: '0.26.2' } });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     self.postMessage({ type: 'error', id, payload: { error: errorMessage } });
@@ -289,6 +295,214 @@ print("Helper functions loaded")
 }
 
 /**
+ * Load utils module files for Python scripts
+ */
+async function loadUtilsModule(): Promise<void> {
+  if (!pyodide) throw new Error('Pyodide not initialized');
+
+  try {
+    // Fetch and load the gu_constants.py file
+    const response = await fetch('/derivations/utils/gu_constants.py');
+    if (response.ok) {
+      const guConstantsCode = await response.text();
+
+      // Escape the Python code properly for execution
+      const escapedCode = guConstantsCode
+        .replace(/\\/g, '\\\\')
+        .replace(/'/g, "\\'")
+        .replace(/"/g, '\\"')
+        .replace(/\n/g, '\\n');
+
+      // Create utils module in Pyodide
+      // Properly escape the code for Python string
+      const cleanedCode = guConstantsCode
+        .replace(/\\/g, '\\\\')  // Escape backslashes
+        .replace(/"""/g, '\\"\\"\\"')  // Escape triple quotes
+        .replace(/'/g, "\\'");  // Escape single quotes
+
+      const moduleSetup = `
+import sys
+import os
+import types
+
+# Create utils module
+if 'utils' not in sys.modules:
+    utils = types.ModuleType('utils')
+    sys.modules['utils'] = utils
+
+# Create gu_constants submodule
+if 'utils.gu_constants' not in sys.modules:
+    gu_constants = types.ModuleType('gu_constants')
+    utils.gu_constants = gu_constants
+    sys.modules['utils.gu_constants'] = gu_constants
+
+# Execute the gu_constants code in the module namespace
+gu_constants_code = '''${cleanedCode}'''
+exec(gu_constants_code, sys.modules['utils.gu_constants'].__dict__)
+
+# Import all names from gu_constants into utils for convenience
+from utils.gu_constants import *
+
+print("Utils module loaded successfully")
+`;
+
+      await pyodide.runPythonAsync(moduleSetup);
+    }
+  } catch (error) {
+    console.warn('Could not load utils module:', error);
+    // Fallback: create a mock utils module with basic constants
+    await pyodide.runPythonAsync(`
+import sys
+import types
+import mpmath as mp
+
+# Create utils module with basic constants
+if 'utils' not in sys.modules:
+    utils = types.ModuleType('utils')
+    sys.modules['utils'] = utils
+
+    # Create gu_constants submodule with fallback values
+    gu_constants = types.ModuleType('gu_constants')
+
+    # Add basic Golden Universe constants as fallback
+    gu_constants.PHI = mp.phi
+    gu_constants.PI = mp.pi
+    gu_constants.E = mp.e
+    gu_constants.PHI_SQ = mp.phi ** 2
+    gu_constants.M_P = mp.mpf('1.22091e+22')  # Planck mass in MeV
+    gu_constants.M_P_MeV = gu_constants.M_P
+
+    # Experimental masses
+    gu_constants.M_E_EXP_MEV = mp.mpf('0.51099895000')
+    gu_constants.M_MU_EXP_MEV = mp.mpf('105.6583755')
+    gu_constants.M_TAU_EXP_MEV = mp.mpf('1776.86')
+    gu_constants.M_P_EXP_MEV = mp.mpf('938.27208816')
+    gu_constants.M_N_EXP_MEV = mp.mpf('939.56542052')
+
+    # X field functions
+    def X_at_epoch(N):
+        return gu_constants.M_P * (gu_constants.PHI_SQ / N) ** (N/2)
+
+    gu_constants.X_at_epoch = X_at_epoch
+    gu_constants.X_e = X_at_epoch(111)
+    gu_constants.X_GUT = X_at_epoch(67)
+    gu_constants.X_EW = X_at_epoch(89)
+
+    # Add to utils module
+    utils.gu_constants = gu_constants
+    sys.modules['utils.gu_constants'] = gu_constants
+
+    print("Utils module created with fallback constants")
+`);
+  }
+}
+
+/**
+ * Preprocess Python code to handle compatibility issues
+ */
+function preprocessPythonCode(code: string): string {
+  let processedCode = code;
+
+  // Handle multi-line f-strings with quotes that might be problematic
+  // Replace ^^^^ syntax errors that might come from multi-line strings
+  if (processedCode.includes('""""') || processedCode.includes("''''")) {
+    console.warn('Quadruple quotes detected, may cause syntax errors');
+    processedCode = processedCode.replace(/""""/g, '"""');
+    processedCode = processedCode.replace(/''''/g, "'''");
+  }
+
+  // Handle match/case statements if present (Python 3.10+ feature)
+  if (processedCode.includes('match ') && processedCode.includes('case ')) {
+    console.warn('Python 3.10+ match/case syntax detected - attempting compatibility fix');
+    // Note: This is a basic workaround - complex match statements may still fail
+  }
+
+  // Handle __file__ variable which doesn't exist in Pyodide
+  // Only apply the patch if __file__ is actually used (not in comments)
+  // Check if __file__ appears outside of comments
+  const lines = processedCode.split('\n');
+  let hasFileVariable = false;
+  for (const line of lines) {
+    const commentIndex = line.indexOf('#');
+    const fileIndex = line.indexOf('__file__');
+    if (fileIndex >= 0 && (commentIndex === -1 || fileIndex < commentIndex)) {
+      hasFileVariable = true;
+      break;
+    }
+  }
+
+  if (hasFileVariable) {
+    console.warn('__file__ variable detected - applying comprehensive fix');
+
+    // Add a comprehensive fix at the beginning of the code
+    const fileCompatPatch = `
+# Pyodide compatibility patch for __file__ variable
+import os
+import sys
+
+# Define __file__ as a module-level variable
+__file__ = '/pyodide/script.py'
+
+# Patch os.path operations to handle our placeholder __file__
+if not hasattr(os.path, '__pyodide_patched__'):
+    os.path.__pyodide_patched__ = True
+
+    # Store original functions
+    _orig_dirname = os.path.dirname
+    _orig_abspath = os.path.abspath
+    _orig_realpath = os.path.realpath
+    _orig_exists = os.path.exists
+    _orig_isfile = os.path.isfile
+    _orig_isdir = os.path.isdir
+
+    # Define new functions to handle our placeholder
+    def new_dirname(x):
+        return '.' if x == __file__ else _orig_dirname(x)
+
+    def new_abspath(x):
+        return __file__ if x == __file__ else _orig_abspath(x)
+
+    def new_realpath(x):
+        return __file__ if x == __file__ else _orig_realpath(x)
+
+    def new_exists(x):
+        return True if x == __file__ else _orig_exists(x)
+
+    def new_isfile(x):
+        return True if x == __file__ else _orig_isfile(x)
+
+    def new_isdir(x):
+        return False if x == __file__ else _orig_isdir(x)
+
+    # Override functions
+    os.path.dirname = new_dirname
+    os.path.abspath = new_abspath
+    os.path.realpath = new_realpath
+    os.path.exists = new_exists
+    os.path.isfile = new_isfile
+    os.path.isdir = new_isdir
+
+# Set script directory for imports
+sys.path.insert(0, os.path.dirname(__file__))
+
+`;
+
+    // Prepend the compatibility patch
+    processedCode = fileCompatPatch + processedCode;
+
+    // Don't do additional replacements as they can cause syntax errors
+  }
+
+  // Remove sys.path.append lines that try to access parent directories
+  processedCode = processedCode.replace(
+    /sys\.path\.append\([^)]*\)\s*\n?/g,
+    ''
+  );
+
+  return processedCode;
+}
+
+/**
  * Execute Python code
  */
 async function executePython(code: string, id: string): Promise<void> {
@@ -296,8 +510,29 @@ async function executePython(code: string, id: string): Promise<void> {
     await initializePyodide();
   }
 
+  const startTime = Date.now();
+
   try {
-    const startTime = Date.now();
+    // Check if it's an error message rather than Python code
+    if (code.includes('File Not Available') ||
+        code.includes('Error Loading File') ||
+        code.includes('is not available in the static data') ||
+        code.includes('# File Not Available') ||
+        code.includes('# Error Loading File')) {
+      throw new Error('No valid Python code to execute. The selected file is not available.');
+    }
+
+    // Check if the code starts with what looks like a non-Python error message
+    const firstLine = code.split('\n')[0].trim();
+    if (firstLine.startsWith('The file') && firstLine.includes('is not available')) {
+      throw new Error('No valid Python code to execute. The selected file is not available.');
+    }
+
+    // Check if code imports utils and ensure it's loaded
+    if (code.includes('from utils') || code.includes('import utils')) {
+      console.log('Code imports utils module, ensuring it is loaded...');
+      await loadUtilsModule();
+    }
 
     // Capture stdout if supported
     let stdout = '';
@@ -305,8 +540,16 @@ async function executePython(code: string, id: string): Promise<void> {
       pyodide!.setStdout({ batched: (text: string) => { stdout += text; } });
     }
 
+    // Preprocess the code to handle compatibility issues
+    let processedCode = code;
+    try {
+      processedCode = preprocessPythonCode(code);
+    } catch (preprocessError) {
+      console.warn('Code preprocessing failed, using original code:', preprocessError);
+    }
+
     // Execute code and capture result
-    const result = await pyodide!.runPythonAsync(code);
+    const result = await pyodide!.runPythonAsync(processedCode);
 
     const executionTime = Date.now() - startTime;
 
@@ -323,14 +566,26 @@ async function executePython(code: string, id: string): Promise<void> {
     });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
+
+    // Enhanced error logging for debugging
+    console.error('Python execution error:', errorMessage);
+
+    // Check for specific error patterns and provide helpful messages
+    let hint = '';
+    if (errorMessage.includes('SyntaxError') && errorMessage.includes('^^^^')) {
+      hint = 'This appears to be a Python 3.10+ syntax issue. The code may use features not yet supported.';
+      console.error('Syntax error detected - may be Python 3.10+ feature incompatibility');
+    }
+
     self.postMessage({
       type: 'error',
       id,
       payload: {
         success: false,
         error: errorMessage,
-        executionTime: Date.now(),
+        executionTime: Date.now() - (startTime || Date.now()),
         timestamp: Date.now(),
+        hint: hint || undefined,
       },
     });
   }

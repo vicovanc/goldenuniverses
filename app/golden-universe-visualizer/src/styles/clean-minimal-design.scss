@@ -1,0 +1,408 @@
+// =============================================
+// CLEAN MINIMAL DESIGN - AWARD WINNING LOOK
+// Remove ALL unnecessary white boxes, borders, and backgrounds
+// =============================================
+
+// Universal clean design for both modes
+* {
+  // Remove default backgrounds and borders from everything
+  &[class*="search"],
+  &[class*="filter"],
+  &[class*="category"],
+  &[class*="section"],
+  &[class*="container"],
+  &[class*="wrapper"],
+  &[class*="content"],
+  &[class*="panel"],
+  &[class*="box"],
+  &[class*="card"]:not(.derivation-card),
+  &[class*="header"]:not(.modal-header),
+  &[class*="footer"]:not(.modal-footer),
+  &[class*="nav"]:not(.tabs-navigation),
+  &[class*="dashboard"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Light mode - Clean minimal design
+.app.light,
+[data-theme='light'] {
+  // Main background should be a subtle gradient
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+
+  // Derivations page
+  .derivations-page,
+  .derivations-browser {
+    background: transparent !important;
+
+    // Search section - no background, just the input
+    .search-section {
+      background: transparent !important;
+      border: none !important;
+      padding: 2rem 0 !important;
+
+      input {
+        background: rgba(255, 255, 255, 0.5) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        padding: 1rem 1.5rem !important;
+        border-radius: 50px !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+
+        &:focus {
+          background: rgba(255, 255, 255, 0.8) !important;
+          border-color: #d97706 !important;
+          box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+          outline: none !important;
+        }
+
+        &::placeholder {
+          color: #999 !important;
+        }
+      }
+    }
+
+    // Category filters - minimal pills
+    .category-filters {
+      background: transparent !important;
+      border: none !important;
+      padding: 1rem 0 !important;
+      display: flex !important;
+      gap: 0.75rem !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+
+      button,
+      .filter-btn,
+      .category-btn {
+        background: transparent !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        padding: 0.5rem 1.25rem !important;
+        border-radius: 25px !important;
+        font-size: 0.875rem !important;
+        font-weight: 500 !important;
+        color: #666 !important;
+        transition: all 0.3s ease !important;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.02) !important;
+          border-color: rgba(0, 0, 0, 0.2) !important;
+          color: #333 !important;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+          border-color: transparent !important;
+          color: white !important;
+          font-weight: 600 !important;
+          box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+        }
+
+        .badge {
+          background: rgba(0, 0, 0, 0.1) !important;
+          color: inherit !important;
+          border: none !important;
+          padding: 0.125rem 0.5rem !important;
+          border-radius: 10px !important;
+          margin-left: 0.5rem !important;
+          font-size: 0.75rem !important;
+        }
+
+        &.active .badge {
+          background: rgba(255, 255, 255, 0.2) !important;
+          color: white !important;
+        }
+      }
+    }
+
+    // Derivation cards - the ONLY elements with backgrounds
+    .derivations-grid {
+      background: transparent !important;
+      padding: 2rem 0 !important;
+
+      .derivation-card {
+        background: rgba(255, 255, 255, 0.7) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        border-radius: 16px !important;
+        padding: 1.5rem !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.9) !important;
+          transform: translateY(-4px) !important;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+          border-color: #d97706 !important;
+        }
+
+        // Category tags inside cards
+        .category-tag,
+        .tag {
+          background: transparent !important;
+          border: 1px solid rgba(0, 0, 0, 0.1) !important;
+          padding: 0.25rem 0.75rem !important;
+          border-radius: 20px !important;
+          font-size: 0.75rem !important;
+
+          &.basic {
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+          }
+          &.fundamental {
+            border-color: #3b82f6 !important;
+            color: #3b82f6 !important;
+          }
+          &.advanced {
+            border-color: #8b5cf6 !important;
+            color: #8b5cf6 !important;
+          }
+        }
+      }
+    }
+
+    // Modal/dialog backgrounds should remain
+    .modal,
+    .dialog,
+    .derivation-detail-modal {
+      .modal-content {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+      }
+    }
+  }
+
+  // Results page
+  .results-dashboard {
+    background: transparent !important;
+
+    .dashboard-header,
+    .stats-banner,
+    .dashboard-nav,
+    .dashboard-content,
+    .dashboard-main {
+      background: transparent !important;
+      border: none !important;
+    }
+
+    // Only cards should have subtle backgrounds
+    .achievement-card,
+    .result-card {
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(10px) !important;
+      border: none !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+      }
+    }
+  }
+
+  // Theory page
+  .theory-page,
+  .theory-explorer {
+    background: transparent !important;
+
+    .explorer-content,
+    .explorer-main,
+    .theory-content {
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .law-card {
+      background: rgba(255, 255, 255, 0.6) !important;
+      backdrop-filter: blur(10px) !important;
+      border: none !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.8) !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+      }
+    }
+  }
+}
+
+// Dark mode - Clean minimal design
+.app.dark,
+[data-theme='dark'] {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+
+  .derivations-page,
+  .derivations-browser {
+    background: transparent !important;
+
+    .search-section {
+      background: transparent !important;
+
+      input {
+        background: rgba(255, 255, 255, 0.05) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+
+        &:focus {
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: #fbbf24 !important;
+          box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2) !important;
+        }
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5) !important;
+        }
+      }
+    }
+
+    .category-filters {
+      background: transparent !important;
+
+      button {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.05) !important;
+          border-color: rgba(255, 255, 255, 0.2) !important;
+          color: white !important;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+          border-color: transparent !important;
+          color: #000 !important;
+        }
+      }
+    }
+
+    .derivation-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(10px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.06) !important;
+        border-color: #fbbf24 !important;
+      }
+
+      .category-tag {
+        background: transparent !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      }
+    }
+  }
+
+  .results-dashboard {
+    .achievement-card,
+    .result-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(10px) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+      }
+    }
+  }
+
+  .theory-page {
+    .law-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(10px) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+      }
+    }
+  }
+}
+
+// Remove ALL unnecessary container backgrounds
+.page-container,
+.main-container,
+.content-container,
+.wrapper,
+.inner,
+.outer,
+[class*="-wrapper"],
+[class*="-container"]:not(.modal-container) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Tables should be minimal
+table {
+  background: transparent !important;
+
+  thead {
+    background: transparent !important;
+
+    th {
+      background: transparent !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+  }
+
+  tbody {
+    background: transparent !important;
+
+    tr {
+      background: transparent !important;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.02) !important;
+      }
+
+      td {
+        background: transparent !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.02) !important;
+      }
+    }
+  }
+}
+
+// Only buttons that need emphasis should have backgrounds
+button:not(.active):not(.primary):not(.cta) {
+  background: transparent !important;
+}
+
+// Clean scrollbars
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+.app.dark {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+  }
+}

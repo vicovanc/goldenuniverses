@@ -1,0 +1,208 @@
+// =============================================
+// RESULTS PAGE FULL WIDTH FIX
+// Make the main content area use full width after removing filters
+// =============================================
+
+.results-dashboard {
+  .dashboard-content {
+    display: flex;
+    width: 100%;
+    gap: 0; // Remove gap since no sidebar
+
+    // Full width main content
+    .dashboard-main,
+    .dashboard-main-fullwidth {
+      flex: 1;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 2rem !important;
+      margin: 0 !important;
+
+      // Ensure views take full width
+      .overview-view,
+      .table-view,
+      .charts-view,
+      .codata-view,
+      .achievements-view {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      // Wider sections for better content display
+      .overview-section {
+        margin-bottom: 3rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Remove any sidebar spacing
+    .dashboard-sidebar {
+      display: none !important;
+    }
+  }
+
+  // Better spacing for navigation tabs
+  .dashboard-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0;
+
+    .nav-tab {
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: var(--color-primary);
+        color: white;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  // Better header spacing
+  .dashboard-header {
+    padding: 2rem;
+    background: var(--bg-card);
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 0;
+
+    .header-content {
+      flex: 1;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+      }
+    }
+  }
+
+  // Stats banner improvements
+  .stats-banner {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    margin-bottom: 0;
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+
+      .stat-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      &.highlight {
+        .stat-value {
+          color: #4caf50;
+        }
+      }
+    }
+  }
+
+  // Tables should use more width
+  .precision-table,
+  .achievements-table,
+  .codata-comparison {
+    width: 100%;
+    max-width: 100%;
+
+    table {
+      width: 100%;
+    }
+  }
+
+  // Charts should be larger
+  .results-charts {
+    .chart-container {
+      min-height: 400px;
+    }
+  }
+}
+
+// Light mode specific
+.app.light {
+  .results-dashboard {
+    --bg-secondary: #f8f9fa;
+    --bg-card: #ffffff;
+    --border-color: #e0e0e0;
+    --text-secondary: #666666;
+    --color-primary: #d97706;
+
+    .dashboard-nav {
+      background: #f8f9fa;
+      border-bottom-color: #e0e0e0;
+    }
+
+    .stats-banner {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+  }
+}
+
+// Dark mode specific
+.app.dark {
+  .results-dashboard {
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --color-primary: #fbbf24;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .results-dashboard {
+    .dashboard-nav {
+      flex-wrap: wrap;
+      padding: 0.5rem;
+
+      .nav-tab {
+        flex: 1;
+        min-width: 100px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .stats-banner {
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .stat-item {
+        flex: 1 1 45%;
+        min-width: 120px;
+      }
+    }
+
+    .dashboard-main {
+      padding: 1rem !important;
+    }
+  }
+}

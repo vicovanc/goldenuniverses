@@ -1,0 +1,136 @@
+// =============================================
+// DARK MODE FIX - Fix white backgrounds in dark mode
+// =============================================
+
+// Dark mode specific fixes
+.app.dark,
+.app[data-theme='dark'],
+[data-theme='dark'],
+body[data-theme='dark'] {
+  // Fix main-content and content-wrapper showing white background in dark mode
+  .main-content,
+  .content-wrapper {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  // Main layout should have the dark background
+  .main-layout {
+    background-color: var(--color-background, #000000) !important;
+  }
+
+  // Fix law-detail showing black background
+  .law-detail {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    // The gradient container should provide the background
+    .gradient-container {
+      // Gradient is already applied, no need for additional background
+    }
+  }
+
+  // Theory explorer specific fixes
+  .theory-explorer {
+    .law-detail {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+
+  // Ensure body has dark background
+  body {
+    background: #000000 !important;
+    background-color: #000000 !important;
+  }
+
+  // Fix any content areas that might have white backgrounds
+  .page-content,
+  .main-container,
+  .content-area {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  // Results page in dark mode
+  .results-page {
+    background-color: #000000 !important;
+
+    .results-content {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+
+  .results-dashboard {
+    background-color: transparent !important;
+
+    .dashboard-header {
+      background: rgba(255, 255, 255, 0.05) !important;
+      background-color: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dashboard-content {
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Light mode should have white backgrounds
+.app.light,
+.app[data-theme='light'],
+[data-theme='light'],
+body[data-theme='light'] {
+  // Main content should have white/light background in light mode
+  .main-content {
+    background-color: var(--bg-primary, #ffffff) !important;
+  }
+
+  .content-wrapper {
+    background-color: #ffffff !important;
+  }
+
+  // Theory explorer components
+  .explorer-content {
+    background-color: transparent !important;
+
+    .explorer-main {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border: 1px solid #e5e5e5 !important;
+    }
+  }
+
+  // Law detail in light mode
+  .law-detail {
+    background-color: var(--bg-card, #ffffff) !important;
+  }
+
+  // Body in light mode
+  body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+  }
+
+  // Override glass-card mixins for light mode
+  .glass-card,
+  .glass-card-strong,
+  [class*="glass"] {
+    &.explorer-main,
+    &.explorer-content,
+    &.content-wrapper {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+  }
+}
+
+// Ensure transitions work smoothly
+.main-content,
+.content-wrapper,
+.law-detail {
+  transition: background-color 0.3s ease;
+}

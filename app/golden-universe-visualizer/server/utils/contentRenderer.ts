@@ -2,20 +2,10 @@ import { marked } from 'marked';
 import katex from 'katex';
 import hljs from 'highlight.js';
 
-// Configure marked
+// Configure marked with simpler options
 marked.setOptions({
-  highlight: (code: string, lang: string) => {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(code, { language: lang }).value;
-      } catch (err) {
-        console.error('Highlight error:', err);
-      }
-    }
-    return code;
-  },
   gfm: true,
-  breaks: true,
+  breaks: true
 });
 
 export interface RenderOptions {

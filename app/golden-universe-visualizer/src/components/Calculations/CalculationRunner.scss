@@ -390,8 +390,16 @@
         font-family: $font-family-mono;
         font-size: $text-sm;
         line-height: $leading-relaxed;
-        color: $text-primary;
+        color: white; // White text for dark background
         @include custom-scrollbar;
+
+        // Light mode override
+        .app.light &,
+        .light & {
+          background: #f9fafb !important;
+          border-color: #e5e7eb !important;
+          color: #374151 !important;
+        }
       }
     }
 
@@ -416,13 +424,15 @@
     @include glass-card;
     padding: $space-6;
     border: 1px solid rgba(245, 158, 11, 0.2);
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+    // Dark background to ensure text is readable
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 100%);
+    backdrop-filter: blur(10px);
 
     h4 {
       margin: 0 0 $space-5 0;
       font-size: $text-lg;
       font-weight: $font-semibold;
-      color: $text-primary;
+      color: white !important;  // White header
     }
 
     .help-grid {
@@ -431,10 +441,22 @@
       gap: $space-5;
 
       .help-item {
+        // Force white text on dark background
+        color: rgba(255, 255, 255, 0.95) !important;
+
+        * {
+          // Apply to all children
+          color: inherit !important;
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.95) !important;
+        }
+
         strong {
           display: block;
           margin-bottom: $space-2;
-          color: $text-primary;
+          color: white !important;
           font-weight: $font-semibold;
           font-size: $text-sm;
         }
@@ -446,10 +468,40 @@
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: $radius-md;
           font-size: $text-xs;
-          color: $brand-accent;
+          color: $brand-accent !important;
           line-height: $leading-relaxed;
           font-family: $font-family-mono;
         }
+      }
+
+      // Light mode overrides for help items - outside the main block
+      .app.light .help-item,
+      .light .help-item {
+        color: #525252 !important;
+
+        p {
+          color: #525252 !important;
+        }
+
+        strong {
+          color: #1a1a1a !important;
+        }
+
+        code {
+          background: #f9fafb !important;
+          border-color: #e5e7eb !important;
+          color: #d97706 !important;
+        }
+      }
+    }
+
+    // Light mode for help section background
+    .app.light &,
+    .light & {
+      background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important;
+
+      h4 {
+        color: #1a1a1a !important;
       }
     }
   }

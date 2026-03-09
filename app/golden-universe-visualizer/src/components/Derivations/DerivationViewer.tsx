@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { PythonExecutor } from '@/components/Calculations/PythonExecutor';
+import derivationExecutor from '@/services/derivationExecutor';
 import './DerivationViewer.scss';
 
 interface DerivationViewerProps {
@@ -68,16 +69,29 @@ export const DerivationViewer: React.FC<DerivationViewerProps> = ({ derivationId
       setError(null);
 
       const fileName = activeFile || pythonFiles[0];
-      const derivationPath = `/Users/Cristiana_1/Documents/Golden Universe/derivations/${actualFolder}/${fileName}`;
 
-      // Try to fetch the Python file
-      const response = await fetch(`/api/derivations/${actualFolder}/files/${fileName}`);
+      // Use the new derivation executor to fetch the file
+      const code = await derivationExecutor.fetchPythonFile(actualFolder, fileName);
 
-      if (response.ok) {
-        const code = await response.text();
+      if (code && !code.includes('<!DOCTYPE') && !code.includes('File Not Available')) {
         setPythonCode(code);
       } else {
-        // Fallback: show sample calculation
+        // Try to get derivation info for better fallback
+        const derivation = await derivationExecutor.getDerivation(derivationId);
+        if (derivation && derivation.files?.python?.length > 0) {
+          // Try another file from the derivation
+          for (const pyFile of derivation.files.python) {
+            if (pyFile !== fileName) {
+              const altCode = await derivationExecutor.fetchPythonFile(actualFolder, pyFile);
+              if (altCode && !altCode.includes('<!DOCTYPE')) {
+                setPythonCode(altCode);
+                setActiveFile(pyFile);
+                return;
+              }
+            }
+          }
+        }
+        // Final fallback: show sample calculation
         setPythonCode(getSampleCalculation(derivationId));
       }
     } catch (err) {

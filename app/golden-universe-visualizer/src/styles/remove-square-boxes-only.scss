@@ -1,0 +1,441 @@
+// =============================================
+// REMOVE SQUARE BOXES ONLY - KEEP ROUNDED ELEMENTS
+// Remove square containers but keep rounded pills/search bars
+// Clean award-winning design without excessive containers
+// =============================================
+
+// Universal removal of square box backgrounds
+[class*="container"],
+[class*="wrapper"],
+[class*="section"],
+[class*="content"],
+[class*="panel"],
+[class*="box"],
+[class*="intro"],
+[class*="header"]:not(.modal-header):not(.app-header),
+[class*="footer"]:not(.modal-footer),
+[class*="body"]:not(.modal-body),
+[class*="area"],
+[class*="region"],
+[class*="zone"],
+[class*="dashboard"]:not(.results-dashboard),
+[class*="explorer"],
+[class*="browser"],
+[class*="main"]:not(.modal-main) {
+  // Only remove backgrounds from square containers, not rounded elements
+  &:not([class*="pill"]):not([class*="rounded"]):not([class*="search"]):not([class*="filter"]):not([class*="card"]):not(button):not(input):not(.modal):not(.dialog) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    // Also remove any backdrop filters on containers
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+// Specific removal of problematic containers
+.theory-intro-container,
+.page-intro-container,
+.content-container,
+.main-container,
+.section-container,
+.dashboard-nav,
+.dashboard-main,
+.dashboard-content,
+.explorer-content,
+.explorer-main,
+.browser-content,
+.browser-main,
+.page-wrapper,
+.page-container,
+.inner-container,
+.outer-container {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+// Remove borders from navigation but keep tab indicators
+.tabs-navigation,
+.dashboard-nav,
+[class*="nav"]:not(nav) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  // Keep active tab indicators
+  .tab,
+  .nav-tab,
+  button {
+    border: none !important;
+    background: transparent !important;
+
+    &.active {
+      position: relative;
+      color: var(--color-primary, #d97706) !important;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--color-primary, #d97706);
+      }
+    }
+  }
+}
+
+// PRESERVE: Rounded search bars with glass effect
+input[type="search"],
+input.search,
+.search-input,
+.search-bar,
+[class*="search"] input {
+  // Keep the rounded pill shape and glass effect
+  border-radius: 50px !important;
+  padding: 0.75rem 1.5rem !important;
+
+  // Light mode
+  .app.light & {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-color: var(--color-primary, #d97706) !important;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+    }
+  }
+
+  // Dark mode
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-color: var(--color-primary, #fbbf24) !important;
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2) !important;
+    }
+  }
+}
+
+// PRESERVE: Rounded filter pills
+.filter-btn,
+.category-btn,
+.category-filter,
+button.pill,
+button.rounded,
+[class*="filter"] button,
+[class*="category"] button {
+  // Keep the pill shape
+  border-radius: 25px !important;
+  padding: 0.5rem 1.25rem !important;
+  transition: all 0.3s ease !important;
+
+  // Light mode
+  .app.light & {
+    &.active {
+      background: linear-gradient(135deg, #d97706, #f59e0b) !important;
+      border: none !important;
+      color: white !important;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+    }
+
+    &:not(.active) {
+      background: rgba(255, 255, 255, 0.5) !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      color: #666 !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(0, 0, 0, 0.15) !important;
+      }
+    }
+  }
+
+  // Dark mode
+  .app.dark & {
+    &.active {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+      border: none !important;
+      color: #000 !important;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3) !important;
+    }
+
+    &:not(.active) {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        color: white !important;
+      }
+    }
+  }
+}
+
+// PRESERVE: Cards with rounded corners and subtle shadows
+.card,
+.derivation-card,
+.law-card,
+.achievement-card,
+.result-card,
+[class*="card"] {
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+
+  // Light mode
+  .app.light & {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+      border-color: var(--color-primary, #d97706) !important;
+    }
+  }
+
+  // Dark mode
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+      border-color: var(--color-primary, #fbbf24) !important;
+    }
+  }
+}
+
+// Keep modals and dialogs with their backgrounds
+.modal,
+.dialog,
+.modal-content,
+.dialog-content,
+[class*="modal"],
+[class*="dialog"] {
+  // These should maintain their backgrounds for proper visibility
+  .modal-body,
+  .dialog-body {
+    .app.light & {
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .app.dark & {
+      background: rgba(30, 30, 30, 0.95) !important;
+    }
+  }
+}
+
+// Main app background gradients
+.app {
+  &.light {
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%) !important;
+  }
+
+  &.dark {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+  }
+}
+
+// Remove backgrounds from specific page sections
+.theory-page,
+.derivations-page,
+.calculations-page,
+.visualizations-page,
+.results-page,
+.explanations-page,
+.about-page,
+.home-page {
+  background: transparent !important;
+
+  // All inner content wrappers
+  > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Tables should be clean without container backgrounds
+table {
+  .app.light & {
+    background: transparent !important;
+
+    thead {
+      background: transparent !important;
+
+      th {
+        background: transparent !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        color: #374151 !important;
+      }
+    }
+
+    tbody {
+      background: transparent !important;
+
+      tr {
+        background: transparent !important;
+
+        &:nth-child(even) {
+          background: rgba(0, 0, 0, 0.01) !important;
+        }
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.03) !important;
+        }
+
+        td {
+          background: transparent !important;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.02) !important;
+          color: #1a1a1a !important;
+        }
+      }
+    }
+  }
+
+  .app.dark & {
+    background: transparent !important;
+
+    thead {
+      background: transparent !important;
+
+      th {
+        background: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
+    }
+
+    tbody {
+      background: transparent !important;
+
+      tr {
+        background: transparent !important;
+
+        &:nth-child(even) {
+          background: rgba(255, 255, 255, 0.01) !important;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.03) !important;
+        }
+
+        td {
+          background: transparent !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+          color: rgba(255, 255, 255, 0.8) !important;
+        }
+      }
+    }
+  }
+}
+
+// Clean scrollbars
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  .app.light & {
+    background: rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+
+  .app.dark & {
+    background: rgba(255, 255, 255, 0.2) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+  }
+
+  border-radius: 4px !important;
+}
+
+// Remove any inline style borders on containers
+div[style*="border"],
+section[style*="border"],
+main[style*="border"],
+article[style*="border"],
+aside[style*="border"] {
+  &[class*="container"],
+  &[class*="wrapper"],
+  &[class*="content"] {
+    border: none !important;
+  }
+}
+
+// Stats and values should remain visible
+[class*="stat"],
+[class*="metric"],
+[class*="value"] {
+  // These should not have their text made transparent
+  color: inherit !important;
+
+  .number,
+  .value {
+    color: var(--color-primary, #d97706) !important;
+  }
+
+  .label,
+  .description {
+    .app.light & {
+      color: #737373 !important;
+    }
+
+    .app.dark & {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+  }
+}
+
+// Code blocks should keep their backgrounds
+pre,
+code {
+  // These need backgrounds for readability
+  .app.light & {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+  }
+
+  .app.dark & {
+    background: #0f172a !important;
+    color: #e2e8f0 !important;
+  }
+}

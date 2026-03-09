@@ -2,7 +2,6 @@
   "name": "golden-universe-visualizer",
   "private": true,
   "version": "1.0.2",
-  "type": "module",
   "description": "Interactive visualization and exploration of the Golden Ratio and its mathematical properties",
   "author": "Golden Universe Team",
   "scripts": {

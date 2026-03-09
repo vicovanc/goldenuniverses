@@ -1,5 +1,5 @@
 /**
- * Main Python Engine wrapper using Pyodide Web Worker
+ * Main Python Engine wrapper using backend or Pyodide Web Worker
  * Provides high-level API for Golden Universe calculations
  */
 
@@ -17,9 +17,11 @@ import type {
   PythonEngineStatus,
 } from './pythonTypes';
 import { getCalculationQueue } from './calculationQueue';
+import backendPythonExecutor from '../backendPythonExecutor';
 
 class PythonEngine {
   private worker: Worker | null = null;
+  private useBackend: boolean = false;
   private status: PythonEngineStatus = {
     ready: false,
     loading: false,
@@ -33,11 +35,40 @@ class PythonEngine {
   private initPromise: Promise<void> | null = null;
 
   constructor() {
-    this.initializeWorker();
-    // Start initialization automatically to avoid deadlock
-    this.initialize().catch(err => {
-      console.error('Failed to auto-initialize Python engine:', err);
-    });
+    // Check backend availability first
+    this.checkBackendAndInitialize();
+  }
+
+  private async checkBackendAndInitialize(): Promise<void> {
+    try {
+      // Check if backend is available
+      const serverRunning = await backendPythonExecutor.isServerRunning();
+      this.useBackend = serverRunning;
+
+      if (serverRunning) {
+        console.log('Using backend server for Python execution');
+        this.updateStatus({
+          ready: true,
+          loading: false,
+          loadedPackages: ['numpy', 'scipy', 'mpmath'],
+          version: 'backend',
+        });
+      } else {
+        console.log('Backend not available, initializing Pyodide');
+        this.initializeWorker();
+        // Start initialization automatically to avoid deadlock
+        this.initialize().catch(err => {
+          console.error('Failed to auto-initialize Python engine:', err);
+        });
+      }
+    } catch (error) {
+      console.error('Error checking backend:', error);
+      // Fallback to Pyodide
+      this.initializeWorker();
+      this.initialize().catch(err => {
+        console.error('Failed to auto-initialize Python engine:', err);
+      });
+    }
   }
 
   /**
@@ -196,6 +227,45 @@ class PythonEngine {
    * Execute custom Python code
    */
   async execute(code: string, priority: number = 0): Promise<CalculationResult> {
+    // Use backend if available
+    if (this.useBackend) {
+      try {
+        const result = await backendPythonExecutor.execute(code);
+        if (result.success && result.output) {
+          return {
+            success: true,
+            result: result.output,  // The actual Python output from backend
+            executionTime: result.executionTime,
+          } as CalculationResult;
+        } else if (result.output) {
+          // Even with non-zero exit code, we might have useful output
+          return {
+            success: true,
+            result: result.output,
+            executionTime: result.executionTime,
+            error: result.error,
+          } as CalculationResult;
+        } else {
+          throw new Error(result.error || 'Backend execution failed');
+        }
+      } catch (error) {
+        // On Vercel, the Python serverless function should work
+        // Only fallback to Pyodide for local dev without backend
+        if (error instanceof Error &&
+            error.message.includes('Backend server is not running') &&
+            import.meta.env.DEV) {
+          console.log('Backend not available in dev, falling back to Pyodide');
+          this.useBackend = false;
+          // Fall through to Pyodide
+        } else {
+          // In production or other errors, throw the error
+          console.error('Backend execution error:', error);
+          throw error;
+        }
+      }
+    }
+
+    // Use Pyodide worker
     await this.initialize();
 
     const id = this.generateId();
