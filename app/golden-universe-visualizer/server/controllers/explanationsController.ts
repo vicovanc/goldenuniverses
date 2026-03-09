@@ -11,8 +11,8 @@ const GITHUB_OWNER = process.env.GITHUB_OWNER || 'vicovanc';
 const GITHUB_REPO = process.env.GITHUB_REPO || 'goldenuniverses'; // Public repo with 's'
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
 
-// Path to explanatory folder for local development
-const EXPLANATORY_PATH = path.join(__dirname, CONTENT_BASE_PATH, 'explanatory');
+// Path to explanatory folder for local development - use absolute path
+const EXPLANATORY_PATH = '/Users/Cristiana_1/Documents/Golden Universe/explanatory';
 
 // Map of topics to their markdown files
 const TOPIC_FILES: Record<string, string> = {
@@ -113,7 +113,13 @@ export const explanationsController = {
    */
   getTopic: asyncHandler(async (req: Request, res: Response) => {
     const topicParam = req.params.topic;
+    // Handle Express params that can be string | string[]
     const topic = Array.isArray(topicParam) ? topicParam[0] : topicParam;
+
+    // Ensure topic is a string
+    if (!topic || typeof topic !== 'string') {
+      throw new AppError('Invalid topic parameter', 400);
+    }
 
     try {
       let content = '';
@@ -124,11 +130,13 @@ export const explanationsController = {
         fileName = TOPIC_FILES[topic];
       } else {
         // Try to find by converting topic to filename format
+        // topic is guaranteed to be a string at this point
+        const topicStr = topic as string;
         const possibleNames = [
-          `${topic.toUpperCase().replace(/-/g, '_')}.md`,
-          `WHAT_IS_THE_${topic.toUpperCase().replace(/-/g, '_')}.md`,
-          `README_GU_${topic.toUpperCase().replace(/-/g, '_')}.md`,
-          `GU_${topic.toUpperCase().replace(/-/g, '_')}.md`
+          `${topicStr.toUpperCase().replace(/-/g, '_')}.md`,
+          `WHAT_IS_THE_${topicStr.toUpperCase().replace(/-/g, '_')}.md`,
+          `README_GU_${topicStr.toUpperCase().replace(/-/g, '_')}.md`,
+          `GU_${topicStr.toUpperCase().replace(/-/g, '_')}.md`
         ];
 
         // Check GitHub or local based on environment
