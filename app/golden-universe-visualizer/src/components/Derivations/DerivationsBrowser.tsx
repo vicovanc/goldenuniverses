@@ -115,7 +115,8 @@ export const DerivationsBrowser: React.FC = () => {
     if (derivationId) {
       // When we have a specific derivation ID in the URL
       const derivation = derivations.find(d => d.id.toString() === derivationId);
-      if (derivation) {
+      if (derivation && derivation.id !== selectedDerivation?.id) {
+        console.log('URL changed, updating selected derivation:', derivation.title);
         setSelectedDerivation(derivation);
         // Scroll to top when derivation changes via URL (sidebar navigation)
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -133,7 +134,7 @@ export const DerivationsBrowser: React.FC = () => {
         }, 100); // Small delay to ensure DOM is updated
       }
     }
-  }, [derivationId, derivations]);
+  }, [derivationId, derivations, selectedDerivation]);
 
   // Auto-select first derivation only on initial mount if no derivation is selected
   useEffect(() => {
