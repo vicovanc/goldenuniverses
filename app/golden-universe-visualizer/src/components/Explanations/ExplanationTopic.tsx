@@ -16,13 +16,16 @@ interface ExplanationContent {
   category: string;
 }
 
-// Map topic IDs to actual markdown filenames in /explanatory folder
+// Map topic IDs to actual markdown filenames in public/data/theory folder
 const TOPIC_FILENAME_MAP: Record<string, string> = {
   'consciousness': 'CONSCIOUSNESS.md',
   'electron': 'WHAT_IS_THE_ELECTRON.md',
   'proton': 'WHAT_IS_THE_PROTON.md',
   'gravity': 'WHAT_IS_GRAVITY.md',
 };
+
+// Base path for markdown files (served from public folder)
+const MARKDOWN_BASE_PATH = '/data/theory';
 
 // Fallback content for common topics (only used if files can't be loaded)
 const getFallbackContent = (topicId: string): ExplanationContent | null => {
@@ -484,14 +487,11 @@ const ExplanationTopic: React.FC = () => {
           }
         }
 
-        // Load markdown file from appropriate endpoint
-        // In development: use /explanatory (vite middleware)
-        // In production: use /api/explanatory (vercel serverless function)
-        const isDevelopment = import.meta.env.DEV;
-        const endpoint = isDevelopment
-          ? `/explanatory/${filename}`
-          : `/api/explanatory/${filename}`;
+        // Load markdown file from public folder
+        // Files are in public/data/theory/ and served directly as static assets
+        const endpoint = `${MARKDOWN_BASE_PATH}/${filename}`;
 
+        console.log(`Loading markdown from: ${endpoint}`);
         const response = await fetch(endpoint);
 
         if (response.ok) {
