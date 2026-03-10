@@ -686,11 +686,16 @@
 // ---------------------------------------------
 @media (max-width: $breakpoint-md) {
   .sidebar-new {
-    transform: translateX(-100%);
+    // On mobile, sidebar is hidden by default (when collapsed)
+    &.collapsed {
+      transform: translateX(-100%);
+    }
 
+    // When not collapsed (open), sidebar is visible
     &:not(.collapsed) {
       transform: translateX(0);
       box-shadow: $shadow-2xl;
+      z-index: 300; // Ensure it's above backdrop
     }
   }
 

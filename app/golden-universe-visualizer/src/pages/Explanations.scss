@@ -1140,23 +1140,61 @@
 
 @media (max-width: $breakpoint-md) {
   .explanations-page {
-    padding: $space-4;
+    padding: $space-3; // Smaller padding on mobile
+    padding-top: $space-16; // Extra top padding to avoid menu button overlap
     // Margin handled by MainLayout - DO NOT set margin-left here
 
     .explanations-home {
-      .explanations-header h1 {
-        font-size: $text-3xl;
+      .explanations-header {
+        margin-bottom: $space-8;
+
+        h1 {
+          font-size: $text-2xl; // Smaller heading
+        }
+
+        p {
+          font-size: $text-sm; // Smaller text
+        }
       }
 
       .categories-grid {
         grid-template-columns: 1fr;
+        gap: $space-4; // Tighter spacing
+      }
+
+      .explanation-topics {
+        margin-top: $space-12;
+
+        .topics-grid {
+          gap: $space-4;
+        }
       }
     }
 
     .explanations-content {
+      h2 {
+        font-size: $text-2xl; // Smaller headings
+      }
+
+      .documents-section {
+        .documents-container {
+          gap: $space-8;
+
+          .documents-sidebar {
+            width: 100%;
+            min-width: 100%;
+          }
+        }
+      }
+
       .calculations-section .calculations-grid,
       .validations-section .validations-grid {
         grid-template-columns: 1fr;
+        gap: $space-4;
+      }
+
+      .laws-section .laws-grid {
+        gap: $space-4;
       }
     }
   }

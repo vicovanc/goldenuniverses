@@ -51,6 +51,38 @@ function serveDerivations(mode: string): Plugin | null {
   };
 }
 
+// Custom plugin to serve explanatory files in development
+function serveExplanatory(mode: string): Plugin | null {
+  // Only serve local files in development
+  if (mode !== 'development') {
+    return null;
+  }
+
+  return {
+    name: 'serve-explanatory',
+    configureServer(server) {
+      server.middlewares.use('/explanatory', (req, res, next) => {
+        const url = req.url || '';
+        // Look for explanatory files in the parent directory structure
+        const explanatoryPath = path.join(__dirname, '..', '..', 'explanatory', url);
+
+        if (fs.existsSync(explanatoryPath) && fs.statSync(explanatoryPath).isFile()) {
+          // Set appropriate headers
+          res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          res.setHeader('Cache-Control', 'no-cache');
+
+          // Send the file
+          const content = fs.readFileSync(explanatoryPath, 'utf-8');
+          res.end(content);
+        } else {
+          next();
+        }
+      });
+    }
+  };
+}
+
 // Custom plugin to fix CommonJS/ESM issues
 function commonjsFix(): Plugin {
   return {
@@ -126,6 +158,7 @@ export default defineConfig(({ mode }) => {
   return {
   plugins: [
     serveDerivations(mode),
+    serveExplanatory(mode),
     commonjsFix(),
     react(),
     // Gzip compression for production

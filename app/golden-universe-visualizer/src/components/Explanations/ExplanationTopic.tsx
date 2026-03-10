@@ -16,7 +16,15 @@ interface ExplanationContent {
   category: string;
 }
 
-// Fallback content for common topics
+// Map topic IDs to actual markdown filenames in /explanatory folder
+const TOPIC_FILENAME_MAP: Record<string, string> = {
+  'consciousness': 'CONSCIOUSNESS.md',
+  'electron': 'WHAT_IS_THE_ELECTRON.md',
+  'proton': 'WHAT_IS_THE_PROTON.md',
+  'gravity': 'WHAT_IS_GRAVITY.md',
+};
+
+// Fallback content for common topics (only used if files can't be loaded)
 const getFallbackContent = (topicId: string): ExplanationContent | null => {
   const fallbacks: Record<string, ExplanationContent> = {
     consciousness: {
@@ -458,26 +466,54 @@ const ExplanationTopic: React.FC = () => {
       setError(null);
 
       try {
-        // Load explanation from API endpoint (which reads from /explanatory folder)
-        const response = await fetch(`/api/explanations/topic/${topic}`);
+        // Get the filename for this topic
+        const filename = TOPIC_FILENAME_MAP[topic];
 
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success && data.data) {
-            setContent({
-              id: data.data.id,
-              title: data.data.title,
-              fileName: data.data.fileName,
-              content: data.data.content,
-              category: data.data.category || 'Explanations'
-            });
-          } else {
-            throw new Error('Invalid response from API');
-          }
-        } else {
-          // Fall back to hardcoded content if API fails
+        if (!filename) {
+          console.warn(`No filename mapping for topic: ${topic}`);
+          // Try fallback content
           const fallbackContent = getFallbackContent(topic);
           if (fallbackContent) {
+            setContent(fallbackContent);
+            setLoading(false);
+            return;
+          } else {
+            setError(`Content for topic "${topic}" is not available yet.`);
+            setLoading(false);
+            return;
+          }
+        }
+
+        // Load markdown file from appropriate endpoint
+        // In development: use /explanatory (vite middleware)
+        // In production: use /api/explanatory (vercel serverless function)
+        const isDevelopment = import.meta.env.DEV;
+        const endpoint = isDevelopment
+          ? `/explanatory/${filename}`
+          : `/api/explanatory/${filename}`;
+
+        const response = await fetch(endpoint);
+
+        if (response.ok) {
+          const markdownContent = await response.text();
+
+          // Extract title from first heading if possible
+          const titleMatch = markdownContent.match(/^#\s+(.+)$/m);
+          const title = titleMatch ? titleMatch[1] : topic.charAt(0).toUpperCase() + topic.slice(1);
+
+          setContent({
+            id: topic,
+            title: title,
+            fileName: filename,
+            content: markdownContent,
+            category: 'Explanations'
+          });
+        } else {
+          console.error(`Failed to load ${filename}: ${response.status}`);
+          // Fall back to hardcoded content if file fails to load
+          const fallbackContent = getFallbackContent(topic);
+          if (fallbackContent) {
+            console.log(`Using fallback content for ${topic}`);
             setContent(fallbackContent);
           } else {
             setError(`Content for topic "${topic}" is not available yet.`);
@@ -488,6 +524,7 @@ const ExplanationTopic: React.FC = () => {
         // Try fallback content on error
         const fallbackContent = getFallbackContent(topic);
         if (fallbackContent) {
+          console.log(`Using fallback content for ${topic} after error`);
           setContent(fallbackContent);
         } else {
           setError(`Failed to load explanation for "${topic}"`);
