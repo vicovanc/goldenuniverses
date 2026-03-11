@@ -434,14 +434,30 @@ function preprocessPythonCode(code: string): string {
   if (hasFileVariable) {
     console.warn('__file__ variable detected - applying comprehensive fix');
 
+    // Extract any __future__ imports FIRST (before any patches)
+    // These MUST be at the beginning of the file per PEP 236
+    const futureImportRegex = /^from\s+__future__\s+import\s+.+$/gm;
+    const futureImports = processedCode.match(futureImportRegex) || [];
+
+    if (futureImports.length > 0) {
+      // Remove __future__ imports from their current position (including the newline)
+      const beforeReplace = processedCode.split('\n').slice(0, 70).join('\n');
+      processedCode = processedCode.replace(/^from\s+__future__\s+import\s+.+$\n?/gm, '');
+      const afterReplace = processedCode.split('\n').slice(0, 70).join('\n');
+      console.log(`Extracted ${futureImports.length} __future__ import(s):`, futureImports);
+      console.log('Code BEFORE removing __future__:', beforeReplace);
+      console.log('Code AFTER removing __future__:', afterReplace);
+    }
+
     // Add a comprehensive fix at the beginning of the code
     const fileCompatPatch = `
 # Pyodide compatibility patch for __file__ variable
 import os
 import sys
 
-# Define __file__ as a module-level variable
-__file__ = '/pyodide/script.py'
+# Define __file__ as a module-level variable with enough parent directories
+# to support Path(__file__).resolve().parents[2] type access
+__file__ = '/golden-universe/derivations/current/script.py'
 
 # Patch os.path operations to handle our placeholder __file__
 if not hasattr(os.path, '__pyodide_patched__'):
@@ -462,8 +478,8 @@ if not hasattr(os.path, '__pyodide_patched__'):
     def new_abspath(x):
         return __file__ if x == __file__ else _orig_abspath(x)
 
-    def new_realpath(x):
-        return __file__ if x == __file__ else _orig_realpath(x)
+    def new_realpath(x, *args, **kwargs):
+        return __file__ if x == __file__ else _orig_realpath(x, *args, **kwargs)
 
     def new_exists(x):
         return True if x == __file__ else _orig_exists(x)
@@ -487,17 +503,36 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 `;
 
-    // Prepend the compatibility patch
-    processedCode = fileCompatPatch + processedCode;
+    // Assemble final code: __future__ imports first, then patch, then code
+    if (futureImports.length > 0) {
+      processedCode = futureImports.join('\n') + '\n\n' + fileCompatPatch + processedCode;
+      console.log(`Moved ${futureImports.length} __future__ import(s) to beginning of file`);
+    } else {
+      // No __future__ imports, just prepend the compatibility patch
+      processedCode = fileCompatPatch + processedCode;
+    }
 
     // Don't do additional replacements as they can cause syntax errors
   }
 
   // Remove sys.path.append lines that try to access parent directories
-  processedCode = processedCode.replace(
-    /sys\.path\.append\([^)]*\)\s*\n?/g,
-    ''
-  );
+  // Match entire lines containing sys.path.append (simpler and safer)
+  const beforeSysPath = processedCode;
+  const codeLines = processedCode.split('\n');
+  const filteredCodeLines = codeLines.filter(line => {
+    const trimmed = line.trim();
+    // Remove lines that are just sys.path.append(...) calls
+    if (trimmed.startsWith('sys.path.append(') || trimmed.includes('sys.path.append(')) {
+      console.log('Removing sys.path.append line:', trimmed.substring(0, 80));
+      return false;
+    }
+    return true;
+  });
+  processedCode = filteredCodeLines.join('\n');
+
+  if (beforeSysPath !== processedCode) {
+    console.log('sys.path.append calls were removed');
+  }
 
   return processedCode;
 }
@@ -553,6 +588,13 @@ async function executePython(code: string, id: string): Promise<void> {
 
     const executionTime = Date.now() - startTime;
 
+    console.log('Python execution completed successfully');
+    console.log('Result:', result);
+    console.log('Stdout captured:', stdout.length, 'characters');
+    if (stdout) {
+      console.log('First 500 chars of stdout:', stdout.substring(0, 500));
+    }
+
     self.postMessage({
       type: 'result',
       id,
@@ -575,6 +617,10 @@ async function executePython(code: string, id: string): Promise<void> {
     if (errorMessage.includes('SyntaxError') && errorMessage.includes('^^^^')) {
       hint = 'This appears to be a Python 3.10+ syntax issue. The code may use features not yet supported.';
       console.error('Syntax error detected - may be Python 3.10+ feature incompatibility');
+    } else if (errorMessage.includes('emscripten does not support processes') ||
+               errorMessage.includes('subprocess')) {
+      hint = 'This script uses subprocess to run other Python scripts, which is not supported in the browser environment. This type of orchestrator script needs to run on a backend server.';
+      console.error('Subprocess detected - not supported in Pyodide/browser');
     }
 
     self.postMessage({

@@ -93,13 +93,22 @@
       @include glass-card;
       background: rgba(0, 0, 0, 0.4);
       padding: $spacing-lg;
+      padding-right: $spacing-xl;  // Extra padding on right to prevent cutoff
       overflow-x: auto;
+      overflow-y: auto;
+      max-height: 400px;
+      min-height: 200px;
       font-family: 'Courier New', monospace;
       font-size: $font-size-sm;
-      line-height: $line-height-relaxed;
+      line-height: 1.8;  // Increased for better readability
+      word-break: break-word;  // Break long lines
+      overflow-wrap: break-word;  // Wrap long words
 
       code {
         color: $text-primary;
+        line-height: 1.8;
+        display: block;  // Ensure proper rendering
+        white-space: pre-wrap;  // Preserve formatting but allow wrapping
       }
     }
   }
@@ -164,15 +173,23 @@
       border: 1px solid rgba(201, 168, 78, 0.2);
       border-radius: 4px;
       padding: 1rem;
+      padding-right: 1.5rem;  // Extra padding on right to prevent cutoff
       overflow-x: auto;
+      overflow-y: auto;
+      max-height: 600px;
+      min-height: 300px;
       font-family: 'Courier New', monospace;
       font-size: 0.9rem;
-      line-height: 1.5;
+      line-height: 1.8;  // Increased for better readability
       white-space: pre-wrap;  // Preserve line breaks and wrap long lines
       word-wrap: break-word;  // Break long words if needed
+      overflow-wrap: break-word;  // Additional wrap support
 
       code {
         color: #a8e6a1;
+        line-height: 1.8;
+        display: block;  // Ensure proper rendering
+        white-space: pre-wrap;  // Preserve formatting
       }
     }
   }

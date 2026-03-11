@@ -335,11 +335,9 @@
     @include glass-card;
     padding: $space-8;
     min-height: 800px;
-    height: calc(100vh - 200px);  // Take up most of viewport height
-    max-height: 1200px;  // Maximum height limit
+    height: auto;  // Let content determine height
     max-width: 100%;  // Respect container constraints
     overflow-x: hidden;  // Prevent horizontal overflow
-    overflow-y: auto;  // Allow vertical scrolling if content is long
     animation: slideIn $transition-slower ease-out;
 
     @keyframes slideIn {

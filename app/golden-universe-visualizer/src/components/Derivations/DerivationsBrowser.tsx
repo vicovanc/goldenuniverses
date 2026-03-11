@@ -115,7 +115,8 @@ export const DerivationsBrowser: React.FC = () => {
     if (derivationId) {
       // When we have a specific derivation ID in the URL
       const derivation = derivations.find(d => d.id.toString() === derivationId);
-      if (derivation && derivation.id !== selectedDerivation?.id) {
+      const currentId = selectedDerivation?.id ?? null;
+      if (derivation && derivation.id !== currentId) {
         console.log('URL changed, updating selected derivation:', derivation.title);
         setSelectedDerivation(derivation);
         // Scroll to top when derivation changes via URL (sidebar navigation)
@@ -134,7 +135,8 @@ export const DerivationsBrowser: React.FC = () => {
         }, 100); // Small delay to ensure DOM is updated
       }
     }
-  }, [derivationId, derivations, selectedDerivation]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [derivationId ?? '', selectedDerivation?.id ?? '']); // Use empty string as fallback to keep array size constant
 
   // Auto-select first derivation only on initial mount if no derivation is selected
   useEffect(() => {
@@ -143,7 +145,8 @@ export const DerivationsBrowser: React.FC = () => {
       setSelectedDerivation(firstDerivation);
       navigate(`/derivations/${firstDerivation.id}`, { replace: true });
     }
-  }, [derivations.length]); // Only run when derivations are first loaded
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [derivations.length]); // Only run when derivations first load - other dependencies checked inside condition
 
   // Calculate categories dynamically from fetched derivations
   const categories = React.useMemo(() => {

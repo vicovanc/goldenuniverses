@@ -77,14 +77,18 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
       const engine = getPythonEngine();
       const result = await engine.execute(code);
 
-      if (result.result) {
-        // Check if result is already a string (from backend) or needs stringification
+      // Priority: output (stdout) > result (return value)
+      if (result.output && result.output.trim()) {
+        // Use captured stdout
+        setOutput(result.output);
+      } else if (result.result) {
+        // Fallback to result if no stdout but there's a return value
         const output = typeof result.result === 'string'
           ? result.result
           : JSON.stringify(result.result, null, 2);
         setOutput(output);
       } else if (result.success) {
-        // This should not happen, but handle gracefully
+        // Execution succeeded but produced no output
         setOutput('Execution completed (no output captured)');
       } else {
         setOutput('No output available');
