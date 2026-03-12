@@ -392,11 +392,11 @@
         "path": "derivations/04_COSMOLOGY/README.md",
         "filename": "README.md",
         "title": "Cosmology Derivations — Golden Universe Theory",
-        "content": "# Cosmology Derivations — Golden Universe Theory\n\n**Status**: First-principles derivation (February 2026)\n\n---\n\n## Derivation Chain (Non-Circular)\n\n```\nZ_1 = [M_P/(4*sqrt(pi))] * e^(i*2*pi/phi^2)   [Genesis vector]\n  --> X_0 = |Re(Z_1)|                            [Initial clock value]\n    --> V_X(X) plateau potential                  [Slow-roll driver]\n      --> epsilon_V, eta_V                        [Slow-roll parameters]\n        --> n_s, r, A_s                           [CMB observables]\n          --> V_0, H_inf, N_efolds                [Inflation scale]\n            --> Gamma, T_reh                      [Reheating]\n              --> T(n), T_CMB                     [Thermal history]\n\nZ_1 phase theta = 2*pi/phi^2                     [Golden angle]\n  --> CP violation ~ |sin(theta)|                 [Baryogenesis]\n    --> eta_B                                     [Baryon asymmetry]\n\nZ_1 torsion                                      [Primordial twist]\n  --> TB/EB CMB polarization                      [Falsifiable prediction]\n```\n\n## File Inventory\n\n| File | Description | Status |\n|------|-------------|--------|\n| `02_slow_roll_inflation.py` | Inflation from X-field: V_X, epsilon, eta, n_s, r, A_s, N_efolds | First-principles |\n| `03_reheating_and_plasma.py` | Reheating from L_int: Gamma, T_reh, QGP condition | Bounds (coupling open) |\n| `04_thermal_history_and_cmb.py` | T(n) bridge, Saha equation, T_CMB prediction | First-principles |\n| `05_baryon_asymmetry.py` | CP violation from theta_genesis, eta_B | Order-of-magnitude |\n| `06_cosmological_constant.py` | Str(a_0)=3, vacuum energy assessment | Honest (CC not solved) |\n| `07_dark_matter_dark_energy.py` | DM/DE mechanisms from GU | Mechanisms only |\n| `08_cmb_polarization_prediction.py` | TB/EB parity-violating prediction | UNIQUE GU PREDICTION |\n| `09_cosmology_scorecard.py` | Complete honest summary of all results | Summary |\n\n### Archived\n| File | Where | Reason |\n|------|-------|--------|\n| `01_cosmological_parameters.py` | `archive/deprecated_cosmology/` | Narrative sketch with fitted inputs; replaced by first-principles derivations |\n\n## Key Results\n\n1. **n_s** predicted from plateau slow-roll (compare to Planck 0.9649 +/- 0.0042)\n2. **r** predicted < 0.036 (consistent with BICEP/Planck bound)\n3. **T_CMB** derived from GU m_e and alpha_EM via Saha equation\n4. **eta_B** order-of-magnitude from theta_genesis CP violation\n5. **TB/EB nonzero** — unique falsifiable prediction (LiteBIRD)\n\n## Cross-References\n\n| Script | Depends On | Feeds Into |\n|--------|-----------|------------|\n| `02_slow_roll_inflation.py` | `gu_constants.py`, `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | Scripts 03-09 |\n| `04_thermal_history_and_cmb.py` | `02`, `03`, GU-derived m_e, alpha_EM | `09_cosmology_scorecard.py` |\n| `08_cmb_polarization_prediction.py` | `gu_constants.py` (Z_1, theta) | `09_cosmology_scorecard.py` |\n\n## Equation Source\n\nPrimary: `theory/GU_Formation_0_EN.md` — Slow-roll cosmology closure derivation\nSupporting: `theory/The Golden Universe Formation.md` — Genesis, asymmetries, CMB polarization prediction\n",
-        "wordCount": 342,
+        "content": "# Cosmology Derivations — Golden Universe Theory\n\n**Status**: First-principles pipeline with gate-governed closure statuses (February 2026)\n\n---\n\n## Derivation Chain (Non-Circular)\n\n```\nZ_1 = [M_P/(4*sqrt(pi))] * e^(i*2*pi/phi^2)   [Genesis vector]\n  --> X_0 = |Re(Z_1)|                            [Initial clock value]\n    --> V_X(X) plateau potential                  [Slow-roll driver]\n      --> epsilon_V, eta_V                        [Slow-roll parameters]\n        --> n_s, r, A_s                           [CMB observables]\n          --> V_0, H_inf, N_efolds                [Inflation scale]\n            --> Gamma, T_reh                      [Reheating]\n              --> T(n), T_CMB                     [Thermal history]\n\nZ_1 phase theta = 2*pi/phi^2                     [Golden angle]\n  --> CP violation ~ |sin(theta)|                 [Baryogenesis]\n    --> eta_B                                     [Baryon asymmetry]\n\nZ_1 torsion                                      [Primordial twist]\n  --> TB/EB CMB polarization                      [Falsifiable prediction]\n```\n\n## File Inventory\n\n| File | Description | Status |\n|------|-------------|--------|\n| `02_slow_roll_inflation.py` | Inflation from X-field: V_X, epsilon, eta, n_s, r, A_s, N_efolds | First-principles |\n| `03_reheating_and_plasma.py` | Reheating from L_int: Gamma, T_reh, QGP condition | Bounds (coupling open) |\n| `04_thermal_history_and_cmb.py` | T(n) bridge, Saha equation, T_CMB prediction | First-principles |\n| `05_baryon_asymmetry.py` | CP violation from theta_genesis, eta_B | Order-of-magnitude |\n| `06_cosmological_constant.py` | Str(a_0)=3, vacuum energy assessment | Honest (CC not solved) |\n| `07_dark_matter_dark_energy.py` | DM/DE mechanisms from GU | Mechanisms only |\n| `08_cmb_polarization_prediction.py` | TB/EB parity-violating prediction | UNIQUE GU PREDICTION |\n| `09_cosmology_scorecard.py` | Complete honest summary of all results | Summary |\n\n### Archived\n| File | Where | Reason |\n|------|-------|--------|\n| `01_cosmological_parameters.py` | `archive/deprecated_cosmology/` | Narrative sketch with fitted inputs; replaced by first-principles derivations |\n\n## Key Results\n\n1. **n_s** predicted from plateau slow-roll (compare to Planck 0.9649 +/- 0.0042)\n2. **r** predicted < 0.036 (consistent with BICEP/Planck bound)\n3. **T_CMB** derived from GU m_e and alpha_EM via Saha equation\n4. **eta_B** order-of-magnitude from theta_genesis CP violation\n5. **TB/EB nonzero** — unique falsifiable prediction (LiteBIRD)\n\n## Cross-References\n\n| Script | Depends On | Feeds Into |\n|--------|-----------|------------|\n| `02_slow_roll_inflation.py` | `gu_constants.py`, `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | Scripts 03-09 |\n| `04_thermal_history_and_cmb.py` | `02`, `03`, GU-derived m_e, alpha_EM | `09_cosmology_scorecard.py` |\n| `08_cmb_polarization_prediction.py` | `gu_constants.py` (Z_1, theta) | `09_cosmology_scorecard.py` |\n\n## Equation Source\n\nPrimary: `theory/GU_Formation_0_EN.md` — Slow-roll cosmology closure derivation\nSupporting: `theory/The Golden Universe Formation.md` — Genesis, asymmetries, CMB polarization prediction\n\n## Open First-Principles Closure Targets (Where To Explore Next)\n\nThe following items remain open for full first-principles cosmological closure and should be explored in these files:\n\n1. **Canonical `g_{ΩX}(X)` (interaction profile)**\n   - Primary implementation target: `10_coupled_ode_system.py`\n   - Cross-check and reduced variants: `11_memory_corrected_inflation.py`\n   - Reheating consistency constraints: `03_reheating_and_plasma.py`\n\n2. **Canonical `beta(X)` (memory decay/rate function)**\n   - Memory dynamics insertion point: `11_memory_corrected_inflation.py`\n   - Coupled dynamics validation: `10_coupled_ode_system.py`\n   - Thermal-history impact check: `04_thermal_history_and_cmb.py`\n\n3. **Canonical `lambda_rec(X)` (or constrained `lambda_rec/beta`)**\n   - Memory-force implementation: `11_memory_corrected_inflation.py`\n   - Inflation observable propagation (`n_s`, `r`, `A_s`): `10_coupled_ode_system.py`\n   - Downstream consistency in baryogenesis/thermal sectors: `05_baryon_asymmetry.py`, `04_thermal_history_and_cmb.py`\n\n4. **Uniquely fixed canonical `V_X(X)` from `L_total`**\n   - Candidate-family derivation module: `../43_VX_FROM_LTOTAL/01_vx_from_ltotal.py`\n   - Runtime integration into inflation outputs: `10_coupled_ode_system.py`\n   - Gate-coupled closure decision logic: `15_closure_function_gates.py`\n\n## Memory Open-Item Implementations (Completed Artifacts)\n\n1. **Dark scattering coefficient replacement**\n   - `../06_MEMORY_VS_OTHERS/01_dark_scattering_first_principles.py`\n   - Shared model: `../06_MEMORY_VS_OTHERS/memory_open_items_models.py`\n\n2. **Full memory-coupled Boltzmann network**\n   - `../06_MEMORY_VS_OTHERS/02_memory_boltzmann_network.py`\n   - Wired to production baryogenesis: `05_baryon_asymmetry.py`\n\n3. **Recombination extension (He + matter decoupling + memory)**\n   - `../42_RECOMBINATION_HELIUM_DECOUPLING/01_recombination_extension.py`\n   - Wired to production thermal history: `04_thermal_history_and_cmb.py`\n\n4. **`V_X` from `L_total` candidate/gate path**\n   - `../43_VX_FROM_LTOTAL/01_vx_from_ltotal.py`\n   - Integrated with `10_coupled_ode_system.py` + `15_closure_function_gates.py`\n\n### Guidance\n- Keep all closure attempts explicitly labeled as `derived`, `constrained`, or `chosen`.\n- Propagate closure choices into `09_cosmology_scorecard.py` so observational impact is transparent.\n- Mirror final closure decisions in `theory/GU_COSMOLOGICAL_CLOSURE.md` and `theory/theory-laws.md`.\n\n### Current Gate State (from machine diagnostics)\n\n- `beta(X)`: `provisional`\n- `lambda_rec(X)`: `provisional_ratio_closed`\n- `g_{ΩX}(X)`: `constrained`\n- `V_X(X)`: `chosen_non_unique`\n- Full-ODE identifiability: rank-deficient (`2/5`), so DERIVED promotion is blocked.\n- Function-level falsification matrix is tracked in `15_closure_function_gates.py` output.\n\nMachine outputs:\n- `derivations/04_COSMOLOGY/closure_identifiability_report.json`\n- `derivations/04_COSMOLOGY/closure_function_gates_report.json`\n",
+        "wordCount": 606,
         "equations": [],
         "createdAt": "2026-02-22T21:04:13.113Z",
-        "modifiedAt": "2026-02-22T21:04:13.113Z"
+        "modifiedAt": "2026-03-04T20:06:10.746Z"
       },
       "pythonScripts": [
         {
@@ -481,10 +481,10 @@
               "lineNumber": 2
             }
           ],
-          "lineCount": 253,
-          "contentHash": "97662ff4239e0c9d0d50350294aaabc5",
+          "lineCount": 264,
+          "contentHash": "8deb8ef041177c34cb2bbd561fafd1e9",
           "createdAt": "2026-02-22T21:06:59.026Z",
-          "modifiedAt": "2026-02-22T22:29:33.147Z"
+          "modifiedAt": "2026-03-04T18:16:23.642Z"
         },
         {
           "id": "e7bba06de64cda9f3933d83a6263ae7c",
@@ -518,10 +518,10 @@
               "lineNumber": 5
             }
           ],
-          "lineCount": 495,
-          "contentHash": "851fb85d4f2feb21bad11d1a01931695",
+          "lineCount": 548,
+          "contentHash": "a5bb91bf0152547dcbc4052897376648",
           "createdAt": "2026-02-22T21:08:48.843Z",
-          "modifiedAt": "2026-02-23T13:11:58.307Z"
+          "modifiedAt": "2026-03-04T20:00:12.597Z"
         },
         {
           "id": "da1a4a146d411c3e095e740725acbad1",
@@ -529,10 +529,10 @@
           "filename": "05_baryon_asymmetry.py",
           "folderPath": "derivations/04_COSMOLOGY",
           "functions": [],
-          "lineCount": 339,
-          "contentHash": "340cac1591824b79d137b7c8b450e12e",
+          "lineCount": 318,
+          "contentHash": "55a9e35f1e60ea2720d15ab281822625",
           "createdAt": "2026-02-22T21:13:19.175Z",
-          "modifiedAt": "2026-02-22T23:08:58.352Z"
+          "modifiedAt": "2026-03-04T20:00:12.597Z"
         },
         {
           "id": "ca2ac0afe05a0b1b79fd7ae8a799fc9f",
@@ -579,10 +579,10 @@
           "filename": "09_cosmology_scorecard.py",
           "folderPath": "derivations/04_COSMOLOGY",
           "functions": [],
-          "lineCount": 405,
-          "contentHash": "c58de56877ba1f66b8e93eefd83fe381",
+          "lineCount": 424,
+          "contentHash": "8a5d0ea8869a02e4bae9abfe78d0410b",
           "createdAt": "2026-02-22T21:19:01.737Z",
-          "modifiedAt": "2026-02-23T22:10:35.757Z"
+          "modifiedAt": "2026-03-04T20:07:26.058Z"
         },
         {
           "id": "6fa859722789bd6771bd0075201383e6",
@@ -591,135 +591,175 @@
           "folderPath": "derivations/04_COSMOLOGY",
           "functions": [
             {
+              "name": "_sanitize_closure_mode",
+              "signature": "def _sanitize_closure_mode(closure_mode=None):",
+              "lineNumber": 1
+            },
+            {
+              "name": "beta_X",
+              "signature": "def beta_X(X, closure_mode=None):",
+              "lineNumber": 2
+            },
+            {
+              "name": "lambda_rec_X",
+              "signature": "def lambda_rec_X(X, closure_mode=None):",
+              "lineNumber": 3
+            },
+            {
+              "name": "g_OmegaX_X",
+              "signature": "def g_OmegaX_X(X, closure_mode=None):",
+              "lineNumber": 4
+            },
+            {
+              "name": "H_Omega_history",
+              "signature": "def H_Omega_history(X, regime=\"cosmology\"):",
+              "lineNumber": 5
+            },
+            {
+              "name": "dg_OmegaX_dX",
+              "signature": "def dg_OmegaX_dX(X, closure_mode=None, dX=None):",
+              "lineNumber": 6
+            },
+            {
               "name": "h_X",
               "signature": "def h_X(X):",
-              "lineNumber": 1
+              "lineNumber": 7
             },
             {
               "name": "dh_dX",
               "signature": "def dh_dX(X, dX=None):",
-              "lineNumber": 2
-            },
-            {
-              "name": "__init__",
-              "signature": "def __init__(self, N_target=70.5, A_s=2.1e-9):",
-              "lineNumber": 3
-            },
-            {
-              "name": "V",
-              "signature": "def V(self, X):",
-              "lineNumber": 4
-            },
-            {
-              "name": "dV",
-              "signature": "def dV(self, X):",
-              "lineNumber": 5
-            },
-            {
-              "name": "ddV",
-              "signature": "def ddV(self, X):",
-              "lineNumber": 6
-            },
-            {
-              "name": "__init__",
-              "signature": "def __init__(self, N_target=70.5, A_s=2.1e-9):",
-              "lineNumber": 7
-            },
-            {
-              "name": "V",
-              "signature": "def V(self, X):",
               "lineNumber": 8
             },
             {
-              "name": "dV",
-              "signature": "def dV(self, X):",
-              "lineNumber": 9
-            },
-            {
-              "name": "ddV",
-              "signature": "def ddV(self, X):",
-              "lineNumber": 10
-            },
-            {
               "name": "__init__",
               "signature": "def __init__(self, N_target=70.5, A_s=2.1e-9):",
-              "lineNumber": 11
+              "lineNumber": 9
             },
             {
               "name": "V",
               "signature": "def V(self, X):",
-              "lineNumber": 12
+              "lineNumber": 10
             },
             {
               "name": "dV",
               "signature": "def dV(self, X):",
-              "lineNumber": 13
+              "lineNumber": 11
             },
             {
               "name": "ddV",
               "signature": "def ddV(self, X):",
+              "lineNumber": 12
+            },
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, N_target=70.5, A_s=2.1e-9):",
+              "lineNumber": 13
+            },
+            {
+              "name": "V",
+              "signature": "def V(self, X):",
               "lineNumber": 14
             },
             {
-              "name": "V_eff",
-              "signature": "def V_eff(X, M, pot):",
+              "name": "dV",
+              "signature": "def dV(self, X):",
               "lineNumber": 15
             },
             {
-              "name": "F_int",
-              "signature": "def F_int(X):",
+              "name": "ddV",
+              "signature": "def ddV(self, X):",
               "lineNumber": 16
             },
             {
-              "name": "F_mem",
-              "signature": "def F_mem(X, M):",
+              "name": "__init__",
+              "signature": "def __init__(self, N_target=70.5, A_s=2.1e-9):",
               "lineNumber": 17
+            },
+            {
+              "name": "V",
+              "signature": "def V(self, X):",
+              "lineNumber": 18
+            },
+            {
+              "name": "dV",
+              "signature": "def dV(self, X):",
+              "lineNumber": 19
+            },
+            {
+              "name": "ddV",
+              "signature": "def ddV(self, X):",
+              "lineNumber": 20
+            },
+            {
+              "name": "V_X",
+              "signature": "def V_X(X, closure_mode=None, pot=None):",
+              "lineNumber": 21
+            },
+            {
+              "name": "V_eff",
+              "signature": "def V_eff(X, M, pot=None, closure_mode=None):",
+              "lineNumber": 22
+            },
+            {
+              "name": "F_int",
+              "signature": "def F_int(X, closure_mode=None):",
+              "lineNumber": 23
+            },
+            {
+              "name": "F_mem",
+              "signature": "def F_mem(X, M, closure_mode=None):",
+              "lineNumber": 24
             },
             {
               "name": "slow_roll_odes",
               "signature": "def slow_roll_odes(N, y, pot):",
-              "lineNumber": 18
+              "lineNumber": 25
             },
             {
               "name": "full_odes",
               "signature": "def full_odes(N, y, pot):",
-              "lineNumber": 19
+              "lineNumber": 26
             },
             {
               "name": "compute_slow_roll",
               "signature": "def compute_slow_roll(X, M_mem, pot):",
-              "lineNumber": 20
+              "lineNumber": 27
             },
             {
               "name": "compute_eternal_inflation_metrics",
               "signature": "def compute_eternal_inflation_metrics(X, M_mem, pot):",
-              "lineNumber": 21
+              "lineNumber": 28
             },
             {
               "name": "_make_epsilon_event",
               "signature": "def _make_epsilon_event():",
-              "lineNumber": 22
+              "lineNumber": 29
             },
             {
               "name": "event",
               "signature": "def event(N, y, pot):",
-              "lineNumber": 23
+              "lineNumber": 30
             },
             {
               "name": "run_inflation",
               "signature": "def run_inflation(pot, X_init=None, N_max=300, mode='slow_roll'):",
-              "lineNumber": 24
+              "lineNumber": 31
             },
             {
               "name": "calibrate_potential",
               "signature": "def calibrate_potential(PotClass, A_s_target=2.1e-9, N_target=70.5,\n                        max_iter=10, tol=0.01):",
-              "lineNumber": 25
+              "lineNumber": 32
+            },
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 33
             }
           ],
-          "lineCount": 705,
-          "contentHash": "f6d45adcc3263ddacba227ea657e08e5",
+          "lineCount": 754,
+          "contentHash": "2efc9a55f15c2626fdf085a5552b2fda",
           "createdAt": "2026-02-22T22:18:53.077Z",
-          "modifiedAt": "2026-02-23T22:10:03.846Z"
+          "modifiedAt": "2026-03-04T20:06:10.746Z"
         },
         {
           "id": "bf682fcaf44f0444474b1cca3d44db4d",
@@ -727,10 +767,10 @@
           "filename": "11_memory_corrected_inflation.py",
           "folderPath": "derivations/04_COSMOLOGY",
           "functions": [],
-          "lineCount": 252,
-          "contentHash": "45d19261a49491b2618cfadccb3e33b1",
+          "lineCount": 258,
+          "contentHash": "bfc97a674411584a0566ae66b1b749b8",
           "createdAt": "2026-02-22T22:22:44.638Z",
-          "modifiedAt": "2026-02-22T22:22:44.638Z"
+          "modifiedAt": "2026-03-04T18:16:23.642Z"
         },
         {
           "id": "debe9a30aa4785e2e31212938114fb65",
@@ -749,10 +789,10 @@
               "lineNumber": 2
             }
           ],
-          "lineCount": 223,
-          "contentHash": "9b3a33668b39edec55d238c10c40ff68",
+          "lineCount": 240,
+          "contentHash": "c1b30934a48032e87a92bccedd112f96",
           "createdAt": "2026-02-22T22:23:37.808Z",
-          "modifiedAt": "2026-02-22T22:24:09.594Z"
+          "modifiedAt": "2026-03-04T18:15:09.034Z"
         },
         {
           "id": "ae5f06045d45c7da29ee9efda89f80c7",
@@ -760,17 +800,136 @@
           "filename": "13_dark_matter_abundance.py",
           "folderPath": "derivations/04_COSMOLOGY",
           "functions": [],
-          "lineCount": 339,
-          "contentHash": "3f3ac216c3088bd0c97a675fda1fe408",
+          "lineCount": 357,
+          "contentHash": "b12231da3a84fc89b7c85b45d90c777f",
           "createdAt": "2026-02-22T22:25:37.806Z",
-          "modifiedAt": "2026-02-22T23:01:21.737Z"
+          "modifiedAt": "2026-03-04T20:00:12.597Z"
+        },
+        {
+          "id": "9592e54775495ce019c4e96bd9bd6b8a",
+          "path": "derivations/04_COSMOLOGY/14_closure_identifiability.py",
+          "filename": "14_closure_identifiability.py",
+          "folderPath": "derivations/04_COSMOLOGY",
+          "functions": [
+            {
+              "name": "_round_key",
+              "signature": "def _round_key(theta):",
+              "lineNumber": 1
+            },
+            {
+              "name": "_build_potential",
+              "signature": "def _build_potential(v_form, mu_or_f):",
+              "lineNumber": 2
+            },
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, mu):",
+              "lineNumber": 3
+            },
+            {
+              "name": "V",
+              "signature": "def V(self, x):",
+              "lineNumber": 4
+            },
+            {
+              "name": "dV",
+              "signature": "def dV(self, x):",
+              "lineNumber": 5
+            },
+            {
+              "name": "ddV",
+              "signature": "def ddV(self, x):",
+              "lineNumber": 6
+            },
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, f_x):",
+              "lineNumber": 7
+            },
+            {
+              "name": "V",
+              "signature": "def V(self, x):",
+              "lineNumber": 8
+            },
+            {
+              "name": "dV",
+              "signature": "def dV(self, x):",
+              "lineNumber": 9
+            },
+            {
+              "name": "ddV",
+              "signature": "def ddV(self, x):",
+              "lineNumber": 10
+            },
+            {
+              "name": "_patched_observables",
+              "signature": "def _patched_observables(theta):",
+              "lineNumber": 11
+            },
+            {
+              "name": "beta_scaled",
+              "signature": "def beta_scaled(x, closure_mode=None):",
+              "lineNumber": 12
+            },
+            {
+              "name": "local_jacobian",
+              "signature": "def local_jacobian(theta0, eps=5e-3):",
+              "lineNumber": 13
+            },
+            {
+              "name": "find_degeneracy_evidence",
+              "signature": "def find_degeneracy_evidence(theta_center, n_samples=24, tol=0.02, obs_equiv_thresholds=None):",
+              "lineNumber": 14
+            },
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 15
+            }
+          ],
+          "lineCount": 318,
+          "contentHash": "eb255752eace6db21406c11978ba0834",
+          "createdAt": "2026-03-04T18:16:13.588Z",
+          "modifiedAt": "2026-03-04T19:04:17.468Z"
+        },
+        {
+          "id": "697f4368e8d5e9d3743ce6a6963ec6f7",
+          "path": "derivations/04_COSMOLOGY/15_closure_function_gates.py",
+          "filename": "15_closure_function_gates.py",
+          "folderPath": "derivations/04_COSMOLOGY",
+          "functions": [
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 1
+            },
+            {
+              "name": "beta_x",
+              "signature": "def beta_x(x):",
+              "lineNumber": 2
+            },
+            {
+              "name": "lambda_rec_x",
+              "signature": "def lambda_rec_x(x):",
+              "lineNumber": 3
+            },
+            {
+              "name": "g_omegax_x",
+              "signature": "def g_omegax_x(_x):",
+              "lineNumber": 4
+            }
+          ],
+          "lineCount": 190,
+          "contentHash": "677d5b3d78e2bf0c7bd29a58a2ab8541",
+          "createdAt": "2026-03-04T18:19:06.025Z",
+          "modifiedAt": "2026-03-04T20:06:10.746Z"
         }
       ],
       "markdownFiles": [],
       "status": "archived",
-      "fileCount": 14,
+      "fileCount": 16,
       "createdAt": "2026-02-11T19:48:22.635Z",
-      "modifiedAt": "2026-02-22T22:25:37.806Z"
+      "modifiedAt": "2026-03-04T18:19:23.589Z"
     },
     {
       "id": "27de202ba160c7ec0e825a9c69f7737c",
@@ -852,6 +1011,40 @@
       "readme": null,
       "pythonScripts": [
         {
+          "id": "6c64649df1f8c512ffc182feed716e00",
+          "path": "derivations/06_MEMORY_VS_OTHERS/01_dark_scattering_first_principles.py",
+          "filename": "01_dark_scattering_first_principles.py",
+          "folderPath": "derivations/06_MEMORY_VS_OTHERS",
+          "functions": [
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 1
+            }
+          ],
+          "lineCount": 38,
+          "contentHash": "13a5a1be74c5301f42978199db606a04",
+          "createdAt": "2026-03-04T19:54:01.317Z",
+          "modifiedAt": "2026-03-04T20:00:12.584Z"
+        },
+        {
+          "id": "11ab52203f4bca18a62e36bde5a440bb",
+          "path": "derivations/06_MEMORY_VS_OTHERS/02_memory_boltzmann_network.py",
+          "filename": "02_memory_boltzmann_network.py",
+          "folderPath": "derivations/06_MEMORY_VS_OTHERS",
+          "functions": [
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 1
+            }
+          ],
+          "lineCount": 34,
+          "contentHash": "8584da0d637dd4ac3cba1daf4defc365",
+          "createdAt": "2026-03-04T19:54:26.711Z",
+          "modifiedAt": "2026-03-04T20:00:12.584Z"
+        },
+        {
           "id": "35fc333e1ec18786a078e03da022089c",
           "path": "derivations/06_MEMORY_VS_OTHERS/memory_comparison.py",
           "filename": "memory_comparison.py",
@@ -887,13 +1080,30 @@
           "contentHash": "16dcfe87b75b5dc2b267521113e8fbeb",
           "createdAt": "2026-02-11T20:22:31.458Z",
           "modifiedAt": "2026-02-17T20:48:24.357Z"
+        },
+        {
+          "id": "5464355d7f9b7eec203e45cb57625510",
+          "path": "derivations/06_MEMORY_VS_OTHERS/memory_open_items_models.py",
+          "filename": "memory_open_items_models.py",
+          "folderPath": "derivations/06_MEMORY_VS_OTHERS",
+          "functions": [
+            {
+              "name": "rhs",
+              "signature": "def rhs(_n, y):",
+              "lineNumber": 1
+            }
+          ],
+          "lineCount": 160,
+          "contentHash": "c12436d35055ea04cd2287f34f02b467",
+          "createdAt": "2026-03-04T19:53:46.481Z",
+          "modifiedAt": "2026-03-04T20:00:12.601Z"
         }
       ],
       "markdownFiles": [],
       "status": "active",
-      "fileCount": 1,
+      "fileCount": 4,
       "createdAt": "2026-02-11T20:22:31.458Z",
-      "modifiedAt": "2026-02-11T20:22:31.467Z"
+      "modifiedAt": "2026-03-04T19:56:28.113Z"
     },
     {
       "id": "c11feb1cefff737ac106fc3bc3c05c91",
@@ -6057,11 +6267,11 @@
         "path": "derivations/39_GRAVITY/README.md",
         "filename": "README.md",
         "title": "Gravity Derivations - Golden Universe Theory",
-        "content": "# Gravity Derivations - Golden Universe Theory\n\n**Status**: Non-circular derivation achieved (G_N from m_e, 47 ppm)\n\n---\n\n## Canonical Derivation Chain (Non-Circular)\n\n```\nm_e (measured, sole dimensionful input)\n  --> C_e from Route-A elliptic formula (topology + Lame one-loop)\n    --> M_P = m_e * phi^111 / (2*pi * C_e * eta_QED)   [Law 12 inverted]\n      --> G_N = hbar*c / M_P^2                          [47 ppm error]\n        --> M_0 = M_P / sqrt(4*pi*c_R)                  [requires G_prim]\n```\n\n### What is derived\n- **M_P** from m_e alone, with 23 ppm accuracy (Lame-corrected first-principles)\n- **G_N** from M_P, with 47 ppm accuracy — ZERO fitted parameters\n- G_N is **independent of c_R** and the G_prim choice\n- c_R determines only M_0 (the UV cutoff scale)\n\n### What is assumed / open\n- G_prim = SU(5) is the working assumption (from Formation document and theory-laws.md)\n- SUSY at some scale is required (for Str(a_0) ~ 0, CC suppression)\n- GU memory modes (X, theta, moduli) are **classical backgrounds**, not propagating quantum DOF — correctly excluded from the heat kernel\n- The 0.26% residual in c_R (1.247 vs 1.25) may come from threshold corrections or non-minimal couplings\n\n---\n\n## File Inventory\n\n### Core derivation\n| File | Description | Status |\n|------|-------------|--------|\n| `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | **Non-circular G_N derivation**: m_e -> M_P -> G_N (47 ppm) | First-principles; ZERO fitted params |\n| `04_seeley_dewitt_calculation.py` | Induced gravity: c_R -> M_P/M_0 ratio | c_R = 1.25 assumed; determines M_0 only |\n| `11_memory_mode_counting.py` | **Memory-mode DOF census**: SM + GU field content -> c_R | ~108 extra bosonic DOF needed; V2 \"+40\" inconsistent |\n| `12_g_prim_field_content.py` | **G_prim field content census**: SUSY + dark + GUT chiral multiplets | Dual constraint: N_B ~ N_F ~ 189; SUSY essential |\n| `05_VALIDATION_AND_CONSISTENCY.py` | Consistency checks and scoreboard | 6/9 checks pass, 3 open |\n\n### Supporting / context\n| File | Description | Status |\n|------|-------------|--------|\n| `01_FORMATION_VECTOR_FOUNDATION.py` | Z_1 as consequence of induced G (not derivation) | Context |\n| `02_SPACETIME_GEOMETRY_DERIVATION.py` | Torus -> 4D geometry (qualitative) | Context |\n| `03_NEWTON_CONSTANT_EXACT.py` | Motivated ansatz alpha = e^phi/(pi*phi) | Cross-check (~0.8% by construction) |\n| `04_TENSOR_WINDING_ANALYSIS.py` | When tensor fields can have winding numbers | Clarification |\n\n### Downstream / exploratory\n| File | Description | Status |\n|------|-------------|--------|\n| `07_frg_uv_completion.py` | FRG / asymptotic safety exploration | Speculative; FP values from literature |\n| `08_spacetime_emergence.py` | Spacetime emergence from Omega substrate | Qualitative / conceptual |\n| `09_cosmological_constant_resolution.py` | CC suppression mechanisms | Order-of-magnitude |\n| `10_experimental_predictions.py` | Experimental signatures | Speculative; inflation limits now tracked in `derivations/04_COSMOLOGY/09_cosmology_scorecard.py` |\n\n### Graviton subfolder\n| File | Description | Status |\n|------|-------------|--------|\n| `graviton/` | Standard GR graviton properties (spin-2, massless, etc.) | Established physics |\n\n### Archived (deprecated)\n| File | Where | Reason |\n|------|-------|--------|\n| `05_dimensional_analysis_complete.py` | `archive/deprecated_gravity/` | Tautological (G_exp -> alpha -> G_exp) |\n| `PHASE_1_TENSOR_TOPOLOGY_FRAMEWORK.md` | `archive/deprecated_gravity/` | Superseded; q_graviton approach abandoned |\n\n---\n\n## Key Results\n\n1. **G_N predicted from m_e** with 47 ppm precision, ZERO fitted parameters (`20_GRAVITY_FROM_FIRST_PRINCIPLES.py`)\n2. **M_P/m_e ratio** = phi^111 / (2pi * C_e * eta_QED) — all quantities derived from first principles\n3. **G_N is independent of c_R** — the field content (G_prim choice) affects only M_0, not gravity itself\n4. **c_R = 1.247 derived from SU(5) + SUSY** — only 0.26% from V2's c_R = 1.25, with Str(a_0) = 3 (CC satisfied)\n5. **GU memory modes are classical backgrounds**, not propagating quantum DOF — excluding them resolves both the c_R value and the CC constraint simultaneously\n\n## Key Open Problems\n\n1. **c_R residual**: SU(5)+SUSY gives c_R = 1.247 vs target 1.25 — gap is 0.5 DOF (possibly from threshold/non-minimal coupling effects)\n2. **Inflation-sector status (moved to cosmology)**: Derived regime is canonical **slow-roll inflation with finite end** (`epsilon -> 1` termination in the coupled ODE). Linear V_X is ruled out (r = 0.057 > 0.036), while Plateau/Axion remain viable; alpha-attractor sub-band resolves Plateau n_s tension. Eternal-inflation diagnostic is now implemented in `04_COSMOLOGY/10_coupled_ode_system.py` using `delta X_quantum / delta X_classical`; for tested potentials (Plateau/Axion/Linear), no eternal region appears (`max ~ 5e-5 << 1`).\n3. **M_0 = 3.08 × 10^18 GeV** from the SU(5)+SUSY scenario — awaits independent confirmation\n\n---\n\n## Cross-References\n\n| Script | Depends On | Feeds Into |\n|--------|-----------|------------|\n| `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | `theory-laws.md` (Law 12, Law 33), `gu_constants.py` | **Final G_N prediction** |\n| `11_memory_mode_counting.py` | V2 Sections 8.3, 3.5 | `12_g_prim_field_content.py` |\n| `12_g_prim_field_content.py` | `11_memory_mode_counting.py`, V2 Sections 3.5, 9.2, 10.5 | `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` (c_R values) |\n| `04_seeley_dewitt_calculation.py` | `gu_constants.py` | Historical; superseded by script 20 for G_N |\n\n## Documentation\n- `GRAVITY_FROM_FIRST_PRINCIPLES.md` - Theoretical exposition (reflects current honest status)\n- `NOBEL_GRAVITY_DERIVATION_COMPLETE.md` - Summary of what has been achieved and what remains\n",
-        "wordCount": 783,
+        "content": "# Gravity Derivations - Golden Universe Theory\n\n**Status**: Non-circular derivation achieved (G_N from m_e, 47 ppm)\n\n---\n\n## Canonical Derivation Chain (Non-Circular)\n\n```\nm_e (measured, sole dimensionful input)\n  --> C_e from Route-A elliptic formula (topology + Lame one-loop)\n    --> M_P = m_e * phi^111 / (2*pi * C_e * eta_QED)   [Law 12 inverted]\n      --> G_N = hbar*c / M_P^2                          [47 ppm error]\n        --> M_0 = M_P / sqrt(4*pi*c_R)                  [requires G_prim]\n```\n\n### What is derived\n- **M_P** from m_e alone, with 23 ppm accuracy (Lame-corrected first-principles)\n- **G_N** from M_P, with 47 ppm accuracy — ZERO fitted parameters\n- G_N is **independent of c_R** and the G_prim choice\n- c_R determines only M_0 (the UV cutoff scale)\n- Cosmology closure gates (`beta`, `lambda_rec`, `g_{OmegaX}`, `V_X`) are managed in `derivations/04_COSMOLOGY/` and do not alter the direct `m_e -> M_P -> G_N` chain.\n\n### What is assumed / open\n- G_prim = SU(5) is the working assumption (from Formation document and theory-laws.md)\n- SUSY at some scale is required (for Str(a_0) ~ 0, CC suppression)\n- GU memory modes (X, theta, moduli) are **classical backgrounds**, not propagating quantum DOF — correctly excluded from the heat kernel\n- The 0.26% residual in c_R (1.247 vs 1.25) may come from threshold corrections or non-minimal couplings\n\n---\n\n## File Inventory\n\n### Core derivation\n| File | Description | Status |\n|------|-------------|--------|\n| `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | **Non-circular G_N derivation**: m_e -> M_P -> G_N (47 ppm) | First-principles; ZERO fitted params |\n| `04_seeley_dewitt_calculation.py` | Induced gravity: c_R -> M_P/M_0 ratio | c_R = 1.25 assumed; determines M_0 only |\n| `11_memory_mode_counting.py` | **Memory-mode DOF census**: SM + GU field content -> c_R | ~108 extra bosonic DOF needed; V2 \"+40\" inconsistent |\n| `12_g_prim_field_content.py` | **G_prim field content census**: SUSY + dark + GUT chiral multiplets | Dual constraint: N_B ~ N_F ~ 189; SUSY essential |\n| `05_VALIDATION_AND_CONSISTENCY.py` | Consistency checks and scoreboard | 6/9 checks pass, 3 open |\n\n### Supporting / context\n| File | Description | Status |\n|------|-------------|--------|\n| `01_FORMATION_VECTOR_FOUNDATION.py` | Z_1 as consequence of induced G (not derivation) | Context |\n| `02_SPACETIME_GEOMETRY_DERIVATION.py` | Torus -> 4D geometry (qualitative) | Context |\n| `03_NEWTON_CONSTANT_EXACT.py` | Motivated ansatz alpha = e^phi/(pi*phi) | Cross-check (~0.8% by construction) |\n| `04_TENSOR_WINDING_ANALYSIS.py` | When tensor fields can have winding numbers | Clarification |\n\n### Downstream / exploratory\n| File | Description | Status |\n|------|-------------|--------|\n| `07_frg_uv_completion.py` | FRG / asymptotic safety exploration | Speculative; FP values from literature |\n| `08_spacetime_emergence.py` | Spacetime emergence from Omega substrate | Qualitative / conceptual |\n| `09_cosmological_constant_resolution.py` | CC suppression mechanisms | Order-of-magnitude |\n| `10_experimental_predictions.py` | Experimental signatures | Speculative; inflation limits now tracked in `derivations/04_COSMOLOGY/09_cosmology_scorecard.py` |\n\n### Graviton subfolder\n| File | Description | Status |\n|------|-------------|--------|\n| `graviton/` | Standard GR graviton properties (spin-2, massless, etc.) | Established physics |\n\n### Archived (deprecated)\n| File | Where | Reason |\n|------|-------|--------|\n| `05_dimensional_analysis_complete.py` | `archive/deprecated_gravity/` | Tautological (G_exp -> alpha -> G_exp) |\n| `PHASE_1_TENSOR_TOPOLOGY_FRAMEWORK.md` | `archive/deprecated_gravity/` | Superseded; q_graviton approach abandoned |\n\n---\n\n## Key Results\n\n1. **G_N predicted from m_e** with 47 ppm precision, ZERO fitted parameters (`20_GRAVITY_FROM_FIRST_PRINCIPLES.py`)\n2. **M_P/m_e ratio** = phi^111 / (2pi * C_e * eta_QED) — all quantities derived from first principles\n3. **G_N is independent of c_R** — the field content (G_prim choice) affects only M_0, not gravity itself\n4. **c_R = 1.247 derived from SU(5) + SUSY** — only 0.26% from V2's c_R = 1.25, with Str(a_0) = 3 (CC satisfied)\n5. **GU memory modes are classical backgrounds**, not propagating quantum DOF — excluding them resolves both the c_R value and the CC constraint simultaneously\n\n## Key Open Problems\n\n1. **c_R residual**: SU(5)+SUSY gives c_R = 1.247 vs target 1.25 — gap is 0.5 DOF (possibly from threshold/non-minimal coupling effects)\n2. **Inflation-sector status (moved to cosmology)**: Derived regime is canonical **slow-roll inflation with finite end** (`epsilon -> 1` termination in the coupled ODE). Linear V_X is ruled out (r = 0.057 > 0.036), while Plateau/Axion remain viable; alpha-attractor sub-band resolves Plateau n_s tension. Eternal-inflation diagnostic is now implemented in `04_COSMOLOGY/10_coupled_ode_system.py` using `delta X_quantum / delta X_classical`; for tested potentials (Plateau/Axion/Linear), no eternal region appears (`max ~ 5e-5 << 1`).\n3. **M_0 = 3.08 × 10^18 GeV** from the SU(5)+SUSY scenario — awaits independent confirmation\n\n---\n\n## Cross-References\n\n| Script | Depends On | Feeds Into |\n|--------|-----------|------------|\n| `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` | `theory-laws.md` (Law 12, Law 33), `gu_constants.py` | **Final G_N prediction** |\n| `11_memory_mode_counting.py` | V2 Sections 8.3, 3.5 | `12_g_prim_field_content.py` |\n| `12_g_prim_field_content.py` | `11_memory_mode_counting.py`, V2 Sections 3.5, 9.2, 10.5 | `20_GRAVITY_FROM_FIRST_PRINCIPLES.py` (c_R values) |\n| `04_seeley_dewitt_calculation.py` | `gu_constants.py` | Historical; superseded by script 20 for G_N |\n\n## Documentation\n- `GRAVITY_FROM_FIRST_PRINCIPLES.md` - Theoretical exposition (reflects current honest status)\n- `NOBEL_GRAVITY_DERIVATION_COMPLETE.md` - Summary of what has been achieved and what remains\n",
+        "wordCount": 807,
         "equations": [],
         "createdAt": "2026-02-20T13:36:55.777Z",
-        "modifiedAt": "2026-02-23T22:10:22.635Z"
+        "modifiedAt": "2026-03-04T19:03:20.545Z"
       },
       "pythonScripts": [
         {
@@ -6807,11 +7017,159 @@
       "fileCount": 6,
       "createdAt": "2026-02-25T12:39:06.789Z",
       "modifiedAt": "2026-02-25T15:54:03.689Z"
+    },
+    {
+      "id": "a167775c81441fb49cf9d3c05b4f5f75",
+      "folderName": "42_RECOMBINATION_HELIUM_DECOUPLING",
+      "path": "derivations/42_RECOMBINATION_HELIUM_DECOUPLING",
+      "displayName": "Recombination Helium Decoupling",
+      "readme": {
+        "id": "f07194ead95ecd4353f9089507bf99df",
+        "path": "derivations/42_RECOMBINATION_HELIUM_DECOUPLING/README.md",
+        "filename": "README.md",
+        "title": "42_RECOMBINATION_HELIUM_DECOUPLING",
+        "content": "# 42_RECOMBINATION_HELIUM_DECOUPLING\n\nRecombination and Helium Decoupling Extension\n\n## Overview\n\nThis derivation extends the Golden Universe framework to model recombination and helium decoupling processes in the early universe.\n\n## Files\n\n- `01_recombination_extension.py` - Python implementation of recombination calculations\n- `recombination_extension_report.json` - Results and analysis\n\n## Status\n\nActive\n",
+        "wordCount": 47,
+        "equations": [],
+        "createdAt": "2026-03-12T11:25:12.205Z",
+        "modifiedAt": "2026-03-12T11:25:12.205Z"
+      },
+      "pythonScripts": [
+        {
+          "id": "699b300fec9ca9740fb03a293e8d3314",
+          "path": "derivations/42_RECOMBINATION_HELIUM_DECOUPLING/01_recombination_extension.py",
+          "filename": "01_recombination_extension.py",
+          "folderPath": "derivations/42_RECOMBINATION_HELIUM_DECOUPLING",
+          "functions": [
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 1
+            }
+          ],
+          "lineCount": 80,
+          "contentHash": "1f80d26db906e4761d5c102f3b515db4",
+          "createdAt": "2026-03-04T19:57:46.647Z",
+          "modifiedAt": "2026-03-04T20:00:12.584Z"
+        }
+      ],
+      "markdownFiles": [],
+      "status": "active",
+      "fileCount": 1,
+      "createdAt": "2026-03-04T19:57:46.641Z",
+      "modifiedAt": "2026-03-12T11:25:12.214Z"
+    },
+    {
+      "id": "d838703d920f6a6a1c2cd34e32bc6940",
+      "folderName": "43_VX_FROM_LTOTAL",
+      "path": "derivations/43_VX_FROM_LTOTAL",
+      "displayName": "Vx From Ltotal",
+      "readme": {
+        "id": "6d50a0429825d2cb9630329657503d43",
+        "path": "derivations/43_VX_FROM_LTOTAL/README.md",
+        "filename": "README.md",
+        "title": "43_VX_FROM_LTOTAL",
+        "content": "# 43_VX_FROM_LTOTAL\n\nDerivation of Vx from Total Angular Momentum\n\n## Overview\n\nThis derivation calculates the velocity parameter Vx from total angular momentum within the Golden Universe framework.\n\n## Files\n\n- `01_vx_from_ltotal.py` - Python implementation of Vx derivation from L_total\n- `vx_from_ltotal_report.json` - Results and analysis\n\n## Status\n\nActive\n",
+        "wordCount": 49,
+        "equations": [],
+        "createdAt": "2026-03-12T11:25:12.371Z",
+        "modifiedAt": "2026-03-12T11:25:12.371Z"
+      },
+      "pythonScripts": [
+        {
+          "id": "d24e7d5ceb638c8530a076def404af20",
+          "path": "derivations/43_VX_FROM_LTOTAL/01_vx_from_ltotal.py",
+          "filename": "01_vx_from_ltotal.py",
+          "folderPath": "derivations/43_VX_FROM_LTOTAL",
+          "functions": [
+            {
+              "name": "_plateau_obs",
+              "signature": "def _plateau_obs(n_efolds: float, alpha: float = 1.0):",
+              "lineNumber": 1
+            },
+            {
+              "name": "_axion_obs",
+              "signature": "def _axion_obs(n_efolds: float, f_over_mp: float):",
+              "lineNumber": 2
+            },
+            {
+              "name": "derive_vx_candidates",
+              "signature": "def derive_vx_candidates():",
+              "lineNumber": 3
+            },
+            {
+              "name": "write_report",
+              "signature": "def write_report(report: dict, out_path: str):",
+              "lineNumber": 4
+            },
+            {
+              "name": "main",
+              "signature": "def main():",
+              "lineNumber": 5
+            }
+          ],
+          "lineCount": 123,
+          "contentHash": "4c85f005f58986fe49dbafcb401c5c3e",
+          "createdAt": "2026-03-04T19:59:22.376Z",
+          "modifiedAt": "2026-03-04T20:00:12.584Z"
+        }
+      ],
+      "markdownFiles": [],
+      "status": "active",
+      "fileCount": 1,
+      "createdAt": "2026-03-04T19:59:22.370Z",
+      "modifiedAt": "2026-03-12T11:25:12.379Z"
+    },
+    {
+      "id": "b8afa1b91878a7f76ce8ccf9f859ea43",
+      "folderName": "44_TRINITY",
+      "path": "derivations/44_TRINITY",
+      "displayName": "Trinity",
+      "readme": {
+        "id": "710af7c30d573dd92c1c62306da1a608",
+        "path": "derivations/44_TRINITY/README.md",
+        "filename": "README.md",
+        "title": "Trinity Derivation: Geometric Necessity of `pi`, `phi`, `e`",
+        "content": "# Trinity Derivation: Geometric Necessity of `pi`, `phi`, `e`\n\nPurpose: this folder is now narrowed to one target only: explain the electron residual correction from geometric/pixelated-continuum structure and quantify what it changes for particle predictions.\n\n## Question\n\nIf a universe is built from geometry + recursion + local update rules, do `pi`, `phi`, and `e` appear as unavoidable constants?\n\n## Minimal Axioms Used Here\n\n1. **Isotropy/rotation symmetry** in 2D/3D geometry.\n2. **Recursive self-similar growth** under finite-information updates.\n3. **Local multiplicative evolution** in infinitesimal steps.\n4. **Discrete sampling (\"pixelation\")** as a physical or numerical probe.\n\nThese are intentionally pre-theory assumptions.\n\n## Necessity Channels\n\n### 1) Why `pi` appears\n\n- If geometry has rotational invariance, the circle is the isotropic orbit.\n- The ratio `circumference/diameter` is then a shape-invariant constant.\n- This constant is uniquely `pi`; no alternative survives Euclidean isotropy.\n- In discrete sampling, lattice-circle counts oscillate around `pi r^2`, but the continuum limit converges to `pi`.\n\nInterpretation: `pi` is a **symmetry constant**, not a fitted parameter.\n\n### 2) Why `phi` appears\n\n- For recursive growth with integer memory and minimal resonance locking, one seeks a slope that is hardest to approximate by rationals.\n- The \"most irrational\" number (maximally avoiding low-order resonances) is the golden ratio class.\n- Equivalent characterization: continued fraction `[1;1,1,1,...]`, i.e., worst rational approximability.\n- This yields Fibonacci scaling and golden-ratio fixed-point behavior in finite-memory recursions.\n\nInterpretation: `phi` is a **resonance-avoidance / optimal irrationality constant**.\n\n### 3) Why `e` appears\n\n- If evolution is local and multiplicative (small independent updates compose), one gets:\n  `x(t + dt) = x(t) * (1 + k dt)`.\n- Repeated composition gives `(1 + k/n)^n -> e^k`.\n- Therefore `e` is the unique base that linearizes continuous multiplicative flow (`d/dt exp(kt) = k exp(kt)`).\n\nInterpretation: `e` is a **continuous local compounding constant**.\n\n## Pixelation / Discreteness Diagnostics (Electron Target)\n\nThis folder keeps only the diagnostics needed to support the electron correction interpretation:\n\n1. **Unit-step/continuum tests** for `pi`, `phi`, `e` (`10_unit_step_continuum_limits.py`).\n2. **Torus modular-defect sampling test** for electron residual stability (same script/report).\n3. **Focused synthesis report** connecting these to particle-level consequences (`09_trinity_uncovering_report.md`).\n\n## What Would Count as \"Clear Necessity\"?\n\nStrong evidence requires:\n\n- independent derivations from distinct axioms that converge to the same constants,\n- stability under coarse-graining/discretization choice,\n- no free dial that can continuously deform away from `pi`, `phi`, `e` while preserving the axioms.\n\nThis folder currently provides **evidence of structural privilege**, not a formal uniqueness theorem.\n\n## What This Does for Particles\n\n- It supports that the electron residual `deltaC_e = (1-E/K)/N_e` is a finite-size torus correction, not a fit dial.\n- It explains why this correction is small but decisive: it modifies the residual layer, not the leading geometric mass scaffold.\n- It sets the electron as a cleaner upstream anchor for any chain using `m_e -> M_P -> M_0 -> G_N`.\n\n## Honest Status\n\n- `pi`: strong geometric necessity under isotropy.\n- `e`: strong necessity under local multiplicative continuity.\n- `phi`: strong candidate for optimal irrational recursion/resonance avoidance, but depends on the exact optimization criterion.\n\nSo the current result is:\n\n> Trinity constants remain structurally privileged; in this narrowed folder they are used specifically to interpret and stabilize the electron residual correction channel relevant to particle-precision closure.\n\n",
+        "wordCount": 540,
+        "equations": [],
+        "createdAt": "2026-03-12T09:59:27.099Z",
+        "modifiedAt": "2026-03-12T10:42:58.346Z"
+      },
+      "pythonScripts": [
+        {
+          "id": "e4d1372941ca5b6ac0a3238a26d4b07c",
+          "path": "derivations/44_TRINITY/01_pixelation_necessity_probe.py",
+          "filename": "01_pixelation_necessity_probe.py",
+          "folderPath": "derivations/44_TRINITY",
+          "functions": [],
+          "lineCount": 155,
+          "contentHash": "69cf3cb02cd9672d11d8bfa902bf6729",
+          "createdAt": "2026-03-12T09:59:59.127Z",
+          "modifiedAt": "2026-03-12T09:59:59.127Z"
+        },
+        {
+          "id": "c4b6628fb80099a56322b843f9416427",
+          "path": "derivations/44_TRINITY/10_unit_step_continuum_limits.py",
+          "filename": "10_unit_step_continuum_limits.py",
+          "folderPath": "derivations/44_TRINITY",
+          "functions": [],
+          "lineCount": 175,
+          "contentHash": "a0163f16ee3dc7e640ab2781675b7a68",
+          "createdAt": "2026-03-12T10:29:28.775Z",
+          "modifiedAt": "2026-03-12T10:29:28.775Z"
+        }
+      ],
+      "markdownFiles": [],
+      "status": "active",
+      "fileCount": 5,
+      "createdAt": "2026-03-12T09:59:27.096Z",
+      "modifiedAt": "2026-03-12T10:46:48.596Z"
     }
   ],
   "metadata": {
-    "totalFolders": 42,
-    "totalFiles": 273,
-    "generatedAt": "2026-02-25T17:48:17.664Z"
+    "totalFolders": 45,
+    "totalFiles": 285,
+    "generatedAt": "2026-03-12T11:26:31.051Z"
   }
 }

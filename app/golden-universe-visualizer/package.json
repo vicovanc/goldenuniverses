@@ -32,7 +32,7 @@
     "test:e2e:report": "playwright show-report",
     "test:all": "npm run test:unit && npm run test:integration && npm run test:accessibility && npm run test:e2e",
     "test:ci": "npm run lint && npm run type-check && npm run test:coverage && npm run test:e2e",
-    "parse-content": "node scripts/quick-parse.js",
+    "parse-content": "node scripts/quick-parse.mjs",
     "parse-content:full": "tsx scripts/parse-content.ts",
     "index": "npm run parse-content",
     "generate-icons": "node scripts/generate-icons.js",

@@ -1681,6 +1681,1875 @@
       "documentId": "e5e7ebfcb95b85d152ff05534056ad49"
     },
     {
+      "id": "d2dbabb105691221728c97c67bf6e0cc",
+      "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}",
+      "displayMode": true,
+      "lineNumber": 1,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1d56c8ac583bfd35de3c7371ea07ee7b",
+      "latex": "V(\\chi) = V_{0}\\left( 1-e^{- k\\chi/M_{pl}} \\right)^{2}",
+      "displayMode": true,
+      "lineNumber": 2,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5c84a54ce12d0a063d4f715e0b2ef2fa",
+      "latex": "V(\\chi) = V_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 3,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "05b1650582f1b90c4791e5793db94652",
+      "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}} \\Rightarrow \\ln\\text{ ⁣}\\frac{X}{X_{0}} = - \\lambda\\chi/M_{pl}",
+      "displayMode": true,
+      "lineNumber": 4,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "015ba2433af430496d226b8b6d230ba9",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+      "displayMode": true,
+      "lineNumber": 5,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8bcfd7b55fc43e48bd5920f38d7b6506",
+      "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) = 0",
+      "displayMode": true,
+      "lineNumber": 6,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8c8256be27e50fc38caef29002ab73e6",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2} \\ll 1,\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U} \\ll 1",
+      "displayMode": true,
+      "lineNumber": 7,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "825e7ac6d0889fb81aa3adfbdcfbdfa4",
+      "latex": "\\frac{d\\ln X}{dN} = f(X)\\text{where}N = \\ln a",
+      "displayMode": true,
+      "lineNumber": 8,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ba5844a8960471cc155d101755177a53",
+      "latex": "{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}",
+      "displayMode": true,
+      "lineNumber": 9,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d81297c16cb70b6e15c7ccbc46a6f6f5",
+      "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) + \\int_{}^{t}{K(t -}t')\\text{ }\\chi(t')\\text{ }dt' = 0",
+      "displayMode": true,
+      "lineNumber": 10,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e0d53bad26bf48967b36e8b4d5c82925",
+      "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}(\\text{ex. }n = 111):contentReference\\lbrack oaicite:5\\rbrack index = 5",
+      "displayMode": true,
+      "lineNumber": 11,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "17b2e968233ae8d9a8f4fea5b78ae669",
+      "latex": "X(t) = X_{0}\\text{ }\\varphi^{- n(t)}",
+      "displayMode": true,
+      "lineNumber": 12,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c3add8bbe52b6a33076b5be9a2ab8f8b",
+      "latex": "n(t) = - \\frac{\\ln(X/X_{0})}{\\ln\\varphi},\\dot{n} = - \\frac{1}{\\ln\\varphi}\\frac{\\dot{X}}{X}",
+      "displayMode": true,
+      "lineNumber": 13,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b8ac5a9b9a260beb97e20b388917cdfd",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}\\text{ }d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}",
+      "displayMode": true,
+      "lineNumber": 14,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "763a7211dae18ed6420ce4b317bb55c5",
+      "latex": "S = \\int d^{4}x\\sqrt{- g}\\left\\lbrack \\frac{M_{pl}^{2}}{2}R - \\frac{1}{2}(\\partial\\chi)^{2} - U(\\chi) \\right\\rbrack + S_{rad} + S_{mem}",
+      "displayMode": true,
+      "lineNumber": 15,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "fdec19574a52d302dfe39257e3b4a179",
+      "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\rho_{\\chi}+\\rho_{r}+\\rho_{m} \\right)\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}\\left( {\\dot{\\chi}}^{2}+\\frac{4}{3}\\rho_{r}+\\rho_{m} \\right)\n}{\\rho_{\\chi} = \\frac{1}{2}{\\dot{\\chi}}^{2} + U(\\chi),p_{\\chi} = \\frac{1}{2}{\\dot{\\chi}}^{2} - U(\\chi)\n}",
+      "displayMode": true,
+      "lineNumber": 16,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ac6e40b2bd3bf3a1cde45215c9fa282f",
+      "latex": "S_{mem} = - \\frac{1}{2}\\int d^{4}x\\sqrt{- g}\\int d^{4}x'\\sqrt{- g'}\\text{\\:\\,}\\chi(x)\\text{ }K(x,x')\\text{ }\\chi(x')",
+      "displayMode": true,
+      "lineNumber": 17,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c25a1711ae8b12760047ddc005b5bb07",
+      "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) + \\int_{0}^{t}{\\text{ ⁣}d}t'\\text{\\:\\,}K(t,t')\\text{ }\\chi(t') = 0",
+      "displayMode": true,
+      "lineNumber": 18,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "65a7c35c322f2f8e03e4a885d6deb0f3",
+      "latex": "{\\dot{\\chi}}^{2} \\ll U(\\chi), \\mid \\ddot{\\chi} \\mid \\ll 3H \\mid \\dot{\\chi} \\mid",
+      "displayMode": true,
+      "lineNumber": 19,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7a7af10270daa5cf7478ef027eab4d50",
+      "latex": "H^{2} \\simeq \\frac{U}{3M_{pl}^{2}},3H\\dot{\\chi} \\simeq - U'(\\chi)",
+      "displayMode": true,
+      "lineNumber": 20,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a392768b9cce91f1f572ca99ac084510",
+      "latex": "3H\\dot{\\chi} \\simeq - (U'(\\chi) + F_{mem}(t)),F_{mem}(t) \\equiv \\int_{0}^{t}dt'\\text{ }K(t,t')\\text{ }\\chi(t')",
+      "displayMode": true,
+      "lineNumber": 21,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "34a85b096e134d7760b91abfcba84c2d",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2},\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U}",
+      "displayMode": true,
+      "lineNumber": 22,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "74f852548a7f29706fa6235647326ab3",
+      "latex": "N = \\int H\\text{ }dt \\simeq \\frac{1}{M_{pl}^{2}}\\int_{\\chi_{end}}^{\\chi}\\frac{U}{U'}\\text{ }d\\chi",
+      "displayMode": true,
+      "lineNumber": 23,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "399e7a98310a8f02de35cfeed90d210b",
+      "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\beta\\chi/M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 24,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "14ac613d1c7f0ac8152f93c80531d9c5",
+      "latex": "n(\\chi) = \\frac{\\beta}{\\ln\\varphi}\\frac{\\chi}{M_{pl}} \\Rightarrow \\Delta n = 1\\text{\\:\\,} \\Longleftrightarrow \\text{\\:\\,}\\Delta\\chi = \\frac{\\ln\\varphi}{\\beta}M_{pl}",
+      "displayMode": true,
+      "lineNumber": 25,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a60e842fffe0db52395396f9279ec8cf",
+      "latex": "{{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}\n}",
+      "displayMode": true,
+      "lineNumber": 26,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cec7bea3f8a68bcea807a8fc1208cbd8",
+      "latex": "T = T(X)\\text{or}T = T(n)",
+      "displayMode": true,
+      "lineNumber": 27,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "11fb2677e4e3241db369362763a312c8",
+      "latex": "L_{\\text{total}} = L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}}",
+      "displayMode": true,
+      "lineNumber": 28,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "07c67444f13804aecd8fc8ff6e6303be",
+      "latex": "L_{X} = \\frac{1}{2}(\\partial_{\\mu}X)(\\partial^{\\mu}X) - V_{X}(X)",
+      "displayMode": true,
+      "lineNumber": 29,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2361cb17b448feed2f54c704923f60ef",
+      "latex": "\\square X - \\frac{\\partial V(X)}{\\partial X} = 0",
+      "displayMode": true,
+      "lineNumber": 30,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c95ed7628e7abaa1b1faf8d8de24944d",
+      "latex": "X(t\\text{ ⁣} = \\text{ ⁣}0) = \\mathfrak{R}(Z_{1}) = \\mid Z_{1} \\mid cos\\text{ ⁣}(\\frac{2\\pi}{\\varphi^{2}})",
+      "displayMode": true,
+      "lineNumber": 31,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "015ba2433af430496d226b8b6d230ba9",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+      "displayMode": true,
+      "lineNumber": 32,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ade5bcbf4095c7e9cf7c326bfa9b2e79",
+      "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}\\rho_{X},\\rho_{X} = \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X)",
+      "displayMode": true,
+      "lineNumber": 33,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "64be744ca98d5e2f0afcb4fef8db5024",
+      "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+      "displayMode": true,
+      "lineNumber": 34,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9934901d0cfb3ea9a30cbd8b07c6208c",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2},\\eta_{V} = M_{pl}^{2}\\frac{V^{''}}{V},\\epsilon_{V} \\simeq 1\\text{ at end}",
+      "displayMode": true,
+      "lineNumber": 35,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cd044672660901a6e406d6da39f62740",
+      "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}",
+      "displayMode": true,
+      "lineNumber": 36,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "11fb2677e4e3241db369362763a312c8",
+      "latex": "L_{\\text{total}} = L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}}",
+      "displayMode": true,
+      "lineNumber": 37,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "07c67444f13804aecd8fc8ff6e6303be",
+      "latex": "L_{X} = \\frac{1}{2}(\\partial_{\\mu}X)(\\partial^{\\mu}X) - V_{X}(X)",
+      "displayMode": true,
+      "lineNumber": 38,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "553a3d71f9eb2eae9b7451b8d1fa905e",
+      "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X",
+      "displayMode": true,
+      "lineNumber": 39,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5da4f83a881e1d2df7701e33c3cac055",
+      "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau}",
+      "displayMode": true,
+      "lineNumber": 40,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a23aa6e858ba709e0ddee42d3d583080",
+      "latex": "G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}",
+      "displayMode": true,
+      "lineNumber": 41,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3fd2fd8becc108b917a8bba96974706d",
+      "latex": "X(0) = \\mathfrak{R}(Z_{1}) = \\mid Z_{1} \\mid cos\\theta,\\theta = \\frac{2\\pi}{\\varphi^{2}}",
+      "displayMode": true,
+      "lineNumber": 42,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2361cb17b448feed2f54c704923f60ef",
+      "latex": "\\square X - \\frac{\\partial V(X)}{\\partial X} = 0",
+      "displayMode": true,
+      "lineNumber": 43,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "be12e9e465eeec1fd72c32797f80bd98",
+      "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n}",
+      "displayMode": true,
+      "lineNumber": 44,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f6ceed5277794edd706e169a9ff34980",
+      "latex": "S = \\int d^{4}x\\sqrt{- g}\\left\\lbrack \\frac{M_{pl}^{2}}{2}R+L_{\\text{total}} \\right\\rbrack",
+      "displayMode": true,
+      "lineNumber": 45,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b8ac5a9b9a260beb97e20b388917cdfd",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}\\text{ }d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}",
+      "displayMode": true,
+      "lineNumber": 46,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e9cd665c88e0f98635ec7cbd3d0f71a6",
+      "latex": "\\rho_{X} = \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X),p_{X} = \\frac{1}{2}{\\dot{X}}^{2} - V_{X}(X)",
+      "displayMode": true,
+      "lineNumber": 47,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "655361618301bbf37a2bc7596b46b508",
+      "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\text{ }\\rho_{\\text{tot}} \\approx \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2}+V_{\\text{eff}} \\right)\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}\\left( {\\dot{X}}^{2}+\\frac{4}{3}\\rho_{r}+\\rho_{m} \\right)\n}",
+      "displayMode": true,
+      "lineNumber": 48,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "50f5d926d451c2a4c0e4c0d10928acf7",
+      "latex": "\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = \\text{(additional forces)}",
+      "displayMode": true,
+      "lineNumber": 49,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "09a55c78be63d3693f74834e264ef398",
+      "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)S_{\\text{coupling}}(\\Omega)X",
+      "displayMode": true,
+      "lineNumber": 50,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5ce3b20d6121f77504bcd84e77380b6b",
+      "latex": "F_{\\text{int}}(X,\\Omega) = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)S_{\\text{coupling}}(\\Omega)\\text{ }X\\rbrack",
+      "displayMode": true,
+      "lineNumber": 51,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9ae5d3f4f3f6b3a83c664d3498f1d8ec",
+      "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau",
+      "displayMode": true,
+      "lineNumber": 52,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a3f49c2a9efd079ef2ff495053cf1053",
+      "latex": "F_{\\text{mem}}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{\\text{rec}}(X)S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau \\right\\rbrack",
+      "displayMode": true,
+      "lineNumber": 53,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2e2326e5122bbc54672bd93ed0ae8b85",
+      "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0}",
+      "displayMode": true,
+      "lineNumber": 54,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "6fa0c54b43086d96af26c02566c0616a",
+      "latex": "{\\dot{X}}^{2} \\ll V_{\\text{eff}}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid",
+      "displayMode": true,
+      "lineNumber": 55,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "13ffe3e2f0f65c0f4c8b266f6c9ecdc9",
+      "latex": "{H^{2} \\simeq \\frac{V_{\\text{eff}}}{3M_{pl}^{2}}\n}{3H\\dot{X} \\simeq - (V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}})\n}",
+      "displayMode": true,
+      "lineNumber": 56,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cd421c7cec7db34f3ed2c30e0d1b9db0",
+      "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}",
+      "displayMode": true,
+      "lineNumber": 57,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0d1329b1d43614a9a52167b380a0887f",
+      "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}}",
+      "displayMode": true,
+      "lineNumber": 58,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cd044672660901a6e406d6da39f62740",
+      "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}",
+      "displayMode": true,
+      "lineNumber": 59,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f0712d5043d16071f2bde96afd84b7de",
+      "latex": "{ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a\n}{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right)\n}{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0\n}",
+      "displayMode": true,
+      "lineNumber": 60,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "64be744ca98d5e2f0afcb4fef8db5024",
+      "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+      "displayMode": true,
+      "lineNumber": 61,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "45801999f6c928ac6bf573e6505c074f",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V_{X}'}{V_{X}} \\right)^{2} \\simeq 1",
+      "displayMode": true,
+      "lineNumber": 62,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5002a2565cc2f148c2c315dfb0e0729c",
+      "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}\n}",
+      "displayMode": true,
+      "lineNumber": 63,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "fb3dec4d312c13615f2ca4278596938e",
+      "latex": "T_{reh}\\text{\\:\\,} \\approx \\text{\\:\\,}\\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 64,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ef76b553646b53a2ef63580bc97bced6",
+      "latex": "T_{reh}\\text{ } \\gtrsim \\text{ }\\mathcal{O}(200\\text{ MeV})",
+      "displayMode": true,
+      "lineNumber": 65,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "924b5297c20cf8be278a235b1742b1ff",
+      "latex": "{\\rho_{r} = \\frac{\\pi^{2}}{30}g_{*}T^{4}\n}{H \\simeq 1.66\\text{ }\\sqrt{g_{*}}\\text{ }\\frac{T^{2}}{M_{pl}}\n}",
+      "displayMode": true,
+      "lineNumber": 66,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "22fbcc73435858e1a7943b25b99df7c7",
+      "latex": "t \\sim \\frac{1}{2H}\\text{ } \\propto \\text{ }\\frac{M_{pl}}{\\sqrt{g_{*}}\\text{ }T^{2}}",
+      "displayMode": true,
+      "lineNumber": 67,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "4b61208c6ecd985fc26d54d60cfbe0ef",
+      "latex": "T_{reh} > 200\\text{ MeV}(\\text{practically, it is usually much higher})",
+      "displayMode": true,
+      "lineNumber": 68,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "95af6ce173c45ad6e409ad5f2d420312",
+      "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+      "displayMode": true,
+      "lineNumber": 69,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8ec9ce8aab3612197637a133d94e0097",
+      "latex": "{ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}\n}{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right)\n}{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0\n}",
+      "displayMode": true,
+      "lineNumber": 70,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "64be744ca98d5e2f0afcb4fef8db5024",
+      "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+      "displayMode": true,
+      "lineNumber": 71,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b51ab908857e3038cc2afab8c6cfacd7",
+      "latex": "V_{X}'(X) = \\frac{2V_{0}}{\\mu}\\text{ }e^{- X/\\mu}(1 - e^{- X/\\mu})",
+      "displayMode": true,
+      "lineNumber": 72,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "4ac7817398363621b79967bf0f7e508b",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2} = \\frac{2M_{pl}^{2}}{\\mu^{2}}\\left( \\frac{e^{- X/\\mu}}{1 - e^{- X/\\mu}} \\right)^{2}",
+      "displayMode": true,
+      "lineNumber": 73,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "66b1aee9cdcfc92bd44d56b058d6e185",
+      "latex": "e^{- X_{end}/\\mu} = \\frac{1}{1 + \\sqrt{2}\\text{ }M_{pl}/\\mu} \\Rightarrow X_{end} = \\mu\\ln\\text{ ⁣}(1 + \\sqrt{2}\\text{ }M_{pl}/\\mu)",
+      "displayMode": true,
+      "lineNumber": 74,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0af882dec08341301abacf188cb7c0ef",
+      "latex": "N \\equiv \\int H\\text{ }dt \\simeq \\frac{1}{M_{pl}^{2}}\\int_{X_{end}}^{X_{*}}\\frac{V}{V'}\\text{ }dX",
+      "displayMode": true,
+      "lineNumber": 75,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "703d2099403c40d1b34543408073a086",
+      "latex": "{\\frac{V}{V'} = \\frac{\\mu}{2}(e^{X/\\mu} - 1)\n}{\\Rightarrow N = \\frac{\\mu^{2}}{2M_{pl}^{2}}(e^{X_{*}/\\mu} - e^{X_{end}/\\mu}) - \\frac{\\mu}{2M_{pl}^{2}}(X_{*} - X_{end})\n}",
+      "displayMode": true,
+      "lineNumber": 76,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "bc965847ddacf2ea2e9dcba4a741cdff",
+      "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}}",
+      "displayMode": true,
+      "lineNumber": 77,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5002a2565cc2f148c2c315dfb0e0729c",
+      "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}\n}",
+      "displayMode": true,
+      "lineNumber": 78,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "872e446a55efc183a2c58a33a9d7eb7f",
+      "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 79,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "52b542eb7d0526a9b6a515397f9b227a",
+      "latex": "T_{reh} \\gtrsim 200\\text{ MeV}",
+      "displayMode": true,
+      "lineNumber": 80,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "329af06514e3e61fe6afd946448e1869",
+      "latex": "\\rho_{r} = \\frac{\\pi^{2}}{30}g_{*}T^{4},H \\simeq 1.66\\sqrt{g_{*}}\\frac{T^{2}}{M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 81,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9159ba52d5ee7cad1694547776545b1b",
+      "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}",
+      "displayMode": true,
+      "lineNumber": 82,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f02f3da4bade62895c8866a3bfa41cc8",
+      "latex": "\\frac{dX}{dN} = \\frac{\\dot{X}}{H} \\simeq - M_{pl}^{2}\\frac{V'}{V} \\Rightarrow \\frac{dn}{dN} = \\frac{1}{\\ln\\varphi}\\left( -\\frac{1}{X}\\frac{dX}{dN} \\right)",
+      "displayMode": true,
+      "lineNumber": 83,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "95af6ce173c45ad6e409ad5f2d420312",
+      "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+      "displayMode": true,
+      "lineNumber": 84,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5631edeb5ccd01a7017761e3d7b140be",
+      "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right),\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0",
+      "displayMode": true,
+      "lineNumber": 85,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "64be744ca98d5e2f0afcb4fef8db5024",
+      "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+      "displayMode": true,
+      "lineNumber": 86,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b5742f1d7b5fd960978ec245a1b1d8d2",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2}",
+      "displayMode": true,
+      "lineNumber": 87,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "fe48167120983cd25b8695dd7b81e2a5",
+      "latex": "X_{end} \\approx 0.881\\text{ }M_{pl}",
+      "displayMode": true,
+      "lineNumber": 88,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d835c4cd481ada67ace96f52127db528",
+      "latex": "N \\simeq \\frac{1}{M_{pl}^{2}}\\int_{X_{end}}^{X_{*}}\\frac{V}{V'}\\text{ }dX",
+      "displayMode": true,
+      "lineNumber": 89,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c3849874abe41f66dfd18fccea843e2f",
+      "latex": "X_{*} \\approx 4.756\\text{ }M_{pl}",
+      "displayMode": true,
+      "lineNumber": 90,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "391c6bc13dbf8ff8405c641d1c47ef2f",
+      "latex": "\\epsilon_{*} \\approx 1.50 \\times 10^{- 4},\\eta_{*} \\approx - 1.72 \\times 10^{- 2}",
+      "displayMode": true,
+      "lineNumber": 91,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d1fd8716aca81c5c45689979a61ae1f0",
+      "latex": "{n_{s} \\simeq 1 - 6\\epsilon_{*} + 2\\eta_{*} \\approx 0.9647\n}{r \\simeq 16\\epsilon_{*} \\approx 0.0024\n}",
+      "displayMode": true,
+      "lineNumber": 92,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "450ae2514e0d3ae09c410f83da345ed4",
+      "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}} \\Rightarrow V_{0} \\approx 7.6 \\times 10^{- 11}\\text{ }M_{pl}^{4}",
+      "displayMode": true,
+      "lineNumber": 93,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "77341b7ab2aee076ebd347e987fbd58c",
+      "latex": "V_{0}^{1/4} \\approx 2.95 \\times 10^{- 3}M_{pl} \\approx 7.2 \\times 10^{15}\\text{ GeV}",
+      "displayMode": true,
+      "lineNumber": 94,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "54b754912d3ada2174c574ede9e5dc99",
+      "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}\n}",
+      "displayMode": true,
+      "lineNumber": 95,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "46fa348fe18ad3dd558a7011413687d0",
+      "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 96,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ea548b6823fdb6a2a8ab50fcc10a84ed",
+      "latex": "T_{reh} \\gtrsim 0.2\\text{ GeV}",
+      "displayMode": true,
+      "lineNumber": 97,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "08d10ebf94632c27876c772822453572",
+      "latex": "\\Gamma_{\\min} \\approx 5.4 \\times 10^{- 20}\\text{ GeV}",
+      "displayMode": true,
+      "lineNumber": 98,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5ff7521b78e8cd1ad7a1257954ebe68e",
+      "latex": "t(T\\text{ ⁣} \\sim \\text{ ⁣}0.156\\text{ GeV}) \\sim 10^{- 5}\\text{ s} \\approx 10\\text{ }\\mu\\text{s}",
+      "displayMode": true,
+      "lineNumber": 99,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a1028a0774084386d4f91989271e5f5e",
+      "latex": "S = \\int d^{4}x\\sqrt{- g}(\\frac{M_{pl}^{2}}{2}R + L_{\\Omega} + L_{X} + L_{int} + L_{mem}),",
+      "displayMode": true,
+      "lineNumber": 100,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8c98db494b6ec20567f0869d517d84e2",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}.",
+      "displayMode": true,
+      "lineNumber": 101,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0b1d1b288d6304040ca0fce4c3022843",
+      "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\text{ }\\rho_{tot} \\approx \\frac{1}{3M_{pl}^{2}}(\\frac{1}{2}{\\dot{X}}^{2} + V_{eff}(X,t)),\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}({\\dot{X}}^{2} + \\frac{4}{3}\\rho_{r} + \\rho_{m}).\n}",
+      "displayMode": true,
+      "lineNumber": 102,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f3242fb4c3e8721ec55d221fcce6f479",
+      "latex": "{L_{int} = - g_{\\Omega X}(X)\\text{ }S_{coupling}(\\Omega)\\text{ }X,L_{mem} = - \\lambda_{rec}(X)\\text{ }S_{mem}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\text{ }d\\tau,}\n}{G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}.\n}",
+      "displayMode": true,
+      "lineNumber": 103,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1817054f5898d10db3165ea755638ca4",
+      "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{int}(X,\\Omega) + F_{mem}(t) = 0}",
+      "displayMode": true,
+      "lineNumber": 104,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3fb85d08c993fe7ff404a6d5cb05ec50",
+      "latex": "{F_{int} = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)\\text{ }S_{coupling}(\\Omega)\\text{ }X\\rbrack,\n}{F_{mem}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{rec}(X)\\text{ }S_{mem}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau \\right\\rbrack.\n}",
+      "displayMode": true,
+      "lineNumber": 105,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "738e09ea26bc5597ae53eaa33545a887",
+      "latex": "{{\\dot{X}}^{2} \\ll V_{eff}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid\n}{H^{2} \\simeq \\frac{V_{eff}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - (V_{X}'(X) + F_{int} + F_{mem}).\n}",
+      "displayMode": true,
+      "lineNumber": 106,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ffe4c220deeb287e60ec56e24bd6fe61",
+      "latex": "S_{coupling}(\\Omega) \\supset \\frac{1}{2}\\chi^{2} \\Rightarrow L_{int} \\supset - \\frac{1}{2}g\\text{ }X\\text{ }\\chi^{2}",
+      "displayMode": true,
+      "lineNumber": 107,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9a02288f45d54d942ed99378a88cffe5",
+      "latex": "\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}",
+      "displayMode": true,
+      "lineNumber": 108,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7be894157d7fd3fb30f51014f8cb2a97",
+      "latex": "m_{X}^{2} = V_{X}^{''}(X_{\\min}).",
+      "displayMode": true,
+      "lineNumber": 109,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b615e0fd39f12c3fc0172c99d61814d3",
+      "latex": "{S_{coupling}(\\Omega) \\supset \\overset{ˉ}{\\psi}\\psi \\Rightarrow L_{int} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi\n}{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}(m_{\\psi} \\ll m_{X}).\n}",
+      "displayMode": true,
+      "lineNumber": 110,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9328803dc16135df6056426aadb9099f",
+      "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}.",
+      "displayMode": true,
+      "lineNumber": 111,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9317034fbc464ecc486ed6c223e0290f",
+      "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}.",
+      "displayMode": true,
+      "lineNumber": 112,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3f69be97d73768abd94fe277ccf07f2e",
+      "latex": "T_{reh} \\gtrsim 0.2\\text{ GeV},",
+      "displayMode": true,
+      "lineNumber": 113,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5963e29772f616d53e2d8fdc2188daf5",
+      "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}.:contentReference\\lbrack oaicite:7\\rbrack index = 7",
+      "displayMode": true,
+      "lineNumber": 114,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "239c73127969fcbbd68fcd0dd103d308",
+      "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}(\\frac{X_{0}}{X}) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi},",
+      "displayMode": true,
+      "lineNumber": 115,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "95af6ce173c45ad6e409ad5f2d420312",
+      "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+      "displayMode": true,
+      "lineNumber": 116,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "62eab628aacfb4d7d0ceac9ba64ee4f4",
+      "latex": "\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0",
+      "displayMode": true,
+      "lineNumber": 117,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c25b3bccd3e570a883959e913bea0ee0",
+      "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X).",
+      "displayMode": true,
+      "lineNumber": 118,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ad8a7c677dca88add3607349cff46c25",
+      "latex": "m_{X}^{2} \\equiv V_{X}^{''}(0).",
+      "displayMode": true,
+      "lineNumber": 119,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "812104552d376cbe2cdd75bc7a2323fa",
+      "latex": "V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow \\boxed{m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}.}",
+      "displayMode": true,
+      "lineNumber": 120,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8e935272d65f48aae67acc59562f8ea6",
+      "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X:contentReference\\lbrack sheep:7\\rbrack index = 7",
+      "displayMode": true,
+      "lineNumber": 121,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "da638a0ad51ba11ad3ab3cf5192bf1b0",
+      "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}\\text{ }g\\text{ }X\\text{ }\\chi^{2}",
+      "displayMode": true,
+      "lineNumber": 122,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a7f73684d067dbc49a1d5ef47917d5fc",
+      "latex": "\\boxed{\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}}",
+      "displayMode": true,
+      "lineNumber": 123,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ef1cc683503546ccd44478107e88fd1c",
+      "latex": "{L_{\\text{int}} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi\n}{\\boxed{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}}\n}",
+      "displayMode": true,
+      "lineNumber": 124,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "69495b6cda0c37a28067d97882539050",
+      "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}.",
+      "displayMode": true,
+      "lineNumber": 125,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2d6e3963ec8232d606ed185ae1bc512b",
+      "latex": "\\boxed{T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}}",
+      "displayMode": true,
+      "lineNumber": 126,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "967f5dc96e9306f5389279f4d716b3fa",
+      "latex": "\\boxed{T_{reh} \\gtrsim 0.2\\text{ GeV}}",
+      "displayMode": true,
+      "lineNumber": 127,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "66044c7421f3db59790f98b34a1644fc",
+      "latex": "\\Gamma_{\\min} = \\frac{1}{M_{pl}}\\left( \\frac{T_{reh}}{\\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}} \\right)^{2}",
+      "displayMode": true,
+      "lineNumber": 128,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "60940c143361d9eca2c938bb9ea3764c",
+      "latex": "\\Gamma = \\frac{g^{2}}{32\\pi m_{X}} \\geq \\Gamma_{\\min} \\Rightarrow \\boxed{g \\geq \\sqrt{32\\pi\\text{ }m_{X}\\text{ }\\Gamma_{\\min}}}",
+      "displayMode": true,
+      "lineNumber": 129,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9e882472307d914cf8f3eb182b41b1c4",
+      "latex": "\\Gamma = \\frac{y^{2}}{8\\pi}m_{X} \\geq \\Gamma_{\\min} \\Rightarrow \\boxed{y \\geq \\sqrt{\\frac{8\\pi\\text{ }\\Gamma_{\\min}}{m_{X}}}}",
+      "displayMode": true,
+      "lineNumber": 130,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b9df39c18d453d26ea004a0565dd2e8a",
+      "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}:contentReference\\lbrack oaicite:10\\rbrack index = 10",
+      "displayMode": true,
+      "lineNumber": 131,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7267337b5502cd7fca37df9f42188690",
+      "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right)}",
+      "displayMode": true,
+      "lineNumber": 132,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "95af6ce173c45ad6e409ad5f2d420312",
+      "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+      "displayMode": true,
+      "lineNumber": 133,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c4f1ef4800cfc6bdf9c1d9afc811a0df",
+      "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}(\\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X)),\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{int} + F_{mem} = 0",
+      "displayMode": true,
+      "lineNumber": 134,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "eab35808f619b13dbfcaaaa5903d9917",
+      "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n},X_{0} = \\mathfrak{\\mid R}(Z_{1}) \\mid",
+      "displayMode": true,
+      "lineNumber": 135,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "526a491b77b63f936ecd6606badef013",
+      "latex": "m_{X}^{2} = V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}",
+      "displayMode": true,
+      "lineNumber": 136,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b2da75d4126c4ccbdb4d25bc06afe07c",
+      "latex": "V_{0} \\approx 7.6 \\times 10^{- 11}M_{pl}^{4} \\Rightarrow m_{X} \\approx 3.0 \\times 10^{13}\\text{ GeV}.",
+      "displayMode": true,
+      "lineNumber": 137,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "553a3d71f9eb2eae9b7451b8d1fa905e",
+      "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X",
+      "displayMode": true,
+      "lineNumber": 138,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5ca4021a5c8936130c037ac1eb85e5b9",
+      "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}g\\text{ }X\\chi^{2} \\Rightarrow \\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi m_{X}}",
+      "displayMode": true,
+      "lineNumber": 139,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "293629bac5b8b31ec297c44ed0b18a2f",
+      "latex": "L_{\\text{int}} \\supset - y\\text{ }X\\overset{ˉ}{\\psi}\\psi \\Rightarrow \\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}m_{X}",
+      "displayMode": true,
+      "lineNumber": 140,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "46fa348fe18ad3dd558a7011413687d0",
+      "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 141,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a60e6ca3fef36f03eb212d31ca015465",
+      "latex": "\\Gamma_{\\min} \\approx 5.44 \\times 10^{- 20}\\text{ GeV}.",
+      "displayMode": true,
+      "lineNumber": 142,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "699b8da339c21fc07b78cac9b2b79f00",
+      "latex": "\\Gamma = \\frac{y^{2}}{8\\pi}m_{X} \\geq \\Gamma_{\\min} \\Rightarrow y_{\\min} \\approx 2.1 \\times 10^{- 16}.",
+      "displayMode": true,
+      "lineNumber": 143,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9ec42c78d4fff070cc7e56fb0dc6f9cf",
+      "latex": "\\Gamma = \\frac{g^{2}}{32\\pi m_{X}} \\geq \\Gamma_{\\min} \\Rightarrow g_{\\min} \\approx 1.28 \\times 10^{- 2}\\text{ GeV}.",
+      "displayMode": true,
+      "lineNumber": 144,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cd421c7cec7db34f3ed2c30e0d1b9db0",
+      "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}",
+      "displayMode": true,
+      "lineNumber": 145,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8cb2028e2fa59136f5e080246a5f27c0",
+      "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right)",
+      "displayMode": true,
+      "lineNumber": 146,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "088dae7939e91f8ddc68c51d52d3e82e",
+      "latex": "X(t)\\text{ } \\Downarrow \\text{ pass thresholds }X_{EW},X_{QCD},\\cdots \\Rightarrow \\text{Pattern-k transitions (k=1,2,...) }",
+      "displayMode": true,
+      "lineNumber": 147,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "23020f4bf4a3726c5fc05b619f4b647a",
+      "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n},\\text{with }X_{0} = \\mathfrak{\\mid R}(Z_{1}) \\mid :contentReference\\lbrack oaicite:5\\rbrack index = 5",
+      "displayMode": true,
+      "lineNumber": 148,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2e2326e5122bbc54672bd93ed0ae8b85",
+      "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0}",
+      "displayMode": true,
+      "lineNumber": 149,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "03e43adbed1670fd5efcdac99d6b8339",
+      "latex": "{F_{\\text{int}}(X,\\Omega) = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X\\rbrack(\\text{from }L_{\\text{int}}):contentReference\\lbrack oaicite:6\\rbrack index = 6\n}{F_{\\text{mem}}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{ }H\\lbrack \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t)) \\right\\rbrack(\\text{from }L_{\\text{mem}}):contentReference\\lbrack oaicite:7\\rbrack index = 7\n}",
+      "displayMode": true,
+      "lineNumber": 150,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "538e4d92e04685d32e490367ccb52df0",
+      "latex": "{{\\dot{X}}^{2} \\ll V_{\\text{eff}}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid \n}{\\boxed{3H\\dot{X} \\simeq - (V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}})}\n}",
+      "displayMode": true,
+      "lineNumber": 151,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "952784db8d2352eb6af9633f39e96e6b",
+      "latex": "\\boxed{V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}}",
+      "displayMode": true,
+      "lineNumber": 152,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c0612fc9814047f3a56af5ef07077cfe",
+      "latex": "\\boxed{m_{X}^{2} = V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}}",
+      "displayMode": true,
+      "lineNumber": 153,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f2d46c273821762de25ff6f9db9452ec",
+      "latex": "\\boxed{V_{0} = \\alpha\\text{ }X_{0}^{4}}",
+      "displayMode": true,
+      "lineNumber": 154,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "bc965847ddacf2ea2e9dcba4a741cdff",
+      "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}}",
+      "displayMode": true,
+      "lineNumber": 155,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9f59425b3f44a4dfc77ab8c82315ea20",
+      "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}g\\text{ }X\\text{ }\\chi^{2} \\Rightarrow \\boxed{\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}}",
+      "displayMode": true,
+      "lineNumber": 156,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "dcd7e85089ffb36eb08a0c3f5570e7d7",
+      "latex": "L_{\\text{int}} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi \\Rightarrow \\boxed{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}}",
+      "displayMode": true,
+      "lineNumber": 157,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2d6e3963ec8232d606ed185ae1bc512b",
+      "latex": "\\boxed{T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}}",
+      "displayMode": true,
+      "lineNumber": 158,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "967f5dc96e9306f5389279f4d716b3fa",
+      "latex": "\\boxed{T_{reh} \\gtrsim 0.2\\text{ GeV}}",
+      "displayMode": true,
+      "lineNumber": 159,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7847643db7ad13b7238288f7d9d7b018",
+      "latex": "\\boxed{T = T(X)}\\text{(or equivalently }T = T(n)\\text{ with }n = {\\log}_{\\varphi}(X_{0}/X))",
+      "displayMode": true,
+      "lineNumber": 160,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f3779e746033c15c2658bfa61c7ef53a",
+      "latex": "\\frac{dX}{dN} \\simeq - M_{pl}^{2}\\frac{V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}}}{V_{X}} \\Rightarrow \\frac{dn}{dN} = \\frac{1}{\\ln\\varphi}\\left( -\\frac{1}{X}\\frac{dX}{dN} \\right)",
+      "displayMode": true,
+      "lineNumber": 161,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "be12e9e465eeec1fd72c32797f80bd98",
+      "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n}",
+      "displayMode": true,
+      "lineNumber": 162,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0d1329b1d43614a9a52167b380a0887f",
+      "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}}",
+      "displayMode": true,
+      "lineNumber": 163,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "60e4595e2ee5d2a882d87c8fed5d98e3",
+      "latex": "\\boxed{T(a) \\propto \\frac{1}{a}}",
+      "displayMode": true,
+      "lineNumber": 164,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "dd2afb5e45d5b08195092ad5f3fe8b92",
+      "latex": "\\boxed{T(N) = T_{reh}\\text{ }e^{- (N - N_{reh})}}",
+      "displayMode": true,
+      "lineNumber": 165,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "25d5f8fef2f91cc18dc7af4ab62e16b5",
+      "latex": "\\boxed{\\frac{dn}{dN} = \\kappa(N)\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ (}\\widehat{\\text{ı}}\\text{n general)}}",
+      "displayMode": true,
+      "lineNumber": 166,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e82b2041141d2343cd073bcc44654787",
+      "latex": "\\boxed{\\frac{dn}{dN} \\approx \\kappa = \\text{const}} \\Rightarrow n(N) = n_{reh} + \\kappa\\text{ }(N - N_{reh})",
+      "displayMode": true,
+      "lineNumber": 167,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f44429fc577d46d259330d4e4ec12d79",
+      "latex": "N - N_{reh} = \\frac{n - n_{reh}}{\\kappa}",
+      "displayMode": true,
+      "lineNumber": 168,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "37c5340ab7856dddbd0ab158c1480fed",
+      "latex": "\\boxed{T(n) = T_{reh}\\text{ }\\exp\\text{ ⁣}\\left( -\\frac{n - n_{reh}}{\\kappa} \\right)}",
+      "displayMode": true,
+      "lineNumber": 169,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2300aeed8d7fd1bb6d936e6f40cec787",
+      "latex": "T(n) = T_{reh}\\text{ }\\varphi^{- \\text{ }(n - n_{reh})/\\kappa_{\\varphi}},\\kappa_{\\varphi} \\equiv \\kappa/ln\\varphi",
+      "displayMode": true,
+      "lineNumber": 170,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "12329ac821c0285d4c3476ecfb5462cb",
+      "latex": "\\boxed{\\kappa = - \\text{ }\\frac{n_{2} - n_{1}}{\\ln(T_{2}/T_{1})}}",
+      "displayMode": true,
+      "lineNumber": 171,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c8f1ed83ec8bc3ccb482a055b7c3640d",
+      "latex": "\\kappa \\approx 0.84",
+      "displayMode": true,
+      "lineNumber": 172,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "46fa348fe18ad3dd558a7011413687d0",
+      "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+      "displayMode": true,
+      "lineNumber": 173,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e07f1543bdb6b5db2d81a00f18779683",
+      "latex": "\\boxed{n_{reh} \\approx n(X_{end}) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X_{end}} \\right)}",
+      "displayMode": true,
+      "lineNumber": 174,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9b43941b61c1e2c8d36263b027e32bb5",
+      "latex": "\\boxed{T(n) \\approx 0.15\\text{–}0.2\\text{ GeV}}",
+      "displayMode": true,
+      "lineNumber": 175,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5da4f83a881e1d2df7701e33c3cac055",
+      "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau}",
+      "displayMode": true,
+      "lineNumber": 176,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d12abcf66cf94988635150fba49294e8",
+      "latex": "G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}.",
+      "displayMode": true,
+      "lineNumber": 177,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cd0371ca52600f4cb5a84785f71e93ee",
+      "latex": "M(t)\\text{\\:\\,} \\equiv \\text{\\:\\,}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau.",
+      "displayMode": true,
+      "lineNumber": 178,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c881ef5ba04ad141702f2fcfedcb0765",
+      "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\text{ }M(t).",
+      "displayMode": true,
+      "lineNumber": 179,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "4b7230a059093c3af570177b7a9fa82f",
+      "latex": "\\boxed{\\dot{M} = H\\lbrack\\Omega(t)\\rbrack - \\beta(X)\\text{ }M.}",
+      "displayMode": true,
+      "lineNumber": 180,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f937453bcd5bb763e86198a4f20f91d0",
+      "latex": "L_{X} = \\frac{1}{2}(\\partial X)^{2} - V_{X}(X),V_{X}\\text{ d}\\breve{\\text{a}}\\text{ slope bl}\\widehat{\\text{a}}\\text{nd}\\breve{\\text{a}}\\text{ (slow-roll)}",
+      "displayMode": true,
+      "lineNumber": 181,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ed5468377244b9f46fce2b4b192642bd",
+      "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X.",
+      "displayMode": true,
+      "lineNumber": 182,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9ad699eaab32caa4fd3e345788578468",
+      "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(X,\\Omega,M) = 0}",
+      "displayMode": true,
+      "lineNumber": 183,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3d5c6f9c40447ec88f4a49132c6f35ea",
+      "latex": "(and $M$ is defined above from the GU kernel)\n\nThe Golden Universe Formation\n\n**3) Switching to \"expansion\" time** $\\mathbf{N =}\\mathbf{\\ln}\\mathbf{a}$**(to get** $\\mathbf{dn}\\mathbf{/}\\mathbf{dN}$**)**\n\nYou use $d/dt = H\\text{ }d/dN$. We denote $X_{N} \\equiv dX/dN$, $M_{N} \\equiv dM/dN$.\n\n**Memory becomes:**",
+      "displayMode": true,
+      "lineNumber": 184,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3d4c561e3b422f8433852abb02c45f8d",
+      "latex": "**Equation of** $X$ (in slow-roll mode, i.e. you neglect $X_{NN}$ compared to the friction term):",
+      "displayMode": true,
+      "lineNumber": 185,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "891209d5a94ca0c27a435cbdf8122ac9",
+      "latex": "And with Friedmann $3H^{2}M_{pl}^{2} \\simeq V_{\\text{eff}}$ (in inflation), you can write compactly:",
+      "displayMode": true,
+      "lineNumber": 186,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "30b940d0bab0b52644523899ec6e8e88",
+      "latex": "**4) Now comes your piece:** $\\mathbf{\\kappa(N) = dn}\\mathbf{/}\\mathbf{dN}$**with memory included**\n\nGU defines the thresholds (ticks):",
+      "displayMode": true,
+      "lineNumber": 187,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b59f4ded8ee62540473c0d3eb731d1c3",
+      "latex": "The Golden Universe Formation\n\nSo we define continuously:",
+      "displayMode": true,
+      "lineNumber": 188,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "bc9c95505582d328e118524766de4673",
+      "latex": "We derive:",
+      "displayMode": true,
+      "lineNumber": 189,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b40da008d274339ad4299c1001557709",
+      "latex": "Substituting the slow-roll expression for $X_{N}$:",
+      "displayMode": true,
+      "lineNumber": 190,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "28609d2ce49a0dde55902711c942d790",
+      "latex": "That's the \"working\" formula that tells you how **memory** (via $M(N)$) makes your $\\kappa$ variable → i.e. the ticks are not uniform \"in expansion time\", but have *hysteresis / backflow* controlled.\n\n**5) Temperature connection: exact formula when** $\\mathbf{\\kappa}$**is NOT constant**\n\nAfter reheating, in a radiation-dominated regime, you have approximately:",
+      "displayMode": true,
+      "lineNumber": 191,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9c9ab4333f7df213981831c146186e6d",
+      "latex": "(plus a small correction from $g_{*s}(T)$ if you want precision).\n\nCombining with $\\kappa(N) = dn/dN$:",
+      "displayMode": true,
+      "lineNumber": 192,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "907869573c31dac87f965809564f6492",
+      "latex": "Integrate:",
+      "displayMode": true,
+      "lineNumber": 193,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "79dfcd382b9351dfe0d4d3377256ea34",
+      "latex": "- if $\\kappa$ is constant → you recover the simple formula $T(n) = T_{0}\\text{ }e^{- (n - n_{0})/\\kappa}$;\n\n- if the memory is strong in certain epochs → $\\kappa(n)$ deforms locally and finely \"moves\" your thresholds (QCD, recombination, etc.).\n\n**6) Calibration with your GU anchors (recombination and hadronization/QCD)**\n\nFrom \"Particles\" you explicitly have:\n\n- recombination: $T \\approx 1\\text{ eV}$ corresponds to an epoch $N_{\\text{rec}} \\approx 128$ and \"the temperature is related to the cosmic clock $X$\".\n\n> Golden Universe Theory for the ...\n\nAlso there you use hadronization/QCD around:\n\n- $n = 95$ (hadron calculation at $n = 95$ and BBN immediately after, $n \\approx 95\\text{–}96$).\n\n> Golden Universe Theory for the ...\nIf you take $T_{\\text{QCD}} \\sim 0.16\\text{ GeV}$ as the order of magnitude and $T_{\\text{rec}} \\sim 1\\text{ eV}$, then an **average** $\\kappa$between $n = 95$and $n = 128$ is:",
+      "displayMode": true,
+      "lineNumber": 194,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "540ff97f0f2c1ba949aa6acb02a315ed",
+      "latex": "Interpretation: in that calibration, \\~1.75 ticks per e-fold (on average), and deviations from that come naturally from $F_{\\text{mem}}$ (ie from $M(N)$).\n\n**7) What we actually do \"next\" (next piece of construction)**\n\nNow you have a closed local system in $\\left( X,M,a \\right)$:\n\n1. **Initialization:** $X(0) = \\mathfrak{R}(Z_{1})$, so $X_{0} = \\mid X(0) \\mid$(GU actually computes $X_{0} \\approx 0.104\\text{ }E_{P}$)\n\n> The Golden Universe Formation\n\n2. **Dynamics:** integrate in $N$:",
+      "displayMode": true,
+      "lineNumber": 195,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "66cd8a566832a7f75f642b81cfd07fd0",
+      "latex": "3. **Tick rate:** $\\kappa(N) = dn/dN$ from the formula above.\n4. **Temperature:** $T(n)$from integral $\\ln T = - \\int dn/\\kappa$, calibrated with $n = 95 \\leftrightarrow T_{\\text{QCD}}$and $n = 128 \\leftrightarrow 1\\text{ eV}$.\n\n> Golden Universe Theory for the ...\n>\n> Golden Universe Theory for the ...\n\nIf you want, the next concrete step is to choose a minimal form for the GU functions:\n\n- $\\lambda_{\\text{rec}}(X)$,\n\n- $\\beta(X)$,\n\n- and a simple proxy for $H\\lbrack\\Omega\\rbrack$ (eg $H\\lbrack\\Omega\\rbrack \\propto \\Omega^{\\dagger}\\Omega$ as the example $S_{\\text{mem}} = \\Omega^{\\dagger}\\Omega$ suggests)\n\n> The Golden Universe Formation\n>\n> ,\n\nand I write you explicitly **how the \"snap\"** (quick transitions) occurs at the $X_{\\text{critical},n}$ thresholds due to the inertia of $M$ (memory), i.e. exactly the mechanism that makes the transitions more \"discrete\" than a perfectly smooth roll.\nSources\n\nOkay\n\nPerfect --- then we now have the \"closed set\" GU → our universe, with **memory** implemented correctly (no integral), and with the bridge to **QGP/QCD**.\n\n**Final set of equations (minimal, ready to use)**\n\n**1) Definitions**",
+      "displayMode": true,
+      "lineNumber": 196,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "40e9ab49827464e0bfa894e2d0d537d8",
+      "latex": "**2) Memory (completely replace GU with ODE)**\\\nThe GU kernel: $G = e^{- \\beta(X)(t - \\tau)}$.\\\nYou define:",
+      "displayMode": true,
+      "lineNumber": 197,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "76850fd4fdc92793f9964aa849f20833",
+      "latex": "⇒ local equivalent:",
+      "displayMode": true,
+      "lineNumber": 198,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ea0fd30ae4d4a03abe10a3dc457363a1",
+      "latex": "or in $N$:",
+      "displayMode": true,
+      "lineNumber": 199,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d766a9633152d3c10aaa3d49ad7d7ad3",
+      "latex": "**3) Slow-roll for** $X$**with interaction + memory**",
+      "displayMode": true,
+      "lineNumber": 200,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f61eb105a02dc9533065ef01f400e26d",
+      "latex": "where, from GU:",
+      "displayMode": true,
+      "lineNumber": 201,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0be85c3da3b303aa1be1577dba663eb2",
+      "latex": "($L_{int}$ and $L_{mem}$ are exactly those in the document).\n**4) Friedmann (for** $H$**)**\\\nIn inflation:",
+      "displayMode": true,
+      "lineNumber": 202,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e58fc427458616275ebdceec8d72ccae",
+      "latex": "After reheating (RD):",
+      "displayMode": true,
+      "lineNumber": 203,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8d63a5b3f39da3c67aa8665cfc9ef76c",
+      "latex": "**5) Reheating (for plasma to appear)**",
+      "displayMode": true,
+      "lineNumber": 204,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ffc60081884bcfd8583fd09f34375048",
+      "latex": "QGP condition:",
+      "displayMode": true,
+      "lineNumber": 205,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "6e487a134d4d02e29b869a7c496e853e",
+      "latex": "**6) Temperature directly as a function of tick** $n$**(with memory)**\\\nAfter reheating:",
+      "displayMode": true,
+      "lineNumber": 206,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7a99e2376eab56a132354c25e4ecc6ce",
+      "latex": "So:",
+      "displayMode": true,
+      "lineNumber": 207,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9b17166bf0110257751abb2f5b6fd764",
+      "latex": "This is exactly where **memory** (via $\\kappa(n)$) can finely move the thresholds.\n\n**What does \"ok\" mean here**\n\nIt means we have:\n\n- how $X$ runs (slow-roll),\n\n- how we \"remember\" the past (memory $M$),\n\n- how to connect $X \\rightarrow n$,\n- how to get $T(n)$,\n\n- and the condition for QGP/QCD.\n\nIf you want to start the **numerical calibration** part (no further questions), I can take your typical anchors:\n\n- $n_{QCD} \\approx 95$and $T_{QCD} \\approx 0.16$GeV,\n\n- $n_{rec} \\approx 128$and $T_{rec} \\approx 1$eV,\n\nand I give you $\\kappa_{avg}$, then a minimal form for $\\beta(X)$ and $\\lambda_{rec}(X)$ that produces a \"snap\" at thresholds $X_{\\text{critical},n}$ (ie discrete transitions as you want in GU).\n\nOkay\n\nThought for 11s\n\nPerfect --- then we do the next step: **calibration** (so that our Universe comes out exactly) and then we add **memory** as a controlled warp around the $X_{\\text{critical},n}$ thresholds.\n\n**1) Minimum calibration** $\\mathbf{T(n)}$**of two anchors (QCD and recombination)**\nWe take the anchors we already use:\n\n- QCD/QGP: $n_{QCD} = 95$, $T_{QCD} \\approx 0.16\\text{ GeV}$\n\n- recombination: $n_{rec} = 128$, $T_{rec} \\approx 1\\text{ eV} = 10^{- 9}\\text{ GeV}$\n\nIn the RD regime, with $\\kappa = \\frac{dn}{dN}$ approximately constant over a large interval:",
+      "displayMode": true,
+      "lineNumber": 208,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d1bbfbd8670b56ffef608b0d0e145a47",
+      "latex": "We calibrate $\\kappa$ from the two points:",
+      "displayMode": true,
+      "lineNumber": 209,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "8b8ac49d4caa5be410e45510bb5d7eba",
+      "latex": "So the **minimum model** that exactly reproduces the thermal history between QCD and recombination is:",
+      "displayMode": true,
+      "lineNumber": 210,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a9e799d9c968706b1361840055d41299",
+      "latex": "and indeed at $n = 128$ it gives $T \\simeq 1\\text{ eV}$.\n**2) Now we add the memory:** $\\mathbf{\\kappa(n)}$**is no longer constant, but \"curves\" at the thresholds**\n\nWe already have the general formula:",
+      "displayMode": true,
+      "lineNumber": 211,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9cece845bb1955237578f83147705c70",
+      "latex": "So the \"memory\" basically comes in as:",
+      "displayMode": true,
+      "lineNumber": 212,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "ca8f059ad668766609af746519179140",
+      "latex": "**A GU-friendly choice for \"snap\" at thresholds (pulses around** $\\mathbf{n}$**)**\n\nYou use the thresholds:",
+      "displayMode": true,
+      "lineNumber": 213,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "eebc1444fdc75290cb79eef6b4a5ccf0",
+      "latex": "and you set the memory to be strong only near certain epochs (QCD, EW, etc.):",
+      "displayMode": true,
+      "lineNumber": 214,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5c3a6fac3ad83e644ea1ded12b21cb0c",
+      "latex": "- $A_{j} > 0$: \"accelerate\" the ticks (decrease $T$ by $n$ faster)\n\n- $A_{j} < 0$: \"slow down\" (plateau/delay)\n\n- $\\sigma_{j}$: how \"sharp\" is the transition (snap)\n\nThis is exactly the mechanism by which you can make the transitions more **discrete** (as you want in GU) without breaking the global calibration.\n\n**3) GU memory in local form (without integral)**\n\nWe define the memory variable:",
+      "displayMode": true,
+      "lineNumber": 215,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "33337cc008bcf23b3078d83251284c4e",
+      "latex": "which becomes ODE:",
+      "displayMode": true,
+      "lineNumber": 216,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1511ce0d7c13210645da5258580e043d",
+      "latex": "Then a law of $\\kappa$ (simple, efficient):",
+      "displayMode": true,
+      "lineNumber": 217,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d57900f74f3b675a742dfe93da1b49f3",
+      "latex": "\\phi",
+      "displayMode": false,
+      "lineNumber": 1,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d81b54b640d4b8364bcc1d95d2594496",
+      "latex": "V(\\phi)",
+      "displayMode": false,
+      "lineNumber": 2,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "765544241e4fef9268f6aebd999f7267",
+      "latex": "\\pi_{n},\\varphi_{n}",
+      "displayMode": false,
+      "lineNumber": 3,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "fc7265f7c2ddece8333259f0a7618b49",
+      "latex": "X_{n}",
+      "displayMode": false,
+      "lineNumber": 4,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2e6949c4601343e207e14f8f484f9cf9",
+      "latex": "L_{mem}",
+      "displayMode": false,
+      "lineNumber": 5,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9e82ecdd85cc777f10817e1fa5263053",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 6,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9de6688f65af23abf5f546142d8add2c",
+      "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}",
+      "displayMode": false,
+      "lineNumber": 7,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "c8218b9f1ecdf30e3452ce07e11068a5",
+      "latex": "n",
+      "displayMode": false,
+      "lineNumber": 8,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d4e4f6c125b242271c829c4a15aa0199",
+      "latex": "\\alpha",
+      "displayMode": false,
+      "lineNumber": 9,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "35be90ffa02f0edd53eb9cb325c260e9",
+      "latex": "\\chi",
+      "displayMode": false,
+      "lineNumber": 10,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f04497a1c3366cb077141a7e15481ebb",
+      "latex": "r",
+      "displayMode": false,
+      "lineNumber": 11,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "dc44acbc05999639c9e9047d848b58bf",
+      "latex": "V(\\chi) = V_{0}\\left( 1-e^{- k\\chi/M_{pl}} \\right)^{2}",
+      "displayMode": false,
+      "lineNumber": 12,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9a31f716615bd0c9bace481bd2ac2a40",
+      "latex": "V(\\chi) = V_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}}",
+      "displayMode": false,
+      "lineNumber": 13,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "bc04ffcefd24f44e29427cfc4cafc321",
+      "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}} \\Rightarrow \\ln\\text{ ⁣}\\frac{X}{X_{0}} = - \\lambda\\chi/M_{pl}",
+      "displayMode": false,
+      "lineNumber": 14,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "96b7f8b67bd4e3e88bc1617ae4441591",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 15,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "55bb74dea83b6df385e1f52f3979bba8",
+      "latex": "\\Gamma",
+      "displayMode": false,
+      "lineNumber": 16,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b50252469765a89c94b7f8e909331925",
+      "latex": "V(\\chi)",
+      "displayMode": false,
+      "lineNumber": 17,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "989440e0ad6bf656ded3654c93402f28",
+      "latex": "\\epsilon_{V},\\eta_{V}",
+      "displayMode": false,
+      "lineNumber": 18,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "28ad2bb984c74b7f70dff9aa94039980",
+      "latex": "N(\\chi)",
+      "displayMode": false,
+      "lineNumber": 19,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1c627a21e2d59f51f332d8b9d617e2af",
+      "latex": "X(\\chi)",
+      "displayMode": false,
+      "lineNumber": 20,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2a0f4d9a25936ce7d4906db221b2f27a",
+      "latex": "X_{n} = X_{0}\\varphi^{- n}",
+      "displayMode": false,
+      "lineNumber": 21,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "de952c93c48a0df6dc716d097906477f",
+      "latex": "a(t)",
+      "displayMode": false,
+      "lineNumber": 22,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "b12dbe17f97417965fc2bfa912af28f7",
+      "latex": "H(t)",
+      "displayMode": false,
+      "lineNumber": 23,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "e3d884f841171b0ca336dcc2021938f6",
+      "latex": "V",
+      "displayMode": false,
+      "lineNumber": 24,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "fef4dfc03277f5346535ef4bf8c7cf51",
+      "latex": "X_{111} = X_{0} \\cdot \\varphi^{- 111}",
+      "displayMode": false,
+      "lineNumber": 25,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "3260668a16ced69070c8b2f759690706",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 26,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "84346038ce30b953273b7671ce1aa758",
+      "latex": "L_{mem}",
+      "displayMode": false,
+      "lineNumber": 27,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5e8757dba3a819ee36a4e21463129ccf",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 28,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1b60ec9e330e512084ddd6b0f287a9a0",
+      "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+      "displayMode": false,
+      "lineNumber": 29,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "0a1b2b4d5ed0c7369dfe96fa10361c50",
+      "latex": "H",
+      "displayMode": false,
+      "lineNumber": 30,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "21d06c96ed3fb4425ba383d454e8d42f",
+      "latex": "\\mathbf{X}_{\\mathbf{n}}",
+      "displayMode": false,
+      "lineNumber": 31,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "df80ab29215e029d4672f0eb7d36bc1e",
+      "latex": "X_{n}",
+      "displayMode": false,
+      "lineNumber": 32,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "2ca6a57394c4d50260b2ff7b5d5437d9",
+      "latex": "X(t)",
+      "displayMode": false,
+      "lineNumber": 33,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "47ab484d669e086bec5ee6220a63b70f",
+      "latex": "\\chi(t)",
+      "displayMode": false,
+      "lineNumber": 34,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "add5a5772ccfb5a948e652609e8a0423",
+      "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) = 0",
+      "displayMode": false,
+      "lineNumber": 35,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "7bf2326b7a05089a20a383e9d27d3aae",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 36,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "01683fb5d4e33245f11d3d53e15bdb48",
+      "latex": "p \\simeq - \\rho",
+      "displayMode": false,
+      "lineNumber": 37,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "44d5b310e34301f8c703221af1e73e79",
+      "latex": "\\mathbf{U(\\chi)}",
+      "displayMode": false,
+      "lineNumber": 38,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a56fadc82f3eb00a13e359fd996ca58b",
+      "latex": "U(\\chi)",
+      "displayMode": false,
+      "lineNumber": 39,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "a1046cf83fc11016228468fbda77cb2f",
+      "latex": "V(\\phi)",
+      "displayMode": false,
+      "lineNumber": 40,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1566c0e91fa3ec52cdfe41f779d6fb23",
+      "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2} \\ll 1,\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U} \\ll 1",
+      "displayMode": false,
+      "lineNumber": 41,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "17ba0e914b7b7f3867bd932439154fd2",
+      "latex": "\\mathbf{X}",
+      "displayMode": false,
+      "lineNumber": 42,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "360a78629894ea9e5cfdb743d760f57f",
+      "latex": "X",
+      "displayMode": false,
+      "lineNumber": 43,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "f5a83348575258b31b270a2753b9f8aa",
+      "latex": "T(X)",
+      "displayMode": false,
+      "lineNumber": 44,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "cc61e512899182a3fe331a8a4f3efefe",
+      "latex": "X(a)",
+      "displayMode": false,
+      "lineNumber": 45,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "caa912a781c2f37840cb4c9b6332a1bc",
+      "latex": "\\frac{d\\ln X}{dN} = f(X)\\text{where}N = \\ln a",
+      "displayMode": false,
+      "lineNumber": 46,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "1def7115615f649121cc04f864c874cc",
+      "latex": "{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}",
+      "displayMode": false,
+      "lineNumber": 47,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "d04101e88022360a8c97f5c2be5eab53",
+      "latex": "\\mathbf{L}_{\\mathbf{mem}}",
+      "displayMode": false,
+      "lineNumber": 48,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "5f3b26a150d8cbbfd60086e67f0cbbbf",
+      "latex": "L_{mem}",
+      "displayMode": false,
+      "lineNumber": 49,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
+      "id": "9450d2853ef0d729b02c98396224533f",
+      "latex": "T_{\\mu\\nu}",
+      "displayMode": false,
+      "lineNumber": 50,
+      "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+    },
+    {
       "id": "8a3bef0afd428245ac32662fc7758c45",
       "latex": "\\varphi = \\frac{1 + \\sqrt{5}}{2},\\pi,e.",
       "displayMode": true,
@@ -10401,6 +12270,1877 @@
         "documentId": "e5e7ebfcb95b85d152ff05534056ad49"
       }
     ],
+    "7c5a5f1b50fa64911c10daa894d3d1f4": [
+      {
+        "id": "d2dbabb105691221728c97c67bf6e0cc",
+        "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}",
+        "displayMode": true,
+        "lineNumber": 1,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1d56c8ac583bfd35de3c7371ea07ee7b",
+        "latex": "V(\\chi) = V_{0}\\left( 1-e^{- k\\chi/M_{pl}} \\right)^{2}",
+        "displayMode": true,
+        "lineNumber": 2,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5c84a54ce12d0a063d4f715e0b2ef2fa",
+        "latex": "V(\\chi) = V_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 3,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "05b1650582f1b90c4791e5793db94652",
+        "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}} \\Rightarrow \\ln\\text{ ⁣}\\frac{X}{X_{0}} = - \\lambda\\chi/M_{pl}",
+        "displayMode": true,
+        "lineNumber": 4,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "015ba2433af430496d226b8b6d230ba9",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+        "displayMode": true,
+        "lineNumber": 5,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8bcfd7b55fc43e48bd5920f38d7b6506",
+        "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) = 0",
+        "displayMode": true,
+        "lineNumber": 6,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8c8256be27e50fc38caef29002ab73e6",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2} \\ll 1,\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U} \\ll 1",
+        "displayMode": true,
+        "lineNumber": 7,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "825e7ac6d0889fb81aa3adfbdcfbdfa4",
+        "latex": "\\frac{d\\ln X}{dN} = f(X)\\text{where}N = \\ln a",
+        "displayMode": true,
+        "lineNumber": 8,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ba5844a8960471cc155d101755177a53",
+        "latex": "{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}",
+        "displayMode": true,
+        "lineNumber": 9,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d81297c16cb70b6e15c7ccbc46a6f6f5",
+        "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) + \\int_{}^{t}{K(t -}t')\\text{ }\\chi(t')\\text{ }dt' = 0",
+        "displayMode": true,
+        "lineNumber": 10,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e0d53bad26bf48967b36e8b4d5c82925",
+        "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}(\\text{ex. }n = 111):contentReference\\lbrack oaicite:5\\rbrack index = 5",
+        "displayMode": true,
+        "lineNumber": 11,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "17b2e968233ae8d9a8f4fea5b78ae669",
+        "latex": "X(t) = X_{0}\\text{ }\\varphi^{- n(t)}",
+        "displayMode": true,
+        "lineNumber": 12,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c3add8bbe52b6a33076b5be9a2ab8f8b",
+        "latex": "n(t) = - \\frac{\\ln(X/X_{0})}{\\ln\\varphi},\\dot{n} = - \\frac{1}{\\ln\\varphi}\\frac{\\dot{X}}{X}",
+        "displayMode": true,
+        "lineNumber": 13,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b8ac5a9b9a260beb97e20b388917cdfd",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}\\text{ }d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}",
+        "displayMode": true,
+        "lineNumber": 14,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "763a7211dae18ed6420ce4b317bb55c5",
+        "latex": "S = \\int d^{4}x\\sqrt{- g}\\left\\lbrack \\frac{M_{pl}^{2}}{2}R - \\frac{1}{2}(\\partial\\chi)^{2} - U(\\chi) \\right\\rbrack + S_{rad} + S_{mem}",
+        "displayMode": true,
+        "lineNumber": 15,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "fdec19574a52d302dfe39257e3b4a179",
+        "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\rho_{\\chi}+\\rho_{r}+\\rho_{m} \\right)\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}\\left( {\\dot{\\chi}}^{2}+\\frac{4}{3}\\rho_{r}+\\rho_{m} \\right)\n}{\\rho_{\\chi} = \\frac{1}{2}{\\dot{\\chi}}^{2} + U(\\chi),p_{\\chi} = \\frac{1}{2}{\\dot{\\chi}}^{2} - U(\\chi)\n}",
+        "displayMode": true,
+        "lineNumber": 16,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ac6e40b2bd3bf3a1cde45215c9fa282f",
+        "latex": "S_{mem} = - \\frac{1}{2}\\int d^{4}x\\sqrt{- g}\\int d^{4}x'\\sqrt{- g'}\\text{\\:\\,}\\chi(x)\\text{ }K(x,x')\\text{ }\\chi(x')",
+        "displayMode": true,
+        "lineNumber": 17,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c25a1711ae8b12760047ddc005b5bb07",
+        "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) + \\int_{0}^{t}{\\text{ ⁣}d}t'\\text{\\:\\,}K(t,t')\\text{ }\\chi(t') = 0",
+        "displayMode": true,
+        "lineNumber": 18,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "65a7c35c322f2f8e03e4a885d6deb0f3",
+        "latex": "{\\dot{\\chi}}^{2} \\ll U(\\chi), \\mid \\ddot{\\chi} \\mid \\ll 3H \\mid \\dot{\\chi} \\mid",
+        "displayMode": true,
+        "lineNumber": 19,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7a7af10270daa5cf7478ef027eab4d50",
+        "latex": "H^{2} \\simeq \\frac{U}{3M_{pl}^{2}},3H\\dot{\\chi} \\simeq - U'(\\chi)",
+        "displayMode": true,
+        "lineNumber": 20,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a392768b9cce91f1f572ca99ac084510",
+        "latex": "3H\\dot{\\chi} \\simeq - (U'(\\chi) + F_{mem}(t)),F_{mem}(t) \\equiv \\int_{0}^{t}dt'\\text{ }K(t,t')\\text{ }\\chi(t')",
+        "displayMode": true,
+        "lineNumber": 21,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "34a85b096e134d7760b91abfcba84c2d",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2},\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U}",
+        "displayMode": true,
+        "lineNumber": 22,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "74f852548a7f29706fa6235647326ab3",
+        "latex": "N = \\int H\\text{ }dt \\simeq \\frac{1}{M_{pl}^{2}}\\int_{\\chi_{end}}^{\\chi}\\frac{U}{U'}\\text{ }d\\chi",
+        "displayMode": true,
+        "lineNumber": 23,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "399e7a98310a8f02de35cfeed90d210b",
+        "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\beta\\chi/M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 24,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "14ac613d1c7f0ac8152f93c80531d9c5",
+        "latex": "n(\\chi) = \\frac{\\beta}{\\ln\\varphi}\\frac{\\chi}{M_{pl}} \\Rightarrow \\Delta n = 1\\text{\\:\\,} \\Longleftrightarrow \\text{\\:\\,}\\Delta\\chi = \\frac{\\ln\\varphi}{\\beta}M_{pl}",
+        "displayMode": true,
+        "lineNumber": 25,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a60e842fffe0db52395396f9279ec8cf",
+        "latex": "{{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}\n}",
+        "displayMode": true,
+        "lineNumber": 26,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cec7bea3f8a68bcea807a8fc1208cbd8",
+        "latex": "T = T(X)\\text{or}T = T(n)",
+        "displayMode": true,
+        "lineNumber": 27,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "11fb2677e4e3241db369362763a312c8",
+        "latex": "L_{\\text{total}} = L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}}",
+        "displayMode": true,
+        "lineNumber": 28,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "07c67444f13804aecd8fc8ff6e6303be",
+        "latex": "L_{X} = \\frac{1}{2}(\\partial_{\\mu}X)(\\partial^{\\mu}X) - V_{X}(X)",
+        "displayMode": true,
+        "lineNumber": 29,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2361cb17b448feed2f54c704923f60ef",
+        "latex": "\\square X - \\frac{\\partial V(X)}{\\partial X} = 0",
+        "displayMode": true,
+        "lineNumber": 30,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c95ed7628e7abaa1b1faf8d8de24944d",
+        "latex": "X(t\\text{ ⁣} = \\text{ ⁣}0) = \\mathfrak{R}(Z_{1}) = \\mid Z_{1} \\mid cos\\text{ ⁣}(\\frac{2\\pi}{\\varphi^{2}})",
+        "displayMode": true,
+        "lineNumber": 31,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "015ba2433af430496d226b8b6d230ba9",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+        "displayMode": true,
+        "lineNumber": 32,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ade5bcbf4095c7e9cf7c326bfa9b2e79",
+        "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}\\rho_{X},\\rho_{X} = \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X)",
+        "displayMode": true,
+        "lineNumber": 33,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "64be744ca98d5e2f0afcb4fef8db5024",
+        "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+        "displayMode": true,
+        "lineNumber": 34,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9934901d0cfb3ea9a30cbd8b07c6208c",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2},\\eta_{V} = M_{pl}^{2}\\frac{V^{''}}{V},\\epsilon_{V} \\simeq 1\\text{ at end}",
+        "displayMode": true,
+        "lineNumber": 35,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cd044672660901a6e406d6da39f62740",
+        "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}",
+        "displayMode": true,
+        "lineNumber": 36,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "11fb2677e4e3241db369362763a312c8",
+        "latex": "L_{\\text{total}} = L_{\\Omega} + L_{X} + L_{\\text{int}} + L_{\\text{mem}}",
+        "displayMode": true,
+        "lineNumber": 37,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "07c67444f13804aecd8fc8ff6e6303be",
+        "latex": "L_{X} = \\frac{1}{2}(\\partial_{\\mu}X)(\\partial^{\\mu}X) - V_{X}(X)",
+        "displayMode": true,
+        "lineNumber": 38,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "553a3d71f9eb2eae9b7451b8d1fa905e",
+        "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X",
+        "displayMode": true,
+        "lineNumber": 39,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5da4f83a881e1d2df7701e33c3cac055",
+        "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau}",
+        "displayMode": true,
+        "lineNumber": 40,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a23aa6e858ba709e0ddee42d3d583080",
+        "latex": "G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}",
+        "displayMode": true,
+        "lineNumber": 41,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3fd2fd8becc108b917a8bba96974706d",
+        "latex": "X(0) = \\mathfrak{R}(Z_{1}) = \\mid Z_{1} \\mid cos\\theta,\\theta = \\frac{2\\pi}{\\varphi^{2}}",
+        "displayMode": true,
+        "lineNumber": 42,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2361cb17b448feed2f54c704923f60ef",
+        "latex": "\\square X - \\frac{\\partial V(X)}{\\partial X} = 0",
+        "displayMode": true,
+        "lineNumber": 43,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "be12e9e465eeec1fd72c32797f80bd98",
+        "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n}",
+        "displayMode": true,
+        "lineNumber": 44,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f6ceed5277794edd706e169a9ff34980",
+        "latex": "S = \\int d^{4}x\\sqrt{- g}\\left\\lbrack \\frac{M_{pl}^{2}}{2}R+L_{\\text{total}} \\right\\rbrack",
+        "displayMode": true,
+        "lineNumber": 45,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b8ac5a9b9a260beb97e20b388917cdfd",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}\\text{ }d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}",
+        "displayMode": true,
+        "lineNumber": 46,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e9cd665c88e0f98635ec7cbd3d0f71a6",
+        "latex": "\\rho_{X} = \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X),p_{X} = \\frac{1}{2}{\\dot{X}}^{2} - V_{X}(X)",
+        "displayMode": true,
+        "lineNumber": 47,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "655361618301bbf37a2bc7596b46b508",
+        "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\text{ }\\rho_{\\text{tot}} \\approx \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2}+V_{\\text{eff}} \\right)\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}\\left( {\\dot{X}}^{2}+\\frac{4}{3}\\rho_{r}+\\rho_{m} \\right)\n}",
+        "displayMode": true,
+        "lineNumber": 48,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "50f5d926d451c2a4c0e4c0d10928acf7",
+        "latex": "\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = \\text{(additional forces)}",
+        "displayMode": true,
+        "lineNumber": 49,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "09a55c78be63d3693f74834e264ef398",
+        "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)S_{\\text{coupling}}(\\Omega)X",
+        "displayMode": true,
+        "lineNumber": 50,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5ce3b20d6121f77504bcd84e77380b6b",
+        "latex": "F_{\\text{int}}(X,\\Omega) = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)S_{\\text{coupling}}(\\Omega)\\text{ }X\\rbrack",
+        "displayMode": true,
+        "lineNumber": 51,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9ae5d3f4f3f6b3a83c664d3498f1d8ec",
+        "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau",
+        "displayMode": true,
+        "lineNumber": 52,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a3f49c2a9efd079ef2ff495053cf1053",
+        "latex": "F_{\\text{mem}}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{\\text{rec}}(X)S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau \\right\\rbrack",
+        "displayMode": true,
+        "lineNumber": 53,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2e2326e5122bbc54672bd93ed0ae8b85",
+        "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0}",
+        "displayMode": true,
+        "lineNumber": 54,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "6fa0c54b43086d96af26c02566c0616a",
+        "latex": "{\\dot{X}}^{2} \\ll V_{\\text{eff}}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid",
+        "displayMode": true,
+        "lineNumber": 55,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "13ffe3e2f0f65c0f4c8b266f6c9ecdc9",
+        "latex": "{H^{2} \\simeq \\frac{V_{\\text{eff}}}{3M_{pl}^{2}}\n}{3H\\dot{X} \\simeq - (V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}})\n}",
+        "displayMode": true,
+        "lineNumber": 56,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cd421c7cec7db34f3ed2c30e0d1b9db0",
+        "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}",
+        "displayMode": true,
+        "lineNumber": 57,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0d1329b1d43614a9a52167b380a0887f",
+        "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}}",
+        "displayMode": true,
+        "lineNumber": 58,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cd044672660901a6e406d6da39f62740",
+        "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}",
+        "displayMode": true,
+        "lineNumber": 59,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f0712d5043d16071f2bde96afd84b7de",
+        "latex": "{ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a\n}{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right)\n}{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0\n}",
+        "displayMode": true,
+        "lineNumber": 60,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "64be744ca98d5e2f0afcb4fef8db5024",
+        "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+        "displayMode": true,
+        "lineNumber": 61,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "45801999f6c928ac6bf573e6505c074f",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V_{X}'}{V_{X}} \\right)^{2} \\simeq 1",
+        "displayMode": true,
+        "lineNumber": 62,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5002a2565cc2f148c2c315dfb0e0729c",
+        "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}\n}",
+        "displayMode": true,
+        "lineNumber": 63,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "fb3dec4d312c13615f2ca4278596938e",
+        "latex": "T_{reh}\\text{\\:\\,} \\approx \\text{\\:\\,}\\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 64,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ef76b553646b53a2ef63580bc97bced6",
+        "latex": "T_{reh}\\text{ } \\gtrsim \\text{ }\\mathcal{O}(200\\text{ MeV})",
+        "displayMode": true,
+        "lineNumber": 65,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "924b5297c20cf8be278a235b1742b1ff",
+        "latex": "{\\rho_{r} = \\frac{\\pi^{2}}{30}g_{*}T^{4}\n}{H \\simeq 1.66\\text{ }\\sqrt{g_{*}}\\text{ }\\frac{T^{2}}{M_{pl}}\n}",
+        "displayMode": true,
+        "lineNumber": 66,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "22fbcc73435858e1a7943b25b99df7c7",
+        "latex": "t \\sim \\frac{1}{2H}\\text{ } \\propto \\text{ }\\frac{M_{pl}}{\\sqrt{g_{*}}\\text{ }T^{2}}",
+        "displayMode": true,
+        "lineNumber": 67,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "4b61208c6ecd985fc26d54d60cfbe0ef",
+        "latex": "T_{reh} > 200\\text{ MeV}(\\text{practically, it is usually much higher})",
+        "displayMode": true,
+        "lineNumber": 68,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "95af6ce173c45ad6e409ad5f2d420312",
+        "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+        "displayMode": true,
+        "lineNumber": 69,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8ec9ce8aab3612197637a133d94e0097",
+        "latex": "{ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}\n}{H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right)\n}{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0\n}",
+        "displayMode": true,
+        "lineNumber": 70,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "64be744ca98d5e2f0afcb4fef8db5024",
+        "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+        "displayMode": true,
+        "lineNumber": 71,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b51ab908857e3038cc2afab8c6cfacd7",
+        "latex": "V_{X}'(X) = \\frac{2V_{0}}{\\mu}\\text{ }e^{- X/\\mu}(1 - e^{- X/\\mu})",
+        "displayMode": true,
+        "lineNumber": 72,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "4ac7817398363621b79967bf0f7e508b",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2} = \\frac{2M_{pl}^{2}}{\\mu^{2}}\\left( \\frac{e^{- X/\\mu}}{1 - e^{- X/\\mu}} \\right)^{2}",
+        "displayMode": true,
+        "lineNumber": 73,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "66b1aee9cdcfc92bd44d56b058d6e185",
+        "latex": "e^{- X_{end}/\\mu} = \\frac{1}{1 + \\sqrt{2}\\text{ }M_{pl}/\\mu} \\Rightarrow X_{end} = \\mu\\ln\\text{ ⁣}(1 + \\sqrt{2}\\text{ }M_{pl}/\\mu)",
+        "displayMode": true,
+        "lineNumber": 74,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0af882dec08341301abacf188cb7c0ef",
+        "latex": "N \\equiv \\int H\\text{ }dt \\simeq \\frac{1}{M_{pl}^{2}}\\int_{X_{end}}^{X_{*}}\\frac{V}{V'}\\text{ }dX",
+        "displayMode": true,
+        "lineNumber": 75,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "703d2099403c40d1b34543408073a086",
+        "latex": "{\\frac{V}{V'} = \\frac{\\mu}{2}(e^{X/\\mu} - 1)\n}{\\Rightarrow N = \\frac{\\mu^{2}}{2M_{pl}^{2}}(e^{X_{*}/\\mu} - e^{X_{end}/\\mu}) - \\frac{\\mu}{2M_{pl}^{2}}(X_{*} - X_{end})\n}",
+        "displayMode": true,
+        "lineNumber": 76,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "bc965847ddacf2ea2e9dcba4a741cdff",
+        "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}}",
+        "displayMode": true,
+        "lineNumber": 77,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5002a2565cc2f148c2c315dfb0e0729c",
+        "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}\n}",
+        "displayMode": true,
+        "lineNumber": 78,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "872e446a55efc183a2c58a33a9d7eb7f",
+        "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 79,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "52b542eb7d0526a9b6a515397f9b227a",
+        "latex": "T_{reh} \\gtrsim 200\\text{ MeV}",
+        "displayMode": true,
+        "lineNumber": 80,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "329af06514e3e61fe6afd946448e1869",
+        "latex": "\\rho_{r} = \\frac{\\pi^{2}}{30}g_{*}T^{4},H \\simeq 1.66\\sqrt{g_{*}}\\frac{T^{2}}{M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 81,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9159ba52d5ee7cad1694547776545b1b",
+        "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}",
+        "displayMode": true,
+        "lineNumber": 82,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f02f3da4bade62895c8866a3bfa41cc8",
+        "latex": "\\frac{dX}{dN} = \\frac{\\dot{X}}{H} \\simeq - M_{pl}^{2}\\frac{V'}{V} \\Rightarrow \\frac{dn}{dN} = \\frac{1}{\\ln\\varphi}\\left( -\\frac{1}{X}\\frac{dX}{dN} \\right)",
+        "displayMode": true,
+        "lineNumber": 83,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "95af6ce173c45ad6e409ad5f2d420312",
+        "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+        "displayMode": true,
+        "lineNumber": 84,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5631edeb5ccd01a7017761e3d7b140be",
+        "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}\\left( \\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X) \\right),\\ddot{X} + 3H\\dot{X} + V_{X}'(X) = 0",
+        "displayMode": true,
+        "lineNumber": 85,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "64be744ca98d5e2f0afcb4fef8db5024",
+        "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X)",
+        "displayMode": true,
+        "lineNumber": 86,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b5742f1d7b5fd960978ec245a1b1d8d2",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{V'}{V} \\right)^{2}",
+        "displayMode": true,
+        "lineNumber": 87,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "fe48167120983cd25b8695dd7b81e2a5",
+        "latex": "X_{end} \\approx 0.881\\text{ }M_{pl}",
+        "displayMode": true,
+        "lineNumber": 88,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d835c4cd481ada67ace96f52127db528",
+        "latex": "N \\simeq \\frac{1}{M_{pl}^{2}}\\int_{X_{end}}^{X_{*}}\\frac{V}{V'}\\text{ }dX",
+        "displayMode": true,
+        "lineNumber": 89,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c3849874abe41f66dfd18fccea843e2f",
+        "latex": "X_{*} \\approx 4.756\\text{ }M_{pl}",
+        "displayMode": true,
+        "lineNumber": 90,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "391c6bc13dbf8ff8405c641d1c47ef2f",
+        "latex": "\\epsilon_{*} \\approx 1.50 \\times 10^{- 4},\\eta_{*} \\approx - 1.72 \\times 10^{- 2}",
+        "displayMode": true,
+        "lineNumber": 91,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d1fd8716aca81c5c45689979a61ae1f0",
+        "latex": "{n_{s} \\simeq 1 - 6\\epsilon_{*} + 2\\eta_{*} \\approx 0.9647\n}{r \\simeq 16\\epsilon_{*} \\approx 0.0024\n}",
+        "displayMode": true,
+        "lineNumber": 92,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "450ae2514e0d3ae09c410f83da345ed4",
+        "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}} \\Rightarrow V_{0} \\approx 7.6 \\times 10^{- 11}\\text{ }M_{pl}^{4}",
+        "displayMode": true,
+        "lineNumber": 93,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "77341b7ab2aee076ebd347e987fbd58c",
+        "latex": "V_{0}^{1/4} \\approx 2.95 \\times 10^{- 3}M_{pl} \\approx 7.2 \\times 10^{15}\\text{ GeV}",
+        "displayMode": true,
+        "lineNumber": 94,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "54b754912d3ada2174c574ede9e5dc99",
+        "latex": "{{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X}\n}{{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}\n}",
+        "displayMode": true,
+        "lineNumber": 95,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "46fa348fe18ad3dd558a7011413687d0",
+        "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 96,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ea548b6823fdb6a2a8ab50fcc10a84ed",
+        "latex": "T_{reh} \\gtrsim 0.2\\text{ GeV}",
+        "displayMode": true,
+        "lineNumber": 97,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "08d10ebf94632c27876c772822453572",
+        "latex": "\\Gamma_{\\min} \\approx 5.4 \\times 10^{- 20}\\text{ GeV}",
+        "displayMode": true,
+        "lineNumber": 98,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5ff7521b78e8cd1ad7a1257954ebe68e",
+        "latex": "t(T\\text{ ⁣} \\sim \\text{ ⁣}0.156\\text{ GeV}) \\sim 10^{- 5}\\text{ s} \\approx 10\\text{ }\\mu\\text{s}",
+        "displayMode": true,
+        "lineNumber": 99,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a1028a0774084386d4f91989271e5f5e",
+        "latex": "S = \\int d^{4}x\\sqrt{- g}(\\frac{M_{pl}^{2}}{2}R + L_{\\Omega} + L_{X} + L_{int} + L_{mem}),",
+        "displayMode": true,
+        "lineNumber": 100,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8c98db494b6ec20567f0869d517d84e2",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\frac{\\dot{a}}{a}.",
+        "displayMode": true,
+        "lineNumber": 101,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0b1d1b288d6304040ca0fce4c3022843",
+        "latex": "{H^{2} = \\frac{1}{3M_{pl}^{2}}\\text{ }\\rho_{tot} \\approx \\frac{1}{3M_{pl}^{2}}(\\frac{1}{2}{\\dot{X}}^{2} + V_{eff}(X,t)),\n}{\\dot{H} = - \\frac{1}{2M_{pl}^{2}}({\\dot{X}}^{2} + \\frac{4}{3}\\rho_{r} + \\rho_{m}).\n}",
+        "displayMode": true,
+        "lineNumber": 102,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f3242fb4c3e8721ec55d221fcce6f479",
+        "latex": "{L_{int} = - g_{\\Omega X}(X)\\text{ }S_{coupling}(\\Omega)\\text{ }X,L_{mem} = - \\lambda_{rec}(X)\\text{ }S_{mem}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\text{ }d\\tau,}\n}{G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}.\n}",
+        "displayMode": true,
+        "lineNumber": 103,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1817054f5898d10db3165ea755638ca4",
+        "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{int}(X,\\Omega) + F_{mem}(t) = 0}",
+        "displayMode": true,
+        "lineNumber": 104,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3fb85d08c993fe7ff404a6d5cb05ec50",
+        "latex": "{F_{int} = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)\\text{ }S_{coupling}(\\Omega)\\text{ }X\\rbrack,\n}{F_{mem}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{rec}(X)\\text{ }S_{mem}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau \\right\\rbrack.\n}",
+        "displayMode": true,
+        "lineNumber": 105,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "738e09ea26bc5597ae53eaa33545a887",
+        "latex": "{{\\dot{X}}^{2} \\ll V_{eff}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid\n}{H^{2} \\simeq \\frac{V_{eff}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - (V_{X}'(X) + F_{int} + F_{mem}).\n}",
+        "displayMode": true,
+        "lineNumber": 106,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ffe4c220deeb287e60ec56e24bd6fe61",
+        "latex": "S_{coupling}(\\Omega) \\supset \\frac{1}{2}\\chi^{2} \\Rightarrow L_{int} \\supset - \\frac{1}{2}g\\text{ }X\\text{ }\\chi^{2}",
+        "displayMode": true,
+        "lineNumber": 107,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9a02288f45d54d942ed99378a88cffe5",
+        "latex": "\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}",
+        "displayMode": true,
+        "lineNumber": 108,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7be894157d7fd3fb30f51014f8cb2a97",
+        "latex": "m_{X}^{2} = V_{X}^{''}(X_{\\min}).",
+        "displayMode": true,
+        "lineNumber": 109,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b615e0fd39f12c3fc0172c99d61814d3",
+        "latex": "{S_{coupling}(\\Omega) \\supset \\overset{ˉ}{\\psi}\\psi \\Rightarrow L_{int} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi\n}{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}(m_{\\psi} \\ll m_{X}).\n}",
+        "displayMode": true,
+        "lineNumber": 110,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9328803dc16135df6056426aadb9099f",
+        "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\text{ }\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{X}.",
+        "displayMode": true,
+        "lineNumber": 111,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9317034fbc464ecc486ed6c223e0290f",
+        "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}.",
+        "displayMode": true,
+        "lineNumber": 112,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3f69be97d73768abd94fe277ccf07f2e",
+        "latex": "T_{reh} \\gtrsim 0.2\\text{ GeV},",
+        "displayMode": true,
+        "lineNumber": 113,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5963e29772f616d53e2d8fdc2188daf5",
+        "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}.:contentReference\\lbrack oaicite:7\\rbrack index = 7",
+        "displayMode": true,
+        "lineNumber": 114,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "239c73127969fcbbd68fcd0dd103d308",
+        "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}(\\frac{X_{0}}{X}) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi},",
+        "displayMode": true,
+        "lineNumber": 115,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "95af6ce173c45ad6e409ad5f2d420312",
+        "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+        "displayMode": true,
+        "lineNumber": 116,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "62eab628aacfb4d7d0ceac9ba64ee4f4",
+        "latex": "\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0",
+        "displayMode": true,
+        "lineNumber": 117,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c25b3bccd3e570a883959e913bea0ee0",
+        "latex": "H^{2} \\simeq \\frac{V_{X}}{3M_{pl}^{2}},3H\\dot{X} \\simeq - V_{X}'(X).",
+        "displayMode": true,
+        "lineNumber": 118,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ad8a7c677dca88add3607349cff46c25",
+        "latex": "m_{X}^{2} \\equiv V_{X}^{''}(0).",
+        "displayMode": true,
+        "lineNumber": 119,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "812104552d376cbe2cdd75bc7a2323fa",
+        "latex": "V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow \\boxed{m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}.}",
+        "displayMode": true,
+        "lineNumber": 120,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8e935272d65f48aae67acc59562f8ea6",
+        "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X:contentReference\\lbrack sheep:7\\rbrack index = 7",
+        "displayMode": true,
+        "lineNumber": 121,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "da638a0ad51ba11ad3ab3cf5192bf1b0",
+        "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}\\text{ }g\\text{ }X\\text{ }\\chi^{2}",
+        "displayMode": true,
+        "lineNumber": 122,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a7f73684d067dbc49a1d5ef47917d5fc",
+        "latex": "\\boxed{\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}}",
+        "displayMode": true,
+        "lineNumber": 123,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ef1cc683503546ccd44478107e88fd1c",
+        "latex": "{L_{\\text{int}} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi\n}{\\boxed{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}}\n}",
+        "displayMode": true,
+        "lineNumber": 124,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "69495b6cda0c37a28067d97882539050",
+        "latex": "{\\dot{\\rho}}_{X} + 3H(\\rho_{X} + p_{X}) = - \\Gamma\\rho_{X},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\rho_{X}.",
+        "displayMode": true,
+        "lineNumber": 125,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2d6e3963ec8232d606ed185ae1bc512b",
+        "latex": "\\boxed{T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}}",
+        "displayMode": true,
+        "lineNumber": 126,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "967f5dc96e9306f5389279f4d716b3fa",
+        "latex": "\\boxed{T_{reh} \\gtrsim 0.2\\text{ GeV}}",
+        "displayMode": true,
+        "lineNumber": 127,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "66044c7421f3db59790f98b34a1644fc",
+        "latex": "\\Gamma_{\\min} = \\frac{1}{M_{pl}}\\left( \\frac{T_{reh}}{\\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}} \\right)^{2}",
+        "displayMode": true,
+        "lineNumber": 128,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "60940c143361d9eca2c938bb9ea3764c",
+        "latex": "\\Gamma = \\frac{g^{2}}{32\\pi m_{X}} \\geq \\Gamma_{\\min} \\Rightarrow \\boxed{g \\geq \\sqrt{32\\pi\\text{ }m_{X}\\text{ }\\Gamma_{\\min}}}",
+        "displayMode": true,
+        "lineNumber": 129,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9e882472307d914cf8f3eb182b41b1c4",
+        "latex": "\\Gamma = \\frac{y^{2}}{8\\pi}m_{X} \\geq \\Gamma_{\\min} \\Rightarrow \\boxed{y \\geq \\sqrt{\\frac{8\\pi\\text{ }\\Gamma_{\\min}}{m_{X}}}}",
+        "displayMode": true,
+        "lineNumber": 130,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b9df39c18d453d26ea004a0565dd2e8a",
+        "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}:contentReference\\lbrack oaicite:10\\rbrack index = 10",
+        "displayMode": true,
+        "lineNumber": 131,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7267337b5502cd7fca37df9f42188690",
+        "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right)}",
+        "displayMode": true,
+        "lineNumber": 132,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "95af6ce173c45ad6e409ad5f2d420312",
+        "latex": "V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}",
+        "displayMode": true,
+        "lineNumber": 133,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c4f1ef4800cfc6bdf9c1d9afc811a0df",
+        "latex": "H^{2} = \\frac{1}{3M_{pl}^{2}}(\\frac{1}{2}{\\dot{X}}^{2} + V_{X}(X)),\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{int} + F_{mem} = 0",
+        "displayMode": true,
+        "lineNumber": 134,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "eab35808f619b13dbfcaaaa5903d9917",
+        "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n},X_{0} = \\mathfrak{\\mid R}(Z_{1}) \\mid",
+        "displayMode": true,
+        "lineNumber": 135,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "526a491b77b63f936ecd6606badef013",
+        "latex": "m_{X}^{2} = V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}",
+        "displayMode": true,
+        "lineNumber": 136,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b2da75d4126c4ccbdb4d25bc06afe07c",
+        "latex": "V_{0} \\approx 7.6 \\times 10^{- 11}M_{pl}^{4} \\Rightarrow m_{X} \\approx 3.0 \\times 10^{13}\\text{ GeV}.",
+        "displayMode": true,
+        "lineNumber": 137,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "553a3d71f9eb2eae9b7451b8d1fa905e",
+        "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X",
+        "displayMode": true,
+        "lineNumber": 138,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5ca4021a5c8936130c037ac1eb85e5b9",
+        "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}g\\text{ }X\\chi^{2} \\Rightarrow \\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi m_{X}}",
+        "displayMode": true,
+        "lineNumber": 139,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "293629bac5b8b31ec297c44ed0b18a2f",
+        "latex": "L_{\\text{int}} \\supset - y\\text{ }X\\overset{ˉ}{\\psi}\\psi \\Rightarrow \\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}m_{X}",
+        "displayMode": true,
+        "lineNumber": 140,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "46fa348fe18ad3dd558a7011413687d0",
+        "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 141,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a60e6ca3fef36f03eb212d31ca015465",
+        "latex": "\\Gamma_{\\min} \\approx 5.44 \\times 10^{- 20}\\text{ GeV}.",
+        "displayMode": true,
+        "lineNumber": 142,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "699b8da339c21fc07b78cac9b2b79f00",
+        "latex": "\\Gamma = \\frac{y^{2}}{8\\pi}m_{X} \\geq \\Gamma_{\\min} \\Rightarrow y_{\\min} \\approx 2.1 \\times 10^{- 16}.",
+        "displayMode": true,
+        "lineNumber": 143,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9ec42c78d4fff070cc7e56fb0dc6f9cf",
+        "latex": "\\Gamma = \\frac{g^{2}}{32\\pi m_{X}} \\geq \\Gamma_{\\min} \\Rightarrow g_{\\min} \\approx 1.28 \\times 10^{- 2}\\text{ GeV}.",
+        "displayMode": true,
+        "lineNumber": 144,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cd421c7cec7db34f3ed2c30e0d1b9db0",
+        "latex": "X_{\\text{critical},n} = X_{0}\\varphi^{- n}",
+        "displayMode": true,
+        "lineNumber": 145,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8cb2028e2fa59136f5e080246a5f27c0",
+        "latex": "n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right)",
+        "displayMode": true,
+        "lineNumber": 146,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "088dae7939e91f8ddc68c51d52d3e82e",
+        "latex": "X(t)\\text{ } \\Downarrow \\text{ pass thresholds }X_{EW},X_{QCD},\\cdots \\Rightarrow \\text{Pattern-k transitions (k=1,2,...) }",
+        "displayMode": true,
+        "lineNumber": 147,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "23020f4bf4a3726c5fc05b619f4b647a",
+        "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n},\\text{with }X_{0} = \\mathfrak{\\mid R}(Z_{1}) \\mid :contentReference\\lbrack oaicite:5\\rbrack index = 5",
+        "displayMode": true,
+        "lineNumber": 148,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2e2326e5122bbc54672bd93ed0ae8b85",
+        "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(t) = 0}",
+        "displayMode": true,
+        "lineNumber": 149,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "03e43adbed1670fd5efcdac99d6b8339",
+        "latex": "{F_{\\text{int}}(X,\\Omega) = \\frac{\\partial}{\\partial X}\\lbrack g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X\\rbrack(\\text{from }L_{\\text{int}}):contentReference\\lbrack oaicite:6\\rbrack index = 6\n}{F_{\\text{mem}}(t) = \\frac{\\partial}{\\partial X}\\left\\lbrack \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{ }H\\lbrack \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t)) \\right\\rbrack(\\text{from }L_{\\text{mem}}):contentReference\\lbrack oaicite:7\\rbrack index = 7\n}",
+        "displayMode": true,
+        "lineNumber": 150,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "538e4d92e04685d32e490367ccb52df0",
+        "latex": "{{\\dot{X}}^{2} \\ll V_{\\text{eff}}, \\mid \\ddot{X} \\mid \\ll 3H \\mid \\dot{X} \\mid \n}{\\boxed{3H\\dot{X} \\simeq - (V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}})}\n}",
+        "displayMode": true,
+        "lineNumber": 151,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "952784db8d2352eb6af9633f39e96e6b",
+        "latex": "\\boxed{V_{X}(X) = V_{0}(1 - e^{- X/\\mu})^{2}}",
+        "displayMode": true,
+        "lineNumber": 152,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c0612fc9814047f3a56af5ef07077cfe",
+        "latex": "\\boxed{m_{X}^{2} = V_{X}^{''}(0) = \\frac{2V_{0}}{\\mu^{2}} \\Rightarrow m_{X} = \\sqrt{\\frac{2V_{0}}{\\mu^{2}}}}",
+        "displayMode": true,
+        "lineNumber": 153,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f2d46c273821762de25ff6f9db9452ec",
+        "latex": "\\boxed{V_{0} = \\alpha\\text{ }X_{0}^{4}}",
+        "displayMode": true,
+        "lineNumber": 154,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "bc965847ddacf2ea2e9dcba4a741cdff",
+        "latex": "A_{s} \\simeq \\frac{1}{24\\pi^{2}M_{pl}^{4}}\\frac{V_{*}}{\\epsilon_{*}}",
+        "displayMode": true,
+        "lineNumber": 155,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9f59425b3f44a4dfc77ab8c82315ea20",
+        "latex": "L_{\\text{int}} \\supset - \\frac{1}{2}g\\text{ }X\\text{ }\\chi^{2} \\Rightarrow \\boxed{\\Gamma_{X \\rightarrow \\chi\\chi} \\simeq \\frac{g^{2}}{32\\pi\\text{ }m_{X}}}",
+        "displayMode": true,
+        "lineNumber": 156,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "dcd7e85089ffb36eb08a0c3f5570e7d7",
+        "latex": "L_{\\text{int}} \\supset - y\\text{ }X\\text{ }\\overset{ˉ}{\\psi}\\psi \\Rightarrow \\boxed{\\Gamma_{X \\rightarrow \\overset{ˉ}{\\psi}\\psi} \\simeq \\frac{y^{2}}{8\\pi}\\text{ }m_{X}}",
+        "displayMode": true,
+        "lineNumber": 157,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2d6e3963ec8232d606ed185ae1bc512b",
+        "latex": "\\boxed{T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma\\text{ }M_{pl}}}",
+        "displayMode": true,
+        "lineNumber": 158,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "967f5dc96e9306f5389279f4d716b3fa",
+        "latex": "\\boxed{T_{reh} \\gtrsim 0.2\\text{ GeV}}",
+        "displayMode": true,
+        "lineNumber": 159,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7847643db7ad13b7238288f7d9d7b018",
+        "latex": "\\boxed{T = T(X)}\\text{(or equivalently }T = T(n)\\text{ with }n = {\\log}_{\\varphi}(X_{0}/X))",
+        "displayMode": true,
+        "lineNumber": 160,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f3779e746033c15c2658bfa61c7ef53a",
+        "latex": "\\frac{dX}{dN} \\simeq - M_{pl}^{2}\\frac{V_{X}'(X) + F_{\\text{int}} + F_{\\text{mem}}}{V_{X}} \\Rightarrow \\frac{dn}{dN} = \\frac{1}{\\ln\\varphi}\\left( -\\frac{1}{X}\\frac{dX}{dN} \\right)",
+        "displayMode": true,
+        "lineNumber": 161,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "be12e9e465eeec1fd72c32797f80bd98",
+        "latex": "X_{\\text{critical},n} = X_{0}\\text{ }\\varphi^{- n}",
+        "displayMode": true,
+        "lineNumber": 162,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0d1329b1d43614a9a52167b380a0887f",
+        "latex": "\\boxed{n(X) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X} \\right) = \\frac{\\ln(X_{0}/X)}{\\ln\\varphi}}",
+        "displayMode": true,
+        "lineNumber": 163,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "60e4595e2ee5d2a882d87c8fed5d98e3",
+        "latex": "\\boxed{T(a) \\propto \\frac{1}{a}}",
+        "displayMode": true,
+        "lineNumber": 164,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "dd2afb5e45d5b08195092ad5f3fe8b92",
+        "latex": "\\boxed{T(N) = T_{reh}\\text{ }e^{- (N - N_{reh})}}",
+        "displayMode": true,
+        "lineNumber": 165,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "25d5f8fef2f91cc18dc7af4ab62e16b5",
+        "latex": "\\boxed{\\frac{dn}{dN} = \\kappa(N)\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ }\\text{ (}\\widehat{\\text{ı}}\\text{n general)}}",
+        "displayMode": true,
+        "lineNumber": 166,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e82b2041141d2343cd073bcc44654787",
+        "latex": "\\boxed{\\frac{dn}{dN} \\approx \\kappa = \\text{const}} \\Rightarrow n(N) = n_{reh} + \\kappa\\text{ }(N - N_{reh})",
+        "displayMode": true,
+        "lineNumber": 167,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f44429fc577d46d259330d4e4ec12d79",
+        "latex": "N - N_{reh} = \\frac{n - n_{reh}}{\\kappa}",
+        "displayMode": true,
+        "lineNumber": 168,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "37c5340ab7856dddbd0ab158c1480fed",
+        "latex": "\\boxed{T(n) = T_{reh}\\text{ }\\exp\\text{ ⁣}\\left( -\\frac{n - n_{reh}}{\\kappa} \\right)}",
+        "displayMode": true,
+        "lineNumber": 169,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2300aeed8d7fd1bb6d936e6f40cec787",
+        "latex": "T(n) = T_{reh}\\text{ }\\varphi^{- \\text{ }(n - n_{reh})/\\kappa_{\\varphi}},\\kappa_{\\varphi} \\equiv \\kappa/ln\\varphi",
+        "displayMode": true,
+        "lineNumber": 170,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "12329ac821c0285d4c3476ecfb5462cb",
+        "latex": "\\boxed{\\kappa = - \\text{ }\\frac{n_{2} - n_{1}}{\\ln(T_{2}/T_{1})}}",
+        "displayMode": true,
+        "lineNumber": 171,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c8f1ed83ec8bc3ccb482a055b7c3640d",
+        "latex": "\\kappa \\approx 0.84",
+        "displayMode": true,
+        "lineNumber": 172,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "46fa348fe18ad3dd558a7011413687d0",
+        "latex": "T_{reh} \\approx \\left( \\frac{90}{\\pi^{2}g_{*}} \\right)^{1/4}\\sqrt{\\Gamma M_{pl}}",
+        "displayMode": true,
+        "lineNumber": 173,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e07f1543bdb6b5db2d81a00f18779683",
+        "latex": "\\boxed{n_{reh} \\approx n(X_{end}) = {\\log}_{\\varphi}\\text{ ⁣}\\left( \\frac{X_{0}}{X_{end}} \\right)}",
+        "displayMode": true,
+        "lineNumber": 174,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9b43941b61c1e2c8d36263b027e32bb5",
+        "latex": "\\boxed{T(n) \\approx 0.15\\text{–}0.2\\text{ GeV}}",
+        "displayMode": true,
+        "lineNumber": 175,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5da4f83a881e1d2df7701e33c3cac055",
+        "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\int_{0}^{t}{G(X;t,\\tau)\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau}",
+        "displayMode": true,
+        "lineNumber": 176,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d12abcf66cf94988635150fba49294e8",
+        "latex": "G(X;t,\\tau) = e^{- \\beta(X)(t - \\tau)}.",
+        "displayMode": true,
+        "lineNumber": 177,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cd0371ca52600f4cb5a84785f71e93ee",
+        "latex": "M(t)\\text{\\:\\,} \\equiv \\text{\\:\\,}\\int_{0}^{t}e^{- \\beta(X)(t - \\tau)}\\text{ }H\\lbrack\\Omega(\\tau)\\rbrack\\text{ }d\\tau.",
+        "displayMode": true,
+        "lineNumber": 178,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c881ef5ba04ad141702f2fcfedcb0765",
+        "latex": "L_{\\text{mem}} = - \\lambda_{\\text{rec}}(X)\\text{ }S_{\\text{mem}}(\\Omega(t))\\text{ }M(t).",
+        "displayMode": true,
+        "lineNumber": 179,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "4b7230a059093c3af570177b7a9fa82f",
+        "latex": "\\boxed{\\dot{M} = H\\lbrack\\Omega(t)\\rbrack - \\beta(X)\\text{ }M.}",
+        "displayMode": true,
+        "lineNumber": 180,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f937453bcd5bb763e86198a4f20f91d0",
+        "latex": "L_{X} = \\frac{1}{2}(\\partial X)^{2} - V_{X}(X),V_{X}\\text{ d}\\breve{\\text{a}}\\text{ slope bl}\\widehat{\\text{a}}\\text{nd}\\breve{\\text{a}}\\text{ (slow-roll)}",
+        "displayMode": true,
+        "lineNumber": 181,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ed5468377244b9f46fce2b4b192642bd",
+        "latex": "L_{\\text{int}} = - g_{\\Omega X}(X)\\text{ }S_{\\text{coupling}}(\\Omega)\\text{ }X.",
+        "displayMode": true,
+        "lineNumber": 182,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9ad699eaab32caa4fd3e345788578468",
+        "latex": "\\boxed{\\ddot{X} + 3H\\dot{X} + V_{X}'(X) + F_{\\text{int}}(X,\\Omega) + F_{\\text{mem}}(X,\\Omega,M) = 0}",
+        "displayMode": true,
+        "lineNumber": 183,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3d5c6f9c40447ec88f4a49132c6f35ea",
+        "latex": "(and $M$ is defined above from the GU kernel)\n\nThe Golden Universe Formation\n\n**3) Switching to \"expansion\" time** $\\mathbf{N =}\\mathbf{\\ln}\\mathbf{a}$**(to get** $\\mathbf{dn}\\mathbf{/}\\mathbf{dN}$**)**\n\nYou use $d/dt = H\\text{ }d/dN$. We denote $X_{N} \\equiv dX/dN$, $M_{N} \\equiv dM/dN$.\n\n**Memory becomes:**",
+        "displayMode": true,
+        "lineNumber": 184,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3d4c561e3b422f8433852abb02c45f8d",
+        "latex": "**Equation of** $X$ (in slow-roll mode, i.e. you neglect $X_{NN}$ compared to the friction term):",
+        "displayMode": true,
+        "lineNumber": 185,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "891209d5a94ca0c27a435cbdf8122ac9",
+        "latex": "And with Friedmann $3H^{2}M_{pl}^{2} \\simeq V_{\\text{eff}}$ (in inflation), you can write compactly:",
+        "displayMode": true,
+        "lineNumber": 186,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "30b940d0bab0b52644523899ec6e8e88",
+        "latex": "**4) Now comes your piece:** $\\mathbf{\\kappa(N) = dn}\\mathbf{/}\\mathbf{dN}$**with memory included**\n\nGU defines the thresholds (ticks):",
+        "displayMode": true,
+        "lineNumber": 187,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b59f4ded8ee62540473c0d3eb731d1c3",
+        "latex": "The Golden Universe Formation\n\nSo we define continuously:",
+        "displayMode": true,
+        "lineNumber": 188,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "bc9c95505582d328e118524766de4673",
+        "latex": "We derive:",
+        "displayMode": true,
+        "lineNumber": 189,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b40da008d274339ad4299c1001557709",
+        "latex": "Substituting the slow-roll expression for $X_{N}$:",
+        "displayMode": true,
+        "lineNumber": 190,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "28609d2ce49a0dde55902711c942d790",
+        "latex": "That's the \"working\" formula that tells you how **memory** (via $M(N)$) makes your $\\kappa$ variable → i.e. the ticks are not uniform \"in expansion time\", but have *hysteresis / backflow* controlled.\n\n**5) Temperature connection: exact formula when** $\\mathbf{\\kappa}$**is NOT constant**\n\nAfter reheating, in a radiation-dominated regime, you have approximately:",
+        "displayMode": true,
+        "lineNumber": 191,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9c9ab4333f7df213981831c146186e6d",
+        "latex": "(plus a small correction from $g_{*s}(T)$ if you want precision).\n\nCombining with $\\kappa(N) = dn/dN$:",
+        "displayMode": true,
+        "lineNumber": 192,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "907869573c31dac87f965809564f6492",
+        "latex": "Integrate:",
+        "displayMode": true,
+        "lineNumber": 193,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "79dfcd382b9351dfe0d4d3377256ea34",
+        "latex": "- if $\\kappa$ is constant → you recover the simple formula $T(n) = T_{0}\\text{ }e^{- (n - n_{0})/\\kappa}$;\n\n- if the memory is strong in certain epochs → $\\kappa(n)$ deforms locally and finely \"moves\" your thresholds (QCD, recombination, etc.).\n\n**6) Calibration with your GU anchors (recombination and hadronization/QCD)**\n\nFrom \"Particles\" you explicitly have:\n\n- recombination: $T \\approx 1\\text{ eV}$ corresponds to an epoch $N_{\\text{rec}} \\approx 128$ and \"the temperature is related to the cosmic clock $X$\".\n\n> Golden Universe Theory for the ...\n\nAlso there you use hadronization/QCD around:\n\n- $n = 95$ (hadron calculation at $n = 95$ and BBN immediately after, $n \\approx 95\\text{–}96$).\n\n> Golden Universe Theory for the ...\nIf you take $T_{\\text{QCD}} \\sim 0.16\\text{ GeV}$ as the order of magnitude and $T_{\\text{rec}} \\sim 1\\text{ eV}$, then an **average** $\\kappa$between $n = 95$and $n = 128$ is:",
+        "displayMode": true,
+        "lineNumber": 194,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "540ff97f0f2c1ba949aa6acb02a315ed",
+        "latex": "Interpretation: in that calibration, \\~1.75 ticks per e-fold (on average), and deviations from that come naturally from $F_{\\text{mem}}$ (ie from $M(N)$).\n\n**7) What we actually do \"next\" (next piece of construction)**\n\nNow you have a closed local system in $\\left( X,M,a \\right)$:\n\n1. **Initialization:** $X(0) = \\mathfrak{R}(Z_{1})$, so $X_{0} = \\mid X(0) \\mid$(GU actually computes $X_{0} \\approx 0.104\\text{ }E_{P}$)\n\n> The Golden Universe Formation\n\n2. **Dynamics:** integrate in $N$:",
+        "displayMode": true,
+        "lineNumber": 195,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "66cd8a566832a7f75f642b81cfd07fd0",
+        "latex": "3. **Tick rate:** $\\kappa(N) = dn/dN$ from the formula above.\n4. **Temperature:** $T(n)$from integral $\\ln T = - \\int dn/\\kappa$, calibrated with $n = 95 \\leftrightarrow T_{\\text{QCD}}$and $n = 128 \\leftrightarrow 1\\text{ eV}$.\n\n> Golden Universe Theory for the ...\n>\n> Golden Universe Theory for the ...\n\nIf you want, the next concrete step is to choose a minimal form for the GU functions:\n\n- $\\lambda_{\\text{rec}}(X)$,\n\n- $\\beta(X)$,\n\n- and a simple proxy for $H\\lbrack\\Omega\\rbrack$ (eg $H\\lbrack\\Omega\\rbrack \\propto \\Omega^{\\dagger}\\Omega$ as the example $S_{\\text{mem}} = \\Omega^{\\dagger}\\Omega$ suggests)\n\n> The Golden Universe Formation\n>\n> ,\n\nand I write you explicitly **how the \"snap\"** (quick transitions) occurs at the $X_{\\text{critical},n}$ thresholds due to the inertia of $M$ (memory), i.e. exactly the mechanism that makes the transitions more \"discrete\" than a perfectly smooth roll.\nSources\n\nOkay\n\nPerfect --- then we now have the \"closed set\" GU → our universe, with **memory** implemented correctly (no integral), and with the bridge to **QGP/QCD**.\n\n**Final set of equations (minimal, ready to use)**\n\n**1) Definitions**",
+        "displayMode": true,
+        "lineNumber": 196,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "40e9ab49827464e0bfa894e2d0d537d8",
+        "latex": "**2) Memory (completely replace GU with ODE)**\\\nThe GU kernel: $G = e^{- \\beta(X)(t - \\tau)}$.\\\nYou define:",
+        "displayMode": true,
+        "lineNumber": 197,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "76850fd4fdc92793f9964aa849f20833",
+        "latex": "⇒ local equivalent:",
+        "displayMode": true,
+        "lineNumber": 198,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ea0fd30ae4d4a03abe10a3dc457363a1",
+        "latex": "or in $N$:",
+        "displayMode": true,
+        "lineNumber": 199,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d766a9633152d3c10aaa3d49ad7d7ad3",
+        "latex": "**3) Slow-roll for** $X$**with interaction + memory**",
+        "displayMode": true,
+        "lineNumber": 200,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f61eb105a02dc9533065ef01f400e26d",
+        "latex": "where, from GU:",
+        "displayMode": true,
+        "lineNumber": 201,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0be85c3da3b303aa1be1577dba663eb2",
+        "latex": "($L_{int}$ and $L_{mem}$ are exactly those in the document).\n**4) Friedmann (for** $H$**)**\\\nIn inflation:",
+        "displayMode": true,
+        "lineNumber": 202,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e58fc427458616275ebdceec8d72ccae",
+        "latex": "After reheating (RD):",
+        "displayMode": true,
+        "lineNumber": 203,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8d63a5b3f39da3c67aa8665cfc9ef76c",
+        "latex": "**5) Reheating (for plasma to appear)**",
+        "displayMode": true,
+        "lineNumber": 204,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ffc60081884bcfd8583fd09f34375048",
+        "latex": "QGP condition:",
+        "displayMode": true,
+        "lineNumber": 205,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "6e487a134d4d02e29b869a7c496e853e",
+        "latex": "**6) Temperature directly as a function of tick** $n$**(with memory)**\\\nAfter reheating:",
+        "displayMode": true,
+        "lineNumber": 206,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7a99e2376eab56a132354c25e4ecc6ce",
+        "latex": "So:",
+        "displayMode": true,
+        "lineNumber": 207,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9b17166bf0110257751abb2f5b6fd764",
+        "latex": "This is exactly where **memory** (via $\\kappa(n)$) can finely move the thresholds.\n\n**What does \"ok\" mean here**\n\nIt means we have:\n\n- how $X$ runs (slow-roll),\n\n- how we \"remember\" the past (memory $M$),\n\n- how to connect $X \\rightarrow n$,\n- how to get $T(n)$,\n\n- and the condition for QGP/QCD.\n\nIf you want to start the **numerical calibration** part (no further questions), I can take your typical anchors:\n\n- $n_{QCD} \\approx 95$and $T_{QCD} \\approx 0.16$GeV,\n\n- $n_{rec} \\approx 128$and $T_{rec} \\approx 1$eV,\n\nand I give you $\\kappa_{avg}$, then a minimal form for $\\beta(X)$ and $\\lambda_{rec}(X)$ that produces a \"snap\" at thresholds $X_{\\text{critical},n}$ (ie discrete transitions as you want in GU).\n\nOkay\n\nThought for 11s\n\nPerfect --- then we do the next step: **calibration** (so that our Universe comes out exactly) and then we add **memory** as a controlled warp around the $X_{\\text{critical},n}$ thresholds.\n\n**1) Minimum calibration** $\\mathbf{T(n)}$**of two anchors (QCD and recombination)**\nWe take the anchors we already use:\n\n- QCD/QGP: $n_{QCD} = 95$, $T_{QCD} \\approx 0.16\\text{ GeV}$\n\n- recombination: $n_{rec} = 128$, $T_{rec} \\approx 1\\text{ eV} = 10^{- 9}\\text{ GeV}$\n\nIn the RD regime, with $\\kappa = \\frac{dn}{dN}$ approximately constant over a large interval:",
+        "displayMode": true,
+        "lineNumber": 208,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d1bbfbd8670b56ffef608b0d0e145a47",
+        "latex": "We calibrate $\\kappa$ from the two points:",
+        "displayMode": true,
+        "lineNumber": 209,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "8b8ac49d4caa5be410e45510bb5d7eba",
+        "latex": "So the **minimum model** that exactly reproduces the thermal history between QCD and recombination is:",
+        "displayMode": true,
+        "lineNumber": 210,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a9e799d9c968706b1361840055d41299",
+        "latex": "and indeed at $n = 128$ it gives $T \\simeq 1\\text{ eV}$.\n**2) Now we add the memory:** $\\mathbf{\\kappa(n)}$**is no longer constant, but \"curves\" at the thresholds**\n\nWe already have the general formula:",
+        "displayMode": true,
+        "lineNumber": 211,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9cece845bb1955237578f83147705c70",
+        "latex": "So the \"memory\" basically comes in as:",
+        "displayMode": true,
+        "lineNumber": 212,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "ca8f059ad668766609af746519179140",
+        "latex": "**A GU-friendly choice for \"snap\" at thresholds (pulses around** $\\mathbf{n}$**)**\n\nYou use the thresholds:",
+        "displayMode": true,
+        "lineNumber": 213,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "eebc1444fdc75290cb79eef6b4a5ccf0",
+        "latex": "and you set the memory to be strong only near certain epochs (QCD, EW, etc.):",
+        "displayMode": true,
+        "lineNumber": 214,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5c3a6fac3ad83e644ea1ded12b21cb0c",
+        "latex": "- $A_{j} > 0$: \"accelerate\" the ticks (decrease $T$ by $n$ faster)\n\n- $A_{j} < 0$: \"slow down\" (plateau/delay)\n\n- $\\sigma_{j}$: how \"sharp\" is the transition (snap)\n\nThis is exactly the mechanism by which you can make the transitions more **discrete** (as you want in GU) without breaking the global calibration.\n\n**3) GU memory in local form (without integral)**\n\nWe define the memory variable:",
+        "displayMode": true,
+        "lineNumber": 215,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "33337cc008bcf23b3078d83251284c4e",
+        "latex": "which becomes ODE:",
+        "displayMode": true,
+        "lineNumber": 216,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1511ce0d7c13210645da5258580e043d",
+        "latex": "Then a law of $\\kappa$ (simple, efficient):",
+        "displayMode": true,
+        "lineNumber": 217,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d57900f74f3b675a742dfe93da1b49f3",
+        "latex": "\\phi",
+        "displayMode": false,
+        "lineNumber": 1,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d81b54b640d4b8364bcc1d95d2594496",
+        "latex": "V(\\phi)",
+        "displayMode": false,
+        "lineNumber": 2,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "765544241e4fef9268f6aebd999f7267",
+        "latex": "\\pi_{n},\\varphi_{n}",
+        "displayMode": false,
+        "lineNumber": 3,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "fc7265f7c2ddece8333259f0a7618b49",
+        "latex": "X_{n}",
+        "displayMode": false,
+        "lineNumber": 4,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2e6949c4601343e207e14f8f484f9cf9",
+        "latex": "L_{mem}",
+        "displayMode": false,
+        "lineNumber": 5,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9e82ecdd85cc777f10817e1fa5263053",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 6,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9de6688f65af23abf5f546142d8add2c",
+        "latex": "X_{n} = X_{0}\\text{ }\\varphi^{- n}",
+        "displayMode": false,
+        "lineNumber": 7,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "c8218b9f1ecdf30e3452ce07e11068a5",
+        "latex": "n",
+        "displayMode": false,
+        "lineNumber": 8,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d4e4f6c125b242271c829c4a15aa0199",
+        "latex": "\\alpha",
+        "displayMode": false,
+        "lineNumber": 9,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "35be90ffa02f0edd53eb9cb325c260e9",
+        "latex": "\\chi",
+        "displayMode": false,
+        "lineNumber": 10,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f04497a1c3366cb077141a7e15481ebb",
+        "latex": "r",
+        "displayMode": false,
+        "lineNumber": 11,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "dc44acbc05999639c9e9047d848b58bf",
+        "latex": "V(\\chi) = V_{0}\\left( 1-e^{- k\\chi/M_{pl}} \\right)^{2}",
+        "displayMode": false,
+        "lineNumber": 12,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9a31f716615bd0c9bace481bd2ac2a40",
+        "latex": "V(\\chi) = V_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}}",
+        "displayMode": false,
+        "lineNumber": 13,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "bc04ffcefd24f44e29427cfc4cafc321",
+        "latex": "X(\\chi) = X_{0}\\text{ }e^{- \\lambda\\chi/M_{pl}} \\Rightarrow \\ln\\text{ ⁣}\\frac{X}{X_{0}} = - \\lambda\\chi/M_{pl}",
+        "displayMode": false,
+        "lineNumber": 14,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "96b7f8b67bd4e3e88bc1617ae4441591",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 15,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "55bb74dea83b6df385e1f52f3979bba8",
+        "latex": "\\Gamma",
+        "displayMode": false,
+        "lineNumber": 16,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b50252469765a89c94b7f8e909331925",
+        "latex": "V(\\chi)",
+        "displayMode": false,
+        "lineNumber": 17,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "989440e0ad6bf656ded3654c93402f28",
+        "latex": "\\epsilon_{V},\\eta_{V}",
+        "displayMode": false,
+        "lineNumber": 18,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "28ad2bb984c74b7f70dff9aa94039980",
+        "latex": "N(\\chi)",
+        "displayMode": false,
+        "lineNumber": 19,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1c627a21e2d59f51f332d8b9d617e2af",
+        "latex": "X(\\chi)",
+        "displayMode": false,
+        "lineNumber": 20,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2a0f4d9a25936ce7d4906db221b2f27a",
+        "latex": "X_{n} = X_{0}\\varphi^{- n}",
+        "displayMode": false,
+        "lineNumber": 21,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "de952c93c48a0df6dc716d097906477f",
+        "latex": "a(t)",
+        "displayMode": false,
+        "lineNumber": 22,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "b12dbe17f97417965fc2bfa912af28f7",
+        "latex": "H(t)",
+        "displayMode": false,
+        "lineNumber": 23,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "e3d884f841171b0ca336dcc2021938f6",
+        "latex": "V",
+        "displayMode": false,
+        "lineNumber": 24,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "fef4dfc03277f5346535ef4bf8c7cf51",
+        "latex": "X_{111} = X_{0} \\cdot \\varphi^{- 111}",
+        "displayMode": false,
+        "lineNumber": 25,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "3260668a16ced69070c8b2f759690706",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 26,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "84346038ce30b953273b7671ce1aa758",
+        "latex": "L_{mem}",
+        "displayMode": false,
+        "lineNumber": 27,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5e8757dba3a819ee36a4e21463129ccf",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 28,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1b60ec9e330e512084ddd6b0f287a9a0",
+        "latex": "ds^{2} = - dt^{2} + a(t)^{2}d{\\overrightarrow{x}}^{2},H = \\dot{a}/a",
+        "displayMode": false,
+        "lineNumber": 29,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "0a1b2b4d5ed0c7369dfe96fa10361c50",
+        "latex": "H",
+        "displayMode": false,
+        "lineNumber": 30,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "21d06c96ed3fb4425ba383d454e8d42f",
+        "latex": "\\mathbf{X}_{\\mathbf{n}}",
+        "displayMode": false,
+        "lineNumber": 31,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "df80ab29215e029d4672f0eb7d36bc1e",
+        "latex": "X_{n}",
+        "displayMode": false,
+        "lineNumber": 32,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "2ca6a57394c4d50260b2ff7b5d5437d9",
+        "latex": "X(t)",
+        "displayMode": false,
+        "lineNumber": 33,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "47ab484d669e086bec5ee6220a63b70f",
+        "latex": "\\chi(t)",
+        "displayMode": false,
+        "lineNumber": 34,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "add5a5772ccfb5a948e652609e8a0423",
+        "latex": "\\ddot{\\chi} + 3H\\dot{\\chi} + U'(\\chi) = 0",
+        "displayMode": false,
+        "lineNumber": 35,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "7bf2326b7a05089a20a383e9d27d3aae",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 36,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "01683fb5d4e33245f11d3d53e15bdb48",
+        "latex": "p \\simeq - \\rho",
+        "displayMode": false,
+        "lineNumber": 37,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "44d5b310e34301f8c703221af1e73e79",
+        "latex": "\\mathbf{U(\\chi)}",
+        "displayMode": false,
+        "lineNumber": 38,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a56fadc82f3eb00a13e359fd996ca58b",
+        "latex": "U(\\chi)",
+        "displayMode": false,
+        "lineNumber": 39,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "a1046cf83fc11016228468fbda77cb2f",
+        "latex": "V(\\phi)",
+        "displayMode": false,
+        "lineNumber": 40,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1566c0e91fa3ec52cdfe41f779d6fb23",
+        "latex": "\\epsilon_{V} = \\frac{M_{pl}^{2}}{2}\\left( \\frac{U'}{U} \\right)^{2} \\ll 1,\\eta_{V} = M_{pl}^{2}\\frac{U^{''}}{U} \\ll 1",
+        "displayMode": false,
+        "lineNumber": 41,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "17ba0e914b7b7f3867bd932439154fd2",
+        "latex": "\\mathbf{X}",
+        "displayMode": false,
+        "lineNumber": 42,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "360a78629894ea9e5cfdb743d760f57f",
+        "latex": "X",
+        "displayMode": false,
+        "lineNumber": 43,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "f5a83348575258b31b270a2753b9f8aa",
+        "latex": "T(X)",
+        "displayMode": false,
+        "lineNumber": 44,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "cc61e512899182a3fe331a8a4f3efefe",
+        "latex": "X(a)",
+        "displayMode": false,
+        "lineNumber": 45,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "caa912a781c2f37840cb4c9b6332a1bc",
+        "latex": "\\frac{d\\ln X}{dN} = f(X)\\text{where}N = \\ln a",
+        "displayMode": false,
+        "lineNumber": 46,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "1def7115615f649121cc04f864c874cc",
+        "latex": "{\\dot{\\rho}}_{\\chi} + 3H(\\rho_{\\chi} + p_{\\chi}) = - \\Gamma\\text{ }\\rho_{\\chi},{\\dot{\\rho}}_{r} + 4H\\rho_{r} = + \\Gamma\\text{ }\\rho_{\\chi}",
+        "displayMode": false,
+        "lineNumber": 47,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "d04101e88022360a8c97f5c2be5eab53",
+        "latex": "\\mathbf{L}_{\\mathbf{mem}}",
+        "displayMode": false,
+        "lineNumber": 48,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "5f3b26a150d8cbbfd60086e67f0cbbbf",
+        "latex": "L_{mem}",
+        "displayMode": false,
+        "lineNumber": 49,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      },
+      {
+        "id": "9450d2853ef0d729b02c98396224533f",
+        "latex": "T_{\\mu\\nu}",
+        "displayMode": false,
+        "lineNumber": 50,
+        "documentId": "7c5a5f1b50fa64911c10daa894d3d1f4"
+      }
+    ],
     "36fc1c32650ce3ed49a559b38aaa8278": [
       {
         "id": "8a3bef0afd428245ac32662fc7758c45",
@@ -17446,7 +21186,7 @@
     ]
   },
   "metadata": {
-    "totalEquations": 1245,
-    "generatedAt": "2026-02-25T17:48:17.666Z"
+    "totalEquations": 1512,
+    "generatedAt": "2026-03-12T11:26:31.053Z"
   }
 }
