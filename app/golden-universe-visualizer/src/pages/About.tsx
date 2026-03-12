@@ -38,11 +38,11 @@ const About: React.FC = () => {
         </p>
         <div className="feature-stats">
           <div className="stat">
-            <div className="stat-number">41</div>
+            <div className="stat-number">45</div>
             <div className="stat-label">Theory Folders</div>
           </div>
           <div className="stat">
-            <div className="stat-number">237</div>
+            <div className="stat-number">227</div>
             <div className="stat-label">Python Calculations</div>
           </div>
           <div className="stat">

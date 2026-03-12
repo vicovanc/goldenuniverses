@@ -403,14 +403,14 @@ const Home: React.FC = () => {
         <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-value">
-              <AnimatedCounter end={41} decimals={0} />
+              <AnimatedCounter end={45} decimals={0} />
             </div>
             <div className="stat-label">Derivation Folders</div>
           </div>
 
           <div className="stat-card">
             <div className="stat-value">
-              <AnimatedCounter end={237} decimals={0} />
+              <AnimatedCounter end={227} decimals={0} />
             </div>
             <div className="stat-label">Python Calculations</div>
           </div>
@@ -444,7 +444,7 @@ const Home: React.FC = () => {
               Dive into the mathematical foundations of the Golden Ratio and its
               fascinating properties across physics, cosmology, and quantum mechanics.
             </p>
-            <div className="feature-badge">41 Topics</div>
+            <div className="feature-badge">45 Topics</div>
           </Link>
 
           <Link to="/derivations" className="feature-card">
@@ -456,7 +456,7 @@ const Home: React.FC = () => {
               Step-by-step mathematical derivations showing how fundamental constants
               emerge from the Golden Ratio structure.
             </p>
-            <div className="feature-badge">237 Calculations</div>
+            <div className="feature-badge">227 Calculations</div>
           </Link>
 
           <Link to="/calculations" className="feature-card">

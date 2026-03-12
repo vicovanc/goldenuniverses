@@ -263,7 +263,7 @@ const SidebarNew: React.FC = () => {
                 <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.5"/>
                 <path d="M8 5v3l2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
-              <span className="stat-value">41</span>
+              <span className="stat-value">45</span>
               <span className="stat-label">Deriv</span>
             </div>
           </div>
