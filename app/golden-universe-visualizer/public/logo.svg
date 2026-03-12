@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Golden gradient -->
+    <linearGradient id="goldenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC850"/>
+      <stop offset="50%" stop-color="#FFAA33"/>
+      <stop offset="100%" stop-color="#E6941A"/>
+    </linearGradient>
+
+    <!-- Radiant gold gradient -->
+    <radialGradient id="radiantGold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#FFA500" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#CC8400" stop-opacity="0.6"/>
+    </radialGradient>
+
+    <!-- Dark cosmic background -->
+    <radialGradient id="cosmicBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a14"/>
+    </radialGradient>
+
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow for phi symbol -->
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle with cosmic gradient -->
+  <circle cx="256" cy="256" r="256" fill="url(#cosmicBg)"/>
+
+  <!-- Fibonacci spiral background pattern (subtle) -->
+  <g opacity="0.1">
+    <rect x="210" y="210" width="46" height="46" fill="url(#goldenGradient)" rx="4" transform="rotate(0 256 256)"/>
+    <rect x="210" y="256" width="46" height="74" fill="url(#goldenGradient)" rx="6" transform="rotate(90 256 293)"/>
+    <rect x="136" y="230" width="120" height="120" fill="url(#goldenGradient)" rx="10" transform="rotate(180 196 290)"/>
+    <rect x="136" y="136" width="194" height="194" fill="url(#goldenGradient)" rx="16" transform="rotate(270 233 233)"/>
+  </g>
+
+  <!-- Outer orbit ring -->
+  <circle cx="256" cy="256" r="220"
+          fill="none"
+          stroke="url(#goldenGradient)"
+          stroke-width="2"
+          opacity="0.3"
+          stroke-dasharray="8 4"/>
+
+  <!-- Middle orbit ring -->
+  <circle cx="256" cy="256" r="180"
+          fill="none"
+          stroke="url(#goldenGradient)"
+          stroke-width="1.5"
+          opacity="0.25"/>
+
+  <!-- Golden spiral (Fibonacci) -->
+  <path d="M 256 256
+           Q 256 240, 272 240
+           Q 288 240, 288 256
+           Q 288 288, 256 288
+           Q 208 288, 208 240
+           Q 208 176, 272 176
+           Q 352 176, 352 256
+           Q 352 368, 240 368
+           Q 96 368, 96 224
+           Q 96 48, 272 48
+           Q 480 48, 480 256"
+        stroke="url(#goldenGradient)"
+        stroke-width="6"
+        fill="none"
+        stroke-linecap="round"
+        opacity="0.8"
+        filter="url(#glow)"/>
+
+  <!-- Central glowing circle -->
+  <circle cx="256" cy="256" r="100"
+          fill="url(#radiantGold)"
+          opacity="0.15"
+          filter="url(#glow)"/>
+
+  <circle cx="256" cy="256" r="90"
+          fill="none"
+          stroke="url(#goldenGradient)"
+          stroke-width="3"
+          opacity="0.6"/>
+
+  <!-- Stars/particles around -->
+  <circle cx="380" cy="150" r="3" fill="#FFD700" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="420" cy="200" r="2" fill="#FFA500" opacity="0.7"/>
+  <circle cx="140" cy="130" r="2.5" fill="#FFD700" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="100" cy="180" r="2" fill="#FFA500" opacity="0.6"/>
+  <circle cx="390" cy="370" r="2" fill="#FFD700" opacity="0.7"/>
+  <circle cx="120" cy="340" r="2.5" fill="#FFA500" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Central phi symbol with strong glow -->
+  <text x="256" y="300"
+        font-family="Georgia, serif"
+        font-size="140"
+        font-weight="bold"
+        font-style="italic"
+        fill="url(#goldenGradient)"
+        text-anchor="middle"
+        filter="url(#strongGlow)">φ</text>
+
+  <!-- Golden ratio value below -->
+  <text x="256" y="340"
+        font-family="'SF Mono', 'Monaco', 'Consolas', monospace"
+        font-size="20"
+        font-weight="500"
+        fill="#FFAA33"
+        text-anchor="middle"
+        opacity="0.9">1.618033988...</text>
+
+  <!-- Decorative corner elements -->
+  <path d="M 30 30 L 70 30 M 30 30 L 30 70"
+        stroke="url(#goldenGradient)"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.4"/>
+  <path d="M 482 30 L 442 30 M 482 30 L 482 70"
+        stroke="url(#goldenGradient)"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.4"/>
+  <path d="M 30 482 L 70 482 M 30 482 L 30 442"
+        stroke="url(#goldenGradient)"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.4"/>
+  <path d="M 482 482 L 442 482 M 482 482 L 482 442"
+        stroke="url(#goldenGradient)"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.4"/>
+</svg>

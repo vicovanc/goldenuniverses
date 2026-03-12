@@ -76,9 +76,21 @@
   &:hover {
     transform: translateX(2px);
 
+    .brand-logo {
+      transform: rotate(15deg) scale(1.05);
+    }
+
     .brand-title {
       color: var(--primary-500);
     }
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: $space-3;
+    flex-shrink: 0;
+    transition: transform $transition-fast;
   }
 
   .brand-title {

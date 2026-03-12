@@ -104,6 +104,7 @@ const SidebarNew: React.FC = () => {
       <div className="sidebar-header">
         {!sidebarCollapsed && (
           <Link to="/" className="sidebar-branding">
+            <img src="/logo.svg" alt="Golden Universe" className="brand-logo" />
             <h1 className="brand-title">Golden Universe</h1>
           </Link>
         )}
