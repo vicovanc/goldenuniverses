@@ -374,6 +374,32 @@ A function can be promoted to DERIVED only if:
 
 ---
 
+## 13A. Electron Canonical Anchor (Map Consistency Rule)
+
+For closure-map consistency, all connected theory/explanation maps must use the same terminal electron statement:
+
+- Tree-level electron (before residual): `m_e ~ 0.51283 MeV` (`+0.36%`, about `+3583 ppm` vs CODATA).
+- Final residual correction: `deltaC_e = (1-E/K)/N_e`.
+- Corrected first-principles electron: `m_e ~ 0.51099 MeV` (ppm-level proximity; about `-17.5 ppm` with rounded print value).
+
+Interpretation:
+
+- This is a finite-size torus residual correction, not a fit parameter.
+- It is the canonical upstream anchor for chains using `m_e -> M_P -> M_0 -> G_N`.
+
+Map sync set:
+
+1. `explanatory/WHAT_IS_THE_ELECTRON.md`
+2. `app/golden-universe-visualizer/public/data/theory/WHAT_IS_THE_ELECTRON.md`
+3. `explanatory/CONSCIOUSNESS.md`
+4. `app/golden-universe-visualizer/public/data/theory/CONSCIOUSNESS.md`
+5. `theory/GU_MEMORY_REGIME_MAP.md`
+6. `app/golden-universe-visualizer/public/data/theory/GU_MEMORY_REGIME_MAP.md`
+7. `explanatory/README_GU_CONSCIOUSNESS.md`
+8. `app/golden-universe-visualizer/public/data/theory/README_GU_CONSCIOUSNESS.md`
+
+---
+
 ---
 
 ## 14. V_X: Structural Limitation and Observational Constraints

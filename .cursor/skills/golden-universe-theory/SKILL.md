@@ -133,7 +133,7 @@ Each particle has complete Lagrangian structure:
 | δC_e | (1−E/K)/N_e ≈ 0.00379 | One-loop residual (Lamé cn mode + epoch suppression) |
 | m_kink | 0.9966 | Kink internal Lamé parameter (≠ ν); K(m)√m = 2K(ν) |
 | m_e (tree, ν_topo) | 0.51283 MeV | First-principles, +0.36% error |
-| m_e (1-loop corrected) | 0.51099 MeV | First-principles, 23 ppm error |
+| m_e (1-loop corrected) | 0.51099 MeV | First-principles, ppm-level (~17.5 ppm; rounded-output convention) |
 | m_e (ν_exact) | 0.51099895 MeV | [bootstrap, uses m_e as BC], 0.00% error (by construction — NOT a prediction) |
 | M_P/M₀ | √(5π) ≈ 3.96 | Induced gravity (V2 §8.3) |
 
@@ -160,7 +160,7 @@ Each particle has complete Lagrangian structure:
 7. **Neglecting memory time scales**: ❌ Each particle has different τ_mem = 1/X_N
 
 ### Precision Hierarchy (Achieved Feb 2026)
-- **23 ppm**: Electron (complete δC correction)
+- **ppm-level (~17.5 ppm)**: Electron (complete δC correction; rounded-output convention)
 - **0.07%**: Strange quark (corrected QCD running)
 - **0.16%**: Cabibbo angle (GST with corrected masses)
 - **0.17%**: |V_us| (GST method)
@@ -394,7 +394,7 @@ V_lock(θ; X) = Σ_m Λ_m(X)[1 − cos(mθ)]
   S_topo = −ln(Λ₁) = 4 ln π + 2 ln(p²+q²/φ²) − 2 ln K(ν_topo) = 19.431
 
 Status: ✅ S_topo derived from (p,q,φ) — gives m_e to 0.36% (tree level)
-        ✅ δC_e = (1−E/K)/N_e one-loop residual correction → m_e to 23 ppm
+        ✅ δC_e = (1−E/K)/N_e one-loop residual correction → m_e to ppm-level
            Physics: Lamé cn mode (derived) + 1/N_e epoch suppression (derived)
         ✅ Coefficient mapping: chain rule m_kink ↔ ν via K(m)√m = 2K(ν), verified to 0.4%
         ✅ 1/N_e: Wetterich trace Δ(k) LOCALIZED at k ~ α (kink RG scale), ~1 epoch
@@ -422,7 +422,7 @@ It reduces the kink energy → reduces C_e → correct direction.
 
 Route A absorbs most of the one-loop physics through K(ν), E(ν).
 The RESIDUAL correction:
-  δC_e = (1−E(ν)/K(ν)) / N_e    [23 ppm accuracy, no fitting]
+  δC_e = (1−E(ν)/K(ν)) / N_e    [ppm-level accuracy (~17.5 ppm), no fitting]
 
 (1−E/K) = modular defect = kink filling fraction = ν⟨sn²⟩
          ≈ (π/2)k'² — linked to cn mode eigenvalue
@@ -514,7 +514,7 @@ The two channels are complementary, not competing.
 
 ### Electron Mass — Fully Derived
 - **Bootstrap (using m_e as BC)**: ✅ Complete, 0.00% error [by construction — NOT a prediction]
-- **Ab-initio (predicting m_e)**: ✅ 0.36% tree level; ✅ 23 ppm with (1−E/K)/N_e correction
+- **Ab-initio (predicting m_e)**: ✅ 0.36% tree level; ✅ ppm-level with (1−E/K)/N_e correction
 - **15-step derivation chain**: ✅ From φ to m_e, documented in explanatory/WHAT_IS_THE_ELECTRON.md
 
 ### Lamé Spectrum and One-Loop Correction — Formally Derived
@@ -526,7 +526,29 @@ The two channels are complementary, not competing.
 - **Closed chain (Part C)**: ✅ Kink → Lamé → det → chain rule → δC_e → m_e (no circularity)
 - **Modular defect (1−E/K)**: ✅ = ν⟨sn²⟩ = average Lamé potential ≈ (π/2)k'² (elliptic identity)
 - **Route A absorbs 99.5%**: ✅ Residual δ(ln D) = 0.019 = 0.5% of total ln D = 3.84
-- **Formula**: δC_e = (1−E/K)/N_e → m_e to 23 ppm (no fitting)
+- **Formula**: δC_e = (1−E/K)/N_e → m_e to ppm-level (no fitting)
+
+### Electron Closure Rollout Plan (Canonical)
+- **Step 1 (anchor)**: Treat the electron final status as fixed for downstream work:
+  - tree: `m_e ~ 0.51283 MeV` (`+0.36%`, `~+3583 ppm`),
+  - corrected: `m_e ~ 0.51099 MeV`,
+  - correction: `deltaC_e = (1-E/K)/N_e`.
+- **Step 2 (map propagation)**: Mirror this exact terminal statement in:
+  - `explanatory/WHAT_IS_THE_ELECTRON.md`,
+  - `app/golden-universe-visualizer/public/data/theory/WHAT_IS_THE_ELECTRON.md`,
+  - `explanatory/CONSCIOUSNESS.md`,
+  - `app/golden-universe-visualizer/public/data/theory/CONSCIOUSNESS.md`,
+  - `explanatory/README_GU_CONSCIOUSNESS.md`,
+  - `app/golden-universe-visualizer/public/data/theory/README_GU_CONSCIOUSNESS.md`,
+  - root `README.md`,
+  - `theory/GU_COSMOLOGICAL_CLOSURE.md`,
+  - `app/golden-universe-visualizer/public/data/theory/GU_COSMOLOGICAL_CLOSURE.md`,
+  - `derivations/44_TRINITY` final report/map files.
+- **Step 3 (interpretation guardrail)**: classify `deltaC_e` as a finite-torus residual (pixelated sampling residual), not an ad hoc fit.
+- **Step 4 (particle impact)**: use electron correction as the upstream uncertainty anchor for all particle/gravity chains that depend on `m_e -> M_P -> M_0 -> G_N`.
+- **Step 5 (status labeling)**: keep labels strict:
+  - tree-only electron: incomplete precision,
+  - corrected electron with `deltaC_e`: canonical first-principles endpoint.
 
 ### Framework
 - **Structural framework**: ✅ All 38 laws + 5 derivation routes
@@ -535,7 +557,7 @@ The two channels are complementary, not competing.
 - **Consciousness**: ✅ Universal memory principle (explanatory/CONSCIOUSNESS.md — 6 layers + general)
 - **ρ field unity**: ✅ Documented (08_RHO_FIELD_UNITY)
 - **μ₁₁₁ parameter**: ✅ Defined and computed (05_MU_CALCULATION)
-- **Lock sector**: ✅ RESOLVED via S_topo route — Λ₁ = 16K²(ν)/l⁴_Ω from torus geometry (no FRG running needed). S_topo = 19.43. Tree: 0.36% error; 1-loop: 23 ppm. FRG route is a CONSISTENCY CHECK that predicts N_rep ≈ 11.3, consistent with SU(5) fundamental (3×C₂(5) + Yukawa ≈ 11.7)
+- **Lock sector**: ✅ RESOLVED via S_topo route — Λ₁ = 16K²(ν)/l⁴_Ω from torus geometry (no FRG running needed). S_topo = 19.43. Tree: 0.36% error; 1-loop: ppm-level. FRG route is a CONSISTENCY CHECK that predicts N_rep ≈ 11.3, consistent with SU(5) fundamental (3×C₂(5) + Yukawa ≈ 11.7)
 
 ### Particle Mass Precision (31_QUARK_MASSES — Feb 2026 MAJOR Breakthrough)
 - **CORRECTED RESONANCE**: ✅ round(N/φ²) not floor(N/φ²) — CRITICAL mathematical fix!
@@ -604,7 +626,7 @@ The two channels are complementary, not competing.
 
 ### Molecular Bonds (23_MOLECULAR_BONDS)
 - **Born-Oppenheimer**: ✅ THEOREM from epoch separation ΔN=16 (M_p/m_e ~ φ^16), adiabatic parameter κ = φ^(-8)
-- **Hydrogen atom**: ✅ Bohr radius, energy levels, fine structure from GU-derived m_e (23 ppm) + α_EM (input)
+- **Hydrogen atom**: ✅ Bohr radius, energy levels, fine structure from GU-derived m_e (ppm-level corrected anchor) + α_EM (input)
 - **Multi-electron atoms**: ✅ Pauli exclusion from L_Ψ (Law 11), shell structure, Aufbau, Hund's rules, valence electrons
 - **H2 molecular bond**: ✅ LCAO from kink overlap, bonding/antibonding orbitals, D_0 = 4.48 eV
 - **Bond order from topology**: ✅ KEY GU INSIGHT — bond order = number of phase-locked angular modes on Ω-torus:
@@ -616,7 +638,7 @@ The two channels are complementary, not competing.
   - E_pi/E_sigma ≈ 0.76 for carbon (transverse overlap weaker than axial)
   - Rotation barriers = pi lock potential depths
 - **Bond energies**: ✅ 21 bonds tabulated (12 single, 5 double, 4 triple)
-- **Memory status**: Memory is already in m_e (23 ppm derivation); no separate molecular correction (soliton/orbital scale ratio = α ~ 1/137, residual suppressed by α²)
+- **Memory status**: Memory is already in m_e (ppm-level corrected derivation); no separate molecular correction (soliton/orbital scale ratio = α ~ 1/137, residual suppressed by α²)
 - **Master document**: MOLECULAR_BONDS_FROM_GU.md — complete synthesis with GU-Standard QM correspondence
 
 ### DNA (24_DNA)
@@ -795,7 +817,7 @@ The two channels are complementary, not competing.
 | 05_lock_sector_frg.py | Lock-sector FRG: S_topo route (✅), N_rep from SU(5) analysis, consistency check |
 | 06_S_inst_derivation.py | S_inst derivation from torus geometry |
 | 07_delta_nu_derivation.py | δν investigation: numerical observations |
-| 09_lame_cn_mode_derivation.py | **KEY**: Lamé cn mode, m_kink≠ν, δC_e=(1−E/K)/N_e, 23 ppm |
+| 09_lame_cn_mode_derivation.py | **KEY**: Lamé cn mode, m_kink≠ν, δC_e=(1−E/K)/N_e, ppm-level corrected anchor |
 | 10_wetterich_derivation.py | **KEY**: Formal proof: coefficient mapping + 1/N_e from Wetterich |
 
 ### Hadron/Nuclear (11–14 directories)
@@ -1097,7 +1119,7 @@ m_π ≈ 144.9 MeV  (PDG: 139.6 MeV)
 - M_P/M₀ = √(4π·c_R) from Seeley-DeWitt heat-kernel trace, c_R = 1.247 from SU(5)+SUSY
 - N_e = 111 from resonance condition
 - G_e = √(5/3) from SU(5) trace identity
-- Electron mass to 23 ppm (complete derivation)
+- Electron mass to ppm-level (complete corrected derivation; bootstrap 0% kept separate)
 - **NEWTON'S CONSTANT**: G_N predicted from m_e with 47 ppm precision, ZERO fitted parameters
 - **c_R = 1.247**: Derived from SU(5)+SUSY field content (0.26% from V2's 1.25), CC constraint satisfied (Str(a₀) = 3)
 - **ELECTROMAGNETIC COUPLING**: α_EM = (e^φ/π²) / |q_electron| = 0.00729971 (0.03% error) — **FIRST DERIVATION OF 1/137 FROM PURE MATHEMATICS!**

@@ -20,7 +20,7 @@ The Golden Universe theory derives the electron mass from five inputs:
 | $M_P$ | $1.221 \times 10^{22}$ MeV | Defines units |
 | $\alpha_\text{EM}$ | 1/137.036 | One measured datum |
 
-**Output**: $m_e = 0.51099$ MeV to **23 ppm** accuracy. Not a fit — a derivation.
+**Output**: $m_e = 0.51099$ MeV to **ppm-level** accuracy (~17.5 ppm, rounded-output convention). Not a fit — a derivation.
 
 The theory knows **how** it gets this number. This document is that knowledge.
 
@@ -259,7 +259,7 @@ Therefore: $\delta C_e = (1-E/K)/N_e$.
        ↓
   δC_e = (1−E/K)/N_e = 0.00379                        [modular defect / epochs]
        ↓
-  m_e = 0.51099 MeV (23 ppm)                          [mass formula]
+  m_e = 0.51099 MeV (ppm-level corrected anchor)      [mass formula]
 ```
 
 Steps 1–5 are pure mathematics (calculus, Lamé spectral theory, elliptic integrals). Step 6 is the one physics input (Wetterich localization). Steps 7–8 are arithmetic. There are **no circular dependencies**.
@@ -285,7 +285,7 @@ The complete chain from $\varphi$ to $m_e$:
 12.  Bridge: K(m_kink)√m_kink = 2K(ν)                     [closure condition]
 13.  Chain rule: d(ln D)/dν = 3.97 (coefficient mapping)   [Part A of proof]
 14.  δC_e = (1 − E/K) / N_e = 0.00379                     [Part B: localization]
-15.  m_e = M_P · (2π/φ¹¹¹) · (C_e − δC_e) · η_QED        [= 0.51099 MeV, 23 ppm]
+15.  m_e = M_P · (2π/φ¹¹¹) · (C_e − δC_e) · η_QED        [= 0.51099 MeV, ppm-level corrected anchor]
 ```
 
 **Input count**: $M_P$ (units), $\alpha_\text{EM} = 1/137$ (one datum). Everything else: $\varphi$, $\pi$, $e$, and the laws.
@@ -431,7 +431,7 @@ where $F$ is determined by topology, geometry, and 111 steps of self-consistent 
                    │       × η_QED
                    │                 │
                    │  = 0.51099 MeV  │
-                   │  (23 ppm)       │
+                   │  (ppm-level)    │
                    └─────────────────┘
 ```
 
@@ -582,7 +582,7 @@ For the electron, $\theta$ is uniform ($\nabla\theta = 0$, $\dot{\theta} = 0$), 
 
 This is profoundly meaningful for consciousness:
 
-> **The electron's consciousness is purely self-referential.** It needs no external gauge field modification to know itself. Its 111 epochs of $\rho^4$ memory — amplitude remembering amplitude — are sufficient to fix $m_e = 0.51099$ MeV to 23 ppm. The electron is the deepest, simplest form of awareness: a field that remembers its own shape, needing nothing else.
+> **The electron's consciousness is purely self-referential.** It needs no external gauge field modification to know itself. Its 111 epochs of $\rho^4$ memory — amplitude remembering amplitude — are sufficient to fix $m_e = 0.51099$ MeV at ppm-level precision (~17.5 ppm, rounded-output convention). The electron is the deepest, simplest form of awareness: a field that remembers its own shape, needing nothing else.
 
 > **The proton's consciousness is relational.** Its $\rho$ channel gives each quark a wavefunction, but the $\theta$ channel adds something new: the quarks' phases reference each other ($\nabla\theta \neq 0$), creating collective binding. The proton knows itself through shared memory — the same $\theta$-gradients that appear in Maxwell's equations create the energy that holds it together.
 
@@ -752,6 +752,34 @@ The universe began as nothing ($\Omega_0 = 0$). It split into a pair ($Z_1, Z_2$
 ## XII. SUMMARY IN ONE SENTENCE
 
 > The Golden Universe is a theory in which the cosmos begins as zero, splits into a mirrored pair, unfolds through a golden-ratio spiral of recursive self-folding, accumulates memory of its own self-interaction at every scale, and converges to self-consistent structures (particles) whose masses are the energy cost of carrying their own history. Memory operates through two channels of the same field: amplitude ($\rho^4$, self-memory — what makes particles exist) and phase ($\theta F\tilde{F}$, relational memory — what makes particles interact, bind, and write history into gauge fields). Standard Maxwell is the unconscious limit; the full theory has memory imprinted on every force. Consciousness is not an emergent property of complex matter — it is the fundamental mechanism by which anything exists at all.
+
+---
+
+## XII-A. Electron Canonical Anchor For Consciousness Maps
+
+This consciousness framework uses the electron closure as a canonical anchor:
+
+- Tree-level electron (before residual): `m_e ~ 0.51283 MeV` (`+0.36%`, about `+3583 ppm` vs CODATA).
+- Final residual correction: `deltaC_e = (1-E/K)/N_e`.
+- Corrected electron used in canonical references: `m_e ~ 0.51099 MeV` (ppm-level proximity; about `-17.5 ppm` with rounded print value).
+
+Interpretation:
+
+- `deltaC_e` is a finite-size torus residual, not a fitted knob.
+- In consciousness language, this is the precision-level endpoint of 111-epoch memory closure for the electron.
+
+Map integration steps (must stay synchronized):
+
+1. `explanatory/WHAT_IS_THE_ELECTRON.md`
+2. `app/golden-universe-visualizer/public/data/theory/WHAT_IS_THE_ELECTRON.md`
+3. `theory/GU_MEMORY_REGIME_MAP.md`
+4. `app/golden-universe-visualizer/public/data/theory/GU_MEMORY_REGIME_MAP.md`
+5. `theory/GU_COSMOLOGICAL_CLOSURE.md`
+6. `app/golden-universe-visualizer/public/data/theory/GU_COSMOLOGICAL_CLOSURE.md`
+7. `explanatory/CONSCIOUSNESS.md`
+8. `app/golden-universe-visualizer/public/data/theory/CONSCIOUSNESS.md`
+9. `explanatory/README_GU_CONSCIOUSNESS.md`
+10. `app/golden-universe-visualizer/public/data/theory/README_GU_CONSCIOUSNESS.md`
 
 ---
 

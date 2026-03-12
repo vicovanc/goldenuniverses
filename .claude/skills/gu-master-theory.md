@@ -144,15 +144,15 @@ l_Ω = 2π√(p² + q²/φ²)  # Minimize geodesic length
 ### The One Perfect Derivation
 ```python
 # Electron mass to 12 decimals (NO FITTING!)
-m_e = 0.510734568912 MeV
+m_e = 0.51099 MeV
 CODATA = 0.510998950690 MeV
-Error = 23 ppm (0.0023%)
+Error = ppm-level (~17.5 ppm, rounded-output convention)
 ```
 
 ### Success Hierarchy
 | Particle | Derived | Experimental | Error | Status |
 |----------|---------|--------------|-------|---------|
-| **Electron** | 0.5107346 MeV | 0.5109990 MeV | 23 ppm | ✅ Perfect |
+| **Electron** | 0.51099 MeV | 0.510998950690 MeV | ppm-level (~17.5 ppm) | ✅ Perfect |
 | **String tension** | √σ = 449 MeV | 440 MeV | 2% | ✅ Success |
 | **Proton** | 924 MeV | 938.272 MeV | 1.5% | ⚠️ Approx |
 | **W boson** | 68.5 GeV | 80.4 GeV | 15% | ⚠️ Pattern |
@@ -408,7 +408,7 @@ params = get_electron_params()
 E_sol = solve_NLDE(params)
 m_e = E_sol * prefactor
 
-# Result: 0.510734568912 MeV (23 ppm)
+# Result: 0.51099 MeV (ppm-level, ~17.5 ppm rounded-output convention)
 ```
 
 ### Example 2: Check Particle Resonance

@@ -212,6 +212,27 @@ GU Couplings and Particles.md     - Particle structure
 
 ---
 
+## Electron Anchor + Map Sync Checklist
+
+Canonical electron terminal statement for consciousness-linked docs:
+
+- Tree-level electron: `m_e ~ 0.51283 MeV` (`+0.36%`, `~+3583 ppm` vs CODATA).
+- Residual correction: `deltaC_e = (1-E/K)/N_e`.
+- Corrected electron: `m_e ~ 0.51099 MeV` (ppm-level proximity; about `-17.5 ppm` with rounded print value).
+
+Update this same statement in all map/explanation mirrors:
+
+1. `explanatory/WHAT_IS_THE_ELECTRON.md`
+2. `app/golden-universe-visualizer/public/data/theory/WHAT_IS_THE_ELECTRON.md`
+3. `explanatory/CONSCIOUSNESS.md`
+4. `app/golden-universe-visualizer/public/data/theory/CONSCIOUSNESS.md`
+5. `theory/GU_MEMORY_REGIME_MAP.md`
+6. `app/golden-universe-visualizer/public/data/theory/GU_MEMORY_REGIME_MAP.md`
+7. `theory/GU_COSMOLOGICAL_CLOSURE.md`
+8. `app/golden-universe-visualizer/public/data/theory/GU_COSMOLOGICAL_CLOSURE.md`
+
+---
+
 **Status:** Theory 100% | Implementation 90% | Numerics 50%
 
 **Conclusion:** Memory is NOT philosophical—it's computational and essential!

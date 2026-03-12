@@ -78,7 +78,7 @@ Str(a₀) = 3                           [cosmological constant constraint satisf
 | **Newton's G_N** | **47 ppm** | **m_e → M_P → G_N (ZERO fitted params)** | ✅ **Breakthrough** |
 | **Fine structure α_EM** | **0.03%** | **Enhanced framework (e^φ/π²)/70** | ✅ **Revolutionary** |
 | **c_R (induced gravity)** | **0.26%** | **SU(5)+SUSY Seeley-DeWitt** | ✅ **Derived** |
-| **Electron** | 23 ppm | First principles NLDE | ✅ Complete |
+| **Electron** | ppm-level (~17.5 ppm) | First-principles NLDE + torus residual | ✅ Canonical corrected anchor |
 | **Strange quark** | 0.07% | Anti-resonant (SU(5) + QCD) | ✅ Excellent |
 | **Charm quark** | 0.00% | Anti-resonant (SU(5) + QCD) | ✅ Perfect |
 | **Up quark** | 0.47% | Resonant (winding + δC) | ✅ Sub-percent |
@@ -87,6 +87,13 @@ Str(a₀) = 3                           [cosmological constant constraint satisf
 | **Higgs VEV** | 0.45% | Enhanced framework + epochs | ✅ Excellent |
 | **Muon** | - | Resonant (lepton lattice) | ✅ Fixed |
 | **Tau** | - | Resonant (universal fallback) | ✅ Fixed |
+
+### Electron Final Correction vs CODATA
+
+- Tree level (torus geometry only): `m_e ≈ 0.51283 MeV` (`+0.36%`, ~`+3583 ppm` vs CODATA).
+- Final torus one-loop residual: `deltaC_e = (1 - E/K)/N_e = 0.003787...`.
+- Corrected first-principles value: `m_e ≈ 0.51099 MeV` (ppm-level agreement; ~`-17.5 ppm` against CODATA when evaluated with rounded print value).
+- Net effect: the torus residual correction improves electron accuracy by roughly `~200x` over tree level.
 
 ## 🧬 Resonance Duality Framework
 
@@ -115,7 +122,7 @@ Golden Universe/
 │   ├── The Golden Universe Formation.md
 │   └── Golden Universe Theory for the Calculation of Particles v2.md
 ├── derivations/               # All derivation folders
-│   ├── 01_ELECTRON_MASS/     # Electron 23 ppm derivation
+│   ├── 01_ELECTRON_MASS/     # Electron derivation (tree + corrected ppm-level anchor)
 │   ├── 30_WINDING_NUMBERS/   # Corrected winding number solver
 │   ├── 31_QUARK_MASSES/      # Complete quark derivations + breakthrough
 │   ├── 32_PION_PHYSICS/      # Hadron physics

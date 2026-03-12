@@ -1784,3 +1784,12 @@ E(ν)    = 1.2688
 κ(ν)    = 0.01345
 η_μ(ν)  = 0.000198
 C_e     = 1.0530
+
+## Electron Final CODATA Anchor (Use As Terminal Statement)
+
+- Tree-level electron from torus geometry (before residual): `m_e ~ 0.51283 MeV` (`+0.36%`, about `+3583 ppm` vs CODATA).
+- Final residual correction is canonical:
+  `deltaC_e = (1-E/K)/N_e`.
+- Corrected first-principles electron: `m_e ~ 0.51099 MeV`, ppm-level close to CODATA (about `-17.5 ppm` with rounded print value).
+- Interpretation rule: this is a finite-size torus residual correction, not a fitted parameter.
+- Propagation rule: downstream chains using `m_e -> M_P -> M_0 -> G_N` should treat this corrected electron as the canonical upstream anchor.

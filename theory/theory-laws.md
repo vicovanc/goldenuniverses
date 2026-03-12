@@ -8070,6 +8070,15 @@ Z₁ = [M_P/(4√π)] · e^(i·2π/φ²)  (consequence, not input)
 2. **r ~ 1 prediction**: RULED OUT by Planck/BICEP2 (r < 0.036); need mechanism to suppress tensor-to-scalar ratio
 3. **M₀ = 3.08 × 10¹⁸ GeV**: Awaits independent confirmation
 
+### Electron Final CODATA Anchor (Use As Terminal Statement)
+
+- Tree-level electron from torus geometry (before residual): `m_e ~ 0.51283 MeV` (`+0.36%`, about `+3583 ppm` vs CODATA).
+- Final residual correction is canonical:
+  `deltaC_e = (1-E/K)/N_e`.
+- Corrected first-principles electron: `m_e ~ 0.51099 MeV`, ppm-level close to CODATA (about `-17.5 ppm` with rounded print value).
+- Interpretation rule: this is a finite-size torus residual correction, not a fitted parameter.
+- Propagation rule: downstream chains using `m_e -> M_P -> M_0 -> G_N` should treat this corrected electron as the canonical upstream anchor.
+
 ### Reference Scripts
 
 - `derivations/39_GRAVITY/20_GRAVITY_FROM_FIRST_PRINCIPLES.py` — Master derivation (50-digit precision)

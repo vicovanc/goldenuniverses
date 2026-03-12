@@ -134,6 +134,12 @@ In short:
 - Memory is not uniformly dominant.
 - Regime dependence is now an explicit canonical feature.
 
+Electron anchor note for map consistency:
+
+- Particle-side residual closure uses `deltaC_e = (1-E/K)/N_e` as the final torus finite-size correction.
+- This improves electron agreement from tree-level `~+0.36%` (`~+3583 ppm`) to ppm-level proximity to CODATA.
+- Downstream chains that depend on `m_e` should treat this corrected electron as the canonical upstream anchor.
+
 ---
 
 ## 4) Memory-Specific Task Status (Latest Machine Pass)

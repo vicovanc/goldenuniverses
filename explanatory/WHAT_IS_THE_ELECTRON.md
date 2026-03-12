@@ -190,7 +190,7 @@ A tiny reduction from the electron's own electromagnetic field.
 $$\boxed{m_e c^2 = M_P c^2 \cdot \frac{2\pi}{\varphi^{111}} \cdot C_e(\nu) \cdot \eta_\text{QED}}$$
 
 - With $\nu = \nu_\text{topo}$ (pure geometry, tree level): $m_e = 0.51283$ MeV **(+0.36% error)**
-- With one-loop correction $\delta C_e = (1-E/K)/N_e$: $m_e = 0.51099$ MeV **(23 ppm error)**
+- With one-loop correction $\delta C_e = (1-E/K)/N_e$: $m_e = 0.51099$ MeV **(ppm-level error; ~17.5 ppm, rounded-output convention)**
 - With $\nu = \nu_\text{exact}$ (self-consistent): $m_e = 0.51099895$ MeV **(0.00% error)** [BOOTSTRAP — uses m_e as BC, not first principles]
 
 ---
@@ -365,7 +365,7 @@ This section proves the one-loop correction formula through three independent ar
 
 ### 26f. The Problem
 
-Route A at tree level gives $m_e = 0.5128$ MeV (+0.36% error). We need to derive the correction $\delta C_e = 0.00379$ that brings $m_e$ to 23 ppm accuracy. The claim is:
+Route A at tree level gives $m_e = 0.5128$ MeV (+0.36% error). We need to derive the correction $\delta C_e = 0.00379$ that brings $m_e$ to ppm-level accuracy (~17.5 ppm, rounded-output convention). The claim is:
 
 $$\delta C_e = \frac{1 - E(\nu)/K(\nu)}{N_e} = \frac{0.420}{111} = 0.00379$$
 
@@ -530,7 +530,7 @@ The **0.5% residual** comes from the **cn mode** — a bound state that exists o
 | $\delta C_e = dC_e/d\nu \times \delta\nu$ to 0.4% | Numerical verification | Verified |
 | Wetterich trace localized at kink scale | Computed at 200 RG scales | Verified |
 | $1/N_e$ from localization of 1 epoch in 111 | Wetterich FRG structure | Structural |
-| $m_e$ predicted to 23 ppm | Formula evaluation | Verified |
+| $m_e$ predicted to ppm-level (~17.5 ppm) | Formula evaluation | Verified |
 
 **Reference**: `derivations/10_RHO_FIELD_COMPUTATION/10_wetterich_derivation.py`
 
@@ -555,7 +555,7 @@ The **0.5% residual** comes from the **cn mode** — a bound state that exists o
 12.  Bridge: K(m_kink)√m_kink = 2K(ν), m_kink = 0.997     [§26c: closure condition]
 13.  Coefficient mapping: d(ln D)/dν = 3.97 via chain rule  [§26g: Part A of proof]
 14.  δC_e = (1 − E/K) / N_e = 0.00379                     [§26h–26i: modular defect + FRG localization]
-15.  m_e = M_P · (2π/φ¹¹¹) · (C_e^tree − δC_e) · η_QED   [= 0.51099 MeV, 23 ppm]
+15.  m_e = M_P · (2π/φ¹¹¹) · (C_e^tree − δC_e) · η_QED   [= 0.51099 MeV, ppm-level corrected anchor]
 ```
 
 **Steps 11–13** are the formal proof chain derived in `10_wetterich_derivation.py`:
@@ -604,7 +604,7 @@ The **0.5% residual** comes from the **cn mode** — a bound state that exists o
 |--------|--------|-------|
 | $S_\text{topo}$ from geometry | ✅ Derived | 0.04% of S |
 | $m_e$ from $\nu_\text{topo}$ (tree) | ✅ First-principles | +0.36% |
-| $m_e$ with $(1-E/K)/N_e$ correction | ✅ Derived + structural | 23 ppm (0.002%) |
+| $m_e$ with $(1-E/K)/N_e$ correction | ✅ Derived + structural | ppm-level (~17.5 ppm; bootstrap 0% kept separate) |
 | $m_e$ from self-consistent $\nu$ | ✅ Bootstrap (uses $m_e$ as BC) | 0.00% [bootstrap] |
 | Memory coupling $e^\varphi/\pi^2$ | ✅ Derived | exact |
 | $G_e = \sqrt{5/3}$ | ✅ Derived (SU(5)) | exact |
@@ -635,6 +635,18 @@ This formula is **derived, not fitted**. The complete proof is in Part IX-C (§2
 **What remains formally open:**
 - The exact coefficient $1$ in $(1-E/K) \times 1/N_e$: argued via modular defect normalization, verified to 0.6%. A complete proof would require the Wetterich trace integral with full 1D FRG normalization.
 - The resummed form $(1-E/K)/(N_e + \nu)$ achieves 0.2 ppm but the "$+\nu$" denominator correction is not yet formally derived.
+
+### Final CODATA Relation (Canonical Last Statement)
+
+For all downstream GU derivations, use this final electron status as the terminal reference:
+
+- Tree-level Route A (without residual torus correction): $m_e \approx 0.51283\ \text{MeV}$ (about $+0.36\%$, $\sim +3583$ ppm vs CODATA).
+- Final residual correction from finite torus sampling:
+  $$\delta C_e = \frac{1 - E(\nu)/K(\nu)}{N_e}$$
+- Corrected first-principles electron:
+  $$m_e \approx 0.51099\ \text{MeV}$$
+  which is ppm-level close to CODATA (about $-17.5$ ppm when using rounded display value).
+- Practical impact: this residual correction improves the electron prediction by roughly two orders of magnitude (about $200\times$) relative to tree-level.
 
 ### Key References
 

@@ -21,7 +21,7 @@ From these, we derive:
 - The foundation of chemistry and life
 
 **Accuracy achieved:**
-- Electron mass: **0.002%** (23 ppm)
+- Electron mass: **ppm-level corrected anchor** (~17.5 ppm; rounded-output convention)
 - Proton mass: **0.003%**
 - Nuclear binding: **< 0.5%** with all corrections
 - Zero free parameters (except α_EM calibration)
@@ -108,7 +108,7 @@ Pattern-2 (π² enhancement) creates quark confinement - the key to nuclear phys
    ```
    m_e = M_P × (2π/φ^111) × C_e × η_QED
    ```
-7. **Result**: 0.5109989 MeV (**0.002% error**)
+7. **Result**: 0.51099 MeV (ppm-level agreement; corrected residual anchor, not 0% bootstrap)
 
 The electron is a topological kink soliton on a torus in field space.
 
@@ -345,7 +345,7 @@ def derive_element(Z):
 
 ### Key Files and Derivations
 
-- `/10_RHO_FIELD_COMPUTATION/` - Electron mass (0.002% error)
+- `/10_RHO_FIELD_COMPUTATION/` - Electron mass (tree + corrected ppm-level anchor)
 - `/11_HADRONIC_NLDE/` - Proton mass and Wilson loops
 - `/12_NUCLEAR_BINDING/` - Nuclear force and binding
 - `/13_PRECISION_ANALYSIS/` - All corrections identified
@@ -372,7 +372,7 @@ The universe doesn't have properties - it remembers them.
 
 | Component | Error | Status |
 |-----------|-------|--------|
-| Electron mass | 0.002% | Perfect |
+| Electron mass | ppm-level (~17.5 ppm) | Corrected anchor (bootstrap 0% kept separate) |
 | Proton mass | 0.003% | Perfect |
 | Neutron mass | 0.001% | Perfect |
 | Quark masses | Factor 1.5 | Good |
