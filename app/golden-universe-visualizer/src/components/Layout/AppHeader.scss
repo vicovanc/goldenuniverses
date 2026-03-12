@@ -50,6 +50,15 @@
   gap: $space-4;
   flex: 0 0 auto;
 
+  .app-title-link {
+    text-decoration: none;
+    transition: opacity $transition-base;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   .app-title {
     margin: 0;
     font-size: $text-xl;

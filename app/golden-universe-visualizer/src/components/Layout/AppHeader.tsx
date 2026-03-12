@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ThemeToggle } from '@/components/Theme/ThemeToggle';
 import { SettingsPanel } from '@/components/Settings/SettingsPanel';
 import { KeyboardShortcutsModal } from '@/components/Keyboard/KeyboardShortcutsModal';
@@ -17,7 +18,9 @@ export function AppHeader() {
         <div className="header-content">
           <div className="header-left">
             {sidebarCollapsed && (
-              <h1 className="app-title">Golden Universe</h1>
+              <Link to="/" className="app-title-link">
+                <h1 className="app-title">Golden Universe</h1>
+              </Link>
             )}
           </div>
 
