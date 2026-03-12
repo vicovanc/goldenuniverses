@@ -77,6 +77,16 @@
       ]
     }
   ],
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "/api/$0"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!api/).*)",
