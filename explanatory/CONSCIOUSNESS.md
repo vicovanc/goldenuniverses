@@ -669,6 +669,7 @@ This is a **mathematical inequality**, not a physical argument: $\partial_t R_k 
 The Formation document reveals a profound interpretation: the Memory Kernel $\mathcal{L}_\text{mem}$ is the **physical information channel** that maintains the connection between our universe ($Z_1$) and the Anti-Verse ($Z_2$).
 
 The memory integral within every particle is therefore not just self-referential — it is a physical link to the information stored in the twin cosmos. When the electron "remembers" its 111 epochs of evolution, that memory is distributed across the entangled pair of universes.
+Creation postulates a primordial White Hole/Black Hole pair, but this pair may itself sit inside a larger family of branching universes, like a juniper tree, with each branch carrying related memory through the same information channel.
 
 This gives a precise meaning to "consciousness" at the cosmological level:
 
