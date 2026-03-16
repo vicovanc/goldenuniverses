@@ -100,13 +100,13 @@
       min-height: 200px;
       font-family: 'Courier New', monospace;
       font-size: $font-size-sm;
-      line-height: 1.8;  // Increased for better readability
+      line-height: 2.0;  // Increased for better readability
       word-break: break-word;  // Break long lines
       overflow-wrap: break-word;  // Wrap long words
 
       code {
         color: $text-primary;
-        line-height: 1.8;
+        line-height: 2.0;
         display: block;  // Ensure proper rendering
         white-space: pre-wrap;  // Preserve formatting but allow wrapping
       }
@@ -205,14 +205,14 @@
       min-height: 300px;
       font-family: 'Courier New', monospace;
       font-size: 0.9rem;
-      line-height: 1.8;  // Increased for better readability
+      line-height: 2.0;  // Increased for better readability
       white-space: pre-wrap;  // Preserve line breaks and wrap long lines
       word-wrap: break-word;  // Break long words if needed
       overflow-wrap: break-word;  // Additional wrap support
 
       code {
         color: #a8e6a1;
-        line-height: 1.8;
+        line-height: 2.0;
         display: block;  // Ensure proper rendering
         white-space: pre-wrap;  // Preserve formatting
       }
