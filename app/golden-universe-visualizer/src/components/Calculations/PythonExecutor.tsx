@@ -109,15 +109,20 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
         const fileMatch = errorMessage.match(/['"]([^'"]*\.py)['"]/);
         const fileName = fileMatch ? fileMatch[1] : 'Python module file';
 
-        setError(`📁 This script imports other Python files from the file system.\n\n` +
-          `Missing file: "${fileName}"\n\n` +
-          `This script has dependencies on other Python modules in the repository that ` +
-          `are not available in the browser environment.\n\n` +
-          `To run this script:\n` +
-          `• Clone the Golden Universe repository\n` +
-          `• Ensure all required files are in place\n` +
-          `• Run the script locally in Python\n\n` +
-          `You can still view the source code above to understand the derivation.`);
+        setError(`📁 This script has file system dependencies.\n\n` +
+          `Missing: "${fileName}"\n\n` +
+          `This script uses dynamic imports (SourceFileLoader or similar) to load other ` +
+          `Python modules from the file system, which requires:\n\n` +
+          `• Access to the full repository file structure\n` +
+          `• Python's importlib machinery\n` +
+          `• File system read permissions\n\n` +
+          `To run this complete derivation:\n` +
+          `1. Clone the Golden Universe repository\n` +
+          `2. Install dependencies: pip install mpmath numpy scipy\n` +
+          `3. Run locally: python ${fileName}\n\n` +
+          `💡 Tip: Some derivations are self-contained and run directly in the browser. ` +
+          `Look for scripts without import statements referencing other local files.\n\n` +
+          `You can still view and study the source code above.`);
       }
       // Check for subprocess/process errors (check both message and full string)
       else if (errorMessage.includes('subprocess') ||
