@@ -322,12 +322,41 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
 
               <main className="file-display">
                 {selectedFile && fileContent && (
-                  <PythonExecutor
-                    code={fileContent}
-                    autoRun={true}
-                    title={selectedFile.filename}
-                    showCode={true}
-                  />
+                  <>
+                    {/* Only pass to PythonExecutor if content looks like Python */}
+                    {(fileContent.includes('import ') || fileContent.includes('def ') || fileContent.includes('print(') || fileContent.startsWith('#!')) && !fileContent.startsWith('# ') ? (
+                      <PythonExecutor
+                        code={fileContent}
+                        autoRun={true}
+                        title={selectedFile.filename}
+                        showCode={true}
+                      />
+                    ) : (
+                      <div className="file-content-display">
+                        <h4>{selectedFile.filename}</h4>
+                        {fileContent.startsWith('#') && fileContent.includes('\n\n') ? (
+                          /* Looks like markdown, render it */
+                          <ReactMarkdown
+                            remarkPlugins={[remarkGfm, remarkMath]}
+                            rehypePlugins={[rehypeKatex]}
+                          >
+                            {fileContent}
+                          </ReactMarkdown>
+                        ) : (
+                          /* Show as code block */
+                          <pre className="code-block">
+                            <code>{fileContent}</code>
+                          </pre>
+                        )}
+                      </div>
+                    )}
+                  </>
+                )}
+                {selectedFile && !fileContent && (
+                  <div className="no-content-message">
+                    <p>No content available for {selectedFile.filename}</p>
+                    <p className="hint">The file may need to be regenerated in the derivations map.</p>
+                  </div>
                 )}
               </main>
             </div>
