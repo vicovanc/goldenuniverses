@@ -24,22 +24,40 @@ class BackendPythonExecutor {
 
   constructor() {
     // Use the backend API on port 3001 for development
-    // In production (Vercel), use the /api routes
+    // On Vercel, backend APIs are not available (using Pyodide instead)
     if (import.meta.env.DEV) {
       this.apiBase = 'http://localhost:3001/api';
-    } else if (import.meta.env.VITE_VERCEL || window.location.hostname.includes('vercel')) {
-      // On Vercel, use serverless functions
-      this.apiBase = '/api';
     } else {
-      // Standard production with backend server
+      // In production, backend server API
+      // Note: On Vercel, this will not be available - Pyodide will be used instead
       this.apiBase = '/api';
     }
+  }
+
+  /**
+   * Check if we're running on Vercel (no backend available)
+   */
+  private isVercel(): boolean {
+    return (
+      import.meta.env.VITE_VERCEL === 'true' ||
+      window.location.hostname.includes('vercel.app') ||
+      window.location.hostname.includes('vercel.com')
+    );
   }
 
   /**
    * Execute Python code via the backend
    */
   async execute(code: string, filename?: string): Promise<ExecutionResult> {
+    // On Vercel, skip backend API calls - Pyodide will be used instead
+    if (this.isVercel()) {
+      return {
+        success: false,
+        error: 'Backend execution not available on Vercel - using Pyodide instead',
+        exitCode: 1,
+      };
+    }
+
     try {
       // For now, directly execute the code using the exec endpoint
       const response = await fetch(`${this.apiBase}/python/exec`, {
@@ -192,6 +210,11 @@ class BackendPythonExecutor {
    * Check if backend server is running
    */
   async isServerRunning(): Promise<boolean> {
+    // On Vercel, backend is never running - use Pyodide
+    if (this.isVercel()) {
+      return false;
+    }
+
     try {
       const response = await fetch(`${this.apiBase}/health`, {
         method: 'GET',
