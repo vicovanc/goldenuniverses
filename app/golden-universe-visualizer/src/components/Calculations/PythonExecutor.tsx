@@ -204,8 +204,8 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
             </div>
           )}
           {error && (
-            <div className={error.includes('📦') || error.includes('⚙️') ? 'info-output' : 'error-output'}>
-              <strong>{error.includes('📦') || error.includes('⚙️') ? 'Information:' : 'Error:'}</strong>
+            <div className={error.includes('📦') || error.includes('⚙️') || error.includes('📁') ? 'info-output' : 'error-output'}>
+              <strong>{error.includes('📦') || error.includes('⚙️') || error.includes('📁') ? 'Information:' : 'Error:'}</strong>
               <pre>{error}</pre>
             </div>
           )}
