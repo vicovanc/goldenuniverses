@@ -95,7 +95,52 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
       }
     } catch (err) {
       console.error('Python execution error:', err);
-      setError(err instanceof Error ? err.message : 'Unknown error occurred');
+
+      // Parse the error to provide a friendly message
+      const errorMessage = err instanceof Error ? err.message : String(err);
+
+      // Check for subprocess/process errors
+      if (errorMessage.includes('subprocess') ||
+          errorMessage.includes('emscripten does not support processes') ||
+          errorMessage.includes('Subprocess detected')) {
+        setError(`⚙️ This script uses subprocesses which are not supported in the browser.\n\n` +
+          `This script is an orchestrator that runs other Python scripts, which requires:\n` +
+          `• A full Python environment\n` +
+          `• Access to the file system\n` +
+          `• Process execution capabilities\n\n` +
+          `To run this script:\n` +
+          `• Clone the Golden Universe repository\n` +
+          `• Install Python dependencies\n` +
+          `• Run the script in your terminal\n\n` +
+          `You can still view the source code above to understand how the derivation works.`);
+      }
+      // Check for missing module errors
+      else if (errorMessage.includes('ModuleNotFoundError') || errorMessage.includes('No module named')) {
+        // Extract module name
+        const moduleMatch = errorMessage.match(/No module named ['"]?([^'"]+)['"]?/);
+        const moduleName = moduleMatch ? moduleMatch[1] : 'unknown';
+
+        // Check if it's a custom module (not available in browser)
+        const customModules = ['nn_redo_common', 'gu_constants', 'gu_common', 'common', 'utils'];
+        const isCustomModule = customModules.some(mod => moduleName.includes(mod));
+
+        if (isCustomModule) {
+          setError(`📦 This script requires custom modules that are not available in the browser.\n\n` +
+            `Missing module: "${moduleName}"\n\n` +
+            `This script is designed to run in a full Python environment with access to the Golden Universe codebase. ` +
+            `To run this script:\n` +
+            `• Clone the repository\n` +
+            `• Install Python dependencies\n` +
+            `• Run the script locally\n\n` +
+            `You can still view the source code above to understand the derivation.`);
+        } else {
+          setError(`📦 This script requires the "${moduleName}" package which is not currently loaded.\n\n` +
+            `This package may be available in Pyodide but is not pre-loaded for performance reasons.\n\n` +
+            `You can still view the source code above to understand the derivation.`);
+        }
+      } else {
+        setError(errorMessage);
+      }
     } finally {
       setIsRunning(false);
     }
@@ -135,8 +180,8 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
             </div>
           )}
           {error && (
-            <div className="error-output">
-              <strong>Error:</strong>
+            <div className={error.includes('📦') || error.includes('⚙️') ? 'info-output' : 'error-output'}>
+              <strong>{error.includes('📦') || error.includes('⚙️') ? 'Information:' : 'Error:'}</strong>
               <pre>{error}</pre>
             </div>
           )}
