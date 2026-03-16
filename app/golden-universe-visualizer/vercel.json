@@ -46,7 +46,7 @@
       "dest": "/data/$1"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|py|woff|woff2|ttf|eot))",
       "dest": "/$1"
     },
     {
