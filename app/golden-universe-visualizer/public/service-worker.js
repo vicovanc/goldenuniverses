@@ -21,7 +21,14 @@ self.addEventListener('install', (event) => {
       .open(CACHE_NAME)
       .then((cache) => {
         console.log('[Service Worker] Precaching assets');
-        return cache.addAll(PRECACHE_ASSETS);
+        // Cache assets individually to avoid 401 errors breaking installation
+        return Promise.allSettled(
+          PRECACHE_ASSETS.map(url =>
+            cache.add(url).catch(err => {
+              console.warn(`[Service Worker] Failed to cache ${url}:`, err);
+            })
+          )
+        );
       })
       .then(() => {
         console.log('[Service Worker] Installation complete');
