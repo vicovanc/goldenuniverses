@@ -1,0 +1,55 @@
+{
+  "model": "cell_state_integrator",
+  "config": {
+    "dt": 0.001,
+    "steps": 12000,
+    "state_dim": 20,
+    "integration_mode": "fully_coupled"
+  },
+  "assumptions": [
+    "Reaction, membrane, metabolism, and gene states are integrated in one loop.",
+    "Conservation checks target explicit near-invariant pools."
+  ],
+  "units": {
+    "drift": "fraction",
+    "vm": "mV",
+    "concentration": "mM"
+  },
+  "parameter_provenance": {
+    "source": "coupled phase2.1 reconstruction"
+  },
+  "summary": {
+    "carbon_proxy_drift": -0.1254382342212198,
+    "charge_proxy_drift": 2.5837917664003644e-15,
+    "energy_proxy_drift": 0.030535345151602094,
+    "integrated_vm_rest_mV": -65.20899918730662,
+    "integrated_energy_charge": 0.525840585493026,
+    "integrated_protein_A": 0.13701451805932421
+  },
+  "diagnostics": {
+    "invariant_pools": {
+      "adenylate_total_initial": 3.0,
+      "adenylate_total_final": 3.0,
+      "pyridine_total_initial": 2.0,
+      "pyridine_total_final": 2.0000000000000138,
+      "proton_total_initial": 2.0,
+      "proton_total_final": 1.999999999999999,
+      "na_total_initial": 160.0,
+      "na_total_final": 160.00000000000082,
+      "k_total_initial": 145.0,
+      "k_total_final": 144.99999999999937,
+      "cl_total_initial": 120.0,
+      "cl_total_final": 119.99999999999974,
+      "carbon_pool_initial": 4.449999999999999,
+      "carbon_pool_final": 3.8917998577155712
+    },
+    "conservation_checks": {
+      "carbon_pass_abs_lt_0p35": true,
+      "charge_pass_abs_lt_0p20": true,
+      "energy_pass_abs_lt_0p40": true,
+      "carbon_pass_abs_lt_0p02": false,
+      "charge_pass_abs_lt_0p02": true,
+      "energy_pass_abs_lt_0p03": false
+    }
+  }
+}

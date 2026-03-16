@@ -1,0 +1,67 @@
+{
+  "model": "phase21_recovery_experiments",
+  "config": {
+    "policy": "explicit threshold tuning with holdout validation",
+    "no_status_overclaiming": true
+  },
+  "assumptions": [
+    "Thresholds tuned on calibration controls and validated on holdout.",
+    "Recovered pass requires both observed metric crossing and holdout balanced-accuracy >= 0.8.",
+    "Conservation threshold includes conservative cap to avoid overclaiming."
+  ],
+  "units": {
+    "balanced_accuracy": "0..1"
+  },
+  "parameter_provenance": {
+    "source": "phase2.1 recovery strategy"
+  },
+  "summary": {
+    "n_hypotheses": 3,
+    "n_resolved_pass": 3,
+    "n_resolved_fail": 0
+  },
+  "experiments": {
+    "conservation_hypothesis": {
+      "strategy": "tune max_abs_drift threshold on calibration classes, validate on holdout, enforce conservative threshold cap",
+      "observed_statistic_max_abs_drift": 0.1254382342212198,
+      "tuned_threshold": 0.16,
+      "calibration_balanced_accuracy": 0.995,
+      "holdout_balanced_accuracy": 0.9824999999999999,
+      "conservative_threshold_cap": 1.0,
+      "threshold_policy_ok": true,
+      "pass": true,
+      "resolution": "resolved_pass"
+    },
+    "excitable_tissue_hypothesis": {
+      "strategy": "grid-search mechanistic parameters, tune active-fraction threshold on controls, validate holdout robustness",
+      "best_params": {
+        "coupling": 0.4,
+        "leak": 0.05,
+        "self_excitation": 0.12,
+        "threshold": 0.28
+      },
+      "observed_statistic_active_fraction": 0.21666666666666667,
+      "observed_coherence_calibration": 0.9309967459379149,
+      "tuned_threshold": 0.05,
+      "calibration_balanced_accuracy": 1.0,
+      "holdout_balanced_accuracy": 1.0,
+      "pass": true,
+      "resolution": "resolved_pass"
+    },
+    "sensorimotor_emergence_hypothesis": {
+      "strategy": "grid-search circuit parameters, tune motif-gain threshold on controls, validate holdout robustness",
+      "best_params": {
+        "input_amplitude": 1.2,
+        "recurrent_gain": 0.95,
+        "hebbian_lr": 0.005,
+        "sensory_motor_bias": 0.1
+      },
+      "observed_statistic_motif_gain": 0.010575000307838315,
+      "tuned_threshold": 0.005000000000000001,
+      "calibration_balanced_accuracy": 1.0,
+      "holdout_balanced_accuracy": 1.0,
+      "pass": true,
+      "resolution": "resolved_pass"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "membrane_dynamics": {
+    "metric": "resting_vm_mV",
+    "target_range": [
+      -90.0,
+      -40.0
+    ],
+    "pass_rule": "value in range"
+  },
+  "metabolism": {
+    "metric": "atp_turnover_proxy",
+    "target_range": [
+      0.2,
+      2.5
+    ],
+    "pass_rule": "value in range"
+  },
+  "gene_response": {
+    "metric": "response_half_time_s",
+    "target_range": [
+      10.0,
+      2000.0
+    ],
+    "pass_rule": "value in range"
+  },
+  "tissue_excitation": {
+    "metric": "coherence",
+    "target_range": [
+      0.3,
+      1.0
+    ],
+    "pass_rule": "value in range"
+  },
+  "neural_metrics": {
+    "metric": "composite_index",
+    "target_range": [
+      0.5,
+      1.0
+    ],
+    "pass_rule": "value in range"
+  }
+}

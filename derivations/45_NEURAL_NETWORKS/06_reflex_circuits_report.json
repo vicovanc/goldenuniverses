@@ -1,0 +1,220 @@
+{
+  "model": "reflex_circuits",
+  "config": {
+    "dt": 0.002,
+    "total_time": 1.2,
+    "sensory_pulse_start": 0.15,
+    "sensory_pulse_end": 0.4,
+    "gain_si": 1.6,
+    "gain_im": 1.3,
+    "gain_feedback": 0.55,
+    "leak": 0.9,
+    "threshold_motor": 0.08
+  },
+  "summary": {
+    "peak_motor_response": 0.096074,
+    "response_latency_s": 0.918,
+    "settling_std_tail": 0.007099,
+    "stable_attractor": true,
+    "tail_window_start_step": 480
+  },
+  "sampled_reflex_state": [
+    {
+      "t_s": 0.0,
+      "sensory_state": 0.0,
+      "interneuron_state": 0.0,
+      "motor_state": 0.0,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.05,
+      "sensory_state": 0.0,
+      "interneuron_state": 0.0,
+      "motor_state": 0.0,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.1,
+      "sensory_state": 0.0,
+      "interneuron_state": 0.0,
+      "motor_state": 0.0,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.15,
+      "sensory_state": 0.002,
+      "interneuron_state": 0.0,
+      "motor_state": 0.0,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.2,
+      "sensory_state": 0.050847,
+      "interneuron_state": 0.002021,
+      "motor_state": 4.2e-05,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.25,
+      "sensory_state": 0.097542,
+      "interneuron_state": 0.007695,
+      "motor_state": 0.000325,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.3,
+      "sensory_state": 0.142181,
+      "interneuron_state": 0.016697,
+      "motor_state": 0.00106,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.35,
+      "sensory_state": 0.184854,
+      "interneuron_state": 0.028723,
+      "motor_state": 0.002431,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.4,
+      "sensory_state": 0.225647,
+      "interneuron_state": 0.043488,
+      "motor_state": 0.004591,
+      "sensory_input": 1.0
+    },
+    {
+      "t_s": 0.45,
+      "sensory_state": 0.21571,
+      "interneuron_state": 0.058861,
+      "motor_state": 0.007635,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.5,
+      "sensory_state": 0.20621,
+      "interneuron_state": 0.072795,
+      "motor_state": 0.011477,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.55,
+      "sensory_state": 0.197128,
+      "interneuron_state": 0.085388,
+      "motor_state": 0.015992,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.6,
+      "sensory_state": 0.188446,
+      "interneuron_state": 0.09673,
+      "motor_state": 0.021066,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.65,
+      "sensory_state": 0.180147,
+      "interneuron_state": 0.106908,
+      "motor_state": 0.026596,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.7,
+      "sensory_state": 0.172213,
+      "interneuron_state": 0.116001,
+      "motor_state": 0.032487,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.75,
+      "sensory_state": 0.164628,
+      "interneuron_state": 0.124086,
+      "motor_state": 0.038656,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.8,
+      "sensory_state": 0.157378,
+      "interneuron_state": 0.131234,
+      "motor_state": 0.045025,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.85,
+      "sensory_state": 0.150447,
+      "interneuron_state": 0.137512,
+      "motor_state": 0.051526,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.9,
+      "sensory_state": 0.143821,
+      "interneuron_state": 0.142982,
+      "motor_state": 0.058096,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 0.95,
+      "sensory_state": 0.137487,
+      "interneuron_state": 0.147704,
+      "motor_state": 0.064681,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 1.0,
+      "sensory_state": 0.131432,
+      "interneuron_state": 0.151732,
+      "motor_state": 0.071232,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 1.05,
+      "sensory_state": 0.125643,
+      "interneuron_state": 0.155119,
+      "motor_state": 0.077706,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 1.1,
+      "sensory_state": 0.12011,
+      "interneuron_state": 0.157914,
+      "motor_state": 0.084065,
+      "sensory_input": 0.0
+    },
+    {
+      "t_s": 1.15,
+      "sensory_state": 0.11482,
+      "interneuron_state": 0.160161,
+      "motor_state": 0.090276,
+      "sensory_input": 0.0
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "peak_motor_response": {
+        "observed": 0.096074,
+        "nominal": 0.1,
+        "tolerance": 0.06,
+        "abs_error": 0.003925999999999999,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

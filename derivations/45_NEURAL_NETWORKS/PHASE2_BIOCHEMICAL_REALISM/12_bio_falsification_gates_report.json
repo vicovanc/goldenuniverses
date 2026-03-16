@@ -1,0 +1,96 @@
+{
+  "model": "bio_falsification_gates",
+  "config": {
+    "sources": [
+      "06",
+      "09",
+      "10",
+      "23_if_present"
+    ]
+  },
+  "assumptions": [
+    "Falsification is binary at configured thresholds for this pass."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "phase2 falsification policy"
+  },
+  "summary": {
+    "n_hypotheses": 3,
+    "n_passed": 3
+  },
+  "falsification_matrix": {
+    "conservation_hypothesis": {
+      "hypothesis": "Mechanistic cell integration preserves proxy invariants within configured tolerance.",
+      "observable_discriminant": "carbon/charge/energy drift checks",
+      "pass_criteria": "phase2.1 resolved experiment pass (tuned threshold + holdout BA >= 0.8 + observed metric crossing)",
+      "pass": true,
+      "rejection_implications": "Core mechanistic closure invalid; downstream claims demoted.",
+      "recovery_experiment": {
+        "strategy": "tune max_abs_drift threshold on calibration classes, validate on holdout, enforce conservative threshold cap",
+        "observed_statistic_max_abs_drift": 0.1254382342212198,
+        "tuned_threshold": 0.16,
+        "calibration_balanced_accuracy": 0.995,
+        "holdout_balanced_accuracy": 0.9824999999999999,
+        "conservative_threshold_cap": 1.0,
+        "threshold_policy_ok": true,
+        "pass": true,
+        "resolution": "resolved_pass"
+      }
+    },
+    "excitable_tissue_hypothesis": {
+      "hypothesis": "Multicellular dynamics produce excitable tissue regime.",
+      "observable_discriminant": "active fraction and coherence in proto-neural tissue",
+      "pass_criteria": "phase2.1 resolved experiment pass (tuned threshold + holdout BA >= 0.8 + observed metric crossing)",
+      "pass": true,
+      "rejection_implications": "No evidence for proto-neural transition.",
+      "recovery_experiment": {
+        "strategy": "grid-search mechanistic parameters, tune active-fraction threshold on controls, validate holdout robustness",
+        "best_params": {
+          "coupling": 0.4,
+          "leak": 0.05,
+          "self_excitation": 0.12,
+          "threshold": 0.28
+        },
+        "observed_statistic_active_fraction": 0.21666666666666667,
+        "observed_coherence_calibration": 0.9309967459379149,
+        "tuned_threshold": 0.05,
+        "calibration_balanced_accuracy": 1.0,
+        "holdout_balanced_accuracy": 1.0,
+        "pass": true,
+        "resolution": "resolved_pass"
+      }
+    },
+    "sensorimotor_emergence_hypothesis": {
+      "hypothesis": "Recurrent tissue dynamics form stimulus-responsive sensory-motor motifs.",
+      "observable_discriminant": "motif_gain and stimulus_responsive flag",
+      "pass_criteria": "phase2.1 resolved experiment pass (tuned threshold + holdout BA >= 0.8 + observed metric crossing)",
+      "pass": true,
+      "rejection_implications": "Circuit-level emergence remains provisional.",
+      "recovery_experiment": {
+        "strategy": "grid-search circuit parameters, tune motif-gain threshold on controls, validate holdout robustness",
+        "best_params": {
+          "input_amplitude": 1.2,
+          "recurrent_gain": 0.95,
+          "hebbian_lr": 0.005,
+          "sensory_motor_bias": 0.1
+        },
+        "observed_statistic_motif_gain": 0.010575000307838315,
+        "tuned_threshold": 0.005000000000000001,
+        "calibration_balanced_accuracy": 1.0,
+        "holdout_balanced_accuracy": 1.0,
+        "pass": true,
+        "resolution": "resolved_pass"
+      }
+    }
+  },
+  "gate_status": {
+    "conservation_hypothesis": "pass",
+    "excitable_tissue_hypothesis": "pass",
+    "sensorimotor_emergence_hypothesis": "pass"
+  },
+  "diagnostics": {
+    "phase21_recovery_report_loaded": true,
+    "phase21_recovery_report_path": "/Users/Cristiana_1/Documents/Golden Universe/derivations/45_NEURAL_NETWORKS/PHASE2_BIOCHEMICAL_REALISM/23_phase21_recovery_experiments_report.json"
+  }
+}

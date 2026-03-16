@@ -1,0 +1,28 @@
+{
+  "model": "claim_relabeling",
+  "config": {
+    "benchmark_required": true
+  },
+  "summary": {
+    "phase2_claim_label": "DERIVED",
+    "promotion_status": "derived",
+    "benchmark_pass": true,
+    "gap_flags": 2
+  },
+  "diagnostics": {
+    "benchmark_passes": {
+      "membrane": true,
+      "metabolism": true,
+      "gene_response": true,
+      "tissue_excitation": true,
+      "neural_metrics": true
+    }
+  },
+  "assumptions": [
+    "Claim labels are machine-governed by gates + benchmarks."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "phase2 scorecard + benchmark reports"
+  }
+}

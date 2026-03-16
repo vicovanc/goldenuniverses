@@ -1,0 +1,15 @@
+{
+  "dataset_id": "phase2_synthetic_baseline_v1",
+  "source": "internal deterministic generators",
+  "license": "project-internal",
+  "acquisition_date": "2026-02-09",
+  "preprocessing_hash": "deterministic-no-preprocess",
+  "split_policy": "module-specific deterministic seed runs",
+  "intended_module": [
+    "15_benchmark_membrane_dynamics.py",
+    "16_benchmark_metabolism.py",
+    "17_benchmark_gene_response.py",
+    "18_benchmark_tissue_excitation.py",
+    "19_benchmark_neural_metrics.py"
+  ]
+}

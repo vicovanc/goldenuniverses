@@ -1,0 +1,202 @@
+{
+  "model": "metacognition",
+  "config": {
+    "n_trials": 400,
+    "seed": 15
+  },
+  "summary": {
+    "task_accuracy": 0.8575,
+    "calibration_error": 0.260747,
+    "high_confidence_accuracy": 0.979058,
+    "high_confidence_fraction": 0.4775
+  },
+  "canonical_observables": {
+    "task_accuracy": 0.8575,
+    "calibration_error": 0.260747
+  },
+  "exploratory_metrics": {
+    "high_confidence_accuracy": 0.979058,
+    "high_confidence_fraction": 0.4775
+  },
+  "sampled_trials": [
+    {
+      "trial": 0,
+      "decision_variable": -0.2318,
+      "confidence": 0.602823,
+      "correct": 1
+    },
+    {
+      "trial": 16,
+      "decision_variable": 0.558559,
+      "confidence": 0.73212,
+      "correct": 1
+    },
+    {
+      "trial": 32,
+      "decision_variable": -0.521034,
+      "confidence": 0.718668,
+      "correct": 1
+    },
+    {
+      "trial": 48,
+      "decision_variable": 0.847515,
+      "confidence": 0.821351,
+      "correct": 1
+    },
+    {
+      "trial": 64,
+      "decision_variable": -0.287298,
+      "confidence": 0.626478,
+      "correct": 1
+    },
+    {
+      "trial": 80,
+      "decision_variable": -0.389404,
+      "confidence": 0.668393,
+      "correct": 1
+    },
+    {
+      "trial": 96,
+      "decision_variable": 0.721469,
+      "confidence": 0.785607,
+      "correct": 1
+    },
+    {
+      "trial": 112,
+      "decision_variable": 2.528397,
+      "confidence": 0.989555,
+      "correct": 1
+    },
+    {
+      "trial": 128,
+      "decision_variable": 0.35109,
+      "confidence": 0.652934,
+      "correct": 0
+    },
+    {
+      "trial": 144,
+      "decision_variable": -0.75512,
+      "confidence": 0.795632,
+      "correct": 1
+    },
+    {
+      "trial": 160,
+      "decision_variable": -0.854692,
+      "confidence": 0.823239,
+      "correct": 1
+    },
+    {
+      "trial": 176,
+      "decision_variable": -0.548836,
+      "confidence": 0.728674,
+      "correct": 1
+    },
+    {
+      "trial": 192,
+      "decision_variable": -0.775511,
+      "confidence": 0.801536,
+      "correct": 1
+    },
+    {
+      "trial": 208,
+      "decision_variable": 1.489789,
+      "confidence": 0.935933,
+      "correct": 1
+    },
+    {
+      "trial": 224,
+      "decision_variable": -0.678244,
+      "confidence": 0.772211,
+      "correct": 1
+    },
+    {
+      "trial": 240,
+      "decision_variable": 0.349459,
+      "confidence": 0.652269,
+      "correct": 1
+    },
+    {
+      "trial": 256,
+      "decision_variable": -0.658569,
+      "confidence": 0.765922,
+      "correct": 1
+    },
+    {
+      "trial": 272,
+      "decision_variable": -0.306228,
+      "confidence": 0.634416,
+      "correct": 0
+    },
+    {
+      "trial": 288,
+      "decision_variable": -0.690084,
+      "confidence": 0.775938,
+      "correct": 1
+    },
+    {
+      "trial": 304,
+      "decision_variable": 0.83061,
+      "confidence": 0.816842,
+      "correct": 1
+    },
+    {
+      "trial": 320,
+      "decision_variable": -1.53855,
+      "confidence": 0.940999,
+      "correct": 1
+    },
+    {
+      "trial": 336,
+      "decision_variable": -0.248918,
+      "confidence": 0.610176,
+      "correct": 0
+    },
+    {
+      "trial": 352,
+      "decision_variable": 0.529794,
+      "confidence": 0.721845,
+      "correct": 1
+    },
+    {
+      "trial": 368,
+      "decision_variable": 0.622854,
+      "confidence": 0.7542,
+      "correct": 1
+    },
+    {
+      "trial": 384,
+      "decision_variable": 0.068502,
+      "confidence": 0.530787,
+      "correct": 1
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 15
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "task_accuracy": {
+        "observed": 0.8575,
+        "nominal": 0.85,
+        "tolerance": 0.2,
+        "abs_error": 0.007500000000000062,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

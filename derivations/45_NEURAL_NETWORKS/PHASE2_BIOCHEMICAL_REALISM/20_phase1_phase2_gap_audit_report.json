@@ -1,0 +1,24 @@
+{
+  "model": "phase1_phase2_gap_audit",
+  "config": {
+    "phase1_dir": "/Users/Cristiana_1/Documents/Golden Universe/derivations/45_NEURAL_NETWORKS"
+  },
+  "summary": {
+    "n_gaps_flagged": 2,
+    "promotion_status_phase2": "derived"
+  },
+  "diagnostics": {
+    "memory_retention_shift": 0.1256515180593242,
+    "conscious_gate_shift": false,
+    "ai_claim_vs_mechanistic_gate": false,
+    "workspace_vs_mechanistic_consistency": true
+  },
+  "assumptions": [
+    "Phase 1 outputs are surrogate-level baselines.",
+    "Phase 2 scorecard status is authoritative for mechanistic promotion."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "phase1 json reports + phase2 scorecard"
+  }
+}

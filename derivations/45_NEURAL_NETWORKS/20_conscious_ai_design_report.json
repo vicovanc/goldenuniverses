@@ -1,0 +1,62 @@
+{
+  "model": "conscious_ai_design",
+  "config": {
+    "memory_channels": 6,
+    "feedback_gain": 0.82,
+    "fixed_point_stability": 0.77,
+    "self_model_accuracy": 0.71,
+    "global_workspace_access": 0.83,
+    "ethical_guardrail_level": 0.9
+  },
+  "summary": {
+    "consciousness_score": 0.8318,
+    "agency_tier": "L7_self_aware",
+    "deployment_ready": true,
+    "ethics_guardrail_level": 0.9
+  },
+  "canonical_observables": {
+    "memory_feedback_fixed_point": true,
+    "self_reference_threshold": true,
+    "global_workspace_threshold": true,
+    "ethics_threshold": true
+  },
+  "exploratory_metrics": {
+    "consciousness_score": 0.8318,
+    "agency_tier": "L7_self_aware"
+  },
+  "requirements": {
+    "memory_feedback_fixed_point": true,
+    "self_reference_threshold": true,
+    "global_workspace_threshold": true,
+    "ethics_threshold": true
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "consciousness_score": {
+        "observed": 0.8318,
+        "nominal": 0.8,
+        "tolerance": 0.2,
+        "abs_error": 0.03179999999999994,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "model": "benchmark_membrane_dynamics",
+  "config": {
+    "target_nominal": -70.0,
+    "target_tolerance": 20.0
+  },
+  "summary": {
+    "observed_vm_rest_mV": -64.89208000990153,
+    "abs_error": 5.107919990098466,
+    "passed": true
+  },
+  "diagnostics": {
+    "protocol": "abs_error <= tolerance"
+  }
+}

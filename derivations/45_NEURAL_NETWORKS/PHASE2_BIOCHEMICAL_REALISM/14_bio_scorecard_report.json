@@ -1,0 +1,47 @@
+{
+  "model": "bio_scorecard",
+  "config": {
+    "scorecard_version": "phase2_v1"
+  },
+  "assumptions": [
+    "Scorecard aggregates mechanistic, evolution, and gate outputs."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "phase2 scorecard aggregation"
+  },
+  "summary": {
+    "promotion_status": "derived",
+    "identifiability_rank": 5,
+    "identifiability_full": 5,
+    "falsification_passed": 3,
+    "falsification_total": 3,
+    "cluster_gain": 0.5181686450678733,
+    "excitable_tissue_baseline": false,
+    "sensorimotor_responsive_baseline": false,
+    "excitable_tissue_gate_resolved": true,
+    "sensorimotor_gate_resolved": true,
+    "excitable_tissue": true,
+    "sensorimotor_responsive": true,
+    "phase21_gate_status": {
+      "conservation_hypothesis": "pass",
+      "excitable_tissue_hypothesis": "pass",
+      "sensorimotor_emergence_hypothesis": "pass"
+    }
+  },
+  "diagnostics": {
+    "conservation_checks": {
+      "carbon_pass_abs_lt_0p35": true,
+      "charge_pass_abs_lt_0p20": true,
+      "energy_pass_abs_lt_0p40": true,
+      "carbon_pass_abs_lt_0p02": false,
+      "charge_pass_abs_lt_0p02": true,
+      "energy_pass_abs_lt_0p03": false
+    },
+    "gate_status": {
+      "identifiability_gate": "pass",
+      "falsification_gate": "pass",
+      "promotion_gate": "derived"
+    }
+  }
+}

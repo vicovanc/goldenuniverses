@@ -1,0 +1,190 @@
+{
+  "model": "gap_junction_networks",
+  "config": {
+    "n_cells": 24,
+    "dt": 0.02,
+    "total_time": 40.0,
+    "coupling_gj": 0.18,
+    "leak": 0.08,
+    "pacemaker_cells": 2,
+    "conduction_speed_proxy": 0.12
+  },
+  "summary": {
+    "mean_coherence": 0.999648,
+    "peak_coherence": 1.0,
+    "mean_delay_proxy": 0.064716,
+    "connectivity_density": 0.083333,
+    "effective_signal_speed_proxy": 0.12
+  },
+  "sampled_network_state": [
+    {
+      "t_s": 0.0,
+      "mean_membrane": 0.0,
+      "std_membrane": 0.0,
+      "coherence": 1.0,
+      "delay_proxy": 0.0
+    },
+    {
+      "t_s": 2.0,
+      "mean_membrane": -0.001568,
+      "std_membrane": 0.015154,
+      "coherence": 0.999885,
+      "delay_proxy": 0.065445
+    },
+    {
+      "t_s": 4.0,
+      "mean_membrane": -0.002903,
+      "std_membrane": 0.022109,
+      "coherence": 0.999756,
+      "delay_proxy": 0.086939
+    },
+    {
+      "t_s": 6.0,
+      "mean_membrane": -0.004041,
+      "std_membrane": 0.025936,
+      "coherence": 0.999664,
+      "delay_proxy": 0.093804
+    },
+    {
+      "t_s": 8.0,
+      "mean_membrane": -0.005011,
+      "std_membrane": 0.028327,
+      "coherence": 0.999599,
+      "delay_proxy": 0.095533
+    },
+    {
+      "t_s": 10.0,
+      "mean_membrane": -0.005837,
+      "std_membrane": 0.029947,
+      "coherence": 0.999552,
+      "delay_proxy": 0.095416
+    },
+    {
+      "t_s": 12.0,
+      "mean_membrane": -0.006541,
+      "std_membrane": 0.031105,
+      "coherence": 0.999517,
+      "delay_proxy": 0.094665
+    },
+    {
+      "t_s": 14.0,
+      "mean_membrane": -0.007141,
+      "std_membrane": 0.031961,
+      "coherence": 0.99949,
+      "delay_proxy": 0.093749
+    },
+    {
+      "t_s": 16.0,
+      "mean_membrane": -0.007652,
+      "std_membrane": 0.032609,
+      "coherence": 0.999469,
+      "delay_proxy": 0.092849
+    },
+    {
+      "t_s": 18.0,
+      "mean_membrane": -0.008087,
+      "std_membrane": 0.033108,
+      "coherence": 0.999452,
+      "delay_proxy": 0.092033
+    },
+    {
+      "t_s": 20.0,
+      "mean_membrane": -0.008458,
+      "std_membrane": 0.033496,
+      "coherence": 0.99944,
+      "delay_proxy": 0.091319
+    },
+    {
+      "t_s": 22.0,
+      "mean_membrane": -0.008774,
+      "std_membrane": 0.033802,
+      "coherence": 0.999429,
+      "delay_proxy": 0.090707
+    },
+    {
+      "t_s": 24.0,
+      "mean_membrane": -0.009044,
+      "std_membrane": 0.034043,
+      "coherence": 0.999421,
+      "delay_proxy": 0.090188
+    },
+    {
+      "t_s": 26.0,
+      "mean_membrane": -0.009273,
+      "std_membrane": 0.034236,
+      "coherence": 0.999415,
+      "delay_proxy": 0.089751
+    },
+    {
+      "t_s": 28.0,
+      "mean_membrane": -0.009469,
+      "std_membrane": 0.03439,
+      "coherence": 0.999409,
+      "delay_proxy": 0.089383
+    },
+    {
+      "t_s": 30.0,
+      "mean_membrane": -0.009635,
+      "std_membrane": 0.034513,
+      "coherence": 0.999405,
+      "delay_proxy": 0.089188
+    },
+    {
+      "t_s": 32.0,
+      "mean_membrane": -0.009777,
+      "std_membrane": 0.034613,
+      "coherence": 0.999402,
+      "delay_proxy": 0.08906
+    },
+    {
+      "t_s": 34.0,
+      "mean_membrane": -0.009898,
+      "std_membrane": 0.034693,
+      "coherence": 0.999399,
+      "delay_proxy": 0.088945
+    },
+    {
+      "t_s": 36.0,
+      "mean_membrane": -0.010001,
+      "std_membrane": 0.034758,
+      "coherence": 0.999397,
+      "delay_proxy": 0.088842
+    },
+    {
+      "t_s": 38.0,
+      "mean_membrane": -0.010089,
+      "std_membrane": 0.034811,
+      "coherence": 0.999395,
+      "delay_proxy": 0.088752
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "mean_coherence": {
+        "observed": 0.999648,
+        "nominal": 0.92,
+        "tolerance": 0.12,
+        "abs_error": 0.07964799999999994,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

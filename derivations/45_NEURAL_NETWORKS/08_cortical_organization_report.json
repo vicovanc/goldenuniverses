@@ -1,0 +1,85 @@
+{
+  "model": "cortical_organization",
+  "config": {
+    "input_dim": 16,
+    "l1_dim": 24,
+    "l2_dim": 14,
+    "l3_dim": 8,
+    "samples": 240,
+    "seed": 45
+  },
+  "summary": {
+    "abstraction_proxy": 0.706023,
+    "selectivity_gain_l3_over_l1": 0.670638,
+    "variance_ratio_l3_over_input": 0.293977
+  },
+  "layer_metrics": [
+    {
+      "layer": 0,
+      "dim": 16,
+      "mean_var": 0.996619,
+      "selectivity": 0.794604
+    },
+    {
+      "layer": 1,
+      "dim": 24,
+      "mean_var": 0.569162,
+      "selectivity": 0.693971
+    },
+    {
+      "layer": 2,
+      "dim": 14,
+      "mean_var": 0.42753,
+      "selectivity": 0.583937
+    },
+    {
+      "layer": 3,
+      "dim": 8,
+      "mean_var": 0.292983,
+      "selectivity": 0.465403
+    }
+  ],
+  "diagnostics": {
+    "sensitivity_envelope": [
+      {
+        "scale_w3": 0.9,
+        "abstraction_proxy": 0.739748
+      },
+      {
+        "scale_w3": 1.0,
+        "abstraction_proxy": 0.706023
+      },
+      {
+        "scale_w3": 1.1,
+        "abstraction_proxy": 0.674191
+      }
+    ],
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "abstraction_proxy": {
+        "observed": 0.706023,
+        "nominal": 0.7,
+        "tolerance": 0.25,
+        "abs_error": 0.006023000000000001,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 45
+  }
+}

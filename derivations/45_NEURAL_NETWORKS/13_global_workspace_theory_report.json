@@ -1,0 +1,230 @@
+{
+  "model": "global_workspace_theory",
+  "config": {
+    "n_modules": 6,
+    "steps": 220,
+    "dt": 0.05,
+    "gate_threshold": 0.62,
+    "recurrent_gain": 0.4,
+    "seed": 13
+  },
+  "summary": {
+    "conscious_access_fraction": 0.995455,
+    "integration_index": 0.834956,
+    "final_broadcast_level": 0.873337,
+    "gate_threshold": 0.62
+  },
+  "canonical_observables": {
+    "integration_index": 0.834956,
+    "conscious_access_fraction": 0.995455
+  },
+  "exploratory_metrics": {
+    "final_broadcast_level": 0.873337
+  },
+  "sampled_workspace_dynamics": [
+    {
+      "t_s": 0.0,
+      "broadcast_level": 0.455782,
+      "module_mean": 0.413947,
+      "module_max": 0.533477,
+      "conscious_access": 0.0
+    },
+    {
+      "t_s": 0.45,
+      "broadcast_level": 0.887058,
+      "module_mean": 0.869014,
+      "module_max": 0.920568,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 0.9,
+      "broadcast_level": 0.859278,
+      "module_mean": 0.83521,
+      "module_max": 0.903977,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 1.35,
+      "broadcast_level": 0.844435,
+      "module_mean": 0.819292,
+      "module_max": 0.891131,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 1.8,
+      "broadcast_level": 0.869778,
+      "module_mean": 0.845844,
+      "module_max": 0.914225,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 2.25,
+      "broadcast_level": 0.88928,
+      "module_mean": 0.874566,
+      "module_max": 0.916606,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 2.7,
+      "broadcast_level": 0.890994,
+      "module_mean": 0.875808,
+      "module_max": 0.919197,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 3.15,
+      "broadcast_level": 0.883826,
+      "module_mean": 0.864616,
+      "module_max": 0.9195,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 3.6,
+      "broadcast_level": 0.859071,
+      "module_mean": 0.833485,
+      "module_max": 0.906588,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 4.05,
+      "broadcast_level": 0.845844,
+      "module_mean": 0.823666,
+      "module_max": 0.887031,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 4.5,
+      "broadcast_level": 0.872368,
+      "module_mean": 0.850449,
+      "module_max": 0.913076,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 4.95,
+      "broadcast_level": 0.898034,
+      "module_mean": 0.887401,
+      "module_max": 0.917781,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 5.4,
+      "broadcast_level": 0.895038,
+      "module_mean": 0.882032,
+      "module_max": 0.919194,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 5.85,
+      "broadcast_level": 0.862254,
+      "module_mean": 0.838773,
+      "module_max": 0.905863,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 6.3,
+      "broadcast_level": 0.849486,
+      "module_mean": 0.831251,
+      "module_max": 0.883351,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 6.75,
+      "broadcast_level": 0.850262,
+      "module_mean": 0.819512,
+      "module_max": 0.90737,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 7.2,
+      "broadcast_level": 0.875505,
+      "module_mean": 0.858205,
+      "module_max": 0.907634,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 7.65,
+      "broadcast_level": 0.89249,
+      "module_mean": 0.881885,
+      "module_max": 0.912185,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 8.1,
+      "broadcast_level": 0.8912,
+      "module_mean": 0.877046,
+      "module_max": 0.917487,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 8.55,
+      "broadcast_level": 0.860422,
+      "module_mean": 0.834793,
+      "module_max": 0.908018,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 9.0,
+      "broadcast_level": 0.848349,
+      "module_mean": 0.827751,
+      "module_max": 0.886603,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 9.45,
+      "broadcast_level": 0.847986,
+      "module_mean": 0.818566,
+      "module_max": 0.902622,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 9.9,
+      "broadcast_level": 0.868658,
+      "module_mean": 0.849985,
+      "module_max": 0.903338,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 10.35,
+      "broadcast_level": 0.89998,
+      "module_mean": 0.88856,
+      "module_max": 0.921189,
+      "conscious_access": 1.0
+    },
+    {
+      "t_s": 10.8,
+      "broadcast_level": 0.885835,
+      "module_mean": 0.872255,
+      "module_max": 0.911053,
+      "conscious_access": 1.0
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 13
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "integration_index": {
+        "observed": 0.834956,
+        "nominal": 0.8,
+        "tolerance": 0.25,
+        "abs_error": 0.03495599999999999,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

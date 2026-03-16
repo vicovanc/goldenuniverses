@@ -1,0 +1,15 @@
+{
+  "model": "benchmark_tissue_excitation",
+  "config": {
+    "target_nominal": 0.75,
+    "target_tolerance": 0.35
+  },
+  "summary": {
+    "observed_coherence": 0.9979594466380314,
+    "abs_error": 0.24795944663803138,
+    "passed": true
+  },
+  "diagnostics": {
+    "protocol": "abs_error <= tolerance"
+  }
+}

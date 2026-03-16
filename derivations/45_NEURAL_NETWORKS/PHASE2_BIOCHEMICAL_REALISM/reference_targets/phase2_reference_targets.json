@@ -1,0 +1,12 @@
+{
+  "resting_vm_mV_nominal": -70.0,
+  "resting_vm_mV_tolerance": 20.0,
+  "atp_turnover_proxy_nominal": 1.0,
+  "atp_turnover_proxy_tolerance": 0.8,
+  "gene_response_half_time_s_nominal": 300.0,
+  "gene_response_half_time_s_tolerance": 250.0,
+  "tissue_coherence_nominal": 0.75,
+  "tissue_coherence_tolerance": 0.35,
+  "neural_composite_nominal": 0.75,
+  "neural_composite_tolerance": 0.2
+}

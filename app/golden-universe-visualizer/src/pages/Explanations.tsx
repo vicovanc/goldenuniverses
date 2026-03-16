@@ -369,7 +369,7 @@ const Explanations: React.FC = () => {
       </p>
 
       <div className="lagrangian-equation">
-        <EquationRenderer equation="L_{total} = L_Ω + L_X + L_{int} + L_{gauge} + L_{lock} + L_{mem}" />
+        <EquationRenderer equation="L_{total} = L_{\\Omega} + L_X + L_{\\text{int}} + L_{\\text{gauge}} + L_{\\text{lock}} + L_{\\text{mem}}" displayMode={true} />
       </div>
 
       <div className="lagrangian-terms">
@@ -382,7 +382,7 @@ const Explanations: React.FC = () => {
             <p className="term-description">{term.description}</p>
 
             <div className="term-equation">
-              <EquationRenderer equation={term.equation} />
+              <EquationRenderer equation={term.equation} displayMode={true} />
             </div>
 
             {term.components && term.components.length > 0 && (
@@ -392,7 +392,7 @@ const Explanations: React.FC = () => {
                   <div key={idx} className="component">
                     <h5>{comp.name}</h5>
                     <p>{comp.description}</p>
-                    <EquationRenderer equation={comp.equation} />
+                    <EquationRenderer equation={comp.equation} displayMode={true} />
                   </div>
                 ))}
               </div>

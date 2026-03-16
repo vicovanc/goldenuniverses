@@ -99,7 +99,6 @@ const EquationRenderer: React.FC<EquationRendererProps> = ({
             '\\inv': '\\text{inv}',
             '\\eff': '\\text{eff}',
             '\\tot': '\\text{tot}',
-            '\\int': '\\text{int}',
             '\\gauge': '\\text{gauge}',
             '\\kin': '\\text{kin}',
             '\\fullOmega': '\\text{full}\\Omega',
@@ -125,7 +124,9 @@ const EquationRenderer: React.FC<EquationRendererProps> = ({
         });
         containerRef.current.innerHTML = html;
       } catch (error) {
-        setRenderError(error instanceof Error ? error.message : 'Rendering error');
+        const errorMsg = error instanceof Error ? error.message : 'Rendering error';
+        console.error('KaTeX rendering error:', errorMsg, 'Equation:', equation);
+        setRenderError(errorMsg);
         // Fallback: show the raw equation nicely formatted
         containerRef.current.innerHTML = `<span class="equation-fallback">${equation}</span>`;
       }

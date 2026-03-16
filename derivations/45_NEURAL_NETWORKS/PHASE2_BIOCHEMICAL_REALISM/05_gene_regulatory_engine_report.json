@@ -1,0 +1,33 @@
+{
+  "model": "gene_regulatory_engine",
+  "config": {
+    "dt": 0.05,
+    "steps": 4000
+  },
+  "assumptions": [
+    "Epigenetic openness modulates transcription rate.",
+    "Transcription/translation consume ATP-like signal budget.",
+    "Membrane state modulates epigenetic accessibility."
+  ],
+  "units": {
+    "expression": "arb",
+    "vm": "mV",
+    "atp_signal": "mM",
+    "time": "s"
+  },
+  "parameter_provenance": {
+    "source": "Phase2 gene-module initialization constants"
+  },
+  "summary": {
+    "final_mrna_A": 6.21780638187733,
+    "final_protein_A": 20.897182282454686,
+    "final_epi_open_fraction": 0.621448857492191,
+    "final_regulator_R": 13.171070617781684,
+    "final_vm_mV": -61.452499498502384,
+    "final_atp_signal": 1.3750089046794731
+  },
+  "diagnostics": {
+    "state_nonnegative_except_vm": true,
+    "expression_stability_tail_std": 0.11719812063260038
+  }
+}

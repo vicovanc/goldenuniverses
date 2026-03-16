@@ -1,0 +1,200 @@
+{
+  "model": "action_potential_derivation",
+  "config": {
+    "dt": 0.01,
+    "total_time": 150.0,
+    "a": 0.7,
+    "b": 0.8,
+    "tau": 12.5,
+    "stimulus_start": 20.0,
+    "stimulus_end": 90.0,
+    "stimulus_amp": 0.55,
+    "myelin_speed_gain": 1.35
+  },
+  "summary": {
+    "spike_count": 2,
+    "mean_isi_s": 40.28,
+    "firing_rate_hz": 0.024826,
+    "refractory_proxy_s": 40.28,
+    "conduction_speed_proxy_m_per_s": 13.530164
+  },
+  "spike_times_s": [
+    22.52,
+    62.8
+  ],
+  "sampled_state": [
+    {
+      "t_ms_proxy": 0.0,
+      "v_membrane": -1.106563,
+      "w_recovery": -0.00032,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 6.25,
+      "v_membrane": -1.535545,
+      "w_recovery": -0.361884,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 12.5,
+      "v_membrane": -1.358448,
+      "w_recovery": -0.545916,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 18.75,
+      "v_membrane": -1.249558,
+      "w_recovery": -0.610969,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 25.0,
+      "v_membrane": 1.964713,
+      "w_recovery": 0.055651,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 31.25,
+      "v_membrane": 1.482434,
+      "w_recovery": 1.032794,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 37.5,
+      "v_membrane": 0.543937,
+      "w_recovery": 1.434083,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 43.75,
+      "v_membrane": -1.813773,
+      "w_recovery": 0.667423,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 50.0,
+      "v_membrane": -1.456985,
+      "w_recovery": 0.066647,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 56.25,
+      "v_membrane": -1.068271,
+      "w_recovery": -0.18518,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 62.5,
+      "v_membrane": 0.454202,
+      "w_recovery": -0.088801,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 68.75,
+      "v_membrane": 1.57324,
+      "w_recovery": 0.906854,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 75.0,
+      "v_membrane": 0.85412,
+      "w_recovery": 1.41008,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 81.25,
+      "v_membrane": -1.87659,
+      "w_recovery": 0.818257,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 87.5,
+      "v_membrane": -1.5189,
+      "w_recovery": 0.142218,
+      "input_current": 0.55
+    },
+    {
+      "t_ms_proxy": 93.75,
+      "v_membrane": -1.607324,
+      "w_recovery": -0.258384,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 100.0,
+      "v_membrane": -1.410291,
+      "w_recovery": -0.501988,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 106.25,
+      "v_membrane": -1.277907,
+      "w_recovery": -0.597773,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 112.5,
+      "v_membrane": -1.21448,
+      "w_recovery": -0.622765,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 118.75,
+      "v_membrane": -1.198923,
+      "w_recovery": -0.625038,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 125.0,
+      "v_membrane": -1.198729,
+      "w_recovery": -0.6244,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 131.25,
+      "v_membrane": -1.199362,
+      "w_recovery": -0.62424,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 137.5,
+      "v_membrane": -1.199433,
+      "w_recovery": -0.624252,
+      "input_current": 0.0
+    },
+    {
+      "t_ms_proxy": 143.75,
+      "v_membrane": -1.199412,
+      "w_recovery": -0.62426,
+      "input_current": 0.0
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "firing_rate_hz": {
+        "observed": 0.024826,
+        "nominal": 0.05,
+        "tolerance": 0.05,
+        "abs_error": 0.025174000000000002,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

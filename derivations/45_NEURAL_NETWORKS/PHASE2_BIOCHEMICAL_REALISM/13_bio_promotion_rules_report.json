@@ -1,0 +1,23 @@
+{
+  "model": "bio_promotion_rules",
+  "config": {
+    "promotion_rule": "identifiability && falsification"
+  },
+  "assumptions": [
+    "Promotion requires both full-rank identifiability and falsification pass."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "phase2 promotion policy"
+  },
+  "summary": {
+    "rank_ok": true,
+    "falsification_ok": true,
+    "promotion_status": "derived"
+  },
+  "gate_status": {
+    "identifiability_gate": "pass",
+    "falsification_gate": "pass",
+    "promotion_gate": "derived"
+  }
+}

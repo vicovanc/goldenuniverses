@@ -1,0 +1,39 @@
+{
+  "model": "reaction_kinetics_engine",
+  "config": {
+    "dt": 0.05,
+    "steps": 800,
+    "n_reactions": 7
+  },
+  "assumptions": [
+    "Mass-action core with MM saturations for transcription/translation.",
+    "Fixed external reservoir species are dynamic but not replenished."
+  ],
+  "units": {
+    "concentration": "mM",
+    "time": "s",
+    "rate": "mM/s"
+  },
+  "parameter_provenance": {
+    "source": "Phase2 kinetics initialization constants"
+  },
+  "summary": {
+    "final_atp": 0.10530843957033795,
+    "final_nadh": 1.7824932908886582,
+    "final_mrna": 0.2836807336747279,
+    "min_concentration_observed": 0.009551850501395655,
+    "max_concentration_observed": 4.0
+  },
+  "diagnostics": {
+    "final_reaction_rates": [
+      0.0023653689745236246,
+      0.008281428717666791,
+      0.009477759561330415,
+      0.007377222316591909,
+      0.006252128283858549,
+      0.002961198633277883,
+      0.005673614673494558
+    ],
+    "state_nonnegative": true
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "model": "synaptic_transmission",
+  "config": {
+    "dt": 0.001,
+    "total_time": 1.5,
+    "spike_times_pre": [
+      0.12,
+      0.28,
+      0.44,
+      0.72,
+      1.05
+    ],
+    "synaptic_delay": 0.004,
+    "tau_rise": 0.003,
+    "tau_decay": 0.018,
+    "w_electrical": 0.35,
+    "w_chemical": 0.9,
+    "threshold_post": 0.5
+  },
+  "summary": {
+    "peak_post_synaptic_signal": 0.523165,
+    "mean_electrical_component": 0.004387,
+    "mean_chemical_component": 0.044931,
+    "chemical_to_electrical_ratio": 10.24272,
+    "first_transmission_delay_s": 0.009
+  },
+  "sampled_transmission": [
+    {
+      "t_s": 0.0,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    },
+    {
+      "t_s": 0.062,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    },
+    {
+      "t_s": 0.124,
+      "electrical_component": 0.009998,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.009998
+    },
+    {
+      "t_s": 0.186,
+      "electrical_component": 0.0,
+      "chemical_component": 0.02873,
+      "post_synaptic_signal": 0.02873
+    },
+    {
+      "t_s": 0.248,
+      "electrical_component": 0.0,
+      "chemical_component": 0.000917,
+      "post_synaptic_signal": 0.000917
+    },
+    {
+      "t_s": 0.31,
+      "electrical_component": 0.0,
+      "chemical_component": 0.212164,
+      "post_synaptic_signal": 0.212164
+    },
+    {
+      "t_s": 0.372,
+      "electrical_component": 0.0,
+      "chemical_component": 0.006778,
+      "post_synaptic_signal": 0.006778
+    },
+    {
+      "t_s": 0.434,
+      "electrical_component": 0.000117,
+      "chemical_component": 0.000216,
+      "post_synaptic_signal": 0.000334
+    },
+    {
+      "t_s": 0.496,
+      "electrical_component": 0.0,
+      "chemical_component": 0.050081,
+      "post_synaptic_signal": 0.050081
+    },
+    {
+      "t_s": 0.558,
+      "electrical_component": 0.0,
+      "chemical_component": 0.001599,
+      "post_synaptic_signal": 0.001599
+    },
+    {
+      "t_s": 0.62,
+      "electrical_component": 0.0,
+      "chemical_component": 5.1e-05,
+      "post_synaptic_signal": 5.1e-05
+    },
+    {
+      "t_s": 0.682,
+      "electrical_component": 0.0,
+      "chemical_component": 2e-06,
+      "post_synaptic_signal": 2e-06
+    },
+    {
+      "t_s": 0.744,
+      "electrical_component": 0.0,
+      "chemical_component": 0.295128,
+      "post_synaptic_signal": 0.295128
+    },
+    {
+      "t_s": 0.806,
+      "electrical_component": 0.0,
+      "chemical_component": 0.009458,
+      "post_synaptic_signal": 0.009458
+    },
+    {
+      "t_s": 0.868,
+      "electrical_component": 0.0,
+      "chemical_component": 0.000302,
+      "post_synaptic_signal": 0.000302
+    },
+    {
+      "t_s": 0.93,
+      "electrical_component": 0.0,
+      "chemical_component": 1e-05,
+      "post_synaptic_signal": 1e-05
+    },
+    {
+      "t_s": 0.992,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    },
+    {
+      "t_s": 1.054,
+      "electrical_component": 0.009998,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.009998
+    },
+    {
+      "t_s": 1.116,
+      "electrical_component": 0.0,
+      "chemical_component": 0.02873,
+      "post_synaptic_signal": 0.02873
+    },
+    {
+      "t_s": 1.178,
+      "electrical_component": 0.0,
+      "chemical_component": 0.000917,
+      "post_synaptic_signal": 0.000917
+    },
+    {
+      "t_s": 1.24,
+      "electrical_component": 0.0,
+      "chemical_component": 2.9e-05,
+      "post_synaptic_signal": 2.9e-05
+    },
+    {
+      "t_s": 1.302,
+      "electrical_component": 0.0,
+      "chemical_component": 1e-06,
+      "post_synaptic_signal": 1e-06
+    },
+    {
+      "t_s": 1.364,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    },
+    {
+      "t_s": 1.426,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    },
+    {
+      "t_s": 1.488,
+      "electrical_component": 0.0,
+      "chemical_component": 0.0,
+      "post_synaptic_signal": 0.0
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "chemical_to_electrical_ratio": {
+        "observed": 10.24272,
+        "nominal": 8.0,
+        "tolerance": 6.0,
+        "abs_error": 2.2427200000000003,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

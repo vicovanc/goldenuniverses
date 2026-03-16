@@ -1,0 +1,60 @@
+{
+  "model": "bioelectric_computing",
+  "config": {
+    "digital_ops_per_s": 3500000000.0,
+    "bioelectric_ops_per_s": 400000000.0,
+    "digital_energy_per_op_j": 4.8e-12,
+    "bioelectric_energy_per_op_j": 7e-13,
+    "bridge_overhead_fraction": 0.14,
+    "workload_ops": 1200000000.0
+  },
+  "summary": {
+    "latency_s": 1.881,
+    "total_energy_j": 0.00348156,
+    "throughput_ops_per_s": 637958532.695,
+    "performance_per_watt_proxy": 344673077585.91
+  },
+  "canonical_observables": {
+    "latency_s": 1.881,
+    "total_energy_j": 0.00348156,
+    "throughput_ops_per_s": 637958532.695
+  },
+  "exploratory_metrics": {
+    "performance_per_watt_proxy": 344673077585.91
+  },
+  "breakdown": {
+    "digital_ops": 540000000.0,
+    "bioelectric_ops": 660000000.0,
+    "digital_energy_j": 0.0025919999999999997,
+    "bioelectric_energy_j": 0.000462
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "latency_s": {
+        "observed": 1.881,
+        "nominal": 2.0,
+        "tolerance": 1.5,
+        "abs_error": 0.119,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

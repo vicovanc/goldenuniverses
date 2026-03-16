@@ -1,0 +1,33 @@
+{
+  "model": "membrane_transport_engine",
+  "config": {
+    "dt": 0.001,
+    "steps": 12000
+  },
+  "assumptions": [
+    "HH-like gating on top of Goldman membrane potential.",
+    "Minimal Na/K ATPase pump abstraction."
+  ],
+  "units": {
+    "vm": "mV",
+    "concentration": "mM",
+    "time": "s"
+  },
+  "parameter_provenance": {
+    "source": "Phase2 membrane initialization constants"
+  },
+  "summary": {
+    "vm_rest_mV": -64.89208000990153,
+    "vm_min_mV": -64.89208000990153,
+    "vm_max_mV": -64.87941771716822,
+    "final_gates": {
+      "m": 0.01824485923371777,
+      "h": 0.6935409360827448,
+      "n": 0.03904331006545943
+    }
+  },
+  "diagnostics": {
+    "vm_stable_tail_std": 0.0006117004234810416,
+    "state_nonnegative": true
+  }
+}

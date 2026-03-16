@@ -1,0 +1,245 @@
+{
+  "model": "species_reaction_registry",
+  "config": {
+    "n_reactions": 7
+  },
+  "assumptions": [
+    "Minimal proto-cell chemistry with ATP/NADH coupling.",
+    "Single-compartment cytoplasm plus external reservoir.",
+    "Charge conservation checked reaction-wise."
+  ],
+  "units": {
+    "concentration": "mM",
+    "time": "s"
+  },
+  "parameter_provenance": {
+    "source": "Phase2 mechanistic initialization"
+  },
+  "summary": {
+    "n_species": 11,
+    "n_reactions": 7,
+    "charge_conserved_reaction_fraction": 0.42857142857142855
+  },
+  "diagnostics": {
+    "charge_balance_per_reaction": [
+      0.0,
+      1.0,
+      -1.0,
+      0.0,
+      0.0,
+      2.0,
+      1.0
+    ],
+    "charge_conserved_flags": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "registry": {
+    "species": [
+      {
+        "name": "S_ext",
+        "charge": 0,
+        "compartment": "outside",
+        "units": "mM"
+      },
+      {
+        "name": "S_cyt",
+        "charge": 0,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "ATP",
+        "charge": -4,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "ADP",
+        "charge": -3,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "Pi",
+        "charge": -2,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "NADH",
+        "charge": -1,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "NADplus",
+        "charge": -1,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "H_in",
+        "charge": 1,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "H_out",
+        "charge": 1,
+        "compartment": "outside",
+        "units": "mM"
+      },
+      {
+        "name": "mRNA_A",
+        "charge": -1,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      },
+      {
+        "name": "Prot_A",
+        "charge": 0,
+        "compartment": "cytoplasm",
+        "units": "mM"
+      }
+    ],
+    "species_index": {
+      "S_ext": 0,
+      "S_cyt": 1,
+      "ATP": 2,
+      "ADP": 3,
+      "Pi": 4,
+      "NADH": 5,
+      "NADplus": 6,
+      "H_in": 7,
+      "H_out": 8,
+      "mRNA_A": 9,
+      "Prot_A": 10
+    },
+    "stoichiometric_matrix": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -1.0,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "charge_balance_per_reaction": [
+      0.0,
+      1.0,
+      -1.0,
+      0.0,
+      0.0,
+      2.0,
+      1.0
+    ],
+    "charge_conserved_flags": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  }
+}

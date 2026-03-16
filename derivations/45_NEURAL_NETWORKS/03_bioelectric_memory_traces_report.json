@@ -1,0 +1,218 @@
+{
+  "model": "bioelectric_memory_traces",
+  "config": {
+    "dt": 0.05,
+    "total_time": 180.0,
+    "tau_fast": 1.5,
+    "tau_slow": 32.0,
+    "coupling_fast_to_slow": 0.18,
+    "coupling_slow_to_fast": 0.42,
+    "retention_gain": 0.22
+  },
+  "summary": {
+    "retained_vm_post_training": 0.011363,
+    "retrieval_score": 0.016233,
+    "final_fast_vm_state": 0.005083,
+    "final_slow_gene_state": 0.011579,
+    "memory_half_life_proxy_s": 22.18071
+  },
+  "sampled_memory_trajectory": [
+    {
+      "t_s": 0.0,
+      "input": 0.0,
+      "fast_vm_state": 0.0,
+      "slow_gene_state": 0.0,
+      "learned_retention": 0.0
+    },
+    {
+      "t_s": 7.5,
+      "input": 0.0,
+      "fast_vm_state": 0.0,
+      "slow_gene_state": 0.0,
+      "learned_retention": 0.0
+    },
+    {
+      "t_s": 15.0,
+      "input": 0.0,
+      "fast_vm_state": 0.0,
+      "slow_gene_state": 0.0,
+      "learned_retention": 0.0
+    },
+    {
+      "t_s": 22.5,
+      "input": 0.515224,
+      "fast_vm_state": 0.440796,
+      "slow_gene_state": 0.004197,
+      "learned_retention": 0.165925
+    },
+    {
+      "t_s": 30.0,
+      "input": 0.5,
+      "fast_vm_state": 0.622029,
+      "slow_gene_state": 0.029246,
+      "learned_retention": 1.195896
+    },
+    {
+      "t_s": 37.5,
+      "input": 0.515224,
+      "fast_vm_state": 0.675894,
+      "slow_gene_state": 0.050363,
+      "learned_retention": 2.135829
+    },
+    {
+      "t_s": 45.0,
+      "input": 0.558579,
+      "fast_vm_state": 0.733717,
+      "slow_gene_state": 0.067288,
+      "learned_retention": 2.953444
+    },
+    {
+      "t_s": 52.5,
+      "input": 0.623463,
+      "fast_vm_state": 0.789004,
+      "slow_gene_state": 0.080794,
+      "learned_retention": 3.662038
+    },
+    {
+      "t_s": 60.0,
+      "input": 0.7,
+      "fast_vm_state": 0.834531,
+      "slow_gene_state": 0.091531,
+      "learned_retention": 4.274578
+    },
+    {
+      "t_s": 67.5,
+      "input": 0.776537,
+      "fast_vm_state": 0.864324,
+      "slow_gene_state": 0.100043,
+      "learned_retention": 4.803447
+    },
+    {
+      "t_s": 75.0,
+      "input": 0.841421,
+      "fast_vm_state": 0.874619,
+      "slow_gene_state": 0.106791,
+      "learned_retention": 5.260362
+    },
+    {
+      "t_s": 82.5,
+      "input": 0.0,
+      "fast_vm_state": 0.156257,
+      "slow_gene_state": 0.106434,
+      "learned_retention": 5.429945
+    },
+    {
+      "t_s": 90.0,
+      "input": 0.0,
+      "fast_vm_state": 0.038646,
+      "slow_gene_state": 0.086526,
+      "learned_retention": 4.769712
+    },
+    {
+      "t_s": 97.5,
+      "input": 0.0,
+      "fast_vm_state": 0.030608,
+      "slow_gene_state": 0.069721,
+      "learned_retention": 4.157476
+    },
+    {
+      "t_s": 105.0,
+      "input": 0.4,
+      "fast_vm_state": 0.037992,
+      "slow_gene_state": 0.056176,
+      "learned_retention": 3.620215
+    },
+    {
+      "t_s": 112.5,
+      "input": 0.4,
+      "fast_vm_state": 0.421508,
+      "slow_gene_state": 0.057689,
+      "learned_retention": 3.652742
+    },
+    {
+      "t_s": 120.0,
+      "input": 0.4,
+      "fast_vm_state": 0.425548,
+      "slow_gene_state": 0.061596,
+      "learned_retention": 3.794137
+    },
+    {
+      "t_s": 127.5,
+      "input": 0.0,
+      "fast_vm_state": 0.025433,
+      "slow_gene_state": 0.052429,
+      "learned_retention": 3.419689
+    },
+    {
+      "t_s": 135.0,
+      "input": 0.0,
+      "fast_vm_state": 0.018565,
+      "slow_gene_state": 0.04226,
+      "learned_retention": 2.975509
+    },
+    {
+      "t_s": 142.5,
+      "input": 0.0,
+      "fast_vm_state": 0.014947,
+      "slow_gene_state": 0.03405,
+      "learned_retention": 2.58638
+    },
+    {
+      "t_s": 150.0,
+      "input": 0.0,
+      "fast_vm_state": 0.012043,
+      "slow_gene_state": 0.027435,
+      "learned_retention": 2.246516
+    },
+    {
+      "t_s": 157.5,
+      "input": 0.0,
+      "fast_vm_state": 0.009703,
+      "slow_gene_state": 0.022105,
+      "learned_retention": 1.950019
+    },
+    {
+      "t_s": 165.0,
+      "input": 0.0,
+      "fast_vm_state": 0.007818,
+      "slow_gene_state": 0.017811,
+      "learned_retention": 1.691622
+    },
+    {
+      "t_s": 172.5,
+      "input": 0.0,
+      "fast_vm_state": 0.006299,
+      "slow_gene_state": 0.014351,
+      "learned_retention": 1.46664
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "memory_half_life_proxy_s": {
+        "observed": 22.18071,
+        "nominal": 20.0,
+        "tolerance": 15.0,
+        "abs_error": 2.1807100000000013,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

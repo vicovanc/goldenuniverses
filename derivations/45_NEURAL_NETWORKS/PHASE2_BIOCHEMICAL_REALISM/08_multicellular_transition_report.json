@@ -1,0 +1,32 @@
+{
+  "model": "multicellular_transition",
+  "config": {
+    "n_cells": 120,
+    "steps": 240,
+    "seed": 808
+  },
+  "assumptions": [
+    "Adhesion, signaling, and gap-junction coupling co-evolve under cooperative feedback.",
+    "Transition index approximates multicellular integration state."
+  ],
+  "units": {
+    "traits": "0..1 normalized"
+  },
+  "parameter_provenance": {
+    "source": "phase2 transition initialization"
+  },
+  "summary": {
+    "initial_cluster_index": 0.321804889696527,
+    "final_cluster_index": 0.8399735347644003,
+    "cluster_index_gain": 0.5181686450678733,
+    "final_trait_means": {
+      "adhesion": 0.8353167569157238,
+      "signaling": 0.8472884226809356,
+      "gap_coupling": 0.8406431475112891
+    }
+  },
+  "diagnostics": {
+    "transition_reached_idx_gt_0p55": true,
+    "cluster_index_std_tail": 0.0008829504775577948
+  }
+}

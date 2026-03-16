@@ -652,7 +652,7 @@ export const lagrangianTerms: LagrangianTerm[] = [
     symbol: 'L_{\\text{mem}}',
     name: 'Memory Energy',
     description: 'Binding energy from recursive memory with closed Gamma-function form',
-    equation: 'E_{\\text{memory}} = -\\frac{\\lambda_{\\text{rec}}}{\\beta} \\cdot \\int |\\psi_0|^4 ds, \\text{ where } \\frac{\\lambda_{\\text{rec}}}{\\beta} = \\frac{e^\\varphi}{\\pi^2}',
+    equation: 'E_{\\text{memory}} = -\\frac{\\lambda_{\\text{rec}}}{\\beta} \\cdot \\int |\\psi_0|^4 ds, \\text{ where } \\frac{\\lambda_{\\text{rec}}}{\\beta} = \\frac{e^{\\varphi}}{\\pi^2}',
     relatedLaws: [2, 19, 32],
   },
 ];

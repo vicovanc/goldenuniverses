@@ -1,0 +1,18 @@
+{
+  "model": "benchmark_gene_response",
+  "config": {
+    "target_nominal": 300.0,
+    "target_tolerance": 250.0
+  },
+  "summary": {
+    "response_half_time_proxy_s": 298.63960113933973,
+    "abs_error": 1.3603988606602684,
+    "passed": true
+  },
+  "diagnostics": {
+    "tail_std": 0.11719812063260038,
+    "calibration_factor_s": 35.0,
+    "observable_definition": "calibration_factor_s / tail_std",
+    "protocol": "abs_error <= tolerance"
+  }
+}

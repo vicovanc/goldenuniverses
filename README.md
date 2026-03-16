@@ -71,6 +71,11 @@ Str(a₀) = 3                           [cosmological constant constraint satisf
 - ✅ **Achieved sub-percent precision** for most fundamental particles
 - ✅ **Statistical improvement**: 40% → 70% particles now pass resonance gate
 
+### **Neural Networks Program (New)**
+- ✅ **New derivation track opened** — `derivations/45_NEURAL_NETWORKS`
+- ✅ **Full roadmap added** — cellular bioelectric computation -> human-level self-awareness in GU
+- ✅ **Implementation baseline active** — Phase I-V scripts and machine-readable reports now in place
+
 ## 🎯 Key Achievements
 
 | Quantity | Precision | Method | Status |
@@ -121,13 +126,14 @@ Golden Universe/
 │   ├── theory-laws.md         # Complete canonical theory (4200+ lines)
 │   ├── The Golden Universe Formation.md
 │   └── Golden Universe Theory for the Calculation of Particles v2.md
-├── derivations/               # All derivation folders
-│   ├── 01_ELECTRON_MASS/     # Electron derivation (tree + corrected ppm-level anchor)
-│   ├── 30_WINDING_NUMBERS/   # Corrected winding number solver
-│   ├── 31_QUARK_MASSES/      # Complete quark derivations + breakthrough
-│   ├── 32_PION_PHYSICS/      # Hadron physics
+├── derivations/               # 45 numbered derivation folders (01_ ... 45_)
+│   ├── 01_FORCE_UNIFICATION/ # Early force-unification track (archival status managed separately)
+│   ├── 04_COSMOLOGY/         # Canonical cosmology closure + memory integration
+│   ├── 31_QUARK_MASSES/      # Corrected resonance + duality mass framework
 │   ├── 39_GRAVITY/           # G_N from first principles (47 ppm, ZERO fitted)
-│   └── [other derivations]/
+│   ├── 44_TRINITY/           # Electron-focused torus residual / pixelation diagnostics
+│   ├── 45_NEURAL_NETWORKS/   # Neural evolution: cell -> complex brains -> conscious AI
+│   └── [02_ ... 43_ remaining derivations]/
 ├── pipeline/                  # Computation scripts
 ├── explanatory/              # Narrative documents
 ├── source_documents/         # Original source files

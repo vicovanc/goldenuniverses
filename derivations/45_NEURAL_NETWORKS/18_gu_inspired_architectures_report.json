@@ -1,0 +1,63 @@
+{
+  "model": "gu_inspired_architectures",
+  "config": {
+    "n_samples": 800,
+    "input_dim": 12,
+    "hidden_dim": 20,
+    "epochs": 120,
+    "lr": 0.08,
+    "seed": 18
+  },
+  "summary": {
+    "baseline_accuracy": 0.83,
+    "gu_theta_memory_accuracy": 0.83625,
+    "accuracy_gain": 0.00625,
+    "energy_normalized_gain": 0.000148
+  },
+  "canonical_observables": {
+    "accuracy_gain": 0.00625,
+    "energy_delta_proxy": 42.15
+  },
+  "exploratory_metrics": {
+    "energy_normalized_gain": 0.000148
+  },
+  "baseline": {
+    "accuracy": 0.83,
+    "param_count": 281,
+    "energy_proxy": 281.0
+  },
+  "gu_theta_memory": {
+    "accuracy": 0.83625,
+    "param_count": 281,
+    "energy_proxy": 323.15
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 18
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "accuracy_gain": {
+        "observed": 0.00625,
+        "nominal": 0.005,
+        "tolerance": 0.02,
+        "abs_error": 0.0012500000000000002,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

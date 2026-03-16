@@ -1,0 +1,414 @@
+{
+  "model": "neural_plasticity",
+  "config": {
+    "tau_plus": 0.02,
+    "tau_minus": 0.03,
+    "a_plus": 0.012,
+    "a_minus": 0.01,
+    "w_init": 0.45,
+    "w_min": 0.05,
+    "w_max": 1.2
+  },
+  "spike_trains": {
+    "pre": [
+      0.11,
+      0.23,
+      0.37,
+      0.52,
+      0.77,
+      0.95,
+      1.11
+    ],
+    "post": [
+      0.14,
+      0.2,
+      0.4,
+      0.57,
+      0.74,
+      1.0,
+      1.16
+    ]
+  },
+  "summary": {
+    "initial_weight": 0.45,
+    "final_weight": 0.4500914,
+    "net_weight_change": 9.14e-05,
+    "consolidation_index": 1.00020311,
+    "ltp_pairs": 26,
+    "ltd_pairs": 23
+  },
+  "pairwise_updates": [
+    {
+      "t_pre": 0.11,
+      "t_post": 0.14,
+      "delta_t": 0.03,
+      "delta_w": 0.00267756,
+      "weight": 0.45267756
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 0.2,
+      "delta_t": 0.09,
+      "delta_w": 0.00013331,
+      "weight": 0.45281087
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 0.4,
+      "delta_t": 0.29,
+      "delta_w": 1e-08,
+      "weight": 0.45281088
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 0.57,
+      "delta_t": 0.46,
+      "delta_w": 0.0,
+      "weight": 0.45281088
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 0.74,
+      "delta_t": 0.63,
+      "delta_w": 0.0,
+      "weight": 0.45281088
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 1.0,
+      "delta_t": 0.89,
+      "delta_w": 0.0,
+      "weight": 0.45281088
+    },
+    {
+      "t_pre": 0.11,
+      "t_post": 1.16,
+      "delta_t": 1.05,
+      "delta_w": 0.0,
+      "weight": 0.45281088
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 0.14,
+      "delta_t": -0.09,
+      "delta_w": -0.00049787,
+      "weight": 0.45231301
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 0.2,
+      "delta_t": -0.03,
+      "delta_w": -0.00367879,
+      "weight": 0.44863421
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 0.4,
+      "delta_t": 0.17,
+      "delta_w": 2.44e-06,
+      "weight": 0.44863665
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 0.57,
+      "delta_t": 0.34,
+      "delta_w": 0.0,
+      "weight": 0.44863665
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 0.74,
+      "delta_t": 0.51,
+      "delta_w": 0.0,
+      "weight": 0.44863665
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 1.0,
+      "delta_t": 0.77,
+      "delta_w": 0.0,
+      "weight": 0.44863665
+    },
+    {
+      "t_pre": 0.23,
+      "t_post": 1.16,
+      "delta_t": 0.93,
+      "delta_w": 0.0,
+      "weight": 0.44863665
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 0.14,
+      "delta_t": -0.23,
+      "delta_w": -4.68e-06,
+      "weight": 0.44863197
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 0.2,
+      "delta_t": -0.17,
+      "delta_w": -3.459e-05,
+      "weight": 0.44859738
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 0.4,
+      "delta_t": 0.03,
+      "delta_w": 0.00267756,
+      "weight": 0.45127494
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 0.57,
+      "delta_t": 0.2,
+      "delta_w": 5.4e-07,
+      "weight": 0.45127548
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 0.74,
+      "delta_t": 0.37,
+      "delta_w": 0.0,
+      "weight": 0.45127548
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 1.0,
+      "delta_t": 0.63,
+      "delta_w": 0.0,
+      "weight": 0.45127548
+    },
+    {
+      "t_pre": 0.37,
+      "t_post": 1.16,
+      "delta_t": 0.79,
+      "delta_w": 0.0,
+      "weight": 0.45127548
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 0.14,
+      "delta_t": -0.38,
+      "delta_w": -3e-08,
+      "weight": 0.45127545
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 0.2,
+      "delta_t": -0.32,
+      "delta_w": -2.3e-07,
+      "weight": 0.45127522
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 0.4,
+      "delta_t": -0.12,
+      "delta_w": -0.00018316,
+      "weight": 0.45109206
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 0.57,
+      "delta_t": 0.05,
+      "delta_w": 0.00098502,
+      "weight": 0.45207708
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 0.74,
+      "delta_t": 0.22,
+      "delta_w": 2e-07,
+      "weight": 0.45207728
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 1.0,
+      "delta_t": 0.48,
+      "delta_w": 0.0,
+      "weight": 0.45207728
+    },
+    {
+      "t_pre": 0.52,
+      "t_post": 1.16,
+      "delta_t": 0.64,
+      "delta_w": 0.0,
+      "weight": 0.45207728
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 0.14,
+      "delta_t": -0.63,
+      "delta_w": -0.0,
+      "weight": 0.45207728
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 0.2,
+      "delta_t": -0.57,
+      "delta_w": -0.0,
+      "weight": 0.45207728
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 0.4,
+      "delta_t": -0.37,
+      "delta_w": -4e-08,
+      "weight": 0.45207724
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 0.57,
+      "delta_t": -0.2,
+      "delta_w": -1.273e-05,
+      "weight": 0.45206451
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 0.74,
+      "delta_t": -0.03,
+      "delta_w": -0.00367879,
+      "weight": 0.44838572
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 1.0,
+      "delta_t": 0.23,
+      "delta_w": 1.2e-07,
+      "weight": 0.44838584
+    },
+    {
+      "t_pre": 0.77,
+      "t_post": 1.16,
+      "delta_t": 0.39,
+      "delta_w": 0.0,
+      "weight": 0.44838584
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 0.14,
+      "delta_t": -0.81,
+      "delta_w": -0.0,
+      "weight": 0.44838584
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 0.2,
+      "delta_t": -0.75,
+      "delta_w": -0.0,
+      "weight": 0.44838584
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 0.4,
+      "delta_t": -0.55,
+      "delta_w": -0.0,
+      "weight": 0.44838584
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 0.57,
+      "delta_t": -0.38,
+      "delta_w": -3e-08,
+      "weight": 0.44838581
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 0.74,
+      "delta_t": -0.21,
+      "delta_w": -9.12e-06,
+      "weight": 0.44837669
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 1.0,
+      "delta_t": 0.05,
+      "delta_w": 0.00098502,
+      "weight": 0.44936171
+    },
+    {
+      "t_pre": 0.95,
+      "t_post": 1.16,
+      "delta_t": 0.21,
+      "delta_w": 3.3e-07,
+      "weight": 0.44936204
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 0.14,
+      "delta_t": -0.97,
+      "delta_w": -0.0,
+      "weight": 0.44936204
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 0.2,
+      "delta_t": -0.91,
+      "delta_w": -0.0,
+      "weight": 0.44936204
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 0.4,
+      "delta_t": -0.71,
+      "delta_w": -0.0,
+      "weight": 0.44936204
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 0.57,
+      "delta_t": -0.54,
+      "delta_w": -0.0,
+      "weight": 0.44936204
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 0.74,
+      "delta_t": -0.37,
+      "delta_w": -4e-08,
+      "weight": 0.449362
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 1.0,
+      "delta_t": -0.11,
+      "delta_w": -0.00025562,
+      "weight": 0.44910638
+    },
+    {
+      "t_pre": 1.11,
+      "t_post": 1.16,
+      "delta_t": 0.05,
+      "delta_w": 0.00098502,
+      "weight": 0.4500914
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "net_weight_change": {
+        "observed": 9.14e-05,
+        "nominal": 0.0001,
+        "tolerance": 0.0002,
+        "abs_error": 8.600000000000006e-06,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

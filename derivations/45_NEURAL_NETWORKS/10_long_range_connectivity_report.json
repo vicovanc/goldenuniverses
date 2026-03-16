@@ -1,0 +1,100 @@
+{
+  "model": "long_range_connectivity",
+  "config": {
+    "n_nodes": 72,
+    "local_degree": 4,
+    "n_long_edges": 40,
+    "long_edge_weight": 0.45,
+    "local_edge_weight": 1.0
+  },
+  "summary": {
+    "average_shortest_path_weighted": 2.577093,
+    "global_efficiency": 0.373742,
+    "average_clustering": 0.252447,
+    "bandwidth_proxy": 0.388034,
+    "n_edges_total": 184
+  },
+  "top_hubs": [
+    {
+      "node": 36,
+      "degree": 7
+    },
+    {
+      "node": 3,
+      "degree": 6
+    },
+    {
+      "node": 4,
+      "degree": 6
+    },
+    {
+      "node": 10,
+      "degree": 6
+    },
+    {
+      "node": 13,
+      "degree": 6
+    },
+    {
+      "node": 15,
+      "degree": 6
+    },
+    {
+      "node": 16,
+      "degree": 6
+    },
+    {
+      "node": 17,
+      "degree": 6
+    }
+  ],
+  "diagnostics": {
+    "sensitivity_envelope": [
+      {
+        "long_edge_scale": 0.9,
+        "n_long_edges": 36,
+        "global_efficiency": 0.367853,
+        "bandwidth_proxy": 0.37793
+      },
+      {
+        "long_edge_scale": 1.0,
+        "n_long_edges": 40,
+        "global_efficiency": 0.373742,
+        "bandwidth_proxy": 0.388034
+      },
+      {
+        "long_edge_scale": 1.1,
+        "n_long_edges": 44,
+        "global_efficiency": 0.377621,
+        "bandwidth_proxy": 0.393092
+      }
+    ],
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "global_efficiency": {
+        "observed": 0.373742,
+        "nominal": 0.35,
+        "tolerance": 0.2,
+        "abs_error": 0.02374200000000004,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  }
+}

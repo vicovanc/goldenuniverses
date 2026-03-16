@@ -1,0 +1,76 @@
+{
+  "model": "bio_identifiability",
+  "diagnostic_type": "full_ode_proxy_jacobian",
+  "config": {
+    "theta0": [
+      0.5,
+      0.45,
+      0.4,
+      0.35,
+      0.3
+    ],
+    "eps": 1e-06
+  },
+  "assumptions": [
+    "Local identifiability approximated by finite-difference Jacobian around theta0.",
+    "Observable map acts as reduced-order proxy for coupled biology dynamics."
+  ],
+  "units": {
+    "theta": "normalized parameter scale"
+  },
+  "parameter_provenance": {
+    "source": "phase2 gate initialization"
+  },
+  "summary": {
+    "jacobian_rank": 5,
+    "jacobian_rank_full": 5,
+    "condition_number": 6.592478797758482,
+    "identifiable_full_rank": true
+  },
+  "diagnostics": {
+    "singular_values": [
+      0.8904418377455933,
+      0.7477632520469607,
+      0.6005122825518451,
+      0.4938854739257189,
+      0.13506935176619053
+    ],
+    "jacobian": [
+      [
+        0.7999999999674934,
+        0.18000000001627825,
+        -0.10000000000287557,
+        0.0,
+        0.0
+      ],
+      [
+        0.10000000000287557,
+        0.6056962283673695,
+        0.0,
+        0.17305606525575,
+        0.0
+      ],
+      [
+        0.04500000000406956,
+        0.05000000000143778,
+        0.5000000000143778,
+        0.0,
+        0.3999999999837467
+      ],
+      [
+        0.0,
+        0.0,
+        0.1599999999990498,
+        0.5999999999617422,
+        0.09999999997511999
+      ],
+      [
+        0.0,
+        0.20000000000575113,
+        0.0,
+        0.0,
+        -0.1883529067159273
+      ]
+    ]
+  }
+}

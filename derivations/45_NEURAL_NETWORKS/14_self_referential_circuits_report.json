@@ -1,0 +1,211 @@
+{
+  "model": "self_referential_circuits",
+  "config": {
+    "steps": 260,
+    "dt": 0.04,
+    "system_gain": 0.78,
+    "meta_gain": 0.66,
+    "self_ref_gain": 0.42,
+    "seed": 14
+  },
+  "summary": {
+    "mean_self_model_error": 0.14729,
+    "final_self_model_error": 0.15148,
+    "convergence_ratio_final_over_initial": 3.76034,
+    "self_reference_stable": true
+  },
+  "canonical_observables": {
+    "mean_self_model_error": 0.14729,
+    "self_reference_stable": true
+  },
+  "exploratory_metrics": {
+    "convergence_ratio_final_over_initial": 3.76034
+  },
+  "sampled_self_reference": [
+    {
+      "t_s": 0.0,
+      "system_state": 0.06944,
+      "meta_state": 0.029157,
+      "self_model_error": 0.040283
+    },
+    {
+      "t_s": 0.4,
+      "system_state": 0.849051,
+      "meta_state": 0.626427,
+      "self_model_error": 0.222623
+    },
+    {
+      "t_s": 0.8,
+      "system_state": 0.867073,
+      "meta_state": 0.654822,
+      "self_model_error": 0.212251
+    },
+    {
+      "t_s": 1.2,
+      "system_state": 0.674283,
+      "meta_state": 0.584834,
+      "self_model_error": 0.089449
+    },
+    {
+      "t_s": 1.6,
+      "system_state": -0.382674,
+      "meta_state": -0.164713,
+      "self_model_error": 0.217961
+    },
+    {
+      "t_s": 2.0,
+      "system_state": -0.849532,
+      "meta_state": -0.646695,
+      "self_model_error": 0.202838
+    },
+    {
+      "t_s": 2.4,
+      "system_state": -0.820783,
+      "meta_state": -0.647092,
+      "self_model_error": 0.173691
+    },
+    {
+      "t_s": 2.8,
+      "system_state": -0.164752,
+      "meta_state": -0.364055,
+      "self_model_error": 0.199303
+    },
+    {
+      "t_s": 3.2,
+      "system_state": 0.806458,
+      "meta_state": 0.617841,
+      "self_model_error": 0.188617
+    },
+    {
+      "t_s": 3.6,
+      "system_state": 0.822318,
+      "meta_state": 0.6513,
+      "self_model_error": 0.171019
+    },
+    {
+      "t_s": 4.0,
+      "system_state": 0.684954,
+      "meta_state": 0.596348,
+      "self_model_error": 0.088606
+    },
+    {
+      "t_s": 4.4,
+      "system_state": -0.451216,
+      "meta_state": -0.22564,
+      "self_model_error": 0.225575
+    },
+    {
+      "t_s": 4.8,
+      "system_state": -0.804538,
+      "meta_state": -0.642757,
+      "self_model_error": 0.161781
+    },
+    {
+      "t_s": 5.2,
+      "system_state": -0.771399,
+      "meta_state": -0.633876,
+      "self_model_error": 0.137524
+    },
+    {
+      "t_s": 5.6,
+      "system_state": -0.31493,
+      "meta_state": -0.43046,
+      "self_model_error": 0.115531
+    },
+    {
+      "t_s": 6.0,
+      "system_state": 0.702512,
+      "meta_state": 0.597943,
+      "self_model_error": 0.104569
+    },
+    {
+      "t_s": 6.4,
+      "system_state": 0.756158,
+      "meta_state": 0.631998,
+      "self_model_error": 0.124159
+    },
+    {
+      "t_s": 6.8,
+      "system_state": 0.683158,
+      "meta_state": 0.584767,
+      "self_model_error": 0.098391
+    },
+    {
+      "t_s": 7.2,
+      "system_state": -0.692661,
+      "meta_state": -0.432154,
+      "self_model_error": 0.260508
+    },
+    {
+      "t_s": 7.6,
+      "system_state": -0.83196,
+      "meta_state": -0.651449,
+      "self_model_error": 0.180511
+    },
+    {
+      "t_s": 8.0,
+      "system_state": -0.763671,
+      "meta_state": -0.622351,
+      "self_model_error": 0.14132
+    },
+    {
+      "t_s": 8.4,
+      "system_state": -0.164382,
+      "meta_state": -0.323523,
+      "self_model_error": 0.15914
+    },
+    {
+      "t_s": 8.8,
+      "system_state": 0.767111,
+      "meta_state": 0.614015,
+      "self_model_error": 0.153096
+    },
+    {
+      "t_s": 9.2,
+      "system_state": 0.858913,
+      "meta_state": 0.656945,
+      "self_model_error": 0.201968
+    },
+    {
+      "t_s": 9.6,
+      "system_state": 0.549459,
+      "meta_state": 0.551769,
+      "self_model_error": 0.00231
+    },
+    {
+      "t_s": 10.0,
+      "system_state": -0.44342,
+      "meta_state": -0.179719,
+      "self_model_error": 0.263701
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 14
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "mean_self_model_error": {
+        "observed": 0.14729,
+        "nominal": 0.15,
+        "tolerance": 0.1,
+        "abs_error": 0.00270999999999999,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

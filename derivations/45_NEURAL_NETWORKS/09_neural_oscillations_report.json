@@ -1,0 +1,67 @@
+{
+  "model": "neural_oscillations",
+  "config": {
+    "fs_hz": 500.0,
+    "duration_s": 8.0,
+    "seed": 90
+  },
+  "summary": {
+    "dominant_band": "theta",
+    "dominant_fraction": 0.391024,
+    "theta_alpha_ratio": 1.495885,
+    "gamma_fraction": 0.041574
+  },
+  "band_power_fraction": {
+    "delta": 0.207671,
+    "theta": 0.391024,
+    "alpha": 0.2614,
+    "beta": 0.098331,
+    "gamma": 0.041574
+  },
+  "diagnostics": {
+    "sensitivity_envelope": [
+      {
+        "theta_scale": 0.9,
+        "dominant_band": "theta",
+        "dominant_fraction": 0.34328
+      },
+      {
+        "theta_scale": 1.0,
+        "dominant_band": "theta",
+        "dominant_fraction": 0.39222
+      },
+      {
+        "theta_scale": 1.1,
+        "dominant_band": "theta",
+        "dominant_fraction": 0.438471
+      }
+    ],
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "dominant_fraction": {
+        "observed": 0.391024,
+        "nominal": 0.35,
+        "tolerance": 0.2,
+        "abs_error": 0.041024000000000005,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 90
+  }
+}

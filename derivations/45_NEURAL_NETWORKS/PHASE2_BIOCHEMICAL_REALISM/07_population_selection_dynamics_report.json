@@ -1,0 +1,47 @@
+{
+  "model": "population_selection_dynamics",
+  "config": {
+    "population": 300,
+    "steps": 180,
+    "seed": 707
+  },
+  "assumptions": [
+    "Fitness is weighted composite of mechanistic proto-cell traits.",
+    "Mutation process is Gaussian and unbiased."
+  ],
+  "units": {
+    "traits": "0..1 normalized"
+  },
+  "parameter_provenance": {
+    "source": "phase2 evolutionary initialization"
+  },
+  "summary": {
+    "initial_trait_mean": [
+      0.5048557238090333,
+      0.505168388982118,
+      0.5025244143280019,
+      0.4589772882281788
+    ],
+    "final_trait_mean": [
+      0.9099635113163898,
+      0.9096870925058415,
+      0.904532967953146,
+      0.9071620611268802
+    ],
+    "trait_gain": [
+      0.40510778750735643,
+      0.40451870352372343,
+      0.4020085536251441,
+      0.44818477289870146
+    ],
+    "net_adaptation_index": 0.4149549543887313
+  },
+  "diagnostics": {
+    "final_trait_std": [
+      0.07983697333327412,
+      0.06984449874698326,
+      0.09306801230111991,
+      0.07756033409210877
+    ]
+  }
+}

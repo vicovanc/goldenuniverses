@@ -1,0 +1,251 @@
+{
+  "model": "single_cell_neural_computation",
+  "config": {
+    "dt": 0.05,
+    "total_time": 120.0,
+    "adaptation_tau": 8.0,
+    "gain_signal": 1.8,
+    "gain_memory": 1.1,
+    "threshold": 0.15,
+    "baseline_tumble": 0.2,
+    "decision_noise": 0.03,
+    "k_bioelectric": 0.45
+  },
+  "summary": {
+    "average_run_fraction": 0.280316,
+    "final_run_probability": 0.262906,
+    "information_rate_bits_per_second": 0.624155,
+    "energy_power_proxy": 0.005734,
+    "adaptive_memory_timescale_s": 8.0
+  },
+  "sampled_trajectory": [
+    {
+      "t_s": 0.0,
+      "stimulus": 0.3,
+      "memory_state": 0.001875,
+      "membrane_proxy": 0.012066,
+      "run_probability": 0.261256,
+      "tumble_probability": 0.738744
+    },
+    {
+      "t_s": 5.0,
+      "stimulus": 0.4,
+      "memory_state": 0.16723,
+      "membrane_proxy": 0.357005,
+      "run_probability": 0.863969,
+      "tumble_probability": 0.136031
+    },
+    {
+      "t_s": 10.0,
+      "stimulus": 0.473205,
+      "memory_state": 0.296129,
+      "membrane_proxy": 0.279429,
+      "run_probability": 0.697525,
+      "tumble_probability": 0.302475
+    },
+    {
+      "t_s": 15.0,
+      "stimulus": 0.5,
+      "memory_state": 0.387584,
+      "membrane_proxy": 0.166337,
+      "run_probability": 0.515903,
+      "tumble_probability": 0.484097
+    },
+    {
+      "t_s": 20.0,
+      "stimulus": 0.473205,
+      "memory_state": 0.435014,
+      "membrane_proxy": 0.041131,
+      "run_probability": 0.347272,
+      "tumble_probability": 0.652728
+    },
+    {
+      "t_s": 25.0,
+      "stimulus": 0.4,
+      "memory_state": 0.435286,
+      "membrane_proxy": -0.082433,
+      "run_probability": 0.129695,
+      "tumble_probability": 0.870305
+    },
+    {
+      "t_s": 30.0,
+      "stimulus": 0.3,
+      "memory_state": 0.393441,
+      "membrane_proxy": -0.183098,
+      "run_probability": 0.052742,
+      "tumble_probability": 0.947258
+    },
+    {
+      "t_s": 35.0,
+      "stimulus": 0.2,
+      "memory_state": 0.323425,
+      "membrane_proxy": -0.240326,
+      "run_probability": 0.04768,
+      "tumble_probability": 0.95232
+    },
+    {
+      "t_s": 40.0,
+      "stimulus": 0.126795,
+      "memory_state": 0.245458,
+      "membrane_proxy": -0.242229,
+      "run_probability": 0.048953,
+      "tumble_probability": 0.951047
+    },
+    {
+      "t_s": 45.0,
+      "stimulus": 0.100001,
+      "memory_state": 0.181211,
+      "membrane_proxy": -0.190136,
+      "run_probability": 0.050831,
+      "tumble_probability": 0.949169
+    },
+    {
+      "t_s": 50.0,
+      "stimulus": 0.126813,
+      "memory_state": 0.148319,
+      "membrane_proxy": -0.09898,
+      "run_probability": 0.114272,
+      "tumble_probability": 0.885728
+    },
+    {
+      "t_s": 55.0,
+      "stimulus": 0.200182,
+      "memory_state": 0.155849,
+      "membrane_proxy": 0.006379,
+      "run_probability": 0.286915,
+      "tumble_probability": 0.713085
+    },
+    {
+      "t_s": 60.0,
+      "stimulus": 0.301353,
+      "memory_state": 0.202132,
+      "membrane_proxy": 0.098059,
+      "run_probability": 0.371364,
+      "tumble_probability": 0.628636
+    },
+    {
+      "t_s": 65.0,
+      "stimulus": 0.407388,
+      "memory_state": 0.276066,
+      "membrane_proxy": 0.154324,
+      "run_probability": 0.469301,
+      "tumble_probability": 0.530699
+    },
+    {
+      "t_s": 70.0,
+      "stimulus": 0.502835,
+      "memory_state": 0.362509,
+      "membrane_proxy": 0.169405,
+      "run_probability": 0.594019,
+      "tumble_probability": 0.405981
+    },
+    {
+      "t_s": 75.0,
+      "stimulus": 0.587273,
+      "memory_state": 0.450076,
+      "membrane_proxy": 0.156908,
+      "run_probability": 0.51356,
+      "tumble_probability": 0.48644
+    },
+    {
+      "t_s": 80.0,
+      "stimulus": 0.661998,
+      "memory_state": 0.533985,
+      "membrane_proxy": 0.132869,
+      "run_probability": 0.410369,
+      "tumble_probability": 0.589631
+    },
+    {
+      "t_s": 85.0,
+      "stimulus": 0.699949,
+      "memory_state": 0.605872,
+      "membrane_proxy": 0.083601,
+      "run_probability": 0.405335,
+      "tumble_probability": 0.594665
+    },
+    {
+      "t_s": 90.0,
+      "stimulus": 0.65,
+      "memory_state": 0.640893,
+      "membrane_proxy": -0.029945,
+      "run_probability": 0.215844,
+      "tumble_probability": 0.784156
+    },
+    {
+      "t_s": 95.0,
+      "stimulus": 0.499949,
+      "memory_state": 0.609251,
+      "membrane_proxy": -0.204723,
+      "run_probability": 0.045432,
+      "tumble_probability": 0.954568
+    },
+    {
+      "t_s": 100.0,
+      "stimulus": 0.315588,
+      "memory_state": 0.509908,
+      "membrane_proxy": -0.356556,
+      "run_probability": 0.015531,
+      "tumble_probability": 0.984469
+    },
+    {
+      "t_s": 105.0,
+      "stimulus": 0.187273,
+      "memory_state": 0.382661,
+      "membrane_proxy": -0.391923,
+      "run_probability": 0.016256,
+      "tumble_probability": 0.983744
+    },
+    {
+      "t_s": 110.0,
+      "stimulus": 0.156425,
+      "memory_state": 0.279919,
+      "membrane_proxy": -0.299212,
+      "run_probability": 0.02676,
+      "tumble_probability": 0.97324
+    },
+    {
+      "t_s": 115.0,
+      "stimulus": 0.207388,
+      "memory_state": 0.233189,
+      "membrane_proxy": -0.142696,
+      "run_probability": 0.071161,
+      "tumble_probability": 0.928839
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": "deterministic_by_construction"
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "information_rate_bits_per_second": {
+        "observed": 0.624155,
+        "nominal": 0.6,
+        "tolerance": 0.35,
+        "abs_error": 0.024155000000000038,
+        "passed": true
+      },
+      "energy_power_proxy": {
+        "observed": 0.005734,
+        "nominal": 0.006,
+        "tolerance": 0.004,
+        "abs_error": 0.00026599999999999974,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

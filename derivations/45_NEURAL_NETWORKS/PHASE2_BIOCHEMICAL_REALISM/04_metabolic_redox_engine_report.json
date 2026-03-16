@@ -1,0 +1,33 @@
+{
+  "model": "metabolic_redox_engine",
+  "config": {
+    "dt": 0.01,
+    "steps": 15000
+  },
+  "assumptions": [
+    "Minimal ETC-proton-motive ATP coupling model.",
+    "NADH production source represented by constant feed term."
+  ],
+  "units": {
+    "metabolites": "mM",
+    "dPsi": "mV",
+    "time": "s"
+  },
+  "parameter_provenance": {
+    "source": "Phase2 metabolic initialization constants"
+  },
+  "summary": {
+    "final_atp": 1.2781254582033466,
+    "final_nadh": 0.44852498411112796,
+    "final_dPsi_mV": 27.404637605848993,
+    "energy_charge": 0.42604181940111563,
+    "atp_turnover_proxy": 0.007787522894361251
+  },
+  "diagnostics": {
+    "state_nonnegative_metabolites": true,
+    "dPsi_range_mV": [
+      27.404637605848993,
+      110.0
+    ]
+  }
+}

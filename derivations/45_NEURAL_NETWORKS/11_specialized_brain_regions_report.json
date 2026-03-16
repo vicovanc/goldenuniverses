@@ -1,0 +1,114 @@
+{
+  "model": "specialized_brain_regions",
+  "config": {
+    "seed": 11,
+    "n_tasks": 6
+  },
+  "summary": {
+    "global_task_efficiency": 0.921719,
+    "cross_task_tradeoff_std": 0.037855,
+    "most_specialized_region": "sensory"
+  },
+  "region_summary": {
+    "sensory": {
+      "specialization_index": 0.417814,
+      "mean_gain": 0.533553,
+      "max_gain": 0.951368
+    },
+    "associative": {
+      "specialization_index": 0.215653,
+      "mean_gain": 0.694222,
+      "max_gain": 0.909875
+    },
+    "memory": {
+      "specialization_index": 0.284648,
+      "mean_gain": 0.668332,
+      "max_gain": 0.952981
+    },
+    "motor": {
+      "specialization_index": 0.395693,
+      "mean_gain": 0.537484,
+      "max_gain": 0.933177
+    }
+  },
+  "region_task_gain_matrix": [
+    [
+      0.951368,
+      0.90439,
+      0.398989,
+      0.279588,
+      0.438081,
+      0.228905
+    ],
+    [
+      0.572789,
+      0.697757,
+      0.909875,
+      0.746107,
+      0.662662,
+      0.576143
+    ],
+    [
+      0.327215,
+      0.414537,
+      0.704836,
+      0.878524,
+      0.952981,
+      0.731899
+    ],
+    [
+      0.393889,
+      0.527428,
+      0.315186,
+      0.419425,
+      0.635799,
+      0.933177
+    ]
+  ],
+  "diagnostics": {
+    "sensitivity_envelope": [
+      {
+        "noise_scale": 0.8,
+        "global_task_efficiency": 0.882974,
+        "most_specialized_region": "motor"
+      },
+      {
+        "noise_scale": 1.0,
+        "global_task_efficiency": 0.912218,
+        "most_specialized_region": "sensory"
+      },
+      {
+        "noise_scale": 1.2,
+        "global_task_efficiency": 0.907624,
+        "most_specialized_region": "motor"
+      }
+    ],
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "global_task_efficiency": {
+        "observed": 0.921719,
+        "nominal": 0.9,
+        "tolerance": 0.1,
+        "abs_error": 0.021718999999999933,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  },
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 11
+  }
+}

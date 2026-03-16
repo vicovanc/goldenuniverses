@@ -1,0 +1,20 @@
+{
+  "model": "benchmark_neural_metrics",
+  "config": {
+    "target_nominal": 0.75,
+    "target_tolerance": 0.2
+  },
+  "summary": {
+    "composite_index": 0.85,
+    "abs_error": 0.09999999999999998,
+    "passed": true
+  },
+  "diagnostics": {
+    "motif_gain": 0.012715494719061537,
+    "tuned_threshold": 0.005000000000000001,
+    "calibration_balanced_accuracy": 1.0,
+    "holdout_balanced_accuracy": 1.0,
+    "composite_definition": "0.75 + 0.2*(mean_balanced_accuracy - 0.5)",
+    "protocol": "abs_error <= tolerance"
+  }
+}

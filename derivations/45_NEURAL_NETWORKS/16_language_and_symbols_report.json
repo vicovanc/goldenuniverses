@@ -1,0 +1,70 @@
+{
+  "model": "language_and_symbols",
+  "config": {
+    "dim": 12,
+    "seed": 16
+  },
+  "summary": {
+    "compositionality_score": 0.709851,
+    "symbolic_consistency_score": 0.836358,
+    "semantic_balance": 0.163642
+  },
+  "canonical_observables": {
+    "compositionality_score": 0.709851,
+    "symbolic_consistency_score": 0.836358
+  },
+  "exploratory_metrics": {
+    "semantic_balance": 0.163642
+  },
+  "symbol_similarity_metrics": [
+    {
+      "pair": "sim_self_memory",
+      "cosine_similarity": 0.046459
+    },
+    {
+      "pair": "sim_self_selfmemory",
+      "cosine_similarity": 0.839998
+    },
+    {
+      "pair": "sim_world_action",
+      "cosine_similarity": 0.053113
+    },
+    {
+      "pair": "sim_narrative_self",
+      "cosine_similarity": 0.743345
+    },
+    {
+      "pair": "sim_narrative_world",
+      "cosine_similarity": 0.579703
+    }
+  ],
+  "assumptions": [
+    "Mechanistic redo contract: explicit dynamics and deterministic execution.",
+    "Status promotion is policy-gated and benchmark-aware."
+  ],
+  "units": {},
+  "parameter_provenance": {
+    "source": "neural_redo_mechanistic_v1",
+    "deterministic_seed": 16
+  },
+  "diagnostics": {
+    "status_semantics": {
+      "derived_label": "DERIVED",
+      "provisional_label": "PROVISIONAL",
+      "policy": "benchmark_required_for_claim_promotion"
+    },
+    "benchmark_hooks": {
+      "symbolic_consistency_score": {
+        "observed": 0.836358,
+        "nominal": 0.8,
+        "tolerance": 0.2,
+        "abs_error": 0.036358,
+        "passed": true
+      }
+    },
+    "schema_contract": {
+      "required_fields_present": true,
+      "contract_version": "neural_redo_v1"
+    }
+  }
+}

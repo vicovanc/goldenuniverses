@@ -1,0 +1,16 @@
+{
+  "model": "benchmark_metabolism",
+  "config": {
+    "target_nominal": 1.0,
+    "target_tolerance": 0.8
+  },
+  "summary": {
+    "observed_atp_turnover_proxy": 0.7402340548386236,
+    "abs_error": 0.2597659451613764,
+    "passed": true
+  },
+  "diagnostics": {
+    "protocol": "abs_error <= tolerance",
+    "observable_definition": "final_atp / (final_atp + final_nadh)"
+  }
+}
