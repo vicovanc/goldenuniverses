@@ -100,12 +100,6 @@ export const SIDEBAR_SECTIONS: SidebarSection[] = [
         tooltip: 'Complete Lagrangian formulation of the theory',
       },
       {
-        id: 'theory-field-equations',
-        label: 'Field Equations',
-        path: '/theory/field-equations',
-        tooltip: 'Fundamental field equations and their solutions',
-      },
-      {
         id: 'theory-symmetry-breaking',
         label: 'Symmetry Breaking',
         path: '/theory/symmetry-breaking',

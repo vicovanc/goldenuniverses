@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import { lagrangianTerms } from '@/data/theoryLaws';
 import { LagrangianTerm } from '@/types/theory';
-import EquationRenderer from './EquationRenderer';
 
 interface LagrangianExplorerProps {
   onNavigateToLaw?: (lawId: number) => void;
@@ -51,7 +54,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
       <div className="total-lagrangian">
         <h3>Total Master Lagrangian</h3>
         <div className="equation-display">
-          <EquationRenderer equation="L_M = \\int d^4x \\, [L_{\\Omega} + L_X + L_{\\text{int}} + L_{\\text{gauge}}]" displayMode={true} />
+          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+            {`$$L_M = \\int d^4x \\, [L_{\\Omega} + L_X + L_{\\text{int}} + L_{\\text{gauge}}]$$`}
+          </ReactMarkdown>
         </div>
         <p className="equation-note">
           The complete action integrates over all spacetime, incorporating substrate dynamics, cosmic driver evolution,
@@ -63,10 +68,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section">
             <h5>L_Ω (Substrate)</h5>
-            <EquationRenderer
-              equation="L_{\\Omega} = L_{\\Omega,\\text{kin}} - V_{\\text{full}\\Omega}(\\Omega, X) + L_{\\text{phase-driver}}(\\Omega, X) + L_{\\text{recursive-mimic}}(\\Omega, X)"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_{\\Omega} = L_{\\Omega,\\text{kin}} - V_{\\text{full}\\Omega}(\\Omega, X) + L_{\\text{phase-driver}}(\\Omega, X) + L_{\\text{recursive-mimic}}(\\Omega, X)$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Full kinetic terms + potential with X-dependent coefficients + phase-locking driver + recursive memory
             </p>
@@ -74,10 +78,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section">
             <h5>L_X (Cosmic Driver)</h5>
-            <EquationRenderer
-              equation="L_X = \\frac{1}{2}(\\partial_\\mu X)^2 - V_X(X)"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_X = \\frac{1}{2}(\\partial_\\mu X)^2 - V_X(X)$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Standard scalar field kinetic term minus self-potential
             </p>
@@ -85,10 +88,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section">
             <h5>L_int (Interaction)</h5>
-            <EquationRenderer
-              equation="L_{\\text{int}} = -g_{\\Omega X}(X) \\cdot S_{\\text{coupling}}(\\Omega) \\cdot X"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_{\\text{int}} = -g_{\\Omega X}(X) \\cdot S_{\\text{coupling}}(\\Omega) \\cdot X$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Direct coupling between substrate and cosmic driver fields
             </p>
@@ -96,10 +98,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section">
             <h5>L_gauge (Gauge Fields)</h5>
-            <EquationRenderer
-              equation="L_{\\text{gauge}} = -\\frac{1}{4}\\sum_b F^b_{\\mu\\nu} F^{b\\mu\\nu}"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_{\\text{gauge}} = -\\frac{1}{4}\\sum_b F^b_{\\mu\\nu} F^{b\\mu\\nu}$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Yang-Mills kinetic terms for G_prim gauge bosons
             </p>
@@ -107,10 +108,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section specialized-term">
             <h5>L_lock (Angular Modulation)</h5>
-            <EquationRenderer
-              equation="L_{\\text{lock}} = -\\kappa_p(X) \\cdot S_{\\text{phase}}(\\Omega) \\cdot (\\partial_t \\arg \\Omega + \\omega_{\\text{target}})^2"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_{\\text{lock}} = -\\kappa_p(X) \\cdot S_{\\text{phase}}(\\Omega) \\cdot (\\partial_t \\arg \\Omega + \\omega_{\\text{target}})^2$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Phase-locking mechanism that drives angular oscillations to target frequency
             </p>
@@ -118,10 +118,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
 
           <div className="breakdown-section specialized-term">
             <h5>L_mem (Memory Energy)</h5>
-            <EquationRenderer
-              equation="L_{\\text{mem}} = -\\lambda_{\\text{rec}}(X) \\cdot \\int d\\tau \\, G(t,\\tau) \\cdot H[\\Omega(\\tau)]"
-              displayMode={true}
-            />
+            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+              {`$$L_{\\text{mem}} = -\\lambda_{\\text{rec}}(X) \\cdot \\int d\\tau \\, G(t,\\tau) \\cdot H[\\Omega(\\tau)]$$`}
+            </ReactMarkdown>
             <p className="breakdown-description">
               Non-local memory integral with exponential kernel G(t,τ) encoding field history
             </p>
@@ -142,7 +141,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
             >
               <div className="term-header" onClick={() => toggleExpanded(term.symbol)}>
                 <div className="term-symbol">
-                  <EquationRenderer equation={term.symbol} displayMode={false} allowCopy={false} allowZoom={false} />
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                    {`$${term.symbol}$`}
+                  </ReactMarkdown>
                 </div>
                 <div className="term-name-section">
                   <h4 className="term-name">{term.name}</h4>
@@ -157,7 +158,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
                 <div className="term-details">
                   <div className="term-equation">
                     <h5>Mathematical Form</h5>
-                    <EquationRenderer equation={term.equation} displayMode={true} />
+                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                      {`$$${term.equation}$$`}
+                    </ReactMarkdown>
                   </div>
 
                   {term.components && term.components.length > 0 && (
@@ -168,7 +171,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
                           <h6>{component.name}</h6>
                           <p className="component-description">{component.description}</p>
                           <div className="component-equation">
-                            <EquationRenderer equation={component.equation} displayMode={true} />
+                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                              {`$$${component.equation}$$`}
+                            </ReactMarkdown>
                           </div>
                         </div>
                       ))}
@@ -318,7 +323,9 @@ const LagrangianExplorer: React.FC<LagrangianExplorerProps> = ({ onNavigateToLaw
               {selectedTerm.symbol}: {selectedTerm.name}
             </h3>
             <div className="modal-equation">
-              <EquationRenderer equation={selectedTerm.equation} displayMode={true} />
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                {`$$${selectedTerm.equation}$$`}
+              </ReactMarkdown>
             </div>
             <p className="modal-description">{selectedTerm.description}</p>
 

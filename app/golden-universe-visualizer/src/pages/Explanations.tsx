@@ -338,7 +338,9 @@ const Explanations: React.FC = () => {
 
               {law.formula && (
                 <div className="law-formula">
-                  <EquationRenderer equation={law.formula} />
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                    {`$$${law.formula}$$`}
+                  </ReactMarkdown>
                 </div>
               )}
 
@@ -369,20 +371,26 @@ const Explanations: React.FC = () => {
       </p>
 
       <div className="lagrangian-equation">
-        <EquationRenderer equation="L_{total} = L_{\\Omega} + L_X + L_{\\text{int}} + L_{\\text{gauge}} + L_{\\text{lock}} + L_{\\text{mem}}" displayMode={true} />
+        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+          {`$$L_{\\text{total}} = L_{\\Omega} + L_X + L_{\\text{int}} + L_{\\text{gauge}} + L_{\\text{lock}} + L_{\\text{mem}}$$`}
+        </ReactMarkdown>
       </div>
 
       <div className="lagrangian-terms">
         {lagrangianTerms.map((term, index) => (
           <div key={index} className="lagrangian-term-card">
             <div className="term-header">
-              <span className="term-symbol">{term.symbol}</span>
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                {`$${term.symbol}$`}
+              </ReactMarkdown>
               <h3>{term.name}</h3>
             </div>
             <p className="term-description">{term.description}</p>
 
             <div className="term-equation">
-              <EquationRenderer equation={term.equation} displayMode={true} />
+              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                {`$$${term.equation}$$`}
+              </ReactMarkdown>
             </div>
 
             {term.components && term.components.length > 0 && (
@@ -392,7 +400,9 @@ const Explanations: React.FC = () => {
                   <div key={idx} className="component">
                     <h5>{comp.name}</h5>
                     <p>{comp.description}</p>
-                    <EquationRenderer equation={comp.equation} displayMode={true} />
+                    <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                      {`$$${comp.equation}$$`}
+                    </ReactMarkdown>
                   </div>
                 ))}
               </div>
@@ -641,7 +651,9 @@ const Explanations: React.FC = () => {
           of the soliton configuration at epoch N=111, with geometric factor C_e = 1.050774.
         </p>
         <div className="formula-box">
-          <EquationRenderer equation="m_e = \frac{M_P c^2 \cdot 2\pi C_e}{\phi^{111}}" />
+          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+            {`$$m_e = \\frac{M_P c^2 \\cdot 2\\pi C_e}{\\phi^{111}}$$`}
+          </ReactMarkdown>
         </div>
       </div>
 
@@ -652,7 +664,9 @@ const Explanations: React.FC = () => {
           and the substrate field Ω. Newton's gravitational constant is derived from first principles:
         </p>
         <div className="formula-box">
-          <EquationRenderer equation="G = \frac{\hbar c}{M_P^2} \cdot \phi^{-34} \cdot e^{2\pi/\phi}" />
+          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+            {`$$G = \\frac{\\hbar c}{M_P^2} \\cdot \\phi^{-34} \\cdot e^{2\\pi/\\phi}$$`}
+          </ReactMarkdown>
         </div>
       </div>
 
@@ -664,7 +678,9 @@ const Explanations: React.FC = () => {
           break quantum superposition. The memory integral takes the form:
         </p>
         <div className="formula-box">
-          <EquationRenderer equation="L_{mem} = -\lambda_{rec}(X) \cdot \int_{\tau_0}^t d\tau \, G(X; t,\tau) \cdot H[\Omega(x,\tau)]" />
+          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+            {`$$L_{\\text{mem}} = -\\lambda_{\\text{rec}}(X) \\cdot \\int_{\\tau_0}^t d\\tau \\, G(X; t,\\tau) \\cdot H[\\Omega(x,\\tau)]$$`}
+          </ReactMarkdown>
         </div>
       </div>
 
@@ -710,6 +726,29 @@ const Explanations: React.FC = () => {
             <p>Explore all 39 fundamental laws, 6 Lagrangian terms, and comprehensive theoretical framework</p>
           </div>
 
+          {/* Featured Explanations - now first */}
+          <div className="explanation-topics">
+            <h2>Featured Explanations</h2>
+            <div className="topics-grid">
+              <div className="topic-card" onClick={() => navigate('/explanations/consciousness')}>
+                <h3>🧘 Consciousness</h3>
+                <p>How consciousness emerges from the quantum substrate</p>
+              </div>
+              <div className="topic-card" onClick={() => navigate('/explanations/gravity')}>
+                <h3>🌍 What is Gravity?</h3>
+                <p>Understanding gravity through the Golden Universe framework</p>
+              </div>
+              <div className="topic-card" onClick={() => navigate('/explanations/electron')}>
+                <h3>⚛️ The Electron</h3>
+                <p>Deep dive into the nature of the electron</p>
+              </div>
+              <div className="topic-card" onClick={() => navigate('/explanations/proton')}>
+                <h3>⚡ The Proton</h3>
+                <p>Understanding proton structure and properties</p>
+              </div>
+            </div>
+          </div>
+
           <div className="categories-grid">
             {categories.map((cat) => (
               <div
@@ -734,29 +773,6 @@ const Explanations: React.FC = () => {
                 <p>{cat.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Add quick links to individual explanation topics */}
-          <div className="explanation-topics">
-            <h2>Featured Explanations</h2>
-            <div className="topics-grid">
-              <div className="topic-card" onClick={() => navigate('/explanations/consciousness')}>
-                <h3>🧘 Consciousness</h3>
-                <p>How consciousness emerges from the quantum substrate</p>
-              </div>
-              <div className="topic-card" onClick={() => navigate('/explanations/gravity')}>
-                <h3>🌍 What is Gravity?</h3>
-                <p>Understanding gravity through the Golden Universe framework</p>
-              </div>
-              <div className="topic-card" onClick={() => navigate('/explanations/electron')}>
-                <h3>⚛️ The Electron</h3>
-                <p>Deep dive into the nature of the electron</p>
-              </div>
-              <div className="topic-card" onClick={() => navigate('/explanations/proton')}>
-                <h3>⚡ The Proton</h3>
-                <p>Understanding proton structure and properties</p>
-              </div>
-            </div>
           </div>
         </div>
       );

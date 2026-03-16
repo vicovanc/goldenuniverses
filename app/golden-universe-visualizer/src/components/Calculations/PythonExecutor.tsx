@@ -93,16 +93,22 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
       } else {
         setOutput('No output available');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Python execution error:', err);
 
       // Parse the error to provide a friendly message
-      const errorMessage = err instanceof Error ? err.message : String(err);
+      const errorMessage = err instanceof Error ? err.message : (err?.error || String(err));
+      const errorString = String(err); // Full error string including stack trace
+      const hint = err?.hint; // Worker may provide a hint
 
-      // Check for subprocess/process errors
+      // Check for subprocess/process errors (check both message and full string)
       if (errorMessage.includes('subprocess') ||
           errorMessage.includes('emscripten does not support processes') ||
-          errorMessage.includes('Subprocess detected')) {
+          errorMessage.includes('Subprocess detected') ||
+          errorString.includes('subprocess') ||
+          errorString.includes('emscripten does not support processes') ||
+          errorString.includes('OSError: [Errno 138]') ||
+          hint?.includes('subprocess')) {
         setError(`⚙️ This script uses subprocesses which are not supported in the browser.\n\n` +
           `This script is an orchestrator that runs other Python scripts, which requires:\n` +
           `• A full Python environment\n` +
