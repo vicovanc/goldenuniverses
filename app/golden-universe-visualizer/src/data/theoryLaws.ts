@@ -600,22 +600,22 @@ export const lagrangianTerms: LagrangianTerm[] = [
     components: [
       {
         name: 'Kinetic Terms',
-        equation: 'L_{Ω,kin} = Σ_s Tr[(D_μ Ω_s)† (D^μ Ω_s)] + Σ_f Ω̄_f (iγ^μ D_μ) Ω_f',
+        equation: 'L_{\\Omega,\\text{kin}} = \\sum_s \\text{Tr}[(D_\\mu \\Omega_s)^\\dagger (D^\\mu \\Omega_s)] + \\sum_f \\bar{\\Omega}_f (i\\gamma^\\mu D_\\mu) \\Omega_f',
         description: 'Gauge-covariant kinetic terms for scalar and fermion fields',
       },
       {
         name: 'Master Potential',
-        equation: 'V_{fullΩ} = Σ_i m̃_i²(X) S_{2,i}(Ω) + Σ_j λ̃_j(X) S_{4,j}(Ω) + ...',
+        equation: 'V_{\\text{full}\\Omega} = \\sum_i \\tilde{m}_i^2(X) S_{2,i}(\\Omega) + \\sum_j \\tilde{\\lambda}_j(X) S_{4,j}(\\Omega) + \\ldots',
         description: 'G_prim-invariant potential with X-dependent coefficients',
       },
       {
         name: 'Phase Driver',
-        equation: 'L_{phase_driver} = −κ_p(X) · S_{phase_couple}(Ω) · (ω_eff + ω_target(X))²',
+        equation: 'L_{\\text{phase\\_driver}} = -\\kappa_p(X) \\cdot S_{\\text{phase\\_couple}}(\\Omega) \\cdot (\\omega_{\\text{eff}} + \\omega_{\\text{target}}(X))^2',
         description: 'Enforces target frequency via gauge-invariant phase coupling',
       },
       {
         name: 'Recursive Memory',
-        equation: 'L_{recursive_mimic} = −λ_rec(X) · S_{mem_couple}(Ω) · ∫ G(X;t,τ) H[Ω(τ)] dτ',
+        equation: 'L_{\\text{recursive\\_mimic}} = -\\lambda_{\\text{rec}}(X) \\cdot S_{\\text{mem\\_couple}}(\\Omega) \\cdot \\int G(X;t,\\tau) H[\\Omega(\\tau)] d\\tau',
         description: 'Non-local memory integral with exponential kernel',
       },
     ],

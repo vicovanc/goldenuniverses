@@ -19,12 +19,6 @@ interface ExplanationCategory {
 
 const categories: ExplanationCategory[] = [
   {
-    id: 'documents',
-    title: 'Complete Theory Papers',
-    icon: '📚',
-    description: 'Comprehensive theoretical papers and documentation'
-  },
-  {
     id: 'overview',
     title: 'Theory Overview',
     icon: '🌌',
