@@ -610,12 +610,12 @@ export const lagrangianTerms: LagrangianTerm[] = [
       },
       {
         name: 'Phase Driver',
-        equation: 'L_{\\text{phase\\_driver}} = -\\kappa_p(X) \\cdot S_{\\text{phase\\_couple}}(\\Omega) \\cdot (\\omega_{\\text{eff}} + \\omega_{\\text{target}}(X))^2',
+        equation: 'L_{\\text{phase-driver}} = -\\kappa_p(X) \\cdot S_{\\text{phase-couple}}(\\Omega) \\cdot (\\omega_{\\text{eff}} + \\omega_{\\text{target}}(X))^2',
         description: 'Enforces target frequency via gauge-invariant phase coupling',
       },
       {
         name: 'Recursive Memory',
-        equation: 'L_{\\text{recursive\\_mimic}} = -\\lambda_{\\text{rec}}(X) \\cdot S_{\\text{mem\\_couple}}(\\Omega) \\cdot \\int G(X;t,\\tau) H[\\Omega(\\tau)] d\\tau',
+        equation: 'L_{\\text{recursive-mimic}} = -\\lambda_{\\text{rec}}(X) \\cdot S_{\\text{mem-couple}}(\\Omega) \\cdot \\int G(X;t,\\tau) H[\\Omega(\\tau)] d\\tau',
         description: 'Non-local memory integral with exponential kernel',
       },
     ],
