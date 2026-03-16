@@ -1,119 +1,119 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
-03_run_particle_masses_orchestrator.py
+STATUS: canonical_integration
+ROLE: Orchestrator/reporting entrypoint for 03_PARTICLE_MASSES.
 
-Particle Mass Calculator - Golden Universe Theory
-This is a simplified test version for the Python executor.
+This script does not claim first-principles closure for all sectors. It runs:
+1) local legacy mass report for leptons (01_all_particle_masses.py), and
+2) canonical quark derivation script in 31_QUARK_MASSES.
+
+Each section prints provenance so outputs are not misattributed.
 """
 
-import math
+from __future__ import annotations
 
-# Golden ratio
-phi = (1 + math.sqrt(5)) / 2
+import re
+import subprocess
+from pathlib import Path
+from typing import Dict, List, Tuple
 
-# Planck mass in GeV
-M_P = 1.22091e19
 
-def calculate_electron_mass():
-    """Calculate electron mass using Golden Universe theory"""
-    N = 111  # Electron epoch
-    X_111 = M_P * phi**(-111)  # Cosmic clock at epoch 111
-    C_e = 1.050774  # Geometric coupling factor
+def _project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
 
-    m_e_GeV = X_111 * C_e
-    m_e_MeV = m_e_GeV * 1000  # Convert to MeV
 
-    experimental = 0.51099895  # MeV
-    error_ppm = abs(m_e_MeV - experimental) / experimental * 1e6
+def _run_python_script(script_path: Path, timeout_s: int = 240) -> Tuple[int, str]:
+    cmd = ["python3", str(script_path)]
+    proc = subprocess.run(
+        cmd,
+        cwd=str(_project_root()),
+        capture_output=True,
+        text=True,
+        timeout=timeout_s,
+        check=False,
+    )
+    output = (proc.stdout or "") + ("\n" + proc.stderr if proc.stderr else "")
+    return proc.returncode, output
 
-    return {
-        'particle': 'Electron',
-        'theoretical_MeV': m_e_MeV,
-        'experimental_MeV': experimental,
-        'error_ppm': error_ppm,
-        'epoch': N
-    }
 
-def calculate_muon_mass():
-    """Calculate muon mass using pattern-2 enhancement"""
-    electron = calculate_electron_mass()
-    ratio = 206.768269  # Muon/electron mass ratio
+def _extract_lepton_errors(raw_output: str) -> Dict[str, str]:
+    """
+    Parse lepton error lines from 01_all_particle_masses.py output.
+    """
+    result: Dict[str, str] = {}
+    lines = raw_output.splitlines()
+    particles = ["ELECTRON", "MUON", "TAU"]
+    for idx, line in enumerate(lines):
+        clean = line.strip()
+        if clean in {f"{p}:" for p in particles}:
+            name = clean[:-1].lower()
+            window = lines[idx : idx + 12]
+            for w in window:
+                if "Error:" in w:
+                    result[name] = w.strip().replace("Error:", "").strip()
+                    break
+    return result
 
-    m_mu_MeV = electron['theoretical_MeV'] * ratio
-    experimental = 105.658  # MeV
-    error_ppm = abs(m_mu_MeV - experimental) / experimental * 1e6
 
-    return {
-        'particle': 'Muon',
-        'theoretical_MeV': m_mu_MeV,
-        'experimental_MeV': experimental,
-        'error_ppm': error_ppm,
-        'epoch': 99
-    }
+def _extract_quark_summary_tail(raw_output: str, max_lines: int = 16) -> List[str]:
+    """
+    Keep a concise tail for canonical quark script output display.
+    """
+    lines = [ln.rstrip() for ln in raw_output.splitlines() if ln.strip()]
+    if not lines:
+        return ["(no output captured)"]
+    return lines[-max_lines:]
 
-def calculate_tau_mass():
-    """Calculate tau mass using pattern-3 enhancement"""
-    electron = calculate_electron_mass()
-    ratio = 3477.48  # Tau/electron mass ratio
 
-    m_tau_MeV = electron['theoretical_MeV'] * ratio
-    experimental = 1776.86  # MeV
-    error_ppm = abs(m_tau_MeV - experimental) / experimental * 1e6
+def main() -> None:
+    root = _project_root()
+    local_01 = root / "derivations" / "03_PARTICLE_MASSES" / "01_all_particle_masses.py"
+    canonical_31 = (
+        root / "derivations" / "31_QUARK_MASSES" / "25_corrected_quark_derivations.py"
+    )
 
-    return {
-        'particle': 'Tau',
-        'theoretical_MeV': m_tau_MeV,
-        'experimental_MeV': experimental,
-        'error_ppm': error_ppm,
-        'epoch': 94
-    }
+    print("=" * 88)
+    print("03_PARTICLE_MASSES ORCHESTRATOR")
+    print("Status model: 0 free params + 1 boundary condition (m_e) for mass closure wording")
+    print("=" * 88)
 
-def calculate_proton_mass():
-    """Calculate proton mass from QCD dynamics"""
-    m_pion = 139.57  # Pion mass in MeV
-    m_p_MeV = 3 * m_pion * math.pi * 0.714  # QCD factor
-    experimental = 938.272  # MeV
-    error_ppm = abs(m_p_MeV - experimental) / experimental * 1e6
+    print("\n[SECTION A] LOCAL LEPTON REPORT (legacy-local provenance)")
+    print(f"Source: {local_01}")
+    rc_01, out_01 = _run_python_script(local_01)
+    print(f"Exit code: {rc_01}")
+    if rc_01 != 0:
+        print("Result: FAILED")
+    else:
+        lepton_errors = _extract_lepton_errors(out_01)
+        if lepton_errors:
+            print("Parsed lepton error summary:")
+            for key in ("electron", "muon", "tau"):
+                val = lepton_errors.get(key, "not found")
+                print(f"  - {key}: {val}")
+        else:
+            print("Parsed lepton error summary: unavailable (format changed).")
 
-    return {
-        'particle': 'Proton',
-        'theoretical_MeV': m_p_MeV,
-        'experimental_MeV': experimental,
-        'error_ppm': error_ppm,
-        'epoch': 95
-    }
+    print("\n[SECTION B] CANONICAL QUARK REPORT (31_QUARK_MASSES provenance)")
+    print(f"Source: {canonical_31}")
+    if not canonical_31.exists():
+        print("Result: SKIPPED (canonical script not found).")
+    else:
+        rc_31, out_31 = _run_python_script(canonical_31)
+        print(f"Exit code: {rc_31}")
+        if rc_31 != 0:
+            print("Result: FAILED")
+        else:
+            print("Canonical output tail:")
+            for ln in _extract_quark_summary_tail(out_31):
+                print(f"  {ln}")
 
-def main():
-    """Run all particle mass calculations"""
-    print("=" * 60)
-    print("GOLDEN UNIVERSE - PARTICLE MASS CALCULATIONS")
-    print("=" * 60)
-    print()
+    print("\n[SECTION C] STATUS AND HONESTY FLAGS")
+    print("- local lepton report: reference_legacy / leptons_derived_local")
+    print("- local quark scripts in this folder: quarks_not_derived_local unless stated otherwise")
+    print("- canonical quark closure: derivations/31_QUARK_MASSES")
+    print("- unsupported final closure sectors here: neutrino/higgs mass closure")
+    print("- this orchestrator reports provenance; it does not relabel exploratory scripts as canonical")
 
-    # Calculate all masses
-    particles = [
-        calculate_electron_mass(),
-        calculate_muon_mass(),
-        calculate_tau_mass(),
-        calculate_proton_mass()
-    ]
 
-    # Display results
-    for result in particles:
-        print(f"{result['particle']} (N={result['epoch']}):")
-        print(f"  Theoretical: {result['theoretical_MeV']:.6f} MeV")
-        print(f"  Experimental: {result['experimental_MeV']:.6f} MeV")
-        print(f"  Error: {result['error_ppm']:.1f} ppm")
-        print()
-
-    print("-" * 60)
-    print("Summary:")
-    print(f"  Average precision: {sum(p['error_ppm'] for p in particles)/len(particles):.1f} ppm")
-    print(f"  Best prediction: {min(particles, key=lambda x: x['error_ppm'])['particle']}")
-    print("-" * 60)
-
-    return particles
-
-# Execute when run
 if __name__ == "__main__":
-    results = main()
+    main()

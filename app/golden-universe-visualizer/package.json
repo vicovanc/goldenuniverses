@@ -6,6 +6,7 @@
   "author": "Golden Universe Team",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run copy-derivations",
     "build": "vite build",
     "build:with-types": "tsc -b && vite build",
     "build:production": "NODE_ENV=production npm run build",
@@ -34,7 +35,8 @@
     "test:ci": "npm run lint && npm run type-check && npm run test:coverage && npm run test:e2e",
     "parse-content": "node scripts/quick-parse.mjs",
     "parse-content:full": "tsx scripts/parse-content.ts",
-    "index": "npm run parse-content",
+    "copy-derivations": "node scripts/copy-derivations.mjs",
+    "index": "npm run parse-content && npm run copy-derivations",
     "generate-icons": "node scripts/generate-icons.js",
     "server": "ts-node --project tsconfig.server.json server/server.ts",
     "server:dev": "nodemon --watch server --ext ts --exec ts-node --project tsconfig.server.json server/server.ts",
