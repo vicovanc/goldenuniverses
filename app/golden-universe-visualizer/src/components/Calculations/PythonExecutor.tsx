@@ -101,8 +101,26 @@ export const PythonExecutor: React.FC<PythonExecutorProps> = ({
       const errorString = String(err); // Full error string including stack trace
       const hint = err?.hint; // Worker may provide a hint
 
+      // Check for file import errors (trying to import other .py files)
+      if (errorMessage.includes('FileNotFoundError') ||
+          errorString.includes('FileNotFoundError') ||
+          errorMessage.includes('No such file or directory') && errorMessage.includes('.py')) {
+        // Extract file path if available
+        const fileMatch = errorMessage.match(/['"]([^'"]*\.py)['"]/);
+        const fileName = fileMatch ? fileMatch[1] : 'Python module file';
+
+        setError(`📁 This script imports other Python files from the file system.\n\n` +
+          `Missing file: "${fileName}"\n\n` +
+          `This script has dependencies on other Python modules in the repository that ` +
+          `are not available in the browser environment.\n\n` +
+          `To run this script:\n` +
+          `• Clone the Golden Universe repository\n` +
+          `• Ensure all required files are in place\n` +
+          `• Run the script locally in Python\n\n` +
+          `You can still view the source code above to understand the derivation.`);
+      }
       // Check for subprocess/process errors (check both message and full string)
-      if (errorMessage.includes('subprocess') ||
+      else if (errorMessage.includes('subprocess') ||
           errorMessage.includes('emscripten does not support processes') ||
           errorMessage.includes('Subprocess detected') ||
           errorString.includes('subprocess') ||
