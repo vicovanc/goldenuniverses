@@ -51,52 +51,6 @@ interface DerivationViewerProps {
   folder: string;
 }
 
-// Map derivation IDs to folder names based on the actual folder structure
-const DERIVATION_ID_TO_FOLDER: Record<string, string> = {
-  '1': '01_FORCE_UNIFICATION',
-  '2': '02_FUNDAMENTAL_CONSTANTS',
-  '3': '03_PARTICLE_MASSES',
-  '4': '04_COSMOLOGY',
-  '5': '05_CHARGE_QUANTIZATION',
-  '6': '06_COUPLING_CONSTANTS',
-  '7': '07_PARTICLE_FAMILIES',
-  '8': '08_NEUTRINO_MASSES',
-  '9': '09_QCD_SCALE',
-  '10': '10_HIGGS_MECHANISM',
-  '11': '11_SYMMETRY_BREAKING',
-  '12': '03_PARTICLE_MASSES',  // Duplicate mapping for particle masses
-  '13': '13_DARK_MATTER',
-  '14': '14_FINAL_ASSESSMENT',
-  '15': '15_QUANTUM_GRAVITY',
-  '16': '16_BLACK_HOLES',
-  '17': '17_ALPHA_EM_DERIVATION',
-  '18': '18_COSMOLOGICAL_CONSTANT',
-  '19': '19_INFLATION',
-  '20': '20_BARYON_ASYMMETRY',
-  '21': '21_ENTROPY',
-  '22': '17_ALPHA_EM_DERIVATION',  // Another mapping for alpha
-  '23': '23_NEWTON_G',
-  '24': '24_TIME_ARROW',
-  '25': '03_PARTICLE_MASSES',  // Another particle masses mapping
-  '26': '26_PLATONIC_SPACE',
-  '27': '27_ENTANGLEMENT',
-  '28': '28_MEASUREMENT',
-  '29': '29_DECOHERENCE',
-  '30': '30_QUANTUM_COMPUTATION',
-  '31': '31_HOLOGRAPHIC_PRINCIPLE',
-  '32': '32_EMERGENT_DIMENSIONS',
-  '33': '33_PHASE_TRANSITIONS',
-  '34': '34_CRITICAL_PHENOMENA',
-  '35': '35_RENORMALIZATION',
-  '36': '36_EFFECTIVE_THEORIES',
-  '37': '37_ANOMALIES',
-  '38': '38_INSTANTONS',
-  '39': '39_MONOPOLES',
-  '40': '14_FINAL_ASSESSMENT',  // Another final assessment mapping
-  '41': '41_HAMILTONIAN',
-  '42': '42_COMPLETE_FRAMEWORK'
-};
-
 export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   derivationId,
   title,
@@ -109,8 +63,8 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'readme' | 'python' | 'markdown'>('python');
 
-  // Get the correct folder name for this derivation
-  const actualFolderName = DERIVATION_ID_TO_FOLDER[derivationId] || folder;
+  // Use the folder prop directly - it contains the correct folder name from the data
+  const actualFolderName = folder;
 
   useEffect(() => {
     loadDerivationData();
