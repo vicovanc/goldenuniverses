@@ -178,6 +178,7 @@ const derivations = derivationDirs.map(folderName => {
       path: path.relative(ROOT_PATH, filePath),
       filename,
       folderPath: path.relative(ROOT_PATH, folderPath),
+      content: content, // Include full Python code content
       docstring,
       functions,
       lineCount: content.split('\n').length,
