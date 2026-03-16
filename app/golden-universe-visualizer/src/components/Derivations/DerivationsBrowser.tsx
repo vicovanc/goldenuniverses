@@ -357,6 +357,7 @@ export const DerivationsBrowser: React.FC = () => {
               <p className="description">{selectedDerivation.description}</p>
 
               <DerivationViewerNew
+                key={selectedDerivation.id}
                 derivationId={selectedDerivation.id.toString()}
                 title={selectedDerivation.title}
                 folder={selectedDerivation.folderName}

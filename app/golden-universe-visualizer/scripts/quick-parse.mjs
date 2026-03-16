@@ -186,6 +186,30 @@ const derivations = derivationDirs.map(folderName => {
     };
   });
 
+  // Parse Markdown files (excluding README.md)
+  const markdownDocs = markdownFiles.slice(0, 20).map(filename => { // Limit to 20 per folder
+    const filePath = path.join(folderPath, filename);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const mdStats = getStats(filePath);
+
+    // Extract title from first heading
+    const titleMatch = content.match(/^#\s+(.+)$/m);
+    const title = titleMatch ? titleMatch[1].trim() : filename.replace('.md', '');
+
+    return {
+      id: generateId(filePath),
+      path: path.relative(ROOT_PATH, filePath),
+      filename,
+      folderPath: path.relative(ROOT_PATH, folderPath),
+      title,
+      content: content.substring(0, 50000), // Limit content size
+      lineCount: content.split('\n').length,
+      wordCount: content.split(/\s+/).length,
+      contentHash: generateId(content),
+      ...mdStats
+    };
+  });
+
   // Determine status
   let status = 'active';
   if (readme && readme.content.toLowerCase().includes('archived')) {
@@ -210,7 +234,7 @@ const derivations = derivationDirs.map(folderName => {
     displayName,
     readme,
     pythonScripts,
-    markdownFiles: [], // Skip for speed
+    markdownFiles: markdownDocs,
     status,
     fileCount: pythonFiles.length + markdownFiles.length,
     ...stats
