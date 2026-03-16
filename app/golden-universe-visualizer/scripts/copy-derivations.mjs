@@ -11,8 +11,29 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_PATH = path.resolve(__dirname, '..');
-const DERIVATIONS_PATH = path.resolve(ROOT_PATH, '../../derivations');
 const PUBLIC_DERIVATIONS_PATH = path.resolve(ROOT_PATH, 'public/derivations');
+
+// Try multiple possible locations for derivations folder
+const possibleDerivationsPaths = [
+  path.resolve(ROOT_PATH, '../../derivations'),  // Standard: repo/derivations
+  path.resolve(ROOT_PATH, '../../../derivations'), // One level up
+  path.resolve(ROOT_PATH, 'derivations'),         // Same level as app
+];
+
+// Find the first existing derivations path
+let DERIVATIONS_PATH = null;
+for (const possiblePath of possibleDerivationsPaths) {
+  if (fs.existsSync(possiblePath)) {
+    DERIVATIONS_PATH = possiblePath;
+    break;
+  }
+}
+
+if (!DERIVATIONS_PATH) {
+  console.error('Error: Could not find derivations folder in any of these locations:');
+  possibleDerivationsPaths.forEach(p => console.error(`  - ${p}`));
+  process.exit(1);
+}
 
 /**
  * Recursively copy directory
@@ -52,12 +73,8 @@ function copyDirRecursive(src, dest) {
  */
 function main() {
   console.log('Copying derivation files to public directory...\n');
-
-  // Check if derivations directory exists
-  if (!fs.existsSync(DERIVATIONS_PATH)) {
-    console.error(`Error: Derivations directory not found at ${DERIVATIONS_PATH}`);
-    process.exit(1);
-  }
+  console.log(`Source: ${DERIVATIONS_PATH}`);
+  console.log(`Destination: ${PUBLIC_DERIVATIONS_PATH}\n`);
 
   // Remove existing public/derivations directory
   if (fs.existsSync(PUBLIC_DERIVATIONS_PATH)) {
