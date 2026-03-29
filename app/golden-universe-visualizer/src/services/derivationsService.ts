@@ -37,7 +37,9 @@ interface DerivationsData {
  */
 export async function fetchDerivations(): Promise<DerivationFolder[]> {
   try {
-    const response = await fetch('/data/derivations-map.json');
+    // Add cache-busting version parameter
+    const version = '1.0.3';
+    const response = await fetch(`/data/derivations-map.json?v=${version}`);
     if (!response.ok) {
       throw new Error(`Failed to fetch derivations: ${response.status}`);
     }
