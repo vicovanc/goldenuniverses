@@ -52,9 +52,10 @@ function copyDirRecursive(src, dest) {
     const destPath = path.join(dest, entry.name);
 
     if (entry.isDirectory()) {
-      // Skip certain directories
+      // Skip certain directories and hidden folders (starting with .)
       if (entry.name === '__pycache__' || entry.name === '.pytest_cache' ||
-          entry.name === 'node_modules' || entry.name === '.git') {
+          entry.name === 'node_modules' || entry.name === '.git' ||
+          entry.name.startsWith('.')) {
         continue;
       }
       copyDirRecursive(srcPath, destPath);
