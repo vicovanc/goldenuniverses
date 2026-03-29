@@ -122,7 +122,8 @@ const derivationDirs = fs.readdirSync(derivationsPath)
     const fullPath = path.join(derivationsPath, d);
     return fs.statSync(fullPath).isDirectory() &&
            !d.includes('archive') &&
-           !d.includes('utils');
+           !d.includes('utils') &&
+           !d.startsWith('.'); // Skip hidden folders
   });
 
 const derivations = derivationDirs.map(folderName => {
