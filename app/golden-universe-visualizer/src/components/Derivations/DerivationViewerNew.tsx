@@ -12,6 +12,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { PythonExecutor } from '@/components/Calculations/PythonExecutor';
 import { fetchDerivations, fetchDerivationFileContent } from '@/services/derivationsService';
+import { useAppStore } from '@/utils/store';
 import './DerivationViewerNew.scss';
 
 interface DerivationFile {
@@ -63,6 +64,10 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'readme' | 'python' | 'markdown'>('python');
   const [isMaximized, setIsMaximized] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Get sidebar state from store
+  const { sidebarCollapsed, toggleSidebar } = useAppStore();
 
   // Use the folder prop directly - it contains the correct folder name from the data
   const actualFolderName = folder;
@@ -70,6 +75,17 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   useEffect(() => {
     loadDerivationData();
   }, [derivationId, actualFolderName]);
+
+  // Cleanup on unmount - remove maximized class and restore sidebar
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('derivation-maximized');
+      // If sidebar was collapsed when we maximized, restore it
+      if (sidebarCollapsed && isMaximized) {
+        toggleSidebar();
+      }
+    };
+  }, []);
 
   const loadDerivationData = async () => {
     try {
@@ -284,9 +300,43 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
     );
   }
 
+  // Handle maximize - collapse main app sidebar to icons
+  const handleMaximize = () => {
+    setIsMaximized(true);
+    // Collapse main app sidebar to icons only if it's not already collapsed
+    if (!sidebarCollapsed) {
+      toggleSidebar();
+    }
+    // Hide header by adding class to body
+    document.body.classList.add('derivation-maximized');
+  };
+
+  const handleMinimize = () => {
+    setIsMaximized(false);
+    // Expand main app sidebar back to full if it was collapsed by maximize
+    if (sidebarCollapsed) {
+      toggleSidebar();
+    }
+    // Show header by removing class from body
+    document.body.classList.remove('derivation-maximized');
+  };
+
   return (
-    <div className={`derivation-viewer-new ${isMaximized ? 'maximized' : ''}`}>
+    <div className={`derivation-viewer-new ${isMaximized ? 'maximized' : ''} ${isSidebarOpen ? 'sidebar-open' : ''}`}>
       <div className="viewer-header">
+        {isMaximized && (activeTab === 'python' || activeTab === 'markdown') && (
+          <button
+            className="sidebar-toggle-button"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            title={isSidebarOpen ? "Hide file list" : "Show file list"}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        )}
         <div className="header-content">
           <h2>{title}</h2>
           {derivationData && (
@@ -299,21 +349,24 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
             </div>
           )}
         </div>
-        <button
-          className="maximize-button"
-          onClick={() => setIsMaximized(!isMaximized)}
-          title={isMaximized ? 'Minimize view' : 'Maximize view'}
-        >
-          {isMaximized ? (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" />
-            </svg>
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
-            </svg>
-          )}
-        </button>
+        <div className="viewer-controls">
+          <button
+            className={isMaximized ? "minimize-button" : "maximize-button"}
+            onClick={isMaximized ? handleMinimize : handleMaximize}
+            title={isMaximized ? "Exit fullscreen" : "Maximize view"}
+          >
+            {!isMaximized ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {renderTabs()}
@@ -333,10 +386,12 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
         {activeTab === 'python' && derivationData?.pythonScripts && (
           <div className="python-content">
             <div className="content-layout">
-              <aside className="file-sidebar">
-                <h4>Python Files</h4>
-                {renderFileList(derivationData.pythonScripts, 'python')}
-              </aside>
+              {(!isMaximized || isSidebarOpen) && (
+                <aside className="file-sidebar">
+                  <h4>Python Files</h4>
+                  {renderFileList(derivationData.pythonScripts, 'python')}
+                </aside>
+              )}
 
               <main className="file-display">
                 {selectedFile && fileContent && (
@@ -384,10 +439,12 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
         {activeTab === 'markdown' && derivationData?.markdownFiles && (
           <div className="markdown-content">
             <div className="content-layout">
-              <aside className="file-sidebar">
-                <h4>Documentation Files</h4>
-                {renderFileList(derivationData.markdownFiles, 'markdown')}
-              </aside>
+              {(!isMaximized || isSidebarOpen) && (
+                <aside className="file-sidebar">
+                  <h4>Documentation Files</h4>
+                  {renderFileList(derivationData.markdownFiles, 'markdown')}
+                </aside>
+              )}
 
               <main className="file-display">
                 {selectedFile && fileContent && (

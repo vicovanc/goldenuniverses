@@ -625,3 +625,262 @@ img {
   overflow-x: hidden !important;
   box-sizing: border-box !important;
 }
+
+// ===================================
+// Derivation Maximized Mode
+// ===================================
+
+// When derivation viewer is maximized, hide the header and derivations list
+// Sidebar collapse is handled by the existing toggleSidebar() function
+body.derivation-maximized {
+  // Hide the app header to give more vertical space
+  .app-header {
+    display: none !important;
+  }
+
+  // Hide the browser header, search, filters, and derivations list
+  .derivations-browser {
+    > .browser-header,
+    > .search-section,
+    > .category-filters {
+      display: none !important;
+    }
+
+    // Remove container constraints
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  // Hide the derivations list sidebar
+  .browser-content {
+    .derivations-list {
+      display: none !important;
+    }
+
+    // Make content take full width
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  // Make derivation details take full width
+  .derivation-details {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+
+    // Hide the details header/meta but keep the viewer
+    > .details-header,
+    > .details-meta {
+      display: none !important;
+    }
+
+    .details-content {
+      max-width: none !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: visible !important;
+
+      // Hide the description inside content
+      > .description {
+        display: none !important;
+      }
+    }
+  }
+
+  // Ensure derivation viewer takes full viewport with proper spacing
+  .derivation-viewer-new.maximized {
+    position: fixed !important;
+    top: 0 !important;
+    left: 60px !important; // Account for collapsed sidebar
+    right: 60px !important; // Equal margin on right
+    bottom: 0 !important;
+    width: auto !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+    z-index: 9998 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+
+    // Ensure the viewer header and controls stay visible
+    .viewer-header {
+      display: flex !important;
+      position: sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 1001 !important;
+      background: rgba(10, 1, 24, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.3) !important;
+      padding: 1rem 1.5rem !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      gap: 1rem !important;
+      flex-shrink: 0 !important;
+
+      .sidebar-toggle-button {
+        order: 0 !important;
+        flex-shrink: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .header-content {
+        order: 1 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        flex: 1 !important;
+        min-width: 0 !important; // Allow flex item to shrink below content size
+
+        h2 {
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+
+        .derivation-meta {
+          overflow: hidden !important;
+          flex-wrap: wrap !important;
+        }
+      }
+
+      .viewer-controls {
+        order: 2 !important;
+        flex-shrink: 0 !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    // Tabs and content should be in the flex flow
+    .derivation-tabs {
+      margin-top: 0 !important;
+      flex-shrink: 0 !important;
+    }
+
+    .viewer-content {
+      flex: 1 !important;
+      overflow-y: auto !important;
+      min-height: 0 !important;
+    }
+
+    .viewer-controls {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .minimize-button,
+    .maximize-button {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+    }
+
+    // Mobile responsiveness
+    @media (max-width: 768px) {
+      left: 0 !important;
+      right: 0 !important;
+      width: 100vw !important;
+      padding-top: 30px !important; // Space for hamburger menu
+      z-index: 1000 !important; // Lower z-index on mobile so hamburger menu (z-index: 1041) stays on top
+
+      .viewer-header {
+        left: 0 !important;
+        right: 0 !important;
+        top: 30px !important; // Below hamburger menu
+        padding: 0.75rem 4rem 0.75rem 1rem !important; // Extra right padding for close button
+        flex-wrap: nowrap !important;
+        z-index: 1001 !important; // Keep header above content but below hamburger menu
+
+        .sidebar-toggle-button {
+          position: fixed !important;
+          left: 1rem !important;
+          top: 1rem !important;
+          z-index: 2000 !important;
+          background: rgba(251, 191, 36, 0.95) !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+          padding: 0.75rem !important;
+
+          svg {
+            width: 20px !important;
+            height: 20px !important;
+          }
+        }
+
+        .header-content {
+          padding-left: 30px !important; // Space from left edge on mobile
+
+          h2 {
+            font-size: 1.25rem !important;
+          }
+
+          .derivation-meta {
+            font-size: 0.75rem !important;
+
+            .folder-name {
+              padding: 0.25rem 0.5rem !important;
+              font-size: 0.7rem !important;
+            }
+
+            .file-count {
+              display: none !important;
+            }
+          }
+        }
+
+        .viewer-controls {
+          .minimize-button,
+          .maximize-button {
+            padding: 0.5rem !important;
+
+            svg {
+              width: 16px !important;
+              height: 16px !important;
+            }
+          }
+        }
+      }
+
+      .viewer-content {
+        .file-display,
+        .readme-content,
+        .markdown-display {
+          padding: 1rem !important;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .viewer-header {
+        .header-content {
+          h2 {
+            font-size: 1rem !important;
+          }
+
+          .derivation-meta {
+            .folder-name {
+              max-width: 120px !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

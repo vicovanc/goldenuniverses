@@ -86,12 +86,87 @@ $tablet-breakpoint: 1024px;
   }
 }
 
-// Mobile overlay backdrop
+// Make sidebar fully opaque on mobile
+@media (max-width: $mobile-breakpoint) {
+  .sidebar-new {
+    background: var(--bg-primary) !important;
+    backdrop-filter: none !important;
+
+    .sidebar-search,
+    .search-bar,
+    input,
+    .sidebar-nav,
+    .sidebar-header,
+    .sidebar-actions,
+    .sidebar-footer,
+    .nav-section {
+      background: transparent !important;
+      backdrop-filter: none !important;
+    }
+
+    // Override any semi-transparent backgrounds in light mode
+    input:focus {
+      background: #ffffff !important;
+    }
+  }
+
+  // For light theme specifically - override the transparent background
+  body .app.light .sidebar,
+  body .app.light .sidebar-new,
+  body .app[data-theme='light'] .sidebar,
+  body .app[data-theme='light'] .sidebar-new,
+  body[data-theme="light"] .sidebar,
+  body[data-theme="light"] .sidebar-new {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+
+    input:focus {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+
+    * {
+      background: transparent !important;
+    }
+
+    input, textarea, select {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+  }
+
+  // For dark theme specifically - solid black background
+  body .app.dark .sidebar,
+  body .app.dark .sidebar-new,
+  body .app[data-theme='dark'] .sidebar,
+  body .app[data-theme='dark'] .sidebar-new,
+  body[data-theme="dark"] .sidebar,
+  body[data-theme="dark"] .sidebar-new {
+    background: #000000 !important;
+    background-color: #000000 !important;
+
+    input:focus {
+      background: #1a1a1a !important;
+      background-color: #1a1a1a !important;
+    }
+
+    * {
+      background: transparent !important;
+    }
+
+    input, textarea, select {
+      background: #1a1a1a !important;
+      background-color: #1a1a1a !important;
+    }
+  }
+}
+
+// Mobile overlay backdrop - DISABLED
 .sidebar-backdrop {
-  display: none;
+  display: none !important;
 
   @media (max-width: $mobile-breakpoint) {
-    display: block;
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;

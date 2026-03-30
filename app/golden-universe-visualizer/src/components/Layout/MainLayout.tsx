@@ -67,6 +67,7 @@ const MainLayout: React.FC = () => {
       {isMobile && (
         <button
           className="mobile-menu-toggle"
+          style={{ position: 'fixed' }}
           onClick={toggleSidebar}
           aria-label={sidebarCollapsed ? "Open menu" : "Close menu"}
         >

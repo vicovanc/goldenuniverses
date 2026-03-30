@@ -19,11 +19,13 @@
     border-bottom: 1px solid rgba(251, 191, 36, 0.2);
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: $space-4;
 
     .header-content {
       flex: 1;
+      min-width: 0; // Allow flex item to shrink
+      overflow: hidden;
     }
 
     h2 {
@@ -31,6 +33,9 @@
       @include gradient-text($gradient-primary);
       font-size: $text-3xl;
       font-weight: $font-bold;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .derivation-meta {
@@ -55,7 +60,52 @@
       }
     }
 
-    .maximize-button {
+    .maximized-controls {
+      display: flex;
+      gap: $space-3;
+      margin-right: $space-4;
+    }
+
+    .sidebar-toggle-button {
+      flex-shrink: 0;
+      padding: $space-3;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: $radius-md;
+      color: $brand-primary;
+      cursor: pointer;
+      transition: all $transition-base;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: auto; // Push to the left
+
+      &:hover {
+        background: rgba(251, 191, 36, 0.2);
+        border-color: $brand-primary;
+        box-shadow: $shadow-glow-gold-sm;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      svg {
+        display: block;
+      }
+    }
+
+    .viewer-controls {
+      flex-shrink: 0;
+      display: flex;
+      gap: $space-3;
+      margin-left: auto; // Push to the right
+    }
+
+    .maximize-button,
+    .minimize-button,
+    .close-button {
       flex-shrink: 0;
       padding: $space-3;
       background: rgba(251, 191, 36, 0.1);
@@ -81,6 +131,18 @@
 
       svg {
         display: block;
+      }
+    }
+
+    .minimize-button {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+
+      &:hover {
+        background: rgba(239, 68, 68, 0.2);
+        border-color: #ef4444;
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
       }
     }
   }
@@ -257,6 +319,13 @@
           margin: $space-6 0 $space-4 0;
           font-weight: $font-semibold;
           line-height: $leading-tight;
+
+          // Ensure code inside headers is visible
+          code {
+            -webkit-text-fill-color: $brand-primary !important;
+            background-clip: padding-box !important;
+            -webkit-background-clip: padding-box !important;
+          }
         }
 
         h1 { font-size: $text-3xl; }
@@ -410,13 +479,52 @@
       margin-top: 0;
       padding-bottom: $space-4;
       border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+
+      // Ensure code inside h1 is visible
+      code {
+        -webkit-text-fill-color: $brand-primary !important;
+        background-clip: padding-box !important;
+        -webkit-background-clip: padding-box !important;
+      }
+    }
+
+    // Ensure all code elements in headers are visible
+    h1, h2, h3, h4, h5, h6 {
+      code {
+        -webkit-text-fill-color: $brand-primary !important;
+        background-clip: padding-box !important;
+        -webkit-background-clip: padding-box !important;
+      }
     }
   }
 
   // Maximized state
   &.maximized {
-    .viewer-content .content-layout {
-      grid-template-columns: 1fr;
+    border-radius: $radius-lg !important;
+    overflow: visible !important;
+    display: flex;
+    flex-direction: column;
+
+    .viewer-header {
+      border-radius: $radius-lg $radius-lg 0 0 !important;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+      flex-shrink: 0;
+    }
+
+    .derivation-tabs {
+      flex-shrink: 0;
+    }
+
+    .viewer-content {
+      flex: 1;
+      overflow-y: auto;
+      min-height: 0;
+
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
     }
 
     .file-sidebar {
@@ -424,15 +532,65 @@
     }
 
     .file-display {
-      max-width: 1200px;
-      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
       padding: $space-8;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
 
     .readme-content {
-      max-width: 1200px;
-      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
       padding: $space-8;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    // Ensure all content respects boundaries
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    pre, code, .code-block {
+      max-width: 100% !important;
+      overflow-x: auto !important;
+    }
+
+    // When sidebar is open in maximized mode
+    &.sidebar-open {
+      .viewer-content .content-layout {
+        grid-template-columns: 300px 1fr;
+      }
+
+      .file-sidebar {
+        display: block;
+        position: fixed;
+        left: 60px; // Account for collapsed main sidebar
+        top: 80px; // Below fixed header
+        bottom: 0;
+        width: 300px;
+        z-index: 1000;
+        background: rgba(10, 1, 24, 0.98);
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+
+        @media (max-width: 768px) {
+          left: 0 !important;
+          top: 70px !important;
+          width: 280px;
+          background: rgb(10, 1, 24) !important; // Fully opaque on mobile
+          backdrop-filter: none !important;
+        }
+      }
+
+      .file-display {
+        margin-left: 0;
+        width: 100%;
+      }
     }
 
     // Increase font sizes for better readability
