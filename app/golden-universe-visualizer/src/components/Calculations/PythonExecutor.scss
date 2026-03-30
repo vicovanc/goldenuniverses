@@ -100,15 +100,16 @@
       min-height: 200px;
       font-family: 'Courier New', monospace;
       font-size: $font-size-sm;
-      line-height: 2.0;  // Increased for better readability
+      line-height: 1.8;  // Better line height to prevent text cutoff
       word-break: break-word;  // Break long lines
       overflow-wrap: break-word;  // Wrap long words
 
       code {
         color: $text-primary;
-        line-height: 2.0;
+        line-height: 1.8;
         display: block;  // Ensure proper rendering
         white-space: pre-wrap;  // Preserve formatting but allow wrapping
+        padding: 0.1rem 0; // Small vertical padding to prevent cutoff
       }
     }
   }
@@ -205,16 +206,17 @@
       min-height: 300px;
       font-family: 'Courier New', monospace;
       font-size: 0.9rem;
-      line-height: 2.0;  // Increased for better readability
+      line-height: 1.8;  // Better line height to prevent text cutoff
       white-space: pre-wrap;  // Preserve line breaks and wrap long lines
       word-wrap: break-word;  // Break long words if needed
       overflow-wrap: break-word;  // Additional wrap support
 
       code {
         color: #a8e6a1;
-        line-height: 2.0;
+        line-height: 1.8;
         display: block;  // Ensure proper rendering
         white-space: pre-wrap;  // Preserve formatting
+        padding: 0.1rem 0; // Small vertical padding to prevent cutoff
       }
     }
   }

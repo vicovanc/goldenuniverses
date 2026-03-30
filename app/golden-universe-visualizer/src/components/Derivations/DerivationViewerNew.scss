@@ -17,6 +17,14 @@
     padding: $space-6;
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
     border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $space-4;
+
+    .header-content {
+      flex: 1;
+    }
 
     h2 {
       margin: 0 0 $space-3 0;
@@ -44,6 +52,35 @@
       .file-count {
         color: $text-secondary;
         font-size: $text-sm;
+      }
+    }
+
+    .maximize-button {
+      flex-shrink: 0;
+      padding: $space-3;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: $radius-md;
+      color: $brand-primary;
+      cursor: pointer;
+      transition: all $transition-base;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: rgba(251, 191, 36, 0.2);
+        border-color: $brand-primary;
+        box-shadow: $shadow-glow-gold-sm;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      svg {
+        display: block;
       }
     }
   }
@@ -249,10 +286,13 @@
         code {
           background: rgba(251, 191, 36, 0.1);
           color: $brand-primary;
-          padding: $space-1 $space-2;
+          padding: 0.15rem $space-2 0.25rem $space-2; // More bottom padding to prevent cutoff
           border-radius: $radius-sm;
           font-family: $font-family-mono;
           font-size: $text-sm;
+          display: inline-block;
+          line-height: 1.6;
+          vertical-align: baseline;
         }
 
         pre {
@@ -350,6 +390,19 @@
       margin: $space-4 0;
     }
 
+    // Fix inline code cutoff
+    code {
+      background: rgba(251, 191, 36, 0.1);
+      color: $brand-primary;
+      padding: 0.15rem $space-2 0.25rem $space-2; // More bottom padding to prevent cutoff
+      border-radius: $radius-sm;
+      font-family: $font-family-mono;
+      font-size: $text-sm;
+      display: inline-block;
+      line-height: 1.6;
+      vertical-align: baseline;
+    }
+
     // Additional README-specific styles
     & > h1:first-child {
       @include gradient-text($gradient-primary);
@@ -357,6 +410,51 @@
       margin-top: 0;
       padding-bottom: $space-4;
       border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+    }
+  }
+
+  // Maximized state
+  &.maximized {
+    .viewer-content .content-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .file-sidebar {
+      display: none;
+    }
+
+    .file-display {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $space-8;
+    }
+
+    .readme-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $space-8;
+    }
+
+    // Increase font sizes for better readability
+    .markdown-display,
+    .readme-content {
+      p, li {
+        font-size: $text-lg;
+        line-height: 1.8;
+      }
+
+      h1 { font-size: $text-4xl; }
+      h2 { font-size: $text-3xl; }
+      h3 { font-size: $text-2xl; }
+      h4 { font-size: $text-xl; }
+
+      code {
+        font-size: $text-base;
+      }
+
+      pre code {
+        font-size: $text-base;
+      }
     }
   }
 

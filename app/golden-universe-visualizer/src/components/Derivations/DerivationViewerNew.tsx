@@ -62,6 +62,7 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'readme' | 'python' | 'markdown'>('python');
+  const [isMaximized, setIsMaximized] = useState(false);
 
   // Use the folder prop directly - it contains the correct folder name from the data
   const actualFolderName = folder;
@@ -284,18 +285,35 @@ export const DerivationViewerNew: React.FC<DerivationViewerProps> = ({
   }
 
   return (
-    <div className="derivation-viewer-new">
+    <div className={`derivation-viewer-new ${isMaximized ? 'maximized' : ''}`}>
       <div className="viewer-header">
-        <h2>{title}</h2>
-        {derivationData && (
-          <div className="derivation-meta">
-            <span className="folder-name">{derivationData.folderName}</span>
-            <span className="file-count">
-              {derivationData.pythonScripts?.length || 0} Python files,
-              {derivationData.markdownFiles?.length || 0} Markdown files
-            </span>
-          </div>
-        )}
+        <div className="header-content">
+          <h2>{title}</h2>
+          {derivationData && (
+            <div className="derivation-meta">
+              <span className="folder-name">{derivationData.folderName}</span>
+              <span className="file-count">
+                {derivationData.pythonScripts?.length || 0} Python files,
+                {derivationData.markdownFiles?.length || 0} Markdown files
+              </span>
+            </div>
+          )}
+        </div>
+        <button
+          className="maximize-button"
+          onClick={() => setIsMaximized(!isMaximized)}
+          title={isMaximized ? 'Minimize view' : 'Maximize view'}
+        >
+          {isMaximized ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+            </svg>
+          )}
+        </button>
       </div>
 
       {renderTabs()}
